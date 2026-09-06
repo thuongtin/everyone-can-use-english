@@ -1,5 +1,14 @@
 {
   "noMicrophoneAccess": "Chưa có quyền dùng microphone. Hãy cho phép Enjoy trong Cài đặt hệ thống > Quyền riêng tư & Bảo mật > Microphone, rồi mở lại Enjoy.",
+  "addYoutubeChannel": "Thêm kênh YouTube",
+  "youtubeChannelDescription": "Dán link kênh YouTube hoặc @handle để hiện video mới nhất trên trang chủ.",
+  "youtubeChannelPlaceholder": "https://www.youtube.com/@tenkenh",
+  "invalidYoutubeChannel": "Hãy nhập link kênh YouTube hoặc @handle hợp lệ.",
+  "youtubeChannelAlreadyAdded": "Kênh YouTube này đã được hiển thị.",
+  "youtubeChannelAdded": "Đã thêm kênh YouTube.",
+  "yourYoutubeChannels": "Kênh YouTube của bạn",
+  "removeYoutubeChannel": "Xóa kênh YouTube",
+  "noYoutubeChannels": "Bạn chưa thêm kênh YouTube nào.",
   "models": {
     "user": {
       "id": "ID",

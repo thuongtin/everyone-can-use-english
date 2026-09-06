@@ -16,6 +16,8 @@ import {
   DropdownMenuTrigger,
 } from "@renderer/components/ui";
 import { t } from "i18next";
+import { useEffect, useState } from "react";
+import { getYoutubeThumbnailUrl } from "@/utils/youtube";
 
 export const VideoCard = (props: {
   video: Partial<VideoType>;
@@ -24,6 +26,12 @@ export const VideoCard = (props: {
   onEdit?: () => void;
 }) => {
   const { video, className, onDelete, onEdit } = props;
+  const preferredCoverUrl = getYoutubeThumbnailUrl(video.source) || video.coverUrl;
+  const [coverUrl, setCoverUrl] = useState(preferredCoverUrl);
+
+  useEffect(() => {
+    setCoverUrl(preferredCoverUrl);
+  }, [preferredCoverUrl]);
 
   return (
     <div className={cn("w-full relative", className)}>
@@ -37,11 +45,19 @@ export const VideoCard = (props: {
         >
           <div className="relative w-full h-full flex items-center justify-center">
             <VideoIcon className="w-12 h-12" />
-            <img
-              src={video.coverUrl}
-              crossOrigin="anonymous"
-              className="absolute top-0 left-0 hover:scale-105 object-cover w-full h-full bg-cover bg-center"
-            />
+            {coverUrl && (
+              <img
+                src={coverUrl}
+                alt={video.name || t("models.video.name")}
+                crossOrigin="anonymous"
+                className="absolute top-0 left-0 hover:scale-105 object-cover w-full h-full bg-cover bg-center"
+                onError={() =>
+                  setCoverUrl(
+                    coverUrl === video.coverUrl ? undefined : video.coverUrl
+                  )
+                }
+              />
+            )}
           </div>
           {video.language && (
             <Badge className="absolute left-2 top-2">{video.language}</Badge>
