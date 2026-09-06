@@ -839,7 +839,7 @@ const MediaRecorder = () => {
           smoothingTimeConstant={0.4}
         />
       )}
-      <span className="serif text-muted-foreground text-sm">
+      <span className="font-sans text-muted-foreground text-sm">
         {Math.floor(recordingTime / 60)}:
         {String(recordingTime % 60).padStart(2, "0")}
       </span>

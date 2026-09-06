@@ -24,7 +24,9 @@ module.exports = {
         xxxs: "0.5rem",
       },
       fontFamily: {
-        code: ["CharisSIL", ...defaultTheme.fontFamily.mono],
+        sans: ["Noto Sans", ...defaultTheme.fontFamily.sans],
+        // Existing font-code utilities display IPA, not source code.
+        code: ["Noto Sans", "CharisSIL", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         border: "hsl(var(--border))",

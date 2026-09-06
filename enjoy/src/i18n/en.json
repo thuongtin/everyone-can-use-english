@@ -1,4 +1,5 @@
 {
+  "noMicrophoneAccess": "Microphone access is unavailable. Allow Enjoy in System Settings > Privacy & Security > Microphone, then restart Enjoy.",
   "models": {
     "user": {
       "id": "ID",

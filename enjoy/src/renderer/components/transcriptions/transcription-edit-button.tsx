@@ -85,7 +85,7 @@ export const TranscriptionEditButton = (props: {
         <div>
           <Textarea
             disabled={submiting}
-            className="h-96 text-lg font-serif resize-none"
+            className="h-96 text-lg font-sans resize-none"
             value={content}
             onChange={(e) => setContent(e.target.value)}
           />

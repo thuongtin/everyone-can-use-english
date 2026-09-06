@@ -88,7 +88,7 @@ export function DictLookupResult({
 
   if (error) {
     return (
-      <div className="text-sm font-serif text-destructive py-2 text-center">
+      <div className="text-sm font-sans text-destructive py-2 text-center">
         - {"Lookup Error"} -
       </div>
     );
@@ -96,7 +96,7 @@ export function DictLookupResult({
 
   if (notFound) {
     return (
-      <div className="text-sm font-serif text-muted-foreground py-2 text-center">
+      <div className="text-sm font-sans text-muted-foreground py-2 text-center">
         - {t("noResultsFound")} -
       </div>
     );

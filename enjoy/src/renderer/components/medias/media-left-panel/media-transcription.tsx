@@ -225,7 +225,7 @@ export const MediaTranscription = (props: { display?: boolean }) => {
               </div>
             </div>
 
-            <Sentence className="font-serif" sentence={sentence.text} />
+            <Sentence className="font-sans" sentence={sentence.text} />
           </div>
         )
       )}

@@ -52,7 +52,7 @@ export const RadialProgress = ({
         <text
           x="50"
           y="50"
-          fontFamily="Verdana"
+          fontFamily="inherit"
           fontSize={fontSize}
           textAnchor="middle"
           alignmentBaseline="middle"

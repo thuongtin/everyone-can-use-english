@@ -121,7 +121,7 @@ export const TranslateResult = (props: {
     <>
       {translation ? (
         <div className="py-2 select-text">
-          <div className="text-serif mb-4">{translation}</div>
+          <div className="font-sans mb-4">{translation}</div>
 
           <div className="flex items-center">
             <Button

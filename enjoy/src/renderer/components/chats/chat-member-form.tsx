@@ -201,7 +201,7 @@ export const ChatMemberForm = (props: {
                       {t("promptPreview")}:
                     </div>
                     <div className="text-muted-foreground bg-muted px-4 py-2 rounded-md">
-                      <div className="font-serif select-text text-sm whitespace-pre-line">
+                      <div className="font-sans select-text text-sm whitespace-pre-line">
                         {buildFullPrompt(form.watch("config.prompt"))}
                       </div>
                     </div>

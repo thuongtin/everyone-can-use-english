@@ -1,6 +1,7 @@
 import { VitePlugin } from "@electron-forge/plugin-vite";
 import os from "os";
 import path from "node:path";
+import { execFileSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { FusesPlugin } from "@electron-forge/plugin-fuses";
 import { FuseV1Options, FuseVersion } from "@electron/fuses";
@@ -11,6 +12,16 @@ const projectRoot = path.dirname(fileURLToPath(import.meta.url));
 
 const config = {
   hooks: {
+    postPackage: async (forgeConfig, { platform, outputPaths }) => {
+      if (platform !== "darwin" || forgeConfig.packagerConfig.osxSign) return;
+      // The fuse plugin signs Electron before the packager renames its bundle.
+      // Re-seal local builds after Info.plist and resources reach their final form.
+      for (const outputPath of outputPaths) {
+        const bundle = path.join(outputPath, "Enjoy.app");
+        execFileSync("/usr/bin/codesign", ["--force", "--deep", "--sign", "-", bundle]);
+        execFileSync("/usr/bin/codesign", ["--verify", "--deep", "--strict", bundle]);
+      }
+    },
     prePackage: async () => {
       await removeRecursiveNodeModulesLink(projectRoot);
     },

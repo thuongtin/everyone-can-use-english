@@ -83,7 +83,7 @@ export const RecordingDetail = (props: {
       ) : (
         <ScrollArea className="min-h-72 py-4 px-8 select-text">
           {(recording?.referenceText || "").split("\n").map((line, index) => (
-            <div key={index} className="text-xl font-serif tracking-wide mb-2">
+            <div key={index} className="text-xl font-sans tracking-wide mb-2">
               {line}
             </div>
           ))}

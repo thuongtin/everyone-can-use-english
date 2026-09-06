@@ -63,6 +63,10 @@ try {
   assert.match(getApiErrorMessage(responseError(418), "unknown"), /Không thể/);
 
   const safeError = createSafeApiError(responseError(401), "vi");
+  const balanceError = { response: { status: 403, data: "余额不足" } };
+  assert.match(createSafeApiError(balanceError, "vi").message, /Số dư Enjoy không đủ/);
+  assert.match(createSafeApiError(balanceError, "en").message, /balance is insufficient/);
+  assert.equal(getApiErrorMessage({ response: { status: 403, data: "private backend details" } }, "vi"), "Bạn không có quyền thực hiện thao tác này.");
   assert.equal(safeError.message, "Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.");
   assert.equal(safeError.status, 401);
   assert.equal(safeError.cause?.message, backendError);

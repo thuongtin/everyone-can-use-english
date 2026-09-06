@@ -11,6 +11,7 @@ import {
   DialogContent,
   DialogFooter,
   Progress,
+  toast,
 } from "@renderer/components/ui";
 import { useNavigate } from "react-router-dom";
 import { LoaderIcon } from "lucide-react";
@@ -28,6 +29,7 @@ export const YoutubeVideosSegment = (props: { channel: string }) => {
   const [downloadSpeed, setDownloadSpeed] = useState(null);
 
   const addToLibrary = () => {
+    if (!selectedVideo || submitting) return;
     let url = `https://www.youtube.com/watch?v=${selectedVideo?.videoId}`;
     setSubmitting(true);
     setProgress(0);
@@ -41,6 +43,7 @@ export const YoutubeVideosSegment = (props: { channel: string }) => {
 
         navigate(`/videos/${record.id}`);
       })
+      .catch((error) => toast.error(error.message))
       .finally(() => {
         setSubmitting(false);
       });
