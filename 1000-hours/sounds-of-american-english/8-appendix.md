@@ -1,3 +1,3 @@
-# 附录
+# Phụ lục
 
-这里补充的是一些日常可以使用的桌面版工具。
+Phần này bổ sung một số công cụ desktop có thể dùng hằng ngày.

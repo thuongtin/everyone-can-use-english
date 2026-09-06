@@ -1,13 +1,17 @@
-# 1. 自我训练手册
+# 1. Sổ tay tự luyện
 
-这一年的集训拉练，核心任务只有两个，**语音塑造**和**记忆扩展**。这一年的另外一个衡量指标是**每天至少三个小时** 并且要做到 **一年内至少投入一千小时的注意力**。
+Đợt rèn luyện chuyên sâu kéo dài một năm này có hai nhiệm vụ cốt lõi: **rèn phát âm** và **mở rộng trí nhớ**. Một chỉ tiêu khác của năm này là **ít nhất ba giờ mỗi ngày**, đồng thời **dành ít nhất một nghìn giờ chú ý trong một năm**.
 
-不要误以为最重要的收获只是**把英语变成第一语言**…… 在这个过程中，我们所积累并获得的，除了任务目标的达成之外，更重要的是（可能是很多人一生中第一次）**完整的自学经历**。
+Đừng tưởng thành quả quan trọng nhất chỉ là **biến tiếng Anh thành ngôn ngữ thứ nhất**. Trong quá trình ấy, ngoài việc đạt mục tiêu, điều ta tích lũy và có được còn quan trọng hơn: **một trải nghiệm tự học trọn vẹn**, có thể là lần đầu trong đời với nhiều người.
 
-不仅如此，还有更重要的东西 —— 这个完整的自学经历，肯定会改变一个人对整个教育的看法，进而影响各种选择，进而改变一个人甚至一家人的命运。
+Không chỉ vậy, còn một điều quan trọng hơn: trải nghiệm tự học trọn vẹn ấy chắc chắn sẽ thay đổi cách một người nhìn toàn bộ nền giáo dục, từ đó tác động đến các lựa chọn, rồi thay đổi số phận của một người, thậm chí cả gia đình.
 
-作为作者，我无法把自己只限制在英语教学这个领域。理论上来讲，我们用同样的方式可以学天下所有的东西，只要自己觉得有必要。
+Với tư cách tác giả, tôi không thể chỉ giới hạn mình trong lĩnh vực dạy tiếng Anh. Về lý thuyết, ta có thể dùng cùng cách ấy để học mọi thứ trên đời, miễn bản thân thấy cần.
 
 ![Don Quixote](/images/don-quixote.svg)
 
-某种意义上，这是我一个人与地球上整个教育体系的争斗，为了自家的孩子 —— 换个角度看，这其实是一个唐吉柯德的故事，一个疯子非要打败风车，任人评说。
+Theo một nghĩa nào đó, đây là cuộc đấu của riêng tôi với toàn bộ hệ thống giáo dục trên Trái Đất, vì con mình. Nhìn từ góc khác, thực ra đây là một câu chuyện Don Quixote: một kẻ điên nhất quyết đánh bại cối xay gió, mặc người đời bình luận.
+
+::: info Ghi chú biên tập cho người học Việt Nam
+Các chỉ tiêu một năm, ba giờ mỗi ngày và một nghìn giờ là thiết kế chương trình của tác giả. Chúng không phải điều kiện bắt buộc để mọi người có thể tiến bộ. “Ngôn ngữ thứ nhất” diễn đạt tham vọng sử dụng tiếng Anh của nguyên tác; bản Việt hóa vẫn đặt tiếng Việt làm ngôn ngữ hướng dẫn và tiếng Anh làm ngôn ngữ học. Người học có thể chọn mục tiêu giao tiếp, học tập hoặc công việc phù hợp, không cần thay thế tiếng mẹ đẻ.
+:::

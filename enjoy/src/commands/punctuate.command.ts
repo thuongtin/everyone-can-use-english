@@ -1,14 +1,10 @@
 import { ChatPromptTemplate } from "@langchain/core/prompts";
 import { textCommand } from "./text.command";
+import type { ChatModelOptions } from "@/lib/chat-model";
 
 export const punctuateCommand = async (
   text: string,
-  options: {
-    key: string;
-    modelName?: string;
-    temperature?: number;
-    baseUrl?: string;
-  }
+  options: ChatModelOptions
 ): Promise<string> => {
   if (!text) throw new Error("Text is required");
 

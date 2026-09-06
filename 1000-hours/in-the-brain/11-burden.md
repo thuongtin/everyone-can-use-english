@@ -1,13 +1,19 @@
-# 11. 被关注是最大负担
+# 11. Bị chú ý là gánh nặng lớn nhất
 
-有一个心理学名词，叫做聚光灯效应（*spotlight effect*）。如果你突然意识到所有人都在盯着你的走路姿势看的话，突然之间，你竟然有可能干脆不会走路了……
+Có một thuật ngữ tâm lý học là hiệu ứng đèn sân khấu (*spotlight effect*). Nếu đột nhiên nhận ra mọi người đều đang nhìn dáng đi của mình, bạn có thể bất chợt đến mức không biết đi nữa.
 
-因为被关注，还同时被那么多人关注，你的大脑突然紧张起来，它希望自己不出任何错，每个细节都能做好…… 突然之间，那几乎只能单线程工作的注意力被多方同时瓜分，哪儿哪儿都不够用，于是，大脑彻底失去了对肢体的支配能力。它不是从此之后就再不能支配了，而是在这种情况下突然做不到了而已……
+Vì bị chú ý, lại bị nhiều người chú ý cùng lúc, não đột nhiên căng thẳng. Nó muốn không mắc lỗi, muốn mọi chi tiết đều tốt. Sự chú ý gần như chỉ đơn luồng bị chia ra nhiều hướng cùng lúc, chẳng đâu đủ dùng; thế là não hoàn toàn mất khả năng điều khiển tay chân. Không phải từ đó về sau không điều khiển được nữa, mà chỉ đột nhiên không làm được trong hoàn cảnh ấy.
 
-日常生活中，随处可见的聚光灯效应最多发生在比较过程中。当人们发现自己做得不如他人好的时候，会产生自己的差正在被所有人看到的错觉。大脑最怕死，社死可能是最可怕的死法 —— 天下最令人恐慌的事情排名第一的，比真实死亡更靠前的，竟然是当众讲演。
+Trong đời sống, hiệu ứng đèn sân khấu xuất hiện rất nhiều lúc so sánh. Khi thấy mình làm kém hơn người khác, ta có ảo giác rằng mọi người đều nhìn thấy sự kém cỏi ấy. Não sợ chết nhất; “chết về mặt xã hội” có lẽ là kiểu chết đáng sợ nhất. Theo khẳng định trong nguyên tác, việc gây hoảng sợ đứng đầu, thậm chí trên cả cái chết thật, lại là nói trước đám đông.
 
-比较其实可以分为两种。第一种是人们习以为常的，“拿自己的当前的状态和他人当前的状态相互比较”。这种**横向比较**的缺陷在于，忽视了各自的当前状态其实是之前积累和改良的结果。一旦比较失败，就失去了动力，养成了习惯的话，就会形成 “固守型人格”（*fixed mindset*） —— 只做自己认为自己可以做好的事情…… 问题在于，自己能做好的事情并不多。并且，做得更好，除了要练得更多之外，从大脑结构来看，更依赖学得更多，大脑里没有孤岛，任何一个看起来毫不相干局域网其实都有可能发挥意想不到的作用。但，横向比较经常失败的结果只能是固步自封。
+Có thể chia so sánh thành hai loại. Loại thứ nhất, mọi người đã quen, là “so trạng thái hiện tại của mình với trạng thái hiện tại của người khác”. Nhược điểm của **so sánh theo chiều ngang** này là bỏ qua việc trạng thái hiện tại của mỗi người đều là kết quả tích lũy và cải thiện trước đó. Một khi thua trong so sánh, ta mất động lực; thành thói quen sẽ hình thành “tư duy cố định” (*fixed mindset*), chỉ làm điều mình nghĩ mình có thể làm tốt. Vấn đề là những điều ấy không nhiều. Để làm tốt hơn, ngoài luyện nhiều, xét theo cấu trúc não còn phụ thuộc hơn vào học nhiều. Trong não không có đảo biệt lập; bất kỳ mạng cục bộ tưởng chẳng liên quan nào cũng có thể phát huy tác dụng bất ngờ. Nhưng thường xuyên thua khi so sánh theo chiều ngang chỉ dẫn tới tự giam mình trong giới hạn cũ.
 
-真正有意义的比较，其实是 “拿自己当前的状态和自己过去的状态进行比较”。通过这种**纵向比较**，首先它无法让你忽视这期间努力的存在，更重要的是它让你清楚地感受到努力的作用。这个习惯会养成 “进取型人格”（*growth mindset*）。因为反复经历过从笨拙走到熟练的过程，不仅更加自信，也可以更加轻松地专注于自我修炼。与此同时，越发地不在意也没时间进行无谓的**横向比较**。所谓 “心无旁骛”，最大的 “骛” 可能就是横向比较了。
+So sánh thực sự có ý nghĩa là “so trạng thái hiện tại của mình với trạng thái trước đây của chính mình”. **So sánh theo chiều dọc** trước hết khiến bạn không thể bỏ qua nỗ lực trong khoảng thời gian ấy; quan trọng hơn, nó giúp bạn cảm nhận rõ tác dụng của nỗ lực. Thói quen này tạo nên “tư duy phát triển” (*growth mindset*). Vì nhiều lần trải qua quá trình từ vụng về đến thành thạo, bạn không chỉ tự tin hơn mà còn dễ tập trung rèn mình hơn. Đồng thời, bạn càng ít bận tâm và không có thời gian cho **so sánh theo chiều ngang** vô nghĩa. Trong câu “tâm không phân tán”, thứ gây phân tán lớn nhất có lẽ chính là so sánh theo chiều ngang.
 
-有趣的是，越差的人求关注的欲望越强烈。越强的人越低调，其原因并非来自道德感，而是真的没时间，更是舍不得把宝贵的注意力花在其它地方。
+Điều thú vị là, theo nhận xét của tác giả, người càng kém càng muốn được chú ý; người càng giỏi càng kín đáo. Ông cho rằng nguyên nhân không phải ý thức đạo đức, mà là thực sự không có thời gian, càng không muốn tiêu sự chú ý quý giá vào việc khác.
+
+::: info Ghi chú biên tập cho bản tiếng Việt
+Định nghĩa nghiên cứu của **spotlight effect** là xu hướng đánh giá quá cao mức người khác chú ý đến ngoại hình hoặc hành động của mình. Ví dụ lúng túng khi bị nhìn là diễn giải của tác giả, không phải định nghĩa mất khả năng điều khiển chân tay. Xem [Gilovich, Medvec và Savitsky (2000)](https://pubmed.ncbi.nlm.nih.gov/10707330/).
+
+Nguyên tác không dẫn khảo sát xác minh nói trước đám đông luôn đứng đầu và đáng sợ hơn cái chết. *Fixed mindset* và *growth mindset* được dịch ở đây là **tư duy cố định** và **tư duy phát triển**, không phải hai loại nhân cách bất biến. Nhận xét “người kém thích chú ý, người giỏi kín đáo” là đánh giá của tác giả, không phải tiêu chí tâm lý để phân loại người học.
+:::

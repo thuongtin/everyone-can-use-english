@@ -43,6 +43,7 @@ export default () => {
             <Button size="lg" onClick={() => setStarted(true)}>
               {t("startToUse")}
             </Button>
+            <Link to="/dictionary" className="block mt-4 underline text-sm">{t("bilingual.open")}</Link>
           </div>
         </div>
       </div>
@@ -54,6 +55,7 @@ export default () => {
       <div className="text-center">
         <div className="text-lg font-mono py-4">{t("login")}</div>
         <div className="text-sm opacity-70">{t("loginBeforeYouStart")}</div>
+        <Link to="/dictionary" className="block mt-4 underline text-sm">{t("bilingual.open")}</Link>
       </div>
       <div className="flex-1 flex justify-center">
         <LoginForm />

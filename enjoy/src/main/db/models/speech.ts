@@ -24,6 +24,14 @@ import { hashFile } from "@main/utils";
 import { Audio, Document, Message, UserSetting } from "@main/db/models";
 import log from "@main/logger";
 import proxyAgent from "@main/proxy-agent";
+import { UserSettingKeyEnum } from "@/types/enums";
+import {
+  buildOpenAiSpeechRequest,
+  ensureAudioArrayBuffer,
+  resolveTtsModel,
+  sanitizeSpeechError,
+  selectCanonicalOpenAiConfig,
+} from "@/lib/speech-models";
 
 const logger = log.scope("db/models/speech");
 @Table({
@@ -187,27 +195,61 @@ export class Speech extends Model<Speech> {
       voice = "alloy",
       baseUrl,
     } = configuration || {};
+    const resolved = resolveTtsModel(engine, model);
+    if (resolved.provider !== "openai" || !resolved.apiModel) {
+      throw new Error(
+        `TTS model "${String(model).trim()}" must use the renderer speech path.`
+      );
+    }
+    const request = buildOpenAiSpeechRequest({
+      engine: resolved.engine,
+      model: resolved.model,
+      voice,
+      text,
+    });
 
-    logger.debug("Generating speech", { engine, model, voice });
+    logger.debug("Generating speech", {
+      engine: resolved.engine,
+      model: resolved.model,
+      voice: request.voice,
+    });
 
     const extname = ".mp3";
     const filename = `${Date.now()}${extname}`;
     const filePath = path.join(settings.userDataPath(), "speeches", filename);
 
-    let openaiConfig: ClientOptions = {};
-    if (engine === "enjoyai") {
-      openaiConfig = {
-        apiKey: (await UserSetting.accessToken()) as string,
-        baseURL: `${settings.apiUrl()}/api/ai`,
-      };
-    } else if (engine === "openai") {
-      const defaultConfig = settings.getSync("openai") as LlmProviderType;
-      if (!defaultConfig.key) {
+    let openaiConfig: ClientOptions;
+    if (resolved.engine === "enjoyai") {
+      const accessToken = await UserSetting.accessToken();
+      if (!accessToken) {
         throw new Error(t("openaiKeyRequired"));
       }
       openaiConfig = {
-        apiKey: defaultConfig.key,
-        baseURL: baseUrl || defaultConfig.baseUrl,
+        apiKey: accessToken,
+        baseURL: `${settings.apiUrl()}/api/ai`,
+      };
+    } else {
+      const canonicalConfig = await UserSetting.get(UserSettingKeyEnum.OPENAI);
+      const savedConfig = selectCanonicalOpenAiConfig(
+        canonicalConfig as LlmProviderType | null | undefined,
+        () => settings.getSync("openai") as LlmProviderType | null
+      );
+      const apiKey =
+        savedConfig && typeof savedConfig.key === "string"
+          ? savedConfig.key.trim()
+          : "";
+      if (!apiKey) {
+        throw new Error(t("openaiKeyRequired"));
+      }
+      const configuredBaseUrl =
+        typeof baseUrl === "string" ? baseUrl.trim() : "";
+      const savedBaseUrl =
+        savedConfig && typeof savedConfig.baseUrl === "string"
+          ? savedConfig.baseUrl.trim()
+          : "";
+      openaiConfig = {
+        apiKey,
+        baseURL: configuredBaseUrl || savedBaseUrl || undefined,
       };
     }
 
@@ -215,18 +257,19 @@ export class Speech extends Model<Speech> {
     const openai = new OpenAI({
       ...openaiConfig,
       httpAgent,
-      // @ts-ignore
+      // @ts-expect-error node-fetch and OpenAI use different RequestInfo types.
       fetch,
     });
 
-    const file = await openai.audio.speech.create({
-      input: text,
-      model,
-      voice,
-    });
-
-    const buffer = Buffer.from(await file.arrayBuffer());
-    await fs.outputFile(filePath, buffer);
+    let buffer: ArrayBuffer;
+    try {
+      const file = await openai.audio.speech.create(request);
+      buffer = ensureAudioArrayBuffer(await file.arrayBuffer());
+    } catch (error) {
+      throw new Error(sanitizeSpeechError(error, openaiConfig.apiKey));
+    }
+    const audioBuffer = Buffer.from(buffer);
+    await fs.outputFile(filePath, audioBuffer);
 
     const md5 = await hashFile(filePath, { algo: "md5" });
     fs.renameSync(
@@ -241,9 +284,9 @@ export class Speech extends Model<Speech> {
       extname,
       md5,
       configuration: {
-        engine,
-        model,
-        voice,
+        engine: resolved.engine,
+        model: resolved.model,
+        voice: request.voice,
       },
     });
   }

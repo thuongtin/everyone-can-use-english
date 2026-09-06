@@ -1,7 +1,7 @@
-# 1. 基础
+# 1. Nền tảng
 
-其实，所谓的 “基础” 真的很少，打印出来不过几页纸而已……
+Theo tác giả, phần “nền tảng” thực ra không nhiều; in ra chỉ vài trang giấy.
 
-经常有人问，“我零基础可不可以？” —— 当然可以。
+Có người hỏi: “Tôi bắt đầu từ con số không thì có học được không?” Câu trả lời của tác giả là: hoàn toàn được.
 
-说实话，不仅可以，事实上可能相对还更好一些，因为零基础的人压根就没有那么多需要纠正的通过长期错误使用而形成的无数细节错误。
+Ông còn cho rằng bắt đầu từ đầu đôi khi có lợi hơn, vì người học chưa tích lũy quá nhiều lỗi nhỏ thành thói quen qua thời gian dài sử dụng sai. Đây là lời khích lệ của tác giả; người đã học trước vẫn có thể nhận diện và sửa thói quen cũ bằng luyện tập.

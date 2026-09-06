@@ -1,15 +1,11 @@
 import { ChatPromptTemplate } from "@langchain/core/prompts";
 import { z } from "zod";
 import { jsonCommand } from "./json.command";
+import type { ChatModelOptions } from "@/lib/chat-model";
 
 export const ipaCommand = async (
   text: string,
-  options: {
-    key: string;
-    modelName?: string;
-    temperature?: number;
-    baseUrl?: string;
-  }
+  options: ChatModelOptions
 ): Promise<{ words?: { word?: string; ipa?: string }[] }> => {
   if (!text) throw new Error("Text is required");
 

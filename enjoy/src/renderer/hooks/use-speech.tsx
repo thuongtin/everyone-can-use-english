@@ -6,6 +6,21 @@ import { useContext } from "react";
 import OpenAI from "openai";
 import * as sdk from "microsoft-cognitiveservices-speech-sdk";
 import { t } from "i18next";
+import {
+  buildOpenAiSpeechRequest,
+  ensureAudioArrayBuffer,
+  resolveTtsModel,
+  sanitizeSpeechError,
+  validateAzureTtsInput,
+  type ResolvedTtsModel,
+} from "@/lib/speech-models";
+
+type SpeechConfiguration = {
+  engine?: unknown;
+  model?: unknown;
+  voice?: unknown;
+  baseUrl?: unknown;
+};
 
 export const useSpeech = () => {
   const { EnjoyApp, webApi, user, apiUrl, learningLanguage } = useContext(
@@ -14,15 +29,36 @@ export const useSpeech = () => {
   const { openai, ttsConfig } = useContext(AISettingsProviderContext);
 
   const tts = async (params: Partial<SpeechType>) => {
-    const { configuration } = params;
-    const { engine, model, voice } = configuration || ttsConfig;
-
-    let buffer;
-    if (model.match(/^(openai|tts-)/)) {
-      buffer = await openaiTTS(params);
-    } else if (model.startsWith("azure")) {
-      buffer = await azureTTS(params);
+    const configuration = (params.configuration || ttsConfig) as
+      | SpeechConfiguration
+      | null
+      | undefined;
+    if (!configuration) {
+      throw new Error("TTS configuration is required.");
     }
+
+    const resolved = resolveTtsModel(
+      configuration.engine,
+      configuration.model
+    );
+    const buffer =
+      resolved.provider === "openai"
+        ? await openaiTTS(params, configuration, resolved)
+        : await azureTTS(params, configuration);
+    const arrayBuffer = ensureAudioArrayBuffer(buffer);
+    const voice =
+      resolved.provider === "openai"
+        ? buildOpenAiSpeechRequest({
+            engine: resolved.engine,
+            model: resolved.model,
+            voice: configuration.voice,
+            text: params.text,
+          }).voice
+        : validateAzureTtsInput({
+            model: resolved.model,
+            voice: configuration.voice,
+            text: params.text,
+          }).voice;
 
     return EnjoyApp.speeches.create(
       {
@@ -32,64 +68,75 @@ export const useSpeech = () => {
         section: params.section,
         segment: params.segment,
         configuration: {
-          engine,
-          model,
+          engine: resolved.engine,
+          model: resolved.model,
           voice,
         },
       },
       {
         type: "audio/mp3",
-        arrayBuffer: buffer,
+        arrayBuffer,
       }
     );
   };
 
-  const openaiTTS = async (params: Partial<SpeechType>) => {
-    const { configuration } = params;
-    const {
-      engine = ttsConfig.engine,
-      model = ttsConfig.model,
-      voice = ttsConfig.voice,
-      baseUrl,
-    } = configuration || {};
+  const openaiTTS = async (
+    params: Partial<SpeechType>,
+    configuration: SpeechConfiguration,
+    resolved: ResolvedTtsModel
+  ): Promise<ArrayBuffer> => {
+    const request = buildOpenAiSpeechRequest({
+      engine: resolved.engine,
+      model: resolved.model,
+      voice: configuration.voice,
+      text: params.text,
+    });
+    const apiKey =
+      resolved.engine === "enjoyai"
+        ? typeof user?.accessToken === "string"
+          ? user.accessToken.trim()
+          : ""
+        : typeof openai?.key === "string"
+          ? openai.key.trim()
+          : "";
 
-    let client: OpenAI;
-
-    if (engine === "enjoyai") {
-      client = new OpenAI({
-        apiKey: user.accessToken,
-        baseURL: `${apiUrl}/api/ai`,
-        dangerouslyAllowBrowser: true,
-        maxRetries: 1,
-      });
-    } else if (openai) {
-      client = new OpenAI({
-        apiKey: openai.key,
-        baseURL: baseUrl || openai.baseUrl,
-        dangerouslyAllowBrowser: true,
-        maxRetries: 1,
-      });
-    } else {
+    if (!apiKey) {
       throw new Error(t("openaiKeyRequired"));
     }
 
-    const file = await client.audio.speech.create({
-      input: params.text,
-      model: model.replace("openai/", ""),
-      voice,
+    const configuredBaseUrl =
+      typeof configuration.baseUrl === "string"
+        ? configuration.baseUrl.trim()
+        : "";
+    const savedBaseUrl =
+      typeof openai?.baseUrl === "string" ? openai.baseUrl.trim() : "";
+    const client = new OpenAI({
+      apiKey,
+      baseURL:
+        resolved.engine === "enjoyai"
+          ? `${apiUrl}/api/ai`
+          : configuredBaseUrl || savedBaseUrl || undefined,
+      dangerouslyAllowBrowser: true,
+      maxRetries: 1,
     });
 
-    return file.arrayBuffer();
+    try {
+      const file = await client.audio.speech.create(request);
+      return ensureAudioArrayBuffer(await file.arrayBuffer());
+    } catch (error) {
+      throw new Error(sanitizeSpeechError(error, apiKey));
+    }
   };
 
   const azureTTS = async (
-    params: Partial<SpeechType>
+    params: Partial<SpeechType>,
+    configuration: SpeechConfiguration
   ): Promise<ArrayBuffer> => {
-    const { configuration = ttsConfig, text } = params;
-    const { model, voice } = configuration;
-
-    if (model !== "azure/speech") return;
-
+    const { voice, text } = validateAzureTtsInput({
+      model: configuration.model,
+      voice: configuration.voice,
+      text: params.text,
+    });
     const { id, token, region } = await webApi.generateSpeechToken({
       purpose: "tts",
       input: text,
@@ -98,30 +145,40 @@ export const useSpeech = () => {
     speechConfig.speechRecognitionLanguage = learningLanguage;
     speechConfig.speechSynthesisVoiceName = voice;
 
-    // const speechSynthesizer = new sdk.SpeechSynthesizer(speechConfig, sdk.AudioConfig.fromDefaultSpeakerOutput());
-    // Do not playback audio when transcribed
+    // Do not playback audio when transcribed.
     const speechSynthesizer = new sdk.SpeechSynthesizer(speechConfig, null);
 
-    return new Promise((resolve, reject) => {
-      speechSynthesizer.speakTextAsync(
-        text,
-        (result) => {
-          speechSynthesizer.close();
+    return new Promise<ArrayBuffer>((resolve, reject) => {
+      const revokeToken = () => {
+        void webApi.revokeSpeechToken(id);
+      };
 
-          if (result && result.audioData) {
-            webApi.consumeSpeechToken(id);
-            resolve(result.audioData);
-          } else {
-            webApi.revokeSpeechToken(id);
-            reject(result);
+      try {
+        speechSynthesizer.speakTextAsync(
+          text,
+          (result) => {
+            speechSynthesizer.close();
+
+            try {
+              const audioData = ensureAudioArrayBuffer(result?.audioData);
+              void webApi.consumeSpeechToken(id);
+              resolve(audioData);
+            } catch (error) {
+              revokeToken();
+              reject(error);
+            }
+          },
+          (error) => {
+            speechSynthesizer.close();
+            revokeToken();
+            reject(error);
           }
-        },
-        (error) => {
-          speechSynthesizer.close();
-          webApi.revokeSpeechToken(id);
-          reject(error);
-        }
-      );
+        );
+      } catch (error) {
+        speechSynthesizer.close();
+        revokeToken();
+        reject(error);
+      }
     });
   };
 

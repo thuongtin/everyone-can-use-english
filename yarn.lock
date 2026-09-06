@@ -4610,6 +4610,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@langchain/openai@npm:0.4.6":
+  version: 0.4.6
+  resolution: "@langchain/openai@npm:0.4.6"
+  dependencies:
+    js-tiktoken: "npm:^1.0.12"
+    openai: "npm:^4.87.3"
+    zod: "npm:^3.22.4"
+    zod-to-json-schema: "npm:^3.22.3"
+  peerDependencies:
+    "@langchain/core": ">=0.3.39 <0.4.0"
+  checksum: 10c0/9de75119b7dfd9d15038114694060a73d3d2ddcf5b5be204292d1c11aac25ebbbdafac94157d6532ed517abc1f2c5a599086163d2f9909cfb29d447f4cd2c7e3
+  languageName: node
+  linkType: hard
+
 "@langchain/openai@npm:>=0.1.0 <0.4.0":
   version: 0.3.14
   resolution: "@langchain/openai@npm:0.3.14"
@@ -14497,6 +14511,7 @@ __metadata:
     "@langchain/community": "npm:^0.3.35"
     "@langchain/core": "npm:^0.3.42"
     "@langchain/ollama": "npm:^0.2.0"
+    "@langchain/openai": "npm:0.4.6"
     "@mozilla/readability": "npm:^0.6.0"
     "@playwright/test": "npm:^1.51.0"
     "@radix-ui/react-accordion": "npm:^1.2.3"
@@ -15834,27 +15849,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fdir@npm:^6.2.0, fdir@npm:^6.4.2":
-  version: 6.4.2
-  resolution: "fdir@npm:6.4.2"
+"fdir@npm:6.4.4":
+  version: 6.4.4
+  resolution: "fdir@npm:6.4.4"
   peerDependencies:
     picomatch: ^3 || ^4
   peerDependenciesMeta:
     picomatch:
       optional: true
-  checksum: 10c0/34829886f34a3ca4170eca7c7180ec4de51a3abb4d380344063c0ae2e289b11d2ba8b724afee974598c83027fea363ff598caf2b51bc4e6b1e0d8b80cc530573
-  languageName: node
-  linkType: hard
-
-"fdir@npm:^6.4.3":
-  version: 6.4.3
-  resolution: "fdir@npm:6.4.3"
-  peerDependencies:
-    picomatch: ^3 || ^4
-  peerDependenciesMeta:
-    picomatch:
-      optional: true
-  checksum: 10c0/d13c10120e9625adf21d8d80481586200759928c19405a816b77dd28eaeb80e7c59c5def3e2941508045eb06d34eb47fad865ccc8bf98e6ab988bb0ed160fb6f
+  checksum: 10c0/6ccc33be16945ee7bc841e1b4178c0b4cf18d3804894cb482aa514651c962a162f96da7ffc6ebfaf0df311689fb70091b04dd6caffe28d56b9ebdc0e7ccadfdd
   languageName: node
   linkType: hard
 

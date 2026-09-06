@@ -6,7 +6,6 @@ import {
 } from "@renderer/context";
 import { toast } from "@renderer/components/ui";
 import { chatMessagesReducer } from "@renderer/reducers";
-import { ChatOpenAI } from "@langchain/openai";
 import {
   ChatPromptTemplate,
   MessagesPlaceholder,
@@ -24,13 +23,29 @@ import {
   ChatMessageStateEnum,
   ChatTypeEnum,
 } from "@/types/enums";
+import {
+  assertChatModelResponseComplete,
+  createChatModel,
+  getChatModelText,
+} from "@/lib/chat-model";
+
+type RuntimeAISettings = {
+  currentGptEngine?: GptEngineSettingType;
+  ttsConfig?: TtsConfigType;
+  openai?: LlmProviderType;
+  getProviderConfig?: (name: string) => LlmProviderType;
+};
 
 export const useChatSession = (chatId: string) => {
-  const { EnjoyApp, user, apiUrl, learningLanguage } = useContext(
+  const { EnjoyApp, user, apiUrl } = useContext(
     AppSettingsProviderContext
   );
-  const { currentGptEngine, ttsConfig } = useContext(AISettingsProviderContext);
-  const { openai } = useContext(AISettingsProviderContext);
+  const {
+    currentGptEngine,
+    ttsConfig,
+    openai,
+    getProviderConfig,
+  } = useContext(AISettingsProviderContext) as RuntimeAISettings;
   const { addDblistener, removeDbListener } = useContext(DbProviderContext);
   const [chatMessages, dispatchChatMessages] = useReducer(
     chatMessagesReducer,
@@ -198,21 +213,30 @@ export const useChatSession = (chatId: string) => {
       llm: llm as any,
       memory,
       prompt: prompt as any,
-      verbose: true,
+      verbose: false,
     });
     let response: LLMResult["generations"][0] = [];
     await chain.call({ input: pendingMessage.content }, [
       {
         handleLLMEnd: async (output) => {
-          response = output.generations[0];
+          response = output.generations[0] || [];
         },
       },
     ]);
+    for (const generation of response) {
+      assertChatModelResponseComplete(generation);
+    }
+    if (response.length === 0) {
+      throw new Error("AI returned an empty response");
+    }
     for (const r of response) {
+      const generationMessage = (r as { message?: unknown }).message;
+      const content = getChatModelText(generationMessage ?? r).trim();
+      if (!content) throw new Error("AI returned an empty response");
       await EnjoyApp.chatMessages.create({
         chatId,
         memberId: member.id,
-        content: r.text,
+        content,
         state: ChatMessageStateEnum.COMPLETED,
       });
     }
@@ -264,12 +288,13 @@ export const useChatSession = (chatId: string) => {
       history,
       input: "Return your reply directly without any extra words.",
     });
+    assertChatModelResponseComplete(reply);
 
     // the reply may contain the member's name like "ChatAgent: xxx". We need to remove it.
-    const content = reply.content
-      .toString()
+    const content = getChatModelText(reply)
       .replace(new RegExp(`^(${member.agent.name}):`), "")
       .trim();
+    if (!content) throw new Error("AI returned an empty response");
 
     const message = await EnjoyApp.chatMessages.create({
       chatId,
@@ -310,7 +335,7 @@ export const useChatSession = (chatId: string) => {
   const buildLlm = (member: ChatMemberType) => {
     const {
       engine = "enjoyai",
-      model = "gpt-4o",
+      model,
       temperature,
       maxCompletionTokens,
       frequencyPenalty,
@@ -318,45 +343,38 @@ export const useChatSession = (chatId: string) => {
       numberOfChoices,
     } = member.config.gpt;
 
-    if (engine === "enjoyai") {
-      if (!user.accessToken) {
-        throw new Error(t("authorizationExpired"));
-      }
+    const providerConfig = getProviderConfig?.(engine);
+    const key = providerConfig?.key ??
+      (engine === "enjoyai"
+        ? user?.accessToken
+        : engine === "openai"
+          ? openai?.key
+          : undefined);
+    const baseUrl =
+      engine === "enjoyai"
+        ? apiUrl
+          ? `${apiUrl}/api/ai`
+          : undefined
+        : member.config.gpt.baseUrl || providerConfig?.baseUrl;
 
-      return new ChatOpenAI({
-        openAIApiKey: user.accessToken,
-        configuration: {
-          baseURL: `${apiUrl}/api/ai`,
-        },
-        maxRetries: 0,
-        modelName: model,
-        temperature,
-        maxTokens: maxCompletionTokens,
-        frequencyPenalty,
-        presencePenalty,
-        n: numberOfChoices,
-      });
-    } else if (engine === "openai") {
-      if (!openai.key) {
-        throw new Error(t("openaiKeyRequired"));
-      }
-
-      return new ChatOpenAI({
-        openAIApiKey: openai.key,
-        configuration: {
-          baseURL: openai.baseUrl,
-        },
-        maxRetries: 0,
-        modelName: model,
-        temperature,
-        maxTokens: maxCompletionTokens,
-        frequencyPenalty,
-        presencePenalty,
-        n: numberOfChoices,
-      });
-    } else {
-      throw new Error(t("aiEngineNotSupported"));
+    if (engine === "enjoyai" && !key) {
+      throw new Error(t("authorizationExpired"));
     }
+    if (engine === "openai" && !key) {
+      throw new Error(t("openaiKeyRequired"));
+    }
+
+    return createChatModel({
+      provider: engine,
+      key,
+      baseUrl,
+      modelName: model,
+      temperature,
+      maxTokens: maxCompletionTokens,
+      frequencyPenalty,
+      presencePenalty,
+      numberOfChoices,
+    });
   };
 
   const buildSystemPrompt = (member: ChatMemberType) => {

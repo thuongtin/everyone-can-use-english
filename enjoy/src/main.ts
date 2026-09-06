@@ -9,8 +9,10 @@ import contextMenu from "electron-context-menu";
 import Bugsnag from "@bugsnag/electron";
 import { t } from "i18next";
 import { Client } from "./api";
+import { i18n } from "@main/i18n";
 
 const logger = log.scope("main");
+i18n();
 
 const initBugsnag = async () => {
   if (!app.isPackaged) return;
@@ -45,10 +47,10 @@ contextMenu({
   showLearnSpelling: false,
   showSelectAll: false,
   labels: {
-    copy: t("copy"),
-    cut: t("cut"),
-    paste: t("paste"),
-    selectAll: t("selectAll"),
+    get copy() { return t("copy"); },
+    get cut() { return t("cut"); },
+    get paste() { return t("paste"); },
+    get selectAll() { return t("selectAll"); },
   },
   shouldShowMenu: (_event, params) => {
     return params.isEditable || !!params.selectionText;

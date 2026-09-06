@@ -1,16 +1,5 @@
 import { expect, test } from "@playwright/test";
-import {
-  clickMenuItemById,
-  findLatestBuild,
-  ipcMainCallFirstListener,
-  ipcRendererCallFirstListener,
-  parseElectronApp,
-  ipcMainInvokeHandler,
-  ipcRendererInvoke,
-} from "electron-playwright-helpers";
-import { ElectronApplication, Page, _electron as electron } from "playwright";
-import path from "path";
-import fs from "fs-extra";
+import { launchIsolatedApp, MOCK_FIXTURE_LABEL, type IsolatedApp } from "./helpers/isolated-app";
 
 declare global {
   interface Window {
@@ -18,94 +7,87 @@ declare global {
   }
 }
 
-let electronApp: ElectronApplication;
-let page: Page;
-const resultDir = path.join(process.cwd(), "test-results");
+let fixture: IsolatedApp | undefined;
 
 test.beforeAll(async () => {
-  // find the latest build in the out directory
-  const latestBuild = findLatestBuild();
-  console.log(`Latest build: ${latestBuild}`);
-
-  // parse the directory and find paths and other info
-  const appInfo = parseElectronApp(latestBuild);
-  // set the CI environment variable to true
-  process.env.CI = "e2e";
-
-  fs.ensureDirSync(resultDir);
-  process.env.SETTINGS_PATH = resultDir;
-  process.env.LIBRARY_PATH = resultDir;
-
-  electronApp = await electron.launch({
-    args: [appInfo.main],
-    executablePath: appInfo.executable,
-  });
-  console.log("Electron app launched");
-
-  page = await electronApp.firstWindow();
-  const filename = page.url()?.split("/").pop();
-  console.info(`Window opened: ${filename}`);
-
-  // capture errors
-  page.on("pageerror", (error) => {
-    console.error(error);
-  });
-  // capture console messages
-  page.on("console", (msg) => {
-    console.info(msg.text());
-  });
+  fixture = await launchIsolatedApp();
+  console.info(`[${MOCK_FIXTURE_LABEL}] Main-process fixture has no account or credential data`);
 });
 
 test.afterAll(async () => {
-  await electronApp.close();
+  await fixture?.close();
 });
 
-test("validate echogarden recognition by whisper", async () => {
-  const res = await page.evaluate(() => {
-    return window.__ENJOY_APP__.echogarden.check({
-      engine: "whisper",
-      whisper: {
-        model: "tiny.en",
-        language: "en",
-        encoderProvider: "cpu",
-        decoderProvider: "cpu",
-      },
-    });
+test.afterEach(() => {
+  fixture?.assertNoRuntimeIssues();
+});
+
+// Playwright requires the first callback argument to use destructuring.
+// eslint-disable-next-line no-empty-pattern
+test("launches the packaged app with isolated settings and library paths", async ({}, testInfo) => {
+  testInfo.annotations.push({
+    type: "mock-fixture",
+    description: MOCK_FIXTURE_LABEL,
   });
-  console.info(res.log);
-  expect(res.success).toBeTruthy();
+
+  const page = fixture!.page;
+  await expect(page.getByText("Chào mừng đến với")).toBeVisible();
+  await expect(page.evaluate(() => window.__ENJOY_APP__.app.isPackaged())).resolves.toBe(true);
+  await expect(page.evaluate(() => window.__ENJOY_APP__.appSettings.getUser())).resolves.toBeFalsy();
+  await expect(page.evaluate(() => window.__ENJOY_APP__.appSettings.getLibrary())).resolves.toBe(
+    `${fixture!.directories.library}/EnjoyLibrary`
+  );
 });
 
-test("validate echogarden recognition by whisper.cpp", async () => {
-  const res = await page.evaluate(() => {
-    return window.__ENJOY_APP__.echogarden.check({
-      engine: "whisper.cpp",
-      whisperCpp: {
-        model: "tiny.en",
-        language: "en",
-      },
-    });
+test("runs the packaged ffmpeg command", async () => {
+  const result = await fixture!.page.evaluate(() => window.__ENJOY_APP__.ffmpeg.check());
+  expect(result).toBeTruthy();
+});
+
+test("creates the default library inside the isolated fixture", async () => {
+  const library = await fixture!.page.evaluate(() => window.__ENJOY_APP__.appSettings.getLibrary());
+  expect(library).toBe(`${fixture!.directories.library}/EnjoyLibrary`);
+});
+
+test.describe("native model checks", () => {
+  test.skip(
+    process.env.ENJOY_E2E_NATIVE !== "1",
+    "Set ENJOY_E2E_NATIVE=1 to run the explicit native model suite"
+  );
+
+  test("validates echogarden recognition by whisper", async () => {
+    const result = await fixture!.page.evaluate(() =>
+      window.__ENJOY_APP__.echogarden.check({
+        engine: "whisper",
+        whisper: {
+          model: "tiny.en",
+          language: "en",
+          encoderProvider: "cpu",
+          decoderProvider: "cpu",
+        },
+      })
+    );
+    console.info(result.log);
+    expect(result.success).toBeTruthy();
   });
-  console.info(res.log);
-  expect(res.success).toBeTruthy();
-});
 
-test("validate echogarden alignment", async () => {
-  const res = await page.evaluate(() => {
-    return window.__ENJOY_APP__.echogarden.checkAlign();
+  test("validates echogarden recognition by whisper.cpp", async () => {
+    const result = await fixture!.page.evaluate(() =>
+      window.__ENJOY_APP__.echogarden.check({
+        engine: "whisper.cpp",
+        whisperCpp: {
+          model: "tiny.en",
+          language: "en",
+        },
+      })
+    );
+    console.info(result.log);
+    expect(result.success).toBeTruthy();
   });
-  console.info(res.log);
-  expect(res.success).toBeTruthy();
-});
 
-test("valid ffmpeg command", async () => {
-  const res = await page.evaluate(() => {
-    return window.__ENJOY_APP__.ffmpeg.check();
+  test("validates echogarden alignment", async () => {
+    const result = await fixture!.page.evaluate(() => window.__ENJOY_APP__.echogarden.checkAlign());
+    console.info(result.log);
+    expect(result.success).toBeTruthy();
   });
-  expect(res).toBeTruthy();
-});
-
-test("should setup default library path", async () => {
-  const settings = fs.readJsonSync(path.join(resultDir, "settings.json"));
-  expect(settings.library).not.toBeNull();
 });

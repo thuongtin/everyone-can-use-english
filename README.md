@@ -1,9 +1,9 @@
 <div align="center">
-  <img src="./enjoy/assets/icon.png" alt="Clash" width="128" />
+  <img src="./enjoy/assets/icon.png" alt="Enjoy" width="128" />
 </div>
 
 <h3 align="center">
-AI 是当今世界上最好的外语老师，Enjoy 做 AI 最好的助教。
+AI là người thầy ngoại ngữ hàng đầu hiện nay; Enjoy đồng hành như một trợ giảng cho AI.
 </h3>
 
 [![Deploy 1000h website](https://github.com/ZuodaoTech/everyone-can-use-english/actions/workflows/deploy-1000h.yml/badge.svg)](https://github.com/ZuodaoTech/everyone-can-use-english/actions/workflows/deploy-1000h.yml)
@@ -14,52 +14,58 @@ AI 是当今世界上最好的外语老师，Enjoy 做 AI 最好的助教。
 
 ---
 
-## 网页版
+## Bản dành cho người Việt học tiếng Anh
 
-Enjoy 全新版本已经上线，可访问 [https://enjoy.bot](https://enjoy.bot) 直接使用。
+Repo này đang được Việt hóa: giao diện và hướng dẫn bằng tiếng Việt, ngôn ngữ học mặc định là tiếng Anh. Các ví dụ tiếng Anh và phiên âm IPA được giữ để luyện tập. Sách và tài liệu được dịch từ nguyên tác; nội dung bổ sung cho người Việt được ghi rõ để phân biệt với lời tác giả.
+
+Theo dõi phạm vi đã kiểm tra và phần còn lại trong [tiến độ Việt hóa](./execution-notes.md). Các website, bản phát hành và tiện ích bên ngoài dưới đây thuộc dự án gốc; chúng không tự nhận các thay đổi tiếng Việt trong repo này.
+
+## Phiên bản web
+
+Dự án gốc giới thiệu phiên bản Enjoy mới tại [Enjoy trên web](https://enjoy.bot), có thể dùng trực tiếp trên trình duyệt.
 
 ![](./enjoy/snapshots/screenshot-video.png)
 ![](./enjoy/snapshots/screenshot-ebook.png)
 ![](./enjoy/snapshots/screenshot-flashcard.png)
 ![](./enjoy/snapshots/screenshot-course.png)
 
-## 浏览器插件
+## Tiện ích trình duyệt
 
-Enjoy 浏览器插件已经上线，支持 YouTube 和 Netflix。可访问 [Chrome Web Store](https://chromewebstore.google.com/detail/enjoy-echo/hiijpdndbjfnffibdhajdanjekbnalob) 安装使用。
+Tiện ích Enjoy của dự án gốc hỗ trợ YouTube và Netflix. Bạn có thể xem và cài đặt tại [Chrome Web Store](https://chromewebstore.google.com/detail/enjoy-echo/hiijpdndbjfnffibdhajdanjekbnalob).
 
 ![](./enjoy/snapshots/screenshot-youtube.png)
 ![](./enjoy/snapshots/screenshot-netflix.png)
 
 ---
 
-## 桌面版
+## Phiên bản máy tính
 
-新版桌面版将会是对网页版的套壳和增强，即将发布。
+Theo giới thiệu của dự án gốc, phiên bản máy tính mới sẽ bao bọc và bổ sung khả năng cho phiên bản web, với kế hoạch phát hành sau. Mã nguồn Electron hiện có trong thư mục [enjoy](./enjoy/README.md).
 
 
-## 相关阅读
+## Tài liệu liên quan
 
-### 一千小时（2024）
+### Một nghìn giờ (2024)
 
-- [简要说明](https://1000h.org/intro.html)
-- [训练任务](https://1000h.org/training-tasks/kick-off.html)
-- [语音塑造](https://1000h.org/sounds-of-american-english/0-intro.html)
-- [大脑内部](https://1000h.org/in-the-brain/01-inifinite.html)
-- [自我训练](https://1000h.org/self-training/00-intro.html)
+- [Giới thiệu ngắn](./1000-hours/intro.md)
+- [Nhiệm vụ luyện tập](./1000-hours/training-tasks/kick-off.md)
+- [Rèn luyện phát âm](./1000-hours/sounds-of-american-english/0-intro.md)
+- [Bên trong não bộ](./1000-hours/in-the-brain/01-inifinite.md)
+- [Tự luyện tập](./1000-hours/self-training/00-intro.md)
 
-### 人人都能用英语（2010）
+### Ai cũng có thể sử dụng tiếng Anh (2010)
 
-- [简介](./book/README.md)
-- [第一章：起点](./book/chapter1.md)
-- [第二章：口语](./book/chapter2.md)
-- [第三章：语音](./book/chapter3.md)
-- [第四章：朗读](./book/chapter4.md)
-- [第五章：词典](./book/chapter5.md)
-- [第六章：语法](./book/chapter6.md)
-- [第七章：精读](./book/chapter7.md)
-- [第八章：叮嘱](./book/chapter8.md)
-- [后记](./book/end.md)
+- [Giới thiệu](./book/README.md)
+- [Chương 1: Điểm xuất phát](./book/chapter1.md)
+- [Chương 2: Nói](./book/chapter2.md)
+- [Chương 3: Phát âm](./book/chapter3.md)
+- [Chương 4: Đọc thành tiếng](./book/chapter4.md)
+- [Chương 5: Từ điển](./book/chapter5.md)
+- [Chương 6: Ngữ pháp](./book/chapter6.md)
+- [Chương 7: Đọc kỹ](./book/chapter7.md)
+- [Chương 8: Lời nhắn nhủ](./book/chapter8.md)
+- [Lời kết](./book/end.md)
 
-## 常见问题
+## Câu hỏi thường gặp
 
-请查询 [文档 FAQ](https://1000h.org/enjoy-app/faq.html)。
+Xem [tài liệu câu hỏi thường gặp](./1000-hours/enjoy-app/faq.md).

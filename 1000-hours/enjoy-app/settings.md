@@ -1,190 +1,184 @@
-# 软件设置
+# Cài đặt ứng dụng
 
-Enjoy 只需要登录后即可直接使用，**无需其他设置**。但是，你仍然可以根据需要做个性化的设置。
+Enjoy được thiết kế để có thể sử dụng ngay sau khi đăng nhập, **không cần cấu hình thêm**. Bạn vẫn có thể điều chỉnh theo nhu cầu.
 
-打开 Enjoy 软件，点击左侧栏最下面的齿轮按钮，即可打开 `软件设置`。
+Mở Enjoy rồi nhấn biểu tượng bánh răng ở cuối thanh bên trái để mở **Cài đặt**.
 
-## 基本设置
-
-### 母语
-
-请选择您的母语，默认为`简体中文`。
-
-请注意，此设定关系到学习过程中的翻译内容、分析等，并不影响软件的界面语言。
-
-### 学习语言
-
-请选择您要学习的语言，默认为 `English(United States)`。
-
-### 语音转文本服务
-
-::: info 设置路径
-软件设置 -> 基本设置 -> 语音转文本服务
+::: info Ghi chú cho bản tiếng Việt
+Bản này dùng tiếng Việt cho giao diện và tiếng mẹ đẻ mặc định, tiếng Anh Mỹ cho ngôn ngữ học. Lựa chọn đã lưu của người dùng được giữ nguyên. Các mô tả giá, dịch vụ đám mây, phiên bản hệ điều hành dưới đây được dịch từ tài liệu gốc; tình trạng dịch vụ bên ngoài chưa được bản Việt hóa xác nhận lại. Không coi việc dịch tài liệu là bằng chứng dịch vụ đang miễn phí hoặc tài khoản đã được cấp quyền sử dụng.
 :::
 
-语音转文本（即 STT，Speech to Text）服务是 Enjoy 提供的核心功能之一，也是 [跟读训练](./audios.md#跟读音频) 的前提条件。
+## Cài đặt cơ bản {#basic-settings}
 
-此处设置为默认值，在语音转文本时仍可选择不同服务。
+### Tiếng mẹ đẻ {#native-language}
+
+Chọn tiếng mẹ đẻ của bạn. Giá trị mặc định cho người dùng mới trong bản Việt hóa là **Tiếng Việt** (`vi-VN`). Bản gốc dùng tiếng Trung giản thể.
+
+Thiết lập này quyết định ngôn ngữ của bản dịch, phần phân tích và giải thích trong lúc học; nó không quyết định ngôn ngữ giao diện.
+
+### Ngôn ngữ đang học {#learning-language}
+
+Chọn ngôn ngữ muốn học. Mặc định là **English (United States)**, tức tiếng Anh Mỹ (`en-US`).
+
+### Dịch vụ chuyển giọng nói thành văn bản {#speech-to-text}
+
+::: info Đường dẫn cài đặt
+Cài đặt -> Cơ bản -> Dịch vụ AI chép lời
+:::
+
+Chuyển giọng nói thành văn bản, hay STT (Speech to Text), là một chức năng cốt lõi của Enjoy và là bước cần thiết trước khi [luyện nhại theo âm thanh](./audios.md#shadowing).
+
+Lựa chọn ở đây là mặc định. Mỗi lần chép lời, bạn vẫn có thể chọn dịch vụ khác.
 
 <details>
-<summary>
-本地(whisper)
-</summary>
+<summary>Trên máy (Whisper)</summary>
 
-该设置默认项为 `本地`，即利用 Enjoy 集成的 whisper 组件，完全利用本地计算机的算力提供 STT 服务，该服务完全免费。
+Lựa chọn mặc định trong tài liệu gốc là **Trên máy**: dùng thành phần Whisper tích hợp trong Enjoy và hoàn toàn dựa vào khả năng tính toán của máy bạn. Dịch vụ chạy trên máy không thu phí sử dụng.
 
-Enjoy 默认选择 whisper 模型 `tiny.en`，如果电脑配置较高，可以选用更大的模型以提高语音转文本的准确度。
+Enjoy mặc định chọn mô hình Whisper `tiny.en`. Nếu máy có cấu hình cao, bạn có thể chọn mô hình lớn hơn để tăng độ chính xác khi chép lời.
 
-::: tip 关于 whisper 模型的选择
-首次使用时，程序会自动下载模型，选择的模型越大，下载所需要的时间也越长。推荐一般使用 `medium` 以下模型即可。
+::: tip Chọn mô hình Whisper
+Lần sử dụng đầu tiên, ứng dụng tự tải mô hình. Mô hình càng lớn, thời gian tải càng dài. Tài liệu gốc đề xuất thông thường dùng mô hình nhỏ hơn `medium` là đủ.
 
-理论上，模型越大，识别的准确度也更高，但是运行得越慢，甚至在一些配置不高的电脑中无法运行。
+Về lý thuyết, mô hình lớn hơn thường nhận dạng chính xác hơn nhưng chạy chậm hơn, thậm chí không chạy được trên một số máy cấu hình thấp.
 
-凡是以 `.en` 结尾的模型均只支持英文，识别英文准确性也更高，例如 `base.en`；而不以 `.en` 结尾的模型则可以支持多种语言，例如 `base`。
+Mô hình có đuôi `.en`, chẳng hạn `base.en`, chỉ hỗ trợ tiếng Anh và được tối ưu cho nhận dạng tiếng Anh. Mô hình không có đuôi này, chẳng hạn `base`, hỗ trợ nhiều ngôn ngữ. Khi học tiếng Anh, hãy để ngôn ngữ cần nhận dạng là tiếng Anh; không đổi nó sang tiếng Việt chỉ vì giao diện là tiếng Việt.
 :::
 
-::: warning 检查本地 whisper 服务
-有些电脑或者系统（例如 macOS 11）可能会因为兼容性问题（或其他未知问题）无法使用本地的 whisper 服务。点击 `检查` 按钮即可检查 whisper 服务在本地计算机是否工作正常。如果提示无法正常工作，可以选用其他服务。
+::: warning Kiểm tra Whisper trên máy
+Một số máy hoặc hệ điều hành, ví dụ macOS 11 được nhắc trong tài liệu gốc, có thể không dùng được Whisper do tương thích hoặc nguyên nhân khác. Nhấn **Kiểm tra** để xác định dịch vụ có hoạt động trên máy hay không. Nếu không, bạn có thể chọn dịch vụ khác.
 :::
 </details>
 
 <details>
-<summary>
-Azure AI STT
-</summary>
+<summary>Azure AI STT</summary>
 
-利用微软 Azure AI 的语音识别 API 服务提供的 STT，该服务为**收费服务**，每次使用均会在 Enjoy 账户余额中扣费，，余额不足则需要 [充值](#充值) 后才可继续使用。
+Dùng API nhận dạng giọng nói của Microsoft Azure AI. Đây là **dịch vụ trả phí**: mỗi lần dùng sẽ trừ vào số dư tài khoản Enjoy. Nếu không đủ số dư, cần [nạp tiền](#deposit) trước khi tiếp tục.
 </details>
 
 <details>
-<summary>
-Cloudflare AI STT
-</summary>
+<summary>Cloudflare AI STT</summary>
 
-利用 Cloudflare 提供的 whisper 云服务，该服务目前免费。经实测，对于一些时长较短的音频，识别会有较大误差。
+Dùng dịch vụ Whisper trên đám mây của Cloudflare. Tại thời điểm tài liệu gốc, dịch vụ được mô tả là miễn phí. Tác giả ghi nhận sai số khá lớn với một số đoạn âm thanh ngắn.
 </details>
 
 <details>
-<summary>
-OpenAI STT
-</summary>
+<summary>OpenAI STT</summary>
 
-利用 OpenAI 提供的 whipser 云服务，该服务需要[配置自己的 OpenAI 密钥](#openai-配置)。
+Dùng dịch vụ Whisper trên đám mây của OpenAI. Bạn cần [cấu hình API key OpenAI của mình](#openai-settings).
 </details>
 
-### 文字转语音服务
+### Dịch vụ chuyển văn bản thành giọng nói {#text-to-speech}
 
-::: info 设置路径
-软件设置 -> 基本设置 -> 文字转语音服务
+::: info Đường dẫn cài đặt
+Cài đặt -> Cơ bản -> Dịch vụ chuyển văn bản thành giọng nói
 :::
 
-文字转语音（即 TTS，Text to Speech）可以将文本合成为语音，以便于跟读训练。此处设置为默认值，在文字转语音时仍可选择不同服务。
+Chuyển văn bản thành giọng nói, hay TTS (Text to Speech), tổng hợp âm thanh từ văn bản để luyện đọc theo mẫu. Lựa chọn ở đây là mặc định; mỗi lần tạo giọng nói, bạn vẫn có thể chọn dịch vụ khác.
 
-EnjoyAI 除了提供 OpenAI 的 TTS 服务，还集成了 Azure 的 TTS 服务，语音模型选择 `azure/speech` 即可。 Azure TTS 提供了更丰富的音色供选择。
+Ngoài OpenAI TTS, EnjoyAI còn tích hợp Azure TTS. Chọn mô hình `azure/speech` để sử dụng. Azure TTS cung cấp nhiều giọng đọc để lựa chọn.
 
-### 默认 AI 引擎
+### Dịch vụ AI mặc định {#default-ai-engine}
 
-::: info 设置路径
-软件设置 -> 基本设置 -> 默认 AI 引擎
+::: info Đường dẫn cài đặt
+Cài đặt -> Cơ bản -> Dịch vụ AI mặc định
 :::
 
-Enjoy 中提供了很多方便的功能。
+Enjoy có nhiều chức năng hỗ trợ việc học.
 
-默认值为 `Enjoy AI`，由 Enjoy 提供该服务，每次使用均会在账户余额中扣费，余额不足则需要 [充值](#充值) 后才可继续使用。EnjoyAI 提供了除 OpenAI 以外，目前流行的热门模型，用户可以灵活选用。
+Giá trị mặc định là `Enjoy AI`, dịch vụ do Enjoy cung cấp. Mỗi lần dùng sẽ trừ tiền trong tài khoản; khi không đủ số dư, cần [nạp tiền](#deposit) để tiếp tục. EnjoyAI cung cấp nhiều mô hình để người dùng lựa chọn, bao gồm mô hình của OpenAI và các nhà cung cấp khác.
 
-如果您配备了可用的 [OpenAI 密钥](#openai-配置)，也可以将 **默认 AI 引擎** 选为 `OpenAI`。
+Nếu có [API key OpenAI](#openai-settings) sử dụng được, bạn cũng có thể chọn `OpenAI` làm **Dịch vụ AI mặc định**.
 
-在默认模型，您还可以对不同的服务选用不同的模型。
+Trong phần mô hình mặc định, bạn có thể chọn mô hình khác nhau cho từng chức năng.
 
-## 词典设置
+## Cài đặt từ điển {#dictionary-settings}
 
-### 词典导入
+### Từ điển có sẵn
 
-::: info 设置路径
-软件设置 -> 词典设置 -> 词典导入
+Enjoy có hai bộ từ điển offline:
+
+| Từ điển | Dùng khi | Số khóa tra cứu trong bản hiện tại |
+| --- | --- | --- |
+| Anh - Việt | Đọc/nghe tiếng Anh và tìm nghĩa tiếng Việt | 118.926 |
+| Việt - Anh | Tìm từ hoặc cách diễn đạt bằng tiếng Anh | 29.730 |
+
+Hai bộ đi kèm ứng dụng, không cần tải ZIP, tài khoản, API hoặc kết nối mạng để tra nghĩa và phiên âm IPA. Liên kết nguồn cần Internet; bộ này không kèm âm thanh phát âm. Dữ liệu cộng đồng có thể thiếu từ hoặc có nghĩa chưa chính xác, nên đối chiếu ngữ cảnh; ví dụ sử dụng hiện chỉ có ở bộ Anh - Việt.
+
+Ở màn hình chào hoặc đăng nhập, chọn **Mở từ điển offline**. Chọn chiều tra cứu, nhập từ hoặc cụm từ rồi nhấn **Tra từ**. Ví dụ: `learn`, `bank`, `take care` ở chiều Anh - Việt; `học`, `xin chào`, `ngân hàng` ở chiều Việt - Anh. Nhập đủ dấu tiếng Việt để phân biệt các từ như `ma` và `má`. Trang tra từ nhớ chiều đã chọn trên thiết bị.
+
+Trong nội dung học, chọn từ hoặc cụm từ rồi chọn **Anh - Việt** hoặc **Việt - Anh** ở danh sách từ điển. Khi chưa có lựa chọn mặc định đã lưu và đang học tiếng Anh, Enjoy dùng **Anh - Việt**. Vào **Cài đặt -> Từ điển** và nhấn **Đặt làm mặc định** cạnh bộ muốn dùng để lưu lựa chọn cho tài khoản. Từ điển do bạn nhập trước đây và lựa chọn đã lưu được giữ.
+
+### Nguồn và giấy phép
+
+Nghĩa tiếng Việt của mục từ tiếng Anh lấy từ [Wiktionary tiếng Việt qua Kaikki](https://kaikki.org/viwiktionary/Ti%E1%BA%BFng%20Anh/index.html); nghĩa tiếng Anh của mục từ tiếng Việt lấy từ [Wiktionary tiếng Anh qua Kaikki](https://kaikki.org/dictionary/Vietnamese/index.html). Đây là hai nguồn riêng, không đảo ngược máy móc danh sách dịch. Dữ liệu được biên tập, lọc mục từ chữ Latin và phân phối theo [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), ghi công cộng tác viên Wiktionary và Kaikki. Mỗi kết quả có liên kết nguồn. Chi tiết phiên bản, hash và thay đổi được đóng gói cùng từ điển.
+
+### Nhập từ điển riêng {#import-dictionary}
+
+::: info Đường dẫn cài đặt
+Cài đặt -> Từ điển -> Nhập từ điển
 :::
 
-#### 导入 Enjoy 适配过的词典
+Enjoy vẫn hỗ trợ MDict. Với bộ chỉ có một tệp `.mdx`, nhập trực tiếp. Với bộ có nhiều tệp, chọn đầy đủ các tệp liên quan, gồm `.mdx`, `.mdd`, `.js` và các tệp đi kèm. Chỉ nhập bộ từ điển và mã đi kèm từ nguồn bạn tin cậy, có quyền sử dụng.
 
-| 词典名称 | 语言 | 支持发音 | 文件名 | 大小 |
-| -------- | ---- | -------- | ------ | ------ |
-| Longman Dictionary of Contemporary English | 英-英 / 英-中 | 是 | ldocd5.zip | 1.63GB |
-| Collins COBUILD Advanced British EN-CN Dictionary | 英-中 | 否 | ccalecd.zip | 13.879MB |
-| Collins COBUILD Advanced British English Learners Dictionary | 英-英 | 是 | ccabeld.zip | 485.6MB |
-| Oxford Dictionary of English | 英-英 | 否 | oxford_en_mac.zip | 33.6MB |
-| Korean English Dictionary | 韩-英 | 否 | koen_mac.zip | 52.1MB |
-| Japanese English Dictionary | 日-英 | 否 | jaen_mac.zip | 39.8MB |
-| German English Dictionary | 德-英 | 否 | deen_mac.zip | 32.1MB |
-| Russian English Dictionary | 俄-英 | 否 | ruen_mac.zip | 18.1MB |
+Đường nhập ZIP của các phiên bản Enjoy cũ được giữ cho dữ liệu tương thích. Hai bộ Anh - Việt và Việt - Anh có sẵn không cần nhập lại. Danh sách từ điển và kho tải của bản gốc được lưu riêng làm tư liệu đối chiếu; không còn dùng để thiết lập bản dành cho người Việt.
 
-::: tip 下载词典
-网盘下载： [链接](https://pan.baidu.com/share/init?surl=zK-dHs40HpfYNUEdoYxZUw)
-提取码: 7975
+## Cài đặt nâng cao {#advanced-settings}
+
+### Cài đặt API {#api-settings}
+
+Đặt địa chỉ API của dịch vụ Enjoy. Giá trị mặc định là `https://enjoy.bot`.
+
+### Cài đặt proxy {#proxy-settings}
+
+Cấu hình proxy cho Enjoy App.
+
+### Trạng thái mạng {#network-status}
+
+Kiểm tra kết nối mạng giữa ứng dụng Enjoy và máy chủ.
+
+### Cấu hình OpenAI {#openai-settings}
+
+::: info Đường dẫn cài đặt
+Cài đặt -> Nâng cao -> OpenAI
 :::
 
-下载 `zip` 格式的词典文件后，点击 `导入词典` 按钮，即可导入词典。
+Cấu hình API key OpenAI. Bạn có thể tạo key tại [trang API key của OpenAI](https://platform.openai.com/api-keys). Dịch vụ đã cấu hình có thể dùng cho [trò chuyện](./chat.md) và các chức năng khác.
 
-#### 导入 mdx 词典
+- **API key:** key của OpenAI.
+- **Mô hình:** mô hình dùng mặc định.
+- **Địa chỉ API:** nếu key được cấp trực tiếp bởi OpenAI, không cần điền. Nếu dùng nhà cung cấp khác, điền theo hướng dẫn của nhà cung cấp đó.
 
-mdx 词典是 mdict 格式的词典文件。
-
-如果下载的 mdict 词典只有一个 `.mdx` 文件，则可以直接导入。如果下载的 mdict 词典包含有多个文件，导入时应该选择所有文件，包括 `.mdx` `.mdd` `.js` 等文件。
-
-## 高级设置
-
-### API 设置
-
-设置 Enjoy 服务的 API 地址。默认为 `https://enjoy.bot`。
-
-### 代理设置
-
-为 Enjoy App 设置代理服务。
-
-### 网络状态
-
-检查 Enjoy 客户端与服务端之间的网络状态。
-
-### OpenAI 配置
-
-::: info 设置路径
-软件设置 -> 基本设置 -> OpenAI
+::: warning Địa chỉ API
+Tài liệu gốc đề cập việc OpenAI không cung cấp dịch vụ tại một số khu vực, nên có người dùng dịch vụ trung gian. Nếu sử dụng, hãy điền **Địa chỉ API** theo thông tin nhà cung cấp. Nếu có lỗi, địa chỉ có thể cần kết thúc bằng `/v1`.
 :::
 
-配置 OpenAI API 密钥，可以在 [官网](https://platform.openai.com/api-keys) 申请。配置好的 OpenAI 服务可以在 [聊天](./chat.md)等服务中使用。
+### Đặt lại cài đặt {#reset-settings}
 
-- 密钥：OpenAI API 密钥
-- 模型：默认使用的模型
-- 接口地址：如果使用的是官方申请的密钥，则不需要填；否则请根据密钥提供方的信息填写。
+Theo mô tả của tài liệu gốc, thao tác này đăng xuất và đưa toàn bộ cài đặt Enjoy về mặc định.
 
-::: warning 接口地址
-由于 OpenAI 在某些地区不提供服务，有些用户会使用第三方提供的中转服务。请务必根据服务提供方的信息填写好 **接口地址**。如果使用时出现报错，可能需要在接口地址结尾加上 `/v1`。
+### Đặt lại tất cả {#reset-all}
+
+Đăng xuất và xóa toàn bộ dữ liệu cá nhân.
+
+## Cài đặt tài khoản {#account-settings}
+
+### Đường dẫn thư viện {#library-path}
+
+::: info Đường dẫn cài đặt
+Cài đặt -> Tài khoản -> Đường dẫn thư viện
 :::
 
-### 重置设置选项
+Enjoy áp dụng thiết kế **ưu tiên lưu trên máy**. Phần lớn dữ liệu nằm trên thiết bị, trong **Đường dẫn thư viện**.
 
-退出登录并将 Enjoy App 的所有设置重置为默认值。
+Thư viện là thư mục có tên `EnjoyLibrary`, mặc định nằm trong `My Documents` (Tài liệu của tôi).
 
-### 重置所有
+Khi dùng lâu, thư viện có thể chứa nhiều tệp bộ nhớ đệm và chiếm dung lượng lớn. Bạn có thể đổi vị trí theo nhu cầu, ví dụ chuyển từ ổ _C_ sang ổ _D_ có nhiều chỗ trống hơn.
 
-将退出登录，并删除所有个人数据。
+Nếu đã có dữ liệu, trước tiên sao chép thư mục `EnjoyLibrary` cũ sang vị trí mới. Sau đó nhấn **Chỉnh sửa** trong Enjoy, chọn vị trí đích và khởi động lại ứng dụng để hoàn tất.
 
-## 账户设置
-
-### 资源库保存路径
-
-::: info 设置路径
-软件设置 -> 基本设置 -> 资源库保存路径
-:::
-
-Enjoy 采用 **本地优先** 的设计原则，大部分数据均保存在本地，即 **资源库保存路径** 下。
-所谓资源库是一个名为 `EnjoyLibrary` 的文件夹，默认放置在 `My Documents` （即 `我的文档`）下。
-
-随着 Enjoy 的使用时间增长，资源库文件夹里可能会产生比较大的缓存文件，导致占用空间较大。根据具体需要，你也可以修改资源库的路径，例如从 _C 盘_ 改到空间更大的 _D 盘_。
-
-如果已经产生了数据，修改时，可以先把原来的 `EnjoyLibrary` 文件夹复制到目标路径下，再在 Enjoy 软件中点`修改`按钮，选中目标路径，然后重启软件，即可完成修改。
-
-::: tip 资源库里都有什么
-打开 `EnjoyLibrary` 文件夹，你能看到类似以下的目录结构
+::: tip Bên trong thư viện có gì?
+Mở `EnjoyLibrary`, bạn sẽ thấy cấu trúc tương tự:
 
 ```
 .
@@ -217,55 +211,55 @@ Enjoy 采用 **本地优先** 的设计原则，大部分数据均保存在本�
 │   │   └── ...
 ```
 
-- `/2400xxxx/`: 登录的 Enjoy 帐号 ID，该文件夹下的数据均是你使用产生的个人数据
-  - `/2400xxxx/audios/`: 添加的音频文件
-  - `/2400xxxx/speeches/`: TTS 生成的语音文件
-  - `/2400xxxx/videos/`: 添加的视频文件
-  - `/2400xxxx/recordings/`: 录音文件
-  - `/2400xxxx/enjoy_database.sqlite`: 个人数据库文件
-- `/cache/`: 使用过程中产生的缓存文件，如果占用空间过大，可以安全地删除
-- `/logs/`: 保存软件运行的日志，用于帮助开发人员排除故障
-- `/waveforms/`: 音视频解码后的波形数据缓存
-- `/whisper/models`: 语音转文字服务软件 whisper 的模型文件
+- `/2400xxxx/`: ID tài khoản Enjoy đã đăng nhập. Thư mục chứa dữ liệu cá nhân tạo trong quá trình sử dụng.
+  - `/2400xxxx/audios/`: tệp âm thanh đã thêm.
+  - `/2400xxxx/speeches/`: tệp giọng nói do TTS tạo.
+  - `/2400xxxx/videos/`: tệp video đã thêm.
+  - `/2400xxxx/recordings/`: bản ghi âm.
+  - `/2400xxxx/enjoy_database.sqlite`: cơ sở dữ liệu cá nhân.
+- `/cache/`: bộ nhớ đệm tạo khi sử dụng; tài liệu gốc cho biết có thể xóa an toàn khi chiếm quá nhiều chỗ.
+- `/logs/`: nhật ký hoạt động giúp nhà phát triển tìm lỗi.
+- `/waveforms/`: bộ nhớ đệm dạng sóng sau khi giải mã âm thanh và video.
+- `/whisper/models`: mô hình Whisper dùng để chuyển giọng nói thành văn bản.
 
 :::
 
-::: danger 个人数据安全
-`EnjoyLibrary/2400xxxx/` 文件夹下保存的均为使用 Enjoy 过程中产生的个人数据，请务必**不要删改**该文件夹下的任何文件，否则可能会导致数据丢失，或者使得 Enjoy 软件无法正常运行。
+::: danger An toàn dữ liệu cá nhân
+Mọi tệp trong `EnjoyLibrary/2400xxxx/` đều là dữ liệu cá nhân tạo khi dùng Enjoy. **Không tự xóa hoặc sửa** các tệp này, vì có thể gây mất dữ liệu hoặc khiến ứng dụng không hoạt động bình thường.
 
-如前文所说，Enjoy 采用本地优先的设计原则，绝大部分数据并没有上传云服务器，请妥善保管好自己的个人数据。
+Như đã giải thích, Enjoy ưu tiên lưu trên máy; phần lớn dữ liệu không được tải lên máy chủ đám mây. Hãy bảo quản và sao lưu dữ liệu cá nhân của bạn.
 :::
 
-### 磁盘使用情况
+### Dung lượng ổ đĩa đã dùng {#disk-usage}
 
-点击 `详情` 可查看当前 Enjoy App 资源库的磁盘使用情况。
+Nhấn **Chi tiết** để xem dung lượng thư viện Enjoy đang sử dụng.
 
-点击 `释放磁盘` 可以批量删除录音文件，释放磁盘空间。
+Nhấn **Giải phóng** để xóa hàng loạt tệp ghi âm và giải phóng dung lượng.
 
-### 充值
+### Nạp tiền {#deposit}
 
-::: info 设置路径
-软件设置 -> 账户设置 -> 余额
+::: info Đường dẫn cài đặt
+Cài đặt -> Tài khoản -> Số dư
 :::
 
-Enjoy 提供了部分收费的 AI 服务，均为 **按使用量收费**，每次使用会在余额中扣除相应的费用，直到余额不足，则停止提供该服务。
+Một số dịch vụ AI của Enjoy **tính phí theo mức sử dụng**. Mỗi lần dùng, tài khoản bị trừ khoản tương ứng; khi số dư không đủ, dịch vụ đó dừng cung cấp.
 
-如果需要继续使用，请点击 `充值` 按钮进行充值。
+Nếu muốn tiếp tục, nhấn **Nạp tiền**.
 
-::: danger 充值前须知
-需要特别注意的是，充值成功后将在 Enjoy 账户的余额体现，所有余额仅可作为支付 Enjoy 收费服务使用，**不支持退款**，**不支持提现**。
+::: danger Trước khi nạp tiền
+Theo điều khoản được nêu trong tài liệu gốc, tiền nạp thành công được ghi vào số dư Enjoy. Số dư chỉ dùng để trả cho dịch vụ tính phí của Enjoy, **không hoàn lại** và **không rút ra được**.
 
-请谨慎考虑，按需充值。
+Hãy cân nhắc và chỉ nạp theo nhu cầu. Kiểm tra điều khoản hiển thị tại thời điểm thanh toán trước khi xác nhận.
 :::
 
-## 快捷键
+## Phím tắt {#hotkeys}
 
-Enjoy App 可用的快捷键，点击键位可以修改。
+Danh sách phím tắt của Enjoy. Nhấn tổ hợp phím để thay đổi.
 
-## 外观
+## Giao diện {#appearance}
 
-可修改主题和界面语言。
+Thay đổi chủ đề và ngôn ngữ giao diện.
 
-## 关于
+## Giới thiệu {#about}
 
-当前版本和更新链接。
+Phiên bản hiện tại và liên kết cập nhật.

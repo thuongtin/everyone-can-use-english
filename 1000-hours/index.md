@@ -3,25 +3,24 @@
 layout: home
 
 hero:
-  name: "一千小时"
-  text: "用你的注意力填满一千小时就能练成任何你所需要的技能……"
-  # text: "做到就是往 1000 小时里倾注自己的注意力……"
-  tagline: 所谓<strong>努力</strong>无非就是<strong>短时间内足量重复</strong>。 — 李笑来
+  name: "Một nghìn giờ"
+  text: "Dành trọn sự tập trung cho 1000 giờ luyện tập để làm chủ kỹ năng bạn cần."
+  tagline: Điều gọi là <strong>nỗ lực</strong> chính là <strong>lặp lại đủ nhiều trong thời gian ngắn</strong>. - Li Xiaolai
   actions:
     - theme: brand
-      text: 简要说明
+      text: Giới thiệu ngắn
       link: /intro
     - theme: brand
-      text: 训练任务
+      text: Nhiệm vụ luyện tập
       link: /training-tasks/kick-off
     - theme: brand
-      text: 语音塑造
+      text: Rèn luyện phát âm
       link: /sounds-of-american-english/0-intro
     - theme: brand
-      text: 大脑内部
+      text: Bên trong não bộ
       link: /in-the-brain/01-inifinite
     - theme: brand
-      text: 自我训练
+      text: Tự luyện tập
       link: /self-training/00-intro
     - theme: alt
       text: Enjoy App

@@ -6,8 +6,8 @@
             <text id="Marianna-made-the-ma" font-family="PingFangSC-Light, PingFang SC" font-size="16" font-weight="300" fill="#000000">
                 <tspan x="61" y="114">Marianna made the marmalade…</tspan>
             </text>
-            <text id="这两个单词被-“强读”-了" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#000000">
-                <tspan x="0" y="15">这两个单词被 “强读” 了</tspan>
+            <text id="two-words-are-stressed" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#000000">
+                <tspan x="0" y="15">Hai từ này được nhấn</tspan>
             </text>
             <path id="Line" d="M71.6570048,28.8105441 L71.9232304,29.2337744 L106.397,84.039 L109.783239,81.9090536 L110.766226,91.9232304 L102.165092,86.7011136 L105.551,84.571 L71.0767696,29.7662256 L70.8105441,29.3429952 L71.6570048,28.8105441 Z" fill="#979797" fill-rule="nonzero"></path>
             <path id="Line-Copy" d="M71.2336091,28.8449917 L71.6943087,29.0393004 L210.862,87.735 L212.416885,84.0504559 L218.9607,91.6943087 L208.919328,92.343049 L210.473,88.657 L71.3056913,29.9606996 L70.8449917,29.7663909 L71.2336091,28.8449917 Z" fill="#979797" fill-rule="nonzero"></path>
@@ -15,11 +15,11 @@
             <path id="Line-Copy-3" d="M162.776871,118.929998 L162.963759,119.393757 L186.786,178.509 L190.496737,177.014741 L189.686888,187.044405 L182.149067,180.378728 L185.859,178.883 L162.036241,119.767533 L161.849352,119.303774 L162.776871,118.929998 Z" transform="translate(175.7584, 153.0403) scale(1, -1) translate(-175.7584, -153.0403)" fill="#979797" fill-rule="nonzero"></path>
             <path id="Line-Copy-2" d="M323.494251,28.7929166 L324.207083,29.4942514 L323.856416,29.8506674 L268.817,85.791 L271.66909,88.596934 L262.149333,91.856416 L265.253601,82.284921 L268.105,85.089 L323.143584,29.1493326 L323.494251,28.7929166 Z" fill="#979797" fill-rule="nonzero"></path>
             <path id="Line-Copy-5" d="M254,164 L254,168 L316,168 L316,169 L254,169 L254,173 L245,168.5 L254,164 Z" fill="#979797" fill-rule="nonzero"></path>
-            <text id="这个词-“句内最强”" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#000000">
-                <tspan x="251" y="15">这个词 “句内最强”</tspan>
+            <text id="strongest-word-in-sentence" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#000000">
+                <tspan x="251" y="15">Từ này mạnh nhất câu</tspan>
             </text>
-            <text id="这两个词没有被-“强读”" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#000000">
-                <tspan x="97" y="217">这两个词没有被 “强读”</tspan>
+            <text id="two-words-are-not-stressed" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#000000">
+                <tspan x="97" y="217">Hai từ này không nhấn</tspan>
             </text>
             <line x1="97.5" y1="126.5" x2="97.5" y2="151.5" id="Line-2" stroke="#979797" stroke-linecap="square"></line>
             <text id="H*" font-family="STKaiti" font-size="14" font-weight="normal" fill="#000000">
@@ -29,9 +29,9 @@
             <text id="H*-Copy" font-family="STKaiti" font-size="14" font-weight="normal" fill="#000000">
                 <tspan x="219" y="175">H*</tspan>
             </text>
-            <text id="这两个音节的-“音高”-更高" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#000000">
-                <tspan x="329" y="166">这两个音节的</tspan>
-                <tspan x="329" y="186">“音高” 更高 </tspan>
+            <text id="two-syllables-have-higher-pitch" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#000000">
+                <tspan x="329" y="166">Hai âm tiết này có</tspan>
+                <tspan x="329" y="186">cao độ cao hơn</tspan>
             </text>
         </g>
     </g>

@@ -1,13 +1,11 @@
-# 在线文章
+# Bài viết trực tuyến
 
-除了可以导入本地文档，Enjoy 还支持导入在线文章。
+Ngoài tệp trên máy, Enjoy còn hỗ trợ nhập bài viết từ một trang web.
 
-在添加资源窗口，直接输入文章的网址，即可开始阅读。
+Trong cửa sổ thêm tài nguyên, nhập URL của bài viết để nhập nội dung và bắt đầu đọc.
 
-![添加在线文章](/images/enjoy/document-webpage.png)
+![Nhập bài viết trực tuyến](/images/enjoy/document-webpage.png)
 
-::: info 提示
-
-Enjoy 会将网址中的内容下载到本地然后进行导入，部分网站可能会设置不同规则，导致内容无法正常下载。
-
+::: info Cách nhập nội dung
+Enjoy tải nội dung từ URL về máy rồi nhập vào thư viện. Một số trang web có quy tắc truy cập riêng nên ứng dụng có thể không tải được nội dung đầy đủ hoặc không tải được bài viết.
 :::

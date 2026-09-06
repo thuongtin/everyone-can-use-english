@@ -23,7 +23,7 @@ export default defineConfig((env) => {
       dest: "lib/youtubedr",
     },
     {
-      src: "lib/dictionaries/*",
+      src: "lib/dictionaries/{en-vi.sqlite,vi-en.sqlite,manifest.json,NOTICE.md,LICENSE-CC-BY-SA-4.0.txt,editorial-corrections.json}",
       dest: "lib/dictionaries",
     },
     {

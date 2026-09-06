@@ -18,22 +18,30 @@ import {
 } from "@renderer/components/ui";
 import {
   AISettingsProviderContext,
-  AppSettingsProviderContext,
 } from "@renderer/context";
-import { useContext, useEffect, useState } from "react";
-import { GPT_PROVIDERS } from "@renderer/components";
+import { useContext, useState } from "react";
+import {
+  AI_PROVIDER_CATALOG,
+  SUPPORTED_LLM_PROVIDER_IDS,
+  isSupportedProvider,
+  resolveProviderModel,
+  type AiProviderId,
+} from "@/lib/ai-providers";
+
+const PROVIDER_IDS = [...SUPPORTED_LLM_PROVIDER_IDS] as [
+  AiProviderId,
+  ...AiProviderId[],
+];
 
 export const DefaultEngineSettings = () => {
-  const { currentGptEngine, setGptEngine, openai } = useContext(
+  const { currentGptEngine, setGptEngine, gptProviders } = useContext(
     AISettingsProviderContext
   );
-  const { webApi } = useContext(AppSettingsProviderContext);
-  const [providers, setProviders] = useState<any>(GPT_PROVIDERS);
   const [editing, setEditing] = useState(false);
 
   const gptEngineSchema = z
     .object({
-      name: z.enum(["enjoyai", "openai"]),
+      name: z.enum(PROVIDER_IDS),
       models: z.object({
         default: z.string(),
         lookup: z.string().optional(),
@@ -47,54 +55,62 @@ export const DefaultEngineSettings = () => {
   const form = useForm<z.infer<typeof gptEngineSchema>>({
     resolver: zodResolver(gptEngineSchema),
     values: {
-      name: currentGptEngine.name as "enjoyai" | "openai",
+      name: currentGptEngine.name as AiProviderId,
       models: currentGptEngine.models || {},
     },
   });
 
   const modelOptions = () => {
-    if (form.watch("name") === "openai") {
-      const customModels = openai?.models?.split(",")?.filter(Boolean);
-
-      return customModels?.length ? customModels : providers.openai.models;
-    } else {
-      return providers.enjoyai.models;
-    }
+    const name = form.watch("name") as AiProviderId;
+    const currentModels =
+      name === currentGptEngine.name
+        ? Object.values(currentGptEngine.models || {})
+        : [];
+    return Array.from(
+      new Set([...(gptProviders[name]?.models || []), ...currentModels])
+    );
   };
 
   const onSubmit = async (data: z.infer<typeof gptEngineSchema>) => {
     const { name, models } = data;
-
-    let options = [...providers[name].models];
-    if (name === "openai" && openai?.models) {
-      options = openai.models.split(",");
+    const options = modelOptions();
+    const normalizedModels = { ...models };
+    const defaultModel = resolveProviderModel(options, normalizedModels.default);
+    if (!defaultModel) {
+      toast.error(
+        t(
+          name === "ollama" || name === "lmstudio"
+            ? "localProviderModelRequired"
+            : "providerModelRequired"
+        )
+      );
+      return;
     }
-
-    models.default ||= options[0];
-    Object.keys(models).forEach((key: keyof typeof models) => {
-      if (!options.includes(models[key])) {
-        if (key === "default") {
-          models[key] = options[0];
-        } else {
-          delete models[key];
+    normalizedModels.default = defaultModel;
+    (Object.keys(normalizedModels) as Array<keyof typeof normalizedModels>).forEach(
+      (key) => {
+        const model = normalizedModels[key];
+        if (!model || !options.includes(model)) {
+          if (key === "default") {
+            normalizedModels[key] = defaultModel;
+          } else {
+            delete normalizedModels[key];
+          }
         }
       }
-    });
+    );
 
-    setGptEngine(data as GptEngineSettingType);
-    setEditing(false);
+    try {
+      await setGptEngine({
+        name,
+        models: normalizedModels,
+      } as GptEngineSettingType);
+      setEditing(false);
+    } catch (error) {
+      console.error(error);
+      toast.error(t("providerConfigSaveFailed"));
+    }
   };
-
-  useEffect(() => {
-    webApi
-      .config("gpt_providers")
-      .then((data) => {
-        setProviders(data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, []);
 
   return (
     <Form {...form}>
@@ -118,11 +134,15 @@ export const DefaultEngineSettings = () => {
                         value={field.value}
                         disabled={!editing}
                         onValueChange={(value) => {
-                          if (value === "openai" && !openai?.key) {
-                            toast.warning(t("openaiKeyRequired"));
-                          } else {
-                            field.onChange(value);
-                          }
+                          field.onChange(value);
+                          const provider = value as AiProviderId;
+                          const firstModel = resolveProviderModel(
+                            gptProviders[provider]?.models
+                          );
+                          form.setValue("models.default", firstModel || "", {
+                            shouldDirty: true,
+                            shouldValidate: true,
+                          });
                         }}
                       >
                         <SelectTrigger className="min-w-fit">
@@ -131,16 +151,22 @@ export const DefaultEngineSettings = () => {
                           ></SelectValue>
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="enjoyai">EnjoyAI</SelectItem>
-                          <SelectItem value="openai">OpenAI</SelectItem>
+                          {SUPPORTED_LLM_PROVIDER_IDS.map((provider) => (
+                            <SelectItem key={provider} value={provider}>
+                              {AI_PROVIDER_CATALOG[provider].name}
+                            </SelectItem>
+                          ))}
                         </SelectContent>
                       </Select>
                     </div>
                     <FormMessage />
                     <div className="text-xs text-muted-foreground">
-                      {form.watch("name") === "openai" && t("openAiEngineTips")}
-                      {form.watch("name") === "enjoyai" &&
-                        t("enjoyAiEngineTips")}
+                      {(() => {
+                        const providerName = form.watch("name") as string;
+                        return isSupportedProvider(providerName)
+                          ? t(AI_PROVIDER_CATALOG[providerName].descriptionKey)
+                          : t("aiEngineNotSupported");
+                      })()}
                     </div>
                   </FormItem>
                 )}

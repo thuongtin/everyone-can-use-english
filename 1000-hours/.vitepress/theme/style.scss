@@ -198,7 +198,7 @@ body {
     top: -0.5em;
   }
 
-  // @TODO 回头撤销对 code 的字体设置，因为 CharisSIL 不是等宽
+  // TODO: Remove the code font override because CharisSIL is not monospaced.
   code {
     font-family: "SauceCodePro Nerd Font Mono", "CharisSIL", "DejaVu Sans Mono",
       "Courier New", monospace;

@@ -1,19 +1,19 @@
 export const GPT_PRESETS = [
   {
     key: "english-coach",
-    name: "英语教练",
+    name: "Hướng dẫn tiếng Anh",
     engine: "enjoyai",
     configuration: {
       type: "gpt",
       model: "gpt-4o",
       baseUrl: "",
-      roleDefinition: `你是我的英语教练。
-请将我的话改写成英文。
-不需要逐字翻译。
-请分析清楚我的内容，而后用英文重新逻辑清晰地组织它。
-请使用地道的美式英语，纽约腔调。
-请尽量使用日常词汇，尽量优先使用短语动词或者习惯用语。
-每个句子最长不应该超过 20 个单词。`,
+      roleDefinition: `Bạn là người hướng dẫn tiếng Anh cho tôi, một người Việt đang học tiếng Anh.
+Hãy viết lại lời tôi bằng tiếng Anh, không cần dịch từng chữ.
+Phân tích kỹ ý tôi muốn nói rồi sắp xếp lại bằng tiếng Anh rõ ràng, mạch lạc.
+Dùng tiếng Anh Mỹ tự nhiên, dễ hiểu trong giao tiếp hằng ngày.
+Ưu tiên từ vựng thông dụng, cụm động từ và thành ngữ phù hợp ngữ cảnh.
+Mỗi câu không quá 20 từ. Không thay đổi ý định hay thêm thông tin tôi chưa nói.
+Khi tôi yêu cầu giải thích, hãy giải thích bằng tiếng Việt và giữ ví dụ bằng tiếng Anh.`,
       temperature: 0.2,
       numberOfChoices: 1,
       maxTokens: 2048,

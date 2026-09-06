@@ -1,75 +1,79 @@
-# 简要说明
+# Giới thiệu ngắn
 
-原本只需要一句话就可以彻底说明白：
+::: info Ghi chú biên soạn cho bản tiếng Việt
+Bài dưới đây là bản dịch quan điểm của Li Xiaolai trong nguyên tác năm 2024. Các mốc 1000 giờ, ba giờ mỗi ngày và những khẳng định tuyệt đối về kết quả học, thu nhập, não bộ hay sức khỏe là lời của tác giả, không phải kết quả đã được bản Việt hóa kiểm chứng. Người Việt học tiếng Anh có thể dùng tài liệu này để tham khảo cách luyện tập; hãy phân biệt đề xuất thực hành với các khẳng định cần bằng chứng riêng.
+:::
 
-> **用你的注意力填满 1000 小时就能练成任何你所需要的技能**……
+Vốn chỉ cần một câu là có thể giải thích trọn vẹn:
 
-但是，仍然有必要做进一步详细一点的阐述。
+> **Dành trọn sự tập trung cho 1000 giờ luyện tập, bạn sẽ làm chủ bất kỳ kỹ năng nào mình cần**...
 
-“**用你的注意力**” 的意思是说，你只能靠自己，谁都一样，只要是真正有用的能力，到最后只能通过自学。往时间里倾注的是谁的注意力，那长出来的能力就只能是谁的 —— 所以，在学习这件事儿上，别人永远使不上劲，哪怕是为了你甚至不惜付出性命的父母。
+Tuy vậy, vẫn cần giải thích chi tiết hơn một chút.
 
-“**1000 小时**” 看起来并不多，也的确不多。但，它有密度要求。每天 1 小时需要大约 3 年才能凑足 1000 小时；而每天 3 小时只需要 1 年就能攒足…… 首先，后者的效果比前者高出不知道多少倍，其次，前者实际上更难做到更难坚持。所以，做不到**每天至少 3 小时**，还不如不做。
+“**Sự tập trung của bạn**” nghĩa là bạn chỉ có thể dựa vào chính mình. Ai cũng vậy: với năng lực thực sự hữu ích, cuối cùng chỉ có thể có được bằng tự học. Ai dành sự chú ý của mình vào thời gian ấy thì năng lực hình thành chỉ thuộc về người đó. Vì thế, trong việc học, người khác không bao giờ có thể làm thay bạn, kể cả cha mẹ sẵn sàng hy sinh tính mạng vì bạn.
 
-“**就能**” 的意思是说没有例外。“用你的注意力填满 1000 小时” 是 “练成任何你所需要的技能” 的充分必要条件。若是充分必要条件被满足的话，结果就只能如实发生。
+“**1000 giờ**” có vẻ không nhiều, và quả thực không nhiều. Nhưng số giờ ấy có yêu cầu về mật độ. Mỗi ngày một giờ thì cần khoảng ba năm mới đủ 1000 giờ; mỗi ngày ba giờ thì chỉ cần một năm... Trước hết, theo tôi, hiệu quả của cách thứ hai cao hơn cách thứ nhất không biết bao nhiêu lần; tiếp nữa, cách thứ nhất thực ra khó thực hiện và duy trì hơn. Vì vậy, nếu không làm được **ít nhất ba giờ mỗi ngày**, thà đừng làm.
 
-“**练成**”，不是从书本上 “知道” 或者在哪里 “学到”，不是考试 “及格” 或者 “优秀”，甚至不只是 “做好”，而是 “**精通**” —— 从来少有人做到。
+“**Sẽ**” nghĩa là không có ngoại lệ. “Dành trọn sự tập trung cho 1000 giờ” là điều kiện cần và đủ để “làm chủ bất kỳ kỹ năng nào mình cần”. Một khi điều kiện cần và đủ được đáp ứng, kết quả chỉ có thể xảy ra đúng như vậy.
 
-“**你所需要的技能**” —— 不是你真正需要的，你就学不好练不会。在这一点上，你非常有经验。就算真正需要，你自己却看不出来，或者暂时感受不到，那么，你还是学不好练不会，起码暂时学不好练不会。你更有经验的是，虽然人生最需要的技能其实并没有多少，但几乎都一样，你在认同的确需要它的同时却从来没有把它做好过，更别说**精通**了…… 当然，绝大多数人和你一样，就那么凑合着活了一辈子。
+“**Làm chủ**” không phải là “biết” từ sách vở hay “học được” ở đâu đó, không phải đạt mức “đỗ” hoặc “giỏi” trong kỳ thi, thậm chí không chỉ là “làm tốt”, mà là **tinh thông**. Từ trước đến nay, hiếm người đạt được điều đó.
 
-“**任何**” 的意思是说，虽然，我们选择**英语**作为**健脑**的**示范训练标的**，但是，你其实可以用同样的方式去掌握**任何**你所需要的技能。
+“**Kỹ năng bạn cần**”: nếu không thực sự cần, bạn sẽ không học tốt hay luyện thành thạo được. Bạn hẳn rất có kinh nghiệm về điều này. Ngay cả khi thực sự cần, nhưng chính bạn chưa nhận ra hoặc tạm thời chưa cảm nhận được, bạn vẫn không học tốt hay luyện được, ít nhất là trong lúc ấy. Điều bạn còn quen thuộc hơn là: những kỹ năng cần thiết nhất trong đời thực ra không nhiều, nhưng gần như với kỹ năng nào cũng vậy, dù đồng ý rằng mình cần, bạn vẫn chưa từng làm tốt, nói gì đến **tinh thông**... Dĩ nhiên, phần lớn mọi người cũng giống bạn, sống tạm ổn như thế cả đời.
 
-我们把英语作为示范训练标的倒没问题，可当你听说目标是 “**用一年时间把英语练成第一语言**” 的时候，估计你会多少有点震惊，不敢相信，甚至，可能会因为不相信而产生鄙视或者厌恶的情绪。虽然这很正常，但，我有必要冒着被你更讨厌的风险提醒你，却也没必要更进一步深入展开的是，你所鄙视或者厌恶的，相对来看，其实更可能是你自己 —— 因为这个目标本身无论如何也害不着你。
+“**Bất kỳ**” nghĩa là: tuy chúng ta chọn **tiếng Anh** làm **đối tượng luyện tập minh họa** cho việc **rèn luyện não bộ**, bạn vẫn có thể dùng cùng cách đó để làm chủ **bất kỳ** kỹ năng nào mình cần.
 
-选择英语作为**健脑**的示范标的有很多原因。
+Chọn tiếng Anh làm đối tượng minh họa thì không có vấn đề gì. Nhưng khi nghe mục tiêu là “**luyện để tiếng Anh trở thành ngôn ngữ thứ nhất trong một năm**”, có lẽ bạn sẽ ít nhiều sửng sốt, không tin, thậm chí vì không tin mà nảy sinh khinh thường hay chán ghét. Tuy điều đó rất bình thường, tôi vẫn cần chấp nhận nguy cơ khiến bạn ghét hơn để nhắc một điều, dù không cần bàn sâu thêm: xét tương đối, đối tượng bạn khinh thường hay chán ghét có lẽ lại là chính mình, bởi bản thân mục tiêu này dù thế nào cũng không làm hại bạn.
 
-最直接的原因当然是因为英语真的有用，毕竟人类的绝大多数知识与智慧就是用英语记录并传播的。另外一个原因是对母语非英语的人来说，英语熟练直接意味着收入相对更高，这一点有无数的统计数据支持。
+Có nhiều lý do để chọn tiếng Anh làm đối tượng minh họa cho việc **rèn luyện não bộ**.
 
-然而，最重要的原因在于，**掌握并不断提高自然语言使用能力**，是最佳的**健脑**方式 —— 完全没必要在这个陈述之后再附加上 “之一”，因为它就是**最佳健脑方式**。**自然语言**是人类终其一生可以遇到的最复杂最系统的知识，一切其它的知识技能都建立在其基础之上，无论是学也好还是练也罢，没有止境。也因此，所有人都可以，事实上也应该，终其一生去培养并发展对自然语言的驾驭能力。
+Lý do trực tiếp nhất đương nhiên là tiếng Anh thực sự hữu ích: xét cho cùng, phần lớn tri thức và trí tuệ của nhân loại được ghi lại và truyền bá bằng tiếng Anh. Một lý do nữa là với người không có tiếng Anh làm tiếng mẹ đẻ, thành thạo tiếng Anh trực tiếp đồng nghĩa với mức thu nhập tương đối cao hơn; theo tác giả, vô số số liệu thống kê ủng hộ điều này.
 
-并且，在**英语**练习中，我们的选择之一是最为基础的**语音塑造**（另外一个是**记忆扩展**）；核心原因在于，这是典型的**知道学到并不一定做到**的知识，**做到**只能靠**短时间内足量重复**的训练方式 —— 背后是**大脑**内部**神经元**之间**新建连接新建网络**。
+Tuy nhiên, lý do quan trọng nhất là: **làm chủ và không ngừng nâng cao khả năng sử dụng ngôn ngữ tự nhiên** là cách **rèn luyện não bộ tốt nhất**. Tôi cho rằng hoàn toàn không cần thêm “một trong những” vào nhận định này, vì đó chính là **cách rèn luyện não bộ tốt nhất**. **Ngôn ngữ tự nhiên** là hệ thống kiến thức phức tạp và có tính hệ thống nhất mà con người có thể tiếp xúc suốt đời. Mọi kiến thức, kỹ năng khác đều xây dựng trên nền tảng ấy; dù học hay luyện đều không có điểm kết thúc. Vì thế, ai cũng có thể, và thực ra nên, bồi dưỡng, phát triển khả năng làm chủ ngôn ngữ tự nhiên trong suốt cuộc đời.
 
-也是出于同样的原因，**这场训练实际上适用于任何人**，不分性别、年龄、种族或者国籍。即便你的母语是英语，也可以通过使用同样的方法训练自己学习另外一种语言作为健脑方式。自然语言训练之于健脑，正如跑步之于健身。
+Trong luyện tập **tiếng Anh**, một lựa chọn của chúng ta là **rèn luyện phát âm**, phần nền tảng nhất; lựa chọn còn lại là **mở rộng trí nhớ**. Lý do cốt lõi: đây là loại kiến thức điển hình mà **biết và học được chưa chắc đã làm được**. Muốn **làm được**, chỉ có cách **lặp lại đủ nhiều trong thời gian ngắn**. Đằng sau quá trình đó là việc **tạo kết nối và mạng lưới mới** giữa các **nơron** bên trong **não bộ**.
 
-这场训练虽然以**英语**为示范训练标的，但，在其过程中，你的**母语**水平只能会水涨船高。虽然，你的第二语言水平**必然**受到第一语言的**限制**。但是，反过来，在你通过努力把原本的第二语言练成第一语言的过程中，你原本的第一语言只能比原来更强。新的语言会**反哺**之前已经掌握的语言。
+Cũng vì lý do ấy, **chương trình luyện tập này thực ra phù hợp với bất kỳ ai**, không phân biệt giới tính, tuổi tác, chủng tộc hay quốc tịch. Ngay cả khi tiếng mẹ đẻ của bạn là tiếng Anh, bạn cũng có thể dùng cùng phương pháp để học một ngôn ngữ khác nhằm rèn luyện não bộ. Luyện ngôn ngữ đối với rèn luyện não bộ cũng như chạy bộ đối với rèn luyện thể chất.
 
-这场训练会直接改变你的**大脑结构**。完成这场训练的过程中，你的大脑内部，**灰质密度**会变得越来越高，**灰质体积**会变得越来越大，**白质覆盖面积**也会越来越广。如果用 fMRI（功能性磁共振成像）设备扫描，那么，这一切对你来说都应该是肉眼可见的变化。
+Tuy chương trình lấy **tiếng Anh** làm đối tượng minh họa, trong quá trình đó, trình độ **tiếng mẹ đẻ** của bạn cũng sẽ tăng lên. Trình độ ngôn ngữ thứ hai **tất yếu** chịu **giới hạn** của ngôn ngữ thứ nhất. Nhưng ngược lại, khi nỗ lực luyện để ngôn ngữ vốn là thứ hai trở thành ngôn ngữ thứ nhất, ngôn ngữ thứ nhất ban đầu chỉ có thể mạnh hơn trước. Ngôn ngữ mới sẽ **bồi đắp trở lại** cho ngôn ngữ đã biết.
 
-如此这般的大脑结构变化，对一个人产生的影响，绝不仅仅是多掌握了一门外语或者提高了自然语言使用能力那么简单，它带来的变化非常普遍且又深远。
+Chương trình luyện tập này sẽ trực tiếp thay đổi **cấu trúc não bộ** của bạn. Trong quá trình hoàn thành, theo mô tả của tác giả, **mật độ chất xám** sẽ tăng dần, **thể tích chất xám** sẽ lớn dần và **diện tích bao phủ của chất trắng** cũng sẽ mở rộng. Nếu dùng thiết bị fMRI (chụp cộng hưởng từ chức năng), tất cả những thay đổi ấy hẳn sẽ có thể quan sát bằng mắt.
 
-更高的灰质密度，更大的灰质体积，更广的白质覆盖面积 —— 打个比方，这就好像是你为自己的大脑升级了硬件，更快的 CPU，更大的内存，更高的带宽…… 于是，你的大脑无论干什么都更高效。无论学什么都更快更好，于是只能越学越多，进入**良性循环**，**学得越多越快越好**。
+Ảnh hưởng của những thay đổi cấu trúc não bộ như thế không chỉ đơn giản là biết thêm một ngoại ngữ hay cải thiện khả năng sử dụng ngôn ngữ tự nhiên. Chúng đem lại thay đổi rộng khắp và sâu sắc hơn nhiều.
 
-虽然绝大多数人并不健身，但也不会否认健身的好处和必要性。可实际上，**健脑比健身更重要** —— 只要稍微动脑想一下就知道这完全不可辩驳。至于要不要健脑，和要不要健身一样，虽然完全是个人选择，但的确有必要提醒：绝对不能像健身房里的绝大多数人那样，到了身体坏掉才想起来健身 —— 若是脑子坏掉了再去健脑，那就彻底来不及了吧？
+Mật độ chất xám cao hơn, thể tích chất xám lớn hơn, diện tích bao phủ của chất trắng rộng hơn: ví von thì giống như bạn nâng cấp phần cứng cho não, với CPU nhanh hơn, bộ nhớ lớn hơn, băng thông cao hơn... Khi ấy, não làm gì cũng hiệu quả hơn. Học gì cũng nhanh và tốt hơn, nên càng học càng nhiều, đi vào **vòng tuần hoàn tích cực**: **học nhiều hơn, nhanh hơn, tốt hơn**.
 
-对了，健脑改变大脑结构，更高的灰质密度，更大的灰质体积，更广的白质覆盖面积，可以有效预防各种老年脑类疾病，比如帕金森综合症。与此同时，更高的灰质密度，更大的灰质体积，更广的白质覆盖面积，还可以抗抑郁……
+Tuy đa số mọi người không tập thể dục, họ cũng không phủ nhận lợi ích và sự cần thiết của nó. Nhưng theo tôi, **rèn luyện não bộ còn quan trọng hơn rèn luyện thể chất**; chỉ cần suy nghĩ một chút là thấy điều đó không thể bác bỏ. Có rèn luyện não bộ hay không, cũng như có tập thể dục hay không, hoàn toàn là lựa chọn cá nhân. Dù vậy, cần nhắc rằng: tuyệt đối đừng giống phần lớn người trong phòng gym, đợi cơ thể trục trặc rồi mới nghĩ đến tập luyện. Nếu đợi não có vấn đề mới rèn luyện thì chẳng phải đã quá muộn sao?
 
-这场训练的意义绝不可能仅限于此。
+Tác giả còn khẳng định rằng rèn luyện não bộ làm thay đổi cấu trúc não, tăng mật độ và thể tích chất xám, mở rộng diện tích bao phủ của chất trắng, có thể phòng ngừa hiệu quả nhiều bệnh não ở tuổi già, chẳng hạn hội chứng Parkinson. Đồng thời, tác giả cho rằng những thay đổi đó còn có thể chống trầm cảm. Đây là các khẳng định sức khỏe của nguyên tác, chưa được bản Việt hóa xác minh.
 
-对孩子来说，这是他们真正**学会学习**的机会。科技不断进步的结果导致人们的生存难度越来越低，学习的必要性实际上随之越来越少。然而，如果除了活着之外还想活得好一些，更好一些，那么就只能通过**学习**去**争取** —— 当然，我们会反复证明，实际上只能通过**自学**。显然，更强大的大脑自然会保证更好的生活。
+Ý nghĩa của chương trình luyện tập này không chỉ dừng ở đó.
 
-没有父母不在意孩子的**在校考试成绩**。其实，对大脑来说，无论学什么，到最后对它来讲都是**体育课** —— 反正都是健脑，反正都是神经元之间新建连接新建网络。与此同时，本质上来看，学校里的一切课程都是**语文课**。科学虽然更多使用**人工语言**，但人工语言毕竟只是自然语言的一个子集。所以，自然语言驾驭能力的提高必然会促进任何学科的考试成绩。千万不要怀疑这点，否则耽误成绩。
+Với trẻ em, đây là cơ hội thực sự **học cách học**. Công nghệ không ngừng tiến bộ khiến việc mưu sinh dễ hơn, và sự cần thiết của việc học cũng giảm theo. Tuy nhiên, nếu không chỉ muốn sống mà còn muốn sống tốt hơn, thì chỉ có thể **học** để **vươn tới**. Dĩ nhiên, chúng ta sẽ nhiều lần chứng minh rằng thực chất chỉ có thể **tự học**. Theo lập luận này, não bộ mạnh hơn đương nhiên sẽ bảo đảm cuộc sống tốt hơn.
 
-对父母来说，孩子的学习潜力和能力的增加，最实际最直接的结果，当然是教育费用的大幅降低。不仅**少花钱**，还**少操心**。更为重要的是，作为父母，完成这场训练，一定能因此获得子女的**尊重** —— 对父母来说，有什么比这个更重要更实用的呢？
+Không cha mẹ nào không quan tâm **điểm thi ở trường** của con. Thực ra, với não bộ, học gì cuối cùng cũng là **giờ thể dục**: đều rèn luyện não, đều tạo kết nối và mạng lưới mới giữa các nơron. Đồng thời, xét về bản chất, mọi môn học trong trường đều là **giờ học ngôn ngữ**. Khoa học dùng nhiều **ngôn ngữ nhân tạo**, nhưng ngôn ngữ nhân tạo vẫn chỉ là một tập con của ngôn ngữ tự nhiên. Vì vậy, tác giả cho rằng nâng cao khả năng làm chủ ngôn ngữ tự nhiên tất yếu giúp tăng điểm thi ở bất kỳ môn nào, và nhấn mạnh đừng nghi ngờ điều đó kẻo ảnh hưởng kết quả học tập.
 
-无论尊重来自于哪里，都会潜移默化地影响一个人的容貌。尊重只能是成绩的结果，是赢来的态度，是自信的根本。尊重真的美容。有人曾经说，人要为自己 40 岁之后的长相负责，从这个角度看非常有道理。专注的眼神、从容的行事、平和的姿态…… 其实都来自于已经完全不一样的大脑结构。从这个意义上来讲，这场训练完全是字面意义上的 “**改头换面**”。
+Với cha mẹ, kết quả thực tế và trực tiếp nhất của việc con có tiềm năng, năng lực học tập cao hơn đương nhiên là chi phí giáo dục giảm đáng kể: vừa **ít tốn tiền**, vừa **bớt lo lắng**. Quan trọng hơn, khi chính cha mẹ hoàn thành chương trình luyện tập này, họ nhất định có thể nhận được sự **tôn trọng** của con. Với cha mẹ, còn điều gì quan trọng và thiết thực hơn?
 
-这场训练对父母来说，更大的意义在于，任何正常人完整经历之后，都会对当下的**教育体制** —— 我说的是**全球范围**内的教育体制 —— 产生与之前完全不一样的**看法**，自然会因此有不一样的**判断**…… 进而导致很多不一样的**决策**，最终影响的不仅是自己或者孩子的**方向**，甚至可能是整个**家族命运**。
+Sự tôn trọng, dù đến từ đâu, cũng âm thầm ảnh hưởng đến diện mạo một người. Tôn trọng là kết quả của thành tích, là thái độ phải giành được và là nền tảng của tự tin. Tôn trọng thực sự làm con người đẹp hơn. Có người từng nói mỗi người phải chịu trách nhiệm cho gương mặt của mình sau tuổi 40; nhìn từ góc độ này, lời ấy rất có lý. Ánh mắt tập trung, cách làm việc điềm tĩnh, tư thế bình hòa... thực ra đều đến từ cấu trúc não bộ đã khác hẳn. Theo nghĩa đó, chương trình luyện tập này đúng là “**thay đổi diện mạo**” theo nghĩa đen.
 
-最后必须提及的是，这场健脑训练同时是**注意力**训练，也是**判断力**训练。
+Với cha mẹ, ý nghĩa lớn hơn của chương trình là: bất cứ người bình thường nào trải qua trọn vẹn cũng sẽ có **cách nhìn** hoàn toàn khác về **hệ thống giáo dục** hiện tại, và tôi đang nói đến hệ thống giáo dục **trên toàn thế giới**. Từ đó, họ tự nhiên sẽ có **nhận định** khác, đưa ra nhiều **quyết định** khác, cuối cùng ảnh hưởng không chỉ **hướng đi** của mình hoặc con, mà có thể cả **vận mệnh gia đình**.
 
-**注意力**是一切**生产力**的来源与保障。到最后，一个人的**能力**完全取决于他**驾驭自己注意力的能力**。人与人之间的核心差异只有这一项，看他到底能把自己的注意力集中多久，看他知不知道应该把自己的注意力集中到哪里…… 其它绝大多数差异，最终都是这项能力差异的结果。
+Điều cuối cùng phải nhắc đến: chương trình rèn luyện não bộ này đồng thời là rèn luyện **sự chú ý** và **khả năng phán đoán**.
 
-知道应该把自己的注意力集中到哪里，需要的是**判断力**。判断力不是与生俱来的，与生俱来的只有求生欲。判断力只能学出来练出来。早期的判断力仅凭直觉，并不够用，所以需要父母的辅助、培养、塑造…… 但，终究要靠自己发展。学得越多，判断力越强；判断力越强，学得越多越快越好。人并不是到了特定的岁数就会自动成熟。巨婴无所不在，他们普遍且又一致的特征就是极度缺乏判断力。
+**Sự chú ý** là nguồn gốc và chỗ dựa của mọi **năng suất**. Cuối cùng, **năng lực** của một người hoàn toàn phụ thuộc vào **khả năng làm chủ sự chú ý của mình**. Khác biệt cốt lõi giữa người với người chỉ nằm ở điều này: họ tập trung được bao lâu, có biết nên tập trung vào đâu hay không... Phần lớn khác biệt khác rốt cuộc đều là hệ quả của sự chênh lệch ấy.
 
-**判断力是一切智慧的基础和结果**。要么智慧越来越多，否则愚蠢就会越来越多；判断力要么越来越强，要么越来越弱 —— 这其中的 “贫富差距” 从来都是天壤之别。若是借用 “**基尼系数**”[^*] 去描述的话，人群之中判断力的基尼系数远远大于 0，相当接近于 1，在这件事上，没有公平分配。
+Biết nên tập trung vào đâu đòi hỏi **khả năng phán đoán**. Khả năng phán đoán không có sẵn từ khi sinh ra; thứ bẩm sinh chỉ là ham muốn sống còn. Phán đoán chỉ có thể hình thành qua học và luyện. Ban đầu, khả năng ấy chỉ dựa vào trực giác nên chưa đủ, cần cha mẹ hỗ trợ, bồi dưỡng, định hình... nhưng cuối cùng vẫn phải tự phát triển. Càng học nhiều, phán đoán càng tốt; phán đoán càng tốt, càng học nhiều, nhanh và tốt hơn. Con người không tự nhiên trưởng thành khi đạt một độ tuổi nhất định. Những người lớn chưa trưởng thành có ở khắp nơi; đặc điểm phổ biến và nhất quán của họ là rất thiếu khả năng phán đoán.
 
-2021 年前后，**人工智能**的爆发，把我们瞬间从**信息时代**拖进了**智能时代**。智能时代里，个体最大的竞争力是什么？只能是**判断力**。有判断力的人有机会把人工智能当作自己进一步更加快速发展的工具，而没有判断力的人会把人工智能当作自己偷懒糊弄他人的工具。人工智能已经同时成为人们持续上进或者甘于沉沦的理由；一小部分人会高歌猛进，绝大多数人会欢乐地沉沦。
+**Khả năng phán đoán vừa là nền tảng, vừa là kết quả của trí tuệ**. Hoặc trí tuệ ngày càng nhiều, hoặc sự ngu dốt ngày càng tăng; phán đoán hoặc ngày càng mạnh, hoặc ngày càng yếu. Khoảng cách “giàu nghèo” ở đây luôn lớn như trời với đất. Nếu mượn **hệ số Gini**[^*] để mô tả, hệ số Gini về khả năng phán đoán trong cộng đồng lớn hơn 0 rất nhiều và khá gần 1; ở phương diện này không có sự phân bổ công bằng.
 
-在我看来，这不可能只是一场自我训练。
+Khoảng năm 2021, sự bùng nổ của **trí tuệ nhân tạo** lập tức kéo chúng ta từ **thời đại thông tin** sang **thời đại trí tuệ**. Trong thời đại ấy, năng lực cạnh tranh lớn nhất của cá nhân là gì? Chỉ có thể là **khả năng phán đoán**. Người có khả năng phán đoán có cơ hội dùng AI làm công cụ phát triển nhanh hơn nữa; người thiếu khả năng ấy lại dùng AI để lười biếng và qua mặt người khác. AI đã đồng thời trở thành lý do để người ta tiếp tục tiến lên hoặc chấp nhận sa sút: một số ít sẽ tiến mạnh, còn phần lớn sẽ vui vẻ chìm xuống.
 
-AI 凶猛。未来咆哮而至。关于人工智能对人类的威胁，以及对各行各业的影响，尤其是对失业的恐惧，人们讨论得太多。我所看到的更多却是我们可以奔赴的**希望**，我们可以奔赴。突然之间，人工智能有可能帮我们解决掉我们那长久以来无法摆脱的**眼高手低**之尴尬，可能会因人工智能而变得更为强大。然而，天大的希望背后的确也紧跟着**危机**和**陷阱**，我们也需要像逃亡一样拼命。一不小心就有可能因为人工智能降智，一不小心就有可能因为自己松懈而被时代抛弃。
+Theo tôi, đây không thể chỉ là một chương trình tự luyện tập.
 
-—— 吾往矣。
+AI đang phát triển dữ dội. Tương lai ập đến như tiếng gầm. Người ta bàn quá nhiều về mối đe dọa của AI đối với nhân loại, ảnh hưởng đến các ngành nghề, nhất là nỗi sợ thất nghiệp. Điều tôi nhìn thấy nhiều hơn là **hy vọng** mà chúng ta có thể hướng tới, và chúng ta có thể tiến về phía đó. Đột nhiên, AI có khả năng giúp giải quyết tình trạng **biết nhiều nhưng làm chưa được** đã đeo bám chúng ta lâu nay; nhờ AI, chúng ta có thể mạnh hơn. Tuy nhiên, đằng sau hy vọng lớn lao cũng là **khủng hoảng** và **cạm bẫy**, đòi hỏi ta nỗ lực hết sức như đang chạy thoát hiểm. Chỉ một chút bất cẩn, ta có thể suy giảm năng lực vì AI; chỉ một chút buông lỏng, ta có thể bị thời đại bỏ lại.
 
-<span style="text-align: right;">**李笑来** _2024_ 春节 于 北京</span>
+Tôi lên đường đây.
 
-[^*]: 基尼系数（Gini coefficient），是 20 世纪初意大利学者科拉多·基尼根据洛伦兹曲线所定义的判断年收入分配公平程度的指标，是比例数值，在 0 和 1 之间。基尼系数越小，年收入分配越平均；基尼系数越大，年收入分配越不平均。
+<span style="text-align: right;">**Li Xiaolai**, Tết Nguyên đán _2024_, Bắc Kinh</span>
+
+[^*]: Hệ số Gini là chỉ số do học giả người Ý Corrado Gini xác định từ đường cong Lorenz vào đầu thế kỷ XX để đánh giá mức độ công bằng trong phân phối thu nhập hằng năm. Chỉ số có giá trị từ 0 đến 1. Hệ số càng nhỏ, phân phối thu nhập càng đồng đều; hệ số càng lớn, phân phối càng không đồng đều.

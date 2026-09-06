@@ -1,20 +1,34 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import { resolveConfiguredSiteUrl } from "./utils/distribution-links";
+
+const siteUrl = resolveConfiguredSiteUrl(process.env.NUXT_SITE_URL);
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/styles/main.css"],
+  runtimeConfig: {
+    public: {
+      docsUrl: "",
+      downloadUrl: "",
+      repositoryUrl: "",
+    },
+  },
   site: {
-    url: "https://example.com",
+    ...(siteUrl ? { url: siteUrl } : {}),
     name: "Enjoy App",
-    description: "Welcome to Enjoy App!",
+    description: "Học tiếng Anh cùng Enjoy, với hướng dẫn bằng tiếng Việt và học liệu tiếng Anh.",
     tagline: "",
-    defaultLocale: "zh", // not needed if you have @nuxtjs/i18n installed
+    defaultLocale: "vi", // not needed if you have @nuxtjs/i18n installed
+  },
+  sitemap: {
+    enabled: Boolean(siteUrl),
   },
 
   app: {
     buildAssetsDir: "portal-assets",
     head: {
+      htmlAttrs: { lang: "vi" },
       viewport:
-        "width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no, viewport-fit=cover",
+        "width=device-width, initial-scale=1, viewport-fit=cover",
       meta: [{ name: "theme-color", content: "#ffffff" }],
       link: [
         {

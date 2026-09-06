@@ -336,7 +336,7 @@ db.registerIpcHandlers = () => {
   });
 
   ipcMain.handle("db-disconnect", async () => {
-    db.disconnect();
+    await db.disconnect();
   });
 
   ipcMain.handle("db-backup", async () => {

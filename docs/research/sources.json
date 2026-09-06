@@ -1,0 +1,1445 @@
+[
+  {
+    "url": "https://github.com/thecodrr/fdir/issues/135",
+    "group": "nuxt",
+    "facts": [
+      {
+        "source_url": "https://github.com/thecodrr/fdir/issues/135",
+        "source_meta": {
+          "org_or_author": "thecodrr/fdir, reporter SuperchupuDev",
+          "year": 2025,
+          "tier": 1,
+          "bias_flags": [
+            "Báo cáo issue của maintainer",
+            "Ví dụ mô tả chủ yếu trên Linux"
+          ],
+          "method_note": "Đọc trực tiếp issue chính thức trên GitHub.",
+          "cited_origin_url": null
+        },
+        "fact": "Direct root cause: fdir treo khi crawl / với symlink trực tiếp. Trong isRecursive, parent vẫn là / nhưng state.root là chuỗi rỗng, nên điều kiện dừng không bao giờ đạt.",
+        "numbers": {
+          "issue": 135,
+          "crawl_root": "/",
+          "parent": "/",
+          "state_root": "",
+          "depth": 1,
+          "max_depth": "Infinity"
+        },
+        "quote": "state.root: ''",
+        "page_section": "Description",
+        "confidence_note": "Upstream xác nhận root normalization loop. Trace local xác nhận crawl root /; mapping tới parent/state.root là suy luận, không được log trực tiếp."
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/thecodrr/fdir/pull/137",
+    "group": "nuxt",
+    "facts": [
+      {
+        "source_url": "https://github.com/thecodrr/fdir/pull/137",
+        "source_meta": {
+          "org_or_author": "thecodrr/fdir, contributor pralkarz",
+          "year": 2025,
+          "tier": 1,
+          "bias_flags": [
+            "Pull request maintainer",
+            "Có kiểm thử Linux WSL và Windows"
+          ],
+          "method_note": "Đọc trực tiếp PR đã merge trên GitHub.",
+          "cited_origin_url": null
+        },
+        "fact": "Direct fix upstream cho root loop được merge trong PR #137. PR xác định state.root rỗng khi root là / và sửa cách chuẩn hóa root.",
+        "numbers": {
+          "pull_request": 137,
+          "merge_commit": "b2ee51286cb0d843a16af80cd1a1a2c80599e9c9",
+          "fix_commit": "bef3d32dafbee31922b3b3e77b0494fd519ca06c",
+          "merged_date": "2025-03-25"
+        },
+        "quote": "Fix hang when crawling root with direct symlinks",
+        "page_section": "Description and commits",
+        "confidence_note": "Độ tin cậy cao. Đây là PR upstream dành đúng cho failure mode đang gặp."
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/thecodrr/fdir/commit/bef3d32dafbee31922b3b3e77b0494fd519ca06c",
+    "group": "nuxt",
+    "facts": [
+      {
+        "source_url": "https://github.com/thecodrr/fdir/commit/bef3d32dafbee31922b3b3e77b0494fd519ca06c",
+        "source_meta": {
+          "org_or_author": "thecodrr/fdir",
+          "year": 2025,
+          "tier": 1,
+          "bias_flags": [
+            "Diff một commit"
+          ],
+          "method_note": "Đọc trực tiếp diff commit chính thức trên GitHub.",
+          "cited_origin_url": null
+        },
+        "fact": "Commit POSIX đầu tiên sửa lỗi bằng cách giữ nguyên root khi this.root là /. Trước đó code luôn slice ký tự cuối, biến / thành chuỗi rỗng.",
+        "numbers": {
+          "before": "this.root.slice(0, -1)",
+          "after": "this.root === '/' ? this.root : this.root.slice(0, -1)",
+          "commit": "bef3d32dafbee31922b3b3e77b0494fd519ca06c"
+        },
+        "quote": "fix: don't slice the root when it's the root directory",
+        "page_section": "Diff",
+        "confidence_note": "Độ tin cậy rất cao. Diff là bằng chứng trực tiếp cho điểm sai và cách sửa."
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/thecodrr/fdir/pull/139",
+    "group": "nuxt",
+    "facts": [
+      {
+        "source_url": "https://github.com/thecodrr/fdir/pull/139",
+        "source_meta": {
+          "org_or_author": "thecodrr/fdir",
+          "year": 2025,
+          "tier": 1,
+          "bias_flags": [
+            "PR follow-up theo nền tảng"
+          ],
+          "method_note": "Đọc trực tiếp PR Windows follow-up đã merge.",
+          "cited_origin_url": null
+        },
+        "fact": "Follow-up PR #139 hoàn thiện direct fix cho Windows root. Bản cuối dùng isRootDirectory để giữ nguyên cả / và root dạng drive như C:\\.",
+        "numbers": {
+          "pull_request": 139,
+          "fix_commit": "432be8d",
+          "merge_commit": "65d500b7fc8f4f58c69c672b5a05b91be9254793",
+          "root_patterns": [
+            "/",
+            "^[a-z]:\\\\$"
+          ]
+        },
+        "quote": "fix: correct #137 hanging the tests on Windows",
+        "page_section": "Description and commits",
+        "confidence_note": "Độ tin cậy cao. Cho thấy v6.4.4 chứa bản sửa hoàn chỉnh hơn commit POSIX ban đầu."
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/thecodrr/fdir/commit/65d500b7fc8f4f58c69c672b5a05b91be9254793",
+    "group": "nuxt",
+    "facts": [
+      {
+        "source_url": "https://github.com/thecodrr/fdir/commit/65d500b7fc8f4f58c69c672b5a05b91be9254793",
+        "source_meta": {
+          "org_or_author": "thecodrr/fdir",
+          "year": 2025,
+          "tier": 1,
+          "bias_flags": [
+            "Diff commit follow-up cho Windows root"
+          ],
+          "method_note": "Đọc trực tiếp diff commit chính thức trên GitHub.",
+          "cited_origin_url": null
+        },
+        "fact": "Direct follow-up commit triển khai isRootDirectory để giữ nguyên root POSIX / và root drive Windows trước khi slice trailing separator. Đây là diff bổ sung cho PR #139.",
+        "numbers": {
+          "commit": "65d500b7fc8f4f58c69c672b5a05b91be9254793",
+          "walker_file": "src/walker.ts",
+          "utility_file": "src/utils.ts",
+          "root_patterns": [
+            "/",
+            "^[a-z]:\\\\$"
+          ]
+        },
+        "quote": "fix: handle Windows root directories correctly",
+        "page_section": "Diff",
+        "confidence_note": "Độ tin cậy rất cao. Diff commit là bằng chứng trực tiếp và corroborates PR #139; không phải root fix độc lập thứ hai."
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/thecodrr/fdir/releases/tag/v6.4.4",
+    "group": "nuxt",
+    "facts": [
+      {
+        "source_url": "https://github.com/thecodrr/fdir/releases/tag/v6.4.4",
+        "source_meta": {
+          "org_or_author": "thecodrr/fdir",
+          "year": 2025,
+          "tier": 1,
+          "bias_flags": [
+            "Release note tóm tắt, không phải toàn bộ diff"
+          ],
+          "method_note": "Đọc release chính thức và metadata release từ GitHub.",
+          "cited_origin_url": null
+        },
+        "fact": "fdir v6.4.4 là bản package đầu tiên công bố fix root crawl trực tiếp. Đây là version nên ưu tiên để thay 6.4.3.",
+        "numbers": {
+          "version": "6.4.4",
+          "published_at": "2025-04-19T04:41:19Z",
+          "release_commit": "22cc385f065bd229c0e4c608b7549f4c9549bb40",
+          "fix_pull_request": 137
+        },
+        "quote": "Fix hang when crawling root with direct symlinks",
+        "page_section": "What's Changed",
+        "confidence_note": "Độ tin cậy rất cao. Release note liên kết trực tiếp tới PR #137."
+      }
+    ]
+  },
+  {
+    "url": "https://registry.npmjs.org/fdir/6.4.4",
+    "group": "nuxt",
+    "facts": [
+      {
+        "source_url": "https://registry.npmjs.org/fdir/6.4.4",
+        "source_meta": {
+          "org_or_author": "thecodrr/fdir, npm registry",
+          "year": 2025,
+          "tier": 1,
+          "bias_flags": [
+            "Manifest không tự chứng minh runtime behavior"
+          ],
+          "method_note": "Đọc manifest package chính thức từ npm registry.",
+          "cited_origin_url": null
+        },
+        "fact": "Manifest xác nhận bản cài đặt cụ thể 6.4.4 và gitHead đúng release commit của upstream.",
+        "numbers": {
+          "version": "6.4.4",
+          "gitHead": "22cc385f065bd229c0e4c608b7549f4c9549bb40",
+          "dist_shasum": "1cfcf86f875a883e19a8fab53622cfe992e8d2f9",
+          "engines_node": ">=12.0.0"
+        },
+        "quote": "\"version\": \"6.4.4\"",
+        "page_section": "Package manifest",
+        "confidence_note": "Độ tin cậy cao cho version và provenance package; behavior được chứng minh bởi PR và release."
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/SuperchupuDev/tinyglobby/issues/54",
+    "group": "nuxt",
+    "facts": [
+      {
+        "source_url": "https://github.com/SuperchupuDev/tinyglobby/issues/54",
+        "source_meta": {
+          "org_or_author": "SuperchupuDev/tinyglobby",
+          "year": 2024,
+          "tier": 1,
+          "bias_flags": [
+            "Issue maintainer trước khi fdir phát hành bản sửa cuối"
+          ],
+          "method_note": "Đọc trực tiếp issue chính thức của tinyglobby.",
+          "cited_origin_url": null
+        },
+        "fact": "tinyglobby 0.2.7 thêm symlink resolution và có thể loop khi symlink trỏ vào parent. 0.2.9 tạm revert để giảm rủi ro, sau đó chờ fdir fix upstream.",
+        "numbers": {
+          "introduced_version": "0.2.7",
+          "revert_version": "0.2.9",
+          "related_fdir_issue": 125,
+          "related_fdir_fix": 126
+        },
+        "quote": "issue has been fixed upstream",
+        "page_section": "Description and timeline",
+        "confidence_note": "Độ tin cậy cao cho lịch sử lỗi symlink của tinyglobby. Đây là context liên quan, không phải root fix cuối cùng của /."
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/SuperchupuDev/tinyglobby/releases/tag/0.2.13",
+    "group": "nuxt",
+    "facts": [
+      {
+        "source_url": "https://github.com/SuperchupuDev/tinyglobby/releases/tag/0.2.13",
+        "source_meta": {
+          "org_or_author": "SuperchupuDev/tinyglobby",
+          "year": 2025,
+          "tier": 1,
+          "bias_flags": [
+            "Release note tóm tắt"
+          ],
+          "method_note": "Đọc release notes chính thức của tinyglobby.",
+          "cited_origin_url": null
+        },
+        "fact": "tinyglobby 0.2.13 là release đầu tiên ghi rõ performance khi crawl / được sửa nhờ fdir upstream fix. Đây là route nâng cấp phụ, rộng hơn việc chỉ resolve fdir.",
+        "numbers": {
+          "version": "0.2.13",
+          "published_at": "2025-04-19T18:32:30Z",
+          "release_commit": "6906600",
+          "upstream_dependency_fix": "fdir root crawl"
+        },
+        "quote": "Fixed performance of crawling / thanks to upstream fdir fix",
+        "page_section": "Release notes",
+        "confidence_note": "Độ tin cậy cao. tinyglobby xác nhận chính nó nhận lợi ích từ fdir fix."
+      }
+    ]
+  },
+  {
+    "url": "https://registry.npmjs.org/tinyglobby/0.2.13",
+    "group": "nuxt",
+    "facts": [
+      {
+        "source_url": "https://registry.npmjs.org/tinyglobby/0.2.13",
+        "source_meta": {
+          "org_or_author": "SuperchupuDev/tinyglobby, npm registry",
+          "year": 2025,
+          "tier": 1,
+          "bias_flags": [
+            "Manifest không tự chứng minh runtime behavior"
+          ],
+          "method_note": "Đọc manifest package chính thức từ npm registry.",
+          "cited_origin_url": null
+        },
+        "fact": "Manifest tinyglobby 0.2.13 nâng floor dependency fdir lên ^6.4.4, khớp bản root fix. Đây là bằng chứng version dependency đã được upstream điều chỉnh.",
+        "numbers": {
+          "tinyglobby": "0.2.13",
+          "fdir_range": "^6.4.4",
+          "picomatch_range": "^4.0.2",
+          "engines_node": ">=12.0.0"
+        },
+        "quote": "\"fdir\": \"^6.4.4\"",
+        "page_section": "Package manifest",
+        "confidence_note": "Độ tin cậy cao cho dependency floor. Release notes cung cấp bằng chứng behavior tương ứng."
+      }
+    ]
+  },
+  {
+    "url": "https://registry.npmjs.org/nuxt/3.15.4",
+    "group": "nuxt",
+    "facts": [
+      {
+        "source_url": "https://registry.npmjs.org/nuxt/3.15.4",
+        "source_meta": {
+          "org_or_author": "nuxt/nuxt, npm registry",
+          "year": 2025,
+          "tier": 1,
+          "bias_flags": [
+            "Manifest không tự chứng minh runtime behavior"
+          ],
+          "method_note": "Đọc manifest Nuxt 3.15.4 chính thức từ npm registry.",
+          "cited_origin_url": null
+        },
+        "fact": "Nuxt 3.15.4 phụ thuộc trực tiếp tinyglobby 0.2.10 và unimport ^4.0.0. Vì tinyglobby 0.2.10 vẫn dùng fdir range cũ, chỉ nâng unimport hoặc nhánh tinyglobby của unimport có thể vẫn để lại nhánh Nuxt cũ.",
+        "numbers": {
+          "nuxt": "3.15.4",
+          "direct_tinyglobby": "0.2.10",
+          "unimport_range": "^4.0.0",
+          "node_engine": "^18.20.5 || ^20.9.0 || >=22.0.0"
+        },
+        "quote": "\"tinyglobby\": \"0.2.10\"",
+        "page_section": "Package manifest",
+        "confidence_note": "Độ tin cậy cao cho constraint dependency của Nuxt. Cần đối chiếu lockfile hiện tại để xác định toàn bộ fdir entries."
+      }
+    ]
+  },
+  {
+    "url": "https://yarnpkg.com/configuration/yarnrc",
+    "group": "packaging",
+    "facts": [
+      {
+        "source_url": "https://yarnpkg.com/configuration/yarnrc",
+        "source_meta": {
+          "org_or_author": "Yarn",
+          "year": 2026,
+          "tier": "official documentation",
+          "bias_flags": [
+            "current main documentation",
+            "defaults can vary by Yarn release"
+          ],
+          "method_note": "Đọc trực tiếp các mục nmSelfReferences, nmHoistingLimits và nodeLinker.",
+          "cited_origin_url": "https://yarnpkg.com/configuration/yarnrc"
+        },
+        "fact": "Yarn node-modules có cấu hình nmSelfReferences. Khi đặt false, Yarn không tạo self-referencing symlink cho workspace; tùy chọn này có thể ghi đè theo workspace bằng installConfig.selfReferences. nmHoistingLimits workspaces chỉ giới hạn điểm hoist, không tắt self-reference.",
+        "numbers": [
+          "nmSelfReferences mặc định true",
+          "nmHoistingLimits có workspaces/dependencies/none",
+          "nodeLinker có node-modules"
+        ],
+        "quote": "If false, Yarn won't create self-referencing symlinks when using nodeLinker: node-modules.",
+        "page_section": "nmSelfReferences, nmHoistingLimits, nodeLinker",
+        "confidence_note": "Cao cho hành vi cấu hình Yarn. Đây là cơ chế upstream trực tiếp khớp self-link; chưa phải bản tái hiện đóng gói Forge trong lượt này."
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/yarnpkg/berry/blob/master/CHANGELOG.md",
+    "group": "packaging",
+    "facts": [
+      {
+        "source_url": "https://github.com/yarnpkg/berry/blob/master/CHANGELOG.md",
+        "source_meta": {
+          "org_or_author": "Yarn",
+          "year": 2022,
+          "tier": "official changelog",
+          "bias_flags": [
+            "historical release notes on current master",
+            "not a Forge-specific regression report"
+          ],
+          "method_note": "Đối chiếu các mục phát hành 3.1.0, 3.3.0 và 4.0.1 liên quan node-modules symlink.",
+          "cited_origin_url": "https://github.com/yarnpkg/berry/blob/master/CHANGELOG.md"
+        },
+        "fact": "Yarn đã có lịch sử sửa đúng lớp lỗi này: 3.1.0 thêm nmSelfReferences để điều khiển self-reference; 3.3.0 tránh circular symlink; 4.0.1 sửa tạo symlink của node-modules khi inner workspace phụ thuộc outer workspace. Repo Enjoy đang ghim Yarn 4.6.0 nên nên dùng cấu hình explicit thay vì suy đoán mặc định.",
+        "numbers": [
+          "3.1.0 thêm nmSelfReferences",
+          "3.3.0 tránh circular symlink",
+          "4.0.1 sửa tạo symlink",
+          "Enjoy packageManager yarn@4.6.0"
+        ],
+        "quote": "The node-modules linker avoids creation of circular symlinks",
+        "page_section": "3.1.0 Installs, 3.3.0 Installs, 4.0.1",
+        "confidence_note": "Cao cho các mốc release note. Việc nmSelfReferences false có giải quyết toàn bộ đường copy của plugin hay không vẫn cần verifier sau khi cài lại dependency."
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/electron/forge/issues/3624",
+    "group": "packaging",
+    "facts": [
+      {
+        "source_url": "https://github.com/electron/forge/issues/3624",
+        "source_meta": {
+          "org_or_author": "Electron Forge, issue reporter noah10",
+          "year": 2024,
+          "tier": "official project issue",
+          "bias_flags": [
+            "open unresolved issue",
+            "user-reported",
+            "Forge 7.4.0 and Electron 30.1.0 specific"
+          ],
+          "method_note": "Đọc reproduction, lỗi ENOENT, workaround packageAfterCopy và đề xuất dereference trong issue body.",
+          "cited_origin_url": "https://github.com/electron/forge/issues/3624"
+        },
+        "fact": "Forge issue #3624 mô tả local module symlink bị copy nguyên symlink vào thư mục tạm, sau đó Vite dependency copy lỗi ENOENT. Workaround được nêu là packageAfterCopy xóa các symlink đã biết và patch VitePlugin fs.copy với {dereference:true}. Đây là tương đồng cơ chế Forge/Vite symlink, không phải báo cáo exact Yarn node_modules/node_modules hoặc thiếu universalify/fs-extra của Enjoy.",
+        "numbers": [
+          "Forge 7.4.0",
+          "Electron 30.1.0",
+          "macOS 13.6.3",
+          "issue mở 2024-06-10"
+        ],
+        "quote": "The build process then copies this symlink itself",
+        "page_section": "Actual behavior, Additional information, temporary solution",
+        "confidence_note": "Cao cho reproduction và workaround đã được ghi trong issue. Trung bình cho khả năng áp dụng nguyên xi vào circular self-link, vì issue chỉ kiểm tra symlink tới local module bên ngoài."
+      }
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/caoxiemeihao/electron-forge-plugin-dependencies/main/src/DependenciesPlugin.ts",
+    "group": "packaging",
+    "facts": [
+      {
+        "source_url": "https://raw.githubusercontent.com/caoxiemeihao/electron-forge-plugin-dependencies/main/src/DependenciesPlugin.ts",
+        "source_meta": {
+          "org_or_author": "caoxiemeihao, electron-forge-plugin-dependencies",
+          "year": 2024,
+          "tier": "open source package source",
+          "bias_flags": [
+            "community package",
+            "single maintainer",
+            "small project"
+          ],
+          "method_note": "Đọc hook packageAfterCopy và lời gọi dependencies-tree/fs copy.",
+          "cited_origin_url": "https://github.com/caoxiemeihao/electron-forge-plugin-dependencies/blob/main/src/DependenciesPlugin.ts"
+        },
+        "fact": "Plugin hiện thực hóa cách thu gom production dependency cho Forge Vite/Webpack: trong packageAfterCopy, lấy direct dependencies cấu hình, gọi dependencies-tree để flatten dependency closure, rồi copy từng dep.src vào buildPath theo dep.dest. Enjoy đang dùng plugin này với dependencies: Object.keys(pkg.dependencies) và lockfile 1.0.0.",
+        "numbers": [
+          "electron-forge-plugin-dependencies 1.0.0 trong yarn.lock",
+          "1 hook packageAfterCopy",
+          "dependencies-tree 2.0.0 trong yarn.lock"
+        ],
+        "quote": "Copy dependencies:",
+        "page_section": "getHooks, packageAfterCopy",
+        "confidence_note": "Cao cho đường runtime copy. Source này không có kiểm tra ASAR, không có native verifier và không chứng minh xử lý cycle bằng realpath."
+      }
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/caoxiemeihao/dependencies-tree/main/src/utils.ts",
+    "group": "packaging",
+    "facts": [
+      {
+        "source_url": "https://raw.githubusercontent.com/caoxiemeihao/dependencies-tree/main/src/utils.ts",
+        "source_meta": {
+          "org_or_author": "caoxiemeihao, dependencies-tree",
+          "year": 2024,
+          "tier": "open source dependency resolver source",
+          "bias_flags": [
+            "community package",
+            "single maintainer",
+            "mechanistic inference rather than exact issue"
+          ],
+          "method_note": "Đọc isDirectory, lookupNodeModulesPaths, resolveDependencies và flatten dedup.",
+          "cited_origin_url": "https://github.com/caoxiemeihao/dependencies-tree/blob/main/src/utils.ts"
+        },
+        "fact": "dependencies-tree dùng fs.promises.stat trong isDirectory nên dereference symlink; lookupNodeModulesPaths coi mọi ancestor/node_modules hợp lệ; resolveDependencies giữ depPath dạng chuỗi và dedup theo chuỗi đó, không canonicalize realpath. Vì vậy node_modules/node_modules tự trỏ về node_modules có thể được nhìn như node_modules hợp lệ và tạo đường dẫn lồng khác chuỗi, làm tăng rủi ro copy đệ quy hoặc graph path-sensitive.",
+        "numbers": [
+          "dependencies-tree 2.0.0",
+          "collected Map keyed by depPath string",
+          "flat Map keyed by dep.path.src"
+        ],
+        "quote": "const stat = await fs.promises.stat(p)",
+        "page_section": "isDirectory, lookupNodeModulesPaths, resolveDependencies, getDependencies",
+        "confidence_note": "Cao cho hành vi code đã đọc; kết luận self-link gây thiếu file là suy luận cơ chế phù hợp source, chưa được chạy reproduction theo yêu cầu chỉ đọc."
+      }
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/electron/forge/v7.7.0/packages/plugin/vite/src/VitePlugin.ts",
+    "group": "packaging",
+    "facts": [
+      {
+        "source_url": "https://raw.githubusercontent.com/electron/forge/v7.7.0/packages/plugin/vite/src/VitePlugin.ts",
+        "source_meta": {
+          "org_or_author": "Electron Forge",
+          "year": 2025,
+          "tier": "official tagged source",
+          "bias_flags": [
+            "version-tagged v7.7.0",
+            "behavior may differ in later Forge"
+          ],
+          "method_note": "Đọc hooks prePackage, resolveForgeConfig và packageAfterCopy của đúng tag v7.7.0.",
+          "cited_origin_url": "https://github.com/electron/forge/blob/v7.7.0/packages/plugin/vite/src/VitePlugin.ts"
+        },
+        "fact": "VitePlugin v7.7.0 ở prePackage build main và renderer; resolveForgeConfig đặt ignore để chỉ giữ cây /.vite; packageAfterCopy chỉ đọc package.json, kiểm tra main có .vite và ghi package.json vào buildPath. Plugin Vite không tự copy production dependencies. Trong Enjoy, main/preload externalize toàn bộ direct dependencies nên dependency copy plugin là đường cung cấp runtime JS.",
+        "numbers": [
+          "Forge VitePlugin 7.7.0",
+          "2 build phases in prePackage: main/preload bundle and renderer bundle",
+          "1 packageAfterCopy hook"
+        ],
+        "quote": "The plugin expects the main entry point in package.json to be .vite/*",
+        "page_section": "prePackage, resolveForgeConfig, packageAfterCopy",
+        "confidence_note": "Cao cho source tag. Liên hệ với Enjoy external config là đối chiếu local source, không phải claim từ Forge upstream."
+      }
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/electron/forge/v7.7.0/packages/plugin/auto-unpack-natives/src/AutoUnpackNativesPlugin.ts",
+    "group": "packaging",
+    "facts": [
+      {
+        "source_url": "https://raw.githubusercontent.com/electron/forge/v7.7.0/packages/plugin/auto-unpack-natives/src/AutoUnpackNativesPlugin.ts",
+        "source_meta": {
+          "org_or_author": "Electron Forge",
+          "year": 2025,
+          "tier": "official tagged source",
+          "bias_flags": [
+            "version-tagged v7.7.0",
+            "scope limited to native .node files"
+          ],
+          "method_note": "Đọc resolveForgeConfig và glob unpack được plugin ghép vào asar.unpack.",
+          "cited_origin_url": "https://github.com/electron/forge/blob/v7.7.0/packages/plugin/auto-unpack-natives/src/AutoUnpackNativesPlugin.ts"
+        },
+        "fact": "AutoUnpackNativesPlugin chỉ yêu cầu asar truthy rồi ghép glob **/{.**,**}/**/*.node vào asar.unpack. Nó tự động đưa native .node ra app.asar.unpacked nhưng không kiểm tra hoặc bổ sung JavaScript package.json, fs-extra, universalify hay node_modules/node_modules.",
+        "numbers": [
+          "Forge plugin 7.7.0",
+          "1 glob unpack",
+          "pattern ends with *.node"
+        ],
+        "quote": "newUnpack = '**/{.**,**}/**/*.node'",
+        "page_section": "resolveForgeConfig",
+        "confidence_note": "Cao. Đây là lý do native unpack không thể thay verifier module presence và dependency-tree integrity."
+      }
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/electron/packager/v18.3.6/src/platform.ts",
+    "group": "packaging",
+    "facts": [
+      {
+        "source_url": "https://raw.githubusercontent.com/electron/packager/v18.3.6/src/platform.ts",
+        "source_meta": {
+          "org_or_author": "Electron Packager",
+          "year": 2024,
+          "tier": "official tagged source",
+          "bias_flags": [
+            "version-tagged v18.3.6",
+            "Enjoy lockfile uses this transitive version"
+          ],
+          "method_note": "Đọc copyTemplate và asarApp trong source đúng tag; đối chiếu default derefSymlinks từ cùng release types.",
+          "cited_origin_url": "https://github.com/electron/packager/blob/v18.3.6/src/platform.ts"
+        },
+        "fact": "Packager v18.3.6 copyTemplate gọi fs.copy với dereference: this.opts.derefSymlinks; option derefSymlinks mặc định true theo type docs cùng release. Sau đó asarApp đóng gói và xóa app source tạm. Tùy chọn này chỉ bao phủ Packager app-source copy, không tự động áp dụng cho custom packageAfterCopy copy của electron-forge-plugin-dependencies.",
+        "numbers": [
+          "@electron/packager 18.3.6 trong yarn.lock",
+          "derefSymlinks mặc định true",
+          "asarApp xóa originalResourcesAppDir sau khi tạo archive"
+        ],
+        "quote": "dereference: this.opts.derefSymlinks",
+        "page_section": "copyTemplate, asarApp",
+        "confidence_note": "Cao cho Packager source. Kết luận option không bao phủ custom plugin dựa trên hook boundary và source plugin, nên không xem đây là fix đủ cho self-link."
+      }
+    ]
+  },
+  {
+    "url": "https://www.electronjs.org/docs/latest/tutorial/asar-archives",
+    "group": "packaging",
+    "facts": [
+      {
+        "source_url": "https://www.electronjs.org/docs/latest/tutorial/asar-archives",
+        "source_meta": {
+          "org_or_author": "Electron contributors",
+          "year": 2026,
+          "tier": "official runtime documentation",
+          "bias_flags": [
+            "current docs may span multiple Electron versions"
+          ],
+          "method_note": "Đọc Node API, extra unpacking và Adding Unpacked Files sections.",
+          "cited_origin_url": "https://www.electronjs.org/docs/latest/tutorial/asar-archives"
+        },
+        "fact": "Electron coi ASAR như virtual directory cho fs.readFile và require; process.dlopen dùng cho require native module cần file thật. --unpack tạo app.asar.unpacked cạnh app.asar và thư mục này phải được ship cùng archive. Verifier đúng nên kiểm tra cả archive entries lẫn unpacked tree, sau đó chạy require/probe trên Electron Node runtime.",
+        "numbers": [
+          "2 vùng cần kiểm tra: app.asar và app.asar.unpacked",
+          "process.dlopen là native-module path"
+        ],
+        "quote": "process.dlopen - Used by require on native modules",
+        "page_section": "Node API, Extra Unpacking on Some APIs, Adding Unpacked Files",
+        "confidence_note": "Cao. Phù hợp trực tiếp với verifier local của Enjoy; việc probe module cụ thể vẫn là acceptance choice của repo."
+      }
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/electron/electron/main/docs/api/web-request.md",
+    "group": "packaging",
+    "facts": [
+      {
+        "source_url": "https://raw.githubusercontent.com/electron/electron/main/docs/api/web-request.md",
+        "source_meta": {
+          "org_or_author": "Electron contributors",
+          "year": 2026,
+          "tier": "official main-process API documentation",
+          "bias_flags": [
+            "main branch docs",
+            "API behavior can vary by Electron version"
+          ],
+          "method_note": "Đọc WebRequest class, onBeforeRequest, URL filter và callback redirect/cancel.",
+          "cited_origin_url": "https://github.com/electron/electron/blob/main/docs/api/web-request.md"
+        },
+        "fact": "session.webRequest.onBeforeRequest là main-process hook, nhận filter urls và callback; callback có thể redirectURL hoặc cancel. Vì hook nằm trên Session, cách đáng tin để chặn request đầu tiên là đăng ký trước khi BrowserWindow hoặc WebContents bắt đầu loadURL/loadFile. Chỉ listener cuối cùng được dùng, nên test guard phải tránh ghi đè listener khác.",
+        "numbers": [
+          "1 listener cuối cùng có hiệu lực",
+          "filter urls hỗ trợ pattern",
+          "callback hỗ trợ redirectURL/cancel"
+        ],
+        "quote": "Only the last attached listener will be used.",
+        "page_section": "Class WebRequest, onBeforeRequest",
+        "confidence_note": "Cao cho API contract. Mốc đăng ký trước navigation là suy luận trực tiếp từ lifecycle request và mục tiêu pre-navigation, cần test packaged executable để xác nhận."
+      }
+    ]
+  },
+  {
+    "url": "https://playwright.dev/docs/api/class-electron",
+    "group": "packaging",
+    "facts": [
+      {
+        "source_url": "https://playwright.dev/docs/api/class-electron",
+        "source_meta": {
+          "org_or_author": "Microsoft Playwright",
+          "year": 2026,
+          "tier": "official API documentation",
+          "bias_flags": [
+            "Electron support marked experimental",
+            "current docs"
+          ],
+          "method_note": "Đọc launch example, electronApp.evaluate, firstWindow và executablePath semantics.",
+          "cited_origin_url": "https://playwright.dev/docs/api/class-electron"
+        },
+        "fact": "Playwright Electron support là experimental. electron.launch khởi động executable và trả ElectronApplication; electronApp.evaluate chạy trong main process; firstWindow chờ cửa sổ đầu tiên. Do evaluate chỉ gọi được sau khi launch đã trả về, guard cài bằng evaluate sau launch không có bằng chứng bắt được navigation mà app đã tự khởi động trước đó.",
+        "numbers": [
+          "Electron API hỗ trợ từ v12.2.0+ theo docs",
+          "3 API liên quan: launch, evaluate, firstWindow"
+        ],
+        "quote": "Playwright has experimental support for Electron automation.",
+        "page_section": "Electron example, launch, Known issues",
+        "confidence_note": "Cao cho thứ tự API; kết luận race là suy luận lifecycle, đặc biệt quan trọng vì Enjoy load cửa sổ trong startup main."
+      }
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/microsoft/playwright/main/tests/electron/electron-app.spec.ts",
+    "group": "packaging",
+    "facts": [
+      {
+        "source_url": "https://raw.githubusercontent.com/microsoft/playwright/main/tests/electron/electron-app.spec.ts",
+        "source_meta": {
+          "org_or_author": "Microsoft Playwright",
+          "year": 2026,
+          "tier": "official open source test source",
+          "bias_flags": [
+            "internal Playwright fixture",
+            "test-created navigation",
+            "does not prove packaged app first load"
+          ],
+          "method_note": "Đọc test should route network và so sánh thứ tự launch, newWindow, context.route, page.goto.",
+          "cited_origin_url": "https://github.com/microsoft/playwright/blob/main/tests/electron/electron-app.spec.ts"
+        },
+        "fact": "Test chính thức route network gọi launchElectronApp trước, tạo cửa sổ test, đăng ký app.context().route, rồi mới page.goto URL cần mock. Mẫu này chứng minh route được cài trước navigation do test tạo ra. Nó không chứng minh route hoặc electronApp.evaluate bắt được initial BrowserWindow load của packaged executable, vì app startup đã xảy ra trong launch.",
+        "numbers": [
+          "route test lines 179-190",
+          "route đăng ký trước page.goto",
+          "1 initial app launch trước route"
+        ],
+        "quote": "await app.context().route('**/empty.html', async (route, request) => {",
+        "page_section": "should route network",
+        "confidence_note": "Cao cho thứ tự trong source test. Đây là bằng chứng phủ định việc dùng test route sau launch như verifier pre-navigation đầy đủ, không phải phủ định khả năng route cho các navigation sau."
+      }
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/JohannesKlauss/react-hotkeys-hook/v4.6.1/src/useHotkeys.ts",
+    "group": "ui-runtime",
+    "facts": [
+      {
+        "source_url": "https://raw.githubusercontent.com/JohannesKlauss/react-hotkeys-hook/v4.6.1/src/useHotkeys.ts",
+        "source_meta": {
+          "org_or_author": "Johannes Klauss / react-hotkeys-hook",
+          "year": 2026,
+          "tier": 1,
+          "bias_flags": [
+            "upstream source",
+            "version tag"
+          ],
+          "method_note": "Đọc raw source tại tag v4.6.1. Năm 2026 chỉ là năm truy cập vì tag raw không có metadata publication trong trang đã mở.",
+          "cited_origin_url": null
+        },
+        "fact": "useHotkeys v4.6.1 khai báo keys theo type Keys rồi biến thành _keys và gọi parseKeysHookInput ở listener, proxy registration và cleanup. Khi caller truyền undefined, parser nhận undefined trước khi có cơ chế guard runtime.",
+        "numbers": [
+          "4.6.1",
+          "3"
+        ],
+        "quote": "parseKeysHookInput(_keys",
+        "page_section": "useHotkeys implementation",
+        "confidence_note": "Cao: exact source khớp resolved version của repo. Đây là lỗi caller truyền giá trị chưa sẵn sàng kết hợp với library thiếu runtime guard, không có bằng chứng v4.6.1 tự xử lý undefined."
+      }
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/JohannesKlauss/react-hotkeys-hook/v4.6.1/src/parseHotkeys.ts",
+    "group": "ui-runtime",
+    "facts": [
+      {
+        "source_url": "https://raw.githubusercontent.com/JohannesKlauss/react-hotkeys-hook/v4.6.1/src/parseHotkeys.ts",
+        "source_meta": {
+          "org_or_author": "Johannes Klauss / react-hotkeys-hook",
+          "year": 2026,
+          "tier": 1,
+          "bias_flags": [
+            "upstream source",
+            "version tag"
+          ],
+          "method_note": "Đọc raw source tại tag v4.6.1. Năm 2026 chỉ là năm truy cập vì tag raw không hiển thị năm publication.",
+          "cited_origin_url": null
+        },
+        "fact": "parseKeysHookInput có chữ ký keys: string và thực thi keys.split(splitKey). Đây là exact throw path cho lỗi undefined.split; parseHotkey tiếp tục yêu cầu từng hotkey là string.",
+        "numbers": [
+          "1",
+          "2"
+        ],
+        "quote": "return keys.split(splitKey)",
+        "page_section": "parseKeysHookInput and parseHotkey",
+        "confidence_note": "Cao: source line-level khớp triệu chứng. Type contract loại undefined, nhưng implementation không biến contract violation thành lỗi có kiểm soát."
+      }
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/JohannesKlauss/react-hotkeys-hook/v4.6.1/src/types.ts",
+    "group": "ui-runtime",
+    "facts": [
+      {
+        "source_url": "https://raw.githubusercontent.com/JohannesKlauss/react-hotkeys-hook/v4.6.1/src/types.ts",
+        "source_meta": {
+          "org_or_author": "Johannes Klauss / react-hotkeys-hook",
+          "year": 2026,
+          "tier": 1,
+          "bias_flags": [
+            "upstream type declaration",
+            "version tag"
+          ],
+          "method_note": "Đọc raw type declaration tại tag v4.6.1. Năm 2026 là năm truy cập, không phải năm publication.",
+          "cited_origin_url": null
+        },
+        "fact": "Keys của react-hotkeys-hook v4.6.1 là string hoặc readonly string[], không gồm undefined. Trạng thái caller Enjoy được chứng minh riêng bằng baseline và stack local.",
+        "numbers": [
+          "2",
+          "4.6.1"
+        ],
+        "quote": "export type Keys = string | readonly string[]",
+        "page_section": "Keys type",
+        "confidence_note": "Cao cho type contract; phần currentHotkeys là đối chiếu local repo, chưa chạy app."
+      }
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/JohannesKlauss/react-hotkeys-hook/v5.3.3/packages/react-hotkeys-hook/src/lib/parseHotkeys.ts",
+    "group": "ui-runtime",
+    "facts": [
+      {
+        "source_url": "https://raw.githubusercontent.com/JohannesKlauss/react-hotkeys-hook/v5.3.3/packages/react-hotkeys-hook/src/lib/parseHotkeys.ts",
+        "source_meta": {
+          "org_or_author": "Johannes Klauss / react-hotkeys-hook",
+          "year": 2026,
+          "tier": 1,
+          "bias_flags": [
+            "upstream source",
+            "newer version comparison"
+          ],
+          "method_note": "Đọc raw source tại tag v5.3.3. Năm 2026 chỉ là năm truy cập vì không lấy được npm publication metadata.",
+          "cited_origin_url": null
+        },
+        "fact": "Parser v5.3.3 vẫn gọi keys.toLowerCase().split(delimiter), không có guard cho undefined. Vì vậy nâng từ v4.6.1 lên v5 không tự sửa startup nếu callsite vẫn truyền undefined.",
+        "numbers": [
+          "5.3.3",
+          "2"
+        ],
+        "quote": "return keys.toLowerCase().split(delimiter)",
+        "page_section": "parseKeysHookInput",
+        "confidence_note": "Cao cho exact implementation v5.3.3. Không suy ra mọi bản v5 tương lai từ một tag duy nhất."
+      }
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/katspaugh/wavesurfer.js/7.9.1/src/wavesurfer.ts",
+    "group": "ui-runtime",
+    "facts": [
+      {
+        "source_url": "https://raw.githubusercontent.com/katspaugh/wavesurfer.js/7.9.1/src/wavesurfer.ts",
+        "source_meta": {
+          "org_or_author": "katspaugh / wavesurfer.js",
+          "year": 2026,
+          "tier": 1,
+          "bias_flags": [
+            "upstream source",
+            "version tag"
+          ],
+          "method_note": "Đọc raw source tại tag 7.9.1. Năm 2026 là năm truy cập vì tag raw không cho publication date trong trang đã mở.",
+          "cited_origin_url": null
+        },
+        "fact": "WaveSurfer 7.9.1 khởi tạo init và load trong Promise.resolve microtask, có comment cho phép external events đăng ký trước load. loadAudio phát ready sau decode; load bắt error, emit error rồi rethrow. getDecodedData có thể trả null.",
+        "numbers": [
+          "7.9.1",
+          "1",
+          "1"
+        ],
+        "quote": "Init and load async to allow external events to be registered",
+        "page_section": "constructor, loadAudio, load, getDecodedData",
+        "confidence_note": "Cao cho lifecycle source. Việc listener đăng ký sau React state update và việc callback optional là trách nhiệm callsite cần kiểm tra thêm."
+      }
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/katspaugh/wavesurfer.js/7.9.1/src/renderer.ts",
+    "group": "ui-runtime",
+    "facts": [
+      {
+        "source_url": "https://raw.githubusercontent.com/katspaugh/wavesurfer.js/7.9.1/src/renderer.ts",
+        "source_meta": {
+          "org_or_author": "katspaugh / wavesurfer.js",
+          "year": 2026,
+          "tier": 1,
+          "bias_flags": [
+            "upstream source",
+            "version tag"
+          ],
+          "method_note": "Đọc raw renderer source tại tag 7.9.1. Năm 2026 là năm truy cập, không phải publication year.",
+          "cited_origin_url": null
+        },
+        "fact": "Renderer đo parent.clientWidth qua ResizeObserver và renderMultiCanvas return sớm khi width bằng 0. Container display:none hoặc chưa có kích thước làm waveform không render; source không chứng minh rằng IntersectionObserver tự giải quyết trạng thái đó.",
+        "numbers": [
+          "0",
+          "1"
+        ],
+        "quote": "if (!clientWidth) return",
+        "page_section": "ResizeObserver and renderMultiCanvas",
+        "confidence_note": "Cao cho zero-width behavior. Partial intersection tự nó chưa đủ kết luận; cần kích thước thực tế của container."
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/katspaugh/wavesurfer.js/discussions/3739",
+    "group": "ui-runtime",
+    "facts": [
+      {
+        "source_url": "https://github.com/katspaugh/wavesurfer.js/discussions/3739",
+        "source_meta": {
+          "org_or_author": "katspaugh / wavesurfer.js maintainer",
+          "year": 2024,
+          "tier": 1,
+          "bias_flags": [
+            "maintainer answer",
+            "single discussion case"
+          ],
+          "method_note": "Trang discussion hiển thị ngày trả lời 10 Jun 2024.",
+          "cited_origin_url": null
+        },
+        "fact": "Maintainer xác nhận instance bị destroy trong lúc loading có thể tạo unhandled error, và khuyến nghị create không truyền URL, đăng ký listener trước, rồi gọi player.current.load(url).catch(...).",
+        "numbers": [
+          "1",
+          "1"
+        ],
+        "quote": "create without URL, call load(url).catch(...)",
+        "page_section": "Maintainer answer",
+        "confidence_note": "Cao cho khuyến nghị upstream trong case cụ thể; không phải cam kết rằng mọi timing hoặc hidden-container case đều được giải quyết."
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/katspaugh/wavesurfer.js/pull/4314",
+    "group": "ui-runtime",
+    "facts": [
+      {
+        "source_url": "https://github.com/katspaugh/wavesurfer.js/pull/4314",
+        "source_meta": {
+          "org_or_author": "katspaugh / wavesurfer.js contributors",
+          "year": 2026,
+          "tier": 1,
+          "bias_flags": [
+            "merged pull request",
+            "upstream maintainer project"
+          ],
+          "method_note": "PR hiển thị merged Jun 9, 2026, nên year là publication/merge year xác định được.",
+          "cited_origin_url": null
+        },
+        "fact": "PR #4314 mô tả 27 fixes trên 14 files, gồm destroyed guard sau await, _loadVersion chống reentrancy, tránh double error emission, và cleanup listener/timeout. Đây là upstream bugfix liên quan lifecycle load và destroy.",
+        "numbers": [
+          "4314",
+          "27",
+          "14",
+          "2"
+        ],
+        "quote": "_loadVersion",
+        "page_section": "Pull request summary and changed files",
+        "confidence_note": "Cao cho nội dung PR. Cần dùng release mapping để biết version stable chứa fix; không áp dụng ngược cho local 7.9.1."
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/katspaugh/wavesurfer.js/releases",
+    "group": "ui-runtime",
+    "facts": [
+      {
+        "source_url": "https://github.com/katspaugh/wavesurfer.js/releases",
+        "source_meta": {
+          "org_or_author": "katspaugh / wavesurfer.js",
+          "year": 2026,
+          "tier": 1,
+          "bias_flags": [
+            "upstream release page",
+            "page date context"
+          ],
+          "method_note": "Trang release được truy cập ngày 2026-09-06; một số entry chỉ hiển thị ngày và tháng, nên year 2026 là access/current-page context khi không có năm publication đầy đủ.",
+          "cited_origin_url": null
+        },
+        "fact": "Release notes liên kết PR #4314 vào 7.12.8 với mô tả comprehensive bug fixes và memory leak fixes; trang hiện cũng liệt kê 7.12.11. Local resolved 7.9.1 thấp hơn các release này, nên không nhận fix từ PR nếu chưa nâng version.",
+        "numbers": [
+          "7.12.8",
+          "7.12.11",
+          "7.9.1",
+          "4314"
+        ],
+        "quote": "comprehensive bug fixes and memory leak fixes",
+        "page_section": "Release notes for 7.12.8 and current stable list",
+        "confidence_note": "Cao cho mapping release note và version ordering tại thời điểm truy cập. Không suy ra latest xử lý hidden/partial intersection hoặc caller optional callback."
+      }
+    ]
+  },
+  {
+    "url": "https://react.dev/reference/react/useEffect",
+    "group": "ui-runtime",
+    "facts": [
+      {
+        "source_url": "https://react.dev/reference/react/useEffect",
+        "source_meta": {
+          "org_or_author": "React team",
+          "year": 2026,
+          "tier": 1,
+          "bias_flags": [
+            "official documentation",
+            "access-year metadata"
+          ],
+          "method_note": "Official React documentation đọc ngày 2026-09-06; page không cung cấp publication year rõ ràng nên year là access year.",
+          "cited_origin_url": null
+        },
+        "fact": "React yêu cầu Effect cleanup chạy trước setup mới khi dependency đổi và khi unmount. Docs minh họa biến ignore trong async Effect để stale response không set state sau cleanup; đây là mẫu cho logout/connect generation guard.",
+        "numbers": [
+          "2",
+          "1"
+        ],
+        "quote": "cleanup sets ignore true",
+        "page_section": "Synchronizing with Effects and fetching data",
+        "confidence_note": "Cao cho React lifecycle contract. Abort request hoặc generation token vẫn cần do application chọn theo API DB."
+      }
+    ]
+  },
+  {
+    "url": "https://sequelize.org/docs/v6/getting-started/",
+    "group": "ui-runtime",
+    "facts": [
+      {
+        "source_url": "https://sequelize.org/docs/v6/getting-started/",
+        "source_meta": {
+          "org_or_author": "Sequelize project",
+          "year": 2026,
+          "tier": 1,
+          "bias_flags": [
+            "official documentation",
+            "last-updated metadata"
+          ],
+          "method_note": "Trang official ghi Last updated Apr 10, 2026, nên year xác định từ metadata trang.",
+          "cited_origin_url": null
+        },
+        "fact": "Sequelize authenticate() dùng để test connection. sequelize.close() là async và sau khi close thì instance không thể mở lại; cần tạo Sequelize instance mới. Disconnect cần await để caller biết close đã hoàn thành.",
+        "numbers": [
+          "1",
+          "1"
+        ],
+        "quote": "The Sequelize instance cannot be reused after it is closed",
+        "page_section": "Connecting to a database and Closing the connection",
+        "confidence_note": "Cao cho documented v6 behavior. Đây không phải cơ chế chống stale connect tự động trong React."
+      }
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/sequelize/sequelize/v6.37.6/src/sequelize.js",
+    "group": "ui-runtime",
+    "facts": [
+      {
+        "source_url": "https://raw.githubusercontent.com/sequelize/sequelize/v6.37.6/src/sequelize.js",
+        "source_meta": {
+          "org_or_author": "Sequelize project",
+          "year": 2026,
+          "tier": 1,
+          "bias_flags": [
+            "upstream source",
+            "version tag"
+          ],
+          "method_note": "Đọc raw source tại tag v6.37.6. Năm 2026 chỉ là năm truy cập vì registry publication metadata bị web safe-open chặn.",
+          "cited_origin_url": null
+        },
+        "fact": "Sequelize v6.37.6 constructor có retry mặc định max 5 cho SQLITE_BUSY: database is locked; query merge retry options. Đây là retry cho query/SQLite busy, không phải retry an toàn cho connect sau logout hoặc bảo vệ against stale async continuation.",
+        "numbers": [
+          "6.37.6",
+          "5",
+          "1"
+        ],
+        "quote": "max: 5",
+        "page_section": "constructor retry options, query, authenticate, close",
+        "confidence_note": "Cao cho exact source version. Kết luận thiếu retry connect/disconnect là giới hạn phạm vi source đã đọc, không khẳng định Sequelize không có extension khác."
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/yt-dlp/yt-dlp/pull/13665",
+    "group": "youtube",
+    "facts": [
+      {
+        "source_url": "https://github.com/yt-dlp/yt-dlp/pull/13665",
+        "source_meta": {
+          "org_or_author": "yt-dlp maintainers",
+          "year": 2025,
+          "tier": "primary_upstream_pr",
+          "bias_flags": [
+            "Trang PR của dự án, chưa phải kiểm thử độc lập trong runtime của Enjoy"
+          ],
+          "method_note": "Đọc PR chính thức, trạng thái merge, ngày merge và commit hiển thị trên GitHub.",
+          "cited_origin_url": "https://github.com/yt-dlp/yt-dlp/pull/13665"
+        },
+        "fact": "yt-dlp đã merge PR #13665 vào master ngày 07/07/2025 để thêm hỗ trợ view model có content type LOCKUP_CONTENT_TYPE_VIDEO, và PR này đóng issue #13658.",
+        "numbers": [
+          "PR #13665",
+          "issue #13658",
+          "2025-07-07",
+          "7d8973e",
+          "c23d837"
+        ],
+        "quote": "Adds support for LOCKUP_CONTENT_TYPE_VIDEO view models",
+        "page_section": "PR summary, commit và merge timeline",
+        "confidence_note": "Cao cho việc upstream đã nhận và merge bản sửa. Chưa chứng minh output HTML cụ thể của tài khoản hoặc khu vực người dùng hiện tại."
+      }
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/yt_dlp/extractor/youtube/_tab.py",
+    "group": "youtube",
+    "facts": [
+      {
+        "source_url": "https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/yt_dlp/extractor/youtube/_tab.py",
+        "source_meta": {
+          "org_or_author": "yt-dlp maintainers",
+          "year": 2026,
+          "tier": "primary_upstream_source",
+          "bias_flags": [
+            "master có thể khác bản yt-dlp được đóng gói bởi downstream"
+          ],
+          "method_note": "Đọc raw source hiện tại của extractor YouTube trên nhánh master.",
+          "cited_origin_url": "https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/yt_dlp/extractor/youtube/_tab.py"
+        },
+        "fact": "Extractor hiện tại của yt-dlp đọc contentId từ lockupViewModel; với LOCKUP_CONTENT_TYPE_VIDEO, nó tạo YoutubeIE và URL watch tương ứng, còn playlist hoặc podcast được chuyển sang YoutubeTabIE.",
+        "numbers": [
+          "YoutubeIE",
+          "YoutubeTabIE",
+          "https://www.youtube.com/watch?v={content_id}"
+        ],
+        "quote": "if content_type == 'LOCKUP_CONTENT_TYPE_VIDEO':",
+        "page_section": "_extract_lockup_view_model",
+        "confidence_note": "Cao cho logic parser hiện tại trên master. Đây là source code upstream, không phải một bản release đã được kiểm tra trong app Electron của Enjoy."
+      },
+      {
+        "source_url": "https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/yt_dlp/extractor/youtube/_tab.py",
+        "source_meta": {
+          "org_or_author": "yt-dlp maintainers",
+          "year": 2026,
+          "tier": "primary_upstream_source",
+          "bias_flags": [
+            "master có thể thay đổi sau lần fetch"
+          ],
+          "method_note": "Đối chiếu các nhánh rich grid, rich item và continuation trong cùng raw extractor.",
+          "cited_origin_url": "https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/yt_dlp/extractor/youtube/_tab.py"
+        },
+        "fact": "yt-dlp hiện nhận diện lockupViewModel trong rich grid và richItemRenderer, đồng thời có đường xử lý continuation; phạm vi này rộng hơn parser local chỉ đọc các entry của trang videos hiện tại.",
+        "numbers": [],
+        "quote": "if 'lockupViewModel' in content:",
+        "page_section": "_grid_entries, _rich_entries và _extract_entries",
+        "confidence_note": "Cao cho khác biệt về phạm vi code. Mức độ hữu ích thực tế phụ thuộc việc Enjoy có cần phân trang, feed hoặc loại nội dung ngoài video hay không."
+      }
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/README.md",
+    "group": "youtube",
+    "facts": [
+      {
+        "source_url": "https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/README.md",
+        "source_meta": {
+          "org_or_author": "yt-dlp maintainers",
+          "year": 2026,
+          "tier": "primary_project_docs",
+          "bias_flags": [
+            "README mô tả hành vi dự án, còn YouTube có thể thay đổi ngoài dự án"
+          ],
+          "method_note": "Đọc README chính thức về search, playlist extraction, dependency và license.",
+          "cited_origin_url": "https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/README.md"
+        },
+        "fact": "yt-dlp hỗ trợ tìm kiếm YouTube bằng prefix ytsearch: và các bộ lọc, cùng playlist, channel và feed; đây là lựa chọn public list/search có sẵn trong extractor.",
+        "numbers": [
+          "ytsearch:"
+        ],
+        "quote": "Search including filters",
+        "page_section": "Supported sites và YouTube extractor options",
+        "confidence_note": "Cao cho capability được tài liệu hóa. Không có nghĩa mọi truy vấn public đều miễn nhiễm rate limit hoặc thay đổi từ YouTube."
+      },
+      {
+        "source_url": "https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/README.md",
+        "source_meta": {
+          "org_or_author": "yt-dlp maintainers",
+          "year": 2026,
+          "tier": "primary_project_docs",
+          "bias_flags": [
+            "Metadata flat mode có thể khác theo extractor và phiên bản"
+          ],
+          "method_note": "Đọc mô tả --flat-playlist và mặc định extraction trong README chính thức.",
+          "cited_origin_url": "https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/README.md"
+        },
+        "fact": "--flat-playlist bỏ qua extraction đầy đủ của từng video nên một số metadata entry có thể thiếu; README ghi --no-flat-playlist là chế độ fully extract videos mặc định.",
+        "numbers": [
+          "--flat-playlist",
+          "--no-flat-playlist"
+        ],
+        "quote": "some entry metadata may be missing",
+        "page_section": "General options: flat playlist",
+        "confidence_note": "Cao cho tradeoff được upstream công bố. Đây là lý do cần map và kiểm tra field thiếu nếu dùng yt-dlp cho danh sách nhẹ."
+      },
+      {
+        "source_url": "https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/README.md",
+        "source_meta": {
+          "org_or_author": "yt-dlp maintainers",
+          "year": 2026,
+          "tier": "primary_project_docs",
+          "bias_flags": [
+            "Dependency và license phụ thuộc artifact được phân phối"
+          ],
+          "method_note": "Đọc phần dependencies, JavaScript runtime, release artifact và licensing.",
+          "cited_origin_url": "https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/README.md"
+        },
+        "fact": "yt-dlp yêu cầu Python 3.10+ cho CPython; yt-dlp-ejs và JavaScript runtime như deno, node, bun hoặc QuickJS được khuyến nghị và cần cho full YouTube support. Repo là Unlicense, nhưng executable PyInstaller bundled có GPLv3+ và release còn chứa thành phần ISC hoặc MIT.",
+        "numbers": [
+          "Python 3.10+",
+          "yt-dlp-ejs",
+          "Unlicense",
+          "GPLv3+",
+          "ISC",
+          "MIT"
+        ],
+        "quote": "yt-dlp-ejs is required for full YouTube support",
+        "page_section": "Dependencies, release files và Licensing",
+        "confidence_note": "Cao cho yêu cầu runtime và license theo chính README. Cần đánh giá license trên artifact thực tế trước khi bundle vào Electron."
+      }
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/LuanRT/YouTube.js/main/package.json",
+    "group": "youtube",
+    "facts": [
+      {
+        "source_url": "https://raw.githubusercontent.com/LuanRT/YouTube.js/main/package.json",
+        "source_meta": {
+          "org_or_author": "LuanRT và YouTube.js contributors",
+          "year": 2026,
+          "tier": "primary_project_manifest",
+          "bias_flags": [
+            "manifest trên main có thể khác npm lock của dự án"
+          ],
+          "method_note": "Đọc package manifest raw để xác định version, module format, exports, types và license.",
+          "cited_origin_url": "https://raw.githubusercontent.com/LuanRT/YouTube.js/main/package.json"
+        },
+        "fact": "Package youtubei.js của repository YouTube.js hiện ở version 18.0.0, dùng ESM, xuất types TypeScript và có conditional exports cho Node, browser, web, agnostic và cf-worker; license trong manifest là MIT.",
+        "numbers": [
+          "18.0.0",
+          "TypeScript",
+          "Node",
+          "browser",
+          "MIT"
+        ],
+        "quote": "\"type\": \"module\"",
+        "page_section": "package metadata, exports và license",
+        "confidence_note": "Cao cho compatibility surface của package hiện tại. Electron project cần kiểm tra bundler và process boundary cụ thể khi cài version này."
+      }
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/LuanRT/YouTube.js/main/src/parser/classes/LockupView.ts",
+    "group": "youtube",
+    "facts": [
+      {
+        "source_url": "https://raw.githubusercontent.com/LuanRT/YouTube.js/main/src/parser/classes/LockupView.ts",
+        "source_meta": {
+          "org_or_author": "LuanRT và YouTube.js contributors",
+          "year": 2026,
+          "tier": "primary_upstream_source",
+          "bias_flags": [
+            "Parser dựa trên private InnerTube response schema"
+          ],
+          "method_note": "Đọc class parser LockupView raw trên nhánh main.",
+          "cited_origin_url": "https://raw.githubusercontent.com/LuanRT/YouTube.js/main/src/parser/classes/LockupView.ts"
+        },
+        "fact": "YouTube.js có class LockupView native: parse contentImage và metadata, lấy contentId, nhận content type VIDEO, PLAYLIST và SHORT, rồi chuẩn hóa tiền tố LOCKUP_CONTENT_TYPE_. Đây là parser upstream trực tiếp cho lockup view model.",
+        "numbers": [
+          "VIDEO",
+          "PLAYLIST",
+          "SHORT",
+          "LOCKUP_CONTENT_TYPE_"
+        ],
+        "quote": "data.contentType.replace('LOCKUP_CONTENT_TYPE_', '')",
+        "page_section": "LockupView constructor",
+        "confidence_note": "Cao cho việc parser đã có hỗ trợ lockup. Việc response có xuất hiện trong HTML của flow Enjoy vẫn cần fixture hoặc runtime probe riêng."
+      }
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/LuanRT/YouTube.js/main/src/Innertube.ts",
+    "group": "youtube",
+    "facts": [
+      {
+        "source_url": "https://raw.githubusercontent.com/LuanRT/YouTube.js/main/src/Innertube.ts",
+        "source_meta": {
+          "org_or_author": "LuanRT và YouTube.js contributors",
+          "year": 2026,
+          "tier": "primary_upstream_source",
+          "bias_flags": [
+            "InnerTube là private API không có stability contract công khai"
+          ],
+          "method_note": "Đọc API implementation raw cho search, channel, feed và playlist.",
+          "cited_origin_url": "https://raw.githubusercontent.com/LuanRT/YouTube.js/main/src/Innertube.ts"
+        },
+        "fact": "Innertube có API surface search, getChannel, getSubscriptionsFeed, getChannelsFeed, getPlaylists và getPlaylist; quyền truy cập phụ thuộc endpoint và session.",
+        "numbers": [
+          "search",
+          "getChannel",
+          "getSubscriptionsFeed",
+          "getChannelsFeed",
+          "getPlaylists",
+          "getPlaylist"
+        ],
+        "quote": "async search(query: string, filters: SearchFilters = {}): Promise<Search>",
+        "page_section": "Innertube search, channel, feed và playlist methods",
+        "confidence_note": "Cao cho API surface trong source hiện tại. Không nên xem private InnerTube là API ổn định dài hạn."
+      }
+    ]
+  },
+  {
+    "url": "https://ytjs.dev/guide/browser-usage",
+    "group": "youtube",
+    "facts": [
+      {
+        "source_url": "https://ytjs.dev/guide/browser-usage",
+        "source_meta": {
+          "org_or_author": "YouTube.js maintainers",
+          "year": 2026,
+          "tier": "primary_project_docs",
+          "bias_flags": [
+            "Tài liệu tự cảnh báo ví dụ có thể lỗi thời",
+            "Proxy vận hành do ứng dụng tự chịu trách nhiệm"
+          ],
+          "method_note": "Đọc guide Browser Usage chính thức, cập nhật lần cuối 13/05/2026.",
+          "cited_origin_url": "https://ytjs.dev/guide/browser-usage"
+        },
+        "fact": "YouTube.js trong browser phải proxy request qua server riêng; guide dùng import youtubei.js/web và custom fetch. Vì vậy renderer Electron không có flow browser-side trực tiếp hoàn chỉnh nếu chưa có proxy.",
+        "numbers": [
+          "2026-05-13",
+          "youtubei.js/web"
+        ],
+        "quote": "you must proxy requests through your own server",
+        "page_section": "Browser Usage và custom fetch",
+        "confidence_note": "Cao cho browser constraint theo tài liệu chính thức. Main-process Node export trong package manifest tránh được riêng constraint này, nhưng không loại bỏ private API drift."
+      }
+    ]
+  },
+  {
+    "url": "https://ytjs.dev/guide/authentication",
+    "group": "youtube",
+    "facts": [
+      {
+        "source_url": "https://ytjs.dev/guide/authentication",
+        "source_meta": {
+          "org_or_author": "YouTube.js maintainers",
+          "year": 2026,
+          "tier": "primary_project_docs",
+          "bias_flags": [
+            "Khuyến nghị cookie không bảo đảm mọi endpoint public hoạt động không cần session"
+          ],
+          "method_note": "Đọc guide Authentication chính thức, cập nhật lần cuối 13/05/2026.",
+          "cited_origin_url": "https://ytjs.dev/guide/authentication"
+        },
+        "fact": "Guide khuyến nghị cookie để authenticate với hầu hết web client types; OAuth2 chỉ hoạt động với TV InnerTube client do thay đổi của Google. Cách lấy cookie được mô tả là đăng nhập trong cửa sổ private rồi copy Cookie header từ DevTools.",
+        "numbers": [
+          "OAuth2",
+          "TV InnerTube",
+          "2026-05-13"
+        ],
+        "quote": "This is the recommended way to authenticate with YouTube for most web based client types",
+        "page_section": "Authentication: Cookies và OAuth2",
+        "confidence_note": "Cao cho hướng dẫn hiện tại của YouTube.js. Không dùng cookie hoặc đăng nhập trong nghiên cứu này; không nên đưa cookie người dùng vào ứng dụng nếu chưa có thiết kế bảo mật và UX rõ ràng."
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/ZuodaoTech/everyone-can-use-english/releases/tag/v0.7.9",
+    "group": "enjoy",
+    "facts": [
+      {
+        "url": "https://github.com/ZuodaoTech/everyone-can-use-english/releases/tag/v0.7.9",
+        "title": "Enjoy v0.7.9",
+        "author": "ZuodaoTech",
+        "year": 2025,
+        "fact": "GitHub latest release là v0.7.9, published_at 2025-03-07T12:24:05Z. Local enjoy/package.json cũng 0.7.9.",
+        "confidence": "high",
+        "method": "GitHub release HTML và gh API latest; local package JSON",
+        "bias": "maintainer; không chứng minh chất lượng runtime"
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/ZuodaoTech/everyone-can-use-english/issues/1322",
+    "group": "enjoy",
+    "facts": [
+      {
+        "url": "https://github.com/ZuodaoTech/everyone-can-use-english/issues/1322",
+        "title": "Enjoy chuyển sang bản web",
+        "author": "an-lee / ZuodaoTech",
+        "year": 2026,
+        "fact": "Bản cập nhật nội dung ngày 2026-02-03 nói Enjoy đã được viết lại thành web và desktop tiếp theo sẽ bọc bản web. Không có bằng chứng từ trang này rằng mã nguồn web mới có sẵn hoặc là bản vá thay trực tiếp cho Electron cũ.",
+        "confidence": "medium",
+        "method": "Đọc issue body, re-fetch",
+        "bias": "tuyên bố maintainer quảng bá sản phẩm"
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/ZuodaoTech/everyone-can-use-english/pull/1216",
+    "group": "enjoy",
+    "facts": [
+      {
+        "url": "https://github.com/ZuodaoTech/everyone-can-use-english/pull/1216",
+        "title": "Refactor player",
+        "author": "ZuodaoTech",
+        "year": 2024,
+        "fact": "PR #1216 merged commit 5c9651c thuộc lịch sử HEAD hiện tại, đã có từ trước, không thể coi là giải pháp mới cho lỗi đang quan sát.",
+        "confidence": "high",
+        "method": "GitHub PR và git merge-base --is-ancestor exit0",
+        "bias": "repo gốc; phạm vi lịch sử"
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/ZuodaoTech/everyone-can-use-english/pull/1230",
+    "group": "enjoy",
+    "facts": [
+      {
+        "url": "https://github.com/ZuodaoTech/everyone-can-use-english/pull/1230",
+        "title": "Fix media play",
+        "author": "ZuodaoTech",
+        "year": 2024,
+        "fact": "PR #1230 merged commit 0fc5773 thuộc lịch sử HEAD hiện tại.",
+        "confidence": "high",
+        "method": "GitHub PR và git merge-base --is-ancestor exit0",
+        "bias": "repo gốc; không phải proof runtime"
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/ZuodaoTech/everyone-can-use-english/pull/1231",
+    "group": "enjoy",
+    "facts": [
+      {
+        "url": "https://github.com/ZuodaoTech/everyone-can-use-english/pull/1231",
+        "title": "Fix media player and updater",
+        "author": "ZuodaoTech",
+        "year": 2024,
+        "fact": "PR #1231 merged 2024-12-08, commit ff093775ad549f7cdfe7038adedf68e980e526ba thuộc lịch sử HEAD hiện tại.",
+        "confidence": "high",
+        "method": "GitHub PR HTML, gh API và git merge-base --is-ancestor exit0",
+        "bias": "repo gốc; không phải proof runtime"
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/ZuodaoTech/everyone-can-use-english/blob/main/enjoy/src/renderer/context/copilot-provider.tsx",
+    "group": "enjoy",
+    "facts": [
+      {
+        "url": "https://github.com/ZuodaoTech/everyone-can-use-english/blob/main/enjoy/src/renderer/context/copilot-provider.tsx",
+        "title": "Enjoy upstream copilot provider",
+        "author": "ZuodaoTech",
+        "year": 2026,
+        "fact": "Source main đã fetch vẫn gọi useHotkeys(currentHotkeys.OpenCopilot, ...). Local candidate stack đã truy tới parseKeysHookInput keys.split, với currentHotkeys ban đầu {}.",
+        "confidence": "high",
+        "method": "GitHub contents API và local source map",
+        "bias": "source trực tiếp; main mutable, accessed 2026-09-06"
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/ZuodaoTech/everyone-can-use-english/compare/v0.7.9...main",
+    "group": "enjoy",
+    "facts": [
+      {
+        "url": "https://github.com/ZuodaoTech/everyone-can-use-english/compare/v0.7.9...main",
+        "title": "Enjoy thay đổi sau v0.7.9",
+        "author": "ZuodaoTech",
+        "year": 2026,
+        "fact": "GitHub compare API trả16 commits sau v0.7.9. Các file thay đổi không gồm copilot-provider, DbProvider, WavesurferPlayer hoặc youtube-provider. Không chứng minh mọi fork đều chưa sửa.",
+        "confidence": "high",
+        "method": "GitHub compare API đọc commit/file list",
+        "bias": "phạm vi repo upstream main"
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/ZuodaoTech/everyone-can-use-english/blob/main/LICENSE",
+    "group": "enjoy",
+    "facts": [
+      {
+        "url": "https://github.com/ZuodaoTech/everyone-can-use-english/blob/main/LICENSE",
+        "title": "Enjoy LICENSE",
+        "author": "ZuodaoTech",
+        "year": 2026,
+        "fact": "LICENSE trong repo là GNU General Public License Version3.",
+        "confidence": "high",
+        "method": "GitHub contents API đọc LICENSE",
+        "bias": "license file trực tiếp; không suy luận quyền với dịch vụ web mới"
+      }
+    ]
+  }
+]

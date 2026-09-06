@@ -1,7 +1,19 @@
+type ConversationEngineId =
+  | "enjoyai"
+  | "openai"
+  | "gemini"
+  | "deepseek"
+  | "openrouter"
+  | "ollama"
+  | "lmstudio"
+  | "google-generative-ai";
+
+type ConversationEngine = ConversationEngineId | (string & {});
+
 type ConversationType = {
   id: string;
   type: "gpt" | "tts";
-  engine: "enjoyai" | "openai" | "ollama";
+  engine: ConversationEngine;
   name: string;
   configuration: { [key: string]: any };
   model: string;

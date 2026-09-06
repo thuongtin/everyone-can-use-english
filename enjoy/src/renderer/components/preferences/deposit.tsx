@@ -122,9 +122,6 @@ export const Deposit = () => {
         <div className="flex items-center w-64 justify-around">
           <img src="assets/mastercard.png" className="w-auto h-8" />
           <img src="assets/visa.png" className="w-auto h-8" />
-          <img src="assets/unionpay.png" className="w-auto h-8" />
-          <img src="assets/alipay.png" className="w-auto h-8" />
-          <img src="assets/wechatpay.png" className="w-auto h-8" />
         </div>
         <Button
           className="w-32"

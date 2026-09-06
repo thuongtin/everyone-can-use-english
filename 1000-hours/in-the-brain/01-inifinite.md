@@ -1,11 +1,17 @@
-# 1. 小空间大世界
+# 1. Thế giới lớn trong không gian nhỏ
 
-人类的大脑内大约有 11,000 亿个脑细胞…… 这么大的一个数字到底是多少呢？每个人大脑里的脑细胞数量，甚至比银河系里的恒星数量更多 —— 天文学家根据哈伯太空望远镜的深空影像平均推算，我们所在的银河系里，大约有 1000 亿到 4000 亿颗恒星……
+Nguyên tác cho rằng não người có khoảng 1.100 tỷ tế bào. Con số lớn ấy nghĩa là gì? Tác giả so sánh số tế bào trong não mỗi người còn nhiều hơn số sao trong Ngân Hà: theo ước lượng thiên văn mà ông dẫn từ ảnh không gian sâu của kính Hubble, Ngân Hà có khoảng 100 đến 400 tỷ ngôi sao. Đây là các số liệu và phép so sánh của nguyên tác; số lượng tế bào não cần đọc cùng ghi chú biên tập bên dưới.
 
-在那么多的脑细胞中，10,000 亿个是**神经胶质细胞**（Glial Cell），它们不放电，不收发信号，也不储存信息，它们只是围绕着剩下的那 1000 亿个**神经元细胞**，将其固定在适当位置，使一个神经元与相邻的神经元绝缘，并为神经元提供营养和氧分…… 换言之，神经胶质细胞与知识、认知、控制没什么关系，它们不具备像神经元一样的开发潜力。
+Trong số đó, tác giả cho rằng 1.000 tỷ là **tế bào thần kinh đệm** (*glial cells*): không phát xung điện, không thu nhận hay gửi tín hiệu, không lưu thông tin, mà chỉ bao quanh 100 tỷ **tế bào thần kinh** (*neurons*) còn lại, giữ chúng ở đúng vị trí, cách điện với tế bào lân cận, cung cấp dinh dưỡng và oxy. Nói cách khác, ông khẳng định tế bào đệm gần như không liên quan đến kiến thức, nhận thức và điều khiển, cũng không có tiềm năng phát triển như neuron. Đây là nhận định của nguyên tác cần đính chính, không phải mô tả đầy đủ chức năng tế bào đệm.
 
-1000 亿个神经元之中，大约 150 亿个处于**大脑皮层**。人类的大脑皮层褶皱着铺在大脑的表面。若是展开的话，只不过大约 45 厘米见方，2,000 平方厘米上下[^1]，厚度不均，大约在 3～5 毫米之间，体积不到 1,000 立方厘米…… 整个人类的文明，本质上来看，都建立在大脑皮层之上。而一个人的世界，实际上全都发生在这 1000 立方厘米不到的空间里。
+Tác giả nêu khoảng 15 tỷ trong 100 tỷ neuron nằm ở **vỏ đại não**. Vỏ đại não gấp nếp trên bề mặt não; nếu trải ra, ông ước lượng thành một vùng vuông cạnh khoảng 45 cm, diện tích xấp xỉ 2.000 cm²[^1], dày không đều khoảng 3 đến 5 mm và thể tích dưới 1.000 cm³. Ông xem toàn bộ nền văn minh nhân loại về bản chất được xây dựng trên vỏ đại não, còn thế giới của một cá nhân thực ra diễn ra trong không gian chưa tới 1.000 cm³ ấy. Phép diễn đạt về “toàn bộ thế giới” là cách tác giả nhấn mạnh vai trò của não.
 
-大脑内神经元中剩下更多的部分，那 850 亿个神经元是用来协调整个身体的 —— 毕竟，人体是一个超级复杂的机器，那么多的器官都需要从不间断地协同工作…… 并且，很多器官都可能身兼多职。比如我们的舌头，吃东西、尝味道，还要用来做其它动物完全做不了的事情，说话，甚至说很多种话。
+Theo nguyên tác, 85 tỷ neuron còn lại được dùng để phối hợp hoạt động toàn thân. Cơ thể là một bộ máy cực kỳ phức tạp; nhiều cơ quan phải làm việc cùng nhau liên tục và có thể kiêm nhiều nhiệm vụ. Ví dụ, lưỡi giúp ăn, cảm nhận vị, và còn dùng để làm việc mà tác giả cho rằng các động vật khác hoàn toàn không làm được: nói, thậm chí nói nhiều ngôn ngữ. Phân bổ và chức năng neuron không nên được suy ra chỉ từ phép chia số lượng của đoạn này.
 
-[^1]: 1,843 ± 196 cm^2^，Donahue et al., 2018
+[^1]: 1.843 ± 196 cm², Donahue và cộng sự, 2018, theo nguồn dẫn của nguyên tác.
+
+::: info Ghi chú biên tập cho bản tiếng Việt
+Các con số 1.100 tỷ tế bào và 1.000 tỷ glia trong nguyên tác không phù hợp với nghiên cứu định lượng được dẫn ở đây. [Azevedo và cộng sự (2009)](https://pubmed.ncbi.nlm.nih.gov/19226510/) đo trung bình khoảng 86,1 tỷ neuron và 84,6 tỷ tế bào không phải neuron trong mẫu não nam trưởng thành. Nhóm thứ hai không đồng nghĩa hoàn toàn với glia.
+
+Glia không chỉ làm giá đỡ. Chẳng hạn, [Kol và cộng sự (2020)](https://pmc.ncbi.nlm.nih.gov/articles/PMC7611962/) cho thấy can thiệp astrocyte có thể làm thay đổi trí nhớ ở chuột. Kết quả này minh họa vai trò chức năng của một loại glia, không phải hướng dẫn “khai thác glia” cho người học.
+:::

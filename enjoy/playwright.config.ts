@@ -1,48 +1,22 @@
-import { defineConfig, devices } from "@playwright/test";
+import { defineConfig } from "@playwright/test";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
-/**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
- */
-// require('dotenv').config();
+const projectRoot = path.dirname(fileURLToPath(import.meta.url));
+const outputDirectory = process.env.ENJOY_E2E_OUTPUT_DIR
+  ? path.resolve(process.env.ENJOY_E2E_OUTPUT_DIR)
+  : path.join(projectRoot, "test-results");
 
-/**
- * See https://playwright.dev/docs/test-configuration.
- */
 export default defineConfig({
-  testDir: "./e2e",
-  /* Run tests in files in parallel */
-  fullyParallel: true,
-  /* Fail the build on CI if you accidentally left test.only in the source code. */
+  testDir: path.join(projectRoot, "e2e"),
+  outputDir: outputDirectory,
+  fullyParallel: false,
   forbidOnly: !!process.env.CI,
-  /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
-  /* Opt out of parallel tests on CI. */
   workers: 1,
-  /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: "html",
-  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  reporter: [["html", { outputFolder: outputDirectory, open: "never" }]],
   use: {
-    /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://127.0.0.1:3000',
-
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
   },
   timeout: 60000,
-
-  /* Configure projects for major browsers */
-  // projects: [
-  //   {
-  //     name: "chromium",
-  //     use: { ...devices["Desktop Chrome"] },
-  //   },
-  // ],
-
-  /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   url: 'http://127.0.0.1:3000',
-  //   reuseExistingServer: !process.env.CI,
-  // },
 });

@@ -1,36 +1,36 @@
-# 7. 从此之后
+# 7. Từ đây về sau
 
-转眼，现在是 2024 年，距离我 2010 年写《人人都能用英语》已经是 14 年 —— 按我经常说的话，7 年就是一辈子，这就一晃两辈子过去了……
+Thoắt cái đã là năm 2024, cách lúc tôi viết *Mọi người đều có thể dùng tiếng Anh* vào năm 2010 được 14 năm. Như tôi thường nói, bảy năm là một đời, vậy là hai đời đã trôi qua. Đại từ “tôi” và mốc thời gian trong chương này thuộc lời tác giả nguyên tác.
 
-大环境发生了很大的变化。在 2010 年的时候，我认为一个人 “用” 英语的 “最少必要知识” 包括：
+Bối cảnh chung đã thay đổi rất nhiều. Năm 2010, tôi cho rằng “kiến thức tối thiểu cần thiết” để một người **dùng** tiếng Anh gồm:
 
-> * 音标
-> * 拼写规则
-> * 具备一定的基础词汇量
-> * 会查词典
-> * 具备基础的语法知识
-> * 会查语法书
-> * 会用 Google
+> * Phiên âm
+> * Quy tắc chữ viết và phát âm
+> * Một lượng từ vựng cơ sở nhất định
+> * Biết tra từ điển
+> * Kiến thức ngữ pháp cơ bản
+> * Biết tra sách ngữ pháp
+> * Biết dùng Google
 
-—— 这就可以了，这样就可以开始用英语了。
+Như vậy là đủ để bắt đầu dùng tiếng Anh.
 
-2023 年前后，基于大语言模型的人工智能爆发…… 经过一段时间的使用之后，我觉得 “用” 英语的 “最少必要知识” 可以进一步简化了：
+Khoảng năm 2023, AI dựa trên mô hình ngôn ngữ lớn bùng nổ. Sau một thời gian sử dụng, tôi cho rằng “kiến thức tối thiểu cần thiết” để **dùng** tiếng Anh còn có thể rút gọn:
 
-> * 语音训练
->   * 音标
->   * 拼写规则
-> * 会用 AI（或 Enjoy App）
+> * Luyện phát âm
+>   * Phiên âm
+>   * Quy tắc chữ viết và phát âm
+> * Biết dùng AI hoặc Enjoy App
 
-而且，“学” 英语的重点应该彻底转移了 —— 应该、必须、且只能 “**以语音为重点**”。
+Hơn nữa, tôi cho rằng trọng tâm **học** tiếng Anh nên thay đổi hoàn toàn: nên, phải và chỉ có thể **lấy phát âm làm trọng tâm**.
 
-从此之后，没有任何人任何机构在英语教学方面比 AI 更强…… 哪怕像我这样的人，也顶多是 “还算不错的助教” 而已。AI 不仅很强，还极便宜 —— 无论是从金钱成本来看，还是从时间成本、学习成本来看都是如此。
+Từ nay, theo tôi, không người nào hoặc tổ chức nào dạy tiếng Anh giỏi hơn AI. Ngay cả người như tôi cùng lắm chỉ là “trợ giảng khá tốt”. AI không chỉ mạnh mà còn cực rẻ, xét cả tiền bạc, thời gian và công sức học. Đây là nhận định của tác giả tại thời điểm viết, không phải kết quả so sánh mọi giáo viên với mọi hệ AI hoặc giá dịch vụ hiện tại.
 
-从此之后，爱用不用，用或不用，只不过是一个人的自由且任性的选择而已。
+Từ nay, có dùng hay không chỉ là lựa chọn tự do, tùy ý của mỗi người theo kết luận của tác giả.
 
 <div style="text-align: right;">
 
-李笑来
+Lý Tiếu Lai (Li Xiaolai)
 
-第三版正式稿，2024 年 8 月 22 日，于北京
+Bản chính thức của ấn bản thứ ba, ngày 22/8/2024, tại Bắc Kinh.
 
 </div>

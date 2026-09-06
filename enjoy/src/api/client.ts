@@ -1,6 +1,10 @@
 import axios, { AxiosInstance } from "axios";
 import decamelizeKeys from "decamelize-keys";
 import camelcaseKeys from "camelcase-keys";
+import {
+  createSafeApiError,
+  getApiErrorStatus,
+} from "@/utils/api-error-message";
 
 const ONE_MINUTE = 1000 * 60; // 1 minute
 
@@ -14,6 +18,7 @@ export class Client {
     accessToken?: string;
     logger?: any;
     locale?: "en" | "zh-CN";
+    errorLocale?: string;
     onError?: (err: any) => void;
     onSuccess?: (res: any) => void;
   }) {
@@ -22,6 +27,7 @@ export class Client {
       accessToken,
       logger,
       locale = "en",
+      errorLocale = "vi",
       onError,
       onSuccess,
     } = options;
@@ -36,14 +42,14 @@ export class Client {
       },
     });
     this.api.interceptors.request.use((config) => {
-      config.headers.Authorization = `Bearer ${accessToken}`;
+      if (accessToken) {
+        config.headers.Authorization = `Bearer ${accessToken}`;
+      }
       config.headers["Accept-Language"] = locale;
 
       this.logger.debug(
-        config.method.toUpperCase(),
-        config.baseURL + config.url,
-        config.data,
-        config.params
+        config.method?.toUpperCase() || "REQUEST",
+        config.baseURL + config.url
       );
       return config;
     });
@@ -66,27 +72,17 @@ export class Client {
         }
 
         if (err.response) {
+          const status = getApiErrorStatus(err);
           this.logger.error(
-            err.response.status,
-            err.response.config.method.toUpperCase(),
+            status,
+            err.response.config.method?.toUpperCase() || "REQUEST",
             err.response.config.baseURL + err.response.config.url
-            // err.response.data
           );
-
-          if (err.response.data) {
-            if (typeof err.response.data === "string") {
-              err.message = err.response.data;
-            } else if (typeof err.response.data === "object") {
-              err.message =
-                err.response.data.error ||
-                err.response.data.message ||
-                JSON.stringify(err.response.data);
-            }
-          }
-          return Promise.reject(err);
+        } else {
+          this.logger.error("request failed", err.code || "unknown");
         }
 
-        return Promise.reject(err);
+        return Promise.reject(createSafeApiError(err, errorLocale));
       }
     );
   }

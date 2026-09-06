@@ -1,58 +1,65 @@
-# 2. 只能自学
+# 2. Chỉ có thể tự học
 
-**学习**这个词，由**学**和**习**两个字构成。前面是**学**，**求学**的**学**；后面是**习**，**练习**的**习**。在中文里它们原本是各自独立的两个词。孔子曰，**学而时习之，不亦乐乎？** 后来的中文里，人们干脆把**学习**两个字组合起来构成一个词，意思就是说，**求学**只是一部分，而另外还有一部分是**练习**。
+Trong tiếng Trung, từ *xuéxí*, nghĩa là “học tập”, gồm *xué*, chỉ việc học hỏi, và *xí*, chỉ luyện tập. Ban đầu chúng là hai từ độc lập. Khổng Tử nói: **“Học rồi thường xuyên ôn luyện, chẳng phải vui sao?”** Về sau tiếng Trung ghép hai âm này thành một từ, hàm ý **tiếp nhận kiến thức** chỉ là một phần, còn phần kia là **luyện tập**.
 
-花钱买书，花钱上学，到此为止，只是**知识获取**。家长也好、老师也好、学校也罢，甚至整个社会一直在误解**学习**，家长们不吝于投入大把的金钱把自家孩子送进学校，把整个教育外包给学校里的老师…… 学校里的老师们主要在干嘛？把书本里的知识讲一遍。再负责一点就反复讲，做到 **“的确将所谓的知识告知了学生”**。
+Bỏ tiền mua sách, đi học, đến đó mới chỉ là **tiếp nhận kiến thức**. Cha mẹ, giáo viên, nhà trường, thậm chí cả xã hội vẫn hiểu sai việc học. Cha mẹ không tiếc tiền gửi con đến trường, giao trọn giáo dục cho giáo viên. Giáo viên chủ yếu làm gì? Giảng một lượt kiến thức trong sách. Có trách nhiệm hơn thì giảng đi giảng lại, đến mức **“thực sự đã thông báo cái gọi là kiến thức cho học sinh”**.
 
-然而，这只不过是教育这个万里长征的第一步而已。后面的**练习**呢？为了在自己大脑里新建连接新建网络而必须进行的**短时间内足量重复**呢？学校也好，老师也罢，完全无能为力 —— 并且，理直气壮地认为那是学生自己的事，跟自己没关系…… 这本身倒也没错，的确是学生自己的事。
+Nhưng đó mới là bước đầu của hành trình giáo dục dài vạn dặm. Còn **luyện tập**, còn **lặp lại đủ nhiều trong thời gian ngắn** để tạo kết nối và mạng mới trong chính não mình? Trường và giáo viên hoàn toàn bất lực, lại cho rằng đương nhiên đó là việc của học sinh, chẳng liên quan mình. Bản thân nhận định ấy cũng không sai: đúng là việc của học sinh.
 
-可问题在于，父母花钱买的商品及服务，就只是或者只能是发教材讲解教材吗？小学三年级之前也许还有必要，等常用字词已经搞定了，自己也会查词典了，电脑上有搜索引擎甚至人工智能，真的有必要非得花那么多钱找人讲给自己听吗？
+Vấn đề là sản phẩm, dịch vụ cha mẹ mua chỉ là, hoặc chỉ có thể là, phát và giảng sách giáo khoa sao? Trước lớp ba có thể còn cần. Khi đã nắm từ thông dụng, biết tra từ điển, có công cụ tìm kiếm và cả AI trên máy tính, thật sự có nhất thiết phải bỏ nhiều tiền như vậy để nhờ người khác giảng cho mình nghe?
 
-教育越来越昂贵，可是，过往的两三百年里，全世界都一样，收着最贵且越来越贵的价格，交付的是一直是最不重要的那个服务，发书讲书而已…… 实在觉得对不住，就使劲留作业，这就算对的起那么昂贵的费用了，是不是有点说不过去？
+Giáo dục ngày càng đắt, nhưng theo cách tác giả nhìn hai, ba trăm năm qua, khắp thế giới đều thu giá cao nhất và ngày càng cao để cung cấp thứ dịch vụ ít quan trọng nhất: phát sách, giảng sách. Thấy áy náy thì giao thật nhiều bài tập, coi như xứng với khoản phí đắt đỏ. Có phải hơi khó chấp nhận không?
 
-很多家长没有反应过来。人类进入 21 世纪之后，必要的教育所需要的任何知识，早就已经接近于免费了。网络上没有找不到的基础知识及其讲解。[Wikipedia](https://www.wikipedia.org/) 和 [Youtube](https://www.youtube.com/) 已经是天下最好的学校了。再高级一点的知识，再系统一点的讲解，只要识字就可以去买书。到 2020 年，[Amazon](https://www.amazon.com/) 上在售图书已经超过 5 亿册，没有你找不到的东西，平均每本书 25 美元，与那么昂贵的学费相比，这仍然是几近于零的免费！
+Nhiều cha mẹ chưa nhận ra: từ khi nhân loại bước vào thế kỷ 21, mọi kiến thức cần cho giáo dục thiết yếu đã gần như miễn phí. Trên mạng không thiếu kiến thức cơ bản cùng lời giải thích. [Wikipedia](https://www.wikipedia.org/) và [YouTube](https://www.youtube.com/) đã là những ngôi trường tốt nhất trên đời. Kiến thức cao hơn, giải thích hệ thống hơn thì chỉ cần biết chữ là mua sách được. Theo số liệu nguyên tác, đến năm 2020, [Amazon](https://www.amazon.com/) có hơn 500 triệu cuốn sách được bán, không thứ gì không tìm thấy, giá trung bình 25 USD mỗi cuốn. So với học phí đắt đỏ, tác giả xem đây vẫn gần như miễn phí.
 
-绝大多数人的问题都一样，都肯花钱，也有一些肯花时间，却全都不肯花注意力 —— 说实话，他们也不知道注意力应该花到哪里，姑且不论有没有足够的注意力。
+Vấn đề của đại đa số giống nhau: đều chịu bỏ tiền, một số chịu bỏ thời gian, nhưng không chịu bỏ sự chú ý. Nói thật, họ cũng không biết nên chú ý vào đâu, chưa bàn chuyện có đủ sự chú ý hay không.
 
-学习，**学**与**习**，**求学**与**练习**相比，显然**练习**更为重要。**知道**与**做到**之间存在着非常遥远的距离 —— 时间上的距离。
+Giữa hai phần **học** và **tập**, **tiếp nhận kiến thức** và **luyện tập**, rõ ràng **luyện tập** quan trọng hơn. Giữa **biết** và **làm được** có khoảng cách rất xa: khoảng cách về thời gian.
 
-学外语就是很好的例子。我可以清楚详细且又系统地把各个英文音素的发音方式和要点写给你、讲给你，还可以反复讲…… 然后你的确可以表示自己知道了，但你真的能做到吗？马上能做好吗？不是不一定，而是刚开始一定不能。
+Học ngoại ngữ là ví dụ tốt. Tôi có thể viết, giảng rõ ràng, chi tiết và hệ thống cách phát từng âm vị tiếng Anh cùng các điểm cần chú ý, thậm chí giảng đi giảng lại. Bạn có thể nói mình đã biết, nhưng thực sự làm được chưa? Làm tốt ngay được không? Không phải chưa chắc, mà ban đầu chắc chắn chưa được.
 
-学了不练就没有用。练习必然耗费大量的时间。
+Học mà không luyện thì vô ích. Luyện tập tất yếu tốn nhiều thời gian.
 
-并且，练就只能自己练。学的时候也许大伙一起更有效果，但练的时候大伙一起往往都会被最差的那一个拖后腿。并且，每个人都不一样，每个人的难点不同，每个人之前的积累不同，每个人练习的方式不同…… 所以，绝大多数情况下，有用的**练习只能是个性化的**，越是关键点越是如此。
+Mà luyện thì chỉ có thể tự luyện. Khi học, cùng học có thể hiệu quả hơn; nhưng khi luyện, cả nhóm thường bị người yếu nhất kéo lại. Mỗi người khác nhau: điểm khó, tích lũy trước đó, cách luyện đều khác. Vì thế, trong đại đa số trường hợp, **luyện tập hữu ích phải được cá nhân hóa**, càng là điểm quan trọng càng như vậy.
 
-所以说，**练习不仅只能靠自己，绝大多数情况下还是非常私人的**。我可以告诉你一个秘密：只要肯练，不管有没有天分，任何人都可以学会弹奏乐器，都至少能达到一定的程度。练过琴的人都知道，练琴跟练任何东西一样，只能私下练。刚开始那么笨拙，弹出来那么难听，自己不好意思让别人听到，别人听到了也的确不开心。没有初学者愿意在舞台上练习，不是吗？
+Vậy nên, **luyện tập không những chỉ có thể dựa vào chính mình, mà phần lớn còn rất riêng tư**. Tôi có thể cho bạn biết một bí mật: chỉ cần chịu luyện, dù có năng khiếu hay không, ai cũng có thể học chơi nhạc cụ đến ít nhất một trình độ nào đó. Người từng tập đàn đều biết: cũng như tập mọi thứ, phải tập riêng. Ban đầu vụng, đàn khó nghe, mình ngại người khác nghe, người nghe cũng không vui. Không người mới nào muốn luyện ngay trên sân khấu, đúng không?
 
-练习必须私下练还有另外一个理由，与我们的大脑机制有关。学习的时候，大脑最怕的被他人关注，被越多的人关注越可怕。**因为大脑最怕死，尤其怕社死**。一旦意识到自己被关注，大脑就要把注意力分散出去，而后很可能马上就宕机。这叫聚光灯效应（Spotlight effect）。如果你突然意识到所有人都在看着你走路的话，突然之间，你有可能干脆不会走路了……
+Còn một lý do phải luyện riêng, liên quan cơ chế não. Khi học, điều não sợ nhất là bị người khác chú ý; càng nhiều người nhìn càng đáng sợ. **Vì não sợ chết nhất, đặc biệt sợ “chết về mặt xã hội”.** Nhận ra mình bị nhìn, não phải chia sự chú ý ra ngoài, rồi có thể lập tức “treo máy”. Tác giả gọi đó là hiệu ứng đèn sân khấu (*spotlight effect*). Nếu đột nhiên thấy mọi người đều nhìn mình đi, bạn có thể đến mức không biết đi nữa.
 
-自己花时间练习也许并不够，因为很多人练习的时候注意力并不集中。一不小心就变成了在走神的状态下肢体在进行下意识的机械重复。
+Tự bỏ thời gian luyện có lẽ chưa đủ, vì nhiều người không tập trung lúc luyện. Sơ ý là thành thân thể lặp lại máy móc theo thói quen trong khi đầu óc đi nơi khác.
 
-科学家们提出了一个极为重要的概念：**刻意练习**。按照他们一致的说法，刻意练习的关键在于**不断提高练习的难度**，**不断突破舒适区**，否则，更多的练习不仅不会带来进步，还会导致一定的退步。
+Các nhà khoa học đưa ra khái niệm rất quan trọng: **luyện tập có chủ đích**. Theo điều tác giả mô tả là quan điểm thống nhất của họ, mấu chốt là **liên tục tăng độ khó**, **liên tục vượt vùng thoải mái**; nếu không, luyện nhiều hơn không những không tiến bộ mà còn có thể thụt lùi.
 
-**练习**当然要**努力**，即，**短时间内足量重复**。那么刻意练习呢？关键在于哪里？我觉得：
+**Luyện tập** tất nhiên phải **nỗ lực**, tức **lặp lại đủ nhiều trong thời gian ngắn**. Còn luyện có chủ đích thì mấu chốt ở đâu? Tôi cho rằng:
 
-> **刻意练习**的关键在于**注意力**：
+> Mấu chốt của **luyện tập có chủ đích** là **sự chú ý**:
 >
-> > 在**练习**的过程中要有组织有计划有系统地调用并集中自己的**注意力**，发现问题，解决问题……
+> > Trong lúc **luyện**, huy động và tập trung **sự chú ý** có tổ chức, có kế hoạch, có hệ thống để phát hiện và giải quyết vấn đề.
 
-换言之，注意力不集中的练习往往会沦为无效练习，只浪费了时间，却没有任何收获。
+Nói cách khác, luyện không tập trung thường trở thành luyện vô hiệu, chỉ tốn thời gian mà không thu được gì.
 
-刚才我们说，**知道**与**做到**之间存在着非常遥远的距离 —— 时间上的距离。现在，我们还得继续补充。这个时间必须注满了**注意力**才有效，空洞的时间总是无效…… 请问，这个时间里应该是谁的注意力？只能是**自己的注意力**。谁往时间里倾注注意力，那本事就长在谁身上。
+Ta vừa nói giữa **biết** và **làm được** có khoảng cách thời gian rất xa. Giờ cần bổ sung: thời gian ấy phải chứa đầy **sự chú ý** mới có hiệu quả; thời gian rỗng luôn vô hiệu. Sự chú ý của ai phải nằm trong thời gian ấy? Chỉ có thể là **của chính mình**. Ai rót sự chú ý vào thời gian thì năng lực lớn lên ở người đó.
 
-练习就是这样，在自己的空间里往自己的时间里倾注自己的注意力，也许偶尔需要他人帮助，但，总体上，练习就是与他人无关，只能是自己认真做的事情。
+Luyện tập là vậy: trong không gian của mình, rót sự chú ý của mình vào thời gian của mình. Đôi lúc có thể cần giúp đỡ, nhưng nhìn chung đó là việc không liên quan người khác, chỉ mình mới nghiêm túc làm được.
 
-自学，并不意味着说一定要完全孤立自己，虽然集中的注意力只能出自自己，虽然有效的练习常常只能是私人甚至私密的…… 自学的关键在于**主动**。**主动向他人求教**就很关键。**主动锤炼自己的教师品味**也很重要，比如，你最好在能分辨出谁是真正的好老师的同时，也能分辨出谁是跳大神的二货…… 这就需要自己主动建立一系列的**评判标准**。然而，不自学的人，无论如何都不可能有任何真正恰当且有效的标准。
+Tự học không có nghĩa phải cô lập hoàn toàn, dù sự tập trung chỉ có thể đến từ chính mình và luyện hiệu quả thường riêng tư, thậm chí kín đáo. Mấu chốt của tự học là **chủ động**. **Chủ động hỏi người khác** rất quan trọng. **Chủ động rèn khả năng chọn thầy** cũng vậy: tốt nhất vừa nhận ra giáo viên thực sự giỏi, vừa phân biệt được kẻ làm trò bịp bợm. Muốn vậy phải tự xây một loạt **tiêu chí đánh giá**. Nhưng người không tự học, dù thế nào, cũng không thể có tiêu chí thực sự phù hợp, hữu hiệu.
 
-人天生是社交动物。大脑内部是无垠的网络，大脑外部也是无垠的网络。人们在相互交流相互观察之中潜移默化地学习。社交过程中形成的各种微调，永远是教科书、老师和学校无法替代也无法达成的东西。想想那个例子：你的口音就是会因为生活地点的变化而不知不觉发生变化，没有什么教科书、老师或者学校可能导致这种不知不觉发生的微调。
+Con người vốn là động vật xã hội. Bên trong não là mạng vô tận; bên ngoài cũng vậy. Ta âm thầm học qua giao tiếp và quan sát nhau. Những điều chỉnh nhỏ hình thành trong giao tiếp luôn là thứ sách giáo khoa, giáo viên và nhà trường không thể thay thế hay tạo ra. Hãy nghĩ đến ví dụ giọng nói tự đổi khi nơi sống thay đổi: không sách, giáo viên hay trường nào có thể gây ra chính kiểu điều chỉnh âm thầm ấy.
 
-所以，**主动寻找更好的环境**也很重要。正如在大家都挥霍的时代里你也会不由自主地更加挥霍一样，若是大家都在玩乐沉沦你会不由自主地浪费更多时间。同样的道理，如果你身处在大家都对学习感兴趣的环境里，那么，你自然而然就会对学习更感兴趣；在大家都努力工作的环境里，你自然会比原来更加努力。万一你身边积极向上的人更多且很多，你也自然会找到更多的理由奋发图强。
+Vì vậy, **chủ động tìm môi trường tốt hơn** cũng quan trọng. Cũng như sống giữa thời mọi người phung phí thì mình dễ phung phí hơn; nếu ai cũng vui chơi buông thả, mình dễ lãng phí thêm thời gian. Tương tự, trong môi trường mọi người thích học, bạn tự nhiên thích học hơn; giữa những người làm việc chăm chỉ, bạn sẽ cố gắng hơn trước. Nếu quanh bạn có nhiều người tích cực, bạn cũng sẽ tìm thêm nhiều lý do phấn đấu.
 
-**主动帮助他人**最重要。帮助他人可能是天下成本最低却又收益最高的社交手段。关键在于，帮助他人发现问题解决问题，是锻炼自己的机会，因此建设得更好的是自己的大脑皮层。学习的核心之一就是发现问题解决问题，可是，仅靠自己一个人很难有机会遇到所有问题，不是吗？于是，帮助他人虽然可以收获感激，但更重要的另外一个副作用是获得了原本可能并不存在的锻炼自己大脑的机会。
+**Chủ động giúp người khác** là quan trọng nhất. Giúp người có thể là cách giao tiếp ít tốn kém nhưng đem lại nhiều lợi ích nhất. Mấu chốt là giúp phát hiện và giải quyết vấn đề tạo cơ hội rèn chính mình, nhờ đó vỏ não của mình được xây dựng tốt hơn. Một phần cốt lõi của học tập là phát hiện, giải quyết vấn đề; một mình khó có cơ hội gặp hết mọi vấn đề, đúng không? Vì vậy, ngoài lời cảm ơn, tác dụng phụ còn quan trọng hơn của giúp người là có thêm cơ hội rèn não vốn có thể không xuất hiện.
 
-学校原本应该起好作用，但最终总是在大多数人身上普遍留下了这样那样令人无比遗憾的印记。学校里枯燥的课堂、无聊且无尽的作业、没完没了大大小小的考试，虽然都出于好意，最终磨灭的是学生的**主动**。十几年如一日，学生们一直在**被动**地疲于奔命…… 到最后甚至在他们的眼里，父母竟然沦为了学校的帮凶。终于，他们最后唯一的主动诉求只剩下逃离的渴望。斗转星移之间，他们中的绝大多数不知不觉地彻底失去了**主动能力**。
+Nhà trường vốn nên có tác dụng tốt, nhưng cuối cùng thường để lại đủ dấu vết đáng tiếc trên phần lớn mọi người. Lớp học nhàm chán, bài tập vô tận, kiểm tra lớn nhỏ không ngừng, dù xuất phát từ thiện ý, cuối cùng mài mòn sự **chủ động** của học sinh. Suốt hơn mười năm, học sinh **bị động** chạy theo đến kiệt sức. Sau cùng, trong mắt họ, ngay cha mẹ cũng thành người tiếp tay cho nhà trường. Mong muốn chủ động duy nhất còn lại chỉ là trốn thoát. Năm tháng qua đi, đại đa số không hay biết mình đã mất hoàn toàn **khả năng chủ động**.
 
-**自学全靠主动**。目标要自己找，动力要自己挖，计划要自己做，困难要自己克服，错误要自己纠正，注意力要自己集中，好坏最终只能靠自己验收，后果只能自己承担…… 若是竟然失去了主动能力，这一切就无从谈起。
+**Tự học hoàn toàn dựa vào chủ động**. Tự tìm mục tiêu, đào sâu động lực, lập kế hoạch, vượt khó, sửa sai, tập trung; cuối cùng tự đánh giá kết quả và chịu hậu quả. Nếu mất khả năng chủ động, chẳng còn gì để nói.
 
-社会上绝大多数人根本就没有自学能力。可说实话，这事儿很难全怪他们，他们原本不是那个样子，上学前都好好的，主动的能力非常完整。那责怪学校有没有用呢？首先没用，其次更重要的是看透真相。因为这世界原本就是这个样子，从来都是这个样子，古今中外都一样：**好的意图从来都并一定不保证好的结果**…… 并且，**重要的事情从来都只能靠自己**，越是重要的事情越是如此。
+Đại đa số người trong xã hội hoàn toàn không có năng lực tự học. Nhưng nói thật, khó trách hết họ: họ vốn không như vậy, trước khi đến trường vẫn ổn, khả năng chủ động còn nguyên. Trách nhà trường có ích không? Trước hết là không; quan trọng hơn là nhìn rõ sự thật. Thế giới vốn luôn như vậy, xưa nay, khắp nơi: **ý định tốt không bảo đảm kết quả tốt**. Và **việc quan trọng chỉ có thể dựa vào chính mình**, càng quan trọng càng như vậy.
 
+::: info Ghi chú biên tập cho bản tiếng Việt
+Phân tích *xué* và *xí* ở đầu bài nói về từ tiếng Trung trong nguyên tác, không phải cấu tạo từ tiếng Việt. Câu Khổng Tử được chuyển nghĩa sang tiếng Việt để giữ dẫn chứng. Các số liệu về số sách và giá trên Amazon là con số tác giả gắn với năm 2020, chưa được xác minh; không dùng làm thông tin giá hoặc danh mục hiện tại.
+
+Những đánh giá khái quát về nhà trường, giáo viên, học nhóm và việc mọi người mất chủ động là quan điểm phê bình của tác giả. Người học Việt Nam có thể kết hợp tự luyện, phản hồi của giáo viên và thực hành với bạn học; “tự học” không bắt buộc là học một mình. Đây là gợi ý biên tập cho bối cảnh Việt Nam.
+
+Định nghĩa *spotlight effect* cần đọc cùng [ghi chú ở bài 11](../in-the-brain/11-burden.md). “Tăng độ khó liên tục” và “luyện dồn trong thời gian ngắn” không phải công thức đầy đủ cho mọi kỹ năng; xem [bài 7](../in-the-brain/07-repitition.md) và [bài 9](../in-the-brain/09-unnoticed.md).
+:::

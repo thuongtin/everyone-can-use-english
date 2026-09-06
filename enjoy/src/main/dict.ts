@@ -3,7 +3,7 @@ import fs from "fs-extra";
 import { ipcMain } from "electron";
 import { LRUCache } from "lru-cache";
 import log from "@main/logger";
-import { DICTS } from "@/constants/dicts";
+import { LEGACY_DICTS } from "@/constants/legacy-dicts";
 import sqlite3, { Database } from "sqlite3";
 import settings from "./settings";
 import { hashFile } from "@/main/utils";
@@ -26,7 +26,7 @@ export class DictHandler {
 
   async import(_path: string) {
     const hash = await hashFile(_path, { algo: "md5" });
-    const dict = DICTS.find((dict) => dict.hash === hash);
+    const dict = LEGACY_DICTS.find((dict) => dict.hash === hash);
 
     if (!dict) {
       throw new Error("SQLite file not match with any perset dictionary");
@@ -66,7 +66,8 @@ export class DictHandler {
   query(word: string) {
     return new Promise((resolve, reject) => {
       this.db.get(
-        `SELECT definition FROM definitions WHERE id=(SELECT definition_id FROM words WHERE word="${word}")`,
+        "SELECT definition FROM definitions WHERE id=(SELECT definition_id FROM words WHERE word=?)",
+        [word],
         (err, row: any) => {
           if (err) reject(err);
           resolve(row?.definition ?? "");
@@ -81,7 +82,7 @@ export class DictHandler {
   }
 
   async getDicts() {
-    const dicts = DICTS.map((dict: Dict) => {
+    const dicts = LEGACY_DICTS.filter((dict) => this.isInstalled(dict)).map((dict: Dict) => {
       return {
         ...dict,
         state: this.isInstalled(dict) ? "installed" : "uninstall",

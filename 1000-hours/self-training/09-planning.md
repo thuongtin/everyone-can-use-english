@@ -1,75 +1,87 @@
-# 9. 自主计划
+# 9. Tự lập kế hoạch
 
-感觉上来看，我们生活在一个计划不如变化快的世界里。随着年龄的增加，大多数人可能通过总结错误的经验，误以为计划无用，甚至开始讨厌计划。
+Có cảm giác ta sống trong thế giới kế hoạch không theo kịp thay đổi. Tuổi tăng, đa số có thể tổng kết kinh nghiệm sai rồi tưởng kế hoạch vô ích, thậm chí ghét lập kế hoạch.
 
-然而，在很多地方，计划不仅非常管用，也的确不可或缺。尤其是在学习的过程中更是如此，因为学习和生活最不一样的地方在于，前者不像后者那样充满了意外。与之相对的，练习更是如此 ——  **只要肯短时间内足量重复就一定奏效**，毫无例外。
+Tuy vậy, ở nhiều nơi kế hoạch vừa hữu dụng vừa không thể thiếu. Đặc biệt trong học tập, vì điều khác đời sống nhất là học không đầy bất ngờ như đời. Luyện tập còn như vậy hơn: theo tác giả, **chỉ cần lặp đủ nhiều trong thời gian ngắn thì chắc chắn hiệu quả**, không ngoại lệ.
 
-最初的学习与练习计划可以非常简陋：
+Kế hoạch học, luyện ban đầu có thể rất sơ sài:
 
-> 遇到每一个难点都要**生学硬练**，找到窍门掌握要点之后，再通过**短时间内足量重复**彻底攻克。
+> Với mỗi điểm khó, **kiên trì thử và luyện**. Tìm được cách, nắm điểm chính rồi thì **lặp đủ nhiều trong thời gian ngắn** để chinh phục hoàn toàn.
 
-任务很简单，剩下的只不过是**安排时间**或者**挤出时间**。
+Nhiệm vụ đơn giản, phần còn lại chỉ là **sắp xếp** hoặc **chắt ra thời gian**.
 
-由于**难点**这个东西相当**个性化**，于是每个人都一样，只能自己想办法**为自己设计专项练习**，而后**安排时间自己练习**…… 就是从这里开始，有自学能力的人和没有自学能力的人开始逐步**分化**。前者总是在日积月累，后者却长期滞留在某一处，只因为无法自理。
+Vì **điểm khó** rất **cá nhân**, ai cũng chỉ có thể tự tìm cách **thiết kế bài luyện riêng cho mình**, rồi **sắp xếp thời gian tự tập**. Từ đây người có và không có năng lực tự học bắt đầu **phân hóa**: người trước tích lũy từng ngày, người sau ở mãi một chỗ chỉ vì không tự xoay xở được.
 
-由于任何真正有用的技能，刚开始的时候都像是**迷宫**，所以，我们要一点一点探索，要反复衡量每一个可能的路径，要不断更新地图…… 在这个过程中所遇到的难点，最初看起来繁杂零落。然而，随着时间的推移，只要我们不断归纳总结，那些繁杂零落的要点终归会被逐步分门别类，于是，我们更容易做到心中有数。只要发现必要，就要重新练习重新验收。
+Kỹ năng thực sự hữu ích nào ban đầu cũng giống **mê cung**, nên ta phải khám phá từng chút, cân nhắc từng đường có thể, cập nhật bản đồ liên tục. Điểm khó lúc đầu nhiều, rời rạc; nhưng nếu liên tục quy nạp, tổng kết, chúng dần được phân loại, giúp ta nắm rõ hơn. Thấy cần thì luyện lại, kiểm tra lại.
 
-安排时间或者挤出时间本身并不难，真正难的是**保持动力**。
+Sắp xếp hoặc chắt ra thời gian tự nó không khó. Khó thực sự là **giữ động lực**.
 
-以语音塑造为例。很多人即便是移民到英语国家，转眼五年十年过去，甚至更久，却依然口音浓重，更不用提其他相关且重要的语言能力。除了缺乏自我驱动、自我纠正、自我鼓励、自我监督之外，还有另外一个隐秘的原因 —— 没兴趣。
+Lấy rèn phát âm làm ví dụ. Nhiều người dù di cư sang nước nói tiếng Anh, năm hay mười năm, thậm chí lâu hơn trôi qua vẫn có giọng nước ngoài rõ, chưa bàn các năng lực ngôn ngữ quan trọng khác. Ngoài thiếu tự tạo động lực, sửa sai, khích lệ, giám sát, tác giả cho rằng còn nguyên nhân kín đáo khác: không có hứng thú.
 
-保持动力的秘密是培养、保持、强化**兴趣**。人都一样，若是对什么东西失去了兴趣，就没办法为之集中**注意力**，更别提学它练它了。兴趣是我们能够**完整执行**学习或训练计划的**发动机**。
+Bí quyết giữ động lực là nuôi dưỡng, duy trì, tăng **hứng thú**. Ai cũng vậy, mất hứng thú thì không tập trung được, càng không học, luyện được. Hứng thú là **động cơ** giúp ta **thực hiện trọn vẹn** kế hoạch học hoặc luyện.
 
-很多父母也认同这个道理。所以他们在教育自家孩子之前，常常想办法先去培养孩子的兴趣。这个策略看起来不错，但结果却常常并不理想。兴趣这个东西，往往并不持久，孩子更是如此，他们对任何新鲜事物都感兴趣，但与此同时，他们也可以几乎瞬间之内就会变得对之彻底失去兴趣。
+Nhiều cha mẹ đồng ý nên trước khi dạy con, thường tìm cách tạo hứng thú. Chiến lược có vẻ tốt nhưng kết quả thường không lý tưởng. Hứng thú hay không bền, trẻ càng vậy: thích mọi thứ mới, nhưng gần như ngay lập tức cũng có thể mất hết hứng thú.
 
-关键在于**兴趣**的**焦点**。
+Mấu chốt là **trọng tâm của hứng thú**.
 
-绝大多数人在这方面从未认真思考，于是，他们不假思索自然而然地把兴趣的焦点放在正在练习的项目上。他们会认为自己对某个项目感兴趣，于是有无穷无尽的动力去练习那个项目。与此同时，他们会认为自己对另外一些项目无兴趣，于是，完全没有动力去学习或者练习。
+Đại đa số chưa nghĩ kỹ nên tự nhiên đặt trọng tâm vào môn đang luyện. Họ cho rằng thích môn ấy thì có động lực vô tận để luyện. Đồng thời, không thích môn khác thì hoàn toàn không có động lực học, luyện.
 
-由此产生的分化如此普遍，乃至于人们看到的现象，一方面是，有些人能做好一些事情，却压根做不好另外一些事情；另外一方面是，有些人能做好一些事情，但另外一些人却无论如何都做不好。这个普遍的现象，是很多人产生了错觉，他们误以为，能把什么做好要靠**天分**。人们曾经关于标准音高的普遍误解，根源就来自于此。
+Sự phân hóa phổ biến đến mức ta thấy: có người làm tốt việc này nhưng hoàn toàn không làm tốt việc khác; cũng có việc người này làm tốt nhưng người khác thế nào cũng không được. Hiện tượng ấy khiến nhiều người tưởng làm tốt phải dựa vào **năng khiếu**. Hiểu lầm phổ biến trước đây về cảm âm tuyệt đối bắt nguồn từ đây.
 
-实际上，**做得好，只是且只能是练得多、练得久、练得早的结果**。
+Thực ra, theo tác giả, **làm tốt chỉ có thể là kết quả luyện nhiều, luyện lâu, luyện sớm**.
 
-无论练什么，对大脑来说，本质都是一样的，都是在大脑里用不完的神经元之间新建连接新建网络  —— 如果有可以回收循环利用的连接或网络当然更好。练得好，都一样，都说明通过短时间内足量重复新建了足够多足够强的新连接新网络。练不好或练得不够好，其实还都一样，只不过是没做到短时间内足量重复，或者没有把新建连接新建网络强化到近似连接近似网络无法与之竞争的地步 —— 仅此而已。
+Luyện gì, với não đều cùng bản chất: tạo kết nối, mạng mới giữa số neuron không dùng hết. Nếu có kết nối, mạng tái sử dụng thì càng tốt. Luyện tốt nghĩa là qua lặp đủ nhiều trong thời gian ngắn đã tạo đủ nhiều kết nối, mạng mới đủ mạnh. Luyện chưa tốt cũng vậy, chỉ vì chưa lặp đủ nhiều trong thời gian ngắn hoặc chưa củng cố mạng mới tới mức mạng gần đúng không cạnh tranh được. Chỉ thế thôi.
 
-到最后都一样，无论练什么，精通程度（*<span class="pho">m</span>*, *mastery*）都是且只能是往多少时间（*<span class="pho">t</span>*, *time*）里倾注了多少注意力（*<span class="pho">a</span>*, *attention*）的结果：
+Cuối cùng, luyện gì cũng vậy, mức **tinh thông** (*<span class="pho">m</span>*, *mastery*) chỉ có thể là kết quả rót bao nhiêu **sự chú ý** (*<span class="pho">a</span>*, *attention*) vào bao nhiêu **thời gian** (*<span class="pho">t</span>*, *time*):
 
 > $m = ta$
 
-其中，时间（*<span class="pho">t</span>*）和注意力（*<span class="pho">a</span>*）都一样，都需要**量足够多**，且**密度足够大**。于是，理论上来讲，能做好一件事的人，用同样的 *<span class="pho">ta</span>* 完全可以同样把任何另外一件事情做到同样精通的程度。
+Trong đó, cả thời gian (*<span class="pho">t</span>*) lẫn sự chú ý (*<span class="pho">a</span>*) đều phải **đủ nhiều** và **đủ dày**. Vì thế, theo lý thuyết tác giả trình bày, ai làm tốt một việc hoàn toàn có thể dùng cùng *<span class="pho">ta</span>* để đạt mức tinh thông tương tự ở bất kỳ việc khác.
 
-换言之，能踢足球踢到一定境界的人，用他曾经为此付出的 *<span class="pho">ta</span>*，即，往同样量足够多密度足够大的时间里倾注同样量足够多密度足够大的注意力，同样也能弹好钢琴，学好数学，或者说好另外一种语言。
+Nói cách khác, người đá bóng tới trình độ nhất định, dùng lượng *<span class="pho">ta</span>* đã bỏ ra, tức cùng thời gian đủ nhiều, đủ dày chứa cùng sự chú ý đủ nhiều, đủ dày, cũng có thể chơi piano tốt, học toán tốt hoặc nói tốt ngôn ngữ khác.
 
-更常见的是，如果一个人在某件事上能做到高度精通，即，*<span class="pho">m</span>* 值非常高，那么他在新学新练另外一件事的时候，虽然依然需要往量足够多密度足够大的时间里倾注量足够多密度足够大的注意力，但，往往需要的 *<span class="pho">ta</span>* 要比第一次少。
+Thường gặp hơn, nếu ai rất tinh thông một việc, giá trị *<span class="pho">m</span>* rất cao, khi học, luyện việc mới, dù vẫn cần thời gian và chú ý đủ lượng, đủ mật độ, lượng *<span class="pho">ta</span>* cần thường ít hơn lần đầu.
 
-**大脑里没有孤岛**。所有的神经元都在同一个无垠的网络之中，每个连接每个局域网，都通过直接或者间接的方式相互连接。更为重要的是，任何技能拆解到一定程度之后，各个细节对应的连接或者网络，其实都可以被众多技能共享，不仅包括那些看起来像近的技能，也包括很多那些表面上看起来毫不关联的技能。
+**Trong não không có đảo biệt lập.** Mọi neuron ở cùng một mạng vô tận; từng kết nối, từng mạng cục bộ đều nối trực tiếp hoặc gián tiếp. Quan trọng hơn, khi chia kỹ năng đủ nhỏ, các kết nối hoặc mạng ứng với chi tiết có thể được nhiều kỹ năng dùng chung, không chỉ những kỹ năng có vẻ gần nhau mà cả nhiều kỹ năng bề ngoài chẳng liên quan.
 
-这就解释了为什么越是在某方面格外厉害的人就越发地多才多艺。你当然知道爱因斯坦会拉小提琴，可也许你并不知道的是，人家弹钢琴也同样技艺高超。
+Điều này, theo tác giả, giải thích vì sao người đặc biệt giỏi một lĩnh vực càng đa tài. Bạn tất nhiên biết Einstein chơi violin, nhưng có thể chưa biết ông cũng chơi piano rất giỏi.
 
-![](/images/einstein-playing-piano.png)
+![Einstein chơi piano, ảnh trong nguyên tác](/images/einstein-playing-piano.png)
 
-事实上，很多伟大的科学家都同时是艺术家，哥白尼、伽利略、麦克斯韦、费曼…… 有人调查过现代科学早期的总计 120 名科学家，其中有 61 名，即，一半以上，被认定为多才多艺的艺术家。有的化学家同时是画家，有的诗人同时是物理学家，有的音乐家同时是历史学家，更不用提你知道的那个无以伦比的天才，莱昂纳多·达芬奇…… 不一而足。所有的（不是几乎，而是所有的）科学家都有自己的业余爱好，且与那个他们为之知名的领域毫无关系……
+Thực tế, nhiều nhà khoa học lớn đồng thời là nghệ sĩ: Copernicus, Galileo, Maxwell, Feynman. Tác giả nêu một khảo sát 120 nhà khoa học thời đầu khoa học hiện đại, trong đó 61 người, hơn nửa, được xác định là nghệ sĩ đa tài. Có nhà hóa học đồng thời là họa sĩ, nhà thơ đồng thời là nhà vật lý, nhạc sĩ đồng thời là sử gia, chưa nói thiên tài Leonardo da Vinci mà bạn biết. Không kể hết được. Ông khẳng định tất cả, không phải gần như mà là tất cả, nhà khoa học đều có sở thích ngoài giờ chẳng liên quan lĩnh vực làm họ nổi tiếng.
 
-![](/images/hidden-connection.png)
+![Hình minh họa các mối liên hệ tiềm ẩn trong nguyên tác](/images/hidden-connection.png)
 
-在科学界里，这种情况非常普遍 —— 从一个毫不相干的领域里突然出现另一个领域里的明星。经济学家出身的托马斯·叟（Thomas Sowell），因为自己的孩子六岁了还不开口说话，于是开始研究心理学，到最后写了篇论文，《聪明的孩子晚说话》，最终竟然成为心理学领域里被引用次数最多的论文之一（就是 Pagerank 极高）。而一个生理学教授，贾雷德·戴蒙德（Jared Mason Diamond），有研究鸟类的业余爱好，结果，在不断考察鸟类的过程中悟到了隐藏在人类发展史背后的另外一个线索，写了一本著名的书，《枪炮、病菌与钢铁：人类社会的命运》，随之开启了一个全新的学科，叫做 “地缘政治”…… 更不用提今天活跃在科技与商业世界里的埃隆·马斯克（Elon Musk）。
+Trong khoa học, theo tác giả, chuyện một người từ lĩnh vực chẳng liên quan bỗng thành ngôi sao ở lĩnh vực khác rất phổ biến. Nhà kinh tế Thomas Sowell, vì con sáu tuổi chưa nói, bắt đầu nghiên cứu tâm lý, cuối cùng viết công trình mà nguyên tác gọi là *Trẻ thông minh nói muộn*, rồi được tác giả khẳng định là một trong những bài được trích dẫn nhiều nhất ngành tâm lý, tức PageRank rất cao. Còn giáo sư sinh lý học Jared Mason Diamond có sở thích nghiên cứu chim; qua khảo sát chim, ông ngộ ra một đầu mối khác của lịch sử phát triển con người, viết *Súng, vi trùng và thép: Số phận của các xã hội loài người*, rồi theo nguyên tác mở ra ngành hoàn toàn mới là “địa chính trị”. Chưa cần nói Elon Musk đang hoạt động trong thế giới công nghệ và kinh doanh ở thời điểm tác giả viết.
 
-大脑是个网络，一切都是关联的，导致的结论不只是**无论学什么都有用**，更重要的是另外一个结论：**学的越多，已经学到的东西就更有用**。—— 这就是**网络效应**（Network effect），即，**梅特卡夫定律**（[Metcalfe' s law](https://en.wikipedia.org/?curid=65776)）：
+Não là mạng, mọi thứ liên quan nhau. Kết luận không chỉ là **học gì cũng có ích**, mà quan trọng hơn: **học càng nhiều, thứ đã học càng hữu ích**. Đó là **hiệu ứng mạng** (*network effect*), tức **định luật Metcalfe** ([*Metcalfe's law*](https://en.wikipedia.org/?curid=65776)):
 
-> 网络中各个节点的价值与网络的节点数量的平方成正比……
+> Giá trị các nút trong mạng tỷ lệ với bình phương số nút.
 
-也就是说，假设一个技能单独存在的价值是 *1*，但，它与其他 *4* 个技能形成一个网络的时候，那么，整个技能网络的价值，不仅仅是 *5*，可能要与网络节点数量的平方，5^2^，即与 *25* 成正比……
+Nghĩa là giả sử một kỹ năng đứng riêng có giá trị *1*, nhưng kết hợp cùng *4* kỹ năng khác thành mạng, giá trị cả mạng không chỉ là *5*, mà có thể tỷ lệ với bình phương số nút, 5^2^, tức *25*.
 
-**学的越多学得越快越好越轻松**。
+**Càng học nhiều càng học nhanh, tốt và nhẹ nhàng.**
 
-话说回来，我们需要调整我们自己所谓兴趣的**焦点**。
+Quay lại, ta cần điều chỉnh **trọng tâm** của cái gọi là hứng thú:
 
-> 兴趣的焦点不应该放在某个**具象**的事物上，而是应该放到**进步**这个**抽象**的概念上。
+> Không nên đặt trọng tâm hứng thú vào một sự vật **cụ thể**, mà vào khái niệm **trừu tượng** là **tiến bộ**.
 
-也就是说，我们真正应该**痴迷**的是**进步**，是**改良**，而不仅仅是某个具体的事物。对大脑来说，不仅练什么都一样，进步或者改良也都一模一样，反正就是不断新建连接新建网络。
+Nghĩa là thứ thực sự nên **say mê** là **tiến bộ**, **cải thiện**, chứ không chỉ một sự vật cụ thể. Với não, không chỉ luyện gì cũng giống nhau, mà tiến bộ, cải thiện cũng vậy, dù sao vẫn là liên tục tạo kết nối và mạng mới.
 
-这是避开一切**半途而废**的秘密。一次又一次的半途而废，废掉的并不是某个学习目标，而是大脑里一个又一个破破烂烂被启用的烂连接烂网络，不仅没有任何循环利用价值，还不断妨碍新连接新网络的建立。并且，半途而废最终也会在大脑里形成一个网络，竞争力极强的网络，到最后，无论做什么，它都能胜出。懂了这个道理之后，无论是什么，不做倒罢了，只要做了，你怎么舍得半途而废，你怎么敢半途而废？
+Đây là bí quyết tránh mọi **bỏ dở giữa chừng**, theo tác giả. Bỏ đi bỏ lại không chỉ bỏ một mục tiêu, mà để lại trong não từng kết nối, mạng rách nát đã được kích hoạt, không có giá trị tái sử dụng, còn cản mạng mới. Ông cho rằng bỏ dở cuối cùng cũng thành một mạng cạnh tranh rất mạnh, làm gì nó cũng thắng. Hiểu vậy, không làm thì thôi, đã làm sao nỡ, sao dám bỏ dở?
 
-没有什么比建设自己的大脑皮层更令人痴迷的了吧？
+Có gì khiến người ta say mê hơn xây dựng vỏ não của mình?
 
-若是带着这样不可剥夺的兴趣，不依赖任何具象事物，也不受任何人影响的兴趣，无论计划简单还是复杂，都只能坚定执行，贯彻到底，容不得任何人或事阻挠 —— 为了自己的脑子。
+Nếu mang hứng thú không ai lấy được ấy, không phụ thuộc sự vật cụ thể hay người nào, thì kế hoạch đơn giản hay phức tạp đều chỉ có thể được thực hiện kiên định đến cùng, không cho ai hoặc việc gì cản, vì chính bộ não của mình.
+
+::: info Ghi chú biên tập cho người học Việt Nam
+Công thức $m = ta$ là cách tác giả biểu đạt quan hệ giữa thời gian, chú ý và mức tinh thông, không phải phương trình thực nghiệm có đơn vị hoặc khả năng dự báo mức kỹ năng. Không thể từ đó suy ra cùng số giờ và mức tập trung sẽ tạo cùng trình độ ở mọi môn. Xem thêm đối chiếu về [luyện tập](../in-the-brain/07-repitition.md), [cảm âm tuyệt đối](./01-fight.md) và [tính mềm dẻo của não](../in-the-brain/02-links.md).
+
+Các số 120 và 61 cùng lời khẳng định mọi nhà khoa học đều có sở thích ngoài lĩnh vực không có nguồn khảo sát cụ thể kèm trong bài. Định luật Metcalfe được mượn làm phép ví, không đo giá trị kỹ năng hoặc bộ não bằng cách bình phương số môn đã học.
+
+Giọng nước ngoài rõ không tự chứng minh một người thiếu quan tâm, động lực hoặc năng lực tiếng Anh. Với người Việt, có thể đặt mục tiêu nói dễ hiểu, phù hợp hoàn cảnh sử dụng. Thay đổi hay dừng một mục tiêu không phù hợp cũng không đồng nghĩa não đã thành mạng “rách nát”; đây là hình ảnh tu từ của tác giả. Kế hoạch nên có chỗ nghỉ, kiểm tra và điều chỉnh theo tiến bộ, điều kiện thực tế.
+
+Thomas Sowell viết sách *Late-Talking Children* và *The Einstein Syndrome: Bright Children Who Talk Late*. [Nhà xuất bản Basic Books](https://www.hachettebookgroup.com/titles/thomas-sowell/the-einstein-syndrome/9781541601376/?lens=basic-books) xác định tác phẩm sau là sách tiếp nối tác phẩm trước. Nguyên tác chưa cung cấp tài liệu chứng minh đây là “bài báo tâm lý học thuộc nhóm được trích dẫn nhiều nhất”; không coi thứ hạng ấy đã được xác minh.
+
+[Jared Diamond có đóng góp liên ngành được UCLA ghi nhận](https://www.ucla.edu/about/notable-bruins/18-jared-diamond), nhưng không khai sinh địa chính trị. [Đại học Gothenburg](https://www.gu.se/en/political-science/about-us/our-history) ghi nhận Rudolf Kjellén đặt thuật ngữ *geopolitics* năm 1899, trước *Guns, Germs, and Steel* nhiều thập niên.
+:::

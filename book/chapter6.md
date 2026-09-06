@@ -1,59 +1,69 @@
-# 第六章 语法
+# Chương 6. Ngữ pháp
 
-## 1. 没文化的人才讨厌语法
+> **Ghi chú biên tập về cách đọc chương:** Nguyên tác dùng nhiều lời phê bình gay gắt và ví dụ lịch sử để bảo vệ việc học ngữ pháp. Bản dịch giữ các lập luận ấy, tách ghi chú và cách luyện cho người Việt khỏi lời tác giả; không dùng trình độ ngữ pháp để đánh giá phẩm giá, trí tuệ hoặc quyền lên tiếng của một người. Các trích đoạn English phục vụ đối chiếu được giữ, chỉ chuẩn hóa dấu gạch dài thành dấu gạch ngang thường khi cần.
 
-没文化的人才讨厌语法 —— 这话好像说得重了一点，但却只不过是事实。经常有人以各种各样的理由宣扬 “不学语法也可以”，并且常常能因此获得追捧，但这只不过是疯子骗傻子而已，本质上来看一群没文化的人在集体意淫。去市场买菜，确实不需要懂语法，因为说的全都是短句、断句：
+## 1. Chỉ người thiếu văn hóa mới ghét ngữ pháp
 
-> 甲：多少钱一斤？<br />
-> 乙：两块二。<br />
-> 甲：贵。<br />
-> 乙：不贵！买多了给你抹点……<br />
-> 甲：行，来两斤。<br />
-> 乙：两斤三两，行么？<br />
-> 甲：行。<br />
-> 乙：零头抹了，算五块钱……<br />
-> 甲：嗯，谢谢。<br />
-> 乙：好嘞！<br />
+“Chỉ người thiếu văn hóa mới ghét ngữ pháp.” Câu này nghe có vẻ nặng, nhưng theo tác giả chỉ là sự thật. Người ta thường viện đủ lý do để tuyên truyền “không học ngữ pháp cũng được”, rồi được hưởng ứng; ông cho đó chỉ là người điên lừa kẻ ngốc, về bản chất là cả nhóm thiếu văn hóa cùng tự huyễn hoặc. Đi chợ mua rau quả đúng là không cần hiểu ngữ pháp, theo ông, vì toàn nói câu ngắn, câu rời:
 
-可这只是我们学习语言文字的目的不仅仅是为了在这种场合说说话而已吧？稍微复杂一点的思考结果就面临一定的表达难度 —— 连语法都不过关，又如何清楚表达？而那些有思想的人用语言表达他们的思想之时，阅读者语法不过关，理解上就必然南辕北辙。
+> A: Một cân bao nhiêu?<br />
+> B: Hai đồng hai.<br />
+> A: Đắt.<br />
+> B: Không đắt! Mua nhiều tôi bớt cho chút…<br />
+> A: Được, lấy hai cân.<br />
+> B: Hai cân ba lạng, được không?<br />
+> A: Được.<br />
+> B: Bỏ phần lẻ, tính năm đồng…<br />
+> A: Ừ, cảm ơn.<br />
+> B: Vâng!<br />
 
-商务印书馆是个相当不错的出版社，然而也经常令人难过。比如，米尔顿•弗里德曼的（Milton Friedman）的《货币的祸害：货币史片段》一书中有一句译文是这样的：
+> **Ghi chú biên tập về bối cảnh hội thoại:** Đây là cuộc mua bán ở Trung Quốc. “Cân” trong nguồn là *jīn*, bằng 500 g; “lạng” là *liǎng*, bằng 50 g. Vì thế hai cân ba lạng ở đây là 1,15 kg, không phải 2,3 kg theo cách hiểu thường gặp ở Việt Nam. “Đồng” là nhân dân tệ, không phải VND. Giữ số lượng và giá gốc để đối chiếu. Hội thoại ngắn vẫn có cấu trúc ngữ pháp; không biết tên quy tắc khác với không có khả năng dùng ngữ pháp.
 
-> 货币是不能拿来开玩笑的，所以要交给中央银行。
+Nhưng mục đích học ngôn ngữ và chữ viết của chúng ta đâu chỉ là nói trong những tình huống ấy? Kết quả suy nghĩ phức tạp hơn một chút đã có mức khó nhất định khi diễn đạt. Ngữ pháp còn chưa đạt thì làm sao nói rõ, tác giả hỏi. Khi người có tư tưởng dùng ngôn ngữ để thể hiện tư tưởng, người đọc mà ngữ pháp chưa đạt thì việc hiểu tất yếu đi ngược hẳn ý họ, theo ông.
 
-熟悉弗里德曼的观点的人会吓一跳，“啊？老爷子什么时候改变看法了？！”
+Thương Vụ Ấn Thư Quán là nhà xuất bản khá tốt, nhưng cũng thường khiến người ta buồn. Chẳng hạn trong bản dịch cuốn *Money Mischief*, được xuất bản bằng tiếng Trung với tên *Tai họa của tiền tệ: Những mảnh lịch sử tiền tệ*, của Milton Friedman, có câu:
 
-可原文是这样的（这是 Friedman 引用 Georges Clemenceau 的话）：
+> Tiền tệ không phải thứ để đùa, vì vậy phải giao cho ngân hàng trung ương.
+
+Người quen quan điểm của Friedman sẽ giật mình: “Hả? Ông cụ thay đổi quan điểm từ lúc nào vậy?”.
+
+Nhưng nguyên văn như sau, mà tác giả giới thiệu là Friedman trích lời Georges Clemenceau:
 
 ![](images/figure52.png)
 
-– image extracted from [Google Books search results](http://is.gd/6hMzX)
+Ảnh trích từ [kết quả tìm kiếm Google Books](http://is.gd/6hMzX).
 
-仅仅是因为 “too…to” 的结构前面多了一个 “much” 译者就给翻译错了，语法功底太差。而事实上，译者翻译完了一本书（为了翻译，必须 “研读” —— 比 “精读”、“通读”、“泛读” 都要仔细），可是竟然完全没看懂书的内容。所以，根本就没看出这句话和整本书的内容之间的矛盾 …… 这不是没文化是什么？
+Chỉ vì có thêm “much” trước cấu trúc “too…to” mà người dịch đã dịch sai, nền tảng ngữ pháp quá yếu, theo tác giả. Thực tế người ấy đã dịch cả cuốn sách; để dịch phải nghiên cứu kỹ, còn kỹ hơn đọc kỹ, đọc hết hay đọc rộng. Vậy mà, theo ông, người dịch hoàn toàn không hiểu nội dung nên chẳng nhận ra câu ấy mâu thuẫn với cả cuốn. Thế chẳng phải thiếu văn hóa thì là gì?
 
-原本这世界应该有所分工，据说，社会大分工带来了前所未有的生产力提升。要是让那些有天分学习外语的人学好外语专职做好翻译，那么另外一些没有学习外语天分、却有其他天分的人就可以做一些他们擅长干的事情 —— 然后大家相互使用货币进行交换活动，社会效益会大幅度增加。可惜啊可惜。很多的时候，我们即便没有天分，也要咬着牙学好外语，要么实在是太吃亏了。
+> **Ghi chú biên tập về câu trong ảnh:** Ảnh ghi “Money is much too serious a matter to be left to central bankers.” Cách hiểu để luyện là “Tiền tệ là vấn đề quá nghiêm trọng để giao cho các nhà ngân hàng trung ương quyết định.” “Much” tăng mức độ của “too”, không đảo nghĩa cấu trúc “too … to …”. Việc nguyên tác quy câu này trực tiếp cho Clemenceau cần phân biệt với khả năng Friedman phỏng theo một câu khác; không dùng chú thích ảnh làm bằng chứng đủ về người đầu tiên nói câu ấy. Nội dung ảnh vẫn giữ bản gốc để đối chiếu.
 
-如果有机会接触各个文化的人就都知道了：其实，地球上任何一个文化的人群都一样，大部分的人讨厌甚至憎恨语法学习。许多年前，英国人在他们的语文课上要花费大量的时间精力教学生所谓 “Parsing” 的语法分析方法，可是现在却因所谓 “现代教育改革”（其实只不过是和过往任何一次该领域中的改革一样 “过大于功” 的另外一次 “改变” 而已）而被弃用：
+Thế giới vốn nên có phân công; người ta nói phân công lao động xã hội làm năng suất tăng chưa từng có. Nếu người có năng khiếu ngoại ngữ học giỏi rồi chuyên làm dịch thuật, những người không có năng khiếu ấy nhưng có tài ở lĩnh vực khác có thể làm việc mình giỏi. Sau đó mọi người dùng tiền để trao đổi, lợi ích xã hội sẽ tăng mạnh. Tiếc thay, theo tác giả, nhiều khi ngay cả không có năng khiếu ta vẫn phải nghiến răng học giỏi ngoại ngữ, nếu không chịu thiệt quá nhiều.
+
+Có cơ hội tiếp xúc người thuộc nhiều nền văn hóa thì sẽ biết, tác giả khẳng định, ở bất kỳ nền văn hóa nào trên Trái Đất cũng vậy: phần lớn người ghét, thậm chí căm ghét học ngữ pháp. Nhiều năm trước, trong giờ tiếng mẹ đẻ, người Anh dành nhiều thời gian và công sức dạy học sinh cách phân tích ngữ pháp gọi là *parsing*. Nhưng theo ông, nó đã bị bỏ vì cái gọi là “cải cách giáo dục hiện đại”, thực ra chỉ là một thay đổi nữa hại nhiều hơn lợi, giống mọi cuộc cải cách trước trong lĩnh vực này:
 
 > **Parsing**: Lost art of identifying all the components of a text, and once one of the fundamental exercises that tested and informed pupils in English. To parse a phrase such as ‘man bites dog’ involves noting that the singular noun ‘man’ is the subject of the sentence, the verb ‘bites’ is the third person singular of the present tense of the verb to bite, and the singular noun ‘dog’ is the object of the sentence.
 
 > – Dictionary of Modern English Grammar, by Ned Halley, Wordsworth, 2005
 
-这种基础语言训练是否像那些 “新锐改革派” 们所认为的那样一无是处乃至于必须废弃呢？才不是呢。事实上，这些所谓的改革者尽管愚蠢但在历史进程中却属于 “成功者”，因为他们 “竟然” 用不合理战胜了合理。其实也没啥可奇怪的，傻蛋总是可以 “成功” 地把世界变坏，这种例子随处可见，因为傻蛋最容易找到（众多）同伴，也因此在投票活动中最可能成为大多数 …… 他们最常挂在嘴边上的话是套用这个句型的：“……要不然怎么大家都……？” —— 尽管使用这个句型的句子有时候也确实有道理。
+Cách rèn ngôn ngữ cơ bản ấy có thật vô dụng đến mức phải bỏ, như những người “cải cách cấp tiến” nghĩ không? Theo tác giả, hoàn toàn không. Dù ngu ngốc, những người cải cách ấy trong tiến trình lịch sử lại thuộc bên thành công, vì họ lại có thể dùng điều phi lý đánh bại điều hợp lý. Ông cho rằng chẳng có gì lạ: kẻ ngốc luôn có thể “thành công” làm thế giới tệ hơn; ví dụ ở khắp nơi. Họ dễ tìm nhiều người cùng phe nhất nên trong bỏ phiếu dễ thành đa số nhất. Câu họ thường nói theo mẫu “Nếu không thì sao mọi người đều…?”, dù câu dùng mẫu ấy đôi khi đúng là có lý.
 
-## 2. 无论如何都要学语法
+> **Ghi chú biên tập:** Những lời đánh giá người học, nhà cải cách và mọi nền văn hóa ở trên là quan điểm của tác giả, không phải kết quả khảo sát được nêu đủ nguồn. Phân tích cấu trúc có thể là công cụ hữu ích khi đọc và viết, nhưng không từ đó suy ra mọi thay đổi giáo dục đều gây hại hoặc ai không thích phân tích câu đều kém văn hóa.
 
-于 1953 年获得诺贝尔文学奖的英国首相[Winston Churchill](http://www.winstonchurchill.org/)曾如此描述他儿时的这种语言训练对他来讲究竟有多么重要：
+## 2. Dù thế nào cũng phải học ngữ pháp
 
-> By being so long in the lowest form I gained an immense advantage over the cleverer boys. They all went on to learn Latin and Greek and splendid things like that. But I was taught English. We were considered such dunces that we could learn only English. Mr. Somervell — a most delightful man, to whom my debt is great — was charged with the duty of teaching the stupidest boys the most disregarded thing–namely, to write mere English. He knew how to do it. He taught it as no one else has ever taught it. Not only did we learn English parsing thoroughly, but we also practised continually English analysis. Mr. Somervell had a system of his own. He took a fairly long sentence and broke it up into its components by means of black, red, blue, and green inks. Subject, verb, object: Relative Clauses, Conditional Clauses, Conjunctive and Disjunctive Clauses! Each had its colour and its bracket. It was a kind of drill. We did it almost daily. As I remained in the Third Form three times as long as anyone else, I had three times as much of it. I learned it thoroughly. Thus I got into my bones the essential structure of the ordinary British sentence — which is a noble thing. And when in after years my schoolfellows who had won prizes and distinction for writing such beautiful Latin poetry and pithy Greek epigrams had to come down again to common English, to earn their living or make their way, I did not feel myself at any disadvantage. Naturally I am biased in favor of boys learning English. I would make them all learn English: and then I would let the clever ones learn Latin as an honour, and Greek as a treat. But the only thing I would whip them for is not knowing English, I would whip them hard for that.
+Thủ tướng Anh [Winston Churchill](http://www.winstonchurchill.org/), người nhận Nobel Văn học năm 1953, từng kể việc rèn ngôn ngữ như vậy thời nhỏ quan trọng với mình ra sao:
+
+> By being so long in the lowest form I gained an immense advantage over the cleverer boys. They all went on to learn Latin and Greek and splendid things like that. But I was taught English. We were considered such dunces that we could learn only English. Mr. Somervell  -  a most delightful man, to whom my debt is great  -  was charged with the duty of teaching the stupidest boys the most disregarded thing–namely, to write mere English. He knew how to do it. He taught it as no one else has ever taught it. Not only did we learn English parsing thoroughly, but we also practised continually English analysis. Mr. Somervell had a system of his own. He took a fairly long sentence and broke it up into its components by means of black, red, blue, and green inks. Subject, verb, object: Relative Clauses, Conditional Clauses, Conjunctive and Disjunctive Clauses! Each had its colour and its bracket. It was a kind of drill. We did it almost daily. As I remained in the Third Form three times as long as anyone else, I had three times as much of it. I learned it thoroughly. Thus I got into my bones the essential structure of the ordinary British sentence  -  which is a noble thing. And when in after years my schoolfellows who had won prizes and distinction for writing such beautiful Latin poetry and pithy Greek epigrams had to come down again to common English, to earn their living or make their way, I did not feel myself at any disadvantage. Naturally I am biased in favor of boys learning English. I would make them all learn English: and then I would let the clever ones learn Latin as an honour, and Greek as a treat. But the only thing I would whip them for is not knowing English, I would whip them hard for that.
 
 > – My Early Life: A Roving Commission, Thornton Butterworth [UK] and Charles Scribner’s Sons [US], 1930)
 
-而美国总统 Abraham Lincoln 也非常重视语法。 林肯没上过几年学，然而却深信上帝给了他一个使命要他完成。（人群中总是有一些人 —— 绝非多数 —— 存在这种古怪的直觉，不管他们有没有宗教信仰。比如中文作家王朔就曾经如此写道：“我知道我是有来历的，走在芸芸众生中这种感觉尤为强烈……” 我猜这不是王朔在装蛋，他只是很多拥有这种古怪直觉的人之一而已。）
+> **Ghi chú biên tập trước khi áp dụng:** Đoạn hồi ký kể trải nghiệm riêng của Churchill với thầy Somervell và cách phân tích câu bằng màu. Câu cuối nhắc đánh đòn học sinh là lời trong nguồn lịch sử, không phải biện pháp dạy học bản Việt hóa khuyến nghị. Có thể giữ ý luyện phân tích đều đặn mà không dùng hình phạt thể chất hoặc miệt thị người học.
+
+Tổng thống Mỹ Abraham Lincoln cũng rất coi trọng ngữ pháp, theo tác giả. Lincoln không đi học được nhiều năm nhưng tin chắc Chúa giao cho mình một sứ mệnh. Trong đám đông luôn có một số người, tuyệt đối không phải đa số, có trực giác kỳ lạ ấy, dù có tín ngưỡng tôn giáo hay không. Ví dụ nhà văn Trung Quốc Vương Sóc từng viết: “Tôi biết mình có lai lịch, đi giữa muôn người cảm giác ấy càng mạnh…”. Tôi đoán Vương Sóc không ra vẻ; ông chỉ là một trong nhiều người có trực giác kỳ lạ ấy, tác giả nói.
 
 ![](images/figure53.png)
 
-为了成为一个有影响力的公众人物，林肯经常要步行很久去参加 William Mentor Graham 的演讲培训。可是林肯却长期进步缓慢，表现欠佳。还好林肯悟性不错，意识到语法的重要：
+Để trở thành nhân vật công chúng có ảnh hưởng, theo tường thuật của tác giả, Lincoln thường đi bộ rất lâu đến học diễn thuyết với William Mentor Graham. Nhưng trong thời gian dài ông tiến bộ chậm và thể hiện chưa tốt. May là Lincoln có khả năng lĩnh hội, nhận ra ngữ pháp quan trọng:
 
 > “Spoke to me one day and said: ‘I had a notion of studying grammar’, recalled Graham. “There was none in the village and I said to him: ‘I know of a grammar at one Vance’s (a man named John Vance), about six miles. Got up and went on foot to Vance’s and got the book. He soon came back and told me he had it. He then turned his immediate and almost undivided attention to English grammar. The book was Kirkham’s Grammar, an old (1826) volume.”
 
@@ -61,9 +71,11 @@
 
 ![](images/figure54.png)
 
-– image from [American Treasures of the Library of Congress](http://www.loc.gov/exhibits/treasures/trr132.html)
+Ảnh từ [*American Treasures* của Thư viện Quốc hội Mỹ](http://www.loc.gov/exhibits/treasures/trr132.html).
 
-而林肯也发现很多人的思维混乱和语法欠佳有着紧密的联系：
+> **Ghi chú biên tập về ấn bản Kirkham:** [Library of Congress xác nhận sách ngữ pháp của Lincoln là bản 1828](https://blogs.loc.gov/loc/2021/08/back-to-school-abe-lincolns-grammar-book/), cùng câu chuyện mượn từ John Vance ở cách khoảng sáu dặm. Trích đoạn nguồn ghi 1826 được giữ để đối chiếu, không coi mốc ấy là thông tin đã được xác nhận về cuốn sách hiện lưu giữ.
+
+Tác giả còn nói Lincoln nhận thấy tư duy lộn xộn ở nhiều người gắn chặt với ngữ pháp kém, rồi dẫn đoạn sau:
 
 > Monday, [April] 24th
 
@@ -71,224 +83,281 @@
 
 > – Lincoln the Lover: III. The Tragedy, Wilma Frances Minor
 
-可为什么这么重要的东西竟然招来大多数人的厌烦甚至憎恨呢？也许是因为语法学习很难看到直接受益。人们大多不喜欢不直接的东西。根源又在于人天生短视。这并不丢人，因为这是基因决定的：
+> **Ghi chú biên tập về người viết đoạn nhật ký:** Đoạn trích thuộc [nhật ký George W. Julian ngày 24/4/1865, trang 337 của bản in tại Indiana University](https://scholarworks.iu.edu/journals/index.php/imh/article/download/5948/5617/17797), không phải của Lincoln. Bản dịch giữ cách dẫn và tên bài nguyên tác trích để thể hiện sai khác; nội dung nhắc “President Johnson” cũng không phải bằng chứng Lincoln viết lời ấy.
+
+Vì sao thứ quan trọng thế lại khiến đa số người chán, thậm chí ghét? Có lẽ học ngữ pháp khó thấy lợi ích trực tiếp, tác giả nghĩ. Đa số không thích điều gián tiếp; gốc rễ là con người vốn thiển cận. Ông cho rằng chẳng có gì đáng xấu hổ vì điều ấy do gene quyết định:
 
 > the evolutionary costs and benefits of innovations work like the economics of pharmaceutical research. The Pfizer Corporation spent over $I00 million and many years developing the drug Viagra before the drug made a single cent of profit. The costs accumulated early, and the benefits came only later. Drug companies can cope with this delayed gratification, and have the foresight to undertake the research that leads to such profitable innovations. But evolution has no foresight. It lacks the long-term vision of drug company management. A species can’t raise venture capital to pay its bills while its research team tries to turn an innovative idea into a market-dominating biological product. Each species has to stay biologically profitable every generation, or else it goes extinct.
 
 > – The Mating Mind: How Sexual Choice Shaped the Evolution of Human Nature, by Geoffrey Miller, ANCHOR BOOKS 2000
 
-因为短视其实是人类的本性，所以，我们总是不由自主地被它所左右。人们学骑自行车比学语法快，并不仅仅是因为语法更为复杂，还可能更是因为骑自行车很快就能学会，而后就可以马上体会到各种便捷；而学习语法不仅单调枯燥、耗时费力，而且最要命的是总是觉得 “不知道学它究竟有什么用？” 这个问题，是很多人放弃学习的根本原因 —— 我在《把时间当作朋友》里有详尽的论述。
+Vì thiển cận thực ra là bản tính con người, theo tác giả, ta luôn không tự chủ mà bị nó chi phối. Người ta học xe đạp nhanh hơn học ngữ pháp không chỉ vì ngữ pháp phức tạp hơn, mà có lẽ còn vì xe đạp học nhanh rồi lập tức thấy tiện. Học ngữ pháp vừa đơn điệu, khô khan, tốn công, vừa đáng ngại nhất ở chỗ luôn nghĩ “rốt cuộc học để làm gì?”. Câu hỏi ấy là căn nguyên khiến nhiều người bỏ học; tôi đã bàn kỹ trong *Hãy coi thời gian là bạn*, tác giả nói.
 
-丘吉尔，不仅语法功底扎实，据说词汇量也是现代人中最大的。据说他所使用过的词汇（含文稿和讲演稿）总计超过六万个，而大多数普通人能够熟练使用的词汇，书面语中最多两万个左右，而口语中不过区区五千个左右。可是丘吉尔也并不是完人：
+> **Ghi chú biên tập về lập luận sinh học:** Đoạn English dùng phép so sánh kinh tế để nói tiến hóa không có khả năng dự liệu như người quản lý. Điều đó không tự chứng minh sự thiếu kiên nhẫn của từng người do gene quyết định hoặc không thể thay đổi. Các mốc tiền bạc và quá trình phát triển thuốc là dữ liệu trích trong sách, không phải hướng dẫn sử dụng thuốc. Khi học, có thể tạo phản hồi gần hơn bằng một câu mình đọc hiểu hoặc viết tốt hơn sau khi tra quy tắc, thay vì coi tính kiên nhẫn là đặc điểm đã định sẵn.
 
-> If one were looking for an iconic image of the Second World War that summed up Allied pluck and derring-do it would have to be that of Winston Churchill with index and middle finger raised in a defiant “V” for “Victory” sign. Revered for his strength of character and his willful defiance of Nazi Germany when Britain stood alone against the Third Reich, Winston Churchill is cherished throughout the world as one of the war’s most heroic figures. His legacy during one of the darkest eras in human history paints a portrait of the man as a wonderful, larger-than-life personality—a characterization that overshadows his faults and shortcomings in those crucial years. But those faults and shortcomings had a devastating legacy of their own. Winston Churchill: The Flawed Genius of World War II examines the decisions and policies Churchill made in the vital months between June 1940 and December 1941 that prolonged the war, allowed for millions of casualties, and left half of Europe behind the Iron Curtain. In 1941 Britain was waging a successful campaign against Italy in North Africa. General O’Connor could in fact have beaten them altogether and thereby prevented Rommel and his army from even landing. However, Churchill made the fatal decision to switch key British and Commonwealth divisions from North Africa to Greece in order to defend that country from German invasion, a heroic but guaranteed-to-fail gesture, and fail it did. When the United States entered the war, George Marshall’s victory plan was to launch an invasion of the Continent—what would become operation Overlord—early in 1943 and force a direct engagement of the enemy. But Churchill’s decision to remove troops to Greece stalled Britain’s victory in North Africa and enabled Rommel and his crack Afrika Korps to gain a foothold. Now Churchill urged Roosevelt to help beleaguered British troops in the African desert and that meant diverting troops from Marshall’s victory plan. It made landing in northwestern Europe entirely impossible, and D-day, the main objective of attacking Germany directly, through France, was postponed until June 1944. As a result, by the time the Allies landed in Normandy, Soviet troops were further west than they would have been in 1943. In that crucial year, millions of civilians—Jewish, Russian, Polish, and German—died who might have lived. By the war’s end Stalin had already eclipsed half of Europe. Had D-day been earlier the Iron Curtain may have fallen with very different and diminished borders and millions of Central Europeans could have lived in freedom from 1945-1989. While Churchill’s was only one player in the drama that allowed this calamity to happen, Christopher Catherwood contends that it certainly tarnished the legacy of his “finest hour.”
+Churchill không chỉ vững ngữ pháp; nghe nói vốn từ của ông cũng lớn nhất trong số người hiện đại, tác giả kể. Từ ông đã sử dụng trong cả bản thảo và diễn văn được nói là hơn 60.000; đa số người bình thường dùng thành thạo nhiều nhất khoảng 20.000 trong văn viết, còn khẩu ngữ chỉ khoảng 5.000. Nhưng Churchill cũng không hoàn hảo:
+
+> If one were looking for an iconic image of the Second World War that summed up Allied pluck and derring-do it would have to be that of Winston Churchill with index and middle finger raised in a defiant “V” for “Victory” sign. Revered for his strength of character and his willful defiance of Nazi Germany when Britain stood alone against the Third Reich, Winston Churchill is cherished throughout the world as one of the war’s most heroic figures. His legacy during one of the darkest eras in human history paints a portrait of the man as a wonderful, larger-than-life personality - a characterization that overshadows his faults and shortcomings in those crucial years. But those faults and shortcomings had a devastating legacy of their own. Winston Churchill: The Flawed Genius of World War II examines the decisions and policies Churchill made in the vital months between June 1940 and December 1941 that prolonged the war, allowed for millions of casualties, and left half of Europe behind the Iron Curtain. In 1941 Britain was waging a successful campaign against Italy in North Africa. General O’Connor could in fact have beaten them altogether and thereby prevented Rommel and his army from even landing. However, Churchill made the fatal decision to switch key British and Commonwealth divisions from North Africa to Greece in order to defend that country from German invasion, a heroic but guaranteed-to-fail gesture, and fail it did. When the United States entered the war, George Marshall’s victory plan was to launch an invasion of the Continent - what would become operation Overlord - early in 1943 and force a direct engagement of the enemy. But Churchill’s decision to remove troops to Greece stalled Britain’s victory in North Africa and enabled Rommel and his crack Afrika Korps to gain a foothold. Now Churchill urged Roosevelt to help beleaguered British troops in the African desert and that meant diverting troops from Marshall’s victory plan. It made landing in northwestern Europe entirely impossible, and D-day, the main objective of attacking Germany directly, through France, was postponed until June 1944. As a result, by the time the Allies landed in Normandy, Soviet troops were further west than they would have been in 1943. In that crucial year, millions of civilians - Jewish, Russian, Polish, and German - died who might have lived. By the war’s end Stalin had already eclipsed half of Europe. Had D-day been earlier the Iron Curtain may have fallen with very different and diminished borders and millions of Central Europeans could have lived in freedom from 1945-1989. While Churchill’s was only one player in the drama that allowed this calamity to happen, Christopher Catherwood contends that it certainly tarnished the legacy of his “finest hour.”
 
 > – Winston Churchill: The Flawed Genius of WWII by Christopher Catherwood
 
-在精彩演讲、大众影响力方面同等杰出优秀的是另外一位被称为恶魔的家伙，希特勒。可是希特勒的语法要多差就有多差：
+> **Ghi chú biên tập về số liệu và đánh giá lịch sử:** Các lượng từ “hơn 60.000”, “khoảng 20.000” và “khoảng 5.000” ở trên đi cùng lời “nghe nói” của tác giả, chưa có phương pháp đếm hoặc nguồn kiểm chứng trong đoạn. Đoạn English vừa trích giới thiệu cách đánh giá của Christopher Catherwood về các quyết định thời chiến, gồm những giả định “nếu đã làm khác”; không phải chứng minh chắc chắn một kịch bản lịch sử khác sẽ xảy ra. Không suy từ khả năng diễn đạt đến sự đúng đắn của mọi quyết định.
+
+Một người khác cũng xuất sắc tương đương về diễn thuyết và ảnh hưởng công chúng, nhưng được gọi là ác quỷ, là Hitler. Thế mà ngữ pháp của Hitler lại tệ hết mức, theo tác giả:
 
 > In August 1908, Hitler wrote a letter to Gustl that makes plain his mediocre success in mastering the most elementary usages of German spelling and grammar, not to mention any coherent subject matter. The handwriting is childish, two words are scratched out and written over, other words are misspelled, punctuation is haphazard, and the style is rambling and disconnected. German spelling does not present the same kind of difficulty to the young student that English does. No vestigial spellings like though, touch, read, colonel, psalm, and such exist in German, which is spelled with dependable regularity. For young Hitler, however, the German language was mined with booby traps. The spelling in his letter is often erratic: dann becomes dan, sofort becomes soffort, Katarrh is spelled chartar, dies is spelled with two s’s, and so on. His use of capitals in this correspondence is also unpredictable.* Punctuation is omitted. In the August letter, as in others, he never used a question mark. He asks “Who really published the newspaper I sent you last time” without a question mark. In the sentence “Have you read the last decisions of the municipal council in connection with the new Teater,” Theater is spelled without the h, which is part of the German as well as the English word, and again the sentence ends without a question mark. So does the following sentence: “Do you know any details.” The pronoun sie, meaning either “they” or “she,” is not capitalized in German usage, although Sie, the formal pronoun meaning “you,” is. Hitler, however, capitalizes sie for “they” and for “she,” just as he haphazardly capitalizes other pronouns that should be lowereased. Words are hopelessly run togetherin one case seven of them, to make one long misspelled and inchoate formulation.
 
 > – The Making of Adolf Hitler: The Birth and Rise of Nazism by Davidson, Eugene.
 
-正如有人就是五音不全唱歌跑调一样，我想肯定有些人对语法也存在类似的障碍吧？正如五音不全的人无论怎么努力也不可能唱出天籁之音，我们却不能因此不允许他 K 歌一样，有些人认真学习语法了却总也不能学的很好，那又怎么样呢？我们不应该因此就嘲弄他，也没什么权利因此就禁止他说话写字吧？某种意义上，使用文字跟 K 歌也差不多，有些时候关键并不在于说得写得多好，而在于说得写得究竟有多投入。
+Giống như có người không phân biệt được cao độ và hát lạc giọng, tôi nghĩ chắc cũng có người gặp trở ngại tương tự với ngữ pháp. Theo cách so sánh của tác giả, người hát không đúng giọng dù cố thế nào cũng không thể hát như thiên thần, nhưng ta không thể vì vậy mà cấm họ hát karaoke. Có người đã nghiêm túc học ngữ pháp mà vẫn chưa học tốt thì đã sao? Ta không nên chế giễu hoặc tự cho mình quyền cấm họ nói và viết. Ở một nghĩa nào đó, dùng chữ cũng giống hát karaoke: đôi khi điều then chốt không phải nói hoặc viết hay đến đâu, mà là nhập tâm đến mức nào.
 
-## 3. 阻碍语法学习的幻觉 —— “那我没学中文语法不一样样能用好中文么？”
+> **Ghi chú biên tập:** Đoạn về thư Hitler nói tới văn bản cụ thể được sách phân tích, không phải phép chẩn đoán năng lực hoặc bằng chứng ngữ pháp gây ra hành vi chính trị. So sánh với hát chỉ là ví von; không kết luận một người sẽ không bao giờ tiến bộ. Ý cuối về quyền nói, viết và việc không chế giễu người học được giữ nguyên, dù phần đầu chương có lời phê bình rất nặng.
 
-拒绝学习等于拒绝进化。用个不太恰当的类比来说，拒绝学习的人就好像是甘心永远做猴子而不想进化成人一样。然而，很多人拒绝进化往往是因为他们认为自己有足够合理的理由。比如，很多人拒绝学习英语语法的时候，常常用这样的一个貌似无法反驳的理由：
+## 3. Ảo tưởng cản trở học ngữ pháp: “Tôi đâu học ngữ pháp tiếng Trung mà vẫn dùng tốt đấy thôi?”
 
-> 那你看我根本就没有学过中文语法，那不也一样用得好好的么！所以说啊，语法这东西没用，学它干脆就是浪费时间！
+Từ chối học là từ chối tiến hóa, tác giả nói. Dùng một phép so sánh mà chính ông thừa nhận chưa thật phù hợp, người từ chối học giống như cam chịu mãi làm khỉ, không muốn tiến hóa thành người. Nhiều người từ chối tiến hóa vì tưởng mình có đủ lý do hợp lý. Chẳng hạn khi từ chối học ngữ pháp tiếng Anh, họ thường dùng một lý do trông như không thể phản bác:
 
-果真如此么？
+> Nhìn tôi đây, có học ngữ pháp tiếng Trung đâu mà vẫn dùng tốt đấy thôi! Thế nên ngữ pháp vô dụng, học chỉ phí thời gian!
 
-其实，还有比这更为夸张的例子他们没有想到：哪怕不识字的文盲（他们当然没有学过语法）在使用母语的时候也几乎没有病句。然而这并不能证明语法没用。即便是不识字的文盲，也身处一个母语环境，身边的人都在说正确的句子。语言学习的最基本手段就是模仿，你说什么，我就跟着说什么，准没错 —— 而事实上，我们说的话之中，几乎 99.9%是在重复我们曾经听到的、看到的句子。所以，即便是文盲，也不可能每一句话都是病句。不过，显而易见的另外一个事实是文盲通常说的话都是表达简单思想的，用得都是简单词汇、简单句型，这也从另外一个方面降低了他们犯错的可能性。
+Có thật vậy không?
 
-顺带说，这也是我为什么极力反对学生跑到所谓的 “英语角” 去 “学英语” 的根本原因。因为在英语角里，大多数人所说的并不是真正正确的英文，而更可能是 “原创英文”。一方面身边的人都在说不正确的句子，另外一方面自己又坚决不学语法，不是找死是什么？有人孤独求败，英语角里可好，是集体自杀 —— 竟然还都以为在联欢……
+Thực ra còn ví dụ mạnh hơn mà họ chưa nghĩ tới, theo tác giả: ngay cả người không biết chữ, đương nhiên chưa học ngữ pháp theo cách ông nói, khi dùng tiếng mẹ đẻ cũng gần như không nói câu sai. Nhưng điều đó không chứng minh ngữ pháp vô ích. Người không biết chữ vẫn ở trong môi trường tiếng mẹ đẻ, xung quanh đều nói câu đúng. Phương pháp học ngôn ngữ cơ bản nhất là bắt chước: bạn nói gì, tôi nói theo, chắc không sai, theo ông. Thực tế, ông khẳng định gần 99,9% lời ta nói là lặp lại câu đã nghe hoặc thấy. Vì thế, ngay cả người không biết chữ cũng không thể câu nào cũng sai. Nhưng tác giả còn coi một điều khác là hiển nhiên: người không biết chữ thường chỉ diễn đạt ý đơn giản bằng từ đơn giản và mẫu câu đơn giản, nhờ vậy giảm khả năng mắc lỗi.
 
-很多人认为自己 “没学过语法不也一样可以熟练使用母语么？”，实际上主要是因为他们不由自主地高估了自己。
+> **Ghi chú biên tập về ngôn ngữ và khả năng đọc viết:** Biết ngữ pháp một cách tự nhiên không đồng nghĩa với biết gọi tên và phân tích quy tắc trong sách. [Giáo trình ngôn ngữ học NOVA giải thích tri thức ngữ pháp không phụ thuộc việc biết đọc viết và tính tạo sinh của ngôn ngữ](https://pressbooks.nvcc.edu/eng200h5p/chapter/1-2-what-grammars-are-and-arent/). Người không biết chữ vẫn có thể dùng ngôn ngữ phong phú và diễn đạt ý phức tạp. Con số 99,9% không có dữ liệu đi kèm trong nguồn; ngôn ngữ cho phép tạo câu mới, không chỉ nhắc lại nguyên câu từng nghe. Phép ví “khỉ tiến hóa thành người” và “từ chối tiến hóa” ở đây là lời hùng biện của tác giả, không phải mô tả tiến hóa sinh học hoặc thước đo giá trị con người.
 
-> 人们特别容易高估自己，绝大多数成年人对自己的母语水平过度自信。他们以为自己的母语水平很高，却忘了另外一个事实：很可能他们的母语水平仅仅处在对母语使用者来说只不过是够格的级别上。只不过，大多数成年人从学校毕业之后（按照我们的教育体系教学内容设置来看，更可能是高中毕业之后）不再被强制参加各种语文考试，不再有机会因考试成绩差而自卑，于是自然而然地认为自己的语文水准已经“相当高”——“总比中学生强吧？”他们这样想，可事实上还真的不见得。多少本科毕业生（甚至包括相当部分的研究生、博士）走入社会之后，竟然写不出一份像样的租房合同，或者竟然不能够完全读懂自己所签写的雇佣协议。很多人听人讲话、读人文章之后常常断章取义，其实并非出自故意，只不过是文字理解水平太差乃至于经常“听不到”、“看不到”一些重要内容而已。不妨想像一下，绝大多数人（这个比例绝对会超过99%）无论多么认真地写一篇文稿，无论自己反复修改过多少次，能够正式出版之前，拿到编辑手里之后“一字都不需改动”的可能性几乎是零——更可能的存在着一些有意无意的错别字、或隐蔽或明显的语法错误、自以为是的表达等等，往往需要另外一个人反复推敲才行。很多人忽视母语的修炼，像鸵鸟遇到危险时只顾着把头埋起来一样一头扎到英语学习中去，其实不见得是有意而为之，更深层次的原因很可能仅仅是对自己母语水平的错误估计。
+Tiện nói, đây cũng là căn nguyên khiến tôi phản đối mạnh việc học sinh đến các “góc tiếng Anh” để “học tiếng Anh”, tác giả nói. Theo ông, ở đó đa số người không nói tiếng Anh thực sự đúng mà có lẽ nói “tiếng Anh tự chế”. Một bên người xung quanh nói câu sai, một bên bản thân kiên quyết không học ngữ pháp, chẳng phải tự tìm đường chết sao? Có người một mình cầu bại; ở góc tiếng Anh lại là “tự sát tập thể” mà còn tưởng đang liên hoan, theo cách ví gay gắt của tác giả.
 
-大多数人的母语语法实际上并不及格，只不过他们已经从学校毕业，就因此认为自己已经 “过关” 了。教育体系注定失败的重要原因之一就在于每一个科目都要人为地设置一个 100 分的标准之后再设定个 60 分的及格线，而完全不顾那标准事实上有多么荒唐。数学 100 分的学生真的就 100%掌握了数学知识么？英语 60 分的学生真的就掌握了所有英语知识的 60%么？满分 100 分的语文考试一贯只能得个八九十分的大多数人，难道就真的一毕业就 “自动合格” 了么？
+Nhiều người nghĩ “tôi chưa học ngữ pháp mà vẫn dùng thành thạo tiếng mẹ đẻ”, theo tác giả chủ yếu vì họ vô thức đánh giá mình quá cao.
 
-而另外一方面，他们在高估了自己的同时，又降低了标准。他们一不小心就把 “熟练使用母语” 自动降低到 “能够用母语熟练地进行日常交流” 的水平上 —— 菜市场上的流利与熟练和正式场合中的流利与熟练根本不是一回事。一旦想写文章给别人读、或者当众讲话给很多人听的时候，大多数人就会瞬间体会到自己的语法有多么糟糕，进而迅速放弃，而后开始对讲演、写文章产生抗拒情绪。调查表明，在任何文化中，人们最为恐惧的第一件事儿是死亡，而紧随其后的就是当众讲话。不过，能够意识到自己的语法差还算是清醒的，绝大多数人把自己的糟糕表现归咎于诸如心理素质不好、发挥太差、准备不充分之类听起来相对 “冠冕堂皇” 得多的理由，而回避自己在两个最重要的方面彻底不及格的事实：语法和思维能力。为了能够有效表达，就算是林肯不也老老实实地去钻研了好几年的语法才放心大胆参加竞选的么？
+> Người ta rất dễ đánh giá mình quá cao; đại đa số người trưởng thành quá tự tin về tiếng mẹ đẻ. Họ tưởng trình độ rất cao nhưng quên rằng có thể nó mới chỉ ở mức đủ dùng đối với người bản ngữ. Chỉ vì sau khi ra trường, theo cách bố trí nội dung giáo dục của chúng ta có lẽ là sau trung học phổ thông, phần lớn không còn bị buộc làm các bài thi tiếng mẹ đẻ, không còn dịp tự ti vì điểm kém, nên tự nhiên cho rằng mình đã “khá giỏi”. “Ít nhất cũng hơn học sinh trung học chứ?”, họ nghĩ, nhưng thực tế chưa chắc. Biết bao người tốt nghiệp đại học, kể cả một bộ phận đáng kể cao học và tiến sĩ, ra đời lại không viết nổi hợp đồng thuê nhà ra hồn, hoặc không hiểu hết thỏa thuận tuyển dụng mình ký. Nhiều người nghe lời nói hoặc đọc bài rồi cắt nghĩa ngoài ngữ cảnh, không cố ý mà chỉ vì đọc hiểu quá yếu, thường “không nghe thấy”, “không nhìn thấy” nội dung quan trọng. Hãy tưởng tượng: đại đa số người, tỷ lệ này chắc chắn hơn 99% theo tác giả, dù viết cẩn thận và tự sửa bao nhiêu lần, khả năng bản thảo đến tay biên tập viên trước khi xuất bản mà “không cần sửa một chữ” gần như bằng không. Nhiều khả năng vẫn có lỗi chữ vô tình hoặc hữu ý, lỗi ngữ pháp kín hoặc rõ, cách diễn đạt tự cho là đúng, v.v., cần người khác nghiền ngẫm nhiều lần. Nhiều người bỏ qua rèn tiếng mẹ đẻ, lao đầu vào tiếng Anh như đà điểu gặp nguy chỉ biết vùi đầu xuống. Điều ấy chưa chắc có chủ ý; nguyên nhân sâu hơn có lẽ chỉ là đánh giá sai trình độ tiếng mẹ đẻ của mình.
 
-另外，很多人所谓的 “我从来没学过语法” 干脆就是彻头彻尾的幻觉 —— 从小到大上了那么多语文课，考过那么多次的语文考试，怎么可能是一点都没学？这还不算平时潜移默化通过各种输入手段获得的语法知识，以及对正确语法的所谓 “母语直觉”。如果说 “从来没认真学过”，这倒是真的 —— 而又恰恰因为如此，才导致大多数人语文表达能力并不良好（甚至不及格）。我无意劝每一个人都去认真学习语法（无论是中文还是英文），我只是把道理讲清楚。之后就是读者自己的选择了，你觉得自己是个有知识有文化的人呢？还是一个一生只需要短句断句就可以生存了的人呢？各取所需好了。
+Theo tác giả, ngữ pháp tiếng mẹ đẻ của đa số thực ra chưa đạt, chỉ vì đã ra trường nên tưởng mình “qua cửa”. Một nguyên nhân quan trọng khiến hệ thống giáo dục nhất định thất bại, ông lập luận, là môn nào cũng đặt ra thang 100 rồi chọn 60 làm điểm đỗ, bất kể tiêu chuẩn ấy vô lý đến đâu. Học sinh toán 100 điểm thật sự biết 100% kiến thức toán sao? Tiếng Anh 60 điểm là biết 60% toàn bộ tiếng Anh sao? Đa số người luôn chỉ được 80 hoặc 90 trên 100 ở môn tiếng mẹ đẻ, chẳng lẽ vừa tốt nghiệp đã “tự động đạt chuẩn”?
 
-## 4. 了解语法书的结构和查询方法
+Mặt khác, trong khi đánh giá mình cao hơn, họ cũng hạ tiêu chuẩn, theo tác giả. Họ vô tình hạ “dùng tiếng mẹ đẻ thành thạo” xuống thành “giao tiếp hằng ngày thành thạo bằng tiếng mẹ đẻ”. Sự trôi chảy và thành thạo ở chợ không phải sự trôi chảy trong hoàn cảnh trang trọng. Khi muốn viết cho người khác đọc hoặc nói trước đông người, phần lớn sẽ lập tức cảm thấy ngữ pháp mình tệ đến đâu, nhanh chóng bỏ cuộc rồi sinh tâm lý chống lại diễn thuyết và viết. Tác giả nói khảo sát cho thấy ở mọi nền văn hóa, điều người ta sợ nhất là chết, ngay sau đó là nói trước đám đông. Dù sao nhận ra ngữ pháp kém còn là tỉnh táo, theo ông; đại đa số lại đổ cho tâm lý yếu, thể hiện không tốt, chuẩn bị chưa đủ, những lý do nghe “đường hoàng” hơn, để tránh sự thật rằng mình hoàn toàn chưa đạt ở hai mặt quan trọng nhất: ngữ pháp và tư duy. Muốn diễn đạt hiệu quả, chẳng phải ngay Lincoln cũng nghiêm túc nghiên cứu ngữ pháp mấy năm rồi mới yên tâm mạnh dạn tranh cử sao, tác giả hỏi.
 
-读语法书还是有一点点方法的。很多人搞不定语法的原因只不过是因为心太急。总想一下子把一本语法书翻完，结果欲速不仅不达，并且还永远停滞不前。拿来一本语法书，应该先把它想象成地图。你见过谁买来一张地图之后闷头坐在那里把那地图的每一个角落都看上一遍之后直接把那地图背下来？绝大多数人又不是训练有素的特种兵，一生都无必要那么做。
+> **Ghi chú biên tập về tiêu chuẩn và bối cảnh:** Các tỷ lệ hơn 99%, thứ hạng nỗi sợ ở “mọi nền văn hóa” và kết luận hệ thống giáo dục nhất định thất bại chưa có khảo sát cụ thể trong đoạn. Thang 100/60 là ví dụ thuộc bối cảnh tác giả, không tự chuyển thành thang đánh giá Việt Nam. Viết hợp đồng và hiểu thỏa thuận còn cần kiến thức chuyên môn, không chỉ ngữ pháp; lo khi nói trước công chúng cũng không đủ kết luận tư duy kém. Việc văn bản cần biên tập không đồng nghĩa người viết không biết ngữ pháp tiếng mẹ đẻ. Hình ảnh đà điểu vùi đầu là ví von phổ biến của nguồn, không dùng như mô tả hành vi sinh học.
 
-拿来一张地图的时候，我们已经知道个大概：那地图是上北下南左西右东，什么样的线条是公路，什么样的线条是地铁，什么样的标志是公交站 …… 我们有这样的常识，是因为过去看过一些地图。拿来语法书也一样，大多数语法书的结构都差不多，从 “冠词” 开始讲起，而后名词、代词、动词、形容词、副词、连词等等，而其中关于动词的那一章几乎占语法书的 2/3 篇幅（因为有时态、语态、语气等等诸多细节要讲解）……
+Ngoài ra, nhiều lời “tôi chưa bao giờ học ngữ pháp” chỉ là ảo tưởng hoàn toàn, tác giả nói. Từ nhỏ học bao nhiêu giờ tiếng mẹ đẻ, thi bao nhiêu lần, sao có thể chẳng học chút nào? Chưa kể kiến thức ngữ pháp âm thầm nhận qua các nguồn đầu vào và “trực giác tiếng mẹ đẻ” về câu đúng. Nếu nói “chưa từng học nghiêm túc” thì đúng hơn, theo ông; cũng chính vì thế mà đa số diễn đạt bằng tiếng mẹ đẻ chưa tốt, thậm chí chưa đạt. Tôi không định khuyên tất cả phải học ngữ pháp nghiêm túc, dù tiếng Trung hay tiếng Anh; tôi chỉ nói rõ lý lẽ. Sau đó độc giả tự chọn: bạn coi mình là người có kiến thức, có văn hóa, hay người cả đời chỉ cần câu ngắn, câu rời là sống được? Cứ chọn điều mình cần, tác giả kết lại.
 
-正如我们想去某个地方的时候要去查地图一样，我们想要了解哪一方面的语法知识，就去查语法书。语法书不可能看一遍就全记住，正如地图看一遍不大可能全记住一样。语法书基本上都是查着查着看完并谙熟于心的，就好像地图也是查着查着就不用再查了一样。地图上总是有一些地方我们一辈子都不需要去，而语法点之中也有一些人们一辈子都可能用不到。把最常用的语法知识经过反复查阅应用牢记于心，剩下的，需要的时候拿出语法书查得到就好了。
+> **Ghi chú biên tập cho người Việt:** Có thể dùng hiểu biết tiếng Việt để đối chiếu cách tiếng Anh biểu đạt, đồng thời nhận ra chỗ không tương ứng. Mục tiêu thực hành là hiểu rõ hơn và diễn đạt đúng ngữ cảnh, không phải chia con người thành có hay không có văn hóa. Một nhóm hội thoại có phản hồi phù hợp vẫn có thể giúp luyện; lời ví “tự sát tập thể” ở trên là phê bình cường điệu, không phải mô tả tác hại đã đo của mọi câu lạc bộ tiếng Anh.
 
-语法书当然要比一般的地图更为复杂一些。除了告诉我们该书的基本结构的目录之外，重要的还有书尾的 “索引”（index）。通过索引，我们可以查得到重要的关键词都在哪些页面出现过。当我们遇到一个没有生词却读不懂的句子之时，我们就可能会猜 “究竟是哪个语法点我没弄清楚才导致这句话我看不懂呢？” 首先要锁定 “功能词”。所谓功能词是指语法书里面专门讲解过的那些词，比如 “that”、“and”、“as”、“of” 等等。
+## 4. Hiểu cấu trúc sách ngữ pháp và cách tra cứu
 
-很久之前，我读到过这么一句话，“Woman as she is, she’s very brave.” 全都是最基础词汇构成的句子，我竟然一头雾水。这种情况下，就只好去查语法书了。查什么呢？这个句子有个功能词 “as”。于是，拿来《朗文英语语法》，翻到索引页（595 页），看到 as 后面的数字标记，告诉我说，关于 “as” 的讲解曾经在以下章节中出现过：
+Đọc sách ngữ pháp cũng có một chút phương pháp. Nhiều người không nắm được chỉ vì quá nóng ruột: muốn lật hết cả cuốn ngay một lần, kết quả càng vội càng không tới, còn mãi dậm chân tại chỗ. Cầm một cuốn sách ngữ pháp, trước tiên hãy tưởng tượng nó là bản đồ, tác giả đề nghị. Bạn từng thấy ai mua bản đồ rồi ngồi cúi đầu xem hết mọi ngóc ngách, sau đó học thuộc luôn chưa? Đại đa số không phải lính đặc nhiệm được đào tạo, cả đời chẳng cần làm vậy.
+
+Cầm bản đồ, ta đã biết sơ: trên Bắc dưới Nam, trái Tây phải Đông; nét nào là đường bộ, nét nào là metro, ký hiệu nào là bến xe buýt… Ta có hiểu biết ấy vì từng xem bản đồ. Sách ngữ pháp cũng vậy, theo tác giả: phần lớn cấu trúc gần nhau, bắt đầu từ mạo từ rồi danh từ, đại từ, động từ, tính từ, trạng từ, liên từ, v.v. Chương động từ gần như chiếm hai phần ba cuốn, vì còn nhiều chi tiết về thì, thể chủ động và bị động, thức, v.v.
+
+Cũng như muốn đến một nơi thì xem bản đồ, muốn hiểu mặt ngữ pháp nào thì tra sách. Không thể đọc một lần mà nhớ hết ngữ pháp, như khó xem bản đồ một lần mà thuộc. Theo tác giả, sách ngữ pháp về cơ bản được đọc hết và nắm vững dần qua tra cứu, như bản đồ tra mãi rồi không cần tra nữa. Có chỗ trên bản đồ cả đời không cần đến; cũng có điểm ngữ pháp một số người cả đời chẳng dùng. Hãy ghi nhớ kiến thức thường gặp bằng nhiều lần tra và áp dụng; phần còn lại biết tìm khi cần là được.
+
+Tất nhiên sách ngữ pháp phức tạp hơn bản đồ thông thường. Ngoài mục lục cho biết cấu trúc, phần quan trọng nữa là chỉ mục, *index*, cuối sách. Nhờ đó biết từ khóa quan trọng xuất hiện ở trang nào. Khi gặp câu không có từ mới mà vẫn không hiểu, ta có thể đoán “điểm ngữ pháp nào mình chưa rõ khiến không hiểu câu?”. Trước tiên khoanh vùng “từ chức năng”, tác giả đề nghị. Ông dùng tên ấy cho các từ được sách ngữ pháp giải thích riêng, như “that”, “and”, “as”, “of”.
+
+Lâu trước, tôi gặp “Woman as she is, she’s very brave.” Câu toàn từ cơ bản nhưng tôi mù mờ. Khi ấy chỉ còn cách tra sách ngữ pháp. Tra gì? Câu có từ chức năng “as”. Tôi lấy *Longman English Grammar*, mở chỉ mục trang 595; các số sau “as” cho biết phần giải thích xuất hiện ở những mục sau:
 
 > **as**: conjunction in clauses concession 1.50, manner 1.47.1 reason 1.48.1, time 1.45.1, as and because 1.48.2; not so much … as 5.13; with past progressive 9.20.2; preposition 8.4.4. the same as 6.30.4 as like, such as App 25.25
-其实，答案已经初见端倪了，到1.50章节看看，就知道as引导的这种句型可用来表达让步逻辑，而到1.48.1章节去看看，就知道这种句型还可以表达因果逻辑。
-而顺手又把《新编英语阅读手册》拿过来，在目录中找到这样一个章节：“As的主要用法和判别（详见语法目录第15页）…（33）”。于是翻到此书的第33页开始读起。一直读到第38页，找到这么一条：
 
-> III. 让步状语从句连词as 虽然，尽管，无论。
-> 1. Busy as he is, he studies English very hard. 尽管他很忙，他还是努力学习英语。
-…
-> 3. Much as I should like to see you, I am afraid you could not have any free time. 虽然我特别愿意见你，但恐怕你不可能有空余时间。
-…
-> 6. Study as he may, he won’t get good marks, because his method of studying is not scientific. 虽然可以学习，但他得不了好分数，因为他的学习方法不科学。
-…（总计六个例句）
-> 这种让步状语从句的特点：把从句里的表语、状语或者实义动词，尽管这就是as，然后再跟随其他成分。
-> 必须注意，本句型偶尔可用于表示原因状语从句。只能根据上下文来判别。如果主句和从句之间在意义上有转折，这从句为让步状语从句；如果主句和从句之间有因果关系，则从句为原因状语从句。例如：<br />
-7.a Old as he is, he dares the danger of icy North. 虽然他老了，但仍敢于冒北方冰寒的危险。<br />
-7.b Old as he is, he has to go to bed early. 因为他老了，他不得不早去睡觉。
-这下我彻底明白“Woman as she is, she’s very brave.”究竟是什么意思了。又过了些日子，读到这么一句：“Isolated as it is, the house is very quiet.”——再也没有什么疑惑了。
-查语法书就这么简单：
+Thực ra đã thấy manh mối. Xem mục 1.50 sẽ biết mẫu do “as” dẫn có thể diễn đạt ý nhượng bộ; xem 1.48.1 sẽ biết mẫu ấy còn có thể diễn đạt nhân quả, theo cách tra của tác giả.
 
-1. 锁定功能词，
-2. 检索索引，
-3. 逐一翻阅相应内容，看看能否找到合适的解答。
+Tôi tiện lấy thêm *Sổ tay đọc tiếng Anh biên soạn mới*, tìm trong mục lục: “Các cách dùng chính của As và cách phân biệt, xem chi tiết mục lục ngữ pháp trang 15… (33)”. Tôi mở trang 33 đọc đến trang 38, tìm được mục:
 
-如果一本语法书中没有找到满意的答案，那就再换一本语法书，最终总能找到答案。有时就算在一本语法书中找到了答案，也可以再翻翻另外一本语法书，因为这么做总是可以找到一些补充的信息。
+> III. Liên từ “as” trong mệnh đề trạng ngữ nhượng bộ: tuy, mặc dù, bất kể.
+>
+> 1. Busy as he is, he studies English very hard. Dù rất bận, anh ấy vẫn chăm học tiếng Anh.
+>
+> …
+>
+> 3. Much as I should like to see you, I am afraid you could not have any free time. Tuy rất muốn gặp bạn, tôi e bạn không thể có thời gian rảnh.
+>
+> …
+>
+> 6. Study as he may, he won’t get good marks, because his method of studying is not scientific. Dù có thể học, anh ấy vẫn không được điểm tốt vì phương pháp học không khoa học.
+>
+> … (tổng cộng sáu câu ví dụ).
+>
+> Đặc điểm của loại mệnh đề nhượng bộ này: đưa vị ngữ danh/tính từ, trạng ngữ hoặc động từ mang nghĩa trong mệnh đề phụ, “mặc dù đây chính là as”, rồi theo sau là các thành phần khác.
+>
+> Cần chú ý mẫu câu này đôi khi được dùng làm mệnh đề trạng ngữ chỉ nguyên nhân. Chỉ có thể phân biệt theo ngữ cảnh: nếu hai mệnh đề tương phản về nghĩa thì mệnh đề phụ là nhượng bộ; nếu có quan hệ nhân quả thì mệnh đề phụ chỉ nguyên nhân. Ví dụ:<br />
+> 7.a Old as he is, he dares the danger of icy North. Tuy đã già, ông ấy vẫn dám đối mặt hiểm nguy của phương Bắc băng giá.<br />
+> 7.b Old as he is, he has to go to bed early. Vì đã già, ông ấy phải đi ngủ sớm.
 
-## 5. 很多中国学生学的是数学语法而不是语言语法
+> **Ghi chú biên tập về đoạn trích:** Cụm “mặc dù đây chính là as” phản ánh một đoạn lỗi hoặc thiếu chữ trong nguyên tác, không phải lời giải cấu trúc có thể dùng trực tiếp. [Oxford giải thích mẫu “Try as he might” là dù cố đến đâu](https://www.oxfordlearnersdictionaries.com/definition/english/as_3). Với “Study as he may”, nghĩa nhượng bộ là “dù anh ấy có học/cố học đến đâu”, không chỉ “dù có thể học” như bản giải nghĩa nguồn. Giữ số 1, 3, 6 và dấu lược vì tác giả chỉ trích một số ví dụ trong nhóm sáu câu, không phải bản dịch bỏ câu. Trang và số mục thuộc ấn bản tác giả đang tra. “Woman as she is” trong câu mẫu hàm ý một định kiến giới của ví dụ cũ; không coi phụ nữ thì đáng lẽ thiếu can đảm. Có thể luyện mẫu nhượng bộ bằng câu “Busy as he is…” ngay trong đoạn này.
 
-很多人用对待初等数学的方式对待英语，这是一种过分简单化的看法，或者说是一种不切实际的想法和做法。
+Đến đây tôi hiểu hẳn “Woman as she is, she’s very brave.” nghĩa là gì. Ít lâu sau gặp “Isolated as it is, the house is very quiet.” thì không còn nghi ngờ gì nữa, tác giả kể.
 
-初等数学其实没什么意思，因为太简单。一切都是确定的，无懈可击的。了解一些无须理解争论的 “公理”，然后再推演或者干脆记忆一堆 “定理” 和 “公式”，而后就可以做到 “无懈可击” 的证明，或者 “正确无误” 的结果。英语语法（事实上所有语言的语法都如此）则很复杂。语法里面很少有公理、定理，更多的是带有众多例外的 “规则”。从这个意义上来说，学好语法显然要比学好初等数学难出许多，干脆不是同一个层面上的事情。
+Tra sách ngữ pháp đơn giản vậy:
 
-我读高中的时候按照我们国家的习惯被分到所谓的 “理科班”。仅凭直觉就知道大多 “理科生” 的所谓优越感是自以为是的幻觉而已。到了微积分和概率统计，数学才真正妙趣横生。因为这个时候，数学已经开始处理复杂性与不确定性 —— 生活的关键本质就在于其复杂性与不确定性。然而那些当初 “充满优越感幻觉的理科生” 早就不再对数学 “感兴趣” 了。
+1. Khoanh vùng từ chức năng.
+2. Tìm trong chỉ mục.
+3. Lần lượt mở nội dung tương ứng, xem có lời giải phù hợp không.
 
-数学也好，英语也罢（或者说任何其他一种语言），其实各自都是描述这个世界的众多方式之一。初等数学（例如算术、代数、几何等等）只是被用来描述这个世界的某一部分，而语言则担负着 “尽量描述整个世界” 的任务，所以显然要比初等数学复杂得多，并且无法做到 “完美” 或者 “相对完美”。
+Một cuốn không có đáp án thỏa đáng thì đổi cuốn khác, cuối cùng luôn tìm được, theo tác giả. Đôi khi tìm được ở một cuốn rồi vẫn có thể xem cuốn nữa, vì làm thế luôn có thêm thông tin bổ sung.
 
-要了解语法的本质。本质上来看，语法并不是 “规定你应该怎么说”，而是 “尽量”“系统地” 解释 “人们为什么普遍这么说”。所以，不能把语法规则当作数学公式，语法规则并不保证按照它拼凑出来的句子一定有意义并且正确。“I saw blue and red snowflakes flying in the river.” 这样的句子，其实没有什么语法规则上的错误，但通常会被认为是明显荒谬的并且毫无意义的。
+> **Ghi chú biên tập cho người Việt:** Chỉ mục có thể tra bằng tên cấu trúc hoặc từ xuất hiện trong câu; không phải khó hiểu nào cũng do một từ chức năng. Mẫu “as” cần xét cách sắp xếp và ngữ cảnh, không chỉ thấy cùng chữ “as” rồi coi mọi mẫu đều giống nhau. Tỷ lệ hai phần ba dành cho động từ và thứ tự mạo từ trước là mô tả của tác giả, không phải bố cục bắt buộc của mọi sách. Khi chưa có lời giải rõ, giữ lại cả câu và đoạn xung quanh để đối chiếu, không ép câu vào mục đầu tiên tìm thấy.
 
-任何自然语言的语法总是由许多的充满例外的规则构成。这个事实是造成许多第二语言习得者对语法憎恨或者厌恶的重要原因之一。但是，这种憎恨和厌恶，实际上是 “头脑简单”、“思考粗暴”、“天真幼稚” 的表现。想想吧，我们所生活的这个世界，“有例外的规则” 无处不在，而相反的 “没有任何例外的规则” 相对要少很多，甚至几乎到了现实中很多存在的地步。杀人肯定是犯罪，要判以重刑，但是，如果杀人者是未成年人，刑罚肯定是不一样的；两厢情愿的性爱是无罪的，但是，如果其中一方小于 14 岁而另外一方大于 18 岁，情况就非常不同了。
+## 5. Nhiều học sinh Trung Quốc học ngữ pháp kiểu toán, thay vì ngữ pháp ngôn ngữ
 
-不要对语法规则感到不耐烦。恰恰是这种不耐烦使得很多人失去了原本可以掌握最重要的工具之一，英语。学英语或者干脆直接用英语没有什么捷径，但肯定有窍门。重要的窍门之一就是保持耐心。这么说太笼统。重要的是，凭什么保持耐心呢？凭了解，透彻的了解。刚刚提到语法的本质只是解释 “人们为什么普遍这么说”，如此看来，就真没有什么理由去 “背” 语法规则了；应该做的是去尝试着 “理解” 语法规则，理解了，就等于记住了。采用 “理解” 这个动作的人，显然比采用 “背” 这个动作的人更容易拥有耐心。再比如，了解到语法不过是 “尽量地系统化了的有例外的规则之集合”，就更容易保持耐心了。不再会觉得那些例外可恨了，只觉得那些例外只是自然存在的而已。不再为语法书的体系而感到困惑了，而是清楚能做到这样 “颇有体系” 已经非常不容易了。
+Nhiều người đối xử với tiếng Anh như với toán sơ cấp. Đó là cái nhìn đơn giản hóa quá mức, hoặc một cách nghĩ và làm không thực tế, theo tác giả.
 
-## 6. 应该给自己买一本以上的语法书
+Toán sơ cấp thực ra chẳng thú vị mấy vì quá đơn giản, ông nhận xét. Mọi thứ xác định, không thể bắt bẻ: biết một số “tiên đề” không cần hiểu hay tranh luận, rồi suy ra hoặc học thuộc một loạt “định lý”, “công thức”, là có chứng minh không thể bác hoặc kết quả chính xác. Ngữ pháp tiếng Anh, cũng như mọi ngôn ngữ, lại phức tạp. Ít có tiên đề, định lý; nhiều hơn là quy tắc có hàng loạt ngoại lệ. Theo nghĩa ấy, tác giả cho rằng học giỏi ngữ pháp rõ ràng khó hơn toán sơ cấp nhiều, căn bản không cùng một mức.
 
-### 6.1. 《朗文英语语法》和《朗文高级英语语法参考及练习》
+Khi học phổ thông, theo thông lệ ở Trung Quốc, tôi được xếp vào lớp ban tự nhiên. Chỉ bằng trực giác cũng biết cảm giác ưu việt của đa số “học sinh ban tự nhiên” chỉ là ảo tưởng tự cho mình đúng, tác giả kể. Đến giải tích và xác suất, thống kê, toán mới thực sự thú vị vì bắt đầu xử lý sự phức tạp và bất định, mà đó chính là bản chất then chốt của đời sống. Nhưng những học sinh từng đầy ảo tưởng ưu việt ấy đã chẳng còn “hứng thú” với toán từ lâu, theo ông.
 
-《朗文英语语法》的作者是路易斯•亚历山大，就是那本影响了几代中国人的《新概念英语》的作者。此书的语法理论结构，是中国学生比较熟悉的。索引非常详细，查询非常方便。应该算作英语学习者、英语使用者、英语教师的案头必备。
+Toán, tiếng Anh hay bất kỳ ngôn ngữ khác đều là một trong nhiều cách mô tả thế giới. Toán sơ cấp, như số học, đại số, hình học, chỉ dùng tả một phần; ngôn ngữ gánh nhiệm vụ cố mô tả cả thế giới, nên theo tác giả rõ ràng phức tạp hơn nhiều và không thể hoàn hảo hoặc tương đối hoàn hảo.
 
-很多人并不知道的是这本书其实还有一个配套的练习册，书名是《朗文高级英语语法参考及练习》L.G. 亚历山大（外语教学与研究出版社）。很少有人在买《朗文英语语法》的时候同时把《朗文高级英语语法参考及练习》一并买回去 —— 实际上却是必须的！
+Cần hiểu bản chất ngữ pháp, tác giả nhấn mạnh. Về bản chất, nó không phải “quy định bạn phải nói thế nào”, mà cố giải thích có hệ thống “vì sao mọi người thường nói như vậy”. Vì thế không thể coi quy tắc ngữ pháp là công thức toán: quy tắc không bảo đảm câu ghép theo nó có nghĩa và đúng. Một câu như “I saw blue and red snowflakes flying in the river.” thực ra không có lỗi quy tắc ngữ pháp, nhưng thường được coi là rõ ràng vô lý và chẳng có nghĩa, theo ông.
 
-《朗文高级英语语法参考及练习》里总计有 60 个单元，每个单元都配备一片阅读文章，随后附加上相应的语法练习题。而每道题的答案之后，都附有诸如 “5.32.1” 之类的索引号 —— 这是在告诉你，这道题所涉及的语法知识，在《朗文英语语法》的 5.32.1 章节中有所论述，至于 5.32.1 章节的页码，到《朗文英语语法》的索引页去查就是了。
+Ngữ pháp của mọi ngôn ngữ tự nhiên luôn gồm nhiều quy tắc đầy ngoại lệ, tác giả nói. Đây là một nguyên nhân quan trọng làm nhiều người học ngôn ngữ thứ hai ghét hoặc chán ngữ pháp. Nhưng theo ông, sự ghét ấy lại thể hiện đầu óc đơn giản, suy nghĩ thô bạo, ngây thơ non nớt. Thử nghĩ xem, “quy tắc có ngoại lệ” ở khắp đời sống; trái lại, “quy tắc không có bất kỳ ngoại lệ nào” ít hơn rất nhiều, thậm chí gần đến mức “tồn tại rất nhiều trong thực tế”, như câu nguồn đang ghi. Tác giả đưa hai ví dụ pháp luật: giết người chắc chắn là tội phải chịu hình phạt nặng, nhưng nếu người gây ra là người chưa thành niên thì hình phạt chắc chắn khác; quan hệ tình dục tự nguyện giữa hai bên không có tội, nhưng nếu một bên dưới 14 tuổi, bên kia trên 18 tuổi thì tình huống rất khác.
 
-### 6.2. 《剑桥中级英语语法》
+> **Ghi chú biên tập về phép so sánh:** Cụm “tồn tại rất nhiều trong thực tế” mâu thuẫn với “ít hơn rất nhiều” ngay trước trong nguyên tác, có thể là lỗi chữ; bản dịch không tự sửa ngầm thành một khẳng định khác. Ví dụ hình sự và ngưỡng tuổi là cách tác giả minh họa trong bối cảnh nguồn, không phải hướng dẫn pháp luật hiện hành ở Việt Nam hoặc một quy tắc chung cho mọi nơi. Sự đúng ngữ pháp, hợp nghĩa và phù hợp ngữ cảnh là các câu hỏi khác nhau: câu về bông tuyết có thể lạ trong đời thường nhưng vẫn có ngữ cảnh hư cấu phù hợp. Lời so sánh môn học và lời chê người học là đánh giá của tác giả, không phải phép đo độ khó hoặc trí tuệ.
 
-想要搞定英文语法，靠学校里教的肯定不行。为什么不行？懒得说，反正不行，爱信不信。只能靠自己。靠自己的阅读能力、计划执行能力、以及可以慢慢培养出来的耐心。
+Đừng mất kiên nhẫn với quy tắc ngữ pháp. Theo tác giả, chính sự mất kiên nhẫn khiến nhiều người bỏ lỡ một công cụ quan trọng nhất vốn có thể nắm được: tiếng Anh. Học hoặc dùng thẳng tiếng Anh không có đường tắt nhưng chắc có cách làm khéo. Một cách quan trọng là kiên nhẫn. Nói thế quá chung; điều cốt yếu là dựa vào đâu để kiên nhẫn? Dựa vào hiểu, hiểu thấu đáo. Vừa nói ngữ pháp chỉ giải thích “vì sao mọi người thường nói vậy”; nhìn thế thì chẳng có lý do phải học vẹt quy tắc. Nên thử hiểu; hiểu là tương đương nhớ, theo ông. Người chọn hành động hiểu rõ ràng dễ kiên nhẫn hơn người chỉ học thuộc. Biết ngữ pháp là tập hợp quy tắc có ngoại lệ được cố hệ thống hóa cũng giúp kiên nhẫn hơn. Không còn thấy ngoại lệ đáng ghét mà chỉ thấy chúng tồn tại tự nhiên. Không còn bối rối vì hệ thống của sách, mà hiểu làm được tương đối có hệ thống như vậy đã rất khó.
 
-第一本要介绍的书是《剑桥中级英语语法》，作者 Raymond Murphy（外语教学与研究出版社）。外语教学与研究出版社出版。这本书的原版书名叫《English Grammar in Use》，天知道怎么弄的，外研社可以把 “English in Use”（实用英语）翻译成 “英语在用”。很多年以前，父亲不知道从哪里给我找来第一版的影印版。后来，我买过好多本送给一些认识的人，已经是第二版了。现在书店里有若干种版本。牛津最近出版了该书的第三版。在 verycd.com 上已经有下载了。中译书名中的 “中级” 两个字，大概是因为 Raymond Murphy 除了这本书之外还写过《Basic Grammar in Use》；而牛津还以系列的方式出版过另外一本《Advanced Grammar in Use》（作者是 Martin Hewings）。
+> **Ghi chú biên tập khi luyện:** Hiểu giúp ghi nhớ, nhưng hiểu một lần không bảo đảm nhớ lâu hoặc dùng ngay được. Có thể kết hợp giải thích cấu trúc, xem ví dụ khác, tự đặt câu và ôn lại sau một khoảng thời gian. Không cần chọn cứng giữa hiểu và mọi hình thức ghi nhớ.
 
-在此之前的很多语法书里，充斥着各种仅仅为了演示语法规则而凭空杜撰的句子，比如 “Birds sing.”。这本书不一样。这本书的好处在于它里面的所有例句，都是真实的、最常用的、精心选自日常生活中的句子。所以，实际上这本书不仅是语法练习册，读者甚至可以把这本书当作很好的口语教材。里面的每个句子都值得背下来。
+## 6. Nên có hơn một cuốn sách ngữ pháp
 
-做替换练习是掌握语法知识的最有效方法。比如，你在书里看到这样一个句子：“I've lost my key.” 你可能会发现，同样意思的话，让你说，你可能就会说成 “I lost my key”，甚至，如果语法知识不扎实的话，可能会说成 “I lose my key.” —— 即，这是个你需要学习的语法点。这时候，“现在完成时” 这个中文词组对你实际上没有什么意义。就算你理解并记住了这个词组又怎么样呢？说英语的时候，可不能在脑子里随时盘算 “我应该用哪一个时态才对呢？” —— 总计有 16 种时态呢！所以，反复做替换练习才是有效的：“I’ve lost my ________.” 往里填词吧，比如：“job”,“money”，“house”，“bike”，“girl friend”…… 连续把这个句子替换六七遍之后，“I’ve lost my” 在你的脑子里已经成为一个整个的字串，以后你想表达你自己的时候，你能顺嘴说出来的是，“I've lost my…” 脑子里需要想的是你丢掉的那个东西究竟是什么 —— 而不是，我应该用哪一个时态？
+> **Ghi chú biên tập về danh sách sách:** Phần sau giữ trải nghiệm mua, sử dụng, số trang, phiên bản, giá và tình trạng phát hành vào thời tác giả viết. Không xem đây là thông tin bán hàng hiện tại hoặc yêu cầu người Việt phải mua bản tiếng Trung. Tên tiếng Anh được giữ để tra đúng tác phẩm; những lỗi tên nhà xuất bản hoặc cách hướng dẫn được ghi chú riêng.
 
-这本书介绍 100 多个重要语法点，单数页介绍一个小节，双数页是针对前一页的填空练习。如果每天读上 2～3 个小节，并完成随后的练习，大约两个月多一点点可以完成一遍。绝大多数人即便下了决心，这一辈子都做不完哪怕一遍。坚持两个月不是件容易的事情。事实上，做一遍是不够用的。要逼着自己反复做上至少三遍 —— 总计大约需要半年时间。相信我，这半年的时间并不长。如果你真的做了三遍以上，什么都赚回来了。相信我，绝大多数人就是这一点东西没弄明白，才反复去读什么培训班，花了不知道多少钱，最终还是要解决从前没解决的问题 —— 还是需要半年时间，还是做不到。当然，我见过最多的，也最可悲的是那些人—— 他们永远不相信自己所有的问题就出在自己从来都不肯耐心把最基础的东西弄清楚弄明白。
+### 6.1. Longman English Grammar và sách tham khảo, bài tập ngữ pháp Longman nâng cao
 
-### 6.3. 《Collins COBUILD 英语语法大全》
+Tác giả *Longman English Grammar* là Louis Alexander, cũng là người viết *New Concept English*, cuốn sách ảnh hưởng nhiều thế hệ người Trung Quốc. Cấu trúc lý thuyết ngữ pháp của sách khá quen với học sinh Trung Quốc; chỉ mục rất chi tiết nên dễ tra. Theo tác giả, đây nên là sách phải có trên bàn của người học, người dùng và giáo viên tiếng Anh.
 
-其实原本这本书的英文名字非常朴素，叫《Collins COBUILD English Grammar》（商务印书馆）。不知道为什么商务印书馆在出版这本书的时候加上了个非常没有必要的字眼 “大全” —— 就好像美女不小心身上沾上了廉价香水一样让人无可奈何。
+Điều nhiều người không biết là sách còn có tập bài tập đi kèm, được xuất bản bằng tiếng Trung dưới tên *Tham khảo và bài tập ngữ pháp tiếng Anh Longman nâng cao*, tác giả L.G. Alexander, do Nhà xuất bản Giảng dạy và Nghiên cứu Ngoại ngữ phát hành. Ít người mua *Longman English Grammar* mà mua luôn tập bài tập, trong khi theo tác giả thực ra phải mua cùng!
 
-这本于 1999 年引进的英语语法书尽管用的人很少，但实际上却是一个里程碑式的著作。国内读者最早接触的语法书大抵上出自张道真、许国璋之手，可以算作第一代语法书。再后来国人才有机会买到下一代的语法书，诸如比较经典的《朗文英语语法》——出自《新概念英语》的作者路易斯•亚历山大。而到了柯林斯（Collins）的这一本《英语语法》，已经可以算作第三代了。这本语法书最大的特色在于：
+Theo mô tả của nguồn, tập tham khảo và bài tập ấy có 60 unit. Mỗi unit có một bài đọc rồi các bài tập ngữ pháp tương ứng. Sau đáp án từng câu có mã như “5.32.1”, cho biết kiến thức liên quan được bàn ở mục 5.32.1 của *Longman English Grammar*. Muốn biết mục ấy ở trang nào thì tra chỉ mục.
 
-* 所有的例句全部来自基于真实世界的语料而搭建的数据库。不再像之前的语法书那样，充满了类似 “Birds sing.” 之类的仅仅为了演示语法规则而杜撰的、真实世界里其实根本不存在的句子。
-* 更加关注 “**语用**”。这本语法书是 “以功能为导向” 的，而不仅仅是过去那种 “以规则为导向” 的。不再像过去的语法书一样 “从负面定义正面”。过去的语法书总是不得已地更加关注 “你不能怎么怎么样”；而在这本语法书中，读者更多地看到这样的建议 —— “如果你要 …… 那么你可以……”。即，这本语法书更多地从正面定义正面 —— 这是语法学界一个重要的进步（要有海量语料库作为根基才能如此发展）。
+### 6.2. English Grammar in Use: Ngữ pháp tiếng Anh trình độ trung cấp
 
-值得一提的是，这本语法书中的第九章（篇章构成）与第十章（信息结构），是之前所有其他语法书中都不曾清楚地涉及的。过往的语法书从词性开始讲起，讲到句子就戛然而止，使得语法书在应用型上的地位大打折扣。当然，其它章节中也有很多其他语法书中未曾涉及的貌似琐碎但实际上却非常重要的内容。
+Muốn nắm vững ngữ pháp tiếng Anh, chỉ dựa vào nhà trường chắc chắn không được, tác giả nói. Vì sao? Ông không buồn giải thích: đằng nào cũng không được, tin hay không tùy bạn. Chỉ có thể dựa vào mình, vào khả năng đọc, thực hiện kế hoạch và sự kiên nhẫn có thể rèn dần.
 
-另外一个特色是充斥在各个页面上的词表。下面摘录出来的仅是其中一例：
+Cuốn đầu tiên được giới thiệu ở đây là sách có tên tiếng Trung *Ngữ pháp tiếng Anh Cambridge trình độ trung cấp*, tác giả Raymond Murphy, do Nhà xuất bản Giảng dạy và Nghiên cứu Ngoại ngữ phát hành. Nguyên bản tên *English Grammar in Use*. Tác giả phê bình không hiểu nhà xuất bản làm thế nào mà biến “English in Use”, tiếng Anh thực dụng, thành cách dịch “tiếng Anh đang được dùng”. Nhiều năm trước, cha không biết tìm đâu cho tôi bản in chụp ấn bản thứ nhất. Sau này tôi mua nhiều cuốn tặng người quen, khi ấy đã là bản thứ hai. Lúc tác giả viết, hiệu sách có vài phiên bản. Ông nói Oxford vừa xuất bản bản thứ ba, đã có trên verycd.com. Hai chữ “trung cấp” trong tên Trung Quốc có lẽ vì Raymond Murphy còn viết *Basic Grammar in Use*; ông nói Oxford cũng xuất bản cùng bộ một cuốn *Advanced Grammar in Use* của Martin Hewings.
 
-> 下列名词用来返指想法，同时又表示对这些想法的态度：
+> **Ghi chú biên tập về tên và phiên bản:** Nguyên tác ghi Oxford ở hai chỗ trên, nhưng [*English Grammar in Use* và *Advanced Grammar in Use* thuộc Cambridge](https://www.cambridgeenglish.org/ch/fr/learning-english/english-grammar-in-use/). Các số thứ tự phiên bản và verycd.com là thông tin lịch sử, không xác minh nguồn tải đó hợp lệ hoặc còn sử dụng được. “English in Use” là cụm tác giả đưa ra để phê bình bản dịch tên; tên sách đầy đủ cần tra vẫn là *English Grammar in Use*. Lời bác bỏ hoàn toàn việc học ở trường là quan điểm cá nhân, không phải kết luận về mọi lớp học.
+
+Nhiều sách ngữ pháp trước đó đầy câu bịa ra chỉ để minh họa quy tắc, như “Birds sing.”. Cuốn này khác, theo tác giả: mọi ví dụ đều thật, thông dụng nhất và được chọn kỹ từ đời sống. Vì vậy, không chỉ là sách bài tập ngữ pháp, người đọc còn có thể dùng như tài liệu luyện nói tốt; câu nào cũng đáng học thuộc.
+
+Luyện thay thế là cách hiệu quả nhất để nắm kiến thức ngữ pháp, theo tác giả. Chẳng hạn gặp “I've lost my key.”, bạn có thể thấy cùng ý ấy mình sẽ nói “I lost my key”, thậm chí nền ngữ pháp chưa vững thì nói “I lose my key.”. Tức là đây là một điểm bạn cần học. Lúc này, cái tên “thì hiện tại hoàn thành” thực ra chẳng có nghĩa gì với bạn, tác giả nói. Dù hiểu và nhớ tên thì sao? Khi nói không thể cứ tính trong đầu nên dùng thì nào, tổng cộng tận 16 thì! Vì vậy, theo ông, chỉ luyện thay thế lặp lại mới hiệu quả: “I’ve lost my ________.”. Hãy điền từ, như “job”, “money”, “house”, “bike”, “girl friend”… Thay liên tiếp sáu hoặc bảy lần, “I’ve lost my” sẽ trở thành cả một chuỗi trong đầu. Sau đó muốn diễn đạt, bạn có thể nói thuận miệng “I've lost my…”, chỉ cần nghĩ thứ đã mất là gì, thay vì tính nên dùng thì nào.
+
+> **Ghi chú biên tập về mẫu luyện:** Câu “I lost my key” có thể hoàn toàn đúng khi nói sự việc trong quá khứ; không tự sai chỉ vì khác “I've lost my key”. Cần xem thời điểm và sự liên hệ với hiện tại, cùng [khác biệt Anh/Mỹ được Cambridge mô tả](https://dictionary.cambridge.org/uk/grammar/british-grammar/british-english). “16 thì” là một cách phân loại sư phạm, không phải số lượng duy nhất mà mọi hệ ngữ pháp dùng. [Cambridge phân biệt hai thì theo hình thái, cùng các cách dùng thể và cấu trúc để biểu đạt thời gian](https://www.cambridge.org/core/books/grammar-for-english-language-teachers/603FD92B3049C84E3788566F412DF096/listing); cách đếm phụ thuộc điều đang phân loại. Luyện thay thế có thể giúp quen mẫu nhưng sáu hoặc bảy lần không bảo đảm tự động hóa cho mọi người. Khi thay người hoặc vật vào “lost”, cũng phải kiểm tra nghĩa theo ngữ cảnh; bản gốc viết “girl friend” với khoảng trắng, không coi mọi mục điền vào đều biểu đạt cùng loại mất mát.
+
+Theo nguồn, sách giới thiệu hơn 100 điểm ngữ pháp quan trọng, trang lẻ giải thích một unit, trang chẵn là bài điền trống cho trang trước. Mỗi ngày đọc hai hoặc ba unit và làm bài theo sau, hơn hai tháng một chút có thể xong một lượt. Tác giả cho rằng đại đa số dù quyết tâm cũng cả đời không xong nổi một lượt; duy trì hai tháng chẳng dễ. Thực ra một lượt chưa đủ, ông khuyên phải buộc mình làm ít nhất ba lượt, tổng cộng khoảng nửa năm. Tin tôi đi, nửa năm không dài. Nếu thực sự làm từ ba lượt trở lên thì được bù lại tất cả, theo lời khẳng định của ông. Đại đa số chỉ vì chưa hiểu chừng ấy mà liên tục đi học khóa này khóa khác, tốn không biết bao tiền, cuối cùng vẫn phải giải quyết vấn đề cũ: vẫn cần nửa năm, vẫn không làm được. Điều tôi thấy nhiều và buồn nhất là những người mãi không tin mọi vấn đề của mình chỉ xuất phát từ chỗ chưa bao giờ chịu kiên nhẫn làm rõ kiến thức cơ bản.
+
+> **Ghi chú biên tập về lịch học:** Đây là lịch tác giả đề nghị và các lời khẳng định mạnh của ông, không phải cam kết kết quả cho tất cả người học. [Phần đầu sách bản thứ ba chính thức](https://drupal-s3fs-prod.s3.eu-west-1.amazonaws.com/files/3513/8071/9982/english-grammar-in-use3-intermediate-upper-intermediate-book-with-answers-and-cd-rom-frontmatter.pdf) ghi xuất bản năm 2004, có 145 unit, trang trái giải thích và trang phải làm bài, ngược mô tả trang lẻ/chẵn trong nguyên tác. Sách cũng hướng dẫn chọn unit theo nhu cầu, không bắt buộc đọc tuần tự. Người Việt có thể chọn vài unit gắn với câu mình đang cần hiểu, làm bài, giải thích lỗi và ôn lại trước khi mở rộng. Câu “Birds sing.” có thể là câu tiếng Anh tự nhiên khi dùng trong ngữ cảnh phù hợp; ví dụ ngắn không tự động là vô nghĩa hoặc không tồn tại ngoài đời.
+
+### 6.3. Collins COBUILD English Grammar
+
+Tên tiếng Anh gốc của sách rất giản dị: *Collins COBUILD English Grammar*, do Thương Vụ Ấn Thư Quán phát hành bản Trung Quốc. Tác giả không hiểu vì sao nhà xuất bản thêm chữ “toàn thư” không cần thiết, khiến ông khó chịu như một người đẹp vô tình dính nước hoa rẻ tiền.
+
+Cuốn ngữ pháp được đưa vào Trung Quốc năm 1999 này tuy ít người dùng nhưng thực ra là cột mốc, theo tác giả. Sách ngữ pháp độc giả Trung Quốc tiếp xúc sớm thường do Trương Đạo Chân, Hứa Quốc Chương viết, có thể coi là thế hệ đầu. Sau đó mới có cơ hội mua thế hệ tiếp, như *Longman English Grammar* kinh điển của Louis Alexander, người viết *New Concept English*. Đến cuốn Collins này, tác giả coi là thế hệ thứ ba. Đặc điểm lớn nhất là:
+
+* Mọi câu ví dụ đều lấy từ cơ sở dữ liệu xây bằng ngữ liệu đời thực. Theo tác giả, nó không còn giống sách trước đầy câu như “Birds sing.”, bịa chỉ để minh họa quy tắc mà ngoài thực tế căn bản không có.
+* Chú trọng hơn đến **ngữ dụng**, tức cách dùng trong tình huống. Sách hướng theo chức năng thay vì chỉ theo quy tắc như trước; không còn “dùng mặt phủ định để xác định mặt khẳng định”. Sách cũ thường bất đắc dĩ chú trọng “bạn không được làm thế này”; ở đây người đọc thấy nhiều hơn lời gợi ý “nếu muốn… thì có thể…”. Tức sách xác định trực tiếp điều có thể làm, tác giả xem đây là bước tiến quan trọng của ngành ngữ pháp, cần kho ngữ liệu lớn làm nền mới phát triển được như vậy.
+
+Đáng nói, chương 9, về cấu tạo văn bản, và chương 10, về cấu trúc thông tin, theo tác giả là những nội dung chưa sách ngữ pháp nào khác trước đó trình bày rõ. Sách trước bắt đầu từ từ loại rồi dừng hẳn ở câu, làm giá trị ứng dụng giảm nhiều. Các chương khác cũng có những nội dung sách khác chưa đề cập, trông vụn vặt nhưng thực ra rất quan trọng.
+
+Một đặc điểm nữa là các bảng từ ở khắp trang sách. Dưới đây chỉ là một ví dụ:
+
+> Những danh từ sau dùng để nhắc lại các ý tưởng, đồng thời thể hiện thái độ với các ý tưởng ấy:
+>
 > analysis, assessment, assumption, attitude, belief, conclusion, conjecture, concept, deduction, delusion, diagnosis, doctrine, doubt, estimate, evaluation, fear, finding, guess, hope, idea, illusion, inference, insight, interpretation, misinterpretation, notion, opinion, picture, plan, position, reasoning, supposition, theory, thinking, view, viewpoint, vision, wish
-准备过GRE/GMAT/SAT作文的同学可以一眼就看出这种整理方式对第二语言使用者多么地重要。
-基于语料库的语法书，在国内可以买到的，目前好像仅此一本。基于语料库的英语词典，现在有很多种，其中最有用的可能是《Oxford Collocation Dictionary for Students of English》，当然还有另外一个就是柯林斯的《Collins COBUILD Dictionary on CD-ROM 2006》（现在已经有Lingoes版本）。而柯林斯电子辞典更老一点的版本中，含有《Collins COBUILD英语语法大全》的英文原版内容。
 
-商务印书馆引进的这本《Collins COBUILD 英语语法大全》其实并不畅销 —— 仅因为大多数读者不知道这本语法书的好处（也许另外一个原因是这本书 “显得有点贵” —— 定价 65 元人民币）。商务印书馆几乎同时引进的还有一套总计十本的分类语法书，叫《COLLINS COBUILD 英语语法系列》，包括：
+Ai từng chuẩn bị bài viết GRE/GMAT/SAT có thể nhìn ngay ra kiểu sắp xếp này quan trọng thế nào với người dùng ngôn ngữ thứ hai, tác giả nói.
 
-1. 介词
-2. 构词法
-3. 冠词
-4. 易混淆词
-5. 转述法
-6. 同音异义词
-7. 隐喻
-8. 拼写法
-9. 连词
-10. 限定词及数量词
+Theo ông, ở thời điểm viết, đây dường như là sách ngữ pháp dựa trên corpus duy nhất mua được tại Trung Quốc. Từ điển tiếng Anh dựa trên corpus thì đã có nhiều; có lẽ hữu ích nhất là *Oxford Collocation Dictionary for Students of English*, và một lựa chọn nữa là *Collins COBUILD Dictionary on CD-ROM 2006*, khi ấy đã có bản Lingoes. Các bản điện tử Collins cũ hơn có cả nội dung tiếng Anh của *Collins COBUILD English Grammar*.
 
-其中的每一本都是英语老师必备的语法书（我个人认为），而学生如果真的想把英语学好，多花点时间也绝对是值得的。我自己的印象中，《隐喻》与《连词》对我影响最大。一般来说，语法书都是用来查阅的，但是，柯林斯的这些书，我基本上都是翻阅若干遍的。可惜，这套语法系列销量更差（听说商务印书馆做这套书是赔钱了的），并且在书店中很难买到整套（包括当当网之类的网络书店也是如此）。
+Bản *Collins COBUILD English Grammar* do Thương Vụ Ấn Thư Quán đưa vào Trung Quốc thực ra không bán chạy, theo tác giả, chỉ vì đa số độc giả không biết ưu điểm; có lẽ một lý do nữa là sách trông hơi đắt, niêm yết 65 nhân dân tệ. Gần cùng thời gian, nhà xuất bản đưa vào một bộ mười cuốn ngữ pháp theo chủ đề mang tên *COLLINS COBUILD English Grammar Series*, gồm:
 
-### 6.4. 《新编英语阅读手册》
+1. Giới từ
+2. Cấu tạo từ
+3. Mạo từ
+4. Từ dễ nhầm
+5. Tường thuật lời nói
+6. Từ đồng âm khác nghĩa
+7. Ẩn dụ
+8. Chính tả
+9. Liên từ
+10. Từ hạn định và từ chỉ lượng
 
-最后要提及的这本语法书，是叶永昌先生的《新编英语阅读手册》。知道叶永昌，是从我父亲的书桌上。对我来说，父亲的书架就是宝藏；但是有几本书却一直在书桌上而不是书架上，在书桌上的是他的宝贝。其中有一本就是《实用科技英语阅读手册》。后来才知道，这本书累计发行册数高达 130 万册 —— 在中国境内，知识分子专著能够达到这个印数的应该寥寥无几。
+Cá nhân tôi nghĩ cuốn nào cũng là sách giáo viên tiếng Anh cần có; học sinh thật sự muốn học tốt bỏ thêm thời gian cũng tuyệt đối đáng. Trong ấn tượng của tôi, hai cuốn *Ẩn dụ* và *Liên từ* ảnh hưởng lớn nhất. Thường sách ngữ pháp dùng để tra, nhưng những cuốn Collins này tôi cơ bản đều đã đọc qua vài lượt. Tiếc là bộ ấy còn bán kém hơn; nghe nói nhà xuất bản lỗ khi làm bộ này. Trong hiệu sách rất khó mua đủ bộ, kể cả cửa hàng trực tuyến như Dangdang, theo tình trạng tác giả thuật lại.
 
-那本《实用科技英语阅读手册》父亲其实有两本 —— 书架上还有干干净净的一本；而书桌上的那本几乎每一页的页边都密密麻麻的笔记，父亲能用圆珠笔写特别小又及其工整的字体。后来上大学的时候，父亲说送你几本书吧；于是就从书架上把那本干净的《实用科技英语阅读手册》拿下来；我说，“爸，我要你桌子上的那本。” 后来大三的时候，在图书馆把这本书弄丢了是我这辈子最懊恼的事情之一；我也一直没再跟父亲提这件事情。
+> **Ghi chú biên tập về phạm vi đánh giá:** Cách chia ba thế hệ, các khẳng định “duy nhất”, “chưa sách nào khác” và “mọi ví dụ” là lời đánh giá của tác giả, không phải khảo sát đầy đủ sách ngữ pháp. Corpus cung cấp dữ liệu về cách dùng, nhưng một câu ngắn vẫn cần xét ngữ cảnh chứ không chỉ độ dài. Số chương, bộ mười cuốn, giá và doanh số thuộc các ấn bản và thời điểm được kể; việc nhắc phần viết GRE/GMAT/SAT cũng không xác nhận cấu trúc thi hiện hành.
 
-许多年之后，在书店里看到叶永昌先生此书的改进版《新编英语阅读手册》，当场买下（多买下好几本送给几个朋友）。几年过去，这书已经几乎被翻烂，只是没有那么多的笔记 —— 因为我写字太不工整且多年来记笔记已经习惯记在电脑上。我常想，当年图书馆里拿走那本书的人是不是真的懂得那些笔记的重要？要是懂得，倒也无憾。
+### 6.4. Sổ tay đọc tiếng Anh biên soạn mới
 
-《新编英语阅读手册》由上海科学技术文献出版社于 2001 年出版，第一版小心翼翼只印了 5000 册。我在课堂上经常提及这本书，学生们却说 “在哪儿都找不到”。有个时期在当当网上还可以看到此书的简介，可一直缺货。
+Cuốn cuối cần nói là *Sổ tay đọc tiếng Anh biên soạn mới* của Diệp Vĩnh Xương. Tôi biết ông từ bàn làm việc của cha. Với tôi, giá sách của cha là kho báu; nhưng có vài cuốn luôn ở trên bàn thay vì trên giá, đó mới là những báu vật của ông. Một cuốn là *Sổ tay đọc tiếng Anh khoa học kỹ thuật thực dụng*. Sau này tôi mới biết sách phát hành cộng dồn đến 1,3 triệu bản; ở Trung Quốc, chuyên khảo của giới trí thức đạt số in ấy hẳn hiếm.
 
-2008 年下半年，我托人与上海科学技术文献出版社联系，打听是否可以要求加印。隔了很久，出版社终于答复，说两千册以上才能起印，且需全额购买、无退货可能。于是我就索印了 2500 册；而 2009 年又补印了 2500 册 —— 我的学生终于都有机会用这本语法书了。
+Cha thực ra có hai cuốn *Sổ tay đọc tiếng Anh khoa học kỹ thuật thực dụng*: trên giá còn một cuốn sạch sẽ. Cuốn trên bàn gần như trang nào cũng chi chít ghi chú ngoài lề; cha viết bằng bút bi chữ rất nhỏ mà cực kỳ ngay ngắn. Sau này lúc tôi đi đại học, cha bảo tặng vài cuốn, rồi lấy bản sạch trên giá xuống. Tôi nói: “Cha, con muốn cuốn trên bàn cha.” Đến năm ba, tôi làm mất nó trong thư viện, một trong những điều ân hận nhất đời; tôi cũng chưa từng kể lại với cha.
 
-2009 年 6 月 10 日，我终于有机会见到叶永昌先生。见到叶先生第一句话是：“叶老师，您的书我用了 20 年……”，第二句话是：“我父亲也是您的读者……” 见到偶像，多少有些语无伦次，前前后后聊了两个多小时，从叶先生家里出来，幸福得一塌糊涂。
+Nhiều năm sau, thấy bản cải tiến *Sổ tay đọc tiếng Anh biên soạn mới* của Diệp Vĩnh Xương trong hiệu sách, tôi mua ngay, thêm vài cuốn tặng bạn. Vài năm trôi qua, cuốn sách gần rách nát vì đọc, chỉ không nhiều ghi chú bằng cuốn của cha vì chữ tôi không ngay ngắn và từ lâu đã quen ghi trên máy tính. Tôi thường nghĩ người lấy cuốn ở thư viện năm ấy có thật hiểu giá trị những ghi chú không? Nếu hiểu thì cũng không còn gì tiếc.
+
+*Sổ tay đọc tiếng Anh biên soạn mới* do Nhà xuất bản Tài liệu Khoa học Kỹ thuật Thượng Hải xuất bản năm 2001; lần đầu dè dặt chỉ in 5.000 bản. Tôi thường nhắc trên lớp, nhưng học sinh nói tìm đâu cũng không có. Một thời gian còn thấy giới thiệu trên Dangdang nhưng luôn hết hàng.
+
+Nửa cuối năm 2008, tôi nhờ người liên hệ nhà xuất bản Thượng Hải hỏi có thể yêu cầu in thêm không. Rất lâu sau mới được trả lời: phải từ 2.000 bản trở lên mới in, phải mua hết và không được trả. Vì vậy tôi đặt in 2.500 bản; năm 2009 lại in thêm 2.500. Cuối cùng học sinh của tôi đều có cơ hội dùng cuốn ngữ pháp ấy.
+
+Ngày 10/6/2009, cuối cùng tôi được gặp Diệp Vĩnh Xương. Câu đầu là “Thầy Diệp, con dùng sách thầy 20 năm rồi…”, câu thứ hai “Cha con cũng là độc giả của thầy…”. Gặp thần tượng, tôi ít nhiều nói không thành mạch lạc. Trò chuyện hơn hai giờ, rời nhà thầy mà hạnh phúc vô cùng.
 
 ![](images/figure55.png)
 
-与叶永昌先生合影（2009-06-10）
+Chụp cùng Diệp Vĩnh Xương, ngày 10/6/2009.
 
-期间，我告诉他，这一年里，我自己出资向上海科学技术文献出版社联系，前后印了 5000 册《新编英语阅读手册》，叶先生很开心。不过，接下来我才知道，叶先生的《实用科技英语阅读手册》卖了 130 万册，而作者却一分钱稿费没要 —— 特殊的时代，特殊的决定。而这次加印 5000 册的事情，叶先生也并不知道……
+Trong buổi gặp, tôi kể một năm ấy đã tự bỏ tiền liên hệ nhà xuất bản, trước sau in 5.000 bản *Sổ tay đọc tiếng Anh biên soạn mới*. Thầy Diệp rất vui. Nhưng tiếp đó tôi mới biết cuốn *Sổ tay đọc tiếng Anh khoa học kỹ thuật thực dụng* bán 1,3 triệu bản mà tác giả lại không yêu cầu lấy một xu nhuận bút nào: thời đặc biệt, quyết định đặc biệt. Thầy cũng không biết việc in thêm 5.000 bản lần này…
 
-在我与博文视点的夏青几次奔赴天津，与叶先生确定重版事宜之后，读者们有福了，从 2010 年 3 月份起，可以买到武汉博文视点重新出版的《新编英语阅读手册》了 —— 它终于重见天日！
+Sau vài lần tôi cùng Hạ Thanh của Bác Văn Thị Điểm đến Thiên Tân bàn với thầy Diệp việc tái bản, độc giả có tin vui: từ tháng 3/2010 có thể mua *Sổ tay đọc tiếng Anh biên soạn mới* do Bác Văn Thị Điểm Vũ Hán tái bản. Cuối cùng nó được thấy ánh sáng trở lại, tác giả vui mừng.
 
-> 可惜，后来这本书又 “断印” 了…… 于是，我只好把它的电子版（未经加工）放到 github 上：
+> Tiếc rằng sau đó sách lại “ngừng in”… Vì vậy, tôi đành đưa bản điện tử chưa xử lý lên GitHub:
 >
 > > https://github.com/xiaolai/a-new-english-reading-handbook
 
-## 7. 反复通读至少一本语法书
+> **Ghi chú biên tập về câu chuyện và nguồn:** Các số in, cuộc gặp, nhuận bút và tình trạng sách là lời kể của tác giả, không phải kiểm toán số phát hành hoặc thông báo tồn kho hiện nay. Đường GitHub giữ nguyên để truy nguồn; không tự biến lời kể thành xác nhận quyền phân phối cho mọi bản sao. Bài học có thể áp dụng là lưu ví dụ cùng ghi chú mình hiểu, có bản sao lưu cho tài liệu cá nhân để tránh mất công đã học.
 
-如果一个人学会查词典，学会查语法书，再肯于多查几部词典、多查几本语法书，他基本上就具备在中国的任何一所民办英语培训机构做老师的基本素质了。在大多数短期英语培训机构里，英语老师所谓的备课，90%以上的工作只不过是查查词典、翻翻语法书而已。这样的老师都算是敬业的，更多的所谓 “老师” 能不查就不查词典，能不翻就不翻语法书，因为他们把自己的 90%时间精力放在琢磨如何才能使课堂气氛更加活跃 —— 唱唱歌啊，跳跳舞啊，讲讲笑话啊什么的。当然更多的人连这些都做不好，于是只好吹牛，（并且只能）往死了吹……
+## 7. Đọc đi đọc lại trọn vẹn ít nhất một sách ngữ pháp
 
-如果读者爱惜自己的时间精力（“视金钱如粪土” 确实颇有些气势），那最好还是靠自己吧。只有尽早反复通读一本语法书，才可能快速摆脱对老师的依赖，而后做自己的明师。尽管语法知识看起来非常枯燥，但是只要换一种读法，就可能会有很大的改观。
+Theo tác giả, người biết tra từ điển, tra sách ngữ pháp và chịu tra nhiều cuốn về cơ bản đã có phẩm chất nền tảng để làm giáo viên ở bất kỳ cơ sở đào tạo tiếng Anh tư nhân nào tại Trung Quốc. Trong đa số cơ sở đào tạo ngắn hạn, hơn 90% việc “soạn bài” của giáo viên chỉ là tra từ điển và lật sách ngữ pháp. Như thế đã được xem là tận tâm, ông nói. Còn nhiều “giáo viên” hơn nữa tránh tra được lúc nào thì tránh, vì dành 90% thời gian, công sức nghĩ cách làm lớp sôi động: hát, nhảy, kể chuyện cười, v.v. Tất nhiên nhiều người hơn nữa còn không làm tốt nổi những việc ấy, đành khoác lác, và chỉ có thể khoác lác đến cùng, theo lời phê bình của tác giả.
 
-学习外语的真正难点在于母语和外语这两种语言之间的非一一对应之处。两种语言重合、一一对应的部分，是容易学会的。“apple-苹果”、“table-桌子”、“fatigue-疲乏”、“sophisticated-精细的” 之类的单词，由于其所表达的概念在两种语言中都存在，并一一对应，记忆起来并不难。然而，像英文的 “vary”，在中文中就很难找到对应的词汇，比如这个例句中的 vary 这个词：“People's opinions vary from individual to individual.”，用英汉词典的释义 “变化” 来理解好像并不那么准确，这句话的意思是 “人们的看法各不相同。” 再比如，中文中的 “确实” 这个副词，在英文中其实没有一个同等作用同等用法的对应，比如这个例句中 “I do hate going out alone.”，是用附加一个助动词 “do” 的结构来表示中文 “确实” 这个含义；再比如，“Who could’ve considered such a possibility?” 这个英文句子中，是用 “could have done” 的形式在疑问句中表达中文副词 “居然” 的含义的 —— 而非汉英辞典里给出的 “actually” 和 “virtually”。
+Nếu quý thời gian và công sức của mình, dù “coi tiền như rác” nghe quả có khí thế, tốt nhất hãy dựa vào bản thân, tác giả khuyên. Chỉ bằng cách sớm đọc đi đọc lại hết một sách ngữ pháp mới có thể nhanh chóng thoát sự lệ thuộc vào giáo viên và làm người thầy sáng suốt của chính mình. Kiến thức trông khô khan, nhưng đổi cách đọc thì có thể khác nhiều.
 
-“This is a table.” 或者 “That’s a book.” 之类的句子，不仅容易理解，并且容易运用。其实只不过是因为它们的结构与逻辑与我们的母语几乎一一对应。日常使用中，近乎 “一一对应” 的文字其实占大多数，比如之前我们曾读过的 “Evolution itself has no foresight.” 之类的句子。（读者应该在 “5.2 无论如何都要学语法” 中读到过这个句子 —— 如果没有的话，说明您读书太不认真了。）
+Chỗ thực sự khó của ngoại ngữ nằm ở những phần không tương ứng một-một giữa tiếng mẹ đẻ và ngoại ngữ, tác giả lập luận. Phần trùng nhau, tương ứng một-một thì dễ học. Những từ như “apple - *píngguǒ*” (táo), “table - *zhuōzi*” (bàn), “fatigue - *pífá*” (mệt mỏi), “sophisticated - *jīngxì de*” (tinh vi) không khó nhớ, theo ông, vì khái niệm có ở cả hai ngôn ngữ và tương ứng một-một. Nhưng với “vary” thì khó tìm từ tiếng Trung tương ứng. Trong “People's opinions vary from individual to individual.”, hiểu bằng nghĩa “biến đổi” của từ điển Anh-Hán có vẻ không thật đúng; câu có nghĩa “ý kiến mọi người khác nhau tùy từng người”. Hay trạng từ tiếng Trung *quèshí* (quả thực), theo ông, không có từ tiếng Anh cùng chức năng, cùng cách dùng. Trong “I do hate going out alone.”, ý ấy được diễn đạt bằng cấu trúc thêm trợ động từ “do”. Trong “Who could’ve considered such a possibility?”, dạng “could have done” ở câu hỏi lại biểu đạt ý của trạng từ tiếng Trung *jūrán* (không ngờ mà lại), chứ không phải “actually” và “virtually” như từ điển Hán-Anh ghi.
 
-然而，句子结构、表达方法在两种语言之间也有很多并非一一对应的情况，尽管数量上是少数，却给语言的熟练运用带来很多的麻烦。比如，“请问，这个座位有人么？” 对应的不是 “Please ask, is there anyone at this seat?”，而是 “Excuse me, is this seat taken?”；“如果我没有记错的话……” 不是 “If I didn't remember wrong, …”，而可能是 “If my memory serves, …”
+Những câu như “This is a table.” hoặc “That’s a book.” dễ hiểu và dễ dùng, theo tác giả, chỉ vì cấu trúc và logic gần như tương ứng một-một với tiếng mẹ đẻ của mình. Trong sử dụng hằng ngày, phần gần một-một thực ra chiếm đa số, chẳng hạn câu đã đọc “Evolution itself has no foresight.”. Tác giả nhắc lẽ ra độc giả đã thấy nó ở mục nguồn gọi là “5.2. Dù thế nào cũng phải học ngữ pháp”; nếu chưa thấy thì chứng tỏ đọc quá thiếu cẩn thận, ông phê bình.
 
-有这么一个句子我曾印象深刻：“The impact that technologies have had on our daily life and society in general, is undeniable.” 这是大学英语精读教材里某一篇文章中的句子。我当时愣了一下，想，要是让我来表达 “什么什么的影响”，很可能用的就是 “the influence of 什么什么”，而不是用 “impact” 这个词，也不会用一个从句，更不会用那么个时态 —— 想想是有道理的，这位作者在表达的是：“一直以来，技术对 …… 的影响”，其中的 “一直以来”，是用现在完成时表达的。也就是说，这句话里有很多对于我来说，英语与母语非一一对应的地方。
+> **Ghi chú biên tập về dẫn chiếu và đối chiếu ngôn ngữ:** Mục tương ứng nằm ở chương 6, mục 2 hiện tại, không phải “5.2”. Đoạn English ở đó thực tế ghi “But evolution has no foresight.”, không trùng từng chữ với “Evolution itself has no foresight.”; vì vậy không thể dùng sai khác này để chê độc giả bỏ sót câu. Các từ tiếng Trung được giữ như đối tượng so sánh và có cách đọc/nghĩa tiếng Việt. Tương ứng của một nghĩa không có nghĩa hai từ thay nhau được ở mọi nghĩa hoặc mọi câu. Với người Việt, hãy xét cách tiếng Việt biểu đạt cùng ý, không giả định cấu trúc tiếng Trung chính là cấu trúc tiếng Việt. “Do” nhấn mạnh một khẳng định trong câu mẫu; “could have” có các cách hiểu phụ thuộc ngữ cảnh, không luôn tương đương “không ngờ”.
 
-于是，我就拿出我的惯用伎俩：
+Tuy vậy, cấu trúc câu và cách diễn đạt giữa hai ngôn ngữ cũng có nhiều chỗ không một-một. Dù theo tác giả ít hơn về số lượng, chúng gây nhiều phiền phức cho sử dụng thành thạo. Ví dụ “Xin hỏi ghế này có ai ngồi chưa?” không phải “Please ask, is there anyone at this seat?”, mà là “Excuse me, is this seat taken?”. “Nếu tôi nhớ không nhầm…” không phải “If I didn't remember wrong, …”, mà có thể là “If my memory serves, …”.
 
-1. 把这个于我来讲 “非一一对应” 的句子做个标记；
-2. 把它摘抄到笔记本上；
-3. 再想想这个句子能否当作替换练习模板 —— 即，看看我能不能把这个句子变成这样一个 “填空” 句型：
+Một câu từng để lại ấn tượng sâu với tôi là “The impact that technologies have had on our daily life and society in general, is undeniable.”, trong một bài ở giáo trình đọc kỹ tiếng Anh đại học. Khi ấy tôi khựng lại: nếu diễn đạt “ảnh hưởng của cái gì đó”, có lẽ mình sẽ dùng “the influence of cái gì đó”, không phải “impact”; cũng không dùng mệnh đề phụ, càng không dùng thì ấy. Nghĩ lại thấy hợp lý: tác giả câu đang nói “ảnh hưởng từ trước đến nay của công nghệ đối với…”, trong đó “từ trước đến nay” diễn đạt bằng hiện tại hoàn thành. Tức câu có nhiều chỗ không tương ứng một-một giữa tiếng Anh và tiếng mẹ đẻ với cá nhân tôi.
+
+Tôi bèn dùng cách quen thuộc:
+
+1. Đánh dấu câu mà với mình không tương ứng một-một.
+2. Chép vào sổ ghi chú.
+3. Nghĩ xem có thể dùng làm mẫu luyện thay thế không, tức biến thành câu điền trống như sau:
 
 > The impact that _____ have/has had on _____ , is undeniable.
-之后，我就可以不停地用这个“模板”造句了：
+
+Sau đó, tôi có thể liên tục dùng mẫu ấy đặt câu:
+
 * The impact that the internet has had on every respect of our daily life, is undeniable.
 * The impact that parents and their attitudes have had on their children’s personality development, is undeniable.
 * The impact that one’s early education has had on his or her later life, is undeniable.
 * …
 
-造上几个句子之后，这种表达法就已经牢牢刻在我的脑子里，可以不加思索地运用了（其实，所谓 “地道” 也不过就是应该这样学的吧？）。而不再用考虑 “我究竟应该用从句呢？还是要用介词结构？” 或者 “我究竟是不是应该使用现在完成时呢？” 之类必须用各种语法概念才能理顺的问题。其实，类似的手段我曾经在之前的文中演示过：“I have lost my key.” 这句话，就可以当作一个模板：“I have lost my _____.”；而后反复造句，直至把这种表达法谙熟于心。
+> **Ghi chú biên tập về lỗi trong mẫu gốc:** Những câu “The impact that … , is undeniable” ở trên có dấu phẩy ngăn cụm chủ ngữ với động từ chính. Khi dùng làm mẫu luyện thông thường, bỏ dấu phẩy ấy; xem [quy tắc 12 của Purdue OWL về không ngăn chủ ngữ và động từ bằng dấu phẩy](https://owl.purdue.edu/owl/general_writing/punctuation/commas/extended_rules_for_commas.html). “On every respect of” trong ví dụ cũng nên đổi thành “on every aspect of”. Giữ nguyên các câu của nguồn ở trên để đối chiếu; dạng luyện đã sửa là “The impact that _____ has/have had on _____ is undeniable.”. Chọn “has/have” theo chủ thể trong mệnh đề quan hệ, không theo “impact”: “The impact that the internet has had on every aspect of our daily life is undeniable.”. Nghĩa “không thể phủ nhận” là lời khẳng định trong mẫu, không tự chứng minh mọi nội dung thay vào đều đúng thực tế.
 
-所以，我建议学生通读语法书的方法是这样：
+Đặt vài câu, kiểu diễn đạt này đã khắc chắc trong đầu và có thể dùng không cần nghĩ, theo trải nghiệm của tác giả. Có lẽ cái gọi là dùng “tự nhiên như người bản ngữ” cũng chỉ nên học vậy? Tôi không còn phải cân nhắc dùng mệnh đề phụ hay cụm giới từ, có nên dùng hiện tại hoàn thành không, những câu hỏi phải dùng đủ khái niệm ngữ pháp mới làm rõ. Cách tương tự đã minh họa ở trên: “I have lost my key.” có thể thành mẫu “I have lost my _____.”, rồi liên tục đặt câu cho đến khi nắm vững cách diễn đạt.
 
-1. 逐页浏览；
-2. 仔细阅读每一个例句（而那些语法概念能不能完全理解，能不能一次就记住倒在其次）；
-3. 判断这个例句的英文表达与中文表达是否相当地 “非一一对应”？如果是，则做出标记（要是有 “呀，让我用英语表达这个意思，可能说出来的就不是这样了！” 的念头的话，就应该做标记了）；
-4. 积累到一定数量，就把这类句子摘录出来，做成替换练习模板，反复造句并朗读，直至熟练；
-5. 继续浏览；
-6. 通读一遍之后，如此这般再反复几次……
+Vì vậy, cách tôi đề nghị học sinh đọc hết sách ngữ pháp là:
 
-那些语法概念并非不重要，只不过我们并不需要像患了强迫症一般非要一次就把它们全部彻底搞定。在反复的浏览过程中，那些曾经艰涩的概念大多都会潜移默化地被吸收，不再那么难缠。并且，有些概念就算搞不清，其实也无所谓。例如 “独立主格结构” 这个概念，不了解又怎么样呢？只要遇到那样的句子之时能够正确理解其意（因为做过好几遍那么多例句的替换练习）不就可以了么？有些人好不容易搞清楚了 “独立主格结构” 这个概念，换一本语法书（比如 Collins Cobuild 的《英语语法大全》）之后，才发现那个概念在这些书里叫另外一个名字，于是就痛苦不堪……
+1. Xem lần lượt từng trang.
+2. Đọc kỹ từng ví dụ; hiểu hết khái niệm hoặc nhớ được ngay một lần là chuyện thứ yếu.
+3. Xét cách nói tiếng Anh trong ví dụ có khác đáng kể, không tương ứng một-một với tiếng Trung không. Nếu có thì đánh dấu. Nếu nghĩ “À, để mình diễn đạt ý này bằng tiếng Anh thì có lẽ mình sẽ không nói thế!”, nên đánh dấu.
+4. Tích lũy đến một lượng nhất định thì chép các câu ấy ra, làm mẫu thay thế, đặt câu và đọc thành tiếng nhiều lần đến khi quen.
+5. Tiếp tục xem.
+6. Đọc hết một lượt rồi lặp lại theo cách ấy thêm vài lần…
 
-**别想了，开始行动吧。**
+Khái niệm ngữ pháp không phải không quan trọng; chỉ là ta không cần như mắc ám ảnh cưỡng chế mà cố giải quyết triệt để tất cả trong một lượt, tác giả nói. Trong quá trình xem lặp lại, đa số khái niệm từng khó sẽ âm thầm được tiếp thu và bớt rắc rối. Có khái niệm chưa rõ cũng không sao, theo ông. Ví dụ “cấu trúc tuyệt đối”, thường được gọi trong nguồn là cấu trúc chủ cách độc lập, không hiểu khái niệm ấy thì đã sao? Gặp câu ấy vẫn hiểu đúng, nhờ đã luyện thay thế nhiều lượt với nhiều ví dụ, chẳng phải được rồi? Có người vất vả mới hiểu rõ khái niệm ấy, đổi sang sách khác như *Collins COBUILD English Grammar*, mới thấy sách gọi bằng tên khác rồi đau khổ vô cùng…
 
-| [< 第五章: 词典](./chapter5.md) | [第七章: 精读 >](./chapter7.md) |
+> **Ghi chú biên tập cho người Việt:** Sáu bước là một cách tự luyện, không phải lộ trình duy nhất hoặc yêu cầu phải hiểu mọi mẫu bằng đối chiếu tiếng Trung. Ở bước 3, người Việt so với câu mình thường nói bằng tiếng Việt; bước 4 cần kiểm tra câu mẫu và câu tự thay trước khi lặp lại, để không củng cố lỗi. Biết tên cấu trúc giúp tra cứu, còn dùng được cần cả nghĩa và ngữ cảnh; một lần hiểu hoặc vài câu thay chưa bảo đảm nhớ lâu. Những tỷ lệ về giáo viên và cách ví ám ảnh cưỡng chế là lời phê bình của tác giả, không phải khảo sát nghề nghiệp hay mô tả chẩn đoán.
+
+**Đừng nghĩ mãi nữa, hãy bắt tay làm.**
+
+| [< Chương 5: Từ điển](./chapter5.md) | [Chương 7: Đọc kỹ >](./chapter7.md) |
 | ------------------------------- | ------------------------------- |

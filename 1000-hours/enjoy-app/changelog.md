@@ -1,434 +1,436 @@
-# 版本更新
+# Lịch sử phiên bản
+
+Bản dịch đầy đủ lịch sử phát hành của dự án gốc. Các mục bên dưới ghi lại thay đổi ở từng phiên bản, không phải danh sách chức năng vừa hoàn thành trong bản Việt hóa. Mục hỗ trợ tiếng Việt ở v0.5.0 không đồng nghĩa với việc giao diện và tài liệu gốc đã được dịch toàn bộ.
 
 ## v0.7.9
 
-### 新增功能
+### Tính năng mới
 
-- 内嵌社区
+- Nhúng cộng đồng vào ứng dụng.
 
 ## v0.7.8
 
-### 修复故障
+### Sửa lỗi
 
-- 修复部分样式问题
-- 修复录音超过 40 秒发音评估结果缺失
-- 修复导入文档时修改音色不生效
+- Sửa một số lỗi hiển thị.
+- Sửa lỗi thiếu kết quả đánh giá phát âm khi bản ghi dài hơn 40 giây.
+- Sửa lỗi thay đổi giọng đọc không có tác dụng khi nhập tài liệu.
 
 ## v0.7.7
 
-### 修复故障
+### Sửa lỗi
 
-- 修复 Unhandle Error 弹窗
-- 分享录音失败
-- 发音评估中原因发音播放异常
+- Sửa cửa sổ báo lỗi `Unhandle Error`.
+- Sửa lỗi chia sẻ bản ghi âm thất bại.
+- Sửa lỗi phát giọng đọc gốc trong phần đánh giá phát âm.
 
 ## v0.7.6
 
-### 修复故障
+### Sửa lỗi
 
-- 修复弹窗被遮挡的问题
+- Sửa lỗi cửa sổ bật lên bị che khuất.
 
 ## v0.7.5
 
-### 新增功能
+### Tính năng mới
 
-- 文档阅读页面可以修改布局（水平或垂直）
-- 文档可以打印当前页面（包含翻译）
-- 跟读页面可以复制字幕全文（不含时间轴）
-- 查单词面板新增单词的语音评估
+- Cho phép đổi bố cục trang đọc tài liệu theo chiều ngang hoặc dọc.
+- Cho phép in trang tài liệu hiện tại, bao gồm bản dịch.
+- Cho phép sao chép toàn bộ bản chép lời từ trang luyện nhại, không kèm mốc thời gian.
+- Thêm đánh giá phát âm từng từ vào bảng tra từ.
 
-### 修复故障
+### Sửa lỗi
 
-- 修复循环播放和重复播放时异常问题
-- 修复复制粘贴等快捷键失灵的问题
-- 修复语言评估结果部分按钮被遮挡无法点击的问题
+- Sửa lỗi khi phát lặp và phát lại.
+- Sửa lỗi các phím tắt như sao chép và dán không hoạt động.
+- Sửa lỗi một số nút trong kết quả đánh giá phát âm bị che, không thể nhấn.
 
-### 其他
+### Thay đổi khác
 
-- 取消自动更新，改为手动检查更新
+- Tắt cập nhật tự động, chuyển sang kiểm tra cập nhật thủ công.
 
 ## v0.7.4
 
-### 修复故障
+### Sửa lỗi
 
-- 修复部分 Windows 系统语音转文本导致卡死的问题
+- Sửa lỗi chuyển giọng nói thành văn bản khiến một số máy Windows không phản hồi.
 
 ## v0.7.3
 
-### 修复故障
+### Sửa lỗi
 
-- 增加更多必要日志，方便排查问题
-- 修复导入音视频时，压缩选项不生效的问题
+- Thêm nhật ký cần thiết để hỗ trợ chẩn đoán lỗi.
+- Sửa lỗi tùy chọn nén không có tác dụng khi nhập âm thanh và video.
 
 ## v0.7.2
 
-### 修复故障
+### Sửa lỗi
 
-- 修复发音评估弹窗布局问题
+- Sửa bố cục cửa sổ đánh giá phát âm.
 
 ## v0.7.1
 
-### 修复故障
+### Sửa lỗi
 
-- 修复布局问题
+- Sửa lỗi bố cục.
 
 ## v0.7.0
 
-### 新增功能
+### Tính năng mới
 
-- 增加导入文档功能，可跟读、翻译等，支持导入本地 epub, txt, markdown 等格式文本，同时支持在线文章导入
-- 重构软件顶部栏和侧边栏
-- 本地 whisper 增加更多配置项，可选择 `whisper.cpp` 版本
-- 导入音视频时，增加是否压缩的选项
-- 增加默认的 TTS 配置
-- Mixin 可以选择扫码登录
+- Thêm chức năng nhập tài liệu để luyện nhại, dịch và các thao tác khác; hỗ trợ tệp EPUB, TXT, Markdown trên máy và bài viết trực tuyến.
+- Tổ chức lại thanh trên cùng và thanh bên của ứng dụng.
+- Thêm tùy chọn cho whisper cục bộ, cho phép chọn phiên bản `whisper.cpp`.
+- Thêm lựa chọn có nén tệp hay không khi nhập âm thanh và video.
+- Thêm cấu hình TTS mặc định.
+- Cho phép đăng nhập Mixin bằng cách quét mã.
 
-### 修复故障
+### Sửa lỗi
 
-- 修复字幕旧格式导致的错误
-- 重复导入相同资源时，将更新资源的修改时间，使其置于排序靠前
-- 修复字幕中特殊符号（例如破折号）导致显示异常的问题
+- Sửa lỗi do định dạng bản chép lời cũ.
+- Khi nhập lại tài nguyên đã có, cập nhật thời gian sửa đổi để tài nguyên xuất hiện gần đầu danh sách.
+- Sửa lỗi hiển thị khi bản chép lời chứa ký hiệu đặc biệt, chẳng hạn dấu gạch ngang dài.
 
-### 其他
+### Thay đổi khác
 
-- 重构部分代码，优化可维护性
-- 优化 UI 样式
+- Tổ chức lại một phần mã nguồn để dễ bảo trì hơn.
+- Cải thiện kiểu hiển thị của giao diện.
 
 ## v0.6.1
 
-### 修复故障
+### Sửa lỗi
 
-- 修复部分用户导入音视频时报 `Foreign key constraint failed` 错误
+- Sửa lỗi `Foreign key constraint failed` khi một số người dùng nhập âm thanh hoặc video.
 
 ## v0.6.0
 
-### 新增功能
+### Tính năng mới
 
-- 重构 AI 聊天，新增了指定回答、转发消息等多个功能
-- 支持全局唤起聊天窗口，任何页面均可随时与 AI 对话
-- 优化录音文件格式，体积大幅减少
-- 支持一键删除录音文件，释放磁盘（保留录音时长记录）
-- 支持将原智能助手对话迁移至聊天
+- Làm lại chức năng trò chuyện AI, thêm chỉ định người trả lời, chuyển tiếp tin nhắn và các chức năng khác.
+- Cho phép mở cửa sổ trò chuyện từ mọi trang để trao đổi với AI bất kỳ lúc nào.
+- Tối ưu định dạng tệp ghi âm, giảm đáng kể dung lượng.
+- Cho phép xóa tệp ghi âm bằng một thao tác để giải phóng ổ đĩa, vẫn giữ số liệu thời lượng ghi âm.
+- Hỗ trợ chuyển các hội thoại trợ lý cũ sang chức năng trò chuyện.
 
-### 修复故障
+### Sửa lỗi
 
-- 修复代理设置无法自动生效
+- Sửa lỗi cài đặt proxy không tự áp dụng.
 
-### 其他
+### Thay đổi khác
 
-- 替换本地 whisper.cpp 组件为 onnxruntime 版本，增强兼容性
-- 数据迁移以及每天启动时，自动备份数据库至本地
+- Thay thành phần whisper.cpp cục bộ bằng phiên bản dùng onnxruntime để tăng khả năng tương thích.
+- Tự sao lưu cơ sở dữ liệu trên máy khi chuyển đổi dữ liệu và khi khởi động mỗi ngày.
 
 ## v0.5.2
 
-### 修复故障
+### Sửa lỗi
 
-- 创建语音文本时由于网络不佳导致创建失败
+- Sửa lỗi tạo bản chép lời thất bại do mạng kém.
 
 ## v0.5.1
 
-### 新增功能
+### Tính năng mới
 
-- 支持导入 mdx 词典
-- 跟读界面重构，可以拖动改变各区域大小
-- 进入跟读时，自动查找并下载语音文本
+- Hỗ trợ nhập từ điển MDX.
+- Làm lại giao diện luyện nhại, cho phép kéo để đổi kích thước từng vùng.
+- Tự tìm và tải bản chép lời khi mở trang luyện nhại.
 
-### 修复故障
+### Sửa lỗi
 
-- Windows 下点击词典发音弹窗
-- 更新代理时，网络状态不自动刷新
+- Sửa lỗi xuất hiện cửa sổ bất thường khi nhấn phát âm trong từ điển trên Windows.
+- Sửa lỗi trạng thái mạng không tự làm mới khi cập nhật proxy.
 
-### 其他
+### Thay đổi khác
 
-- 优化了左侧栏布局，可以手动隐藏和展开
+- Cải thiện bố cục thanh bên trái, cho phép thu gọn và mở rộng thủ công.
 
 ## v0.5.0
 
-### 新增功能
+### Tính năng mới
 
-- 支持导入第三方词典
-- 支持将同一资源所有段落的录音合并下载
-- 社区广场分享录音显示原始音频段落
-- 支持越南语
+- Hỗ trợ nhập từ điển của bên thứ ba.
+- Cho phép gộp bản ghi của tất cả đoạn thuộc cùng tài nguyên để tải xuống.
+- Hiển thị đoạn âm thanh gốc khi chia sẻ bản ghi lên cộng đồng.
+- Hỗ trợ tiếng Việt.
 
-### 修复故障
+### Sửa lỗi
 
-- 发音评估失败时，不弹出错误信息
-- 修复重置按钮
-- 修复聊天中请求失败时，不弹出错误信息
+- Sửa lỗi không hiển thị thông báo khi đánh giá phát âm thất bại.
+- Sửa nút đặt lại.
+- Sửa lỗi không hiển thị thông báo khi yêu cầu trong cuộc trò chuyện thất bại.
 
-### 其他
+### Thay đổi khác
 
-- 重构配置文件，隔离多用户间的配置选项
-- 优化软件打开流程，网络不佳时可以离线使用
+- Tổ chức lại tệp cấu hình, tách biệt thiết lập của từng người dùng.
+- Cải thiện quy trình mở ứng dụng, cho phép sử dụng ngoại tuyến khi mạng kém.
 
 ## v0.4.1
 
-### 新增功能
+### Tính năng mới
 
-- 增加聊天中的 AI 建议
-- 增加录音的高级配置项
-- 可以打开配置文件
-- 支持泰语
+- Thêm gợi ý AI trong cuộc trò chuyện.
+- Thêm tùy chọn ghi âm nâng cao.
+- Cho phép mở tệp cấu hình.
+- Hỗ trợ tiếng Thái.
 
-### 修复故障
+### Sửa lỗi
 
-- 修复朗读全文录音 1 分钟限制
-- 社区广场中查单词弹窗错位
-- 聊天窗口发送后清空文本框
+- Sửa giới hạn ghi âm một phút trong chế độ đọc toàn bộ văn bản.
+- Sửa vị trí cửa sổ tra từ trong cộng đồng.
+- Xóa nội dung ô soạn thảo sau khi gửi tin nhắn.
 
-### 其他
+### Thay đổi khác
 
-- 优化发音频评估结果中单词显示
-- 优化部分错误提示
-- 优化聊天的提示语
+- Cải thiện cách hiển thị từ trong kết quả đánh giá phát âm.
+- Cải thiện một số thông báo lỗi.
+- Cải thiện lời nhắc trò chuyện.
 
 ## v0.4.0
 
-### 新增功能
+### Tính năng mới
 
-- AI 语音聊天
-- 下载 Youtube 视频时应用代理设置
-- 网络状态检查
-- 跟读播放速度支持快捷键
-- 支持近期费用查询
-- 本地资源库详情展示
-- 一键清理源文件丢失的资源
-- 发音评估页面支持分享录音
-- 支持粤语
+- Thêm trò chuyện bằng giọng nói với AI.
+- Áp dụng cấu hình proxy khi tải video YouTube.
+- Thêm kiểm tra trạng thái mạng.
+- Hỗ trợ phím tắt thay đổi tốc độ phát khi luyện nhại.
+- Cho phép xem chi phí gần đây.
+- Hiển thị thông tin chi tiết của thư viện trên máy.
+- Cho phép dọn các tài nguyên bị mất tệp nguồn bằng một thao tác.
+- Cho phép chia sẻ bản ghi từ trang đánh giá phát âm.
+- Hỗ trợ tiếng Quảng Đông.
 
-### 修复故障
+### Sửa lỗi
 
-- 修复因 AI 模型设置导致设置页面无法打开
+- Sửa lỗi không mở được trang cài đặt do cấu hình mô hình AI.
 
-### 其他
+### Thay đổi khác
 
-- 优化录音功能
+- Cải thiện chức năng ghi âm.
 
 ## v0.3.4
 
-### 修复故障
+### Sửa lỗi
 
-- 修复 OpenAI 设置模型无法使用
-- 修复跟读页面播放器循环播放异常问题
-- 修复网络不佳情况下 GPT 预设的加载
-- 修复 Azure AI 语音转文本某些情况下卡死的问题
-- 修复跟读页面播放器突然失灵的情况
+- Sửa lỗi mô hình đã chọn trong cài đặt OpenAI không sử dụng được.
+- Sửa lỗi phát lặp của trình phát trong trang luyện nhại.
+- Sửa việc tải mẫu GPT khi mạng kém.
+- Sửa lỗi Azure AI STT không phản hồi trong một số trường hợp.
+- Sửa lỗi trình phát trong trang luyện nhại đột ngột ngừng hoạt động.
 
 ## v0.3.3
 
-### 新增功能
+### Tính năng mới
 
-- 针对有背景音乐等噪声的音频，优化了字幕的对齐准确度
-- 优化字幕修改，支持修改时间轴
-- 视频播放器支持显示字幕
-- OpenAI 设置支持自定义模型
-- 充值支持加密货币链上支付
+- Cải thiện độ chính xác khi căn chỉnh bản chép lời cho âm thanh có nhạc nền hoặc tiếng ồn.
+- Cải thiện chỉnh sửa bản chép lời, cho phép sửa mốc thời gian.
+- Cho phép hiển thị phụ đề trong trình phát video.
+- Cho phép cấu hình mô hình tùy chỉnh trong cài đặt OpenAI.
+- Hỗ trợ nạp tiền bằng giao dịch tiền mã hóa trên blockchain.
 
-### 修复故障
+### Sửa lỗi
 
-- 自由录音进行发音评估报错
-- Mixin 支付无法打开
+- Sửa lỗi đánh giá phát âm với bản ghi tự do.
+- Sửa lỗi không mở được thanh toán Mixin.
 
-### 其他
+### Thay đổi khác
 
-- 其他体验上的优化
+- Cải thiện các trải nghiệm khác.
 
 ## v0.3.2
 
-### 新增功能
+### Tính năng mới
 
-- 可以修改 API 网址
+- Cho phép thay đổi URL API.
 
-### 修复故障
+### Sửa lỗi
 
-- 字幕首个单词闪动
+- Sửa lỗi từ đầu tiên trong bản chép lời nhấp nháy.
 
 ## v0.3.1
 
-### 新增功能
+### Tính năng mới
 
-- 社区广场分享录音显示评估分数
-- 课程显示章节完成人数
-- 音视频字幕可导出为 PDF（带音标）
-- 社区广场可以点赞
-- 语音转文本可以从云端下载已有的字幕
+- Hiển thị điểm đánh giá khi chia sẻ bản ghi lên cộng đồng.
+- Hiển thị số người hoàn thành từng chương của khóa học.
+- Cho phép xuất bản chép lời âm thanh và video thành PDF có phiên âm.
+- Cho phép thích bài đăng trong cộng đồng.
+- Cho phép tải bản chép lời có sẵn từ đám mây trong quá trình STT.
 
-### 修复故障
+### Sửa lỗi
 
-- 录音对比不起作用
-- 课程发音评估结果不显示
-- 侧边栏在小窗口的显示
+- Sửa lỗi so sánh bản ghi không hoạt động.
+- Sửa lỗi không hiển thị kết quả đánh giá phát âm trong khóa học.
+- Sửa cách hiển thị thanh bên khi cửa sổ nhỏ.
 
-### 其他
+### Thay đổi khác
 
-- 优化了发音评估流程
+- Cải thiện quy trình đánh giá phát âm.
 
 ## v0.3.0
 
-### 新增功能
+### Tính năng mới
 
-- 互动式课程
+- Thêm khóa học tương tác.
 
-### 修复故障
+### Sửa lỗi
 
-- 语音转文本时出现网络错误后卡死
-- 发音评估部分音标显示不正常
+- Sửa lỗi ứng dụng không phản hồi sau lỗi mạng trong quá trình STT.
+- Sửa lỗi hiển thị một số ký hiệu phiên âm trong phần đánh giá phát âm.
 
 ## v0.2.14
 
-### 新增功能
+### Tính năng mới
 
-- 智能助手对话中可以选择 TTS 语言
-- 语音转文本提取人声（实验性功能）
+- Cho phép chọn ngôn ngữ TTS trong hội thoại với trợ lý.
+- Thêm tách giọng nói khi chuyển âm thanh thành văn bản, dưới dạng chức năng thử nghiệm.
 
-### 修复故障
+### Sửa lỗi
 
-- 发音评估在深色主题中的样式问题
-- 语音转文本时有原始文本时不再重新识别
+- Sửa kiểu hiển thị đánh giá phát âm trong giao diện tối.
+- Không nhận dạng lại khi quá trình STT đã có văn bản nguồn.
 
-### 其他
+### Thay đổi khác
 
-- 优化语音转文本的设置，隐藏高级选项
-- 优化添加本地资源处理的结果与报错
+- Cải thiện cài đặt STT, ẩn các tùy chọn nâng cao.
+- Cải thiện việc xử lý kết quả và lỗi khi thêm tài nguyên trên máy.
 
 ## v0.2.13
 
-### 新增功能
+### Tính năng mới
 
-- 语音转文本时可以自定义设置，包括上传字幕文件
-- 发音评估列表增加排序
-- 音频/视频列表页增加排序、筛选和搜索
+- Cho phép tùy chỉnh STT, bao gồm tải lên tệp phụ đề.
+- Thêm sắp xếp vào danh sách đánh giá phát âm.
+- Thêm sắp xếp, lọc và tìm kiếm vào danh sách âm thanh và video.
 
 ## v0.2.12
 
-### 修复故障
+### Sửa lỗi
 
-- Windows 版本数据库更新异常
+- Sửa lỗi cập nhật cơ sở dữ liệu trên Windows.
 
 ## v0.2.11
 
-### 新增功能
+### Tính năng mới
 
-- 增加发音评估的独立页面，支持无文本录音评估，及上传录音文件评估
-- 增加发音评估快捷键，默认为 `A`
-- 快捷键设置最多支持三个键（如 `Ctrl`+`Shift`+`A`）
-- 跟读页面自动记录上次跟读句子
+- Thêm trang đánh giá phát âm riêng, hỗ trợ đánh giá bản ghi không có văn bản tham chiếu và tải lên tệp ghi âm để đánh giá.
+- Thêm phím tắt đánh giá phát âm, mặc định là `A`.
+- Cho phép tổ hợp phím tắt gồm tối đa ba phím, chẳng hạn `Ctrl`+`Shift`+`A`.
+- Tự ghi nhớ câu đã luyện gần nhất trên trang luyện nhại.
 
-### 修复故障
+### Sửa lỗi
 
-- OpenAI TTS 使用 `tts-1-hd` 时报错
-- 快捷键失灵
-- 网络环境不佳时，手机验证码无法点发送
-- 广场页面，多个录音同时播放
-- 使用本地 whisper 进行语音转文本时，无法中断进程
-- 音标字体加载失败
+- Sửa lỗi OpenAI TTS khi dùng `tts-1-hd`.
+- Sửa lỗi phím tắt không hoạt động.
+- Sửa lỗi không thể nhấn gửi mã xác minh điện thoại khi mạng kém.
+- Sửa lỗi nhiều bản ghi phát cùng lúc trên trang cộng đồng.
+- Sửa lỗi không thể dừng tiến trình STT dùng whisper cục bộ.
+- Sửa lỗi không tải được phông chữ phiên âm.
 
-### 其他
+### Thay đổi khác
 
-- 优化跟读页面 UI
+- Cải thiện giao diện trang luyện nhại.
 
 ## v0.2.10
 
-### 新增功能
+### Tính năng mới
 
-- 支持 Azure TTS，支持多语言、多角色
+- Hỗ trợ Azure TTS với nhiều ngôn ngữ và giọng đọc.
 
-### 修复故障
+### Sửa lỗi
 
-- 除英语以外，其他语言的音标不做修正
-- 下载音频时指定后缀
-- 修复下拉菜单过长时无法拖动的问题
-- 调整录音修剪阈值，避免录音过度剪切
+- Không áp dụng hiệu chỉnh phiên âm tiếng Anh cho các ngôn ngữ khác.
+- Chỉ định phần mở rộng khi tải tệp âm thanh.
+- Sửa lỗi không cuộn được danh sách thả xuống quá dài.
+- Điều chỉnh ngưỡng cắt bản ghi để tránh cắt mất quá nhiều âm thanh.
 
-### 其他
+### Thay đổi khác
 
-- 新用户默认以 azure 作为 STT 引擎
+- Dùng Azure làm dịch vụ STT mặc định cho người dùng mới.
 
 ## v0.2.9
 
-### 新增功能
+### Tính năng mới
 
-- Mixin 充值支持多种加密货币
-- 支持设置多种“学习语言”
+- Hỗ trợ nhiều loại tiền mã hóa khi nạp tiền qua Mixin.
+- Cho phép chọn nhiều ngôn ngữ học khác nhau.
 
-### 修复故障
+### Sửa lỗi
 
-- 修复“朗读全文”时的录音计时问题
-- 修复 echogarden 报错 "No match found in uncrop timeline"
+- Sửa lỗi tính thời gian ghi âm trong chế độ đọc toàn bộ văn bản.
+- Sửa lỗi echogarden `No match found in uncrop timeline`.
 
 ## v0.2.8
 
-### 修复故障
+### Sửa lỗi
 
-- 智能助手对话进入跟读页面时，点击任意按钮自动退出
+- Sửa lỗi tự thoát khi nhấn bất kỳ nút nào sau khi chuyển từ hội thoại trợ lý sang trang luyện nhại.
 
 ## v0.2.7
 
-### 新增功能
+### Tính năng mới
 
-- 朗读全文模式
-- 新增 Youtube 频道作为视频资源
+- Thêm chế độ đọc toàn bộ văn bản.
+- Thêm kênh YouTube làm nguồn video.
 
-### 修复故障
+### Sửa lỗi
 
-- 智能词典无法查询
-- 时间的显示及统计不遵循本地时区
-- audible.com 的音频资源加载失败
-- 网速不佳时新建智能对话失败
+- Sửa lỗi không tra được từ điển thông minh.
+- Sửa lỗi hiển thị và thống kê thời gian không theo múi giờ địa phương.
+- Sửa lỗi tải tài nguyên âm thanh từ audible.com.
+- Sửa lỗi tạo hội thoại trợ lý khi mạng kém.
 
-### 其他
+### Thay đổi khác
 
-- 升级 whisper.cpp 版本至 [v1.6.0](https://github.com/ggerganov/whisper.cpp/releases/tag/v1.6.0)
+- Nâng cấp whisper.cpp lên [v1.6.0](https://github.com/ggerganov/whisper.cpp/releases/tag/v1.6.0).
 
 ## v0.2.6
 
-### 新增功能
+### Tính năng mới
 
-- 更新模型列表，支持 GPT-4o 模型
-- EnjoyAI 增加除 OpenAI 以外的其他模型(例如 gemini-pro-1.5 等)
-- 支持颗粒度更小的 AI 模型设置，可以对“智能词典”单独设置模型
+- Cập nhật danh sách mô hình, hỗ trợ GPT-4o.
+- Thêm các mô hình ngoài OpenAI vào EnjoyAI, chẳng hạn gemini-pro-1.5.
+- Cho phép cấu hình mô hình AI chi tiết hơn, bao gồm mô hình riêng cho từ điển thông minh.
 
-### 修复故障
+### Sửa lỗi
 
-- Mixin 登录页面深色模式下的样式
-- 音标重音标注符号修改至辅音
+- Sửa kiểu hiển thị trang đăng nhập Mixin trong giao diện tối.
+- Chuyển vị trí ký hiệu trọng âm trong phiên âm sang phụ âm.
 
-### 其他
+### Thay đổi khác
 
-- 优化了智能助手列表
-- 支持通过 API 更新模型列表
+- Cải thiện danh sách trợ lý AI.
+- Hỗ trợ cập nhật danh sách mô hình qua API.
 
 ## v0.2.5
 
-### 修复故障
+### Sửa lỗi
 
-- Mixin ID 为 5 位数时无法发送验证码
+- Sửa lỗi không gửi được mã xác minh khi Mixin ID có năm chữ số.
 
 ## v0.2.4
 
-### 新增功能
+### Tính năng mới
 
-- 本地 whisper 模型支持识别英语以外的语言（需要选择不带 `.en` 的模型）
-- 跟读页面做笔记功能
-- 修改语音文本功能
-- 对语音进行 AI 提炼标题
-- 全局查词典和智能翻译（选中文本后右键菜单选择）
-- 生词本支持快捷键
-- 下载任意选段音频
+- Cho phép mô hình whisper cục bộ nhận dạng ngôn ngữ ngoài tiếng Anh; cần chọn mô hình không có hậu tố `.en`.
+- Thêm ghi chú trên trang luyện nhại.
+- Thêm chỉnh sửa bản chép lời.
+- Dùng AI đề xuất tiêu đề cho âm thanh.
+- Cho phép tra từ điển và dịch thông minh trong toàn ứng dụng bằng cách chọn văn bản rồi mở menu chuột phải.
+- Hỗ trợ phím tắt cho sổ từ vựng.
+- Cho phép tải âm thanh của đoạn được chọn bất kỳ.
 
-### 修复故障
+### Sửa lỗi
 
-- 暗黑模式下部分样式问题
-- 原文以 `-` 开头时语音转文本报错
-- 跟读页面快捷键失灵
-- 代理设置无法保存
-- 录音超时后没有自动停止
-- 导入资源时后缀大写时报错
-- Youtube 视频无法下载
-- 录音不完整问题
+- Sửa một số lỗi hiển thị trong giao diện tối.
+- Sửa lỗi STT khi văn bản gốc bắt đầu bằng `-`.
+- Sửa lỗi phím tắt trên trang luyện nhại không hoạt động.
+- Sửa lỗi không lưu được cấu hình proxy.
+- Sửa lỗi ghi âm không tự dừng khi hết thời gian.
+- Sửa lỗi nhập tài nguyên có phần mở rộng viết hoa.
+- Sửa lỗi không tải được video YouTube.
+- Sửa lỗi bản ghi âm không đầy đủ.
 
-### 其他
+### Thay đổi khác
 
-- Github 登录改为设备验证流程
-- Mixin 登录改为验证码方式
+- Chuyển đăng nhập GitHub sang quy trình xác minh thiết bị.
+- Chuyển đăng nhập Mixin sang phương thức mã xác minh.

@@ -1,29 +1,33 @@
-# 9. 注意不到就不存在
+# 9. Không chú ý thì như không tồn tại
 
-人们可以意识到自己正在思考，可以检查自己思考的过程，还可以判断自己的思考质量，关于思考的思考，有个专门的名词，元认知（*metarecognition*）。
+Con người có thể nhận ra mình đang suy nghĩ, kiểm tra quá trình suy nghĩ và đánh giá chất lượng suy nghĩ. Việc suy nghĩ về chính suy nghĩ có một tên gọi riêng: siêu nhận thức (*metarecognition*, cách ghi trong nguyên tác).
 
-元认知的存在与启动，本质上来看是注意力管理（*attention management*）—— 当你想办法关注自己的思考及其过程的时候，元认知就启动了。这就是注意力的神奇之处，它是大脑天生自带的神奇功能，它也决定了一个神奇的现象：
+Về bản chất, theo cách trình bày này, sự tồn tại và khởi động của siêu nhận thức là quản lý sự chú ý (*attention management*). Khi tìm cách chú ý đến suy nghĩ và quá trình suy nghĩ của mình, siêu nhận thức được khởi động. Đó là điều kỳ diệu của sự chú ý, một chức năng kỳ diệu vốn có của não, cũng tạo nên hiện tượng kỳ diệu sau:
 
-> **你注意不到的东西对你来说就不存在**。
+> **Điều bạn không chú ý đến thì đối với bạn như không tồn tại**.
 
-展现在我们所在的现实世界总是丰富多彩，但，我们的注意力被手中那一百平方厘米不到的屏幕所吸引之后，新鲜空气，灿烂阳光，蓝天白云，小鸟飞舞，人来人往，欢声笑语…… 这一切都会瞬间消失，我们身之所处变成了虚拟世界。
+Thế giới thực quanh ta luôn phong phú. Nhưng khi sự chú ý bị màn hình chưa tới một trăm centimet vuông trong tay hút lấy, không khí trong lành, nắng rực rỡ, trời xanh mây trắng, chim bay, người qua lại, tiếng nói cười đều biến mất trong chớp mắt. Nơi ta đang sống trở thành thế giới ảo.
 
-注意不到就不存在。
+Không chú ý thì như không tồn tại.
 
-反过来也一样，不知道就注意不到。
+Chiều ngược lại cũng vậy: không biết thì không chú ý được.
 
-你不知道这个原理，你不知道大脑最擅长干的就是调用近似网络，近似地完成任务，那么，你就注意不到自己正在调用近似网络，你就不知道你自己正在那么干，你也不会知道你的所谓完成只不过是近似完成，当你最终把复杂任务搞砸了的时候，你只是一脸问号，脑子里根本就没有答案。
+Nếu không biết nguyên lý này, không biết não giỏi nhất việc gọi mạng gần đúng để hoàn thành nhiệm vụ gần đúng, bạn sẽ không chú ý mình đang làm vậy. Bạn không biết mình đang làm gì, cũng không biết cái gọi là hoàn thành chỉ là hoàn thành gần đúng. Đến khi làm hỏng nhiệm vụ phức tạp, bạn chỉ đầy dấu hỏi, trong đầu chẳng có câu trả lời.
 
-科学家们提出了一个极为重要的概念：刻意练习。按照他们一致的说法，刻意练习的关键在于**不断提高练习的难度**，**不断突破舒适区**，否则，更多的练习不仅不会带来进步，还会导致一定的退步。
+Các nhà khoa học đã đưa ra một khái niệm cực kỳ quan trọng: luyện tập có chủ đích. Theo điều tác giả mô tả là quan điểm thống nhất của họ, mấu chốt là **liên tục tăng độ khó của bài tập**, **liên tục vượt vùng thoải mái**; nếu không, luyện nhiều hơn không những không tiến bộ mà còn có thể thụt lùi.
 
-练习就要**努力**，即，**短时间内足量重复**。那么刻意练习呢？关键在于哪里？我觉得：
+Luyện tập phải **nỗ lực**, tức **lặp lại đủ nhiều trong thời gian ngắn**. Còn luyện tập có chủ đích thì sao? Mấu chốt ở đâu? Tôi cho rằng:
 
-> **刻意练习关键在于，在练习的过程中要有组织有计划有系统地调用并集中自己的注意力，致力于新建连接新建网络，而不是调用近似连接近似网络**。
+> **Mấu chốt của luyện tập có chủ đích là huy động và tập trung sự chú ý có tổ chức, có kế hoạch, có hệ thống trong lúc luyện, hướng đến tạo kết nối và mạng mới, thay vì gọi kết nối và mạng gần đúng**.
 
-这个说法的好处是，因为更加具体，所以更具备可操作性，更有指导意义。
+Cách nói này có ưu điểm là cụ thể hơn, nên dễ thực hiện và có giá trị hướng dẫn hơn.
 
-无论学什么，无论做什么，哪怕在起点上，就可以为目标制定一个 “**检查列表**”，罗列学好做好的关键衡量指标…… 这个列表就是启动元认知的关键，就是调用并集中注意力的目标。所以，别管学没学会，别管练没练好，要事先把这个列表烂熟于心，这样才能越来越轻松地调用注意力去关注、纠正、改良，直至成功验收。
+Dù học gì, làm gì, ngay từ điểm xuất phát cũng có thể lập một **danh sách kiểm tra** cho mục tiêu, liệt kê các tiêu chí quan trọng để đánh giá học tốt, làm tốt. Danh sách này là chìa khóa khởi động siêu nhận thức, là mục tiêu để huy động và tập trung sự chú ý. Vì vậy, dù đã học được hay chưa, luyện tốt hay chưa, hãy thuộc danh sách từ trước. Nhờ đó, bạn ngày càng dễ hướng sự chú ý vào việc quan sát, sửa và cải thiện, đến khi đạt yêu cầu.
 
-人们总以为这是老师要干的事情，而自己是学生，所以理直气壮地把这项最基础最关键的任务完全交给老师或者教练…… 想想看吧，这是不是又一个绝大多数人最终失败的重要原因？
+Mọi người luôn nghĩ đây là việc của giáo viên, còn mình là học sinh, nên yên tâm giao toàn bộ nhiệm vụ căn bản và quan trọng nhất này cho giáo viên hoặc huấn luyện viên. Hãy nghĩ xem: liệu đây có phải một nguyên nhân quan trọng nữa khiến đại đa số cuối cùng thất bại?
 
-## 
+::: info Ghi chú biên tập cho bản tiếng Việt
+Thuật ngữ thông dụng cho “siêu nhận thức” là **metacognition**; *metarecognition* ở đầu bài được giữ để nhận diện cách ghi của nguyên tác. Câu “không chú ý thì không tồn tại” là phép diễn đạt về trải nghiệm chủ quan, không phủ nhận sự tồn tại của thế giới bên ngoài.
+
+Không nên coi “luôn tăng độ khó” là mô tả đầy đủ hoặc đồng thuận tuyệt đối về luyện tập có chủ đích. Với người học tiếng Anh, danh sách kiểm tra có thể gồm độ rõ của âm, trọng âm, nghĩa và khả năng dùng trong ngữ cảnh; giáo viên hoặc bạn học có thể giúp phản hồi. Ví dụ ứng dụng này do bản tiếng Việt bổ sung. Xem ghi chú về luyện tập ở [bài 7](./07-repitition.md).
+:::

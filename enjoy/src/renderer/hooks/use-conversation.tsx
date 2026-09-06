@@ -5,8 +5,6 @@ import {
 import { useContext } from "react";
 import { ChatMessageHistory, BufferMemory } from "langchain/memory";
 import { ConversationChain } from "langchain/chains";
-import { ChatOpenAI } from "@langchain/openai";
-import { ChatOllama } from "@langchain/ollama";
 import {
   ChatPromptTemplate,
   MessagesPlaceholder,
@@ -14,10 +12,22 @@ import {
 import { type LLMResult } from "@langchain/core/outputs";
 import { v4 } from "uuid";
 import { useSpeech } from "./use-speech";
+import {
+  assertChatModelResponseComplete,
+  createChatModel,
+  getChatModelText,
+} from "@/lib/chat-model";
+
+type RuntimeAISettings = {
+  openai?: LlmProviderType;
+  getProviderConfig?: (name: string) => LlmProviderType;
+};
 
 export const useConversation = () => {
   const { EnjoyApp, user, apiUrl } = useContext(AppSettingsProviderContext);
-  const { openai } = useContext(AISettingsProviderContext);
+  const { openai, getProviderConfig } = useContext(
+    AISettingsProviderContext
+  ) as RuntimeAISettings;
   const { tts } = useSpeech();
 
   const pickLlm = (conversation: ConversationType) => {
@@ -31,46 +41,36 @@ export const useConversation = () => {
       numberOfChoices,
     } = conversation.configuration;
 
-    if (conversation.engine === "enjoyai") {
-      return new ChatOpenAI({
-        openAIApiKey: user.accessToken,
-        configuration: {
-          baseURL: `${apiUrl}/api/ai`,
-        },
-        maxRetries: 0,
-        modelName: model,
-        temperature,
-        maxTokens,
-        frequencyPenalty,
-        presencePenalty,
-        n: numberOfChoices,
-      });
-    } else if (conversation.engine === "openai") {
-      if (!openai) throw new Error("OpenAI API key is required");
+    const provider = conversation.engine;
+    const configuredProvider = getProviderConfig?.(provider);
+    const legacyProvider = provider === "openai" ? openai : undefined;
+    const key = configuredProvider?.key ?? legacyProvider?.key ??
+      (provider === "enjoyai" ? user?.accessToken : undefined);
+    const resolvedBaseUrl =
+      provider === "enjoyai"
+        ? apiUrl
+          ? `${apiUrl}/api/ai`
+          : undefined
+        : baseUrl || configuredProvider?.baseUrl || legacyProvider?.baseUrl;
 
-      return new ChatOpenAI({
-        openAIApiKey: openai.key,
-        configuration: {
-          baseURL: baseUrl || openai.baseUrl,
-        },
-        maxRetries: 0,
-        modelName: model,
-        temperature,
-        maxTokens,
-        frequencyPenalty,
-        presencePenalty,
-        n: numberOfChoices,
-      });
-    } else if (conversation.engine === "ollama") {
-      return new ChatOllama({
-        baseUrl,
-        model,
-        temperature,
-        frequencyPenalty,
-        presencePenalty,
-        maxRetries: 2,
-      });
+    if (provider === "enjoyai" && !key) {
+      throw new Error("EnjoyAI authorization is required");
     }
+    if (provider === "openai" && !key) {
+      throw new Error("OpenAI API key is required");
+    }
+
+    return createChatModel({
+      provider,
+      key,
+      baseUrl: resolvedBaseUrl,
+      modelName: model,
+      temperature,
+      maxTokens,
+      frequencyPenalty,
+      presencePenalty,
+      numberOfChoices,
+    });
   };
 
   const fetchChatHistory = async (conversation: ConversationType) => {
@@ -148,21 +148,30 @@ export const useConversation = () => {
       llm: llm as any,
       memory,
       prompt: prompt as any,
-      verbose: true,
+      verbose: false,
     });
     let response: LLMResult["generations"][0] = [];
     await chain.call({ input: message.content }, [
       {
         handleLLMEnd: async (output) => {
-          response = output.generations[0];
+          response = output.generations[0] || [];
         },
       },
     ]);
+    for (const generation of response) {
+      assertChatModelResponseComplete(generation);
+    }
+    if (response.length === 0) {
+      throw new Error("AI returned an empty response");
+    }
 
     const replies = response.map((r) => {
+      const generationMessage = (r as { message?: unknown }).message;
+      const content = getChatModelText(generationMessage ?? r).trim();
+      if (!content) throw new Error("AI returned an empty response");
       return {
         id: v4(),
-        content: r.text,
+        content,
         role: "assistant" as MessageRoleEnum,
         conversationId: conversation.id,
       };

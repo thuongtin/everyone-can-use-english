@@ -8,14 +8,14 @@
       <div
         class="slogan inline-block text-greyscale_2 text-[24px] md:text-[48px] px-6 md:px-12 lg:max-w-[800px]"
       >
-        用你的注意力填满一千小时就能练成任何你所需要的技能......
+        Dành trọn sự tập trung cho 1000 giờ luyện tập để làm chủ kỹ năng bạn cần...
       </div>
     </div>
 
     <div
       class="hint flex justify-center text-greyscale_4 text-[14px] md:text-[18px]"
     >
-      与
+      Cùng
       <span class="flex text-greyscale_1 mr-1">
         <img
           src="/portal-static/icon/enjoy-app.svg"
@@ -25,38 +25,46 @@
         />
         Enjoy App
       </span>
-      一起，享受这1000小时
+      tận hưởng 1000 giờ học tập này
     </div>
 
     <div class="mt-6 max-sm:inline-flex max-sm:gap-4 max-sm:flex-col">
-      <a href="https://1000h.org/intro.html" target="_blank">
+      <a
+        :href="distributionLinks.docsUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <button
           class="action px-4 py-3 md:px-5 md:py-4 text-[14px] md:text-[16px] max-sm:w-[260px]"
         >
-          <span class="mr-1">开启我的 1000 小时</span>
+          <span class="mr-1">Xem hướng dẫn học 1000 giờ</span>
 
           <img src="/portal-static/icon/arrow-right.svg" width="24" />
         </button>
       </a>
 
-      <a href="https://enjoy.bot" target="_blank">
+      <a
+        :href="distributionLinks.downloadUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <button
           class="action secondary px-4 py-3 md:px-5 md:py-4 text-[14px] md:text-[16px] sm:ml-4 max-sm:w-[260px]"
         >
-          <span class="mr-1">体验 Enjoy App</span>
+          <span class="mr-1">Xem hướng dẫn tải Enjoy App</span>
         </button>
       </a>
     </div>
 
     <div class="mt-6 text-greyscale_4 text-[14px] md:text-[18px] total-hour">
       <span v-show="totalHour">
-        社区成员已累计练习 {{ totalHourText }} 小时
+        Cộng đồng Enjoy đã luyện tập tổng cộng {{ totalHourText }} giờ
       </span>
     </div>
   </div>
 
-  <div class="demo mt-[80px] md:mt-[120px] h-[160px] md:h-[300px] lg:h-[600px]">
-    <div class="bg h-[160px] md:h-[340px] lg:h-[620px]"></div>
+  <div class="demo mt-[80px] md:mt-[120px] h-[260px] md:h-[380px] lg:h-[620px]">
+    <div class="bg h-[260px] md:h-[380px] lg:h-[620px]"></div>
 
     <div class="container m-auto text-center">
       <DemoScreen />
@@ -71,26 +79,44 @@ export default {
 </script>
 
 <script lang="ts" setup>
-const totalHour = ref(0);
+import { resolveDistributionLinks } from "~/utils/distribution-links";
 
-const totalHourText = computed(() => totalHour.value.toLocaleString());
+const totalHour = ref(0);
+const distributionLinks = resolveDistributionLinks(useRuntimeConfig().public);
+
+const totalHourText = computed(() => totalHour.value.toLocaleString("vi-VN"));
 
 onMounted(() => {
   requestTotalPracticeTime();
 });
 
 async function requestTotalPracticeTime() {
-  await fetch("https://enjoy.bot/api/badges/recordings")
-    .then((res) => res.json())
-    .then((data) => {
-      totalHour.value = Number.parseInt(data.message.replace("h", ""));
-    });
+  try {
+    const response = await fetch("https://enjoy.bot/api/badges/recordings");
+    if (!response.ok) return;
+
+    const data: unknown = await response.json();
+    if (typeof data !== "object" || data === null || !("message" in data)) {
+      return;
+    }
+
+    const message = data.message;
+    if (typeof message !== "string") return;
+
+    const match = message.trim().match(/^(\d+(?:\.\d+)?)\s*h$/i);
+    const hours = match ? Number(match[1]) : undefined;
+    if (hours !== undefined && Number.isFinite(hours) && hours >= 0) {
+      totalHour.value = hours;
+    }
+  } catch (error) {
+    console.warn("total practice time request failed", error);
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 .slogan {
-  font-family: "Noto Serif SC", sans-serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-weight: 700;
   line-height: 1.5;
 }

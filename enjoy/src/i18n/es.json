@@ -268,6 +268,12 @@
   "save": "Guardar",
   "delete": "Eliminar",
   "edit": "Editar",
+  "undo": "Deshacer",
+  "redo": "Rehacer",
+  "help": "Ayuda",
+  "hide": "Ocultar",
+  "unhide": "Mostrar",
+  "toggleFullscreen": "Alternar pantalla completa",
   "retry": "Reintentar",
   "failedToLogin": "Error al iniciar sesión",
   "sendCode": "Enviar código",
@@ -281,6 +287,9 @@
   "createMixinAccount": "Crear cuenta de Mixin",
   "scanToLogin": "Escanear para iniciar sesión",
   "youCanAlsoLoginWith": "También puedes iniciar sesión con",
+  "banduLogin": "Iniciar sesión con Bandu",
+  "banduLoginDescription": "Bandu es un método de inicio de sesión opcional para cuentas o números de teléfono compatibles con Bandu. La entrega del código depende de Bandu y de tu operador. También puedes usar GitHub o correo electrónico.",
+  "loginOptionsDescription": "Bandu es opcional. También puedes iniciar sesión con GitHub o correo electrónico.",
   "downloadTranscript": "Descargar transcripción",
   "downloadTranscriptFromCloud": "Descargar transcripción desde la nube",
   "transcribe": "Transcribir",
@@ -365,6 +374,9 @@
   "later": "Más tarde",
   "userGuide": "Guía de usuario",
   "feedback": "Comentarios",
+  "checkForUpdates": "Buscar actualizaciones",
+  "reportIssue": "Informar de un problema",
+  "automaticUpdatesUnavailable": "Las actualizaciones automáticas no están configuradas para esta edición vietnamita. Abre la página de descargas del código fuente para instalar una versión más reciente.",
   "alreadyLatestVersion": "Ya es la última versión",
   "initializingApp": "Inicializando APP",
   "welcomeTo": "Bienvenido a",
@@ -455,6 +467,8 @@
   "enjoyCloudflare": "Cloudflare AI (por Enjoy)",
   "enjoyCloudflareSpeechToTextDescription": "Usa Cloudflare AI Worker para transcribir. Está en beta y es gratis por ahora.",
   "openaiSpeechToTextDescription": "Usa OpenAI para transcribir usando tu propia clave.",
+  "openaiTranscriptionModel": "Modelo de transcripción de OpenAI",
+  "openaiTranscriptionModelDescription": "Elige un modelo para convertir el audio en texto. whisper-1 mantiene la configuración existente; gpt-transcribe es la opción nueva.",
   "uploadSpeechToTextDescription": "Sube un archivo de transcripción o ingresa el texto de la transcripción para alinear.",
   "checkingWhisper": "Verificando el estado de Whisper",
   "pleaseDownloadWhisperModelFirst": "Por favor, descarga primero el modelo de Whisper",
@@ -490,6 +504,36 @@
   "key": "clave",
   "leaveEmptyToUseDefault": "Dejar en blanco para usar el predeterminado",
   "openaiBaseUrlDescription": "Cualquier endpoint que soporte la API de estilo OpenAI.",
+  "aiProviders": {
+    "title": "Proveedores de IA",
+    "description": "Configura las credenciales, los endpoints y las listas de modelos de cada proveedor de IA.",
+    "enjoyai": {
+      "description": "Usa el servicio de cuenta de EnjoyAI con tu cuenta de Enjoy."
+    },
+    "openai": {
+      "description": "Usa OpenAI o un endpoint compatible con OpenAI con tu clave."
+    },
+    "gemini": {
+      "description": "Usa Gemini mediante su endpoint compatible con OpenAI."
+    },
+    "deepseek": {
+      "description": "Usa DeepSeek mediante su endpoint compatible con OpenAI."
+    },
+    "openrouter": {
+      "description": "Usa OpenRouter para dirigir solicitudes a modelos compatibles."
+    },
+    "ollama": {
+      "description": "Usa un servidor local de Ollama. No se requiere clave de API."
+    },
+    "lmstudio": {
+      "description": "Usa un servidor local de LM Studio compatible con OpenAI. El token de API es opcional."
+    }
+  },
+  "providerConfigSaved": "Configuración del proveedor guardada",
+  "providerConfigSaveFailed": "No se pudo guardar la configuración del proveedor",
+  "providerModelRequired": "Elige un modelo antes de guardar este proveedor",
+  "localProviderModelRequired": "Inicia un modelo local antes de guardar este proveedor",
+  "providerNoApiKeyRequired": "Este proveedor local no requiere una clave de API.",
   "newConversation": "Nueva conversación",
   "selectAiRole": "Seleccionar rol de IA",
   "chooseFromPresetGpts": "Elegir de GPTs preestablecidos",
@@ -941,5 +985,9 @@
   "checkingForUpdate": "Buscando actualización",
   "updateAvailable": "Actualización disponible",
   "quitAndInstall": "Salir e instalar",
-  "pleaseSelect": "Por favor, selecciona"
+  "pleaseSelect": "Por favor, selecciona",
+  "pagination": "Paginación",
+  "goToPreviousPage": "Ir a la página anterior",
+  "goToNextPage": "Ir a la página siguiente",
+  "morePages": "Más páginas"
 }

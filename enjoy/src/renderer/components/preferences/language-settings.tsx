@@ -11,38 +11,48 @@ import {
 } from "@renderer/context";
 import { useContext } from "react";
 
+const languageLabels = {
+  vi: "Tiếng Việt",
+  en: "English",
+  es: "Español",
+};
+
 export const LanguageSettings = () => {
-  const { language, switchLanguage } = useContext(AppSettingsProviderContext);
+  const { language, savedUiLanguage, switchLanguage } = useContext(AppSettingsProviderContext);
 
   return (
     <div className="flex items-start justify-between py-4">
       <div className="">
         <div className="mb-2">{t("language")}</div>
         <div className="text-sm text-muted-foreground mb-2">
-          {language === "en" ? "English" : "简体中文"}
+          {languageLabels[language]}
         </div>
+        {savedUiLanguage && savedUiLanguage !== language && (
+          <p className="text-sm text-muted-foreground max-w-md">
+            {t("legacyUiLanguageNotice", { language: savedUiLanguage })}
+          </p>
+        )}
       </div>
 
       <div className="">
         <div className="flex items-center justify-end space-x-2 mb-2">
           <Select
-            value={language}
-            onValueChange={(value: "en" | "zh-CN") => {
+            value={savedUiLanguage || language}
+            onValueChange={(value: keyof typeof languageLabels) => {
               switchLanguage(value);
             }}
           >
             <SelectTrigger className="text-xs">
               <SelectValue>
-                {language === "en" ? "English" : "简体中文"}
+                {languageLabels[language]}
               </SelectValue>
             </SelectTrigger>
             <SelectContent>
-              <SelectItem className="text-xs" value="en">
-                English
-              </SelectItem>
-              <SelectItem className="text-xs" value="zh-CN">
-                简体中文
-              </SelectItem>
+              {Object.entries(languageLabels).map(([value, label]) => (
+                <SelectItem className="text-xs" value={value} key={value}>
+                  {label}
+                </SelectItem>
+              ))}
             </SelectContent>
           </Select>
         </div>

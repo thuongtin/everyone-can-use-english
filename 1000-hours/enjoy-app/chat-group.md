@@ -1,31 +1,31 @@
-# 多个智能体群聊
+# Trò chuyện nhóm với nhiều tác nhân AI
 
-Enjoy 的聊天支持多个智能体同时参与，仅限 GPT 智能体。
+Enjoy cho phép nhiều tác nhân AI tham gia cùng một cuộc trò chuyện. Chức năng này chỉ áp dụng cho tác nhân GPT.
 
-## 增加聊天成员
+## Thêm thành viên {#add-member}
 
-在聊天中，点击右上角齿轮图标，在 `聊天成员` 中，点击 `+增加群成员` 按钮，即可增加聊天成员。
+Trong cuộc trò chuyện, nhấn biểu tượng bánh răng ở góc trên bên phải. Trong phần **Thành viên trò chuyện**, chọn **+ Thêm thành viên**.
 
-![chat-group-add-member](/images/enjoy/chat-add-member.png)
+![Thêm thành viên trò chuyện trong tài liệu gốc](/images/enjoy/chat-add-member.png)
 
-每次用户发新信息的时候，聊天内每个成员将会轮流发言。
+Mỗi khi bạn gửi tin nhắn mới, các thành viên trong cuộc trò chuyện sẽ lần lượt phản hồi.
 
-![chat-group-replies](/images/enjoy/chat-group-replies.png)
+![Các thành viên lần lượt trả lời](/images/enjoy/chat-group-replies.png)
 
-::: info 提示
-如果你希望智能体之间相互对话，而本身不参与，可以点击聊天输入框最右侧的播放（继续）按钮，可以触发聊天内的智能体根据聊天记录轮流继续对话。
+::: info Để các tác nhân tiếp tục trò chuyện
+Nếu muốn các tác nhân trao đổi với nhau mà bạn không gửi thêm nội dung, hãy nhấn nút phát, tức nút tiếp tục, ở phía ngoài cùng bên phải ô nhập tin nhắn. Các tác nhân sẽ lần lượt tiếp tục cuộc trao đổi dựa trên lịch sử trò chuyện.
 :::
 
-## 指定智能体回复
+## Chọn tác nhân trả lời {#mention-agent}
 
-如果在聊天过程中，希望得到特定某一个智能体的帮助，可以直接在输入框中输入 `@` 符号，将会弹起智能体选择列表，选择智能体后，再输入问题发送即可。
+Muốn hỏi riêng một tác nhân trong cuộc trò chuyện, nhập ký tự `@` vào ô tin nhắn. Chọn tác nhân trong danh sách hiện ra, nhập câu hỏi rồi gửi.
 
-![chat-mention-agent](/images/enjoy/chat-mention-agent.png)
+![Chọn tác nhân bằng ký tự @](/images/enjoy/chat-mention-agent.png)
 
-如果指定的智能体已经在当前聊天中，它将会回复你的问题，而聊天中的其他成员在将会在此轮对话中不发言。
+Nếu tác nhân đã có trong cuộc trò chuyện, tác nhân đó sẽ trả lời và những thành viên còn lại không phản hồi ở lượt này.
 
-如果指定的智能体原本不在这个聊天中，则会自动加入到当前聊天中，并在当前轮对话中发言。
+Nếu tác nhân chưa có trong cuộc trò chuyện, ứng dụng sẽ tự thêm tác nhân đó vào và cho tác nhân trả lời ở lượt hiện tại.
 
-值得注意的是，通过 `@` 符号添加的群成员，在设置中 `仅被提及时回复` 的选项将会被默认勾选，即在该聊天中，只有通过 `@` 符号提及该智能体时，它才会发言，否则将不参与对话。
+Thành viên được thêm qua `@` mặc định bật **Chỉ trả lời khi được nhắc đến**. Khi tùy chọn này được bật, thành viên chỉ phản hồi khi bạn nhắc trực tiếp bằng `@`, không tự tham gia các lượt khác.
 
-`仅被提及时回复` 选项在成员设置中可以修改。
+Có thể thay đổi **Chỉ trả lời khi được nhắc đến** trong cài đặt thành viên.

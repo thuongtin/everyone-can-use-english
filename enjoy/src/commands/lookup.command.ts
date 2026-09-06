@@ -2,6 +2,7 @@ import { ChatPromptTemplate } from "@langchain/core/prompts";
 import { z } from "zod";
 import { jsonCommand } from "./json.command";
 import { LANGUAGES } from "@/constants";
+import type { ChatModelOptions } from "@/lib/chat-model";
 
 export const lookupCommand = async (
   params: {
@@ -11,12 +12,7 @@ export const lookupCommand = async (
     learningLanguage?: string;
     nativeLanguage?: string;
   },
-  options: {
-    key: string;
-    modelName?: string;
-    temperature?: number;
-    baseUrl?: string;
-  }
+  options: ChatModelOptions
 ): Promise<{
   id?: string;
   word?: string;
@@ -32,7 +28,7 @@ export const lookupCommand = async (
     context,
     meaningOptions,
     learningLanguage = "en-US",
-    nativeLanguage = "zh-CN",
+    nativeLanguage = "vi-VN",
   } = params;
 
   const schema = z.object({

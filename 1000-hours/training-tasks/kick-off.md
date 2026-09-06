@@ -1,86 +1,90 @@
-# 1. 启动任务
+# 1. Bắt đầu nhiệm vụ
 
-第一步，不是**教学**，不说**方法**，没有**技巧**，只有**直接干活**。
+::: info Ghi chú biên soạn cho người Việt học tiếng Anh
+Phần dưới dịch đầy đủ phương pháp của tác giả. Khi áp dụng, hãy viết ý mình muốn nói bằng tiếng Việt rồi luyện cách diễn đạt bằng tiếng Anh. Mốc “100 đến 150 chữ” của nguyên tác xuất phát từ tiếng Trung; bạn có thể bắt đầu bằng một đoạn tiếng Việt ngắn khoảng 5 đến 8 câu, giữ nội dung vừa sức. Ba giờ mỗi ngày là yêu cầu của chương trình gốc, không phải điều kiện để mọi người được bắt đầu học. Hãy chọn thời lượng có thể duy trì, ghi lại thời gian thực học và tăng dần khi phù hợp. Các nhận định về công cụ miễn phí, trả phí dưới đây thuộc thời điểm nguyên tác; điều kiện sử dụng hiện tại cần kiểm tra trực tiếp ở nhà cung cấp.
+:::
 
-## 1.1. 任务要点
+Bước đầu tiên không có **giảng dạy**, không bàn **phương pháp**, không có **mẹo**, chỉ có **bắt tay làm ngay**.
 
-每天的功课归纳起来很简单：
+## 1.1. Điểm chính của nhiệm vụ
 
-> * 说自己想说的话
-> * 每天至少三小时
-> * 每天都要交作业
+Bài tập hằng ngày có thể tóm gọn rất đơn giản:
 
-整个训练任务的关键是：
+> * Nói điều mình muốn nói
+> * Ít nhất ba giờ mỗi ngày
+> * Ngày nào cũng nộp bài
 
-> **只靠自己**
+Chìa khóa của toàn bộ nhiệm vụ luyện tập là:
 
-没有他人教学、没有他人纠正、没有他人督促……
+> **Chỉ dựa vào chính mình**
 
-## 1.2. 说自己想说的话
+Không có người khác giảng dạy, không có người khác sửa lỗi, không có người khác đôn đốc...
 
-这一步必须靠**人工智能**辅助 —— 过去我们不可能想象有那么强大的辅助工具。
+## 1.2. Nói điều mình muốn nói
 
-> * 先用母语写下差不多 100～150 字，记录并整理**自己想说的话**；随着任务的推进，逐步增加篇幅；
-> * 使用 AI 辅助工具将其转换成英文表达；
-> * 使用 AI 辅助工具将英文文字转换成语音文件；
-> * 跟读、朗读、直至完整背诵……
+Bước này phải có **AI** hỗ trợ. Trước đây, chúng ta không thể tưởng tượng lại có công cụ hỗ trợ mạnh đến thế.
 
-AI 辅助工具，付费方案最好的是 [OpenAI](https://openai.com/)，无论是文字生成、还是语音生成。免费方案的话，文字生成可以用 [LM Studio](https://lmstudio.ai/)，甚至直接用免费的 [Google Translate](https://translate.google.com/)；语音生成可以用 [MS Edge TTS](https://en.wikipedia.org/wiki/Microsoft_text-to-speech_voices)，或者写成 <span class="pho">html</span> 文件之后，用 [MS Edge 浏览器](https://www.microsoft.com/en-us/edge)打开，也能有朗读功能。另外，网上也有很多方案，可以自己想办法。
+> * Trước hết, dùng tiếng mẹ đẻ viết khoảng 100 đến 150 chữ để ghi lại và sắp xếp **điều mình muốn nói**; khi nhiệm vụ tiến triển, tăng dần độ dài.
+> * Dùng công cụ AI hỗ trợ chuyển nội dung thành cách diễn đạt tiếng Anh.
+> * Dùng công cụ AI hỗ trợ chuyển văn bản tiếng Anh thành tệp âm thanh.
+> * Đọc theo mẫu, đọc thành tiếng, rồi học thuộc toàn bộ...
 
-你也可以用我写的两个 OpenAI GPTs：
+Về công cụ AI hỗ trợ, trong nguyên tác, tác giả đánh giá [OpenAI](https://openai.com/) là lựa chọn trả phí tốt nhất cho cả tạo văn bản lẫn tạo giọng nói. Với phương án miễn phí, có thể dùng [LM Studio](https://lmstudio.ai/) để tạo văn bản, hoặc dùng trực tiếp [Google Translate](https://translate.google.com/). Tạo giọng nói có thể dùng [MS Edge TTS](https://en.wikipedia.org/wiki/Microsoft_text-to-speech_voices), hoặc lưu nội dung thành tệp <span class="pho">html</span> rồi mở bằng [trình duyệt MS Edge](https://www.microsoft.com/en-us/edge) để dùng tính năng đọc thành tiếng. Ngoài ra, trên mạng còn nhiều phương án mà bạn có thể tự tìm hiểu.
 
-> ##### 书面表达
+Bạn cũng có thể dùng hai OpenAI GPT do tôi tạo:
+
+> ##### Diễn đạt bằng văn viết
 >
-> **Translation Hands**: https://chat.openai.com/g/g-N2frdH7rg-translation-hands:
+> **Translation Hands**: https://chat.openai.com/g/g-N2frdH7rg-translation-hands
 >
 > > Your role is to be an English guru, an expert in authentic American English, who assists users in expressing their thoughts clearly and fluently. You are not just translating words; you are delving into the essence of the user's message and reconstructing it in a way that maintains logical clarity and coherence. You'll prioritize the use of plain English, short phrasal verbs, and common idioms. It's important to craft sentences with varied lengths to create a natural rhythm and flow, making the language sound smooth and engaging. Avoid regional expressions or idioms that are too unique or restricted to specific areas. Your goal is to make American English accessible and appealing to a broad audience, helping users communicate effectively in a style that resonates with a wide range of English speakers.
 >
-> ##### 口语表达
+> ##### Diễn đạt khi nói
 >
 > **NY Speak Easy**: https://chat.openai.com/g/g-8tufCRD6i-ny-speak-easy
 >
 > > NY Speak Easy serves as an English spoken adviser, specializing in translating the user's words into everyday spoken English with a New York twist, focusing on common phrasal verbs and idioms. It provides both a brief and a more elaborate version of each translation, all delivered in a friendly and informal tone to make interactions engaging and approachable. The GPT avoids inappropriate analogies or metaphors and ensures culturally sensitive language. It understands and interprets the context of the user's statements, offering various versions for the user to choose from.
 
-**说自己想说的话**，是这个训练的一个重点。不要想着偷懒，随便找来一段录音就开始跟读。要尽量自己准备文本。
+**Nói điều mình muốn nói** là một trọng tâm của chương trình. Đừng tìm cách làm cho xong bằng việc lấy đại một bản ghi âm rồi đọc theo. Hãy cố gắng tự chuẩn bị văn bản.
 
-## 1.3. 每天至少三小时
+## 1.3. Ít nhất ba giờ mỗi ngày
 
-如果做不到**每天三小时**，那就算了吧 —— 当然，其实谁都可以做到的。
+Theo yêu cầu của tác giả, nếu không làm được **ba giờ mỗi ngày** thì thôi; tác giả đồng thời cho rằng thực ra ai cũng làm được.
 
-起作用的只有**大声开口练习**。注意，一定是**大声**；虽然开口了，但只不过是小声嘟囔，不算数。当然，也没必要**喊** —— 首先，声带的确需要保护，其次，我们需要练习的主要是**舌头**、**嘴唇**、**喉咙**、以及**呼吸**，声带还真不是练习的重点。
+Chỉ có **mở miệng luyện nói thành tiếng rõ ràng** mới có tác dụng. Chú ý, phải **đủ rõ và nghe được**; mở miệng mà chỉ lẩm bẩm nhỏ thì không tính. Dĩ nhiên, cũng không cần **hét**. Thứ nhất, cần bảo vệ dây thanh; thứ hai, chúng ta chủ yếu luyện **lưỡi**, **môi**, **họng** và **hơi thở**, dây thanh không phải trọng tâm luyện tập.
 
-虽然最好是**连贯的三小时**，但，**一天之内累计三小时**也可以。
+Tốt nhất là **ba giờ liên tục**, nhưng **cộng đủ ba giờ trong một ngày** cũng được.
 
-**碎片时间**也可以利用。把跟读录音存到可以同步云端的音乐播放器里（比如 iOS/macOS 内建的 Music），随时循环播放（戴单只耳机听，如此这般，万一自己可以跟读，自己的声音也同时听得更清楚）—— 这跟学唱歌一样，听得越多细节越熟悉。学歌的时候，不唱的时候不也要经常多听几遍吗？只不过，这样的碎片练习最好不要计入**三小时**之内。
+Bạn cũng có thể tận dụng **những khoảng thời gian ngắn**. Lưu âm thanh để đọc theo vào trình phát nhạc có thể đồng bộ đám mây, chẳng hạn Music có sẵn trên iOS/macOS, rồi phát lặp lại bất cứ lúc nào. Tác giả gợi ý nghe bằng một bên tai nghe để khi đọc theo vẫn nghe rõ giọng mình. Điều này giống học hát: nghe càng nhiều càng quen các chi tiết. Khi học một bài hát, ngay cả lúc không hát, chẳng phải ta cũng thường nghe thêm vài lần sao? Tuy vậy, tốt nhất không tính các lần luyện ngắn này vào **ba giờ** nói trên.
 
-**准备文本**的工作，最好提前一天抽空做 —— 这也可以利用碎片时间陆陆续续做完，这样可以节省自己宝贵的精力。
+Nên tranh thủ **chuẩn bị văn bản** từ ngày hôm trước. Bạn cũng có thể hoàn thành từng phần vào các khoảng thời gian ngắn để tiết kiệm sức lực quý giá của mình.
 
-三小时之外，如果你有时间精力，依然应该花时间输入英文，无论是阅读、还是听有声书或者看视频影视剧集。
+Ngoài ba giờ ấy, nếu còn thời gian và sức lực, bạn vẫn nên tiếp nhận tiếng Anh bằng cách đọc, nghe sách nói hoặc xem video, phim và các tập phim truyền hình.
 
-**早睡早起**可能非常有帮助，因为早上的时间完全没有他人打搅。晚上睡觉前的一小时，尽量不要把自己暴露在屏幕蓝光之下 —— 这对睡眠质量提高有巨大帮助。
+**Ngủ sớm, dậy sớm** có thể rất hữu ích vì buổi sáng thường không bị người khác làm phiền. Trong một giờ trước khi ngủ, tác giả khuyên hạn chế tiếp xúc ánh sáng xanh từ màn hình và cho rằng điều đó giúp cải thiện đáng kể chất lượng giấc ngủ.
 
-## 1.4. 每天都要交作业
+## 1.4. Ngày nào cũng nộp bài
 
-**作业**不是要**交给老师**，而是自己存档备份。作业内容包括：
+**Bài tập** không phải để **nộp cho giáo viên**, mà để tự lưu trữ và sao lưu. Nội dung gồm:
 
-> * 最终生成的文字和语音（一个文本文件和一个语音文件）
-> * 自己的第一遍朗读录音（一个语音文件）
-> * 自己的最后一遍朗读录音（一个语音文件）
-> * 在这个过程中，遇到的困难（解决的、未解决的），以及想到的可能的解决方案，练习过程中的感悟。（一个文本文件）
+> * Văn bản và âm thanh được tạo ở phiên bản cuối (một tệp văn bản và một tệp âm thanh).
+> * Bản ghi âm lần đọc đầu tiên của bạn (một tệp âm thanh).
+> * Bản ghi âm lần đọc cuối cùng của bạn (một tệp âm thanh).
+> * Những khó khăn gặp phải trong quá trình luyện, cả đã giải quyết và chưa giải quyết; những cách xử lý bạn nghĩ ra; những điều nhận ra khi luyện tập (một tệp văn bản).
 
-以上文件打包压缩，以日期为文件名保存。这些记录，是将来**在社群里当老师**，**在家里当老师**，或者起码**给自己当老师**、**给自家孩子当老师**所必需的资格证明。
+Nén các tệp trên thành một gói và lưu với tên là ngày luyện tập. Những bản ghi này là bằng chứng về trải nghiệm cần thiết để sau này **hướng dẫn người khác trong cộng đồng**, **hướng dẫn trong gia đình**, hoặc ít nhất **tự hướng dẫn mình** và **hướng dẫn con mình**.
 
-## 1.5. 只能靠死记硬背
+## 1.5. Phải dựa vào ghi nhớ và học thuộc
 
-**背诵是关键**。不要被误导，认为死记硬背是不好的，不聪明的，无聊的…… 其实，**死记硬背**还有另外一个说法，叫做**博闻强识**。到最后，连人工智能都得靠大数据，不是吗？因为记忆是一切思考及其表达的基础。
+**Học thuộc là chìa khóa**. Đừng để bị dẫn dắt rằng học thuộc là không tốt, thiếu thông minh hay nhàm chán... Thực ra, **ghi nhớ bằng học thuộc** còn có cách gọi khác là **biết rộng, nhớ nhiều**. Cuối cùng, ngay cả AI cũng phải dựa vào dữ liệu lớn, đúng không? Bởi trí nhớ là nền tảng của mọi suy nghĩ và cách diễn đạt suy nghĩ ấy.
 
-整个训练的核心只有两个：
+Toàn bộ chương trình chỉ có hai trọng tâm:
 
-> * **语音塑造**
-> * **记忆扩展**
+> * **Rèn luyện phát âm**
+> * **Mở rộng trí nhớ**
 
-**记忆**是一切思维活动的基础。我们所说的每一句话、每一个词汇、甚至每一个音节，都来自于我们的记忆。即便是创造，也只能完全建立在极大记忆容量的基础之上。一个人记忆力差，就好像是一台电脑配置的内存太小一样，处理什么都超级慢，数据量稍微大一点就会当场死机。
+**Trí nhớ** là nền tảng của mọi hoạt động tư duy. Mỗi câu nói, mỗi từ, thậm chí mỗi âm tiết chúng ta dùng đều đến từ trí nhớ. Ngay cả sáng tạo cũng chỉ có thể xây dựng trên nền tảng của một lượng ký ức rất lớn. Người có trí nhớ kém giống như máy tính có quá ít bộ nhớ: xử lý gì cũng rất chậm, dữ liệu chỉ lớn thêm chút đã đứng máy.
 
-训练任务中的文本，是**自己想要说的话**，也正因如此，背诵难度实际上并不高，毕竟，其中的概念与逻辑，都来自于你原本的记忆。只不过，现在用的是另外一种语言，增加了一点难度而已。但是，在塑造语音的过程中，无数次的反复，又从另外一方面降低了难度。所以，总体上还是很容易做到。
+Văn bản của nhiệm vụ luyện tập là **điều chính bạn muốn nói**. Vì vậy, học thuộc thực ra không quá khó: các khái niệm và mạch lập luận đều đến từ trí nhớ sẵn có của bạn. Chỉ là bây giờ diễn đạt bằng một ngôn ngữ khác nên khó thêm đôi chút. Nhưng trong quá trình rèn luyện phát âm, việc lặp đi lặp lại vô số lần lại làm giảm độ khó theo một hướng khác. Nhìn chung, nhiệm vụ vẫn khá dễ thực hiện.
 
-如果一天你能完整记住 1 分钟的内容，一年下来就是 300 多分钟，加起来就是 5 个小时的内容…… 想想吧，如果你能滔滔不绝连续讲 5 个小时的话，你的语言能力必然能够超越 99% 以上的人群 —— 无论使用哪一种语言。
+Nếu mỗi ngày bạn nhớ trọn vẹn một phút nội dung, sau một năm sẽ có hơn 300 phút, cộng lại thành năm giờ... Hãy nghĩ xem: nếu có thể nói liền mạch suốt năm giờ, theo tác giả, năng lực ngôn ngữ của bạn nhất định vượt hơn 99% mọi người, bất kể dùng ngôn ngữ nào.

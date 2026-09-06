@@ -18,6 +18,10 @@ import { ChatAgent, ChatMember, ChatMessage } from "@main/db/models";
 import mainWindow from "@main/window";
 import { t } from "i18next";
 import { ChatAgentTypeEnum, ChatTypeEnum } from "@/types/enums";
+import {
+  normalizeChatConfigForRead,
+  readChatSttEngine,
+} from "@/lib/conversation-migration";
 
 const logger = log.scope("db/models/chat");
 @Table({
@@ -87,7 +91,15 @@ export class Chat extends Model<Chat> {
 
   @Column(DataType.VIRTUAL)
   get sttEngine(): string {
-    return this.config?.sttEngine;
+    return readChatSttEngine(this.config);
+  }
+
+  toJSON<T extends Chat>(): T {
+    const data = super.toJSON<T>() as T & { config?: unknown };
+    if ("config" in data) {
+      data.config = normalizeChatConfigForRead(data.config);
+    }
+    return data;
   }
 
   @AfterCreate

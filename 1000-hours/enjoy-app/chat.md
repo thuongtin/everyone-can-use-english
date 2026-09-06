@@ -1,5 +1,5 @@
-# 简介
+# Giới thiệu trò chuyện
 
-通过 Enjoy 的 `聊天` 功能，用户可以创建不同的智能体，通过于智能体对话的形式，实现各种不同的功能。
+Chức năng **Trò chuyện** của Enjoy cho phép tạo các tác nhân AI với vai trò khác nhau và sử dụng các chức năng thông qua đối thoại với chúng.
 
-（该功能在 v0.6.0 版本中更新）
+Chức năng này được cập nhật trong phiên bản v0.6.0 theo tài liệu gốc.

@@ -1,6 +1,6 @@
-# 6. 词汇构建
+# 6. Xây dựng vốn từ
 
-千万不要天真地把 “背单词” 和 “学英语” 等同起来…… 构建词汇量，的确是一个重要的环节，但，它不仅不是全部，甚至不是最重要的环节。
+Đừng ngây thơ đồng nhất “học thuộc từ” với “học tiếng Anh”. Xây dựng vốn từ quả thực quan trọng, nhưng theo tác giả, đó không phải toàn bộ, thậm chí không phải phần quan trọng nhất.
 
-另外一个关键在于，在构建词汇量的过程中，最重要的是 “**文本与语音之间不可分割的紧密联系**” —— 不知道为什么，觉得大多数人竟然觉得这最关键的东西根本无所谓…… 但，那些人早晚会因为他们的误解付出惨重的代价。
+Một điểm mấu chốt khác: khi xây dựng vốn từ, quan trọng nhất là **mối liên hệ chặt chẽ, không thể tách rời giữa văn bản và âm thanh**. Tác giả thắc mắc vì sao dường như phần lớn mọi người lại coi điều cốt yếu này không đáng quan tâm; ông cảnh báo sớm muộn họ sẽ phải trả giá nặng nề cho hiểu lầm ấy.
 

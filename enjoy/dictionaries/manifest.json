@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "license": "CC-BY-SA-4.0",
+  "dictionaries": [
+    {
+      "direction": "en-vi",
+      "file": "en-vi.sqlite.gz",
+      "sha256": "f8bd5032be972a9219503f752277f6e72f6d12aececaf44fc1fb32ce1a66f576",
+      "databaseSha256": "72c1f2a11a9d2ee48e76987476d994764dde4fea4d9b43329dc1dedf1bec1f3f",
+      "databaseBytes": 47419392,
+      "sourceUrl": "https://kaikki.org/viwiktionary/raw-wiktextract-data.jsonl.gz",
+      "sourceSha256": "bd45ee8648af0fd3986a973d19851cc4fa14fbe88a23522330c559bd8050fad0",
+      "editorialCorrectionsSha256": "27eda81c9ed136c02ffe57d3462b34aadddff7315780104d7371730afa6c37d8",
+      "dumpDate": "2026-09-01",
+      "extractionDate": "2026-09-03",
+      "words": 118926,
+      "entries": 133300,
+      "senses": 190653,
+      "excludedQuotations": 297,
+      "excludedEmptySenses": 122,
+      "excludedEmptyEntries": 122,
+      "editoriallyCorrectedEntries": 1,
+      "excludedNonLatinOrCharacterEntries": 25
+    },
+    {
+      "direction": "vi-en",
+      "file": "vi-en.sqlite.gz",
+      "sha256": "e7822ebf59875d77edd0d5cf3179088d2e115c89cf78f6c87318dc7e42f228d1",
+      "databaseSha256": "34bfd9c95de5d02f0b9be3165e004c8cf3947ca0fd1bf3f5afff3385c6c161ac",
+      "databaseBytes": 19734528,
+      "sourceUrl": "https://kaikki.org/dictionary/Vietnamese/kaikki.org-dictionary-Vietnamese.jsonl",
+      "sourceSha256": "c507001f32b211a5f18f4379c5e81098377c6e73d827b82e98cffde73964fec5",
+      "editorialCorrectionsSha256": "27eda81c9ed136c02ffe57d3462b34aadddff7315780104d7371730afa6c37d8",
+      "dumpDate": "2026-08-05",
+      "extractionDate": "2026-08-28",
+      "words": 29730,
+      "excludedNonLatinOrCharacterEntries": 15578,
+      "entries": 36043,
+      "senses": 43424,
+      "excludedQuotations": 14381,
+      "excludedEmptySenses": 34,
+      "excludedEmptyEntries": 34
+    }
+  ]
+}

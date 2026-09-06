@@ -4,12 +4,17 @@ import { AppSettingsProviderContext } from "@renderer/context";
 import { useContext } from "react";
 
 export const About = () => {
-  const { version, EnjoyApp } = useContext(AppSettingsProviderContext);
+  const { version, distribution, EnjoyApp } = useContext(
+    AppSettingsProviderContext
+  );
 
   const checkUpdate = async () => {
     const platformInfo = await EnjoyApp.app.getPlatformInfo();
-    if (platformInfo.platform === "linux") {
-      EnjoyApp.shell.openExternal("https://1000h.org/enjoy-app/install.html");
+    if (!distribution.updateFeedUrl || platformInfo.platform === "linux") {
+      EnjoyApp.shell.openExternal(distribution.downloadUrl);
+      if (!distribution.updateFeedUrl) {
+        toast.info(t("automaticUpdatesUnavailable"));
+      }
     } else {
       EnjoyApp.app.checkForUpdates();
       toast.info(t("checkingForUpdate"));
@@ -25,7 +30,16 @@ export const About = () => {
           <div className="mb-2">{t("currentVersion")}</div>
           <div className="text-sm text-muted-foreground mb-2">v{version}</div>
         </div>
-        <Button onClick={checkUpdate}>{t("checkUpdate")}</Button>
+        <div className="flex flex-col items-end gap-2">
+          <Button onClick={checkUpdate}>
+            {distribution.updateFeedUrl ? t("checkUpdate") : t("open")}
+          </Button>
+          {!distribution.updateFeedUrl && (
+            <p className="max-w-xs text-right text-xs text-muted-foreground">
+              {t("automaticUpdatesUnavailable")}
+            </p>
+          )}
+        </div>
       </div>
 
       <Separator />
@@ -37,7 +51,7 @@ export const About = () => {
         <Button
           variant="secondary"
           onClick={() => {
-            EnjoyApp.shell.openExternal("https://1000h.org/enjoy-app/");
+            EnjoyApp.shell.openExternal(distribution.docsUrl);
           }}
         >
           {t("open")}
@@ -65,7 +79,7 @@ export const About = () => {
             variant="secondary"
             onClick={() => {
               EnjoyApp.shell.openExternal(
-                "https://github.com/zuodaotech/everyone-can-use-english/discussions"
+                `${distribution.repositoryUrl.replace(/\/+$/, "")}/discussions`
               );
             }}
           >

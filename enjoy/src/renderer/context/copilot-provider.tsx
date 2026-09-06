@@ -34,6 +34,17 @@ export const CopilotProviderContext =
 
 const CACHE_KEY = "copilot-cached-chat";
 
+const CopilotHotkey = ({
+  hotkey,
+  onToggle,
+}: {
+  hotkey: string;
+  onToggle: () => void;
+}): null => {
+  useHotkeys(hotkey, onToggle);
+  return null;
+};
+
 export const CopilotProvider = ({
   children,
 }: {
@@ -83,7 +94,7 @@ export const CopilotProvider = ({
   };
 
   const findOrCreateChatAgent = async () => {
-    let agent = await EnjoyApp.chatAgents.findOne({});
+    const agent = await EnjoyApp.chatAgents.findOne({});
     if (agent) {
       return agent;
     }
@@ -144,10 +155,6 @@ export const CopilotProvider = ({
     }
   }, [currentChat]);
 
-  useHotkeys(currentHotkeys.OpenCopilot, () => {
-    setActive(!active);
-  });
-
   return (
     <CopilotProviderContext.Provider
       value={{
@@ -160,6 +167,12 @@ export const CopilotProvider = ({
         buildAgentMember,
       }}
     >
+      {currentHotkeys.OpenCopilot ? (
+        <CopilotHotkey
+          hotkey={currentHotkeys.OpenCopilot}
+          onToggle={() => setActive(!active)}
+        />
+      ) : null}
       {children}
     </CopilotProviderContext.Provider>
   );

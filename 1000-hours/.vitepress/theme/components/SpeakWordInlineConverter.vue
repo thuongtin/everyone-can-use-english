@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted, watch } from "vue";
-import { useRouter } from 'vitepress';
+import { useRouter, withBase } from 'vitepress';
 const router = useRouter();
 
 watch(() => router.route.data.relativePath, (newVal, oldVal) => {
@@ -13,13 +13,13 @@ watch(() => router.route.data.relativePath, (newVal, oldVal) => {
 }, { immediate: true });
 
 function wrapAssetUrl(url) {
-  if (window.location.hostname !== '1000h.org' && window.location.hostname !== 'localhost') {
-    return `/1000-hours${url}`;
-  }
-  return url;
+  return withBase(url);
 }
 
 function buildPlayButton(parent, accent, gender, url) {
+  const accentLabel = { us: 'giọng Mỹ', uk: 'giọng Anh', other: 'bản mẫu' }[accent] || 'bản mẫu';
+  const genderLabel = { male: ', nam', female: ', nữ' }[gender] || '';
+  const accessibleLabel = `Nghe ${accentLabel}${genderLabel}`;
   gender = gender || 'male';
   accent = accent || 'us';
 
@@ -32,11 +32,13 @@ function buildPlayButton(parent, accent, gender, url) {
   audioEl.setAttribute('controls', 'false')
   const iconEl = document.createElement('img');
   iconEl.classList.add('icon');
+  iconEl.setAttribute('alt', '');
   const emojiEl = document.createElement('span');
   emojiEl.classList.add('emoji');
+  emojiEl.setAttribute('aria-hidden', 'true');
 
   let svg = wrapAssetUrl('/images/speaker-white.svg');
-  let iconEmoji = '🇺🇸';
+  let iconEmoji = '🔊';
   if (accent === 'uk') {
     iconEmoji = '🇬🇧';
   } else if (accent === 'us') {
@@ -48,6 +50,9 @@ function buildPlayButton(parent, accent, gender, url) {
   emojiEl.innerText = iconEmoji
 
   const btnEl = document.createElement('button')
+  btnEl.setAttribute('type', 'button')
+  btnEl.setAttribute('aria-label', accessibleLabel)
+  btnEl.setAttribute('title', accessibleLabel)
   btnEl.classList.add('play-button')
   btnEl.classList.add(accent);
   btnEl.classList.add(gender);

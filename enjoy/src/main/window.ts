@@ -16,17 +16,22 @@ import settings from "@main/settings";
 import downloader from "@main/downloader";
 import fs from "fs-extra";
 import log from "@main/logger";
-import { DISCUSS_URL, REPO_URL, WEB_API_URL, WS_URL } from "@/constants";
+import {
+  DISCUSS_URL,
+  DISTRIBUTION_CONFIG,
+  WEB_API_URL,
+  WS_URL,
+} from "@/constants";
 import { AudibleProvider, TedProvider, YoutubeProvider } from "@main/providers";
 import Ffmpeg from "@main/ffmpeg";
 import { Waveform } from "./waveform";
 import echogarden from "./echogarden";
-import camdict from "./camdict";
+import bilingualDictionary from "./bilingual-dictionary";
 import dict from "./dict";
 import mdict from "./mdict";
 import decompresser from "./decompresser";
 import { UserSetting } from "@main/db/models";
-import { t } from "i18next";
+import i18next, { t } from "i18next";
 import { format } from "util";
 import pkg from "../../package.json" with { type: "json" };
 
@@ -40,29 +45,90 @@ const youtubeProvider = new YoutubeProvider();
 const ffmpeg = new Ffmpeg();
 const waveform = new Waveform();
 
-const FEED_BASE_URL = `https://dl.enjoy.bot/app/${process.platform}/${process.arch}`;
-autoUpdater.setFeedURL({
-  url:
-    process.platform === "darwin"
-      ? `${FEED_BASE_URL}/RELEASES.json`
-      : FEED_BASE_URL,
-  headers: {
-    "X-App-Version": app.getVersion(),
-    "User-Agent": format(
-      "%s/%s (%s: %s)",
-      pkg.name,
-      pkg.version,
-      process.platform,
-      process.arch
-    ),
-  },
-  serverType: process.platform === "darwin" ? "json" : "default",
-});
+if (DISTRIBUTION_CONFIG.updateFeedUrl) {
+  autoUpdater.setFeedURL({
+    url: DISTRIBUTION_CONFIG.updateFeedUrl,
+    headers: {
+      "X-App-Version": app.getVersion(),
+      "User-Agent": format(
+        "%s/%s (%s: %s)",
+        pkg.name,
+        pkg.version,
+        process.platform,
+        process.arch
+      ),
+    },
+    serverType: process.platform === "darwin" ? "json" : "default",
+  });
+}
+
+const buildApplicationMenu = () => {
+  const menuTemplate: MenuItemConstructorOptions[] = [
+    {
+      label: app.name,
+      submenu: [
+        { label: t("about"), role: "about" },
+        { type: "separator" },
+        { label: t("toggleFullscreen"), role: "togglefullscreen" },
+        { label: t("hide"), role: "hide" },
+        { label: t("unhide"), role: "unhide" },
+        { type: "separator" },
+        { label: t("quit"), role: "quit" },
+      ],
+    },
+    {
+      label: t("edit"),
+      submenu: [
+        { label: t("undo"), role: "undo" },
+        { label: t("redo"), role: "redo" },
+        { type: "separator" },
+        { label: t("cut"), role: "cut" },
+        { label: t("copy"), role: "copy" },
+        { label: t("paste"), role: "paste" },
+        { label: t("selectAll"), role: "selectAll" },
+      ],
+    },
+    {
+      label: t("help"),
+      submenu: [
+        {
+          label: DISTRIBUTION_CONFIG.updateFeedUrl
+            ? t("checkForUpdates")
+            : t("automaticUpdatesUnavailable"),
+          click: () => {
+            if (DISTRIBUTION_CONFIG.updateFeedUrl) {
+              autoUpdater.checkForUpdates();
+            } else {
+              shell.openExternal(DISTRIBUTION_CONFIG.downloadUrl);
+            }
+          },
+        },
+        {
+          label: t("reportIssue"),
+          click: () => {
+            const repositoryUrl = DISTRIBUTION_CONFIG.repositoryUrl.replace(
+              /\/+$/,
+              ""
+            );
+            shell.openExternal(`${repositoryUrl}/issues/new`);
+          },
+        },
+      ],
+    },
+  ];
+
+  Menu.setApplicationMenu(Menu.buildFromTemplate(menuTemplate));
+};
 
 const main = {
   win: null as BrowserWindow | null,
   init: () => {},
 };
+
+// Rebuild native labels after the saved renderer locale reaches the main process.
+i18next.on("languageChanged", () => {
+  if (main.win) buildApplicationMenu();
+});
 
 main.init = async () => {
   if (main.win) {
@@ -73,7 +139,7 @@ main.init = async () => {
   // Prepare local database
   db.registerIpcHandlers();
 
-  camdict.registerIpcHandlers();
+  bilingualDictionary.registerIpcHandlers();
   dict.registerIpcHandlers();
   mdict.registerIpcHandlers();
 
@@ -514,14 +580,20 @@ main.init = async () => {
   });
 
   ipcMain.handle("app-check-for-updates", () => {
+    if (!DISTRIBUTION_CONFIG.updateFeedUrl) return false;
     autoUpdater.checkForUpdates();
+    return true;
   });
 
   ipcMain.handle("app-quit-and-install", () => {
+    if (!DISTRIBUTION_CONFIG.updateFeedUrl) return false;
     autoUpdater.quitAndInstall();
+    return true;
   });
 
   ipcMain.on("app-on-updater", () => {
+    if (!DISTRIBUTION_CONFIG.updateFeedUrl) return;
+
     autoUpdater.on("error", (error) => {
       mainWindow.webContents.send("app-on-updater", "error", [error]);
     });
@@ -574,9 +646,12 @@ ${log}
       title,
       body,
     };
+    const repositoryUrl = DISTRIBUTION_CONFIG.repositoryUrl.replace(/\/+$/, "");
 
     shell.openExternal(
-      `${REPO_URL}/issues/new?${new URLSearchParams(params).toString()}`
+      `${repositoryUrl}/issues/new?${new URLSearchParams(
+        params
+      ).toString()}`
     );
   });
 
@@ -807,51 +882,7 @@ ${log}
     // mainWindow.webContents.openDevTools();
   }
 
-  const menuTemplate: MenuItemConstructorOptions[] = [
-    {
-      label: app.name,
-      submenu: [
-        { role: "about" },
-        { type: "separator" },
-        { role: "togglefullscreen" },
-        { role: "hide" },
-        { role: "unhide" },
-        { type: "separator" },
-        { role: "quit" },
-      ],
-    },
-    {
-      label: "Edit",
-      submenu: [
-        { role: "undo" },
-        { role: "redo" },
-        { type: "separator" },
-        { role: "cut" },
-        { role: "copy" },
-        { role: "paste" },
-        { role: "selectAll" },
-      ],
-    },
-    {
-      label: "Help",
-      submenu: [
-        {
-          label: "Check for Updates",
-          click: () => {
-            shell.openExternal("https://1000h.org/enjoy-app/install.html");
-          },
-        },
-        {
-          label: "Report an Issue",
-          click: () => {
-            shell.openExternal(`${REPO_URL}/issues/new`);
-          },
-        },
-      ],
-    },
-  ];
-
-  Menu.setApplicationMenu(Menu.buildFromTemplate(menuTemplate));
+  buildApplicationMenu();
 
   main.win = mainWindow;
 };

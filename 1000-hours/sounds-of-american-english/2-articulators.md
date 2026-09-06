@@ -1,44 +1,46 @@
-# 发声器官
+# 2. Cơ quan phát âm
 
-尽管说着不同的语言，人类的大脑构造和发声器官（articulators）构造却都是一样的。也正因为如此，所有的人类幼崽都具备习得地球上任何一种语言，甚至同时习得多种语言的潜能 —— 这其实还真是一个颇有些惊人却又常常被忽视甚至轻视的事实。
+Dù nói những ngôn ngữ khác nhau, con người có cấu tạo não bộ và các cơ quan phát âm (*articulators*) về cơ bản tương đồng. Theo tác giả, vì vậy trẻ em có tiềm năng tiếp thu bất kỳ ngôn ngữ nào, thậm chí nhiều ngôn ngữ cùng lúc. Ông xem đây là điều đáng ngạc nhiên nhưng thường bị bỏ qua hoặc đánh giá thấp.
 
-**说话**对大脑来说是一项异常复杂的活动，它大约总计需要协调差不多 100 块左右的肌肉配合着呼吸才能发出一个音素的声音[^1]，从而形成我们说出来的词汇和句子。
+**Nói** là một hoạt động rất phức tạp đối với não bộ. Theo nguồn tác giả dẫn, não phải phối hợp gần 100 cơ cùng nhịp thở để tạo ra âm thanh[^1], từ đó hình thành các từ và câu.
 
-<video controls width="720"> <source src="/videos/speech-form-brain-signals.mp4" type="video/mp4"></source>Your browser does not support the video tag. </video>
+<video controls width="720"> <source src="/videos/speech-form-brain-signals.mp4" type="video/mp4"></source>Trình duyệt của bạn không hỗ trợ phát video. </video>
 
 > Brain signals precisely coordinate nearly 100 muscles to move the lips, jaw, tongue, and larynx, shaping our breath into sounds that form our words and sentences.
 
-再详细一点，我们说话的时候动用的器官实际上很多，包括但不限于：下巴（*lower jaw*）、嘴唇（*lips*）、牙齿（*teeth*）、龈脊（*alveolar ridge*）、舌尖（*tongue tip*）、舌背（*tongue roof*）、软腭（*soft palate*）、咽（*pharynx*）、喉（*larynx*）、声带（*vocal cords*）等等。
+**Nghĩa tiếng Việt:** Tín hiệu từ não điều phối chính xác gần 100 cơ để vận động môi, hàm, lưỡi và thanh quản, biến hơi thở thành âm thanh tạo nên từ và câu.
 
-![Speech Tract (zh-CN)](/images/articulators-cn.svg)
+Cụ thể hơn, nhiều bộ phận tham gia khi nói, bao gồm hàm dưới (*lower jaw*), môi (*lips*), răng (*teeth*), gờ lợi (*alveolar ridge*), đầu lưỡi (*tongue tip*), phần lưng lưỡi mà nguyên tác ghi là *tongue roof*, ngạc mềm (*soft palate*), hầu (*pharynx*), thanh quản (*larynx*) và dây thanh (*vocal cords*).
 
-另外一个重要的方面是呼吸（*breathe*）—— 也就是说，肺也可以算作是发声器官 —— 呼吸不仅影响声音，也影响节奏；因为换气的必要，自然语流中总是存在停顿（*pause*）。
+![Sơ đồ cơ quan phát âm với nhãn tiếng Việt](/images/articulators.svg)
 
-以下的 X 光视频展示了一个歌手在演唱歌曲时发声器官的活动情况[^2]：
+Một yếu tố khác là **hô hấp** (*breathe*). Vì thế, phổi cũng có thể được xem là một phần của bộ máy tạo tiếng nói. Hơi thở ảnh hưởng cả âm thanh lẫn nhịp điệu; do cần lấy hơi, lời nói tự nhiên có những chỗ ngừng (*pause*).
 
-<video controls width="720"> <source src="/videos/articulator-movement-singing.mp4" type="video/mp4"></source>Your browser does not support the video tag. </video>
+Video X-quang sau cho thấy cơ quan phát âm của một ca sĩ khi hát[^2]:
 
-某种意义上，“说话” 其实是 “**低配版唱歌**”，相对要求低一些…… 以下是朗读一些单词的时候发声器官活动情况的 3D 展示[^3]：
+<video controls width="720"> <source src="/videos/articulator-movement-singing.mp4" type="video/mp4"></source>Trình duyệt của bạn không hỗ trợ phát video. </video>
 
-<video controls width="720"> <source src="/videos/3d-presentation.mp4" type="video/mp4"></source>Your browser does not support the video tag. </video>
+Theo cách ví von của tác giả, nói là một **phiên bản ít đòi hỏi hơn của hát**. Dưới đây là mô phỏng 3D chuyển động của cơ quan phát âm khi đọc một số từ[^3]:
 
-“说外语”，本质上来看，就是 “**以另一种方式说话**” —— 也就是说，那么多的器官要协调在一起做之前可能完全不熟悉的动作，难度可想而知。
+<video controls width="720"> <source src="/videos/3d-presentation.mp4" type="video/mp4"></source>Trình duyệt của bạn không hỗ trợ phát video. </video>
 
-即便是让单一器官做不一样的动作也并非易事。
+Về bản chất, **nói ngoại ngữ** là **nói theo một cách khác**. Nhiều cơ quan phải phối hợp để thực hiện những động tác trước đây có thể chưa quen, nên độ khó là điều dễ hiểu.
 
-比如，你可以试试舌头。练一下就知道了，有意识地控制舌头是相当困难的。虽然我们的舌头事实上很灵活，几乎可以与我们的手相媲美，可问题在于，它处于一个我们用眼睛观察不到的部位 —— 如果没看过 X 光视频或者 3D 展示，我们可能都不知道自己的舌头究竟是怎样的形状 —— 学也好练也罢，相对于手多出了一整个维度的困难。
+Ngay cả việc điều khiển một bộ phận làm động tác khác cũng không đơn giản.
 
-再比如，控制唇形也很难，虽然嘴唇通过照镜子是可以看到的。有两个元音，被称作 “圆元音”（*round vowels*）—— <span class="pho">ɔ</span> 和 <span class="pho">u</span>，需要把嘴唇略微缩作圆形，并且 <span class="pho">u</span> 还得嘴唇略微凸出…… 这好像并不难，可想要真正熟练，并且永远不出错，就没那么简单了。
+Thử với lưỡi, bạn sẽ thấy việc điều khiển có ý thức khá khó. Lưỡi rất linh hoạt, tác giả so sánh với bàn tay, nhưng nó nằm ở vị trí mắt khó quan sát. Nếu chưa xem X-quang hoặc mô phỏng 3D, ta có thể chưa hình dung rõ hình dạng và chuyển động của lưỡi. Vì thế, học cách điều khiển lưỡi có thêm một khó khăn so với tập động tác tay.
 
-不过，为了练好美式英语，你可能需要格外注意的发声器官其实只有两个，都是**舌头**（*tongue*）：
+Kiểm soát hình dạng môi cũng khó dù có thể nhìn qua gương. Tác giả lấy hai nguyên âm tròn môi (*round vowels*) <span class="pho">ɔ</span> và <span class="pho">u</span> làm ví dụ: môi hơi thu tròn, và với <span class="pho">u</span> còn hơi đưa ra trước. Làm riêng động tác có vẻ không khó, nhưng làm thành thạo và không bao giờ nhầm lại không đơn giản.
 
-> * **舌尖**（适应若干个辅音发声的新的舌尖起始位置）
-> * **舌背**（需要学习一个将它后缩的动作以便发出儿化音）
+Để luyện tiếng Anh Mỹ, tác giả đặc biệt nhấn mạnh hai phần của **lưỡi** (*tongue*):
 
-凡事都不容易，但，只要肯练，谁都可以掌握。
+- **Đầu lưỡi:** làm quen vị trí bắt đầu mới khi phát một số phụ âm.
+- **Lưng lưỡi:** học động tác thu về sau để tạo âm sắc r theo cách hướng dẫn của tác giả.
+
+Tác giả động viên rằng việc nào cũng có khó khăn, nhưng ai chịu luyện cũng có thể làm chủ. Khi thực hành, hãy nghe, quan sát và điều chỉnh dần; không cần ép cơ quan phát âm đến mức đau hoặc căng cứng.
 
 [^1]: https://www.youtube.com/watch?v=YHFx6O5x5Hw
 [^2]: https://www.youtube.com/watch?v=2N5q85G3ydk
-[^3]: https://www.youtube.com/watch?v=wYwk07QM4rc —— 这是 [Speech Graphics](https://www.speech-graphics.com) 为 [Saundz app](https://soundz.pro/)（[iOS](https://apps.apple.com/us/app/soundz/id6448163324)/Android 已无可用链接）开发的视频展示片段。
+[^3]: https://www.youtube.com/watch?v=wYwk07QM4rc. Đây là trích đoạn minh họa do [Speech Graphics](https://www.speech-graphics.com) phát triển cho [Saundz app](https://soundz.pro/). Nguyên tác còn liên kết bản [iOS](https://apps.apple.com/us/app/soundz/id6448163324) và ghi rằng không còn liên kết Android khả dụng; các liên kết này được giữ như nguồn gốc học liệu, chưa xác minh tình trạng phát hành hiện tại.
 
-![vowels-mouth-ɔ-u](/images/vowels-mouth-ɔ-u.svg)
+![Minh họa môi khi phát âm ɔ và u](/images/vowels-mouth-ɔ-u.svg)

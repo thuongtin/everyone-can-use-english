@@ -20,6 +20,12 @@ import { RecognitionResult } from "echogarden/dist/api/API.js";
 import take from "lodash/take";
 import sortedUniqBy from "lodash/sortedUniqBy";
 import log from "electron-log/renderer";
+import {
+  buildOpenAiTranscriptionRequest,
+  normalizeOpenAiTranscriptionModel,
+  normalizeOpenAiTranscriptionResponse,
+  sanitizeSpeechError,
+} from "@/lib/speech-models";
 
 const logger = log.scope("use-transcribe.tsx");
 
@@ -89,7 +95,8 @@ export const useTranscribe = () => {
       result = await transcribeByCloudflareAi(blob);
     } else if (service === SttEngineOptionEnum.OPENAI) {
       result = await transcribeByOpenAi(
-        new File([blob], "audio.mp3", { type: "audio/mp3" })
+        new File([blob], "audio.mp3", { type: "audio/mp3" }),
+        language
       );
     } else {
       // Azure AI is the default service
@@ -244,7 +251,7 @@ export const useTranscribe = () => {
     transcript: string;
     segmentTimeline: TimelineEntry[];
   }> => {
-    let { language } = options || {};
+    const { language } = options || {};
     const languageCode = language.split("-")[0];
     let model: string;
 
@@ -277,19 +284,27 @@ export const useTranscribe = () => {
   };
 
   const transcribeByOpenAi = async (
-    file: File
+    file: File,
+    language?: string
   ): Promise<{
     engine: string;
     model: string;
     transcript: string;
     segmentTimeline: TimelineEntry[];
+    words?: { word: string; start: number; end: number }[];
   }> => {
-    if (!openai?.key) {
+    const apiKey = typeof openai?.key === "string" ? openai.key.trim() : "";
+    if (!apiKey) {
       throw new Error(t("openaiKeyRequired"));
     }
 
+    const transcriptionModel = normalizeOpenAiTranscriptionModel(
+      (openai as (LlmProviderType & { transcriptionModel?: string }) | null)
+        ?.transcriptionModel
+    );
+
     const client = new OpenAI({
-      apiKey: openai.key,
+      apiKey,
       baseURL: openai.baseUrl,
       dangerouslyAllowBrowser: true,
       maxRetries: 0,
@@ -298,19 +313,17 @@ export const useTranscribe = () => {
     setOutput("Transcribing from OpenAI...");
     logger.info("Start transcribing from OpenAI...");
     try {
-      const res: {
-        text: string;
-        words?: { word: string; start: number; end: number }[];
-        segments?: { text: string; start: number; end: number }[];
-      } = (await client.audio.transcriptions.create({
+      const request = buildOpenAiTranscriptionRequest({
         file,
-        model: "whisper-1",
-        response_format: "verbose_json",
-        timestamp_granularities: ["word", "segment"],
-      })) as any;
+        model: transcriptionModel,
+        language,
+      });
+      const res = normalizeOpenAiTranscriptionResponse(
+        await client.audio.transcriptions.create(request as any)
+      );
 
       setOutput("OpenAI transcribe done");
-      const segmentTimeline = (res.segments || []).map((segment) => {
+      const segmentTimeline = res.segments.map((segment) => {
         return {
           type: "segment" as TimelineEntryType,
           text: segment.text,
@@ -322,12 +335,17 @@ export const useTranscribe = () => {
 
       return {
         engine: "openai",
-        model: "whisper-1",
-        transcript: res.text,
+        model: transcriptionModel,
+        transcript: res.transcript,
         segmentTimeline,
+        words: res.words,
       };
     } catch (err) {
-      throw new Error(t("openaiTranscribeFailed", { error: err.message }));
+      throw new Error(
+        t("openaiTranscribeFailed", {
+          error: sanitizeSpeechError(err, apiKey),
+        })
+      );
     }
   };
 

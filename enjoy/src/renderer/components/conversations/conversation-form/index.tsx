@@ -28,7 +28,7 @@ import {
   SelectItem,
   toast,
 } from "@renderer/components/ui";
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext } from "react";
 import {
   AppSettingsProviderContext,
   AISettingsProviderContext,
@@ -36,12 +36,16 @@ import {
 import { LoaderIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import {
-  GPT_PROVIDERS,
-  TTS_PROVIDERS,
   GPTShareButton,
   ConversationFormGPT,
   ConversationFormTTS,
 } from "@renderer/components";
+import {
+  SUPPORTED_LLM_PROVIDER_IDS,
+  isSupportedProvider,
+  providerSupportsOption,
+  type AiProviderId,
+} from "@/lib/ai-providers";
 
 export const ConversationForm = (props: {
   conversation: Partial<ConversationType>;
@@ -49,17 +53,24 @@ export const ConversationForm = (props: {
 }) => {
   const { conversation, onFinish } = props;
   const [submitting, setSubmitting] = useState<boolean>(false);
-  const [gptProviders, setGptProviders] = useState<any>(GPT_PROVIDERS);
-  const [ttsProviders, setTtsProviders] = useState<any>(TTS_PROVIDERS);
-  const { EnjoyApp, webApi, learningLanguage } = useContext(
+  const { EnjoyApp, learningLanguage } = useContext(
     AppSettingsProviderContext
   );
-  const { openai } = useContext(AISettingsProviderContext);
+  const {
+    openai,
+    providerConfigs,
+    currentGptEngine,
+    gptProviders,
+    ttsProviders,
+    ttsConfig,
+  } = useContext(AISettingsProviderContext);
   const navigate = useNavigate();
 
   const conversationFormSchema = z.object({
     name: z.string().optional(),
-    engine: z.enum(["enjoyai", "openai", "ollama"]).default("openai"),
+    engine: z
+      .enum([...SUPPORTED_LLM_PROVIDER_IDS] as [AiProviderId, ...AiProviderId[]])
+      .default("enjoyai"),
     configuration: z.object({
       type: z.enum(["gpt", "tts"]),
       model: z.string().optional(),
@@ -81,32 +92,6 @@ export const ConversationForm = (props: {
     }),
   });
 
-  const refreshGptProviders = async () => {
-    let providers = GPT_PROVIDERS;
-
-    try {
-      const config = await webApi.config("gpt_providers");
-      providers = Object.assign(providers, config);
-    } catch (e) {
-      console.warn(`Failed to fetch remote GPT config: ${e.message}`);
-    }
-
-    try {
-      const response = await fetch(providers["ollama"]?.baseUrl + "/api/tags");
-      providers["ollama"].models = (await response.json()).models.map(
-        (m: any) => m.name
-      );
-    } catch (e) {
-      console.warn(`No ollama server found: ${e.message}`);
-    }
-
-    if (openai.models) {
-      providers["openai"].models = openai.models.split(",");
-    }
-
-    setGptProviders({ ...providers });
-  };
-
   const destroyConversation = async () => {
     if (!conversation.id) return;
 
@@ -115,47 +100,52 @@ export const ConversationForm = (props: {
     });
   };
 
-  const refreshTtsProviders = async () => {
-    let providers = TTS_PROVIDERS;
-
-    try {
-      const config = await webApi.config("tts_providers_v2");
-      providers = Object.assign(providers, config);
-    } catch (e) {
-      console.warn(`Failed to fetch remote TTS config: ${e.message}`);
-    }
-
-    setTtsProviders({ ...providers });
-  };
-
-  useEffect(() => {
-    refreshGptProviders();
-    refreshTtsProviders();
-  }, []);
-
   const defaultConfig = JSON.parse(JSON.stringify(conversation || {}));
 
+  if (!defaultConfig.engine) {
+    defaultConfig.engine = currentGptEngine.name;
+  }
+  if (!defaultConfig.configuration) {
+    defaultConfig.configuration = {};
+  }
+  if (!defaultConfig.configuration.type) {
+    defaultConfig.configuration.type = "gpt";
+  }
+
+  if (!defaultConfig.configuration.model) {
+    const configuredEngine =
+      typeof defaultConfig.engine === "string"
+        ? defaultConfig.engine
+        : undefined;
+    const defaultProvider = configuredEngine && isSupportedProvider(configuredEngine)
+      ? configuredEngine
+      : undefined;
+    defaultConfig.configuration.model =
+      defaultConfig.engine === currentGptEngine.name
+        ? currentGptEngine.models.default
+        : defaultProvider
+          ? gptProviders[defaultProvider]?.models?.[0]
+          : undefined;
+  }
+
   if (defaultConfig.engine === "openai" && openai) {
-    if (!defaultConfig.configuration) {
-      defaultConfig.configuration = {};
-    }
     if (!defaultConfig.configuration.model) {
-      defaultConfig.configuration.model = openai.model;
+      defaultConfig.configuration.model =
+        openai.model || gptProviders.openai?.models?.[0];
     }
     if (!defaultConfig.configuration.baseUrl) {
       defaultConfig.configuration.baseUrl = openai.baseUrl;
     }
   }
 
-  if (defaultConfig.configuration.tts?.engine === "openai" && openai) {
-    if (!defaultConfig.configuration.tts?.baseUrl) {
-      defaultConfig.configuration.tts.baseUrl = openai.baseUrl;
-    }
-  }
-
-  if (!defaultConfig.configuration.tts) {
-    defaultConfig.configuration.tts = {};
-  }
+  defaultConfig.configuration.tts = {
+    ...(ttsConfig || {
+      engine: "enjoyai",
+      model: "openai/tts-1",
+      voice: "alloy",
+    }),
+    ...(defaultConfig.configuration.tts || {}),
+  };
 
   if (!defaultConfig.configuration.tts.language) {
     defaultConfig.configuration.tts.language = learningLanguage;
@@ -163,7 +153,6 @@ export const ConversationForm = (props: {
 
   const form = useForm<z.infer<typeof conversationFormSchema>>({
     resolver: zodResolver(conversationFormSchema),
-    // @ts-ignore
     values: conversation?.id
       ? {
           name: conversation.name,
@@ -183,7 +172,8 @@ export const ConversationForm = (props: {
   });
 
   const onSubmit = async (data: z.infer<typeof conversationFormSchema>) => {
-    let { name, engine, configuration } = data;
+    const { name, engine } = data;
+    let configuration = data.configuration;
     setSubmitting(true);
 
     try {
@@ -201,7 +191,7 @@ export const ConversationForm = (props: {
           configuration,
         })
         .then(() => {
-          onFinish && onFinish();
+          if (onFinish) onFinish();
         })
         .finally(() => {
           setSubmitting(false);
@@ -214,7 +204,7 @@ export const ConversationForm = (props: {
           configuration,
         })
         .then(() => {
-          onFinish && onFinish();
+          if (onFinish) onFinish();
         })
         .finally(() => {
           setSubmitting(false);
@@ -226,25 +216,24 @@ export const ConversationForm = (props: {
     data: z.infer<typeof conversationFormSchema>
   ) => {
     const { engine, configuration } = data;
+    const mutableConfiguration = configuration as typeof configuration &
+      Record<string, unknown>;
 
     Object.keys(configuration).forEach((key) => {
-      if (key === "type") return;
+      if (key === "type" || key === "tts") return;
 
       if (
         configuration.type === "gpt" &&
-        !gptProviders[engine]?.configurable.includes(key)
+        !providerSupportsOption(
+          engine,
+          key as Parameters<typeof providerSupportsOption>[1],
+          configuration.model,
+          gptProviders[engine]
+        )
       ) {
-        // @ts-ignore
-        delete configuration[key];
+        delete mutableConfiguration[key];
       }
 
-      if (
-        configuration.type === "tts" &&
-        !ttsProviders[engine]?.configurable.includes(key)
-      ) {
-        // @ts-ignore
-        delete configuration.tts[key];
-      }
     });
 
     // use default base url if not set
@@ -255,33 +244,49 @@ export const ConversationForm = (props: {
     // use default base url if not set
     if (!configuration?.tts?.baseUrl) {
       configuration.tts ||= {};
-      configuration.tts.baseUrl = gptProviders[engine]?.baseUrl;
+      configuration.tts.baseUrl =
+        ttsConfig?.baseUrl ||
+        (configuration.tts.engine === "openai"
+          ? providerConfigs.openai?.baseUrl
+          : ttsProviders[configuration.tts.engine]?.baseUrl);
     }
 
-    // validates tts voice
-    const ttsEngine = configuration.tts.engine;
-    const voice = configuration.tts.voice;
-    const language = configuration.tts.language;
-    if (!language) {
-      configuration.tts.language === learningLanguage;
-    }
-    if (!ttsEngine) {
+    if (!configuration.tts.engine) {
       configuration.tts.engine = "openai";
     }
     if (!configuration.tts.model) {
       configuration.tts.model = "openai/tts-1";
     }
+    if (!configuration.tts.baseUrl) {
+      configuration.tts.baseUrl =
+        ttsConfig?.engine === configuration.tts.engine
+          ? ttsConfig.baseUrl
+          : configuration.tts.engine === "openai"
+            ? providerConfigs.openai?.baseUrl
+            : ttsProviders[configuration.tts.engine]?.baseUrl;
+    }
+
+    // validates tts voice
+    const ttsEngine = configuration.tts.engine;
+    for (const key of Object.keys(configuration.tts)) {
+      if (!ttsProviders[ttsEngine]?.configurable.includes(key)) {
+        delete (configuration.tts as Record<string, unknown>)[key];
+      }
+    }
+    const voice = configuration.tts.voice;
+    const language = configuration.tts.language || learningLanguage;
+    configuration.tts.language = language;
 
     if (ttsEngine === "openai") {
-      const options = ttsProviders["openai"].voices;
-      if (!options.includes(voice)) {
+      const options = ttsProviders.openai?.voices || [];
+      if (options.length > 0 && !options.includes(voice)) {
         configuration.tts.voice = options[0];
       }
     }
     if (ttsEngine === "enjoyai") {
       const model = configuration.tts.model.split("/")[0];
-      const options = ttsProviders.enjoyai.voices[model];
-      if (model === "openai" && !options.includes(voice)) {
+      const options = ttsProviders.enjoyai?.voices?.[model] || [];
+      if (model === "openai" && options.length > 0 && !options.includes(voice)) {
         configuration.tts.voice = options[0];
       } else if (
         model === "azure" &&

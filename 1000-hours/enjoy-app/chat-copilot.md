@@ -1,9 +1,9 @@
-# Copilot
+# Trợ lý nhanh Copilot
 
-为了更方便地利用 AI 提供的帮助，在 Enjoy 任意页面，均可激活聊天功能，即 Copilot。
+Bạn có thể mở cửa sổ trò chuyện Copilot từ bất kỳ trang nào của Enjoy để nhận trợ giúp từ AI.
 
-默认快捷键是 `Ctrl + L`(Windows) 或 `Cmd + L`(Mac)，也可以点击右上角 💡 图标激活。
+Phím tắt mặc định là `Ctrl + L` trên Windows hoặc `Cmd + L` trên Mac. Bạn cũng có thể nhấn biểu tượng 💡 ở góc trên bên phải.
 
-![chat-copilot](/images/enjoy/chat-shadow-copilot.png)
+![Cửa sổ Copilot trong tài liệu gốc](/images/enjoy/chat-shadow-copilot.png)
 
-这意味着在使用 Enjoy 学习的过程中，遇到任何问题时，你可以随时激活右侧的聊天窗口，与 AI 进行对话。
+Khi gặp câu hỏi trong lúc học, hãy mở cửa sổ trò chuyện bên phải để hỏi AI mà không cần rời nội dung đang luyện.

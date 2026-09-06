@@ -1,3 +1,4 @@
+import { resolveUiLanguage } from "@/constants/ui-language";
 import {
   Table,
   Column,
@@ -60,7 +61,7 @@ export class UserSetting extends Model<UserSetting> {
     // update i18n
     if (key === UserSettingKeyEnum.LANGUAGE) {
       try {
-        await i18n.changeLanguage(value);
+        await i18n.changeLanguage(resolveUiLanguage(value));
       } catch (error) {
         logger.error("UserSetting.set: changeLanguage failed", error);
       }

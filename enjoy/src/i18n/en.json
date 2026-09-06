@@ -209,6 +209,7 @@
     "documents": "Documents",
     "books": "Books",
     "vocabulary": "Vocabulary",
+    "dictionary": "Dictionary",
     "library": "Library",
     "practice": "Practice",
     "reading": "Reading",
@@ -268,6 +269,12 @@
   "save": "Save",
   "delete": "Delete",
   "edit": "Edit",
+  "undo": "Undo",
+  "redo": "Redo",
+  "help": "Help",
+  "hide": "Hide",
+  "unhide": "Show",
+  "toggleFullscreen": "Toggle full screen",
   "retry": "Retry",
   "failedToLogin": "Failed to login",
   "sendCode": "Send code",
@@ -281,6 +288,9 @@
   "createMixinAccount": "Create Mixin account",
   "scanToLogin": "Scan to login",
   "youCanAlsoLoginWith": "You can also login with",
+  "banduLogin": "Sign in with Bandu",
+  "banduLoginDescription": "Bandu is an optional sign-in method for accounts or phone numbers supported by Bandu. Code delivery depends on Bandu and your carrier. You can also use GitHub or email.",
+  "loginOptionsDescription": "Bandu is optional. You can also sign in with GitHub or email.",
   "downloadTranscript": "Download transcript",
   "downloadTranscriptFromCloud": "Download transcript from cloud",
   "transcribe": "Transcribe",
@@ -365,6 +375,9 @@
   "later": "Later",
   "userGuide": "User guide",
   "feedback": "Feedback",
+  "checkForUpdates": "Check for updates",
+  "reportIssue": "Report an issue",
+  "automaticUpdatesUnavailable": "Automatic updates are not configured for this Vietnamese edition. Open the source download page to install a newer version.",
   "alreadyLatestVersion": "Already latest version",
   "initializingApp": "Initializing APP",
   "welcomeTo": "Welcome to",
@@ -455,6 +468,8 @@
   "enjoyCloudflare": "Cloudflare AI (by Enjoy)",
   "enjoyCloudflareSpeechToTextDescription": "Use Cloudflare AI Worker to transcribe. It is in beta and free for now.",
   "openaiSpeechToTextDescription": "Use openAI to transcribe using your own key.",
+  "openaiTranscriptionModel": "OpenAI transcription model",
+  "openaiTranscriptionModelDescription": "Choose a model to turn audio into text. whisper-1 keeps the existing configuration; gpt-transcribe is the new option.",
   "uploadSpeechToTextDescription": "Upload transcript file or input transcript text to align.",
   "checkingWhisper": "Checking whisper status",
   "pleaseDownloadWhisperModelFirst": "Please download whisper model first",
@@ -490,6 +505,36 @@
   "key": "key",
   "leaveEmptyToUseDefault": "Leave empty to use default",
   "openaiBaseUrlDescription": "Any endpoint that supports OpenAI style API.",
+  "aiProviders": {
+    "title": "AI providers",
+    "description": "Configure credentials, endpoints, and model lists for each AI provider.",
+    "enjoyai": {
+      "description": "Use the EnjoyAI account service with your Enjoy account."
+    },
+    "openai": {
+      "description": "Use OpenAI or an OpenAI compatible endpoint with your key."
+    },
+    "gemini": {
+      "description": "Use Gemini through its OpenAI compatible endpoint."
+    },
+    "deepseek": {
+      "description": "Use DeepSeek through its OpenAI compatible endpoint."
+    },
+    "openrouter": {
+      "description": "Use OpenRouter to route requests to supported models."
+    },
+    "ollama": {
+      "description": "Use a local Ollama server. No API key is required."
+    },
+    "lmstudio": {
+      "description": "Use a local LM Studio OpenAI compatible server. An API token is optional."
+    }
+  },
+  "providerConfigSaved": "Provider configuration saved",
+  "providerConfigSaveFailed": "Unable to save provider configuration",
+  "providerModelRequired": "Choose a model before saving this provider",
+  "localProviderModelRequired": "Start a local model before saving this provider",
+  "providerNoApiKeyRequired": "This local provider does not require an API key.",
   "newConversation": "New conversation",
   "selectAiRole": "Select AI role",
   "chooseFromPresetGpts": "Choose from preset GPTs",
@@ -868,7 +913,7 @@
     "numberOfChoicesDescription": "When greater than 1, it will generate multiple versions of text each time"
   },
   "tts": {
-    "engine": "TTS 引擎",
+    "engine": "TTS engine",
     "model": "TTS Model",
     "voice": "TTS Voice",
     "language": "TTS Language"
@@ -941,5 +986,66 @@
   "checkingForUpdate": "Checking for update",
   "updateAvailable": "Update available",
   "quitAndInstall": "Quit and install",
-  "pleaseSelect": "Please select"
+  "pleaseSelect": "Please select",
+  "pagination": "Pagination",
+  "goToPreviousPage": "Go to previous page",
+  "goToNextPage": "Go to next page",
+  "morePages": "More pages",
+  "bilingual": {
+    "enVi": "English - Vietnamese",
+    "viEn": "Vietnamese - English",
+    "title": "Offline dictionary",
+    "description": "Look up English or Vietnamese words and phrases. No account or Internet connection required.",
+    "query": "Word or phrase",
+    "placeholder": "For example: learn, take care, học, ngân hàng",
+    "search": "Look up",
+    "direction": "Dictionary direction",
+    "error": "Unable to read the dictionary. Please check the application installation.",
+    "source": "Source and contributors",
+    "credit": "Wiktionary contributors, extracted by Kaikki. Adapted learner data.",
+    "bundled": "Included with the application",
+    "open": "Open offline dictionary",
+    "back": "Back to Enjoy",
+    "empty": "Enter a word or phrase to look it up.",
+    "noResult": "No entry found. Check spelling, Vietnamese accents, or the dictionary direction.",
+    "offlineNote": "Definitions and IPA work offline. Source links need Internet access.",
+    "defaultSaved": "Default dictionary saved.",
+    "loading": "Looking up…",
+    "pos": {
+      "noun": "noun",
+      "verb": "verb",
+      "adj": "adj",
+      "adv": "adv",
+      "name": "name",
+      "pron": "pron",
+      "prep": "prep",
+      "conj": "conj",
+      "intj": "intj",
+      "num": "num",
+      "det": "det",
+      "article": "article",
+      "phrase": "phrase",
+      "proverb": "proverb",
+      "abbrev": "abbrev",
+      "prefix": "prefix",
+      "suffix": "suffix",
+      "affix": "affix",
+      "particle": "particle",
+      "classifier": "classifier",
+      "character": "character",
+      "unknown": "unknown",
+      "contraction": "contraction",
+      "counter": "counter",
+      "infix": "infix",
+      "romanization": "romanization",
+      "symbol": "symbol",
+      "syllable": "syllable",
+      "combining_form": "combining_form",
+      "punct": "punct",
+      "letter": "letter",
+      "root": "root"
+    },
+    "legacyImport": "English - Vietnamese and Vietnamese - English are included. ZIP import is for compatible legacy dictionaries."
+  },
+  "legacyUiLanguageNotice": "Your previous interface preference {{language}} is preserved in your data. This edition displays Vietnamese because that language is no longer supported. Choose a language here to update your saved preference."
 }

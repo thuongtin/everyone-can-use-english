@@ -5,6 +5,7 @@ import Conversation from "./pages/conversation";
 import Vocabulary from "./pages/vocabulary";
 import ErrorPage from "./pages/error-page";
 import Landing from "./pages/landing";
+import Dictionary from "./pages/dictionary";
 import Audio from "./pages/audio";
 import Video from "./pages/video";
 import Audios from "./pages/audios";
@@ -34,6 +35,7 @@ export default createHashRouter([
     errorElement: <ErrorPage />,
     children: [
       { path: "/landing", element: <Landing /> },
+      { path: "/dictionary", element: <Dictionary /> },
       {
         index: true,
         element: (

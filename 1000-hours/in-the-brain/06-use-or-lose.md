@@ -1,23 +1,27 @@
-# 6. 用进废退循环利用
+# 6. Dùng thì giữ, ít dùng thì suy giảm và tái sử dụng
 
-大脑天生具备**节能倾向**，它就是对节能异常痴迷，只要可能它就会启动**节能模式** —— 而且，无需问询、没得商量、也不提供可选设置，动不动就直接进入节能模式……
+Tác giả mô tả não bẩm sinh có **xu hướng tiết kiệm năng lượng**, gần như say mê việc ấy: hễ có thể là vào **chế độ tiết kiệm**, không hỏi, không thương lượng, không có tùy chọn cài đặt, cứ thế chuyển chế độ. Đây là phép nhân hóa của nguyên tác.
 
-首先，大脑会自动且又严格地执行大自然的规律，**用进废退**。
+Trước hết, tác giả cho rằng não tự động và nghiêm ngặt thực hiện quy luật **dùng thì phát triển, không dùng thì suy giảm**.
 
-用得着的，不断进化，用不着的，就当它不存在。对大脑来说，它甚至不在乎某个东西是否属于自己的身体，只要用得足够多，大脑就会将其内化，认为是属于自己的。比如，你的手机，画家手里的笔，司机手中的方向盘，罗尼·奥沙利文手里的台球杆，足球场上 22 名运动员一起玩的球……
+Thứ hữu dụng thì tiếp tục phát triển, thứ không hữu dụng thì xem như không có. Theo tác giả, não thậm chí không quan tâm một vật có thuộc cơ thể hay không; dùng đủ nhiều thì sẽ coi nó như một phần của mình. Ông dẫn điện thoại, cây cọ của họa sĩ, vô lăng của tài xế, cơ bi-a trong tay Ronnie O'Sullivan, và quả bóng mà 22 cầu thủ cùng chơi trên sân.
 
-至于你身体上那些你自己并不常用或者并不在意的部位，比如，不会弹琴的手指，不会跑也跑不快的腿，不能分辨气味的鼻子，不能品尝味道的舌头，不能听清楚的耳朵，不能看清楚的眼睛…… 大脑对这类器官的态度是，随它去罢。
+Với những bộ phận ít dùng hoặc ít được chú ý, như ngón tay không biết chơi đàn, đôi chân không chạy hoặc chạy chậm, mũi không phân biệt mùi, lưỡi không phân biệt vị, tai nghe không rõ, mắt nhìn không rõ, tác giả mô tả thái độ của não là “mặc kệ”. Đây là hình ảnh trong nguyên tác, không phải lời giải thích cho bệnh lý hoặc lý do quy mọi khó khăn giác quan, vận động cho thiếu luyện tập.
 
-因为大脑的节能倾向，因为用进废退的执行，大脑总是倾向于只**按需学习**。它觉得没用的东西，它不会为其耗费能量，别人说什么都没用。若是它自己真觉得必需，谁都拦不住。为什么？就是为了节能。
+Theo tác giả, vì xu hướng tiết kiệm và nguyên tắc dùng hay suy giảm, não chỉ thích **học theo nhu cầu**. Nó thấy vô dụng thì không tiêu năng lượng, ai nói cũng không ích gì; nếu nó thấy thực sự cần, không ai ngăn được. Ông giải thích tất cả là để tiết kiệm năng lượng.
 
-大脑的节能倾向，还演化出了另外一个机制，**循环利用**。
+Tác giả cho rằng xu hướng tiết kiệm còn dẫn đến cơ chế **tái sử dụng**.
 
-大脑学会的一切，本质上都是连接，都是局域网…… 可问题在于，当初这些连接和局域网的创建，可是耗费了很多能量的！所以，大脑往往不会断掉那些连接，废弃那些局域网 —— 必须回收，必须留作它用。
+Mọi thứ não học, theo ông, về bản chất là kết nối và mạng cục bộ. Tạo chúng ban đầu đã tốn nhiều năng lượng, nên não thường không cắt bỏ kết nối hay bỏ mạng: phải thu hồi, phải giữ để dùng việc khác. Đây là cách tác giả lý giải, không có nghĩa não không bao giờ loại bỏ hoặc tái tổ chức kết nối.
 
-大脑在进行循环利用的时候，对神经元间连接的强度也有要求，当然是优先采用那些强度更高的连接，当然优先采用那些通讯效率更高的局域网…… 反过来，在需要的时候，有更多更强的神经元连接、通讯效率更高的局域网可供循环利用，只能意味着学得更好学得更快。
+Khi tái sử dụng, tác giả cho rằng não ưu tiên kết nối mạnh hơn và mạng trao đổi hiệu quả hơn. Ngược lại, nếu khi cần có nhiều kết nối mạnh và mạng hiệu quả để tái sử dụng, ông khẳng định chỉ có thể dẫn đến học tốt hơn, nhanh hơn.
 
-这也是为什么有一部分人越老学得越多越快越好的根本原因。与大多数人误以为的相反，大脑原本就应该也可以**学得越多越快越好**。大多数人之所以并非如此，不是因为大脑越老越差，而是因为他们从一开始就没有积累，仅此而已。
+Tác giả xem đó là nguyên nhân căn bản khiến một số người càng lớn tuổi càng học nhiều, nhanh và tốt. Trái với điều ông cho rằng phần lớn mọi người lầm tưởng, não vốn nên và có thể **càng học nhiều càng nhanh và tốt**. Ông khẳng định đa số không đạt được không phải vì não già đi, mà chỉ vì ngay từ đầu không tích lũy. Đây là kết luận của nguyên tác; không dùng để phủ nhận ảnh hưởng tuổi tác, sức khỏe hoặc hoàn cảnh học tập.
 
-大脑**按需学习**的倾向，有时会阻止我们的学习 —— 因为在一个技能真正练好之前，大脑可能很难相信它的作用，这是很普遍的现象。但，大脑的**循环利用**机制，却总是在奖励学习，因为这个机制的存在，使得 “无论学什么最终都有用”，反正一切都是连接，一切都是网络，到最后实际产生的现象和效果是，学得越多，学得越快，学得越好。
+Xu hướng **học theo nhu cầu** đôi khi cản trở việc học theo tác giả, vì trước khi luyện giỏi, não khó tin kỹ năng đó có ích. Ngược lại, cơ chế **tái sử dụng** luôn thưởng cho học tập, khiến “học gì cuối cùng cũng có ích”: mọi thứ là kết nối và mạng, nên kết quả là càng học nhiều, càng nhanh, càng tốt. Đây là luận điểm động viên của nguyên tác, không bảo đảm mọi nội dung tự chuyển thành lợi ích trong mọi hoàn cảnh.
 
-从结果上来看，循环利用机制其实是对**超额学习**的奖励。大多数人终生被按需学习所限制，只有少数人经过时间的考验之后被循环利用机制反复奖励。
+Nhìn vào kết quả, tác giả xem tái sử dụng như phần thưởng cho **học vượt nhu cầu trước mắt**. Ông cho rằng phần lớn mọi người suốt đời bị giới hạn bởi học theo nhu cầu, chỉ một số ít sau thử thách thời gian liên tục nhận phần thưởng từ tái sử dụng.
+
+::: info Ghi chú biên tập cho bản tiếng Việt
+Không nên quy mọi chậm học khi lớn tuổi thành thiếu tích lũy. [NIA](https://www.nia.nih.gov/news/some-brain-functions-may-improve-age) ghi nhận một số chức năng có thể cải thiện theo tuổi trong khi thời gian phản ứng vẫn chậm hơn. “Dùng hay suy giảm” và “tái sử dụng” ở đây là cách giải thích khái quát, không phải quy tắc rằng mọi kết nối đều được giữ hoặc mọi kiến thức tự chuyển sang kỹ năng mới.
+:::

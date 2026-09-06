@@ -1,35 +1,35 @@
-# 本地电子书
+# Sách điện tử và tài liệu trên máy
 
-目前暂时支持的格式有：
+Các định dạng được tài liệu gốc liệt kê là:
 
-- epub
-- txt
-- markdown
+- EPUB.
+- TXT.
+- Markdown.
 
-点击左侧栏的 `文档` 进入，点击 `添加资源` 按钮，选择对应的文件即可。
+Chọn **Tài liệu** ở thanh bên trái, nhấn **Thêm học liệu**, rồi chọn tệp cần nhập.
 
-![添加文档](/images/enjoy/document-add.png)
+![Thêm tài liệu từ máy tính](/images/enjoy/document-add.png)
 
-## 文档设置
+## Cài đặt tài liệu {#document-settings}
 
-点击左上角的齿轮按钮，可以进行文档设置。例如是否进行自动翻译、连续朗读等。
+Nhấn biểu tượng bánh răng ở góc trên bên trái để cấu hình tài liệu, chẳng hạn bật dịch tự động hoặc đọc liên tục.
 
-![文档设置](/images/enjoy/document-settings.png)
+![Cài đặt tài liệu](/images/enjoy/document-settings.png)
 
-## 文档翻译
+## Dịch tài liệu {#translate-document}
 
-文档每个段落顶部有翻译按钮，点击即可翻译。
+Mỗi đoạn văn có nút dịch ở phía trên. Nhấn nút đó để dịch đoạn văn.
 
-![文档翻译](/images/enjoy/document-translate.png)
+![Dịch một đoạn văn](/images/enjoy/document-translate.png)
 
-## 文档播放
+## Nghe tài liệu {#play-document}
 
-文档每个段落顶部有播放按钮，点击即可播放。
+Mỗi đoạn văn có nút phát ở phía trên. Nhấn nút đó để nghe đoạn văn.
 
-![文档播放](/images/enjoy/document-play.png)
+![Phát giọng đọc của đoạn văn](/images/enjoy/document-play.png)
 
-## 文档跟读
+## Luyện nhại từ tài liệu {#shadow-document}
 
-文档朗读语音生成后，可以点击 `跟读训练` 按钮，进行跟读。
+Sau khi giọng đọc được tạo, nhấn **Luyện nhại theo mẫu** để luyện cùng đoạn âm thanh đó.
 
-![文档跟读](/images/enjoy/document-shadow.png)
+![Luyện nhại từ tài liệu](/images/enjoy/document-shadow.png)

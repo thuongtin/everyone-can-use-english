@@ -201,10 +201,10 @@ export const Sidebar = (props: {
             />
 
             <SidebarItem
-              href="/vocabulary"
-              label={t("sidebar.vocabulary")}
-              tooltip={t("sidebar.vocabulary")}
-              active={activeTab.startsWith("/vocabulary")}
+              href="/dictionary"
+              label={t("sidebar.dictionary")}
+              tooltip={t("sidebar.dictionary")}
+              active={activeTab.startsWith("/dictionary")}
               Icon={BookMarkedIcon}
               isCollapsed={isCollapsed}
             />

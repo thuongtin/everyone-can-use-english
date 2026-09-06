@@ -1,136 +1,161 @@
-# 第四章 朗读
+# Chương 4. Đọc thành tiếng
 
-## 1. 最古老最有效的训练方式
+## 1. Cách luyện lâu đời nhất và hiệu quả nhất
 
-拥有文字之前，人类就已经能够说话，只不过能说的没那么复杂、要说的也非常简单而已。有了文字，后来甚至发展并掌握了逻辑之后，人们能够想到的、需要表达的开始变得越来越复杂起来。某种意义上，最终拥有了文字是人类与其它近亲物种最深刻的本质区别。一旦人类拥有了文字，有意识、有目的的教育就成了必须。
+Trước khi có chữ viết, con người đã biết nói, chỉ là điều có thể nói chưa phức tạp và điều cần nói cũng rất đơn giản, theo tác giả. Sau khi có chữ viết, rồi phát triển và nắm được logic, những điều con người có thể nghĩ tới và cần biểu đạt bắt đầu ngày càng phức tạp. Ở một nghĩa nào đó, cuối cùng có được chữ viết là khác biệt bản chất sâu sắc nhất giữa con người và những loài họ hàng gần khác. Một khi có chữ viết, giáo dục có ý thức và mục đích trở thành điều cần thiết.
 
-而所有文化在这一点上都一模一样：**朗读是语文教育的最古老、最普及、成本最低、效果最好的训练方式**。只可惜这种最好的训练方法即便在我们的母语语文教育中被重视的程度都远远不够。并且，每代人都以为自己可以找得到更好的方法而忽略这个其实无法超越的手段。
+Về điểm này, mọi nền văn hóa đều giống hệt nhau, theo tác giả: **Đọc thành tiếng là cách luyện lâu đời nhất, phổ biến nhất, ít tốn kém nhất và hiệu quả nhất trong giáo dục ngôn ngữ.** Đáng tiếc là ngay cả trong việc dạy tiếng mẹ đẻ, phương pháp tốt nhất này vẫn chưa được coi trọng đủ. Mỗi thế hệ lại tưởng mình có thể tìm được cách tốt hơn, rồi bỏ qua phương tiện thực ra không thể vượt qua ấy.
 
-许多年来，我一直在进步，但从来没觉得自己英语学得好（至少不是人们普遍认为的那种 “好”），但在习得过程中确确实实没有觉得那么费劲。这要归功于我的父亲。我的父亲是个精通多种语言的人。毕业于黑龙江大学俄语系，文革没多久就被下放到海林县一中任英语教员，后被 “落实政策” 而调任延边医学院外语系主任直至退休。由于我的父亲是位英语教授，我一上初中就被老师任命为 “英语课代表”。我的班主任误以为我爸爸是英语教授，我的英语就自然会不错 —— 大错特错。
+> **Ghi chú biên tập:** Những từ “mọi”, “nhất” và “không thể vượt qua” là mức khẳng định của tác giả, không phải kết quả so sánh mọi phương pháp trên mọi người học. Lịch sử ngôn ngữ khác lịch sử chữ viết: không có chữ viết không có nghĩa ngôn ngữ hoặc suy nghĩ chỉ có thể đơn giản. Xem [Essentials of Linguistics về ngôn ngữ và ngữ pháp](https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/1-1-what-even-is-language/). [National Reading Panel](https://www.nichd.nih.gov/publications/pubs/nrp/Pages/findings.aspx) ghi nhận lợi ích của đọc lặp có hướng dẫn và phản hồi, đồng thời xét nhiều thành phần của việc dạy đọc; nguồn ấy không chứng minh đọc thành tiếng là phương pháp độc tôn. Người Việt có thể dùng đọc thành tiếng như một phần của việc học, đồng thời kiểm tra hiểu nghĩa, nghe, hội thoại và viết theo mục tiêu của mình; các giới hạn cụ thể được bàn trong ghi chú của từng mục sau.
 
-有句话说，“医不治己”。同样的道理，我老爸是个对学生无比耐心的好老师，可是回家教自己儿子，两句话之后就受不了了，不由得骂起来：“小崽子，是我儿子么？这么笨！” 当然，我也不示弱：“你不说我是你捡来的么！” 于是爷俩就不欢而散。那时，我觉得他英语好是他的事儿，我英语不好还是他的事儿。
+Nhiều năm qua, tôi luôn tiến bộ nhưng chưa bao giờ thấy mình học tiếng Anh giỏi, ít nhất không phải kiểu “giỏi” mà mọi người thường nghĩ. Tuy nhiên, trong quá trình tiếp thu, tôi thực sự không thấy quá vất vả. Điều đó là nhờ cha tôi. Cha tôi thông thạo nhiều ngôn ngữ, tốt nghiệp khoa tiếng Nga của Đại học Hắc Long Giang. Không lâu sau khi Cách mạng Văn hóa bắt đầu, ông bị điều xuống làm giáo viên tiếng Anh tại Trường trung học số 1 huyện Hải Lâm. Sau đó, khi chính sách đối với ông được giải quyết lại, ông được điều làm trưởng khoa ngoại ngữ tại Học viện Y Diên Biên cho tới lúc nghỉ hưu. Vì cha là giáo sư tiếng Anh, vừa vào trung học cơ sở tôi đã được giáo viên chỉ định làm cán sự môn tiếng Anh. Giáo viên chủ nhiệm tưởng cha là giáo sư thì đương nhiên tiếng Anh của tôi cũng tốt. Sai hoàn toàn.
 
-可我已经成了 “英语课代表”。每天早上要站在全班同学面前领读课文，要是磕磕巴巴就很丢人。于是只好硬着头皮向老爸求助。那个年代（大约是 1984 年前后）的英语课本是没有配套磁带的（当然更没有现在这么方便的 mp3）。老爸是外语系主任，于是家里很早就有录音机，他又假公济私弄来两盘空白进口牌子 TDK 磁带，为我把所有课文朗读了一遍录了下来。此后，我事先在家里花几十分钟把课文跟着磁带读熟，然后再到学校领读，总算是不再丢脸。
+Có câu “thầy thuốc không tự chữa cho mình”. Cha tôi cũng vậy: ông là người thầy vô cùng kiên nhẫn với học sinh, nhưng về nhà dạy con trai thì mới hai câu đã chịu không nổi, buột miệng mắng: “Thằng nhóc, mày có phải con tao không? Sao ngu thế!”. Đương nhiên tôi cũng không chịu lép: “Chẳng phải bố bảo nhặt con về sao!”. Thế là hai cha con chia tay trong bực bội. Khi ấy, tôi nghĩ tiếng Anh của ông tốt là chuyện của ông; tiếng Anh của tôi kém cũng vẫn là chuyện của ông.
 
-初中课本很简单，从 “This is a book. That is a table. ” 开始。一册书总共也没有多少单元，而一个单元要一个星期（甚至更久）老师才能讲完。于是，课本上的每句话，我都不知道要带着全班同学读上多少次。很快我就发现领读三五遍之后，我就基本上能把课文背下来。我读完一句，等同学们跟读的时候，自然而然地就能想起来下一句是什么 —— 我甚至不用带书就可以站到前面领读。
+Nhưng tôi đã thành cán sự môn tiếng Anh. Mỗi sáng phải đứng trước cả lớp dẫn đọc bài; nếu vấp váp thì rất mất mặt. Tôi đành cố lấy can đảm nhờ cha giúp. Thời đó, khoảng năm 1984, sách giáo khoa tiếng Anh không có băng cassette đi kèm, đương nhiên càng không có MP3 tiện lợi như bây giờ. Cha là trưởng khoa ngoại ngữ nên nhà tôi có máy ghi âm từ sớm. Ông lại lấy việc công phục vụ việc riêng, kiếm hai băng TDK nhập khẩu còn trống rồi đọc và ghi âm toàn bộ bài trong sách cho tôi. Từ đó, ở nhà tôi bỏ vài chục phút đọc theo băng cho quen trước khi tới trường dẫn đọc, cuối cùng cũng không còn xấu hổ.
 
-此后的许多年里，英语课上我从来都没有认真听讲过，考试成绩却也从来没有差过。做选择题的时候，只是觉得哪一个选项填进去 “顺嘴” 就选哪个，正确率奇高无比,几乎从不出错。没多久，我就发现同学们问我哪一道题为什么只能选那一个选项的时候我要是如实回答往往招来怀疑的目光，于是就开始用从老师那里学来的行话胡说八道：“唉，语感呗……” 说来也怪，得到这种莫名其妙的答案的时候，提问者往往表情凝重，显得若有所思，然后缓缓点头，默默走开。
+Sách trung học cơ sở rất đơn giản, bắt đầu bằng “This is a book. That is a table. ”. Cả cuốn cũng không có nhiều đơn vị bài học, mà mỗi đơn vị giáo viên phải giảng một tuần, thậm chí lâu hơn, mới xong. Vì vậy, mỗi câu trong sách tôi không biết đã dẫn cả lớp đọc bao nhiêu lần. Chẳng bao lâu tôi nhận ra sau ba đến năm lượt dẫn đọc, mình cơ bản đã thuộc bài. Đọc xong một câu, trong lúc chờ các bạn nhắc lại, tôi tự nhiên nhớ ra câu tiếp theo. Thậm chí không cần mang sách, tôi vẫn có thể đứng phía trước dẫn đọc.
 
-许多年后，我自己莫名其妙成了英语老师，认真回顾才发现我捡了个大便宜：不知不觉用了成本最低、效果最好的训练方式躲过了无数劫难。
+Nhiều năm sau đó, tôi chưa bao giờ chăm chú nghe giảng tiếng Anh nhưng điểm thi cũng chưa bao giờ kém. Khi làm trắc nghiệm, chỉ cần thấy điền đáp án nào vào “thuận miệng” thì chọn, tỷ lệ đúng cao đến kỳ lạ, gần như không sai. Không lâu sau, tôi phát hiện khi bạn hỏi vì sao một câu chỉ chọn được đáp án ấy, trả lời thật thường khiến họ nhìn đầy nghi ngờ. Thế là tôi bắt đầu nói linh tinh bằng thuật ngữ học từ giáo viên: “À, cảm giác ngôn ngữ ấy mà...”. Lạ thay, nghe câu trả lời khó hiểu đó, người hỏi thường trầm ngâm như đang suy nghĩ, rồi chậm rãi gật đầu và lặng lẽ đi.
 
-## 2. 朗读有助于提高文字理解能力
+Nhiều năm sau nữa, chẳng hiểu sao chính tôi lại thành giáo viên tiếng Anh. Nhìn lại cẩn thận, tôi mới nhận ra mình được lợi rất lớn: vô tình dùng cách luyện ít tốn kém nhất, hiệu quả nhất để tránh vô số gian nan, theo cách tôi đánh giá.
 
-说来可惜，但大多数人确实并不重视朗读训练 —— 无论是母语还是外语的习得过程中都是如此。朗读训练既简单又有效，并且可以解决很多许多人花很多钱去各种各样的培训班解决不了的问题。
+> **Ghi chú biên tập về câu chuyện:** Trường học, chức vụ, Cách mạng Văn hóa, băng cassette và mốc 1984 thuộc bối cảnh gia đình tác giả ở Trung Quốc. Lời mắng trong hồi ức không phải cách phản hồi được bản Việt hóa khuyến nghị. Khi áp dụng, người Việt có thể chọn một đoạn tiếng Anh có âm thanh mẫu rõ, đọc kỹ nghĩa, luyện và ghi lại chỗ cần sửa; không suy từ thành tích cá nhân trong câu chuyện rằng mọi người đều không cần nghe giảng hoặc chỉ chọn đáp án “thuận miệng” là đúng.
 
-朗读训练是提高文字理解能力的最有效方式。想象一下，现在你要流畅地朗读一个由二十个单词构成的句子。
+## 2. Đọc thành tiếng giúp nâng cao khả năng hiểu văn bản
 
-首先，每看到一个单词，你都要有能力识别。有些单词长得很像的，比如，“principle” 和 “principal”，“quite” 和 “quiet” —— 甚至有没有空格都是需要考虑的因素，比如 “some time” 和 “sometimes”，或者 “everyone” 和 “every one”……
+Đáng tiếc, nhưng phần lớn mọi người thực sự chưa coi trọng luyện đọc thành tiếng, dù khi tiếp thu tiếng mẹ đẻ hay ngoại ngữ. Luyện đọc thành tiếng vừa đơn giản vừa hiệu quả, và theo tác giả, có thể giải quyết nhiều vấn đề mà nhiều người bỏ rất nhiều tiền vào đủ loại lớp học vẫn không giải quyết được.
 
-其次，大多数单词有很多个意思，至于它究竟在当前这句话里是哪一个意思，要根据与它相邻的单词究竟是什么意思来决定。比如，“scale” 这个单词，就有很多个意思，如果后面跟着 “~ of the economy”，那它就是 “规模” 的意思；如果后面跟着 “~ of fish”，那么它应该是 “鱼鳞” 的意思……
+Theo tác giả, luyện đọc thành tiếng là cách hiệu quả nhất để nâng cao khả năng hiểu văn bản. Hãy tưởng tượng bây giờ bạn cần đọc trôi chảy một câu gồm hai mươi từ.
 
-再次，有些单词组合在一起之后表达的意思几乎完全不是字面的含义，比如 “strike home”、“even Steven”、“paint the town red” 等等。完全不明白倒也罢了，有时真实的意思与直观的感觉恰恰相反就很难办，比如，“birds of prey”，只认识 “prey” 这个单词的学生没有专门查过词典的话，很可能把这个词组理解为 “被捕食的鸟”，而正确的含义却是 “食肉鸟、猛禽”。（别惊讶，相信我，你并不孤独。）
+Trước hết, nhìn thấy từng từ là phải nhận diện được nó. Có những từ rất giống nhau, như “principle” và “principal”, “quite” và “quiet”. Thậm chí có khoảng trắng hay không cũng cần được xét, chẳng hạn “some time” và “sometimes”, hoặc “everyone” và “every one”.
 
-另外，但凡一个句子超过十个词的长度，大抵上它更可能是个复杂句，有词组、有从句，有可能是倒装句或者强调句，也有可能存在被省略的语法成分。这些语法现象并不总是那么容易处理，偶尔需要破费一些心思才能正确完成。
-之所以朗读是提高 “理解能力” 的最基本方法，是因为当一个人可以流利地朗读一个句子的时候，即意味着说他正在完成对这个句子的 “拆解” 与 “重组” 的过程 —— 这是个复杂的系统工程：
+Tiếp theo, phần lớn từ có nhiều nghĩa. Trong câu này từ mang nghĩa gì phải được xác định dựa vào nghĩa của những từ bên cạnh. Chẳng hạn “scale” có nhiều nghĩa: nếu theo sau là “~ of the economy”, thì là “quy mô”; nếu theo sau là “~ of fish”, thì theo ví dụ tác giả, phải là “vảy cá”.
 
-> 信息通过眼睛输入，经过大脑识别、理解、处理之后又运用口腔的种种器官形成正确的声音，而后又通过耳朵反馈回大脑；而与此同时，大脑在一刻不停闲进行各种处理过程：句子成分都有哪些、哪几个字词构成什么样的成分、这些成分各自是什么意思、成分之间的关系究竟是什么、这些成分组合起来又构成怎样的含义，等等。
+Hơn nữa, có những từ kết hợp lại mang nghĩa gần như hoàn toàn khác nghĩa đen, như “strike home”, “even Steven”, “paint the town red”. Không hiểu gì đã đành; có lúc nghĩa thực tế ngược hẳn cảm giác ban đầu thì càng khó xử lý. Ví dụ “birds of prey”: học sinh chỉ biết từ “prey” mà chưa tra riêng cụm này rất có thể hiểu thành “chim bị săn bắt”, trong khi nghĩa đúng là “chim săn mồi, chim ăn thịt”. Đừng ngạc nhiên; tin tôi đi, không chỉ mình bạn như vậy.
 
-> 反过来也一样，如果阅读者面对一个语法正确、逻辑严谨的句子竟然不能够把它流利地朗读出来，就说明阅读者“拆解”有误或者“重组”有误。重新把句子结构与成分意义以及它们之间的关系都搞清楚之后，句意也就自然明朗了，读起来自然就“顺”了；而后再把句子多读几遍——其实就是“通过重复练习理解过程、巩固理解能力”了。
+Ngoài ra, câu dài hơn mười từ thì nhìn chung có nhiều khả năng là câu phức, theo tác giả: có cụm từ, mệnh đề phụ, có thể có đảo ngữ, cấu trúc nhấn mạnh hoặc thành phần ngữ pháp bị lược. Những hiện tượng ấy không phải lúc nào cũng dễ xử lý; đôi khi cần tốn công suy nghĩ mới làm đúng.
 
-事实上，大多数人很难做到用母语流畅朗读任何句子 —— 尽管大多数人都认为自己可以做到。举例来说，也许大多数人能够在不作任何准备的情况下，能够比较流畅地朗读《读者》杂志中的任意句子 —— 因为那只不过是个扫盲类的杂志；但是，只有少数人（应该是极少数）能够做到在不作任何准备的情况下流畅地朗读《读书》杂志里的任意句子 —— 因为这种杂志所传递的才是真正需要智力才能理解的知识。即便是专业播音员，朗读任何材料之前也要首先花点时间熟悉一下内容，才能做到基本不出错地朗读出来。
+Sở dĩ tác giả xem đọc thành tiếng là cách cơ bản nhất để nâng cao khả năng hiểu là vì, theo ông, đọc trôi chảy một câu có nghĩa bạn đang hoàn thành quá trình “tháo ra” và “lắp lại” câu ấy. Đó là một công việc hệ thống phức tạp:
 
-> 关于《读者》与《读书》的评论，只是我个人看法。另外，《读书》好像已经停办了？
+> Thông tin đi vào qua mắt, được não nhận diện, hiểu, xử lý, rồi các cơ quan trong miệng tạo thành âm thanh đúng, sau đó tai lại đưa thông tin phản hồi về não. Đồng thời, não liên tục xử lý: câu có những thành phần nào, từ nào hợp thành loại thành phần gì, từng thành phần có nghĩa gì, chúng có quan hệ ra sao, và kết hợp lại thì tạo thành ý nghĩa nào, v.v.
 
-“朗读” 甚至是一种能力，也就当然需要通过锻炼才能掌握。尽管不是每个人都需要做到极致（最终成为播音员或者演员的人除外），但是如果连这都不及格，那么很可能因此导致 “理解能力” 低下，乃至于各个科目都可能受到影响。读者不妨回想一下自己的成长过程，每个班级里都至少有那么一两个因朗读糟糕而被老师或者同学耻笑的学生，大抵上他们其他科目的成绩不大可能理想的 —— 因为学习任何学科都需要阅读文本，需要理解能力，但这些孩子连流利朗读都掌握不了，理解能力自然就差出许多，于是在各个科目都可能因此落后于他人。，这几乎是铁律：儿时的文字训练影响一个人一生的思考能力，进而影响一生的生活质量。
+> Chiều ngược lại cũng vậy, theo tác giả: nếu đứng trước một câu đúng ngữ pháp, chặt chẽ về logic mà người đọc không thể đọc trôi chảy, thì chứng tỏ họ đã “tháo” sai hoặc “lắp” sai. Làm rõ lại cấu trúc câu, nghĩa từng thành phần và quan hệ giữa chúng, ý câu tự nhiên sẽ sáng rõ, đọc cũng tự nhiên “thuận”. Đọc thêm vài lần thực ra là lặp lại quá trình hiểu để củng cố khả năng hiểu.
 
-## 3. 朗读训练会潜移默化地提高阅读理解速度
+> **Ghi chú biên tập: đọc trôi chảy và hiểu không phải cùng một phép đo.** Đọc thành tiếng có thể giúp nhận ra chỗ chưa chắc, nhưng đọc trôi chảy chưa chứng minh đã hiểu, và đọc vấp không đủ kết luận hiểu sai hoặc suy nghĩ kém. [ASHA phân biệt khó nhận diện từ với khó hiểu](https://www.asha.org/practice-portal/clinical-topics/written-language-disorders/disorders-of-reading-and-writing/); hai mặt có thể khác nhau ở cùng một người. Vốn từ, khả năng giải mã chữ, phát âm, chú ý, mức quen với văn bản và nhu cầu hỗ trợ của từng người đều cần được xét. Một câu nhiều hơn mười từ cũng không vì độ dài mà nhất thiết là câu phức. Cặp *some time* và *sometimes* ở trên còn khác chữ *s*, không chỉ khoảng trắng. Khi luyện tiếng Anh, hãy thêm bước giải thích ý bằng tiếng Việt hoặc lời của mình và trả lời câu hỏi về nội dung, thay vì chỉ đo độ trôi chảy.
 
-平时，我们并不在意自己的阅读速度，尤其在读闲书的时候，“速度” 几乎是不被考虑的因素 —— 快与慢全凭个人喜好。有的人喜欢咬文嚼字，有的人就是喜欢囫囵吞枣 —— 当然更多的人干脆懒得读书，只看画报与影视。人们真正在意自己的阅读速度的时候，基本上都是在考试的时候，比如，在参加外语考试诸如国内的四六级考试或者国外的留学考试 TOEFL、SAT、GRE、GMAT、LSAT 的时候 —— 大多数人的直接感受是阅读速度太慢，乃至于时间不够用。而尽管考试从来都不是招人喜欢的东西，但优异的考试成绩，往往是一个人发展的通行证，不得不为之努力。当然，在工作中，输入至关重要，因此一个人的阅读理解速度不足够快，会在很大程度上限制一个人的能力 —— 因为他获取、过滤、筛选信息的速度，以及获取的信息量和质量都在不同程度上受到些限制。
+Thực tế, theo tác giả, phần lớn mọi người khó có thể đọc trôi chảy bất kỳ câu nào bằng tiếng mẹ đẻ, dù đa số cho rằng mình làm được. Chẳng hạn, có lẽ đa số mọi người chưa chuẩn bị vẫn có thể đọc khá trôi chảy một câu bất kỳ trong tạp chí *Độc giả* (*Duzhe*), vì theo ông đó chỉ là tạp chí mức xóa mù chữ. Nhưng chỉ một số ít, có lẽ rất ít, có thể đọc trôi chảy bất kỳ câu nào trong tạp chí *Đọc sách* (*Dushu*) mà không chuẩn bị, vì ông cho rằng loại tạp chí ấy mới truyền tải kiến thức thực sự đòi hỏi trí tuệ để hiểu. Ngay cả phát thanh viên chuyên nghiệp trước khi đọc tài liệu cũng phải dành thời gian làm quen với nội dung mới cơ bản tránh được lỗi.
 
-为了解决阅读速度的限制，人们（包括老师与学生）给出了各种各样的解决方案和建议，同时也定义了很多所谓的 “恶习”，比如，“唇读”、“指读”、“回读”、“译读” 等等。很多学生在面临问题的时候也难免 “病急乱投医”，相信 “唇读”、“指读” 等等方式真的是所谓的恶习。事实上，无论多么荒谬的事情只要有人肯斩钉截铁地说出来就会有人（很多人）不假思索地相信。每天遇到的这种例子还少吗？
+> Nhận xét về *Độc giả* và *Đọc sách* chỉ là ý kiến cá nhân của tôi. Ngoài ra, hình như *Đọc sách* đã ngừng xuất bản rồi thì phải?
 
-而这些 “快速阅读” 建议基本上都是治标不治本的，因为它们解决的都是输入速度问题而已，而不是输入之后的理解速度问题。输入的速度再快，理解速度跟不上，又于事何补？有的时候有点想不明白为什么那么多人脑子里明明想着要提高 “阅读理解速度”，而实际 “阅读” 中却只关心 “速度” 而干脆忽略 “理解” 的重要呢？（也许是 “跳读、略读” 的习惯造成的？一不小心就把 “理解” 两个字给跳过去了，干脆没看着 …… 这就是很好的一个出于好意的不严谨建议最终带来恶果的例子。）
+Đọc thành tiếng thậm chí là một năng lực, đương nhiên phải rèn luyện mới nắm được. Không phải ai cũng cần đạt mức cao nhất, trừ người cuối cùng làm phát thanh viên hoặc diễn viên; nhưng theo tác giả, nếu ngay cả việc này cũng không đạt, khả năng hiểu rất có thể kém đi, đến mức ảnh hưởng mọi môn học. Hãy nhớ lại quá trình lớn lên: lớp nào cũng có ít nhất một hoặc hai học sinh bị giáo viên hoặc bạn chế giễu vì đọc kém. Theo ông, điểm các môn khác của những em này nhìn chung khó có thể tốt, vì học môn nào cũng cần đọc và hiểu văn bản. Ngay cả đọc trôi chảy các em còn chưa làm được, khả năng hiểu đương nhiên kém hơn nhiều, nên có thể tụt lại ở mọi môn. Tác giả coi đây gần như quy luật cứng: rèn văn bản thời thơ ấu ảnh hưởng khả năng suy nghĩ suốt đời, rồi ảnh hưởng chất lượng sống suốt đời.
 
-只看到表象，从未深入实质，是一切问题得不到解决的根源。阅读理解速度的瓶颈在于理解速度，而绝非输入速度。
+> **Ghi chú biên tập về đánh giá người đọc:** Cách xếp hạng tạp chí và liên hệ khả năng đọc của trẻ với trí tuệ, mọi môn học hoặc chất lượng sống là nhận xét mạnh của tác giả, không phải căn cứ để chế giễu hay kết luận số phận một học sinh. Người học cần phản hồi cụ thể và hỗ trợ phù hợp. Hai tên tạp chí tiếng Trung được giữ một lần để xác định đúng ấn phẩm; lời hỏi “hình như đã ngừng xuất bản” là nghi vấn trong nguyên tác, không phải thông báo tình trạng hiện hành. Tại thời điểm biên tập, [trang chính thức Tam Liên vẫn giới thiệu các số Đọc sách năm 2026](https://www.lifeweek.com.cn/column/220); điều này không tự chứng minh lịch sử xuất bản chưa từng gián đoạn.
 
-“输入” 的方式至少有以下常见的四种：
+## 3. Luyện đọc thành tiếng âm thầm giúp tăng tốc độ đọc hiểu
 
-* 扫读：只用眼睛快速浏览文字（本质上来看是必然以遗漏一些信息为代价
-* 默读：在用眼睛浏览文字的同时脑子里有一个声音在 “说” 这些文字，并不实际发声
-* 唇读：在用眼睛浏览文字的同时嘴唇翕动 “说” 出这些文字
-* 朗读：大声把自己读到的文字说出来
+Bình thường, chúng ta ít để ý tốc độ đọc, nhất là khi đọc sách ngoài yêu cầu học tập. Khi ấy, tốc độ gần như không phải yếu tố cần xét; nhanh hay chậm hoàn toàn tùy sở thích. Người thích nghiền ngẫm từng chữ, người thích đọc lướt cho xong. Đương nhiên, theo lời phê bình của tác giả, còn nhiều người hơn nữa lười đọc sách, chỉ xem tạp chí hình ảnh và phim. Lúc thực sự quan tâm tốc độ đọc thường là khi thi, chẳng hạn CET-4/CET-6 ở Trung Quốc hoặc các kỳ thi du học như TOEFL, SAT, GRE, GMAT, LSAT. Cảm giác trực tiếp của đa số là đọc quá chậm, không đủ giờ. Thi cử chẳng được ai thích, nhưng điểm tốt thường là tấm vé để phát triển nên vẫn phải cố gắng. Trong công việc, tiếp nhận thông tin cũng rất quan trọng; đọc hiểu chưa đủ nhanh sẽ hạn chế đáng kể năng lực, vì tốc độ tìm, lọc và chọn thông tin, cũng như lượng và chất thông tin thu được, đều bị ảnh hưởng ở những mức khác nhau.
 
-现实生活中，没有人永远只用以上四种输入方式中的某一种 —— 无论是在读母语的时候，还是在读外语的时候；相反，大家都是在不自觉地根据需要选择输入方式。阅读内容对阅读者来说相对简单（即，阅读者的理解能力在这方面相对很强）的时候，更多的情况下都是采取 “扫读” 的方式；而内容难度高一点的时候，就会采用 “默读” 的方式；如果内容难度相对较高，那么就会自然地采取 “唇读” 的方式 —— 因为这样可以把速度放慢，以便有更多时间思考消化。所以说，“扫读” 也好， “默读”、“唇读” 也罢，都只是输入方式，且是各有用处的输入方式，根本不是什么恶习。如果学生相信 “唇读” 和 “默读” 都是恶习的话，他们实际上已经相当于 “三脚猫被砍掉了两条腿” —— 换句话讲，“雪上加霜”。
+Để khắc phục giới hạn tốc độ đọc, mọi người, cả giáo viên lẫn học sinh, đưa ra đủ cách giải quyết và lời khuyên, đồng thời định nghĩa nhiều “thói xấu”, chẳng hạn đọc mấp máy môi, dò theo bằng ngón tay, đọc lại, đọc rồi dịch. Khi gặp khó, nhiều học sinh cũng dễ vội tin bất kỳ cách chữa nào, rồi tin những kiểu đọc ấy thực sự là thói xấu. Theo tác giả, dù một điều vô lý đến đâu, chỉ cần có người nói như đinh đóng cột thì vẫn có rất nhiều người tin mà không suy xét. Những ví dụ như thế chẳng phải ngày nào cũng gặp sao?
 
-对于任何人都一样：阅读内容难度与阅读理解速度成反比，即，正在阅读的内容难度越高，阅读者的理解速度越低。而我们正在使用的输入手段（“扫读”、“默读”、与 “唇读”）必然会配合理解速度；于是，一旦阅读者开始使用 “唇读” 的时候，就说明此时正在阅读的内容难度已经达到一定程度，而在这样的难度之下，阅读者的 “理解速度” 已经小于等于 “唇读” 速度 —— 如果理解速度再差一些的话，阅读者还可能需要 “反复阅读” 若干次，甚至要返回之前的某一点（前一句、前一段、甚至前一页）才可能找到能让他迷途知返的线索。
+Tác giả cho rằng về cơ bản những lời khuyên “đọc nhanh” ấy chỉ xử lý phần ngọn, vì chúng chỉ giải quyết tốc độ đưa thông tin vào, không phải tốc độ hiểu sau đó. Thông tin vào nhanh đến đâu mà hiểu không kịp thì có ích gì? Đôi lúc tôi không hiểu vì sao nhiều người rõ ràng muốn tăng “tốc độ đọc hiểu”, nhưng thực tế chỉ quan tâm “tốc độ” và bỏ hẳn tầm quan trọng của “hiểu”. Có lẽ vì thói quen nhảy qua, đọc lướt nên vô tình nhảy luôn chữ “hiểu”, chẳng nhìn thấy nó chăng? Đây là một ví dụ tốt về lời khuyên thiếu chặt chẽ, dù xuất phát từ ý tốt, cuối cùng đem lại hậu quả xấu, theo tác giả.
 
-而文字本身就是有声音的，只因为大多数人既不是聋子也不是哑巴。于是在理解文字的时候是不可能回避声音的。不妨自我审视一下自己的所谓 “扫读” 过程，就会发现脑子里的那个声音其实一直存在。本质上来看，“扫读” 的时候那个声音之所以有时 “断断续续”，其实只不过是因为在阅读的过程中 “跳” 过了一些 “即便不全读也能正确推测到的内容”；而那个声音只在 “读” 那些 “必须读到才不至于影响理解” 的内容 —— 也可能是句子、也可能是只言片语。再进一步，一个人但凡正常，那么他顶多可以刻意回避 “唇读”，但根本无法回避 “默读”。
+Chỉ nhìn bề ngoài mà chưa đi sâu vào bản chất là gốc rễ của mọi vấn đề không được giải quyết. Theo tác giả, nút thắt của tốc độ đọc hiểu nằm ở tốc độ hiểu, tuyệt đối không phải tốc độ tiếp nhận.
 
-大多数英语初学者在阅读一定难度的文本之时，他们的 “理解速度” 甚至赶不上 “朗读速度”。其实，类似 TOEFL 这种语言能力测试，应试者只需要做到 “理解速度” 与 “朗读速度” 相当，那么在考场上的时间就相当富裕了（而 SAT、GRE、GMAT 这几种考试对理解速度的要求相对来看就高出许多）。既然朗读训练能够提高文字理解能力，那么，朗读是提高阅读理解速度的有效训练手段 —— 尽管从感觉上来看并不那么直观。
+Ít nhất có bốn cách tiếp nhận thường gặp:
 
-## 4. 不必专门练习听力，朗读就够了
+* Đọc lướt: chỉ dùng mắt nhìn nhanh văn bản. Theo tác giả, về bản chất tất yếu phải đánh đổi bằng việc bỏ sót một số thông tin.
+* Đọc thầm: mắt nhìn văn bản, trong đầu có giọng “nói” những chữ ấy, nhưng không phát tiếng thật.
+* Đọc mấp máy môi: mắt nhìn văn bản, môi cử động “nói” ra những chữ ấy.
+* Đọc thành tiếng: nói lớn những chữ đang đọc.
 
-大量的朗读训练，可以使学生不必专门练习 “听力”。某种意义上，很多学生花费时间去专门练习听力其实非常荒谬。不聋不哑的正常人是没必要专门训练什么听力的，事实上也没办法专门练 —— 大家的耳朵构造是相同的，怎么练耳廓也不会增大，耳膜也不会变得更薄……
+Trong đời sống, theo tác giả, không ai mãi chỉ dùng một trong bốn cách trên, dù đọc tiếng mẹ đẻ hay ngoại ngữ. Ngược lại, mọi người vô thức chọn cách phù hợp nhu cầu. Khi nội dung tương đối dễ với người đọc, tức khả năng hiểu trong lĩnh vực ấy khá mạnh, họ thường đọc lướt. Khó hơn một chút thì đọc thầm; tương đối khó hơn nữa thì tự nhiên mấp máy môi, vì cách này làm chậm lại để có thêm thời gian suy nghĩ và tiêu hóa. Vì thế, đọc lướt, đọc thầm hay mấp máy môi đều chỉ là cách tiếp nhận, mỗi cách có ích riêng, hoàn toàn không phải thói xấu. Nếu học sinh tin mấp máy môi và đọc thầm đều xấu, thì tác giả ví họ như “mèo ba chân lại bị chặt mất hai chân”, nói cách khác là khó khăn chồng chất.
 
-其实道理很简单，只要说得出，就能听得懂 —— 不管是哪一种语言。所以，只需要练说，而没必要专门练听。很多人所谓的 “听力不好” 其实是说得不好造成的，然而，他们舌本求末，就是不说，而后专门练听，这不是荒唐是什么？事实上，哪怕说得不好，也一样能够听懂。举例来说，我国有很多地区的人普通话说得并不标准，讲话掺杂着浓重的本地口音，甚至使用大量的本地特有词汇，但是，你遇到过他们之中的哪一个向你抱怨说中央电视台的新闻联播听不懂么？
+Theo tác giả, với bất kỳ ai cũng vậy: độ khó văn bản tỷ lệ nghịch với tốc độ đọc hiểu. Nội dung càng khó, hiểu càng chậm. Cách tiếp nhận đang dùng, đọc lướt, đọc thầm hay mấp máy môi, tất yếu phối hợp với tốc độ hiểu. Vì vậy, khi bắt đầu mấp máy môi, có nghĩa nội dung đã khó đến mức tốc độ hiểu nhỏ hơn hoặc bằng tốc độ đọc mấp máy môi. Nếu khả năng hiểu còn kém hơn nữa, có thể phải đọc nhiều lần, thậm chí quay lại câu trước, đoạn trước hoặc trang trước mới tìm thấy manh mối để thoát khỏi chỗ lạc hướng.
 
-这一点上体系外的培训机构显得更加荒唐，它们往往为学生配备专门的 “听力” 老师。作为商业机构，这种做法一点都不奇怪，很容易理解 —— 投其所好就有钱赚。可事实上那完全是在浪费学生时间，当然，浪费掉的还有学生的金钱 —— 可从另外一个角度上来看同样也是学生自愿浪费时间和金钱，完全是周瑜打黄盖。在这些培训机构里，我们从来看不到哪一个听力老师主张学生通过练习说而提高所谓的 “听力” —— 因为如果那么做的话，岂不是在抢口语老师的饭碗么？
+Theo lập luận của tác giả, chữ viết tự nó có âm thanh vì phần lớn mọi người không điếc và không câm, nên khi hiểu chữ không thể tránh âm thanh. Thử xem lại quá trình đọc lướt của mình, bạn sẽ thấy giọng nói trong đầu thực ra luôn tồn tại. Khi đọc lướt, giọng ấy đôi lúc ngắt quãng chỉ vì đã nhảy qua những nội dung dù không đọc hết vẫn đoán đúng được. Nó chỉ “đọc” những phần buộc phải đọc để không ảnh hưởng việc hiểu, có thể là cả câu hoặc vài chữ rời. Tác giả còn khẳng định một người hễ “bình thường” thì cùng lắm chỉ có thể cố ý tránh mấp máy môi, hoàn toàn không thể tránh đọc thầm có giọng trong đầu.
 
-很多 “听力” 老师鼓吹甚至神化 “听写” 训练的好处 —— 尽管他们并非有意欺骗，事实上他们可能真的很相信自己的方法是最有效的。但是，听写训练几乎是最浪费时间最无效果的所谓方法了。经常遇到学生这样的提问：“老师，我已经听写三个月了，怎么没有提高呢？” 这样的时候我就很迷惑，心里想：“你都已经用三个月时间完美地证明这个方法无效了，怎么还来问我它为什么无效？”
+> **Ghi chú biên tập: không lấy một trải nghiệm đọc làm chuẩn cho mọi người.** Các định nghĩa trên là cách tác giả phân nhóm để lập luận. Đọc không nhất thiết luôn có một giọng nội tâm giống nhau ở mọi người; [nghiên cứu của Nedergaard và Lupyan năm 2024](https://journals.sagepub.com/doi/abs/10.1177/09567976241243004) so sánh các nhóm tự báo cáo mức lời nói nội tâm thấp và cao, không xác lập một kiểu trải nghiệm bắt buộc. Người Điếc vẫn có ngôn ngữ; [NIDCD mô tả ASL là ngôn ngữ tự nhiên đầy đủ](https://www.nidcd.nih.gov/health/american-sign-language). Khả năng đọc và hiểu không được phân loại thành “bình thường” hay không dựa trên việc có nghe hoặc nói được. Mấp máy môi, đọc lại hoặc đọc lướt cần được xét theo mục tiêu cụ thể, không tự động là thói xấu, nhưng cũng không có một thang bắt buộc mà mọi người đều đi qua khi độ khó tăng. Hiểu là quan trọng; điều đó không loại trừ vai trò của nhận diện từ, độ trôi chảy và cách phân bổ chú ý.
 
-英语教学领域中，荒唐的 “方法” 要比医学领域中被吹得神乎其神的 “灵丹妙药” 多得多。因为现代医学领域中起码还有个双盲测试的方法来判定一种药物是否真的有效，可是英语教学领域中，很难运用双盲测试（或者类似的其它什么方法）来做有效性判断。然而，关于 “听写” 训练为什么无效，其实只需要用两句话（尽管可能不雅）就可以解释清楚：1) 听不懂写个屁嘛！2) 听得懂写个屁嘛！这么简单的事实，根本不用 “争议”。
+Theo tác giả, khi đọc văn bản có độ khó nhất định, tốc độ hiểu của phần lớn người mới học tiếng Anh còn không theo kịp tốc độ đọc thành tiếng. Với bài kiểm tra năng lực ngôn ngữ như TOEFL, ông cho rằng chỉ cần tốc độ hiểu bằng tốc độ đọc thành tiếng là thời gian trong phòng thi đã rất dư dả. SAT, GRE, GMAT đòi hỏi tốc độ hiểu cao hơn nhiều, theo so sánh của ông. Vì luyện đọc thành tiếng nâng cao khả năng hiểu văn bản, nó cũng là cách hiệu quả để tăng tốc độ đọc hiểu, dù trực giác có thể không thấy ngay.
 
-事实上，Listening Comprehension 和 Reading Comprehension 一样，重点更在于 Comprehension，而非仅仅在于 Listening 或者 Reading。用耳朵听进来的东西，最终要理解了才可以，否则就没有意义。而所谓的 “练听力” 本质上来看是治标不治本的手段。
+> **Ghi chú biên tập cho người Việt:** Các nhận định về thời gian đủ làm bài và so sánh kỳ thi là kinh nghiệm của tác giả, không phải bảo đảm điểm số hoặc thời lượng thi hiện tại. Khi luyện, hãy đo cả mức hiểu và thời gian trên đoạn phù hợp, rồi tự tóm tắt ý, kiểm tra chi tiết và xem chỗ nào cần đọc lại. Không đặt mục tiêu chỉ đọc nhanh hơn bằng mọi giá.
 
-## 5. 朗读训练可以提高语言文字记忆能力
+## 4. Không cần luyện nghe riêng, đọc thành tiếng là đủ
 
-朗读训练会不知不觉地提高我们的语言文字记忆力。我们记忆人脸、记忆歌曲曲调、或者记忆文章段落的时候所使用的方法模式都是各不相同的。因为我们不可能一辈子只反复朗读同一个句子，或者同一篇文章，也因此我们必将遇到各种各样的行文模式、韵律和组合。而一定量的重复必然产生深刻记忆，于是，在大量的朗读训练过程中，会自然而然地调用我们各种可能用得到的记忆手段，比如模式的、声音的、文字的等等。
+> **Ghi chú biên tập trước lập luận của nguyên tác:** Đây là quan điểm của tác giả, không phải kết luận rằng mọi người học tiếng Anh nên bỏ luyện nghe. Các cách gọi “bình thường”, “điếc”, “câm” trong đoạn sau được giữ để phản ánh cách lập luận của nguồn, không dùng để đánh giá giá trị hoặc năng lực của người có khuyết tật. Luyện nghe hiểu là luyện xử lý và hiểu dòng lời nói, không phải làm thay đổi kích thước tai; phần đính chính và cách áp dụng nằm cuối mục.
 
-学习任何一门外语，我们最终都要能够做到用那一门语言自如地记忆篇章、转述大意。而这些都需要一个基本的能力，记忆力。学英语的时候，那就是英文记忆力。我在面试英文教师的时候，基本上只要求他们做一件事：随便背诵一段曾经熟读的篇章。换你是我，很快就会发现这么简单的一个要求会迅速地过滤掉大多数应聘者 ——大多数人竟然背不出任何 100 词以上的篇章。这一点基本的英文记忆能力都没有，怎么可能自如地运用英文呢？
+Theo tác giả, luyện đọc thành tiếng nhiều có thể khiến học sinh không cần luyện “nghe” riêng. Ở một nghĩa nào đó, nhiều học sinh dành thời gian luyện nghe riêng thực ra rất vô lý. Ông cho rằng người “bình thường” không điếc, không câm thì không cần luyện nghe riêng, thực tế cũng không có cách luyện riêng: cấu tạo tai của mọi người giống nhau, luyện thế nào vành tai cũng không lớn lên, màng nhĩ cũng không mỏng đi.
 
-多年的特殊工作经验，使我变成了 “考试机器”。很多人惊讶于我做阅读题的速度。过去参加 TOEFL 考试的时候，要求 55 分钟之内做完的题目我们可以在大约 25 分钟内做完。为什么呢？事实上，我们的阅读速度并不快，只不过，看一遍就能看懂，并且大致都记得住。于是做题的时候就会很快。一道题拿过来，看到 A 选项，就知道这个肯定不对，因为明显跟刚才看到的恰恰相反；再看 B 选项，马上就知道不能选，因为刚才读过的文章中没提到这个；再看 C 选项，就是它了，看起来只不过是原文的一句同意改写而已；这时候 D 选项甚至不用看了，因为这是四选一题目，已经有个正确答案，那剩下的必然是错的……
+Lý lẽ thực ra đơn giản, theo tác giả: chỉ cần nói được thì nghe hiểu được, bất kể ngôn ngữ nào. Vì thế chỉ cần luyện nói, không cần luyện nghe riêng. Điều nhiều người gọi là “nghe kém” thực ra do nói kém, nhưng họ bỏ gốc theo ngọn, cứ không nói rồi luyện nghe riêng; không vô lý thì là gì? Thực ra, dù nói chưa tốt vẫn hiểu được. Chẳng hạn ở nhiều vùng Trung Quốc, người dân nói tiếng Trung phổ thông chưa chuẩn, pha giọng địa phương rất đậm, thậm chí dùng nhiều từ chỉ có ở địa phương. Nhưng bạn từng gặp ai trong số họ than rằng không hiểu bản tin thời sự của Đài Truyền hình Trung ương Trung Quốc chưa?
 
-让我来描述一下为什么很多考生会觉得时间怎么都不够。事实上他们读得并不慢，只不过，读完了并不全懂，更谈不上记得住。等做题的时候，看到 A 选项，心想，刚才我好像看到过这个的，可是在哪儿呢？于是回到文章中去找，找啊找，文章又扫了一遍，可是竟然没有找到！于是就慌了 …… 事实上，他们的阅读速度很快，但就是无法做到完全理解，更谈不上有所记忆，于是，文章反复读了很多遍，竟然根本无从判断正确答案是哪一个。
+Theo tác giả, các cơ sở đào tạo ngoài hệ thống chính quy còn vô lý hơn ở điểm này: họ thường bố trí riêng giáo viên “nghe”. Với một cơ sở kinh doanh, điều ấy chẳng lạ, rất dễ hiểu: chiều đúng điều khách thích thì có tiền. Nhưng thực tế, ông cho rằng như vậy hoàn toàn lãng phí thời gian và đương nhiên cả tiền của học sinh. Nhìn ở góc khác, học sinh cũng tự nguyện lãng phí, đúng kiểu “Chu Du đánh Hoàng Cái”, một bên muốn đánh, một bên tự nguyện chịu đòn. Trong những cơ sở ấy, theo tác giả, ta chưa bao giờ thấy giáo viên nghe nào chủ trương giúp học sinh cải thiện nghe bằng luyện nói, vì làm vậy chẳng phải giành mất việc của giáo viên nói sao?
 
-TOEFL 考试是目前最权威的英语水平测试之一。现在的托福考试包括听说读写四个部分，无论是哪一个部分，都需要考试者拥有足够的英语记忆能力才能够获得高分。很多人托福听力考试成绩差的原因并不是因为他们 “没有听懂”，而是因为他们 “其实听懂了，但等听到题目的时候，已经想不起来刚才听懂的内容了”。记忆力对阅读成绩的影响刚才已经说过，那我们再来看看记忆力对说和写两个部分的影响。无论是说，还是写，这两个部分的考题中都有所谓的 “综合测试部分”，即，在听或读（或先听后读，或先读后听）之后根据刚刚输入的内容再输出，即，说或写。所谓的 “综合测试” 考核的一项重要能力是 “准确、全面的细节复述能力”，没有基本的记忆力，复述从何谈起？
+Nhiều giáo viên “nghe” ca ngợi, thậm chí thần thánh hóa lợi ích của nghe chép chính tả. Họ không nhất thiết cố lừa; thực ra có thể thật lòng tin phương pháp mình hiệu quả nhất. Nhưng theo tác giả, nghe chép gần như là phương pháp tốn thời gian nhất và ít hiệu quả nhất. Tôi thường gặp học sinh hỏi: “Thầy ơi, em nghe chép ba tháng rồi, sao không tiến bộ?”. Lúc ấy tôi rất khó hiểu, nghĩ thầm: “Em đã dùng trọn ba tháng để chứng minh phương pháp không hiệu quả, sao còn hỏi tôi vì sao nó không hiệu quả?”.
 
-如果参加的是 GMAT 之类的考试（这些考试本质上来看不是英语考试，而是逻辑考试，只不过用英语考而已），记忆力差的考生就更惨了。那些题目都有五个选项（而不是四个），每个选项都可能是长达三四行的复杂句，然后题目可能是这么问的：“请问以下 A、B、C、D、E 五个选项中，哪一个选项的陈述如果成立的话，那么文章中的观点会遭到严重削弱？” 没有起码的记忆力，这种题目如何才能做对呢？——想都别想。
+Theo tác giả, những “phương pháp” vô lý trong dạy tiếng Anh còn nhiều hơn “thuốc tiên” được thổi phồng trong y học. Y học hiện đại ít nhất còn có thử nghiệm mù đôi để xác định một thuốc có thực sự hiệu quả không; trong dạy tiếng Anh, rất khó dùng mù đôi hoặc một phương pháp tương tự để đánh giá hiệu quả. Tuy nhiên, vì sao nghe chép vô ích thì chỉ cần hai câu, dù có thể hơi thô, là giải thích được: 1) Không hiểu thì viết làm đếch gì! 2) Hiểu rồi thì viết làm đếch gì! Tác giả cho rằng sự thật đơn giản như thế, căn bản không cần “tranh luận”.
 
-我们很难记忆无意义、无关联的信息。比如，背下圆周率小数点后面的 100 位以上很难，相对来看很可能要比背一篇 200 字的文章难多了。一个人的文字记忆能力，很大程度上依赖他的文字理解能力。朗读的过程中，除了文字理解能力会潜移默化地提高之外，文字记忆能力也会大幅度提高。我们都有这样的经历，同一文章反复朗读很多遍，我们就会自然而然地把它背下来。这是因为 “读书千遍其义自现” —— 理解了之后就很容易记忆。而大量朗读不同的文章，实际上会有很多类似的 “模式” 在反复重复，于是，我们也相当于在不停地往我们的记忆库里潜移默化地保存信息。
+Thực tế, *Listening Comprehension* giống *Reading Comprehension*: trọng tâm nằm nhiều hơn ở *Comprehension*, tức hiểu, chứ không chỉ *Listening* hoặc *Reading*. Thông tin đi vào qua tai cuối cùng phải được hiểu, nếu không thì vô nghĩa. Vì vậy, tác giả kết luận cái gọi là “luyện nghe” về bản chất chỉ xử lý phần ngọn.
 
-反过来，一个人的记忆力同样也会影响他的理解能力。之前读过的信息如果记不住的话，就无法与后继输入的信息联系起来。信息之间无法建立足够的联系，那么就很难被理解。所以，记忆力的提高促进理解力的加强，同时，理解力的发展也会促进记忆力的发展。记忆力就是这样：记住的东西越多，记得住的东西就越多。一个人记忆力的发展空间取决于他现有的记忆力。而理解力也是如此，已经理解的东西越多，能够进一步理解的东西就越多，一个人的理解力的发展空间同样取决于他现有的理解力。
+> **Ghi chú biên tập: hiểu cần cả nhận diện âm và xử lý ý nghĩa.** Người học có thể nói được một câu quen mà vẫn khó nghe người khác nói câu ấy ở tốc độ, giọng hoặc ngữ cảnh khác. Nghe hiểu gồm nhận ra từ trong dòng âm, chọn thông tin, suy nghĩa và dùng ngữ cảnh; luyện những kỹ năng ấy không nhằm làm tai lớn hơn. Đọc thành tiếng có thể hỗ trợ, không thay thế mọi luyện nghe. [British Council trình bày các kỹ năng nghe](https://www.britishcouncil.org/voices-magazine/five-essential-listening-skills-english-learners), còn [hướng dẫn dùng nghe chép](https://www.teachingenglish.org.uk/professional-development/teachers/knowing-subject/using-dictation) nêu cách đối chiếu văn bản và nhận ra đặc điểm lời nói liền mạch. Điều này không có nghĩa cứ nghe chép lâu là tiến bộ, mà cũng không thể kết luận mọi nghe chép vô ích từ một trường hợp không tiến bộ.
+>
+> Với người Việt, có thể nghe một đoạn để nắm ý, nghe lại phần chưa rõ, đối chiếu transcript, xác định từ hoặc âm đã bỏ sót rồi nói theo. Nếu dùng nghe chép, chọn mục tiêu và đoạn ngắn phù hợp, sửa lỗi sau khi đối chiếu, không chỉ đếm thời gian chép. Giai thoại Chu Du và Hoàng Cái là phép ví của nguồn về sự tự nguyện, không phải bằng chứng mọi giáo viên nghe hoặc lớp học đều lãng phí. Việc khó tổ chức mù đôi trong giáo dục cũng không có nghĩa không thể nghiên cứu có đối chứng hoặc đánh giá kết quả học tập.
 
-## 6. 朗读训练能够提高表达能力
+## 5. Luyện đọc thành tiếng có thể nâng cao trí nhớ ngôn ngữ
 
-朗读训练会提高一个人的表达能力，无论是说还是写。大量的朗读会使你不知不觉记住大量的表达法。越是常用的、越是必要的表达法，在各种文章中重复出现的频率越高，而通过大量地重复，这些表达法会慢慢刻在脑海中。按照心理学家的说法就是这些信息会慢慢从短期记忆区域移动到长期记忆区域，即，这些表达法会渐渐成为你的 “内嵌”(built-in)表达手段。
+Theo tác giả, luyện đọc thành tiếng sẽ âm thầm cải thiện trí nhớ ngôn ngữ của chúng ta. Khi nhớ khuôn mặt, giai điệu hoặc một đoạn văn, ta dùng những cách và mẫu khác nhau. Không thể cả đời chỉ đọc đi đọc lại một câu hoặc một bài, nên tất yếu sẽ gặp nhiều kiểu hành văn, nhịp điệu và tổ hợp. Một lượng lặp lại nhất định tất yếu tạo ký ức sâu, theo ông; vì thế trong rất nhiều lượt đọc, ta tự nhiên huy động mọi cách ghi nhớ có thể dùng, chẳng hạn theo mẫu, âm thanh và chữ viết.
 
-学习外语的时候，语法总是最大难点之一。英语中，有些名词单复数形式相同，而另外一些名词有特殊的复数形式；有些动词可能是及物动词也可能是非及物动词，如若它被当作非及物动词使用的时候，那么就要搭配一个恰当的介词；有些动词后面只能接 “ing” 形式，而另外一些动词后面只能接 “to do” 形式 …… 这些规则尽管在语法书中都被整理的一清二楚，但想通过阅读语法书记住这些实在是太难 —— 要不然怎么会有那么多人反复参加英语考试之后依然得不了满分，依然反复出错？而如若朗读过那些语法考点的类似例句，那么做题的时候就会感觉 “正确答案顺嘴”，“错误答案拗口”…… 而在平时说或者写的时候，就会自然而然地使用正确的方式，而非在自己都并不知晓的情况下 “发明了一种新的英语”。
+Học bất cứ ngoại ngữ nào, cuối cùng ta đều cần có thể dùng nó để ghi nhớ văn bản và thuật lại ý chính một cách tự nhiên. Những việc ấy cần một năng lực cơ bản: trí nhớ. Khi học tiếng Anh, đó là khả năng ghi nhớ bằng tiếng Anh. Khi phỏng vấn giáo viên tiếng Anh, tôi cơ bản chỉ yêu cầu một việc: đọc thuộc bất kỳ đoạn nào từng đọc quen. Nếu ở vị trí của tôi, bạn sẽ nhanh chóng thấy yêu cầu đơn giản ấy loại được phần lớn ứng viên. Đa số lại không thể đọc thuộc một đoạn nào dài từ 100 từ trở lên. Theo tác giả, không có ngay cả khả năng ghi nhớ tiếng Anh cơ bản ấy thì làm sao có thể dùng tiếng Anh tự nhiên?
 
-朗读训练还会在不知不觉中培养练习者的语言文字韵律感。这方面，即便在我们母语的正规语文教育体系中，都强调得太少。我们所拥有的对母语文字韵律的了解，几乎全部不是从学校里刻意学来的（因为学校里很少刻意去教），而是在朗读中不知不觉习得的。我们在成长过程中，或主动或被动地朗读过许多的课文（通常文字确实比较隽永），许多的诗歌（现代诗、唐诗、宋词等等），很多人就算没有朗读过太多的文章、诗歌，但起码会唱许多流行歌曲（某种意义上，大多数流行歌曲的歌词为了能够朗朗上口，也相当追求韵律），所以，人们在使用母语的时候，好像 “不用教、不用学、不用练” 就 “自然地” 拥有一定的语言文字韵律感。
+Nhiều năm kinh nghiệm công việc đặc thù đã biến tôi thành một “cỗ máy thi cử”. Nhiều người ngạc nhiên trước tốc độ làm bài đọc của tôi. Trước đây khi thi TOEFL, phần yêu cầu hoàn thành trong 55 phút, chúng tôi có thể làm xong trong khoảng 25 phút. Tại sao? Thực ra chúng tôi đọc không nhanh; chỉ là đọc một lần đã hiểu và nhớ được đại thể. Vì vậy làm câu hỏi rất nhanh. Cầm một câu lên, nhìn A là biết chắc sai vì rõ ràng ngược với nội dung vừa đọc; nhìn B là biết ngay không chọn được vì bài không nhắc đến; nhìn C, chính nó, có vẻ chỉ là diễn đạt lại một câu của bài bằng cách khác. Khi ấy thậm chí không cần nhìn D, vì đây là câu chọn một trong bốn, đã có một đáp án đúng thì phần còn lại tất yếu sai.
 
-如果你在出版社做过哪怕一两天文字编辑就知道有很多人写出来的文字根本没法读，全然缺乏文字的哪怕最基本的韵律感，而作者显然并不知道自己的文字究竟有多么地拗口 —— 能给出版社投稿的作者往往都自认为自己的文字写得相当不错 …… 这就是母语朗读训练太少而造成的恶果。而朗读训练会使一个人不知不觉避免这种尴尬，俗话说，“熟读唐诗三百首，不会作诗也会吟”，某种意义上说的也是这个道理。
+Để tôi mô tả vì sao nhiều thí sinh thấy bao nhiêu thời gian cũng không đủ. Thực ra họ đọc không chậm, chỉ là đọc xong chưa hiểu hết, càng chưa nói đến nhớ. Tới lúc làm câu hỏi, nhìn A lại nghĩ vừa thấy ý này ở đâu đó, nhưng ở đâu? Thế là quay lại tìm, tìm mãi, quét lại cả bài mà vẫn không thấy, rồi hoảng. Tốc độ đọc thực ra nhanh, nhưng không hiểu đầy đủ, càng không nhớ được, nên dù đọc lại bài rất nhiều lần cũng chẳng có căn cứ xác định đáp án.
 
-## 7. 朗读训练可以提高语言文字模式识别能力
+Theo tác giả, TOEFL là một trong những kỳ thi đánh giá tiếng Anh có uy tín nhất tại thời điểm viết. Kỳ thi khi ấy gồm nghe, nói, đọc, viết; phần nào cũng cần trí nhớ tiếng Anh đủ tốt mới đạt điểm cao. Nhiều người nghe TOEFL điểm kém không phải vì không hiểu, mà vì thực ra hiểu nhưng tới lúc nghe câu hỏi đã không nhớ nội dung vừa hiểu. Ảnh hưởng của trí nhớ với bài đọc đã nói ở trên; giờ xem với nói và viết. Theo cấu trúc tác giả mô tả, cả hai phần đều có nhiệm vụ “tích hợp”: sau khi nghe hoặc đọc, hoặc nghe rồi đọc, hoặc đọc rồi nghe, thí sinh nói hoặc viết dựa vào thông tin vừa tiếp nhận. Một năng lực quan trọng được kiểm tra là thuật lại chi tiết chính xác và đầy đủ. Không có trí nhớ cơ bản thì làm sao thuật lại?
 
-朗读训练会提高一个人的语言文字模式识别能力。正常人在各方面都有很强的模式识别（pattern recognition）能力。比如，能在几十张脸中迅速识别出哪些是陌生的哪些是熟悉的 —— 哪怕看到的并不是百分之百清楚、甚至可能是多少有点扭曲的图像。心理学家们早就注意到英语使用者可以瞬间分辨出 “indicate” 和 “intricate” 这两个词，尽管这两个词只有一两个字母不相同（第一个单词由八个字母组成，第二个单词由九个字母组成）—— 能够做到这一点就是因为他们在不由自主地运用他们的模式识别能力。
+Nếu thi kiểu GMAT, mà theo tác giả về bản chất không phải thi tiếng Anh mà là thi logic bằng tiếng Anh, người có trí nhớ kém còn khổ hơn. Các câu ấy có năm đáp án thay vì bốn; mỗi đáp án có thể là một câu phức dài ba hoặc bốn dòng. Câu hỏi có thể là: “Trong năm phát biểu A, B, C, D, E, phát biểu nào nếu đúng sẽ làm suy yếu nghiêm trọng quan điểm trong bài?”. Không có trí nhớ tối thiểu thì làm sao làm đúng loại câu này? Theo tác giả, đừng nghĩ tới.
 
-当我们使用语言的时候，无论是听说读写，都不是一个字一个字单个输入而后再组合而后再进行处理的；实际上，我们往往是 “整块处理”，即，只要能用模式识别就用模式识别。
+Ta rất khó nhớ thông tin vô nghĩa, không liên quan. Chẳng hạn thuộc từ 100 chữ số trở lên sau dấu thập phân của số pi rất khó, rất có thể khó hơn nhiều so với thuộc một bài 200 chữ. Khả năng nhớ văn bản phụ thuộc đáng kể vào khả năng hiểu văn bản. Theo tác giả, trong khi đọc thành tiếng, không chỉ khả năng hiểu âm thầm tăng mà khả năng nhớ cũng tăng mạnh. Ta đều có trải nghiệm đọc một bài nhiều lần rồi tự nhiên thuộc. Đó là vì “đọc sách nghìn lần, nghĩa tự hiện ra”: hiểu rồi thì dễ nhớ. Đọc thành tiếng nhiều bài khác nhau thực ra lặp lại nhiều mẫu tương tự, nên ta cũng đang liên tục, âm thầm lưu thông tin vào kho nhớ.
 
-为什么我们听到 [le – m – gəu] 能明白那是在说 [let him gəu]？那不是我们一个词一个词识别（let + him + go）之后才进行理解而后得到结论的。那是日常生活中我们自己就说过很多遍，也听过很多遍，所以 “Let him go” 早成为一整个 “模块”，并且，在听到这个音流的过程中，还有可供辅助理解的场景存在，所以才显得我们瞬间已经领会。
+Ngược lại, trí nhớ cũng ảnh hưởng khả năng hiểu. Không nhớ thông tin đã đọc thì không nối được với thông tin tiếp theo. Không tạo đủ liên hệ giữa thông tin thì khó hiểu. Vì thế, theo tác giả, trí nhớ tăng giúp hiểu tốt hơn, và hiểu phát triển cũng giúp trí nhớ phát triển. Trí nhớ là như vậy: đã nhớ càng nhiều thì càng có thể nhớ thêm nhiều. Không gian phát triển trí nhớ của một người phụ thuộc trí nhớ hiện có. Khả năng hiểu cũng thế: đã hiểu càng nhiều thì càng có thể hiểu thêm; không gian phát triển của nó cũng phụ thuộc khả năng hiểu hiện tại.
 
-再比如，当我们说 “I've lost my key!”(“我把钥匙弄丢了！”)的时候，我们不是用这种这样处理的：
+> **Ghi chú biên tập: nhớ bài đã luyện và năng lực sử dụng ngôn ngữ.** Hiểu và ghi nhớ hỗ trợ nhau, nhưng thuộc nguyên văn một đoạn từ 100 từ trở lên không phải chuẩn chung để kết luận một người có thể dùng hoặc dạy tiếng Anh hay không. Nhớ tốt hơn một bài đã luyện cũng chưa chứng minh trí nhớ nói chung và mọi kỹ năng đều tăng. Khi học, có thể kiểm tra thêm khả năng diễn giải, tóm tắt, trả lời câu hỏi, suy luận và vận dụng vào tình huống mới; không chỉ thuộc chữ.
+>
+> Các mốc 55 phút, 25 phút, bốn hoặc năm đáp án và nhiệm vụ tích hợp là mô tả kỳ thi hoặc trải nghiệm ở thời điểm nguyên tác. Không dùng chúng như cấu trúc thi hiện hành; xem [ETS về nội dung TOEFL iBT](https://www.ets.org/toefl/test-takers/ibt/about/content.html). GMAT cũng không chỉ là bài đo trí nhớ hay logic theo nghĩa hẹp: [GMAC mô tả nội dung gồm định lượng, ngôn ngữ và phân tích dữ liệu](https://www.mba.com/exams/gmat-exam/about/exam-content). Lối loại đáp án của tác giả minh họa kinh nghiệm riêng; khi luyện, hãy kiểm tra bằng chứng trong bài và yêu cầu của câu hỏi, không mặc định không bao giờ cần đọc phương án cuối.
 
-* I（我……）
-* 've（“have” 要和 “I” 连起来，于是 have 就要缩略为 ‘'ve’…… 钥匙是刚刚丢的，所以应该用现在完成时……）
-* lost（“lose” 是个不规则动词…… “lose” 的过去式和过去分词都是 “lost”……
-* my（那个钥匙是我的，而不是别人的……）
-* key（我丢的是钥匙，不是别的……）
+## 6. Luyện đọc thành tiếng có thể nâng cao khả năng biểu đạt
 
-我们更可能是这样处理的：
+Theo tác giả, luyện đọc thành tiếng sẽ nâng cao khả năng biểu đạt, cả nói lẫn viết. Đọc nhiều khiến bạn vô thức nhớ nhiều cách diễn đạt. Cách diễn đạt càng thường dùng và cần thiết càng xuất hiện lặp lại nhiều trong các bài. Qua rất nhiều lần lặp, chúng dần khắc vào trí nhớ. Theo cách tác giả thuật lại lời các nhà tâm lý học, thông tin từ từ chuyển từ vùng trí nhớ ngắn hạn sang vùng trí nhớ dài hạn, khiến những cách diễn đạt ấy trở thành phương tiện biểu đạt “tích hợp sẵn” (*built-in*) của bạn.
 
-> *I've lost my*（刚发现钥匙不见了；之所以这里可能有停顿，是因为正在找钥匙……）**key**!
+Khi học ngoại ngữ, ngữ pháp luôn là một trong những phần khó nhất. Trong tiếng Anh, có danh từ cùng dạng số ít và số nhiều, có danh từ có dạng số nhiều đặc biệt; có động từ vừa dùng như ngoại động từ vừa dùng như nội động từ, mà theo tác giả, khi dùng như nội động từ thì phải đi kèm giới từ thích hợp; có động từ chỉ theo sau bằng dạng “ing”, có động từ chỉ theo sau bằng “to do”. Dù sách ngữ pháp sắp xếp các quy tắc rất rõ, muốn nhớ tất cả chỉ bằng đọc sách thực sự quá khó. Nếu không, sao nhiều người thi đi thi lại vẫn không được điểm tuyệt đối, vẫn liên tục mắc lỗi? Còn nếu đã đọc thành tiếng những câu ví dụ tương tự các điểm ngữ pháp ấy, lúc làm bài sẽ thấy đáp án đúng “thuận miệng”, đáp án sai “gượng miệng”. Theo tác giả, lúc nói và viết thường ngày ta cũng tự nhiên dùng đúng, thay vì không hay biết mình đã “phát minh một thứ tiếng Anh mới”.
 
-也就是说，“I've lost my” 被当作一个单元，而 “key” 是另外一个单元。日常生活中，“I've lost my...” 其实不知道已经说过多少遍，比如：
+Luyện đọc thành tiếng còn âm thầm tạo cảm nhận nhịp điệu ngôn ngữ. Ngay cả trong hệ thống giáo dục tiếng mẹ đẻ chính quy mà tác giả trải qua, mặt này cũng được nhấn mạnh quá ít. Hiểu biết về nhịp điệu văn bản tiếng mẹ đẻ của chúng ta gần như hoàn toàn không phải được học có chủ đích ở trường, vì trường ít dạy riêng, mà vô thức tiếp thu khi đọc thành tiếng. Lúc lớn lên, ta đã chủ động hoặc bị yêu cầu đọc nhiều bài khóa có lời văn thường khá sâu và bền, nhiều thơ như thơ hiện đại, thơ Đường, từ Tống. Nhiều người dù chưa đọc nhiều bài hay thơ, ít nhất vẫn hát được nhiều bài hát phổ biến. Ở một nghĩa nào đó, phần lớn lời ca cũng rất chú ý nhịp điệu để dễ hát. Vì vậy, khi dùng tiếng mẹ đẻ, dường như không cần dạy, học hay luyện mà ta vẫn tự nhiên có một mức cảm nhận nhịp điệu.
+
+Nếu từng làm biên tập văn bản ở nhà xuất bản dù chỉ một hoặc hai ngày, bạn sẽ biết nhiều người viết ra thứ văn không thể đọc nổi, hoàn toàn thiếu ngay cả nhịp điệu cơ bản. Tác giả của những bài ấy rõ ràng không biết lời văn mình gượng đến đâu, dù người gửi bài tới nhà xuất bản thường tự thấy mình viết khá tốt. Theo tác giả, đó là hậu quả xấu của việc luyện đọc thành tiếng bằng tiếng mẹ đẻ quá ít. Luyện đọc sẽ khiến người ta vô thức tránh sự lúng túng này. Câu “đọc thuộc ba trăm bài thơ Đường, không biết làm thơ cũng biết ngâm”, ở một nghĩa nào đó, cũng nói điều ấy.
+
+> **Ghi chú biên tập: kiểm tra mẫu ngữ pháp và bối cảnh.** Nội động từ không bắt buộc có giới từ đi kèm. Những câu như “Did you win?” và “We should leave now” vẫn đúng; xem [Cambridge về ngoại động từ và nội động từ](https://dictionary.cambridge.org/grammar/british-grammar/transitive-verbs). Cảm giác quen miệng hữu ích nhưng không bảo đảm mẫu đã học luôn đúng hoặc hợp ngữ cảnh; cần đối chiếu nghĩa và cách dùng. Mô tả thông tin “chuyển vùng” là cách giản lược của nguyên tác, không phải sơ đồ giải phẫu trí nhớ. Thơ Đường, từ Tống và nhận xét về nhà trường giữ bối cảnh tác giả ở Trung Quốc; người Việt có thể liên hệ trải nghiệm đọc thơ, văn và nghe lời ca của mình, nhưng không coi đó là bằng chứng mọi người có cùng con đường học nhịp điệu.
+
+## 7. Luyện đọc thành tiếng có thể nâng cao khả năng nhận diện mẫu ngôn ngữ
+
+Theo tác giả, luyện đọc thành tiếng sẽ tăng khả năng nhận diện mẫu ngôn ngữ. Người ông gọi là “bình thường” có khả năng nhận diện mẫu (*pattern recognition*) rất mạnh trong nhiều lĩnh vực. Chẳng hạn, có thể nhanh chóng phân biệt khuôn mặt lạ và quen giữa hàng chục khuôn mặt, dù hình không rõ hoàn toàn hoặc hơi méo. Các nhà tâm lý học từ lâu đã chú ý rằng người dùng tiếng Anh có thể phân biệt ngay “indicate” và “intricate”, dù chỉ khác một hoặc hai chữ cái. Từ đầu gồm tám chữ cái, từ sau gồm chín. Theo tác giả, làm được như vậy là vì họ vô thức sử dụng khả năng nhận diện mẫu.
+
+Khi dùng ngôn ngữ, dù nghe, nói, đọc hay viết, ta không đưa vào từng chữ riêng lẻ rồi mới ghép và xử lý. Theo tác giả, ta thường xử lý nguyên khối: hễ có thể dùng nhận diện mẫu thì dùng.
+
+Vì sao nghe [le – m – gəu] ta hiểu đó là [let him gəu]? Theo tác giả, không phải ta nhận diện từng từ, let + him + go, rồi hiểu và mới kết luận. Trong đời sống, bản thân đã nói và nghe rất nhiều lần, nên “Let him go” từ lâu đã thành một “khối”. Khi nghe dòng âm ấy lại có ngữ cảnh hỗ trợ, nên ta có vẻ lĩnh hội ngay lập tức.
+
+Ví dụ khác, khi nói “I've lost my key!”, nghĩa “Tôi làm mất chìa khóa rồi!”, chúng ta không xử lý như sau:
+
+* I: tôi...
+* 've: “have” phải nối với “I”, nên rút thành “'ve”; chìa khóa vừa mất, nên phải dùng hiện tại hoàn thành...
+* lost: “lose” là động từ bất quy tắc; quá khứ đơn và quá khứ phân từ đều là “lost”...
+* my: chìa khóa đó là của tôi, không phải của người khác...
+* key: thứ tôi mất là chìa khóa, không phải thứ khác...
+
+Nhiều khả năng ta xử lý như sau:
+
+> *I've lost my* (Vừa phát hiện không thấy chìa khóa; ở đây có thể ngừng vì đang tìm...) **key**!
+
+Nghĩa là “I've lost my” được xử lý như một đơn vị, còn “key” là một đơn vị khác. Trong đời sống, ta đã nói “I've lost my...” không biết bao nhiêu lần, chẳng hạn:
 
 * I've lost my **key**.
 * I've lost my **money**.
@@ -139,23 +164,27 @@ TOEFL 考试是目前最权威的英语水平测试之一。现在的托福考�
 * I've lost my **job**.
 * ...
 
-而我们其实也不知道听别人说过多少次类似的话：“I've lost my...”。所以，当我们听到别人说 “I've lost my...” 的时候，脑子里的反应是 “What did you lose?”，而不是：
+Ta cũng không biết đã nghe người khác nói “I've lost my...” bao nhiêu lần. Vì vậy, khi nghe ai nói như thế, phản ứng trong đầu là “What did you lose?”, không phải:
 
-* 听到 “I” 而后想，“你 …… 怎么了？”
-* 听到 “'ve” 而后想，“哦，你说的现在完成时的什么动作呢？还是你 ‘有’ 什么？”
-* 听到 “lost” 之后想，“哦，原来是丢东西了啊，这个不规则动词你居然用对了……”
-* 听到 “my” 之后想，“知道，你丢了你的什么东西啊，我还以为是把我的什么东西弄丢了呢……”
-* 而听到 “key” 之后想，“哦，原来是你刚刚把钥匙弄丢了啊！”
+* Nghe “I” rồi nghĩ: “Bạn... làm sao?”.
+* Nghe “'ve” rồi nghĩ: “À, bạn nói hành động gì ở hiện tại hoàn thành? Hay là bạn ‘có’ cái gì?”.
+* Nghe “lost” rồi nghĩ: “À, hóa ra mất đồ; bạn lại dùng đúng cả động từ bất quy tắc này...”.
+* Nghe “my” rồi nghĩ: “Biết rồi, bạn làm mất cái gì của bạn? Tôi còn tưởng bạn làm mất cái gì của tôi...”.
+* Nghe “key” rồi nghĩ: “À, hóa ra bạn vừa làm mất chìa khóa!”.
 
-(就算真的如此想，那想的速度也应该快到我们都不知道在这么想的地步。)
+Nếu thật sự nghĩ như vậy, tốc độ nghĩ cũng phải nhanh đến mức ta không biết mình đang nghĩ thế.
 
-以下的两个例子可以用来演示模式识别在语言应用中的重要性。
+Hai ví dụ tiếp theo có thể minh họa tầm quan trọng của nhận diện mẫu khi dùng ngôn ngữ.
 
-绝大多数中国人其实无法详细地解释出 “编” 和 “织” 这两个汉字的异同之处。某一个层面上，这两个字的意思是如此相同，乃至于拼起来 “编织” 还是那个意思。可是这两个字的用法上并不完全相同。我们可以说某个女孩子 “她编毛衣”，也可以说 “她织毛衣”；我们可能说某个男孩子 “他编故事”，但是我们却绝对不会说 “ 他织故事”！——换言之，哪怕做不到详细地解释出 “编” 和 “织” 这两个字的异同之处，但是却绝对不会用错。合理的解释是，母语使用者在过去曾经遇到过大量的 “编毛衣”、“织毛衣”、“编故事” 之类的组合，但是却从未遇到过 “织故事” 的组合，于是潜意识里就不存在这个 “模式”。
+Theo tác giả, tuyệt đại đa số người Trung Quốc thực ra không thể giải thích chi tiết điểm giống và khác giữa *biān* (đan/bện hoặc biên soạn, bịa ra tùy kết hợp) và *zhī* (dệt/đan). Ở một mức nào đó, nghĩa hai từ giống nhau đến mức ghép thành *biānzhī* (đan dệt) vẫn là nghĩa ấy. Nhưng cách dùng không hoàn toàn giống nhau. Có thể nói một cô gái “đan áo len” với cả *biān máoyī* hoặc *zhī máoyī*. Có thể nói một cậu bé “bịa chuyện”, *biān gùshi*, nhưng theo tác giả tuyệt nhiên không nói *zhī gùshi* (nghĩa từng phần là “đan/dệt chuyện”). Nói cách khác, dù không giải thích được chi tiết điểm giống và khác, họ tuyệt đối không dùng sai, theo khẳng định của ông. Lời giải thích hợp lý ông đưa ra là người bản ngữ từng gặp rất nhiều tổ hợp *biān máoyī*, *zhī máoyī*, *biān gùshi*, nhưng chưa từng gặp *zhī gùshi*, nên trong tiềm thức không có “mẫu” ấy.
 
-以英语为母语的人也是如此 —— 事实上所有人使用语言的时候都应该如此。大多数人（少数语言学教授除外）只能清楚地说出 “important” 与 “essential” 之间的区别是程度上的差异，即，“essential” 相当于 “very important”。“essential” 这个单词有个特征 —— 它所修饰的通常不是人 —— 就是大多数人说不出来的了。但是，以英语为母语的人可能会说 “He is an important teacher in my life.”，但轻易不会说 “He is an essential teacher in my life.” 以英语为第二语言的人却常常犯这样的 “错误”。
+Người nói tiếng Anh như tiếng mẹ đẻ cũng vậy; thực ra, theo tác giả, mọi người dùng ngôn ngữ đều phải như vậy. Phần lớn mọi người, trừ một số giáo sư ngôn ngữ học, chỉ có thể nói rõ khác biệt giữa “important” và “essential” là mức độ, tức “essential” tương đương “very important”. Nhưng đa số không nói ra được một đặc điểm mà tác giả gán cho “essential”: từ này thường không bổ nghĩa cho người. Theo ông, người bản ngữ có thể nói “He is an important teacher in my life.”, nhưng không dễ nói “He is an essential teacher in my life.”. Người học tiếng Anh như ngôn ngữ thứ hai lại thường mắc “lỗi” kiểu ấy.
 
-母语使用者知道关于自己母语的很多自己并不知道自己知道的知识 —— 往往被不知所以然的人称之为 “母语直觉”。而这样的知识的获得某种意义上只能靠 “大量应用” 以及 “日积月累”。而朗读对第二语言习得者来说，更可能只能在缺乏环境的情况下训练自己的语言模式识别能力。于是，朗读就几乎成了唯一可依赖的手段。反复朗读的过程中，很多 “模式” 就会不由自主地刻在脑子里，慢慢转化为自己都不知道自己知道的知识 —— 那种我们的英语老师常常闪烁其词的 “语感” 就自然而然地养成了。
+Người bản ngữ biết nhiều điều về tiếng mẹ đẻ mà chính họ không biết mình biết; người không hiểu nguyên nhân thường gọi đó là “trực giác tiếng mẹ đẻ”. Theo tác giả, ở một nghĩa nào đó, kiến thức như vậy chỉ có thể có được nhờ sử dụng nhiều và tích lũy lâu ngày. Còn người học ngôn ngữ thứ hai, khi thiếu môi trường, có lẽ chỉ còn cách luyện đọc thành tiếng để rèn khả năng nhận diện mẫu của mình, theo tác giả. Vì vậy, đọc thành tiếng gần như trở thành phương tiện duy nhất có thể dựa vào. Khi đọc nhiều lần, nhiều mẫu sẽ vô thức khắc vào đầu, dần thành kiến thức mà chính mình không biết đã biết. Thứ “cảm giác ngôn ngữ” mà giáo viên thường nói mơ hồ cứ thế tự nhiên hình thành.
 
-| [< 第三章: 语音](./chapter3.md) | [第五章: 词典 >](./chapter5.md) |
+> **Ghi chú biên tập: các ví dụ không phải luật cấm.** Đoạn độc thoại về “I've lost my key” minh họa cách tác giả hình dung xử lý từng từ, không phải quy tắc bắt buộc rút *have*: “I have lost my key” vẫn đúng. Phiên âm [le – m – gəu] là cách ghi trong nguồn, không có nghĩa mọi cách nói *let him go* đều phải lược như vậy. Người học có thể luyện cả cụm quen thuộc, nhưng vẫn cần hiểu thành phần và ngữ cảnh để vận dụng linh hoạt.
+>
+> Các tổ hợp *biān/zhī* là dữ liệu tiếng Trung có giải nghĩa, không phải quy tắc cấm cách nói “dệt nên câu chuyện” trong văn chương tiếng Việt. *Essential* vẫn có thể bổ nghĩa cho người; [Merriam-Webster dùng “essential workers” ngay trong định nghĩa](https://www.merriam-webster.com/dictionary/essential). *Essential* nhấn tính cần thiết hoặc không thể thiếu đối với một mục đích, còn *important* nhấn tầm quan trọng. Câu về *teacher* cần xét ý và ngữ cảnh, không sai chỉ vì *teacher* chỉ người. Khẳng định đọc thành tiếng gần như là cách duy nhất là quan điểm tác giả; nghe, hội thoại, đọc hiểu và viết cũng cung cấp trải nghiệm ngôn ngữ. Với người Việt, hãy lưu cụm tiếng Anh kèm nghĩa, ngữ cảnh và câu tự dùng, rồi đối chiếu để tránh học một mẫu cứng cho mọi tình huống.
+
+| [< Chương 3: Phát âm](./chapter3.md) | [Chương 5: Từ điển >](./chapter5.md) |
 | ------------------------------- | ------------------------------- |

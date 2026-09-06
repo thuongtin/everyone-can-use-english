@@ -1,11 +1,15 @@
-import { useEffect, useState, useContext, useRef } from "react";
+import { useEffect, useState, useContext } from "react";
 import { AppSettingsProviderContext } from "@renderer/context";
 import { Button } from "@renderer/components/ui";
 import { STORAGE_WORKER_ENDPOINTS } from "@/constants";
-import { TimelineEntry } from "echogarden/dist/utilities/Timeline.d.js";
 import { t } from "i18next";
 import { XCircleIcon } from "lucide-react";
 import { UniversalPlayer, WavesurferPlayer } from "@renderer/components";
+import {
+  getCurrentPostAudioSegment,
+  isStorageAudioSource,
+  requestPostAudioTranscription,
+} from "@renderer/lib/post-audio-transcription";
 
 export const PostAudio = (props: {
   audio: Partial<MediumType>;
@@ -17,28 +21,30 @@ export const PostAudio = (props: {
   const [transcription, setTranscription] = useState<TranscriptionType>();
   const [error, setError] = useState<string>(null);
 
-  const currentTranscription = transcription?.result["transcript"]
-    ? (transcription.result?.timeline || []).find(
-        (s: TimelineEntry) =>
-          currentTime >= s.startTime && currentTime <= s.endTime
-      )
-    : (transcription?.result || []).find(
-        (s: TranscriptionResultSegmentType) =>
-          currentTime >= s.offsets.from / 1000.0 &&
-          currentTime <= s.offsets.to / 1000.0
-      );
+  const currentTranscription = getCurrentPostAudioSegment(
+    transcription,
+    currentTime
+  );
 
   useEffect(() => {
-    webApi
-      .transcriptions({
-        targetMd5: audio.md5,
+    let active = true;
+    setTranscription(undefined);
+    setCurrentTime(0);
+    setError(null);
+    if (!webApi || !audio.md5) return;
+
+    requestPostAudioTranscription(webApi, audio.md5, () => active)
+      .then((item) => {
+        if (active) setTranscription(item);
       })
-      .then((response) => {
-        const transcription = response?.transcriptions?.[0];
-        if (transcription.targetMd5 !== audio.md5) return;
-        setTranscription(response?.transcriptions?.[0]);
+      .catch(() => {
+        if (active) setTranscription(undefined);
       });
-  }, [audio.md5]);
+
+    return () => {
+      active = false;
+    };
+  }, [webApi, audio.md5]);
 
   if (error) {
     return (
@@ -58,26 +64,24 @@ export const PostAudio = (props: {
 
   return (
     <div className="w-full">
-      {audio.sourceUrl.match(
-        new RegExp("^(" + STORAGE_WORKER_ENDPOINTS.join("|") + ")")
-      ) ? (
-        <WavesurferPlayer
-          currentTime={currentTime}
-          setCurrentTime={setCurrentTime}
-          id={audio.id}
-          src={audio.sourceUrl}
-          height={height}
-          onError={(err) => setError(err.message)}
-        />
-      ) : (
-        <UniversalPlayer
-          src={audio.sourceUrl}
-          onTimeUpdate={(time) => {
-            setCurrentTime(time);
-          }}
-          onError={(err) => setError(err.message)}
-        />
-      )}
+      {audio.sourceUrl &&
+        (isStorageAudioSource(audio.sourceUrl, STORAGE_WORKER_ENDPOINTS) ? (
+          <WavesurferPlayer
+            setCurrentTime={setCurrentTime}
+            id={audio.id}
+            src={audio.sourceUrl}
+            height={height}
+            onError={(err) => setError(err.message)}
+          />
+        ) : (
+          <UniversalPlayer
+            src={audio.sourceUrl}
+            onTimeUpdate={(time) => {
+              setCurrentTime(time);
+            }}
+            onError={(err) => setError(err.message)}
+          />
+        ))}
 
       {currentTranscription && (
         <div className="mt-2 bg-muted px-4 py-2 rounded">

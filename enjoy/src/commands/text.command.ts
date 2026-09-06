@@ -1,31 +1,33 @@
-import { ChatOpenAI } from "@langchain/openai";
+import { HumanMessage, SystemMessage } from "@langchain/core/messages";
+import {
+  assertChatModelResponseComplete,
+  createChatModel,
+  getChatModelText,
+  type ChatModelOptions,
+} from "@/lib/chat-model";
+
+export type TextCommandOptions = ChatModelOptions & {
+  systemPrompt?: string;
+};
 
 export const textCommand = async (
   prompt: string,
-  options: {
-    key: string;
-    modelName?: string;
-    temperature?: number;
-    baseUrl?: string;
-    systemPrompt?: string;
-  }
+  options: TextCommandOptions
 ): Promise<string> => {
-  const { key, temperature = 0, baseUrl } = options;
-  let { modelName = "gpt-4o" } = options;
+  if (!prompt) throw new Error("Prompt is required");
 
-  const chatModel = new ChatOpenAI({
-    openAIApiKey: key,
-    modelName,
-    temperature,
-    configuration: {
-      baseURL: baseUrl,
-    },
-    cache: false,
-    verbose: true,
-    maxRetries: 1,
+  const chatModel = createChatModel({
+    ...options,
+    temperature: options.temperature ?? 0,
   });
+  const input = options.systemPrompt
+    ? [new SystemMessage(options.systemPrompt), new HumanMessage(prompt)]
+    : prompt;
 
-  const response = await chatModel.invoke(prompt);
+  const response = await chatModel.invoke(input);
+  assertChatModelResponseComplete(response);
+  const text = getChatModelText(response).trim();
+  if (!text) throw new Error("AI returned an empty response");
 
-  return response.text;
+  return text;
 };

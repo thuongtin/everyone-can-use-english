@@ -3,25 +3,27 @@
     <div class="container m-auto">
       <div class="top flex justify-between">
         <div class="text-greyscale_1">
-          <div class="title text-[20px] md:text-[32px]">最朴实的学习方法</div>
+          <div class="title text-[20px] md:text-[32px]">Phương pháp học đơn giản</div>
           <div class="subtitle text-[14px] md:text-[16px]">
-            在 AI 的帮助下，我们提倡直接上手学习，不用理会繁琐的方法论
+            Với sự hỗ trợ của AI, hãy bắt tay vào luyện tập mà không sa đà vào phương pháp phức tạp.
           </div>
         </div>
 
         <div class="hint text-[13px] md:text-[14px] text-greyscale_4">
-          About <br />
-          Product
+          Về <br />
+          sản phẩm
         </div>
       </div>
 
       <div class="cards grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-8">
-        <div
+        <a
           v-for="(card, index) in cards"
           :key="index"
+          :href="distributionLinks.docsUrl"
+          target="_blank"
+          rel="noopener noreferrer"
           class="card"
           :style="{ backgroundImage: `url(${card.bg})` }"
-          @click="handleClick"
         >
           <div class="lable" :style="{ color: card.colors[0] }">
             {{ card.label }}
@@ -36,7 +38,7 @@
           <div class="arrow">
             <img src="/portal-static/icon/arrow-upright.svg" />
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>
@@ -49,40 +51,41 @@ export default {
 </script>
 
 <script lang="ts" setup>
+import { resolveDistributionLinks } from "~/utils/distribution-links";
+
+const distributionLinks = resolveDistributionLinks(useRuntimeConfig().public);
+
 const cards = ref([
   {
-    label: "Pronunciation Correction",
-    title: "AI 纠正发音",
-    subtitle: "Enjoy App 的高级 AI 引擎帮您塑造完美英・美音",
+    label: "Sửa phát âm",
+    title: "AI hỗ trợ sửa phát âm",
+    subtitle: "AI của Enjoy hỗ trợ bạn luyện phát âm Anh-Anh và Anh-Mỹ.",
     bg: "/portal-static/images/bg-intro-1.png",
     colors: ["#384C6B", "#7B93AF"],
   },
   {
-    label: "Studying Tracking",
-    title: "跟踪学习记录",
-    subtitle: "提供完整全面的学习记录追踪，进步一目了然",
+    label: "Theo dõi việc học",
+    title: "Theo dõi quá trình học",
+    subtitle: "Xem lại lịch sử học tập để nhận ra sự tiến bộ của mình.",
     bg: "/portal-static/images/bg-intro-2.png",
     colors: ["#4A6760", "#7C978F"],
   },
   {
-    label: "Variant Media",
-    title: "丰富的在线素材",
-    subtitle: "导入互联网语音和视频素材，用你最喜欢的内容学语言",
+    label: "Nhiều loại học liệu",
+    title: "Học liệu trực tuyến đa dạng",
+    subtitle: "Nhập âm thanh và video từ Internet, học ngôn ngữ qua nội dung bạn yêu thích.",
     bg: "/portal-static/images/bg-intro-3.png",
     colors: ["#384C6B", "#7B93AF"],
   },
   {
-    label: "Memory Enhancement",
-    title: "拓展记忆力",
-    subtitle: "使用 Enjoy App 提供的记忆系统，让学习过的内容在你脑内回荡",
+    label: "Củng cố trí nhớ",
+    title: "Rèn luyện trí nhớ",
+    subtitle: "Ôn lại nội dung với hệ thống ghi nhớ của Enjoy để củng cố điều đã học.",
     bg: "/portal-static/images/bg-intro-4.png",
     colors: ["#70584A", "#A4978D"],
   },
 ]);
 
-function handleClick() {
-  window.location.href = "https://1000h.org/intro.html";
-}
 </script>
 
 <style lang="scss" scoped>
@@ -112,6 +115,7 @@ function handleClick() {
     .card {
       cursor: pointer;
       position: relative;
+      text-decoration: none;
       color: #fff;
       height: 350px;
       padding: 24px;

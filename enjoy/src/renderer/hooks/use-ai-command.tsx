@@ -14,12 +14,43 @@ import {
   chatSuggestionCommand,
 } from "@commands";
 import { md5 as md5Hash } from "js-md5";
+import type { ChatModelOptions } from "@/lib/chat-model";
+
+type RuntimeAISettings = {
+  currentGptEngine?: GptEngineSettingType;
+  getProviderConfig?: (name: string) => LlmProviderType;
+};
 
 export const useAiCommand = () => {
-  const { EnjoyApp, webApi, nativeLanguage, learningLanguage } = useContext(
-    AppSettingsProviderContext
-  );
-  const { currentGptEngine } = useContext(AISettingsProviderContext);
+  const {
+    EnjoyApp,
+    webApi,
+    nativeLanguage,
+    learningLanguage,
+    apiUrl,
+  } = useContext(AppSettingsProviderContext);
+  const { currentGptEngine, getProviderConfig } = useContext(
+    AISettingsProviderContext
+  ) as RuntimeAISettings;
+
+  const providerName = currentGptEngine?.name || "enjoyai";
+  const providerConfig = getProviderConfig?.(providerName);
+  const engineModels: GptEngineSettingType["models"] =
+    currentGptEngine?.models || { default: "gpt-4o" };
+  const providerOptions = (modelName?: string): ChatModelOptions => ({
+    provider: providerName,
+    key: providerConfig?.key ?? currentGptEngine?.key,
+    baseUrl:
+      providerName === "enjoyai"
+        ? apiUrl
+          ? `${apiUrl}/api/ai`
+          : undefined
+        : providerConfig?.baseUrl ?? currentGptEngine?.baseUrl,
+    modelName,
+  });
+  const modelFor = (
+    task: "lookup" | "translate" | "analyze" | "extractStory" | "default"
+  ) => engineModels[task] || engineModels.default;
 
   const lookupWord = async (params: {
     word: string;
@@ -46,8 +77,7 @@ export const useAiCommand = () => {
       return lookup;
     }
 
-    const modelName =
-      currentGptEngine.models.lookup || currentGptEngine.models.default;
+    const modelName = modelFor("lookup");
 
     const res = await lookupCommand(
       {
@@ -57,11 +87,7 @@ export const useAiCommand = () => {
         nativeLanguage,
         learningLanguage,
       },
-      {
-        key: currentGptEngine.key,
-        modelName,
-        baseUrl: currentGptEngine.baseUrl,
-      }
+      providerOptions(modelName)
     );
 
     webApi.updateLookup(lookup.id, {
@@ -82,12 +108,11 @@ export const useAiCommand = () => {
   };
 
   const extractStory = async (story: StoryType) => {
-    const res = await extractStoryCommand(story.content, learningLanguage, {
-      key: currentGptEngine.key,
-      modelName:
-        currentGptEngine.models.extractStory || currentGptEngine.models.default,
-      baseUrl: currentGptEngine.baseUrl,
-    });
+    const res = await extractStoryCommand(
+      story.content,
+      learningLanguage,
+      providerOptions(modelFor("extractStory"))
+    );
     const { words = [], idioms = [] } = res;
 
     return webApi.extractVocabularyFromStory(story.id, {
@@ -102,9 +127,7 @@ export const useAiCommand = () => {
   ): Promise<string> => {
     let translatedContent = "";
     const md5 = md5Hash(text.trim());
-    const engine = currentGptEngine.key;
-    const modelName =
-      currentGptEngine.models.translate || currentGptEngine.models.default;
+    const modelName = modelFor("translate");
 
     try {
       const res = await webApi.translations({
@@ -121,11 +144,11 @@ export const useAiCommand = () => {
     }
 
     if (!translatedContent) {
-      translatedContent = await translateCommand(text, nativeLanguage, {
-        key: engine,
-        modelName,
-        baseUrl: currentGptEngine.baseUrl,
-      });
+      translatedContent = await translateCommand(
+        text,
+        nativeLanguage,
+        providerOptions(modelName)
+      );
 
       webApi.createTranslation({
         md5,
@@ -151,12 +174,7 @@ export const useAiCommand = () => {
         learningLanguage,
         nativeLanguage,
       },
-      {
-        key: currentGptEngine.key,
-        modelName:
-          currentGptEngine.models.analyze || currentGptEngine.models.default,
-        baseUrl: currentGptEngine.baseUrl,
-      }
+      providerOptions(modelFor("analyze"))
     );
 
     if (cacheKey) {
@@ -166,19 +184,15 @@ export const useAiCommand = () => {
   };
 
   const punctuateText = async (text: string) => {
-    return punctuateCommand(text, {
-      key: currentGptEngine.key,
-      modelName: currentGptEngine.models.default,
-      baseUrl: currentGptEngine.baseUrl,
-    });
+    return punctuateCommand(text, providerOptions(modelFor("default")));
   };
 
   const summarizeTopic = async (text: string) => {
-    return summarizeTopicCommand(text, learningLanguage, {
-      key: currentGptEngine.key,
-      modelName: currentGptEngine.models.default,
-      baseUrl: currentGptEngine.baseUrl,
-    });
+    return summarizeTopicCommand(
+      text,
+      learningLanguage,
+      providerOptions(modelFor("default"))
+    );
   };
 
   const refine = async (
@@ -197,11 +211,7 @@ export const useAiCommand = () => {
         nativeLanguage: options.nativeLanguage || nativeLanguage,
         context,
       },
-      {
-        key: currentGptEngine.key,
-        modelName: currentGptEngine.models.default,
-        baseUrl: currentGptEngine.baseUrl,
-      }
+      providerOptions(modelFor("default"))
     );
   };
 
@@ -219,14 +229,10 @@ export const useAiCommand = () => {
         learningLanguage: options?.learningLanguage || learningLanguage,
         nativeLanguage: options?.nativeLanguage || nativeLanguage,
       },
-      {
-        key: currentGptEngine.key,
-        modelName: currentGptEngine.models.default,
-        baseUrl: currentGptEngine.baseUrl,
-      }
+      providerOptions(modelFor("default"))
     );
 
-    if (options.cacheKey) {
+    if (options?.cacheKey) {
       EnjoyApp.cacheObjects.set(options.cacheKey, result);
     }
 

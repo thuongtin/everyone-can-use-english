@@ -12,6 +12,7 @@ import {
 } from "@renderer/context";
 import isEmpty from "lodash/isEmpty";
 import { UserSettingKeyEnum } from "@/types/enums";
+import { mergeWithPreference } from "@renderer/lib/hotkey-map";
 
 function isShortcutValid(shortcut: string) {
   const modifiers = ["ctrl", "alt", "shift", "meta"];
@@ -20,25 +21,6 @@ function isShortcutValid(shortcut: string) {
   const normalKeyCount = keys.length - modifierCount;
   // Validation rule: At most two modifier key, and at most one regular key
   return modifierCount <= 2 && normalKeyCount === 1;
-}
-
-function mergeWithPreference(
-  a: Record<string, string>, // electron settings's cached value
-  b: Record<string, string> // current version's default value
-): Record<string, string> {
-  const c: Record<string, string> = {};
-
-  for (const key in b) {
-    c[key] = b[key];
-  }
-
-  for (const key in a) {
-    if (key in b) {
-      c[key] = a[key];
-    }
-  }
-
-  return c;
 }
 
 const ControlOrCommand = navigator.userAgent.includes("Mac")
@@ -69,12 +51,12 @@ export type Hotkey = keyof typeof defaultKeyMap;
 function checkKeyAndValue(
   key: Hotkey,
   value: string,
-  shortcuts: typeof defaultKeyMap
+  shortcuts: Record<string, string>
 ) {
   const inputValue = value.toLowerCase();
 
   const conflictKeys = Object.keys(shortcuts).filter(
-    (k: Hotkey) => shortcuts[k].toLowerCase() === inputValue && k !== key
+    (k) => shortcuts[k]?.toLowerCase() === inputValue && k !== key
   );
 
   return conflictKeys;
@@ -92,7 +74,8 @@ type HotkeysSettingsProviderState = {
 };
 
 const initialState: HotkeysSettingsProviderState = {
-  currentHotkeys: {},
+  // Keep every consumer on a valid hotkey map while persisted settings load.
+  currentHotkeys: defaultKeyMap,
   enabled: true,
   isRecording: false,
 };
@@ -149,7 +132,7 @@ export const HotKeysSettingsProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [currentHotkeys, setCurrentHotkeys] = useState<any>(
+  const [currentHotkeys, setCurrentHotkeys] = useState<Record<string, string>>(
     initialState.currentHotkeys
   );
   const [keys, { start, stop, resetKeys, isRecording }] = useRecordHotkeys();
@@ -168,7 +151,7 @@ export const HotKeysSettingsProvider = ({
       UserSettingKeyEnum.HOTKEYS
     );
     // During version iterations, there may be added or removed keys.
-    const merged = mergeWithPreference(_hotkeys ?? {}, defaultKeyMap);
+    const merged = mergeWithPreference(_hotkeys, defaultKeyMap);
     await EnjoyApp.userSettings
       .set(UserSettingKeyEnum.HOTKEYS, merged)
       .then(() => {
