@@ -7,6 +7,8 @@ import log from "@main/logger";
 import snakeCase from "lodash/snakeCase";
 import settings from "@main/settings";
 import mainWin from "@main/window";
+import ffmpegPath from "ffmpeg-static";
+import { downloaderEnv, findYtDlp, downloadWithYtDlp } from "./yt-dlp";
 
 //  youtubedr bin file will be in /app.asar.unpacked instead of /app.asar
 const __dirname = import.meta.dirname.replace("app.asar", "app.asar.unpacked");
@@ -59,6 +61,26 @@ class Youtubedr {
   }
 
   async autoDownload(url: string) {
+    const env = downloaderEnv(this.proxyEnv());
+    const binary = findYtDlp(env);
+    if (binary) {
+      this.abortController?.abort();
+      this.abortController = new AbortController();
+      logger.info("Downloading YouTube video with yt-dlp", this.getYtVideoId(url));
+      return downloadWithYtDlp({
+        binary, url, env,
+        cachePath: settings.cachePath(),
+        ffmpegPath: ffmpegPath.replace("app.asar", "app.asar.unpacked"),
+        signal: this.abortController.signal,
+        onProgress: (received, speed) => {
+          if (!mainWin.win.webContents.isDestroyed()) {
+            mainWin.win.webContents.send("download-on-state", {
+              name: this.getYtVideoId(url), state: "progressing", received, speed,
+            });
+          }
+        },
+      });
+    }
     logger.debug("fetching video info", url);
 
     const info = await this.info(url);
@@ -261,7 +283,7 @@ class Youtubedr {
     // keep current environment variables
     let env = { ...process.env };
     const proxyConfig = settings.getSync("proxy") as ProxyConfigType;
-    if (proxyConfig.enabled && proxyConfig.url) {
+    if (proxyConfig?.enabled && proxyConfig.url) {
       env["HTTP_PROXY"] = proxyConfig.url;
       env["HTTPS_PROXY"] = proxyConfig.url;
     }

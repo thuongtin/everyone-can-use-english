@@ -1,4 +1,5 @@
 {
+  "noMicrophoneAccess": "Chưa có quyền dùng microphone. Hãy cho phép Enjoy trong Cài đặt hệ thống > Quyền riêng tư & Bảo mật > Microphone, rồi mở lại Enjoy.",
   "models": {
     "user": {
       "id": "ID",

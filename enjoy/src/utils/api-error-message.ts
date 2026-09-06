@@ -6,6 +6,7 @@ type ErrorWithResponse = {
   status?: number;
   response?: {
     status?: number;
+    data?: unknown;
   };
 };
 
@@ -20,6 +21,7 @@ const messages: Record<ApiErrorLocale, Record<string, string>> = {
     timeout: "The request took too long. Check your connection and try again.",
     unauthorized: "Your session has expired. Please sign in again.",
     forbidden: "You do not have permission to perform this action.",
+    insufficientBalance: "Your Enjoy balance is insufficient. This feature uses a paid Enjoy service. Top up your Enjoy balance and try again.",
     rateLimited: "Too many requests. Please wait a moment and try again.",
     server: "Enjoy is temporarily unavailable. Please try again later.",
     request: "The request could not be completed. Please try again.",
@@ -29,6 +31,7 @@ const messages: Record<ApiErrorLocale, Record<string, string>> = {
     timeout: "Yêu cầu mất quá nhiều thời gian. Hãy kiểm tra mạng rồi thử lại.",
     unauthorized: "Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.",
     forbidden: "Bạn không có quyền thực hiện thao tác này.",
+    insufficientBalance: "Số dư Enjoy không đủ. Tính năng này dùng dịch vụ trả phí của Enjoy. Hãy nạp thêm số dư Enjoy rồi thử lại.",
     rateLimited: "Có quá nhiều yêu cầu. Vui lòng đợi một lát rồi thử lại.",
     server: "Enjoy đang tạm thời không khả dụng. Vui lòng thử lại sau.",
     request: "Không thể hoàn tất yêu cầu. Vui lòng thử lại.",
@@ -67,7 +70,11 @@ export const getApiErrorMessage = (
   if (!status) return isTimeoutError(typedError || {}) ? copy.timeout : copy.network;
   if (status === 408 || isTimeoutError(typedError || {})) return copy.timeout;
   if (status === 401) return copy.unauthorized;
-  if (status === 403) return copy.forbidden;
+  if (status === 403) {
+    // Map only a known server error; never expose arbitrary response bodies.
+    if (typedError?.response?.data === "余额不足") return copy.insufficientBalance;
+    return copy.forbidden;
+  }
   if (status === 429) return copy.rateLimited;
   if (status >= 500 && status <= 599) return copy.server;
   return copy.request;
