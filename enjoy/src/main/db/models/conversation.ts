@@ -24,8 +24,20 @@ import {
 import mainWindow from "@main/window";
 import log from "@main/logger";
 import { t } from "i18next";
-import { SttEngineOptionEnum, UserSettingKeyEnum } from "@/types/enums";
+import {
+  ChatAgentTypeEnum,
+  ChatTypeEnum,
+  ChatMessageRoleEnum,
+  ChatMessageStateEnum,
+  SttEngineOptionEnum,
+  UserSettingKeyEnum,
+} from "@/types/enums";
 import { DEFAULT_GPT_CONFIG } from "@/constants";
+import {
+  migrateConversationChatConfig,
+  migrateConversationGptConfig,
+  nonEmptyPersistedString,
+} from "@/lib/conversation-migration";
 
 const logger = log.scope("db/models/conversation");
 @Table({
@@ -45,7 +57,7 @@ export class Conversation extends Model<Conversation> {
   name: string;
 
   @AllowNull(false)
-  @Column(DataType.ENUM("openai", "ollama", "google-generative-ai"))
+  @Column(DataType.STRING)
   engine: string;
 
   @AllowNull(false)
@@ -91,7 +103,7 @@ export class Conversation extends Model<Conversation> {
 
     if (agent) return;
 
-    const gpt = {
+    const gptSource = {
       engine: this.engine,
       model: this.configuration.model,
       temperature: this.configuration.temperature,
@@ -101,14 +113,25 @@ export class Conversation extends Model<Conversation> {
       historyBufferSize: this.configuration.historyBufferSize,
       numberOfChoices: this.configuration.numberOfChoices,
     };
+    let gptDefaults = {
+      engine: DEFAULT_GPT_CONFIG.engine,
+      model: DEFAULT_GPT_CONFIG.model,
+    };
 
-    if (!["openai", "enjoyai"].includes(this.engine)) {
+    if (
+      !nonEmptyPersistedString(gptSource.engine) ||
+      !nonEmptyPersistedString(gptSource.model)
+    ) {
       const defaultGptEngine = await UserSetting.get(
         UserSettingKeyEnum.GPT_ENGINE
       );
-      gpt.engine = defaultGptEngine?.name || DEFAULT_GPT_CONFIG.engine;
-      gpt.model = defaultGptEngine?.models?.default || DEFAULT_GPT_CONFIG.model;
+      gptDefaults = {
+        engine: defaultGptEngine?.name || DEFAULT_GPT_CONFIG.engine,
+        model: defaultGptEngine?.models?.default || DEFAULT_GPT_CONFIG.model,
+      };
     }
+
+    const gpt = migrateConversationGptConfig(gptSource, gptDefaults);
 
     const tts = {
       engine: this.configuration.tts?.engine || "enjoyai",
@@ -120,7 +143,9 @@ export class Conversation extends Model<Conversation> {
     agent = await ChatAgent.create({
       name:
         this.configuration.type === "tts" ? tts.voice || this.name : this.name,
-      type: this.configuration.type === "tts" ? "TTS" : "GPT",
+      type: this.configuration.type === "tts"
+        ? ChatAgentTypeEnum.TTS
+        : ChatAgentTypeEnum.GPT,
       source,
       description: "",
       config:
@@ -139,10 +164,16 @@ export class Conversation extends Model<Conversation> {
       const chat = await Chat.create(
         {
           name: t("newChat"),
-          type: this.type === "tts" ? "TTS" : "CONVERSATION",
-          config: {
-            stt: SttEngineOptionEnum.ENJOY_AZURE,
-          },
+          type: this.type === "tts"
+            ? ChatTypeEnum.TTS
+            : ChatTypeEnum.CONVERSATION,
+          config: migrateConversationChatConfig(
+            {
+              sttEngine: this.configuration.sttEngine,
+              stt: this.configuration.stt,
+            },
+            SttEngineOptionEnum.ENJOY_AZURE
+          ),
         },
         {
           transaction,
@@ -189,8 +220,10 @@ export class Conversation extends Model<Conversation> {
           {
             chatId: chat.id,
             content: message.content,
-            role: message.role === "user" ? "USER" : "AGENT",
-            state: "completed",
+            role: message.role === "user"
+              ? ChatMessageRoleEnum.USER
+              : ChatMessageRoleEnum.AGENT,
+            state: ChatMessageStateEnum.COMPLETED,
             memberId: message.role === "assistant" ? chatMember.id : null,
             agentId: message.role === "assistant" ? agent.id : null,
             createdAt: message.createdAt,

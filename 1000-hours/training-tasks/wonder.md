@@ -1,12 +1,12 @@
-# 5. 效果非常惊人
+# 5. Hiệu quả đáng ngạc nhiên
 
-最惊人的是，在人工智能的辅助之下，我的第一语言使用水平也可以用同样的方式提高。在此之前，我们通常都是**眼高手低**的 —— 我们的实际能力常常远远低于我们的**审美**。就好像我们都知道什么好吃，但真的做不出那么好吃的东西一样。但现在不一样了，突然之间，能力追上了审美，想要再提高，竟然需要做的只不过是**提高审美标准**而已……
+Điều khiến tác giả ngạc nhiên nhất là AI cũng có thể hỗ trợ cải thiện cách sử dụng tiếng mẹ đẻ. Trước đây, năng lực tạo ra tác phẩm thường thấp hơn **khả năng cảm nhận chất lượng**: giống như biết món nào ngon nhưng chưa nấu được như vậy. Với AI hỗ trợ, tác giả khẳng định **năng lực đã bắt kịp tiêu chuẩn thẩm mỹ**, và muốn tiến xa hơn thì chỉ còn cần **nâng tiêu chuẩn đánh giá**. Đây là cảm nhận được nguyên tác nhấn mạnh, không phải quy luật đã được chứng minh cho mọi người dùng AI.
 
-作为岁数已经不小了的成年人，我想到了一个令自己无比震惊的可能性 —— 我们完全有机会在人工智能辅助下，通过一段时间的训练，生生把英语变成自己的第一语言。这在过去当然会被认为完全不可能，现在呢？现在真的不一样了。
+Là người trưởng thành không còn trẻ, tác giả nghĩ đến một khả năng khiến mình hào hứng: luyện tập với AI để tiếng Anh trở thành ngôn ngữ sử dụng chính. Điều trước đây ông xem là bất khả thi nay có vẻ khác. Đây là mong muốn của tác giả, không phải cam kết kết quả cho mọi người học.
 
-我们的大脑突然之间变得非常聚焦。既强大又轻松。我们真正需要耗时费力的，是把事情想清楚，把研究做明白，把结构调整好。所有注意力也的确应该放在这些最关键的事情上，不像过去那样总是被其它各种细节占用，乃至于最关键部分的质量受到影响。现在真不一样了，我们有一大堆既便宜又随叫随到的机器人助手…… 就好像我们一下子有了个班底，不用再苦哈哈地只做编剧了，而是升级成了制片人，关心着不一样的事情，做出不一样质量的东西。到最后可能需要**润色**，那就是我们的**审美水平**所决定的事情了，不一定是要我们自己耗时费力才能做好的事情。
+Theo trải nghiệm được kể, khi có nhiều trợ lý AI sẵn sàng hỗ trợ với chi phí thấp, tác giả tập trung hơn vào việc nghĩ cho rõ, nghiên cứu cho đúng và tổ chức nội dung. Ông ví sự thay đổi như từ người tự viết kịch bản một mình trở thành nhà sản xuất có cả một nhóm cộng sự: quan tâm những việc khác và tạo ra sản phẩm có chất lượng khác. Khâu **trau chuốt** cuối cùng do tiêu chuẩn thẩm mỹ định hướng, không nhất thiết phải tự làm mọi thao tác tốn thời gian.
 
-以下是一小段在本书成稿的过程中被删掉的文字：
+Dưới đây là một đoạn tiếng Anh từng được viết rồi bỏ khỏi bản thảo cuốn sách:
 
 > Most people are deft at exhausting resources to tackle problems they have been creating. They often in effect choose to involute, rather than evolute without noticing.
 >
@@ -22,6 +22,6 @@
 >
 > The same holds for education. People pour money into it, more as a status symbol than an investment, turning what should fundamentally be production into consumption... They sowed the seeds of problems from inception - those seeds took years to sprout before finally growing into towering trees with branches, twigs and leaves representing myriad issues big or small. Under the tree are those craning their necks at every branch, twig, or leaf, pondering to the tackle them, completely forgetting these were seeds of their own making - leaving no stone unturned.
 
-当然，这是在 GPT 给我返回的内容基础上按照我自己的喜好又做了一些改动的结果 —— 机器人给的也不是不能直接用，但，不一定完全符合我自己的审美。并且，这个随后按照自我喜好进行修改的过程，对自己通过消化进一步发展自己的文字能力有巨大的帮助。这个过程不可或缺，否则，自己就会因为 AI 的强大而反过来变得更差。
+Đoạn này được tác giả sửa theo sở thích từ câu trả lời GPT. Không phải đầu ra của AI hoàn toàn không dùng được ngay, nhưng nó chưa chắc phù hợp tiêu chuẩn của ông. Chính việc đọc, cân nhắc và chỉnh sửa giúp người viết tiêu hóa nội dung và phát triển năng lực. Tác giả xem quá trình đó là không thể thiếu, nếu không người dùng có thể phụ thuộc vào sức mạnh AI và giảm khả năng tự viết.
 
-重点在于，突然之间，我可以用英文以我的审美标准去表达我的思想了，这是过去我用任何语言都做不到的 —— 人么，大多都一样，总是**眼高手低** —— 可如此下去，没多久，英语不就直接成了我的第一语言吗？这并不仅仅是我有可能做到，而是人人都有可能做到吧？过去想都不敢想，突然之间，现实就砸进了我们的生活。这辈子竟然还有这样的机会！
+Điều cốt lõi đối với tác giả là nay ông có thể diễn đạt tư tưởng bằng tiếng Anh theo tiêu chuẩn thẩm mỹ của mình, điều trước đây chưa làm được trọn vẹn với bất kỳ ngôn ngữ nào. Từ trải nghiệm ấy, ông tự hỏi liệu tiếng Anh có thể trở thành ngôn ngữ sử dụng chính của mình và liệu người khác cũng có cơ hội đó hay không. Đó là niềm hào hứng trước một khả năng mới, không phải dự báo thời gian hay kết quả đã được kiểm chứng cho tất cả mọi người.

@@ -3,15 +3,15 @@
     <div class="container m-auto">
       <div class="top flex justify-between">
         <div class="text-greyscale_1">
-          <div class="title text-[20px] md:text-[32px]">特色功能</div>
+          <div class="title text-[20px] md:text-[32px]">Tính năng nổi bật</div>
           <div class="subtitle text-[14px] md:text-[16px]">
-            你能想到的，只要是对学习有帮助的功能，我们都实现了。
+            Các công cụ hỗ trợ bạn nghe, nói, đọc và ôn tập tiếng Anh.
           </div>
         </div>
 
         <div class="hint text-greyscale_4">
-          Product <br />
-          Features
+          Tính năng <br />
+          sản phẩm
         </div>
       </div>
 
@@ -43,38 +43,38 @@ export default {
 const features = ref([
   {
     icon: "/portal-static/images/head-phone.png",
-    title: "音频可视化跟读",
-    subtitle: "导入的音频，我们会进行解析，提供可视化跟读",
+    title: "Luyện nhại với dạng sóng âm thanh",
+    subtitle: "Âm thanh được phân tích và hiển thị trực quan để bạn luyện nhại theo mẫu.",
   },
   {
     icon: "/portal-static/images/camera.png",
-    title: "视频可视化跟读",
-    subtitle: "既然音频可以跟读，视频当然也可以",
+    title: "Luyện nhại theo video",
+    subtitle: "Bạn có thể luyện nhại theo video, tương tự như với âm thanh.",
   },
   {
     icon: "/portal-static/images/lang.png",
-    title: "文章阅读",
-    subtitle: "导入各类外语文章，进行解析阅读",
+    title: "Đọc bài viết",
+    subtitle: "Nhập bài viết ngoại ngữ để đọc và phân tích.",
   },
   {
     icon: "/portal-static/images/robot.png",
-    title: "AI 自然对话",
-    subtitle: "最称职的人工智能外语陪练",
+    title: "Trò chuyện tự nhiên với AI",
+    subtitle: "Trợ lý AI đồng hành cùng bạn luyện ngoại ngữ.",
   },
   {
     icon: "/portal-static/images/note.png",
-    title: "重温笔记",
-    subtitle: "学习遇到难点？先添加笔记，再巩固复习",
+    title: "Ôn lại ghi chú",
+    subtitle: "Gặp phần khó khi học? Ghi chú lại rồi ôn tập để hiểu chắc hơn.",
   },
   {
     icon: "/portal-static/images/book.png",
-    title: "词典助记",
-    subtitle: "学习遇到生词？添加到生词本，再巩固复习",
+    title: "Ghi nhớ từ vựng",
+    subtitle: "Gặp từ mới? Thêm vào sổ từ vựng để ôn tập.",
   },
   {
     icon: "/portal-static/images/cham.png",
-    title: "社区竞赛",
-    subtitle: "每日、每周、每月都有人跟你一起学习进步",
+    title: "Cùng cộng đồng luyện tập",
+    subtitle: "Cùng những người học khác tiến bộ qua mỗi ngày, mỗi tuần, mỗi tháng.",
   },
 ]);
 </script>

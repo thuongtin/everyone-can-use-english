@@ -3,7 +3,10 @@ import react from "@vitejs/plugin-react";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 import type { ConfigEnv, UserConfig } from "vite";
 import { defineConfig } from "vite";
-import { pluginExposeRenderer } from "./vite.base.config";
+import {
+  getDistributionDefine,
+  pluginExposeRenderer,
+} from "./vite.base.config";
 
 // https://vitejs.dev/config
 export default defineConfig((env) => {
@@ -20,6 +23,7 @@ export default defineConfig((env) => {
       outDir: `.vite/renderer/${name}`,
       target: "esnext",
     },
+    define: getDistributionDefine(),
     plugins: [
       pluginExposeRenderer(name),
       react(),

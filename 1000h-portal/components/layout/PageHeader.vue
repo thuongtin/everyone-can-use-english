@@ -4,9 +4,23 @@
       <Logo />
 
       <div class="flex gap-4">
-        <a class="action" href="https://github.com/ZuodaoTech/">Github</a>
+        <a
+          class="action"
+          :href="distributionLinks.repositoryUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Mã nguồn
+        </a>
         <span class="divider"></span>
-        <a class="action" href="https://enjoy.bot">Enjoy App</a>
+        <a
+          class="action"
+          :href="distributionLinks.downloadUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Tải Enjoy App
+        </a>
       </div>
     </div>
   </div>
@@ -20,6 +34,9 @@ export default {
 
 <script lang="ts" setup>
 import Logo from "../Logo.vue";
+import { resolveDistributionLinks } from "~/utils/distribution-links";
+
+const distributionLinks = resolveDistributionLinks(useRuntimeConfig().public);
 </script>
 
 <style lang="scss" scoped>

@@ -58,9 +58,9 @@ export function formatDateTime(date: Date | string) {
   } else if (now.isSame(then, "day")) {
     return then.format("HH:mm");
   } else if (now.diff(then, "year") === 0) {
-    return then.format("MM/DD HH:mm");
+    return then.format(i18next.resolvedLanguage === "vi" ? "DD/MM HH:mm" : "MM/DD HH:mm");
   } else {
-    return then.format("YYYY/MM/DD HH:mm");
+    return then.format(i18next.resolvedLanguage === "vi" ? "DD/MM/YYYY HH:mm" : "YYYY/MM/DD HH:mm");
   }
 }
 

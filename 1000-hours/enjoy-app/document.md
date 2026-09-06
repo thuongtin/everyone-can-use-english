@@ -1,5 +1,5 @@
-# 阅读文本简介
+# Giới thiệu đọc tài liệu
 
-Enjoy 支持将本地文档或在线文章导入，进行跟读训练。
+Enjoy hỗ trợ nhập tài liệu trên máy hoặc bài viết trực tuyến để đọc và luyện nhại theo giọng đọc.
 
-(该功能在 v0.7.0 版本中更新)
+Chức năng này được cập nhật trong phiên bản v0.7.0 theo tài liệu gốc.

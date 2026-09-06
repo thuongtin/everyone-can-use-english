@@ -1,19 +1,25 @@
-# 10. 熟练就是卸载负担
+# 10. Thành thạo là giảm gánh nặng
 
-大脑里的一切都存在于网络之中，每个任务都会被拆分成很多子任务，而后经过大脑对流程的自动优化，尽快完成。毫无疑问，大脑肯定是多线程工作的，不然就会被拖死。
+Mọi thứ trong não đều tồn tại trong mạng. Mỗi nhiệm vụ được chia thành nhiều nhiệm vụ nhỏ, rồi não tự tối ưu quy trình để hoàn thành nhanh nhất có thể. Chắc chắn não làm việc đa luồng, nếu không sẽ bị quá tải đến tê liệt.
 
-可问题在于，注意力更多情况下是单线程的。它常常一次只能注意一个东西，如果有多个需要注意，那么它就得挨个来…… 有时候它也可能同时注意两个甚至三个东西（更多肯定不行了），但，只要其中一个足够突出，其它的就会瞬间沉入背景。
+Vấn đề là sự chú ý phần lớn hoạt động đơn luồng. Nó thường chỉ chú ý được một thứ mỗi lần; có nhiều thứ thì phải lần lượt. Đôi khi có thể chú ý hai, thậm chí ba thứ cùng lúc, nhưng nhiều hơn thì chắc chắn không được. Chỉ cần một thứ đủ nổi bật, những thứ còn lại lập tức chìm vào nền.
 
-看看 1970 年认知心理学先驱尤里克·奈瑟（Ulric Neisser）的实验就知道了。一群人在舞台上传球，观看者被要求对传球的次数计数…… 在这个过程中有个打扮成大猩猩的人出现在舞台，做了几个夸张的动作，才走下去 —— 结果，所有人都没看到那只大猩猩，因为大家的注意力都被引导到那只传来传去的球上了。
+Hãy xem thí nghiệm mà nguyên tác gán cho nhà tiên phong tâm lý học nhận thức Ulric Neisser vào năm 1970. Một nhóm người chuyền bóng trên sân khấu; người xem được yêu cầu đếm số lần chuyền. Trong lúc đó, một người hóa trang thành khỉ đột xuất hiện, làm vài động tác khoa trương rồi đi xuống. Theo lời kể trong nguyên tác, tất cả đều không thấy con khỉ đột, vì sự chú ý đã được hướng vào quả bóng chuyền qua chuyền lại.
 
-当我们习得一个新技能的时候，它可能需要我们完成多个任务，并且多个任务之间还可能需要相互协调。比如，蛙泳，这个对初学者相对最友好的游泳姿势。它需要起码三个动作的协调，上臂的动作，下肢的动作，用嘴巴呼吸的动作。这时候，我们的大脑就会忙不过来，因为关注这个的时候，就顾不上那个，关注那个的时候，又忘了这个……
+Khi học một kỹ năng mới, có thể ta phải làm nhiều nhiệm vụ và phối hợp chúng với nhau. Chẳng hạn bơi ếch, kiểu bơi mà tác giả xem là tương đối thân thiện nhất với người mới. Nó cần phối hợp ít nhất ba động tác: tay, chân và thở bằng miệng. Lúc ấy não không xoay xở kịp: chú ý cái này thì bỏ quên cái kia, chú ý cái kia thì lại quên cái này.
 
-我们逐个练，然后再尝试组合其中的两个 —— 这需要很长时间…… 直至熟练之后，再尝试组合所有动作 —— 这还需要很长时间…… 终于能熟练组合这三个动作了之后呢？就能游得很好很快吗？显然并非如此。这时候才发现，还有更多的细节需要注意，每个细节的微调都可能需要很多的时间。
+Ta tập riêng từng động tác, rồi thử kết hợp hai động tác, một quá trình mất nhiều thời gian. Khi thành thạo mới thử kết hợp tất cả, lại mất nhiều thời gian nữa. Cuối cùng phối hợp được cả ba rồi thì sao? Đã bơi rất tốt, rất nhanh chưa? Rõ ràng chưa. Khi ấy mới thấy còn nhiều chi tiết phải chú ý, mỗi điều chỉnh nhỏ đều có thể mất rất nhiều thời gian.
 
-幸运的是，这时候我们已经有余力注意那些细节了 —— 但，更准确的说法是，**熟悉就是卸载负担**。但，熟练不是尽头，因为 **精通就是无负担**。
+May là lúc này ta đã có sức để chú ý các chi tiết ấy. Nói chính xác hơn, **quen thuộc là giảm gánh nặng**. Nhưng thành thạo chưa phải điểm cuối, vì **tinh thông là không còn gánh nặng**.
 
-当我们对一个流程足够熟悉之后（当然是通过短时间内足量重复），还需要大量的重复（当然还是通过短时间内足量重复）…… 终于，完成这个流程就可以下意识完成甚至无意识完成了，不用再像最初那样，要记住步骤，注意衔接，核实质量…… 于是，我们那几乎只能**单线程**的注意力就相当于把这一部分负担彻底卸载掉了，同时需要做别的事情的时候，就会感觉轻松自如。
+Sau khi đủ quen một quy trình, tất nhiên nhờ lặp lại đủ nhiều trong thời gian ngắn, vẫn cần lặp lại rất nhiều, cũng bằng cách ấy. Cuối cùng, ta có thể thực hiện quy trình gần như tự động, thậm chí không cần ý thức: không phải như ban đầu, nhớ các bước, chú ý nối bước, kiểm tra chất lượng. Sự chú ý gần như chỉ **đơn luồng** của ta coi như trút hoàn toàn phần gánh nặng này, nên khi đồng thời làm việc khác sẽ thấy nhẹ nhàng, tự nhiên.
 
-虽然我们的注意力几乎只能**单线程**工作，可实际上，这世界所有最重要的活动，本质上来看都是**多线程**的。
+Dù sự chú ý gần như chỉ làm việc **đơn luồng**, những hoạt động quan trọng nhất trên đời về bản chất lại đều **đa luồng**.
 
-天下最大的技巧，只有少数人最终能掌握的所谓神技，本质上来看，其实都一样，都只不过是把多线程中的每一个线程都逐步通过大量的重复将其变成下意识甚至无意识即可完成的工作。就好像电脑上的现代操作系统那样，**把大量的线程彻底变成后台任务**。
+Những kỹ năng tuyệt đỉnh mà chỉ số ít người cuối cùng nắm được, về bản chất đều giống nhau: từng bước dùng rất nhiều lần lặp để biến mỗi luồng trong hoạt động đa luồng thành công việc có thể làm tự động, thậm chí không cần ý thức. Giống hệ điều hành hiện đại trên máy tính: **biến hàng loạt luồng thành tác vụ nền**.
+
+::: info Ghi chú biên tập cho bản tiếng Việt
+Nguyên tác gộp hai mốc nghiên cứu. Thí nghiệm khỉ đột do **Simons và Chabris công bố năm 1999**, phát triển từ các nghiên cứu chú ý chọn lọc của Neisser trong thập niên 1970. Nhiều người bỏ sót, nhưng không phải tất cả. [Simons tự thuật lịch sử nghiên cứu](https://pmc.ncbi.nlm.nih.gov/articles/PMC3563049/) phân biệt các thí nghiệm trước đó dùng người cầm ô với thí nghiệm khỉ đột.
+
+“Đơn luồng”, “đa luồng” và “tác vụ nền” là phép ví bằng máy tính. Bài không đưa số đo xác lập giới hạn cứng hai hoặc ba đối tượng cho mọi tình huống. Thành thạo có thể giảm nhu cầu chú ý, nhưng không có nghĩa kỹ năng không bao giờ cần kiểm tra hoặc điều chỉnh.
+:::

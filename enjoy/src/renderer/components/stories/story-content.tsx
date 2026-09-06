@@ -10,7 +10,9 @@ export const StoryContent = (props: { content: string }) => {
   const [paragraphs, setParagraphs] = useState<
     { terms: any[]; text: string }[][]
   >([]);
-  const doc = nlp(content);
+  const doc = nlp<{
+    paragraphs: () => { json: () => { terms: any[]; text: string }[][] };
+  }>(content);
   doc.cache();
 
   useEffect(() => {

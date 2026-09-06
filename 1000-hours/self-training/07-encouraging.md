@@ -1,63 +1,80 @@
-# 7. 自我鼓励
+# 7. Tự khích lệ
 
-自我驱动很好。一旦启动，我们就好像正在行驶的汽车一样。遇到颠簸、遇到弯道，它可能需要放慢速度，遇到陡坡的时候它可能需要加大马力，甚至，它也有可能半路抛锚，需要重新启动…… 而这一切，总是需要我们自己完成，虽然借助外力并不是不可以，但，靠自己总是更有效率。
+Tự tạo động lực là điều tốt. Một khi khởi động, ta giống chiếc xe đang chạy. Gặp xóc hay khúc cua có thể phải chậm lại; gặp dốc phải tăng công suất; thậm chí có thể hỏng giữa đường, cần khởi động lại. Những việc ấy luôn cần chính ta thực hiện. Không phải không được nhờ bên ngoài, nhưng theo tác giả, tự làm luôn hiệu quả hơn.
 
-首先，我们需要不断强化我们的动机，让我们自己遇到**意外熄火**的时候更容易**重新启动**。
+Trước hết, ta cần liên tục củng cố động cơ để dễ **khởi động lại** khi **bất ngờ tắt máy**.
 
-**正面做法**是主动为我们的目标、行动及其成果从各个层面赋予更多更大的**意义**。负面做法**是调用我们的**恐惧** —— 对我们的大脑来说**恐惧永远是最佳驱动力** —— 它会在潜意识层面不为人知地发挥巨大作用。
+**Cách tích cực** là chủ động gắn nhiều **ý nghĩa** lớn hơn, ở nhiều tầng, cho mục tiêu, hành động và kết quả. **Cách tiêu cực**, theo tác giả, là huy động **nỗi sợ**. Ông khẳng định với não, nỗi sợ luôn là động lực tốt nhất, âm thầm tạo tác động lớn ở tầng tiềm thức.
 
-我们可以算一个**假账**。
+Ta có thể làm một **phép tính giả định**.
 
-《财富的真相》里我讲：
+Trong *Sự thật về của cải*, tôi viết:
 
-> 我们这一生的所有财富，不管是物质上的还是精神上的，都是从自己的**时间**里挖出来的……
+> Mọi của cải trong đời, vật chất hay tinh thần, đều được đào lên từ **thời gian** của chính mình.
 
-既然，**时间就是生产资料**，那么，用它干什么最划算？
+Nếu **thời gian là tư liệu sản xuất**, dùng nó làm gì đáng nhất?
 
 ```mermaid
 flowchart LR
-  beginning([起点])--> self_teaching((自学))--> k(知识) --> other_knowledge(其他知识)-->persuits((追求))-->spirits[(精神\n财富)]-->doing_more([做更多的事])
-  k --> knowledge_of_investing(投资知识)-->investing((投资))-->wealth[(物质\n财富)]
-  k --> knowledge_of_sales(销售知识)-->selling((销售))-->wealth[(物质\n财富)]-->doing_more([做更多的事])
-  k --> knowledge_of_production(生产知识)-->producing((生产))-->wealth
-  beginning -...-|时间|doing_more
+  beginning([Điểm xuất phát])--> self_teaching((Tự học))--> k(Kiến thức) --> other_knowledge(Kiến thức khác)-->persuits((Theo đuổi))-->spirits[(Của cải\ntinh thần)]-->doing_more([Làm thêm nhiều việc])
+  k --> knowledge_of_investing(Kiến thức đầu tư)-->investing((Đầu tư))-->wealth[(Của cải\nvật chất)]
+  k --> knowledge_of_sales(Kiến thức bán hàng)-->selling((Bán hàng))-->wealth[(Của cải\nvật chất)]-->doing_more([Làm thêm nhiều việc])
+  k --> knowledge_of_production(Kiến thức sản xuất)-->producing((Sản xuất))-->wealth
+  beginning -...-|Thời gian|doing_more
 ```
 
-到最后，选来选去，只有**自学**。虽然**练英语**，好像与**生产**、**销售**、**投资**并未直接关联，**学它干嘛？** —— 我们先不说**赚钱**，先说说**省钱**。
+Cuối cùng, chọn tới chọn lui chỉ còn **tự học**. Nhưng **luyện tiếng Anh** dường như không liên quan trực tiếp **sản xuất**, **bán hàng**, **đầu tư**, vậy **học làm gì**? Ta chưa nói kiếm tiền, hãy nói **tiết kiệm tiền** trước.
 
-从比例上来讲，父母把绝大多数钱都花在孩子身上，尤其是**学习**上，这种现象在全世界都很普遍…… 所谓的**绝大多数钱**，从比例上来看，超过父母总体收入的 *60%* 并不罕见，高达 *80%* 也不稀奇。
+Xét tỷ lệ, cha mẹ tiêu đại đa số tiền cho con, nhất là **học**, một hiện tượng tác giả cho là phổ biến toàn thế giới. Ông cho rằng vượt *60%* tổng thu nhập cha mẹ không hiếm, lên tới *80%* cũng không lạ.
 
-当我们说**一年内至少一千小时的注意力投入**去**练英语**的时候，核心不只是**英语**本身 —— 因为，实际上你用同样的方式练任何语言，或者练任何其它技能都一样的 —— 在这过程中，学得更多、练得更多，体会得更深的，其实是**自学**，是**自学能力**的养成与发展。
+Khi nói **dành ít nhất một nghìn giờ chú ý trong một năm** để **luyện tiếng Anh**, cốt lõi không chỉ là tiếng Anh. Thực ra luyện ngôn ngữ hay kỹ năng khác theo cùng cách cũng vậy. Trong quá trình đó, thứ ta học, luyện và thấu hiểu nhiều hơn là **tự học**, là sự hình thành và phát triển **năng lực tự học**.
 
-如果你作为父母，竟然真正拥有自学能力，你的孩子哪怕仅仅通过耳闻目染也会拥有相对更强的自学能力，更何况，这个训练本身，从一开始就可以全家人一起做。只要孩子有一定的自学能力，那么，父母在孩子身上花的钱，大部分都会省下来，不仅父母省钱，孩子也会恰恰因此长出更多的本事。
+Nếu cha mẹ thực sự có năng lực tự học, con chỉ qua quan sát, nghe thấy cũng sẽ có năng lực tương đối mạnh hơn. Huống chi từ đầu cả nhà đã có thể cùng tập. Chỉ cần con có năng lực tự học nhất định, phần lớn tiền cha mẹ chi cho con sẽ được tiết kiệm; cha mẹ bớt tiền, con lại nhờ đó phát triển thêm năng lực.
 
-父母拼命赚钱花在孩子身上的一个**副作用**或者**负作用**，就是孩子不断**降智** —— 天下一切的**本事**，原本都只能在**遇到问题解决问题**的过程中**发展**出来，可是，绝大多数父母**拼命赚钱花在孩子身上**的结果，就是**遇到问题解决问题的**从来都是父母而绝对不是孩子。那些孩子原本应该遇到的问题，都被父母花钱解决了…… 至于是**真解决**了还是**假解决**了，往往并不知道 —— 真相总是很容易被掩盖。
+Theo tác giả, một **tác dụng phụ**, hay **tác dụng tiêu cực**, của việc cha mẹ kiếm tiền cật lực để chi cho con là con liên tục **suy giảm trí lực**. Mọi năng lực vốn chỉ **phát triển** qua **gặp và giải quyết vấn đề**. Nhưng kết quả của đa số cha mẹ làm vậy là người gặp, giải quyết vấn đề luôn là cha mẹ, tuyệt đối không phải con. Những vấn đề con đáng ra gặp đều được cha mẹ dùng tiền giải quyết. **Giải quyết thật** hay **giả**, thường không biết, vì sự thật dễ bị che lấp.
 
-原本遇到问题的是孩子，那可原本是他们**长本事**的机会，结果，机会被剥夺的同时，问题却实际上并未解决，但又误以为已经解决了，问题的积累与误解不断扩大，甚至连幻觉也在跟着不断扩大，到最后，神仙都没办法 —— 这绝对不是危言耸听，最终的恶果，在绝大多数人 15 岁左右的时候就会显现，就会爆发，并且只能一发不可收拾。
-让我们简单算一笔账。假设夫妻二人的年收入是 30 万元人民币…… 那么，小学、初中、高中，12 年下来，平均每年在孩子身上花的钱，按 60% 计算，大约应该是 18 万。这其中，大约 60% 是花在各种**校外辅导**上的 —— 基础教育费用，事实上并不太高，因为全世界都一样，高中毕业之前，毕竟绝大部分是**义务教育** —— 那么，大约应该是 *10.8* 万元，12 年下来，总计是 *129.6* 万元…… 若是孩子有真正的自学能力，不说这些全都省下来吧，起码其中的 *80%* 能省下来，算一下，就是 *103.68* 万。
+Vấn đề vốn thuộc về con, vốn là cơ hội **phát triển năng lực**. Kết quả là cơ hội bị tước, vấn đề thực ra chưa giải quyết nhưng lại tưởng xong. Vấn đề và hiểu lầm tích lũy, cả ảo tưởng cũng lớn lên, cuối cùng thần tiên cũng chịu. Tác giả khẳng định đây không phải dọa suông: hậu quả xấu sẽ hiện và bùng phát với đại đa số quanh tuổi 15, rồi không kiểm soát nổi.
 
-而你的**投资成本**呢？主要根本不是**钱**，也不仅仅是**时间**，而是**注意力**，只有时间成本没有金钱成本的**注意力**。一年内至少一千小时的注意力投入** —— 并且，还是你们夫妻二人中的某一个就可以。所以，在金钱上，几乎是零投入，而相对可能的收益呢？也许是 *103.68* 万，并且，还相当于是**一年之内赚出来**或者**一年之内攒出来**的 —— 那可是年收入 30 万的夫妻两人不吃不喝三年都赚不到更攒不下来的钱！打工也好、创业也罢，这样的投资收益很惊人吧？不算不知道，一算吓一跳。
+Hãy tính đơn giản. Giả sử thu nhập năm của hai vợ chồng là 300.000 nhân dân tệ. Qua 12 năm tiểu học, trung học cơ sở và trung học phổ thông, lấy 60% thì bình quân mỗi năm chi cho con khoảng 180.000. Trong đó khoảng 60% cho **học thêm ngoài trường**, tức 108.000 mỗi năm, tổng 12 năm là *1.296.000*. Tác giả lý giải chi phí giáo dục cơ bản không quá cao vì cho rằng khắp thế giới phần lớn thời gian trước khi hết phổ thông đều là giáo dục bắt buộc. Nếu con thực sự tự học được, chưa nói tiết kiệm tất cả, ít nhất tiết kiệm *80%*, tức *1.036.800 nhân dân tệ*.
 
-到最后，**投资收益**可不只是**一年干出一百万**那么简单。你变成了**双语使用者** —— 甚至你的第一语言变成了英语。你也好孩子也罢，甚至你的另一半，都**长了见识**，亲眼目睹了健脑的真相和效果，你拥有了真正的**自学能力**，他们也在不知不觉之中迈过了最大的门槛
+Còn **chi phí đầu tư** của bạn? Chủ yếu không phải tiền, cũng không chỉ thời gian, mà là **sự chú ý**, thứ tác giả xem là chỉ tốn thời gian, không tốn tiền. **Ít nhất một nghìn giờ chú ý trong một năm**, chỉ cần một trong hai vợ chồng làm. Như vậy gần như không bỏ tiền, còn lợi ích tương đối có thể là *1.036.800*, lại như thể **kiếm hoặc tích cóp trong một năm**. Đó là khoản hai vợ chồng thu nhập năm 300.000, không ăn uống trong ba năm cũng chưa kiếm được, càng chưa để dành được. Đi làm hay khởi nghiệp, lợi suất như vậy rất đáng kinh ngạc? Không tính không biết, tính mới giật mình.
 
-如果你的孩子被你影响 —— 如果你真做了，他们必然全方位受到影响 —— 那么，他们也会成为**多语使用者**，至少是**双语使用者**。无数的研究表明，**多语使用者**相对有更强的思考能力、学习能力、解决问题能力、组织能力管理能力，甚至连罹患老年痴呆的风险都会因此降低很多。从大脑结构上来看，他们的灰质相对密度更高、体积更大，而白质覆盖面积也更广。
+Cuối cùng, **lợi ích đầu tư** không chỉ đơn giản là **một năm tạo ra một triệu**. Bạn thành **người dùng hai ngôn ngữ**, thậm chí tiếng Anh thành ngôn ngữ thứ nhất. Bạn, con và cả bạn đời đều mở mang, tận mắt thấy điều tác giả gọi là sự thật và tác dụng rèn não. Bạn có năng lực tự học thực sự; họ cũng âm thầm vượt ngưỡng lớn nhất.
 
-更为重要的是，无数调查都表明，**多语使用者**的收入比**单语使用者**高，终其一生，起码会高出 *30%*…… 你估算一下你的孩子会有多少终生收入吧，再乘以 30%，那就是你用**一年内至少一千小时的注意力投入**可以为你的孩子额外赚到的金额…… 如果你再多生几个，那你就再算算？
+Nếu con chịu ảnh hưởng từ bạn, mà nếu thực sự làm thì theo tác giả con tất yếu chịu ảnh hưởng toàn diện, con cũng thành **người đa ngữ**, ít nhất **song ngữ**. Tác giả khẳng định vô số nghiên cứu cho thấy người đa ngữ có năng lực suy nghĩ, học, giải quyết vấn đề, tổ chức, quản lý mạnh hơn, thậm chí giảm nhiều nguy cơ sa sút trí tuệ khi già. Về cấu trúc não, ông nói chất xám có mật độ, thể tích lớn hơn, chất trắng phủ diện tích rộng hơn.
 
-用金钱刺激自己，总是相当有效的。说来好笑，所谓的**用金钱刺激自己**，只不过是**算个假账**而已。
+Quan trọng hơn, tác giả khẳng định vô số khảo sát cho thấy thu nhập người đa ngữ cao hơn người đơn ngữ ít nhất *30%* suốt đời. Hãy ước tính thu nhập cả đời của con, nhân 30%: đó là tiền bạn có thể kiếm thêm cho con bằng **một nghìn giờ chú ý trong một năm**. Nếu sinh thêm vài con thì tính tiếp xem?
 
-不止金钱，还有很多。比如，你的一年努力，换来的肯定包括金钱买不来的**尊重**。人就是这样，自己做不到的事情，别人做到了，只能选择尊重。外人就算了，赢得另一半的尊重很重要，会使夫妻关系更为亲密；赢得孩子的尊重更重要，父母的**尊重**若是通过行动**赢**来的，孩子就不存在什么**叛逆** —— 天下一切的所谓**叛逆**，其实是**父母不值得孩子尊重**作为底色展现出来的光怪陆离而已，难道不是吗？**干上一年就能换来子女对自己终生的尊重** —— 请问，值不值？
+Theo tác giả, dùng tiền kích thích mình luôn khá hiệu quả. Buồn cười là cái gọi là **dùng tiền kích thích mình** chỉ là **làm phép tính giả định**.
 
-如果你真的有什么技能，能做到**轻松超越九成以上的人群** —— 诀窍很简单啊，就是那句话，**一年内至少一千小时的注意力投入** —— 你整个人的**气质**都会变的。首先来自于别人对待你的态度，而后来自于你的**自信** —— 关键在于，你的**自信**不可能是**自负**，因为它是有成绩支撑的。没有实际支撑的时候，自信很可笑，但，众技傍身的你，由里至外地自信，为什么不呢？弄不好，你还得刻意低调呢 —— 为了让别人更舒服一点。淡定的表情，聚焦的眼神，舒展的动作，从容的态度，这样的神态其实都是自然发生的，装是装不出来的。外界越来越不重要，建设大脑皮层是你最喜欢干的事情……
+Không chỉ tiền, còn nhiều thứ. Chẳng hạn một năm nỗ lực chắc chắn mang lại **sự tôn trọng** mà tiền không mua được. Con người là vậy: điều mình không làm được mà người khác làm được thì chỉ còn tôn trọng. Người ngoài chưa bàn, được bạn đời tôn trọng quan trọng vì giúp vợ chồng gần gũi; được con tôn trọng còn quan trọng hơn. Theo tác giả, nếu cha mẹ **giành được sự tôn trọng bằng hành động**, con không có cái gọi là **nổi loạn**. Ông xem mọi nổi loạn là đủ dạng biểu hiện trên nền cha mẹ không đáng được con tôn trọng. **Làm một năm đổi lấy sự tôn trọng cả đời của con**, có đáng không?
 
-再让我们看看如何调用**恐惧**作为底层驱动。其实很简单：
+Nếu có kỹ năng nào đó giúp bạn **dễ vượt hơn 90% mọi người**, mà theo tác giả bí quyết chỉ là **một nghìn giờ chú ý trong một năm**, cả **phong thái** sẽ đổi. Trước hết do thái độ người khác, rồi do **tự tin**. Mấu chốt là tự tin không thể là tự phụ vì có thành tích chống lưng. Không có gì thực tế hỗ trợ, tự tin thật buồn cười; nhưng có nhiều kỹ năng, sao không tự tin từ trong ra ngoài? Có khi còn phải cố kín đáo để người khác thoải mái hơn. Vẻ điềm tĩnh, ánh mắt tập trung, cử động tự nhiên, thái độ ung dung đều tự xuất hiện, không diễn được. Bên ngoài ngày càng ít quan trọng, xây dựng vỏ não trở thành việc bạn thích nhất.
 
-> 想尽一切办法让自己相信练不好还不如死了算了……
+::: warning Ghi chú biên tập về đoạn tự đe dọa trong nguyên tác
+Đoạn tiếp theo được giữ để phản ánh đầy đủ phương pháp tác giả đã đề xuất. **Bản Việt hóa không khuyến nghị dùng lời đe dọa cái chết hoặc tự hạ thấp bản thân làm động lực học.** Không có căn cứ trong bài để coi cách này là phương pháp tốt nhất cho não. Với mục tiêu học tiếng Anh, có thể dùng lời nhắc như “Hôm nay luyện một việc nhỏ, ghi nhận tiến bộ và nghỉ khi cần”. Câu thay thế này là đề xuất biên tập, không phải lời nguyên tác.
+:::
 
-大脑最怕死了，只要有死亡威胁存在，它就会不惜不断抬高**安全阈值**，直至摆脱死亡威胁。这是我们完全无法改变的大脑运行机制，与其受其限制，不如反过来好好利用这个机制。把 “**\_\_\_\_ 练不好就得死！**” 这样一个填空句式完成，打印出来放在每天一睁眼就能看到的地方，甚至打印多份，或者干脆用这句话给[手机](/images/iPhone-wp.png)和[手表](/images/iWatch-wp.png)都做个壁纸…… 说来格外好笑，大脑很好骗的！只要重复次数多了，它就只能选择相信。
+Tác giả tiếp tục đề nghị dùng **nỗi sợ** làm động lực nền tảng. Ông viết:
 
-![](/images/iPhone-wp.png)
+> Tìm mọi cách khiến mình tin rằng nếu luyện không tốt thì thà chết còn hơn.
 
-除了不断强化动机之外，我们还需要时不时进行**自我鼓励** —— 不能总是等别人来鼓励我们，对吧？自我鼓励的最佳方式，可能会出乎很多人的意料，其实是**不择手段地鼓励他人** —— 简单得很。
+Theo giải thích của ông, não sợ chết nhất; chỉ cần có đe dọa tử vong, nó sẽ liên tục nâng **ngưỡng an toàn** đến khi thoát đe dọa. Ông coi đây là cơ chế không thể thay đổi, nên thay vì bị giới hạn hãy tận dụng. Nguyên tác đề xuất điền khẩu hiệu **“Không luyện tốt ____ thì phải chết!”**, in ra để nơi thấy ngay lúc mở mắt mỗi ngày, thậm chí in nhiều bản hoặc dùng làm hình nền [điện thoại](/images/iPhone-wp.png) và [đồng hồ](/images/iWatch-wp.png). Tác giả kết rằng não dễ bị lừa: lặp đủ nhiều thì nó chỉ còn cách tin.
 
-每个人都需要鼓励，但，鼓励总是稀缺的，所以，任何时候不择手段地鼓励他人都是正确的，多多益善。鼓励的本质是推动被鼓励者去完成**不相信**或者**不敢相信**的目标。你鼓励他人一次，在对方尚未做到的情况下，他们对可能性依然是存疑的 —— 这就是为什么大多数情况下大多数鼓励并不起作用的根本原因。然而，你不断鼓励他人的结果是**自己重复的次数足够多之后自己的大脑提前相信**了…… 你说，鼓励他人的最大受益者到底是谁？鼓励他人的最大受益者竟然是自己。
+![Ảnh khẩu hiệu tiếng Trung trong nguyên tác, giữ để đối chiếu; không phải lời nhắc học được bản Việt hóa khuyến nghị](/images/iPhone-wp.png)
+
+Ngoài củng cố động cơ, ta còn cần thường xuyên **tự khích lệ**, không thể cứ chờ người khác, đúng không? Theo tác giả, cách tự khích lệ tốt nhất có lẽ ngoài dự đoán: **bằng mọi cách khích lệ người khác**, rất đơn giản.
+
+Ai cũng cần khích lệ, nhưng khích lệ luôn khan hiếm, nên theo tác giả, bất cứ lúc nào, bằng mọi cách khích lệ người khác đều đúng, càng nhiều càng tốt. Bản chất là thúc đẩy người được khích lệ hoàn thành mục tiêu họ **không tin** hoặc **không dám tin**. Khích lệ một lần, khi chưa làm được, họ vẫn nghi ngờ khả năng, điều tác giả coi là lý do căn bản khiến đa số lời khích lệ không có tác dụng. Nhưng liên tục khích lệ người khác khiến **não của chính mình tin trước sau đủ số lần lặp**. Vậy người hưởng lợi lớn nhất là ai? Hóa ra là chính mình.
+
+::: info Ghi chú biên tập cho người học Việt Nam
+Phép tính tiền giữ đầy đủ giả định và đơn vị nhân dân tệ của nguyên tác: 300.000 × 60% × 60% × 12 × 80% = 1.036.800. Nó không chứng minh khoản tiết kiệm thật, không phải lợi nhuận nhận trong một năm, và không đại diện chi phí giáo dục Việt Nam. Tỷ lệ chi cho con, học thêm, mức tiết kiệm 80% cùng khẳng định thu nhập suốt đời tăng tối thiểu 30% không có nguồn khảo sát cụ thể kèm theo. Không dùng chúng để quyết định chi tiêu hoặc sinh thêm con.
+
+Các kết luận chi tiền cho con làm giảm trí lực, hậu quả tất yếu ở tuổi 15, một năm học đổi lấy tôn trọng cả đời hoặc mọi nổi loạn đều do cha mẹ không đáng tôn trọng là đánh giá của tác giả, không phải kết luận tâm lý học được chứng minh trong bài. Một nghìn giờ cũng không bảo đảm vượt 90% dân số. Mục tiêu của bản Việt hóa là hỗ trợ học tiếng Anh, không dùng thành tích học để định giá một người hoặc gia đình.
+
+Các mô tả cấu trúc não cần đọc cùng [ghi chú về hình ảnh não](../in-the-brain/03-sports.md). Media khẩu hiệu gốc còn trong danh mục kiểm tra; giữ tham chiếu không có nghĩa nội dung ấy đã được chuyển thành học liệu khuyến nghị cho người Việt.
+
+Cần phân biệt việc triệu chứng hoặc chẩn đoán sa sút trí tuệ xuất hiện trễ với giảm nguy cơ mắc bệnh. [NIA về song ngữ và dự trữ nhận thức](https://www.nia.nih.gov/research/dn/workshops/workshop-bilingualism-and-cognitive-reserve-and-resilience) nêu các gợi ý từ nghiên cứu hồi cứu cùng nhu cầu đo lường chặt chẽ và khảo sát nhiều nhóm hơn. Không coi học hai ngôn ngữ là bảo đảm phòng bệnh hoặc khiến mọi năng lực nhận thức đều cao hơn.
+
+[Nghiên cứu của Azam, Chin và Prakash](https://www.iza.org/publications/dp/4802/the-returns-to-english-language-skills-in-india) dùng dữ liệu Ấn Độ năm 2005, ghi nhận chênh lệch lương giờ trung bình 34% ở nam nói tiếng Anh thành thạo và 13% ở nam nói được chút ít, khác nhau theo tuổi và học vấn. Kết quả ấy không chứng minh mọi người đa ngữ tăng thu nhập cả đời ít nhất 30%, cũng không chứng minh một nghìn giờ học của cha mẹ tạo ra khoản lợi đó cho con.
+:::

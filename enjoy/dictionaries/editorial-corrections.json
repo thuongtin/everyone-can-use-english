@@ -1,0 +1,15 @@
+{
+  "en-vi": {
+    "learn": {
+      "replaceGlosses": {
+        "; (đùa cợt), guộc duỵu âm phâng nội động từ.": "Dạy, chỉ dạy (cách dùng không chuẩn hoặc phương ngữ)."
+      },
+      "ipa": [
+        {"text": "/lɜːn/", "labels": ["Anh, Received Pronunciation"]},
+        {"text": "/lɝn/", "labels": ["Mỹ, General American"]}
+      ],
+      "note": "Ghi chú biên tập: đã sửa một nghĩa bị lỗi chữ và nhãn IPA Mỹ trong bản trích xuất, đối chiếu Wiktionary tiếng Anh ngày 05/09/2026.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/learn#English"
+    }
+  }
+}

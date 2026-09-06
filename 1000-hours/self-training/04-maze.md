@@ -1,66 +1,72 @@
-# 4. 走出迷宫
+# 4. Thoát khỏi mê cung
 
-这世界绝大多数真正有用的知识本质上都是网络结构，每个知识要点就是大大小小的网络中的一个又一个的节点。网络中的节点越多网络结构就越复杂，当然很可能也因此网络更有价值。
+Đại đa số kiến thức thực sự hữu ích trên đời về bản chất có cấu trúc mạng. Mỗi điểm kiến thức là một nút trong các mạng lớn nhỏ. Càng nhiều nút, cấu trúc càng phức tạp, và rất có thể vì vậy mạng càng có giá trị.
 
 ::: info
 
-[**梅特卡夫定律**](https://zh.wikipedia.org/?curid=1777483)：网络的价值与网络中的节点数量的平方成正比。
+[**Định luật Metcalfe**](https://zh.wikipedia.org/?curid=1777483): giá trị mạng tỷ lệ với bình phương số nút trong mạng.
 
 :::
 
-当人类需要记录甚至传播知识的时候，总是面临一个不可回避的问题：
+Khi cần ghi lại hoặc truyền bá kiến thức, con người luôn gặp một vấn đề không thể tránh:
 
-> 知识是网络的，语法是树状的，文字是线性的。
+> Kiến thức có dạng mạng, ngữ pháp có dạng cây, chữ viết có dạng tuyến tính.
 
-斯蒂芬·阿瑟·平克（Steven Arthur Pinker）说，“**写作之难，在于将网状的思想，通过树状的语法，用线性的文字展开……**”
+Steven Arthur Pinker nói, theo lời trích trong nguyên tác: **“Cái khó của viết là triển khai tư tưởng dạng mạng, qua ngữ pháp dạng cây, bằng chữ viết tuyến tính.”**
 
-这有点像什么呢？这就好像是在二维的平面上绘制三维的物体…… 一不小心就可能看起来像是那种[不可能图形](https://en.wikipedia.org/wiki/Impossible_object)……
-> <img src="/images/inb.svg" style="width: 10%;" /> <br />这是我多年前设计的一个 Logo。由于故意未使用虚线表示透视效果，你可能会看到两个方向的拱门，一会儿看起来像是朝向左下角，过一会看起来又像是朝向右上角……
+Điều này giống gì? Giống vẽ vật thể ba chiều trên mặt phẳng hai chiều. Sơ ý một chút, nó có thể trông như [hình bất khả thi](https://en.wikipedia.org/wiki/Impossible_object).
 
-当我们在二维的纸面上勾画三维世界的时候，如果不借助一下其它手段的话 —— 比如用虚线、阴影、以及形状的变化去构建透视效果 —— 就很容易令人产生这种错觉。
+> <img src="/images/inb.svg" style="width: 10%;" /> <br />Đây là logo tôi thiết kế nhiều năm trước. Vì cố ý không dùng nét đứt thể hiện phối cảnh, bạn có thể nhìn thấy cổng vòm theo hai hướng: lúc hướng xuống trái, lúc lại hướng lên phải.
 
-所以，虽然写作的难度很高，但，相比来看，弄不好阅读理解的难度更高。网络就好像是一个迷宫，节点越多，迷宫越复杂。而书籍就好像是读者手里用来探索迷宫的地图…… 可万一如果读者看到的是个**不可能路径**，又如何是好？有的时候，也许只是作者不小心，忘记了借用一些手段避免这种情况。可另外还有一些时候，这种情况无论如何都不可避免 —— 说实话这种情况还挺常见。
+Khi phác thế giới ba chiều trên giấy hai chiều mà không dùng cách hỗ trợ, như nét đứt, bóng đổ hoặc thay đổi hình dạng để tạo phối cảnh, ta dễ tạo ảo giác như vậy.
 
-越复杂越系统的知识书籍里总是充斥着越多**前置引用** —— 即，提前使用目前尚未定义清楚需要在后面深入阐释的概念；比如，在第三章里出现的概念，实际上需要在第十二章进一步讲解才能真正深入理解。越是高级越是实用的知识与技能越是如此。
+Vì thế, viết đã khó nhưng đọc hiểu có khi còn khó hơn. Mạng giống mê cung, càng nhiều nút càng phức tạp. Sách giống tấm bản đồ người đọc cầm để khám phá mê cung. Nhưng nếu người đọc thấy một **đường đi bất khả thi** thì sao? Đôi khi chỉ vì tác giả sơ ý quên dùng cách hỗ trợ để tránh tình trạng ấy. Nhưng cũng có lúc dù làm gì vẫn không tránh được; nói thật, chuyện này khá thường gặp.
 
-几乎所有的语法书里都有大量的前置引用存在 —— 只因为自然语言的天然复杂程度。计算机书籍里这种情况也很普遍 —— 人工语言的复杂程度并没有相对自然语言更低。即便是我们那仅有 2 万字左右的简明语音教程，也有大量的前置引用 —— 别看英语音素 50 个都不到，不仅细节很多，相互影响还不少……
+Sách về kiến thức càng phức tạp, có hệ thống càng chứa nhiều **dẫn chiếu tới phần sau**: dùng trước khái niệm hiện chưa được định nghĩa rõ, phải giải thích sâu ở phía sau. Chẳng hạn khái niệm xuất hiện ở chương ba nhưng phải đến chương mười hai mới thực sự hiểu sâu. Kiến thức, kỹ năng càng cao cấp và thực dụng càng như vậy.
 
-网络的特征之一就是节点之间的通路不止一条。可问题在于，我们的限制不仅来自于我们只能线性地理解用树状的语法所描述的网络，更大的限制来自于我们的**注意力**也好**时间**也罢，都不仅都是**线性**并且还同时具备**排他性**，导致我们永远一次只能尝试一条通路。也就是说，我们只能投入多倍的时间精力在遍历所有路径之后才能确认最佳路径 —— 在遇到**不可能路径**的时候，尤为如此。
+Gần như mọi sách ngữ pháp đều có nhiều dẫn chiếu kiểu ấy, chỉ vì ngôn ngữ tự nhiên vốn phức tạp. Sách máy tính cũng rất phổ biến, vì ngôn ngữ nhân tạo không kém phức tạp hơn ngôn ngữ tự nhiên. Ngay giáo trình phát âm ngắn gọn chỉ khoảng 20.000 chữ của chúng ta cũng có nhiều dẫn chiếu tới phần sau. Đừng thấy âm vị tiếng Anh chưa tới 50 mà nghĩ ít: chi tiết nhiều, ảnh hưởng lẫn nhau cũng nhiều.
 
-自学的最基础且最重要的习惯之一就是：
+Một đặc điểm của mạng là giữa các nút không chỉ có một đường. Nhưng giới hạn của ta không chỉ ở việc phải hiểu tuyến tính một mạng được mô tả bằng ngữ pháp dạng cây. Giới hạn lớn hơn là cả **sự chú ý** lẫn **thời gian** không chỉ **tuyến tính** mà còn có tính **loại trừ**, khiến ta mỗi lần chỉ thử được một đường. Nghĩa là phải bỏ nhiều lần thời gian, công sức để đi qua mọi đường mới xác định được đường tốt nhất, nhất là khi gặp **đường đi bất khả thi**.
 
-> **反复阅读教材……**
+Một trong những thói quen tự học cơ bản và quan trọng nhất là:
 
-这就好像好电影值得反复看一样 —— 很多细节在第一遍看的时候要么被忽视，要么被轻视，只有理解了后面的很多内容才会意识到前面有很多重要的线索。重要的教材也是如此，必须反复阅读。
+> **Đọc đi đọc lại giáo trình.**
 
-很多人不明白这个道理，不知道如何应付这种情况，造成的结果是一遍都读不完 —— 殊不知，所谓的难度是因为没读完造成的…… 实际上，如果能把后面的都硬着头皮读完，前面的就好理解了。也就是说，往往并**不是因为难才读不完**，更多是因为**没读完才很难**。
+Giống phim hay đáng xem nhiều lần: nhiều chi tiết lần đầu bị bỏ qua hoặc xem nhẹ; chỉ sau khi hiểu phần sau mới nhận ra manh mối quan trọng ở phần trước. Giáo trình quan trọng cũng vậy, phải đọc nhiều lần.
 
-另外，很多早期所谓的难点，随着第一遍的完成，以及随后重复次数的增加，会自动消失 —— 甚至不需要为它们专门挣扎。因为绝大多数难点本质上来看都是因为前置引用的现象。
+Nhiều người không hiểu điều này, không biết xử lý nên đến một lượt cũng không đọc xong. Họ không biết cái gọi là khó lại do chưa đọc hết. Thực ra, nếu cố đọc hết phần sau thì phần trước dễ hiểu hơn. Nghĩa là thường **không phải vì khó nên không đọc hết**, mà **vì chưa đọc hết nên thấy khó**.
 
-学习计算机编程就是经典案例。编程语言是一种人工语言，词汇量极少 —— 比如，Python 总计就那么几十个关键字（keywords）和操作符（Operators）…… 说实话真的没多难，从结果就看得出来 —— 很多中小学生都能熟练掌握。可它就是难倒了绝大多数人，其中包括很多高学历的人。为什么？怎样才能学会？答案其实很简单，随便哪本教材，反复看很多遍就自然会了 —— 一遍都看不完当然不行。
+Nhiều điểm khó ban đầu còn tự biến mất khi hoàn thành lượt đầu và tăng số lần đọc lại, thậm chí không cần vật lộn riêng với chúng. Vì phần lớn điểm khó, về bản chất, do hiện tượng dẫn chiếu tới phần sau.
 
-> **教材么，看不懂也要读完，然后还要认真读很多遍……**
+Học lập trình là ví dụ điển hình. Ngôn ngữ lập trình là ngôn ngữ nhân tạo, vốn từ rất ít. Python chẳng hạn chỉ có vài chục từ khóa (*keywords*) và toán tử (*operators*). Nói thật, không quá khó; kết quả cho thấy nhiều học sinh tiểu học, trung học đã dùng thành thạo. Vậy mà nó làm khó đại đa số, kể cả nhiều người học vấn cao. Vì sao? Làm thế nào học được? Theo tác giả, câu trả lời rất đơn giản: giáo trình nào cũng vậy, đọc nhiều lần thì tự nhiên biết; một lần còn chưa đọc hết thì tất nhiên không được.
 
- —— 这就是学习一切复杂且又系统的知识的秘诀，虽然简单得要死，却也是绝大多数人终生并未知晓，不知道为什么就算知道了也永远不会实践的公开秘密。这也不是什么今天才有的神技，古人早就慨叹过：读书千遍其义自现…… 只不过，这话谁都听过，但也谁都并不当真而已。
+> **Giáo trình dù chưa hiểu cũng phải đọc hết, rồi còn phải đọc kỹ nhiều lần.**
 
-只要要点足够多且足够杂，就一定会逼退绝大多数人…… 可是，解决它的方法还是一样的，只不过是耐心重复而已。不需要一下子生生地将全部记住，不是你做不到，谁都做不到。但不是做不到，只要肯重复，谁都做得到 —— 通过反复查询反复应用逐步形成系统的记忆。
+Đó là bí quyết học mọi kiến thức phức tạp, có hệ thống. Dù đơn giản vô cùng, nó vẫn là bí mật công khai mà đại đa số cả đời chưa biết, hoặc chẳng hiểu sao biết rồi vẫn không thực hành. Đây cũng chẳng phải kỹ thuật thần kỳ mới xuất hiện hôm nay. Người xưa đã cảm thán: đọc sách nghìn lần, nghĩa tự hiện ra. Chỉ là ai cũng nghe nhưng chẳng coi thật.
 
-一个经典的例子是地图。搬到一个陌生的城市，没有人会尝试一下子记住地图上的所有细节…… 都是需要去哪儿就去查一下，然后尝试记住那一个路径；日积月累，自己需要去的地方就都记住了，还有些没去过的地方，不知道也无所谓。我们对待词典和语法书的方式也是一样的，先去熟悉查询方式，而后需要什么就去查什么，日积月累，该知道的就都知道，该记住的就都记住了。
+Chỉ cần đủ nhiều điểm kiến thức và đủ rối là đã khiến đại đa số lùi bước. Nhưng cách giải quyết vẫn vậy: kiên nhẫn lặp lại. Không cần lập tức ghi nhớ tất cả; không phải riêng bạn không làm được, chẳng ai làm được. Nhưng không phải mãi không thể: chỉ cần chịu lặp, ai cũng có thể từng bước hình thành trí nhớ có hệ thống qua tra cứu và áp dụng nhiều lần.
 
-学习任何系统且又复杂的知识，都可以把它想象为一个游戏，探索迷宫游戏。这很可能是世间最有趣的游戏之一，弄不好也是我们可以用来锻炼脑力的最佳实践活动。不要误以为自己暂时被卡住了或者暂时被难倒了是坏事，恰恰相反，那只能是好事。因为我们所有的本事，都是被困难逼出来的 —— 没有困难，我们就不用挣扎，不用挣扎就没有机会长出新本事。
+Bản đồ là ví dụ điển hình. Chuyển đến thành phố lạ, không ai cố nhớ ngay mọi chi tiết bản đồ. Cần đi đâu thì tra, rồi thử nhớ đường ấy. Ngày qua ngày, nơi cần đến đều nhớ, còn vài nơi chưa đi thì không biết cũng chẳng sao. Với từ điển và sách ngữ pháp cũng vậy: trước hết làm quen cách tra, cần gì tra nấy, tích lũy dần thì điều cần biết sẽ biết, điều cần nhớ sẽ nhớ.
 
-为了在自己的大脑里构建一个能够摆脱线性文字束缚的立体地图，我们需要借助很多手段，就好像在二维纸面上要用虚线或者阴影那样。我们需要自己反复归纳整理那些繁杂且有相互关联的概念，可能要按照自己更容易理解的方式重新描述、重新分类，甚至还可能需要从多个角度反复如此操作，甚至，有必要的话，干脆自己尝试着写出更好的教材……
+Học bất kỳ kiến thức phức tạp, có hệ thống nào cũng có thể hình dung thành trò chơi khám phá mê cung. Có lẽ đây là một trong những trò thú vị nhất, cũng có thể là hoạt động thực hành tốt nhất để rèn trí lực. Đừng tưởng tạm mắc kẹt hay gặp khó là chuyện xấu; ngược lại, đó chỉ có thể là điều tốt, vì mọi năng lực của ta đều do khó khăn thúc đẩy. Không khó thì không cần vật lộn, không vật lộn thì không có cơ hội mọc thêm năng lực.
 
-掌握任何一项新技能，都是探索迷宫走出迷宫的游戏。在这个过程中，掌握的不仅仅是那系统且又复杂的知识，与此同时，探索迷宫的能力也在不断积累不断发展 —— 以后可以更轻松地探索其它的迷宫，甚至，只有这样才可能有资格去探索更庞大更复杂的迷宫。
+Để xây trong đầu một bản đồ có chiều sâu, vượt ràng buộc của chữ viết tuyến tính, ta cần nhiều cách hỗ trợ, giống dùng nét đứt và bóng trên giấy hai chiều. Ta cần tự tổng hợp, sắp xếp nhiều lần các khái niệm phức tạp, liên quan lẫn nhau. Có thể phải mô tả, phân loại lại theo cách mình dễ hiểu hơn, làm nhiều lần từ nhiều góc, thậm chí nếu cần thì tự thử viết giáo trình tốt hơn.
 
-在学校里，这些工作被认为是老师的责任…… 探索迷宫的，只有老师 —— 他们的自然定位就是向导。学生们呢？就好像天然是旅行团里的游客，之所以付钱就是为了购买向导的服务 —— 倒也省心，只要听从向导的安排就好了……
+Nắm một kỹ năng mới đều là trò khám phá và thoát mê cung. Trong quá trình ấy, ta không chỉ nắm kiến thức phức tạp, có hệ thống mà còn tích lũy, phát triển năng lực khám phá. Về sau sẽ dễ khám phá mê cung khác hơn; thậm chí chỉ bằng cách ấy mới đủ khả năng bước vào mê cung lớn, phức tạp hơn.
 
-这也有点像过去有些家长喜欢帮孩子把食物嚼碎了再喂一样。一方面孩子失去了锻炼咀嚼的机会，另外一方面还有可能把病菌传染给孩子 —— 更气人的是什么呢？事实上，那么做的结果是，食物的营养大半都被大人在咀嚼的过程中自己吸收了，而喂到小孩子嘴里的，其实过半都是没啥营养的渣子而已。于是，老师们越教越会，学生们倒是越学越差 —— 这其实是差不多从一开始就注定的结果。
+Ở trường, những việc ấy được coi là trách nhiệm giáo viên. Chỉ giáo viên khám phá mê cung, vì vai trò tự nhiên của họ là người dẫn đường. Còn học sinh giống du khách trong đoàn: trả tiền để mua dịch vụ hướng dẫn, khá nhàn vì chỉ cần làm theo sắp xếp của người dẫn.
 
-这当然需要耐心 —— 耐心是一种习惯，需要不断积累且不断呵护的习惯。比耐心更重要的更基础的是另外一个习惯：主动。主动的背后，主要由两层结构：
+Điều này hơi giống một số cha mẹ xưa thích nhai thức ăn trước rồi đút cho con. Một mặt trẻ mất cơ hội tập nhai, mặt khác còn có thể bị lây mầm bệnh. Điều gì khiến người ta bực hơn? Theo khẳng định trong nguyên tác, phần lớn dinh dưỡng đã được người lớn hấp thụ lúc nhai, còn đưa vào miệng trẻ thì hơn nửa chỉ là bã ít dinh dưỡng. Từ phép ví ấy, tác giả kết luận giáo viên càng dạy càng biết, học sinh càng học càng kém, gần như là kết quả định sẵn từ đầu.
 
-> * 的确有问题需要解决
-> * 认定自己有能力通过学习掌握解决问题的方法
+::: info Ghi chú biên tập cho bản tiếng Việt
+Nhai phân nhỏ thức ăn và bắt đầu tiêu hóa một phần tinh bột; phần lớn chất dinh dưỡng được hấp thụ ở ruột non sau đó. Vì vậy, nói người lớn hấp thụ phần lớn dinh dưỡng ngay lúc nhai, còn trẻ chỉ nhận bã, là không đúng về sinh lý. Xem [NIDDK về hoạt động hệ tiêu hóa](https://www.niddk.nih.gov/health-information/digestive-diseases/digestive-system-how-it-works). [CDC ghi nhận nguy cơ truyền tác nhân gây bệnh qua nhai mớm](https://www.cdc.gov/mmwr/preview/mmwrhtml/mm6009a2.htm), nhưng đó là vấn đề khác với lập luận mất dinh dưỡng. Phép ví này cũng không chứng minh học sinh tất yếu kém đi khi được giáo viên hỗ trợ. Đọc lại có thể giúp hiểu các liên hệ, nhưng không tự thay thế thực hành, tự kiểm tra và phản hồi. Xem [hướng dẫn học và ghi nhớ của IES](https://ies.ed.gov/ncee/wwc/PracticeGuide/1).
 
-谁没有问题要解决呢？都有。所以，第一层比较好办，大多数人毁在第二层上。多年所谓教育的荼毒，以及多少因此而累积的挫败，逐步使绝大多数人误以为自己根本没有能力通过学习掌握解决问题的方法。在此之上叠加的是时间流逝带来的紧迫感，他们更需要的是不择手段地马上解决问题 —— 当然那肯定只能是痴心妄想 ——而不是那种需要投入金钱、时间以及注意力才能够获得的解决方案。
+Định luật Metcalfe ở đây là mô hình tác giả mượn để nói về mạng kiến thức, không phải phép đo giá trị của mọi kiến thức. Số 20.000 chữ mô tả giáo trình nguyên tác, không phải số từ của bản dịch tiếng Việt.
+:::
 
+Điều này tất nhiên cần kiên nhẫn. Kiên nhẫn là thói quen cần tích lũy và gìn giữ. Quan trọng hơn, căn bản hơn kiên nhẫn là thói quen khác: chủ động. Đằng sau chủ động chủ yếu có hai tầng:
+
+> * Thực sự có vấn đề cần giải quyết.
+> * Tin rằng mình có thể học để nắm cách giải quyết vấn đề.
+
+Ai không có vấn đề cần giải quyết? Ai cũng có. Vì thế tầng đầu khá dễ; đa số vấp ở tầng thứ hai. Nhiều năm cái gọi là giáo dục gây hại, cùng những thất bại tích lũy từ đó, dần khiến đại đa số tưởng mình không có khả năng học cách giải quyết vấn đề. Chồng lên đó là cảm giác cấp bách vì thời gian trôi. Điều họ cần hơn là bằng mọi cách giải quyết ngay, điều tất nhiên chỉ là mơ tưởng, thay vì phương án phải bỏ tiền, thời gian và sự chú ý mới có được.

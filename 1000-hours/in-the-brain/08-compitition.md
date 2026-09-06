@@ -1,21 +1,25 @@
-# 8. 新旧网络间的竞争
+# 8. Sự cạnh tranh giữa mạng cũ và mạng mới
 
-当我们需要完成一项任务的时候，大脑会检索整个网络内的所有局域网，无论是高级功能局域网，还是基础功能局域网，调用必要的局域网进行组合发挥作用，进而完成任务。
+Khi cần hoàn thành một nhiệm vụ, não tìm trong toàn bộ mạng của mình, từ mạng cục bộ chức năng cấp cao đến mạng cục bộ chức năng cơ sở, gọi những mạng cần thiết để kết hợp và thực hiện nhiệm vụ.
 
-如果完全找不到，那就只能去学了…… 得去新建连接，新建局域网。
+Nếu hoàn toàn không tìm thấy, ta chỉ còn cách học: tạo kết nối mới, tạo mạng cục bộ mới.
 
-这本来并不难，因为大脑从始至终都在做这样的事情，也擅长干这样的事情…… 但，它更擅长干的是另外一件事，还是出自于对节能的渴望和痴迷，它会借用**近似连接**或者**近似网络**，不顾一切地完成任务…… 但准确地说，那不是**完成任务**，而是**近似地完成任务**。
+Việc này vốn không khó, vì não vẫn làm như vậy từ đầu đến cuối và rất giỏi việc ấy. Nhưng còn một việc nó giỏi hơn, cũng xuất phát từ sự khao khát và say mê tiết kiệm năng lượng: mượn **kết nối gần đúng** hoặc **mạng gần đúng**, bằng mọi cách hoàn thành nhiệm vụ. Nói chính xác hơn, đó không phải **hoàn thành nhiệm vụ**, mà là **hoàn thành nhiệm vụ một cách gần đúng**.
 
-为什么？它就是想节能，它就是会不择手段地节能。
+Vì sao? Nó chỉ muốn tiết kiệm năng lượng, và sẽ dùng mọi cách để tiết kiệm.
 
-一项任务如此倒也常常看不出什么…… 但，很多任务都如此就完蛋了，这就好像 $0.8^5 \approx 0.327$ 或者 $0.7^{10} \approx 0.028$ 一样…… 并且，众多任务组合的时候，若是最重要的任务差一点剩下的就往往全都白费了。所以，这种**近似调用**以及**近似完成**的危害就极为可怕。
+Một nhiệm vụ như vậy thường chưa lộ vấn đề. Nhưng nhiều nhiệm vụ đều như vậy thì hỏng, giống như $0.8^5 \approx 0.327$ hay $0.7^{10} \approx 0.028$. Khi kết hợp nhiều nhiệm vụ, nếu nhiệm vụ quan trọng nhất còn thiếu một chút thì phần còn lại thường cũng thành công cốc. Vì thế, tác hại của **gọi dùng gần đúng** và **hoàn thành gần đúng** rất đáng sợ.
 
-调用近似连接、近似网络，近似完成任务，是一种越来越强大的习惯，当它强大到一定地步的时候，就会变成彻底下意识的习惯，自己完全意识不到，并且常常伴随着洋洋自得。
+Gọi kết nối gần đúng, mạng gần đúng để hoàn thành nhiệm vụ một cách gần đúng là thói quen ngày càng mạnh. Đến một mức nào đó, nó trở thành thói quen hoàn toàn tự động, bản thân không nhận ra, lại thường đi kèm sự đắc ý.
 
-这就是绝大多数人的感受，随着岁数的增加，学习变得越来越困难。并不是因为新建连接新建局域网的难度增加了 —— 事实上，应该是越来越容易才对，因为从另外一个层面来看，还有过去建立了现在暂时用不上的连接和局域网能循环利用呢。而是因为旧的近似连接近似局域网的竞争力太大了，并且，在不知不觉中，它们的竞争力还被培养得越来越大。
+Đó là cảm nhận của đại đa số mọi người: tuổi càng cao, học càng khó. Không phải vì tạo kết nối và mạng cục bộ mới khó hơn. Thực ra lẽ ra phải dễ hơn, vì còn có những kết nối và mạng cục bộ đã tạo trước đây, hiện tạm thời chưa dùng, có thể tái sử dụng. Nguyên nhân là các kết nối và mạng gần đúng cũ cạnh tranh quá mạnh; trong lúc không hay biết, ta còn nuôi dưỡng sức cạnh tranh của chúng ngày càng lớn.
 
-人们绝大多数在学习效果上的差异，恨不得 99.99%，其实全都来自于这一个小小的细节，而不是人们通常误以为的所谓天分或者聪明：
+Phần lớn khác biệt về kết quả học tập giữa mọi người, gần như tới 99,99%, thực ra đều đến từ chi tiết nhỏ này, chứ không phải cái gọi là năng khiếu hay trí thông minh như mọi người thường lầm tưởng:
 
-> **能否甄别自己是否正在调用近似连接近似网络？**
+> **Bạn có nhận ra mình đang gọi dùng kết nối và mạng gần đúng hay không?**
 
-只要能够甄别，就能通过努力，即，短时间内足量重复，去新建连接新建网络。但，如果不能甄别，一切就无从谈起。关键在于，这个甄别的动作，99% 的情况下只能靠自己，并且，越是靠自己，那甄别能力就会越来越强。
+Chỉ cần nhận ra, ta có thể nỗ lực, tức lặp lại đủ nhiều trong thời gian ngắn, để tạo kết nối và mạng mới. Không nhận ra thì chẳng còn gì để bàn. Điểm mấu chốt là trong 99% trường hợp, việc nhận biết ấy chỉ có thể dựa vào chính mình; càng tự làm, khả năng nhận biết càng mạnh.
+
+::: info Ghi chú biên tập cho bản tiếng Việt
+“Mạng gần đúng” và sự cạnh tranh được dùng theo mô hình giải thích của tác giả. Nguyên tác không dẫn nghiên cứu xác minh các tỷ lệ 99,99% và 99%, cũng không chứng minh đây là nguyên nhân duy nhất khiến việc học thay đổi theo tuổi. Không dùng các con số ấy để đánh giá năng lực hoặc quy trách nhiệm cho người học. Xem thêm ghi chú về tuổi tác ở [bài 6](./06-use-or-lose.md) và cách phân bố luyện tập ở [bài 7](./07-repitition.md).
+:::

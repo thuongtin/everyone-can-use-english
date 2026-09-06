@@ -1,299 +1,339 @@
-# 第七章 精读
+# Chương 7. Đọc kỹ
 
-## 1. 不老实就肯定吃亏
+## 1. Học không nghiêm túc thì chắc chắn chịu thiệt
 
-做人可以不老实，学习不老实就非常不划算。在这一点上，我算是捡了便宜。
-我的父母从来不吝惜给我买书的钱，于是几乎从记事儿开始，我的主要花销就是买书，直到今天。而在我八九岁的时候，母亲随父亲平反落实政策调动工作，不再做兽医，调到某大学的图书馆工作 —— 于是家里便省下了很多很多买书的钱。从小泡在图书馆里长大，实在是我这一辈子最幸运的事情。
+Sống có thể không thật thà, nhưng học mà không nghiêm túc thì rất không đáng, tác giả nói. Về điểm này, tôi có phần may mắn.
 
-关于读书的态度，我一直感激母亲。很小的时候，有一次坐在那里乱翻书，被母亲看到，她问：“你看什么呢？”
+Cha mẹ tôi chưa bao giờ tiếc tiền mua sách, nên gần như từ lúc biết nhớ, khoản chi chính của tôi đã là sách, cho đến tận khi viết những dòng này. Khi tôi tám hoặc chín tuổi, cùng việc cha được minh oan và thực hiện chính sách khôi phục quyền lợi, mẹ chuyển công tác: không còn làm thú y mà sang thư viện một trường đại học. Nhà vì thế tiết kiệm được rất nhiều tiền mua sách. Lớn lên từ nhỏ giữa thư viện thực sự là điều may mắn nhất đời tôi.
 
-“书呗”，我心不在焉。
+Về thái độ đọc, tôi luôn biết ơn mẹ. Hồi rất nhỏ, có lần đang ngồi lật sách lung tung, mẹ thấy và hỏi: “Con đang xem gì thế?”
 
-“那么翻，你能看懂什么呀？” 母亲好像很随意。
+“Sách chứ gì ạ”, tôi trả lời hờ hững.
 
-我说，“这种书 …… 随便翻翻就行了……”
+“Lật thế thì con hiểu được gì?”, mẹ hỏi như bâng quơ.
 
-母亲顿了一下，过来把我手中的书拿走，扔在桌子上，一字一顿地说：“随便翻翻就行的书，你看它干吗？浪费时间。”
+Tôi nói: “Loại sách này… lật qua thôi là được…”.
 
-我愣了一下，却很快明白了母亲的意思。这句话一下在就刻在我的脑子里，从来不曾忘记。读书，就要读好书。读好书，就不能随便翻翻。所以，这么多年里，无论我读什么，只要认定那是一本值得读的书，我就会精读，并且往往要精读许多遍。后来我也常常跟学生说，好书，不是翻的，是读的 —— 精读（当然，更为文绉绉一点的叫法是 “研读”）。
+Mẹ dừng một chút, bước tới lấy cuốn sách khỏi tay tôi, ném lên bàn rồi nói từng tiếng: “Sách mà lật qua là được thì đọc làm gì? Phí thời gian.”
 
-## 2. 读好书一定要慢
+Tôi sững lại nhưng nhanh chóng hiểu ý mẹ. Câu ấy khắc ngay vào đầu, chưa bao giờ quên. Đọc thì phải đọc sách hay; sách hay không thể chỉ lật qua. Vì vậy bao năm nay, bất kể đọc gì, hễ xác định là sách đáng đọc, tôi sẽ đọc kỹ, thường là kỹ nhiều lần. Sau này tôi cũng hay nói với học sinh: sách hay để đọc chứ không phải để lật; đọc kỹ, hoặc gọi văn vẻ hơn là “nghiên cứu khi đọc”.
 
-读书一定要慢，因为只有慢读才可能细品。读书与赶路不同，对赶路的人来说，几乎只有终点才意味着一切；如果赶路的人流连路边的风景或者纠缠沿途的遭遇，他就可能无法到达终点甚至误入歧途。然而读书却并非如此，如若读书真的是像是赶路一般，那么打开书直接读最后一句话岂不是最好？
+> **Ghi chú biên tập về bối cảnh và phương pháp:** Câu chuyện gia đình và việc minh oan thuộc trải nghiệm của tác giả tại Trung Quốc, không chuyển thành hoàn cảnh Việt Nam. Lời mẹ nhấn mạnh chọn sách và chú tâm; không có nghĩa mọi lần xem lướt mục lục, tìm thông tin hoặc thử một cuốn sách đều vô ích. “Đọc kỹ” trong chương này là cố hiểu nghĩa, cấu trúc và quan hệ ý, rồi kiểm tra lại điều mình hiểu.
 
-好书对一些人来说就好比氧气一般重要。曾经觉得好书难寻。我至今清楚地记得二十年前得知有个叫乔治奥威尔的伟大作者写过一本好书叫《动物农庄》却遍觅不得（那时候这本书是禁书）的极端沮丧。转眼二十年过去，互联网改变了一切。只要读得懂英文，在互联网上可以找得到的好书就根本看不完。
+## 2. Sách hay nhất định phải đọc chậm
 
-甚至你根本不用上什么学习班，找来好书硬啃，是我能想到的最好、最快、最见成效的英语学习方法 —— 尤其在 audiobook 如此丰富的今天，因为我坚信朗读是获得一切语言能力的最根本手段。
+Đọc nhất định phải chậm, theo tác giả, vì chỉ đọc chậm mới có thể thưởng thức kỹ. Đọc khác với đi gấp cho kịp đường: với người đang vội, gần như chỉ đích đến mới là tất cả; nấn ná với cảnh ven đường hoặc vướng vào chuyện dọc đường có thể khiến không tới đích, thậm chí lạc lối. Đọc lại không vậy. Nếu thật giống đi cho tới nơi, chẳng phải mở sách đọc thẳng câu cuối là tốt nhất sao?
 
-身边的朋友总觉得我读书很快，事实上我读书很慢。我从不 “泛读”，因为我觉得一本 “翻翻” 就可以了的书是不值得去读的。我总觉得 “泛读” 只有一种用处：用来粗略地判断拿在手中的书质量如何。二十多岁之后，我发现自己甚至在读小说的时候都喜欢一个字都不放过。遇到措辞考究的作者，阅读过程就更是充满了乐趣。尽管自己写字不喜欢太过考究，但是欣赏他人的精心却很容易让自己产生自己其实也挺考究的幻觉 —— 心知肚明那就是幻觉，然而也知道那是有趣而无害的幻觉。
+Với một số người, sách hay quan trọng như oxy. Tôi từng thấy sách hay khó tìm. Đến lúc viết vẫn nhớ rõ cảm giác chán nản tột độ hai mươi năm trước, khi biết nhà văn vĩ đại George Orwell viết *Animal Farm*, *Trại súc vật*, nhưng tìm khắp không ra vì khi ấy sách bị cấm, theo lời kể của tác giả. Chớp mắt hai mươi năm qua, Internet thay đổi mọi thứ. Chỉ cần đọc hiểu tiếng Anh, sách hay tìm được trên mạng đã nhiều đến mức không thể đọc hết.
 
-之所以读书慢，也乐于慢，是因为当前的大环境可以给我一个 “极端八卦” 的机会。我总是慨叹 “Google + Wikipedia + English = Almost Everything”。看到作者提到某一作品或者另外一个他所敬佩的作者，马上就可以查得到相关信息，一头扎进去给它翻个底朝天才叫一个爽。看到 George Cooper 在 The Origin of Financial Crises: Central Banks, Credit Bubbles, and the Efficient Market Fallacy (Vintage)里提到 Hyman Minsky，马上跑到 Gigapedia 上查，很快就找到 Hyman Minsky 的《John Maynard Keynes》（这本原本已经绝版的书，因为 George Cooper 等人的引用，而由 McGraw-Hill 出版公司于 2008 年 4 月重新出版）。再把前前后后的八卦挖掘一番，已经是三五个小时，却也乐此不疲。
+Thậm chí chẳng cần học khóa nào, tìm sách hay mà cố đọc là cách học tiếng Anh tốt nhất, nhanh nhất, thấy hiệu quả rõ nhất tôi nghĩ ra được, tác giả nói. Đặc biệt ở thời điểm audiobook phong phú như vậy, vì ông tin chắc đọc thành tiếng là phương thức căn bản nhất để có mọi năng lực ngôn ngữ.
 
-读书慢的另外一个重要原因是因为我用很啰嗦的方式记笔记。多年的经验使得我不再相信自己的记忆力，常言道 “好记性不如烂笔头”，笑来说 “记笔记一定用 Google”。摘录原文不再耗费力气（伟大的 Copy/Paste），写下批注，甚至干脆写一整篇文章，加以分类关键字（以便将来搜索），相当耗费时间。但这个时间耗费的值当，不记笔记的人无法理解这种时间精力耗费的合理性，正如不成事儿的人永远不知道事无巨细的道理一样。
+Bạn bè thường tưởng tôi đọc rất nhanh, thực ra tôi đọc chậm. Tôi chưa bao giờ “đọc rộng”, vì cho rằng sách chỉ cần lật qua thì không đáng đọc. Tôi luôn thấy “đọc rộng” chỉ có một công dụng: phán đoán sơ chất lượng cuốn đang cầm. Từ sau tuổi hai mươi, ngay khi đọc tiểu thuyết tôi cũng thích không bỏ sót chữ nào. Gặp tác giả chọn lời kỹ, quá trình càng thú vị. Tuy tự viết không thích quá trau chuốt, thưởng thức sự dụng công của người khác dễ làm tôi tưởng mình cũng tinh tế như vậy. Biết rõ là ảo tưởng, nhưng cũng biết nó vui và vô hại.
 
-好书读一遍是不够的。读书的最大惊喜往往来自反复阅读中的 “偶然” 发现。阅读会刺激思考，思考进而会改变阅读的质量，两者会相辅相成，相生却永不相克。这个过程中几乎可以清楚地体会到多巴胺的分泌，难怪中国古人说 “书中自有颜如玉”，外国人说 “Reading is better than sex”。
+Tôi đọc chậm và thích chậm vì hoàn cảnh lúc ấy cho cơ hội “đào chuyện đến cùng”. Tôi luôn cảm thán “Google + Wikipedia + English = Almost Everything”. Thấy tác giả nhắc một tác phẩm hoặc người viết khác họ kính trọng, có thể tra ngay rồi lao vào tìm cho đến tận đáy, thật đã. Thấy George Cooper nhắc Hyman Minsky trong *The Origin of Financial Crises: Central Banks, Credit Bubbles, and the Efficient Market Fallacy (Vintage)*, tôi chạy ngay sang Gigapedia tra và nhanh chóng tìm thấy *John Maynard Keynes* của Minsky. Theo tác giả, cuốn vốn đã hết in ấy được McGraw-Hill tái bản tháng 4/2008 nhờ George Cooper cùng những người khác nhắc đến. Đào thêm chuyện trước sau, đã ba đến năm giờ trôi qua mà vẫn say mê.
 
-## 3. 人们为什么讨厌精读
+Một lý do quan trọng khác khiến đọc chậm là tôi ghi chú dài dòng. Nhiều năm kinh nghiệm khiến tôi không còn tin trí nhớ của mình. Người xưa nói “trí nhớ tốt không bằng ngòi bút cùn”; Tiếu Lai thì nói “ghi chú nhất định dùng Google”. Trích nguyên văn không còn tốn sức, nhờ Copy/Paste tuyệt vời; nhưng viết bình luận, có khi viết hẳn một bài, thêm từ khóa phân loại để sau này tìm lại, khá tốn thời gian. Theo tác giả, thời gian ấy đáng bỏ: người không ghi chú không hiểu lý do hợp lý của công sức này, như người không làm nên việc chẳng bao giờ hiểu phải quan tâm cả việc lớn lẫn nhỏ.
 
-关于阅读能力的培养，教育设计者原本的意愿和顺序很可能是这样：
+Sách hay đọc một lần chưa đủ. Ngạc nhiên lớn nhất thường đến từ phát hiện “tình cờ” khi đọc lại. Đọc kích thích nghĩ, nghĩ thay đổi chất lượng đọc; hai bên hỗ trợ, sinh ra nhau mà không bao giờ chống nhau, theo tác giả. Trong quá trình ấy gần như cảm thấy rõ dopamine tiết ra; chẳng trách người Trung Quốc xưa nói “trong sách có người đẹp nhan sắc như ngọc”, còn người nước ngoài nói “Reading is better than sex”.
 
-1. 先识字，并识足够多的字（显然常用三千汉字肯定是不够的 —— 对那些了与追求知识的人来说）；
-2. 习得足够多的词汇量；
-3. 学习更多、更复杂的是概念 —— 每一个重要的概念都需要大量的篇幅阐述；
-4. 与此同时习得基本的逻辑运用能力，以便能够更有效地理解组织已知概念及其相关信息；
-5. 通过不断的精读习得更多的概念理念；
-6. 通过大量的泛读扩充补充自己的概念和理念；
-7. 通过实践重新理解重要概念，修正对重要理念的理解；
-8. 精读与泛读相互补充、交互运用……
+> **Ghi chú biên tập về cách áp dụng:** Tác giả dùng “đọc rộng” gần với lật hoặc xem lướt trong đoạn này. Không nên đồng nhất mọi hình thức đọc rộng với đọc qua loa; mục tiêu đọc, độ khó và mức hiểu cần được xét riêng. Các từ “tốt nhất”, “nhanh nhất”, “mọi năng lực” và ý chỉ cần một cách học là niềm tin của ông, không phải bảo đảm kết quả. Cảm giác thích thú không phải phép đo dopamine. Những mốc “hai mươi năm trước”, “ngày nay”, kho Gigapedia và câu chuyện tái bản là bối cảnh khi nguồn được viết, không xác nhận tình trạng truy cập hoặc quyền tải sách hiện hành. Người Việt có thể chọn đoạn vừa sức, tra và ghi câu mình cần, rồi đọc lại; không bắt buộc dùng sản phẩm Google để ghi chú.
 
-但是，基于种种原因，最重要的是因为教育本身就是个太难乃至于难以成功的过程，这个流程中的每个环节都可能出错。
+## 3. Vì sao người ta ghét đọc kỹ?
 
-首先很多人其实并没有识足够多的字（其实对于不断追求知识的人来说，只认得却不会用是相当尴尬的一件事情）；其次很多人也没有习得足够的词汇量—— 尤其是那些貌似简单却随时可能形成各种逻辑陷阱的词汇（比如 “所有”，“任何”，“不是 …… 就是……” 等等）；更可怕的并不是哪一个环节出了差错，而是每个环节都多多少少存在缺陷。
+Theo tác giả, ý định và thứ tự ban đầu của người thiết kế giáo dục khi rèn khả năng đọc có lẽ như sau:
 
-很多的时候，整个扭曲的世界观其实只不过是根植于一两个概念的欠缺或者错误理解 —— 比如 “双盲测试” 或者 “斯德哥尔摩综合症” 就是这样的概念。而其实相当简单的逻辑却是许多人一生搞不懂的东西，“害怕犯错” 进而 “担心受到可怕的惩罚” 是大多数人最终未能掌握逻辑思考能力的唯一根源 —— 教育有时不得不依赖 “强制” 而使得 “恐惧” 占据了很多人的心神乃至于永远无法摆脱它的阴影。
+1. Trước tiên biết chữ, và biết đủ nhiều chữ. Ông cho rằng 3.000 chữ Hán thông dụng rõ ràng không đủ với người theo đuổi tri thức.
+2. Có vốn từ đủ lớn.
+3. Học thêm những khái niệm phức tạp hơn; mỗi khái niệm quan trọng cần nhiều trang giải thích.
+4. Đồng thời học cách vận dụng logic cơ bản để hiểu và tổ chức hiệu quả hơn các khái niệm đã biết cùng thông tin liên quan.
+5. Qua đọc kỹ liên tục, tiếp thu thêm khái niệm và tư tưởng.
+6. Qua đọc rộng nhiều, mở rộng và bổ sung vốn khái niệm, tư tưởng.
+7. Qua thực hành, hiểu lại khái niệm quan trọng và sửa cách hiểu tư tưởng quan trọng.
+8. Đọc kỹ và đọc rộng bổ sung, luân phiên phối hợp…
 
-所以，某种意义上来说，很多人从未有能力去 “精读” —— 识字不够多，词汇量不够大，概念量不够丰富，逻辑不够严谨 …… 一句话，不具备 “精读” 的资格。然而人们总是假定自己的能力会随着年龄自动增加，于是，根本站不住脚的假定开始显得极端自然：每个人从学校毕业之后都假定自己识足够多的字、有足够大的词汇量、足够丰富的概念量、足够严谨强大的逻辑思考能力 …… 最要命的是，自以为是地认为自己已经不再需要 “精读” —— 那是中小学生被逼才愿意做的事情 ——“泛读” 才是配得上自己年龄的活动……
+Nhưng vì nhiều lý do, quan trọng nhất theo tác giả là giáo dục vốn quá khó đến mức khó thành công, mắt xích nào trong quy trình cũng có thể sai.
 
-他们就好像是股票市场里胡搞瞎搞的投资者一样，时而凭着运气发了点财，甚至是大财，越发地以为自己的成功绝非偶然 —— 心里想着 “我是有来历的，走在芸芸众生中这种感觉尤为强烈……” 但是只要时间足够久（人们越来越长寿这个事实最大的效用就是使得某些幻觉终将不得不面对现实），爬得越高就摔得越惨—— 事后却已经没有机会重新来过。
+Trước hết, nhiều người thực ra chưa biết đủ chữ; với người liên tục theo đuổi tri thức, chỉ nhận ra mà không biết dùng khá khó xử. Thứ hai, nhiều người chưa có vốn từ đủ, nhất là từ có vẻ đơn giản nhưng có thể tạo bẫy logic như “tất cả”, “bất kỳ”, “không phải… thì là…”. Đáng sợ hơn không phải chỉ một khâu sai, mà khâu nào cũng ít nhiều thiếu sót.
 
-循序渐进扎扎实实地走到最后一个环节的人所掌握的 “泛读” 能力，和大多数人以为的 “泛读” 其实有着天壤之别。前者尽管在 “泛泛而读”，却拥有足够能力 “不漏过任何重要信息”，并且常常还可以做到 “在字里行间读到言外之意”；后者是真的 “泛泛而已”，从未获得过完整的信息，在千疮百孔的零碎信息中获得属于自己的特有幻觉（且不自知）。
+Nhiều lúc, theo tác giả, cả thế giới quan méo mó chỉ bắt rễ từ thiếu hoặc hiểu sai một, hai khái niệm như “thử nghiệm mù đôi” hoặc “hội chứng Stockholm”. Logic thực ra khá đơn giản mà nhiều người cả đời không hiểu; ông cho rằng sợ sai rồi lo bị trừng phạt đáng sợ là căn nguyên duy nhất khiến đa số cuối cùng không nắm được tư duy logic. Giáo dục đôi khi phải dựa vào cưỡng ép, khiến sợ hãi chiếm tâm trí nhiều người đến mức họ mãi không thoát bóng nó.
 
-到了一定岁数之后再想重新培养自己的 “精读” 能力就已经是几乎不可能的事情了，因为有太多错误的 “模式” 已经养成，各种各样的错误的理解早已错综盘杂，理不清任何头绪。可惜。
+Vì vậy, ở một nghĩa nào đó, theo tác giả, nhiều người chưa bao giờ đủ năng lực đọc kỹ: biết chữ chưa nhiều, từ vựng chưa lớn, khái niệm chưa phong phú, logic chưa chặt. Nói một câu là chưa đủ tư cách đọc kỹ. Nhưng người ta luôn giả định năng lực tự tăng theo tuổi; giả định không đứng vững ấy dần trông tự nhiên đến cực độ. Ai tốt nghiệp cũng nghĩ mình biết đủ chữ, đủ từ, đủ khái niệm, có logic đủ mạnh và chặt. Đáng ngại nhất là tự cho rằng không cần đọc kỹ nữa: đó là việc học sinh tiểu học, trung học bị ép mới chịu làm; đọc rộng mới xứng tuổi mình, theo lời phê bình của ông.
 
-## 4. 为什么全都读懂了可是题目就是做不对？
+Họ giống nhà đầu tư làm bừa trên thị trường chứng khoán: thỉnh thoảng nhờ may kiếm được chút, thậm chí rất nhiều, càng nghĩ thành công không ngẫu nhiên. Trong đầu nghĩ “tôi có lai lịch, đi giữa muôn người cảm giác ấy càng mạnh…”. Nhưng đủ thời gian thì leo càng cao ngã càng đau, theo tác giả. Tác dụng lớn nhất của việc con người ngày càng sống lâu là khiến một số ảo tưởng cuối cùng phải đối diện thực tế; đến sau cú ngã lại không còn cơ hội làm lại.
 
-高中毕业之后，就不用再参加语文考试了。于是，很多人开始误以为自己的语言文字能力已经足够好了 —— 殊不知那只不过是不再参加考试所以缺点不会被暴露而已。到了大学，很多人是不再参加语文考试了，可是必须参加英语考试（还是语文，只不过是外语语文），于是就开始遇到让他们极度恼火的尴尬：
+Khả năng đọc rộng của người đi tuần tự, vững vàng đến bước cuối khác một trời một vực với thứ đa số tưởng là đọc rộng, theo ông. Người trước tuy đọc rộng nhưng đủ sức không bỏ thông tin quan trọng nào, thường còn đọc được ý ngoài lời. Người sau thật sự chỉ qua loa, chưa bao giờ có thông tin đầy đủ; từ những mảnh đầy lỗ hổng, họ tạo ảo tưởng riêng mà không biết.
 
-> 为什么这文章全都看懂了，可是题目就是做不对呢？！
+Tác giả cho rằng sau một độ tuổi nhất định, muốn rèn lại khả năng đọc kỹ gần như không thể, vì quá nhiều mẫu sai đã thành nếp, những hiểu biết sai chằng chịt chẳng biết gỡ từ đâu. Tiếc thay.
 
-我教了许多年的 TOEFL 阅读。刚开始的时候也很奇怪，这些学生怎么可能在看懂文章的前提下做错这么直观的题目呢？我大约花费了两三年时间才彻底弄清楚所谓的 “读懂了” 其实只不过是这些做错题目的考生的幻觉而已。
+> **Ghi chú biên tập về năng lực học:** Danh sách tám bước là cách tác giả hình dung quá trình, không phải thang mà mọi người phải hoàn thành cứng theo thứ tự. Mốc 3.000 chữ là ví dụ chữ Hán, không phải số từ hoặc chữ người Việt phải đạt. Không dùng “chưa đủ tư cách”, tuổi hoặc trình độ để loại ai khỏi việc rèn đọc; có thể bắt đầu với văn bản phù hợp và phản hồi cụ thể. Lời quy sợ sai thành căn nguyên duy nhất, liên hệ một khái niệm với cả thế giới quan và kết luận gần như không thể học lại khi lớn tuổi chưa có bằng chứng đủ trong đoạn. “Hội chứng Stockholm” cũng không nên dùng như nhãn chẩn đoán người đọc; các ví dụ ở đây phục vụ lập luận của nguồn.
 
-这种幻觉是如何产生的呢？我翻阅了很多英语领域之外的文献，最终在心理学文献里找到了答案。
+## 4. Vì sao tưởng đã hiểu hết mà vẫn làm sai câu hỏi?
 
-原来，人类的大脑有一种特殊且有强大的功能，叫做 “模式识别”（Pattern Recognization）。比如，我们可以在一张很多人的合影中迅速识别出某个特定的人，即便照片上的那个人可能与现在看起来很不一样（比如比现在年轻 20 岁），这样的时候，我们运用的就是模式识别能力。
+Sau khi tốt nghiệp phổ thông, theo bối cảnh tác giả, người ta không phải thi môn tiếng mẹ đẻ nữa. Nhiều người bắt đầu tưởng khả năng ngôn ngữ đã đủ tốt, không biết chỉ vì không thi nên khuyết điểm chưa lộ. Lên đại học, không còn thi tiếng mẹ đẻ nhưng phải thi tiếng Anh, vẫn là ngôn ngữ, chỉ khác là ngoại ngữ, họ gặp nỗi bực rất lớn:
 
-人类太依赖这种能力了，乃至于模式识别还有一种模糊处理的变体，叫做 “模式拼接”。当我们在处理零散信息的时候，会不由自主地将它们按照某种之前曾经遇到过的模式拼接起来 —— 并且还总是以一种我们自以为有意义的模式。
-有些时候，我们会下意识地使用这种功能。比如，你躺在床上，盯着天花板发呆。过一会儿，大脑的模式识别功能就开始自动启动了：天花板上原本毫无关联、毫无意义的几个斑点、纹理开始变得 “有意义” 起来，比如，你好像看到了一张人脸，或者别的图案什么的……
+> Vì sao bài này tôi hiểu hết rồi mà câu hỏi vẫn làm không đúng?!
+
+Tôi dạy đọc TOEFL nhiều năm. Lúc đầu cũng lạ: nếu hiểu rồi, sao học sinh làm sai câu hỏi trực tiếp thế? Tôi mất khoảng hai hoặc ba năm mới hiểu hẳn cái gọi là “đọc hiểu rồi” chỉ là ảo tưởng của những thí sinh làm sai, tác giả kể.
+
+Ảo tưởng ấy nảy sinh thế nào? Tôi xem nhiều tài liệu ngoài lĩnh vực tiếng Anh, cuối cùng tìm được câu trả lời trong tài liệu tâm lý học.
+
+Hóa ra não người có một chức năng đặc biệt và mạnh gọi là “nhận diện mẫu”, nguồn ghi tiếng Anh là “Pattern Recognization”. Chẳng hạn ta nhận ra nhanh một người trong ảnh chụp đông người dù họ trong ảnh khác hiện tại, như trẻ hơn 20 tuổi. Lúc ấy ta dùng khả năng nhận diện mẫu.
+
+Con người dựa vào khả năng ấy nhiều đến mức, theo tác giả, nó còn có một biến thể xử lý mơ hồ gọi là “ghép mẫu”. Khi xử lý thông tin rời rạc, ta không tự chủ mà ghép theo mẫu đã gặp, luôn theo cách mình tưởng có ý nghĩa.
+
+Đôi khi ta vô thức dùng chức năng này. Ví dụ nằm trên giường nhìn trần nhà; một lúc sau, khả năng nhận diện mẫu tự khởi động. Vài đốm và đường vân vốn không liên quan, không có nghĩa bắt đầu thành có nghĩa: bạn như nhìn thấy mặt người hoặc hình gì khác…
 
 ![](images/figure56.png)
 
--- Devil's face in the smoke. A famous photo on 9-11 attack.
+Chú thích English của ảnh gốc: “Devil's face in the smoke. A famous photo on 9-11 attack.” Nghĩa là khuôn mặt quỷ trong khói, một ảnh nổi tiếng về vụ tấn công ngày 11/9.
 
-上面一张照片，是美国 2001nm 年 911 恐怖袭击事件发生时现场拍摄的一张照片，后来在互联网上广泛流传。人们在双塔大厦被撞之后的漫天烟雾中看到了一张 “栩栩如生” 的撒旦面孔。
+Theo mô tả của tác giả, ảnh trên chụp tại hiện trường vụ khủng bố ngày 11/9/2001 ở Mỹ, sau đó lan truyền rộng trên mạng. Trong khói phủ kín trời sau khi tòa tháp đôi bị đâm, người ta thấy một gương mặt Satan “sống động như thật”.
 
-问题在于，如果一个人在此之前从来没有在任何地方任何时刻见到过撒旦面孔的话，那烟雾的形状再怎么像撒旦或者完全与撒旦一模一样（假设撒旦真的存在的话），此人也无论如何不可能认出来 —— 因为他之前根本就没见过撒旦么！
+Vấn đề, theo tác giả, là nếu một người chưa từng thấy hình Satan ở đâu, vào lúc nào, thì khói có giống đến mức nào, thậm chí hoàn toàn giống Satan, giả sử Satan thật sự tồn tại, họ vẫn không thể nhận ra. Vì trước đó họ chưa từng thấy Satan!
 
-合理的解释是，人们在此之前在很多地方都见过撒旦的面孔 —— 戏剧、电影、动漫、插画等等，所以在看到原本毫无意义的烟雾形状之时，迅速调用了大脑中曾经存储过得 “模式”（Pattern）,而后用来 “理解” 当时所看到的东西 —— 于是，他们 “看” 到了并不存在的撒旦面孔。
+Cách giải thích hợp lý theo ông là người ta đã thấy hình Satan ở nhiều nơi: kịch, phim, hoạt hình, tranh minh họa, v.v. Khi thấy khói vốn không mang ý nghĩa ấy, họ nhanh chóng gọi lại mẫu, *pattern*, đã lưu trong não để “hiểu” thứ đang nhìn. Vì vậy họ “thấy” gương mặt Satan thực ra không có.
 
-这就解释了为什么那么多做错题目（实际上那些题目非常直观，只要真的读懂了文章，那题目不可能做错）的学生坚信自己读懂了文章。他们实际上根本没有读懂，他们只能读懂文章中的某些部分，而另外一些部分他们读不懂。然而，那些读懂了的部分就好像是天花板上原本无意义的斑点一样，在这些学生不知不觉启动自己的 “模式拼接” 能力之后，变成了貌似有意义的模式 —— 其实是在调用这些学生过往曾经存储过的某些模式；而这些模式实际上他们正在阅读的文章的真实内容无关，甚至干脆相左。于是，他们 “觉得看懂了文章”，实际上看到的却是 “另外一个鬼才知道是什么的东西”，在这种情况下怎么可能做对题目？！
+Theo tác giả, điều này giải thích vì sao nhiều học sinh làm sai vẫn tin mình hiểu. Ông nói các câu hỏi thật sự rất trực tiếp, nếu hiểu bài thì không thể sai. Thực ra họ chỉ hiểu vài phần, còn phần khác không hiểu. Những phần hiểu giống các đốm vô nghĩa trên trần; sau khi vô thức bật “ghép mẫu”, chúng thành mẫu có vẻ có nghĩa, gọi lại những mẫu đã lưu trước đó. Các mẫu ấy lại không liên quan đến nội dung thật của bài, thậm chí trái ngược. Họ “thấy mình hiểu bài”, nhưng thật ra đang thấy “một thứ quỷ mới biết là gì”; trong tình huống ấy sao có thể làm đúng câu hỏi, tác giả hỏi.
 
-## 5. 精读的方法
+> **Ghi chú biên tập về hiện tượng và kết luận:** Cách viết thông dụng là *pattern recognition*, không phải “Pattern Recognization” trong nguồn. Nhìn thấy khuôn mặt trong hình ngẫu nhiên thường được gọi là *pareidolia*. Mô tả ảnh không xác nhận có một gương mặt hoặc dấu hiệu siêu nhiên thật trong khói. Năm trong nguồn có lỗi “2001nm”, bản dịch chuẩn hóa thành 2001. Phép ví của tác giả giúp nhắc người đọc kiểm tra điều mình suy ra, nhưng không chứng minh mọi câu trả lời sai đều do cùng một cơ chế, hoặc hiểu bài là chắc chắn không thể làm sai. Còn cần đọc kỹ yêu cầu, lựa chọn, thời gian và căn cứ trong văn bản; tự tin cũng không phải bằng chứng đã hiểu đầy đủ.
 
-读文章还是有一点点的方法的，读考试（TOEFL/IELTS/SAT/GRE/GMAT）里的阅读文章更是如此。但请放心，真正有效的方法总是非常简单的。（以下文字相对抽象一点，但，也许这本身就是一篇很好的阅读材料……）
+## 5. Cách đọc kỹ
 
-当我们读进来第一句话（标识为 S1)的时候，任务只有一个，“这句话在说什么？”（What does S1 mean?表示为 M1）其实，有些时候，这并不是一个简单任务。需要两样东西支撑：1)语法知识；2)概念体系。但是，很多人竟然以为只需要单词就够了。
+Đọc văn bản có một chút phương pháp; đọc bài thi TOEFL, IELTS, SAT, GRE hoặc GMAT càng vậy. Nhưng yên tâm, tác giả nói, cách thực sự hiệu quả luôn rất đơn giản. Phần sau hơi trừu tượng, có lẽ chính nó cũng là một bài luyện đọc tốt…
 
-然而，读进来第二句话（S2）的时候，任务就多了一个：不仅要搞清楚 M2，还要搞清楚 M1 和 M2 之间的关系（标识为 R1&2）—— 这是竟然有很多人从来不做的事情。
+Khi đọc câu đầu, ký hiệu S1, chỉ có một nhiệm vụ: câu này nói gì? “What does S1 mean?”, ý của câu được ký hiệu M1. Đôi khi đó không phải việc đơn giản. Cần hai chỗ dựa: 1) kiến thức ngữ pháp; 2) hệ thống khái niệm. Vậy mà nhiều người tưởng chỉ cần từ vựng là đủ.
 
-M1 和 M2 之间的关系，大抵上分为两种：
+Khi đọc câu thứ hai, S2, có thêm một nhiệm vụ: không chỉ hiểu M2 mà còn phải hiểu quan hệ giữa M1 và M2, ký hiệu R1&2. Theo tác giả, thật đáng ngạc nhiên là nhiều người chưa bao giờ làm điều ấy.
 
-1. M1 被 M2 支持。这时，M2 往往可能从三个角度之一（或者三个角度组合使用）去解释 M1——What？（举例、阐述）Why?（因果、比较、分类、目的） How?（方式、手段、步骤）
-2. M1 与 M2 共同支持另外一个句子。这时，M1 与 M2 之间可能的关系分别是：并列、递进、转折。
+Quan hệ giữa M1 và M2 đại thể chia hai loại:
 
-如果，M1、M2、R1~2 都已知，那么即意味着说真正的 “阅读理解” 就已经全部完成。
+1. M1 được M2 hỗ trợ. Khi ấy, M2 thường giải thích M1 theo một hoặc phối hợp ba góc: What?, cái gì, qua ví dụ hoặc trình bày; Why?, tại sao, qua nhân quả, so sánh, phân loại, mục đích; How?, như thế nào, qua cách thức, phương tiện, các bước.
+2. M1 và M2 cùng hỗ trợ một câu khác. Khi ấy, quan hệ giữa M1 và M2 có thể là ngang hàng, tăng tiến hoặc tương phản.
 
-然而，在考试中，考生往往遇到的情况是：
+Theo tác giả, biết M1, M2 và R1~2 nghĩa là toàn bộ việc đọc hiểu thực sự đã xong.
 
-1. M1 未知、M2 已知、R1~2 已知；
-2. M1 已知、M2 未知、R1~2 已知；
-3. M1 已知、M2 已知、R1~2 未知；
+Nhưng khi thi, thí sinh thường gặp:
 
-这与简单数学没什么两样（就好像 “x+y=z”）—— 一个方程式里面有三个变量，其中两个已知，就很容易推导出第三个变量的值。如果三个变量都是已知的，那也不算是什么考试了。
+1. Chưa biết M1, đã biết M2 và R1~2.
+2. Đã biết M1, chưa biết M2, đã biết R1~2.
+3. Đã biết M1, M2, chưa biết R1~2.
 
-要知道，设计得严谨科学的阅读理解考试中，是不会出现一个方程式里有三个变量其中却竟然有两个未知的情况的 —— 那不叫考试，那叫 “刁难”。这也是我为什么总是劝诫考生，轻易不要相信什么 “模拟题” —— 反正，我研读过的所有非 ETS 官方的题目，大抵上都不严谨、不科学，不管作者和出版机构是多么地权威 ——不信，谁都可以用刚刚说的简单道理去自己做个判断。
+Chẳng khác toán đơn giản, như “x+y=z”, tác giả ví: một phương trình có ba biến, biết hai thì dễ suy ra giá trị biến thứ ba. Cả ba đã biết thì chẳng còn là bài thi.
 
-同样的道理，段落与段落之间的关系也是如此。不仅要能够概括出第一段的大意（标记为 MP1 ），然后还要再概括出第二段的大意（标记为 MP2），最后还一定要弄清楚二段之间的关系（标记为 RP1~2）—— 这就是更多人坚决不做的事情了 —— 而后又是解方程式了……
+Cần biết, trong bài kiểm tra đọc hiểu được thiết kế chặt chẽ, khoa học, không xuất hiện một phương trình ba biến mà hai biến chưa biết, tác giả khẳng định. Đó không còn là kiểm tra mà là làm khó. Đây là lý do ông luôn khuyên thí sinh đừng vội tin “đề mô phỏng”: mọi câu hỏi không do ETS chính thức phát hành mà ông từng nghiên cứu, nói chung đều thiếu chặt chẽ, thiếu khoa học, bất kể tác giả và nhà xuất bản uy tín đến đâu. Không tin thì ai cũng có thể dùng lý lẽ đơn giản vừa nói để tự xét, ông đề nghị.
 
-道理都已经清楚了（我有的时候很奇怪我究竟是如何运用这样的简单的认知就成了所谓的老师的？），之后就是平时练习的步骤了。
+Quan hệ giữa các đoạn cũng vậy. Không chỉ tóm được ý đoạn đầu, MP1, rồi đoạn hai, MP2, mà cuối cùng còn phải làm rõ quan hệ hai đoạn, RP1~2. Theo tác giả, việc này còn nhiều người nhất quyết không làm hơn nữa. Sau đó lại là giải phương trình…
 
-1. 挣扎着搞清楚每一句话的确切含义。运用一切可以运用的手段 —— 查词典，查语法书，甚至去查 Google。“自己动手” 比 “花钱让别人替自己干活”（比如，报班上课听讲）在这方面不知道要有效多少倍。
-2. 理解每句话之间、每个段落之间的关系。处理段落还有另外一个任务 —— 概括。
-3. 整理词汇。要知道，读完一篇文章之后，自己动手整理词汇，远比背单词书效率高出许多 —— 可惜，大多数人并不相信。
-4. 反复阅读若干遍。读着读着就可能发现很多第一次读并没有注意到的东西。
-5. 复述文章。能够书面或者口头复述刚刚读过的文章，实际上需要很多综合能力：记忆力、逻辑能力、转述能力、重新组织能力、再理解能力等等。
-6. 养成相隔若干天后复习的习惯。
+Lý lẽ đã rõ. Đôi lúc tôi ngạc nhiên không hiểu sao chỉ dùng nhận thức đơn giản ấy mà thành người được gọi là giáo viên. Phần tiếp là các bước luyện thường ngày:
 
-（其实，无论哪一种考试，拿来真题，如此处理 50 篇左右的文章，就基本上所向披靡了。）
+1. Cố gắng làm rõ nghĩa chính xác của từng câu. Dùng mọi cách có thể: tra từ điển, sách ngữ pháp, thậm chí Google. Theo tác giả, tự tay làm hiệu quả hơn không biết bao lần so với bỏ tiền cho người khác làm hộ, như đăng ký lớp rồi nghe giảng.
+2. Hiểu quan hệ giữa các câu và các đoạn. Với đoạn còn có nhiệm vụ khác là khái quát ý.
+3. Tự tổng hợp từ vựng. Theo tác giả, đọc xong một bài rồi tự tổ chức vốn từ hiệu quả hơn học sách từ vựng rất nhiều, nhưng tiếc là đa số không tin.
+4. Đọc lại vài lần. Càng đọc có thể càng thấy những điều lần đầu chưa chú ý.
+5. Thuật lại bài. Có thể kể lại bằng nói hoặc viết thực ra cần nhiều khả năng tổng hợp: ghi nhớ, logic, diễn đạt lại, tổ chức lại, hiểu lại, v.v.
+6. Tạo thói quen ôn sau một số ngày.
 
-鉴于大多数人学英语只是为了应付考试，所以，以上的文字里，是拿着考试文章作为示范的。事实上，读任何文字都可以这样 “品”，只不过，不同类型的文章，“品” 的要点不同而已。读诗品意境，读散文品心境，读小说品情节，读报纸品现实。为了学而读，还要在读与品之外考虑很多事情，作者为什么这么写，这么写好的话好在哪儿，差的话差在哪儿，要是我去写应该怎么写才能更好 …… 等等等等。
+Tác giả nói thực ra bất kể kỳ thi nào, lấy đề thật rồi xử lý khoảng 50 bài như vậy là cơ bản thắng khắp nơi.
 
-## 6. 快速阅读往往并不靠谱
+Vì theo ông đa số học tiếng Anh chỉ để ứng phó kỳ thi, phần trên dùng bài thi làm ví dụ. Thực ra đọc bất kỳ văn bản nào cũng có thể thưởng thức kỹ như vậy, chỉ khác trọng tâm theo thể loại. Đọc thơ thưởng thức ý cảnh, tản văn thưởng thức tâm trạng, tiểu thuyết thưởng thức tình tiết, báo thưởng thức thực tế. Đọc để học còn phải nghĩ ngoài đọc và thưởng thức: vì sao tác giả viết thế, hay ở đâu, dở ở đâu, nếu mình viết thì làm sao tốt hơn, v.v.
 
-市面上各种各样关于 “快速阅读” 的神话，其实都非常不靠谱。我不相信那种靠改变眼球运动方式提高阅读速度的理论，因为速度的瓶颈根本就不在于 “输入方式”，而在于 “理解能力”。我也绝不相信 “快速阅读” 能靠一个什么 “补习班” 就可以解决 —— 我相信阅读理解速度只能通过积累提高。
+> **Ghi chú biên tập về mô hình và cách luyện:** S1/S2, M1/M2 và R1&2 hay R1~2 là các ký hiệu tác giả dùng; hai cách viết R cùng chỉ quan hệ đang xét. Phép ví phương trình là mô hình hướng dẫn, không phải quy luật toán bảo đảm mọi câu hỏi đọc hiểu luôn chỉ thiếu một biến hoặc chỉ có hai loại quan hệ. Nhận xét về tất cả đề ngoài ETS và kết quả sau khoảng 50 bài là đánh giá của ông, không phải bảo đảm điểm số. Khi luyện cho người Việt, có thể ghi ngắn ý từng câu bằng tiếng Việt, chỉ rõ câu sau bổ sung, giải thích hay phản bác câu trước, rồi dùng chính câu chữ trong bài kiểm tra kết luận của mình. Thuật lại và ôn cách quãng nên đi cùng kiểm tra độ đúng, không chỉ lặp lại điều đã hiểu nhầm.
 
-各种快速阅读理论都有一个共同的缺陷，它们假定所有的文字都是格式化的 —— 事实上这绝对不可能。只有格式化的数据才能批处理，这是每一个程序员都懂的道理。可问题在于，知识不可能是格式化的，有的简单，有的复杂，有的恰恰因为简单而难以理解并加以应用，而它们之间又相互关联，有着复杂的依存关系。想用一套简单的模式处理所有的数据，这愚昧的痴心妄想。
+## 6. Đọc nhanh thường không đáng tin
 
-积累阅读量是提高阅读理解速度唯一方法。读书多的人读书快。尽管好像人们更愿意相信这句话的反方向：那是 “因为读书快所以才读书多”。
+Những huyền thoại đọc nhanh đủ kiểu trên thị trường đều không đáng tin, theo tác giả. Tôi không tin lý thuyết đổi cách mắt chuyển động để tăng tốc đọc, vì chỗ nghẽn căn bản không ở đầu vào mà ở hiểu. Tôi cũng tuyệt đối không tin một khóa bổ trợ có thể giải quyết đọc nhanh; tôi tin tốc độ đọc hiểu chỉ tăng nhờ tích lũy.
 
-观察一下生活。那些只读到初中再也不上学了的人，看书很慢的（姑且不论他们能否看懂），也很省钱：一本几块钱的杂志可以读好几个月。而相比来看，大学生读书就要快出许多，一本杂志在坐地铁的过程中就可能被他翻阅完毕，并且过后还能将其中精彩的内容复述给朋友。为什么有这么大的差异呢？因为二者之间的阅读量积累差异实在是惊人。
+Theo tác giả, các lý thuyết đọc nhanh cùng có một điểm yếu: giả định mọi văn bản đều có định dạng cố định, thực tế tuyệt đối không thể. Chỉ dữ liệu có định dạng mới xử lý hàng loạt được, lập trình viên nào cũng biết, ông nói. Nhưng tri thức không thể có một khuôn cố định: cái đơn giản, cái phức tạp, cái chính vì đơn giản mà khó hiểu và vận dụng; chúng liên quan, phụ thuộc nhau phức tạp. Muốn dùng một mẫu đơn giản xử lý mọi dữ liệu là mơ tưởng ngu muội, theo ông.
 
-心理学家 Blachowicz 博士曾经做过的调查结果可以给我们一个更清楚地解释这个道理的依据：
+Tích lũy lượng đọc là cách duy nhất tăng tốc độ đọc hiểu, tác giả khẳng định. Người đọc nhiều thì đọc nhanh, dù người ta dường như thích tin chiều ngược: vì đọc nhanh nên mới đọc nhiều.
 
-> 一个五年级的学生，如果每天能够做到独立阅读10分钟的话，那么就要比那些不做独立阅读的孩子每年多读62万2千词……
+Hãy quan sát đời sống, tác giả đề nghị. Người chỉ học hết cấp hai rồi thôi đọc rất chậm, chưa bàn có hiểu không, cũng rất tiết kiệm: một tạp chí giá vài đồng đọc được mấy tháng. So với họ, sinh viên đọc nhanh hơn nhiều; có thể lật hết một tạp chí trong lúc đi metro rồi kể phần hay cho bạn. Vì sao khác lớn vậy? Theo ông, vì chênh lệch lượng đọc tích lũy thật đáng kinh ngạc.
 
-这个数据告诉我们，一个五年级的孩子，差不多一分钟阅读大约 170 个英文单词。而实际上，中国学生如果在阅读中文的时候，可以做到差不多一分钟 200 字以上（因为中文的字都是单音节的，而英文词汇往往不止一个音节）。
+Kết quả khảo sát mà tác giả quy cho nhà tâm lý học Blachowicz có thể giúp giải thích rõ hơn:
 
-如果我们按照 200 字/分钟的阅读速度计算，不算小学时代，仅仅初中三年，平均来看每个孩子每天的阅读量大约是 1.5 万字（仅相当于 75 分钟的阅读量）。换言之，初中时代，一个普通的学生，三年总计阅读量会超过 1600 万字 —— 如果假设平均一本书 20 万字的话，就相当于 80 本书。
+> Một học sinh lớp năm, nếu tự đọc được 10 phút mỗi ngày, sẽ đọc nhiều hơn trẻ không tự đọc 622.000 từ mỗi năm…
 
-到了高中时代，喜好读书的孩子阅读量增长会超乎普通人想象 —— 他们的阅读速度会很自然地提高 2～3 倍，又由于理解能力大幅度提升，他们往往并不需要 “速读”，而是通过 “略读” 获取更多的信息。比如说，作者为了证明一个道理提供了三个例子 —— 体现为三个段落，那么，有理解能力的人会扫过第一个例子，跳过其它两个例子而去继续阅读下一个章节。因为这样的时候，他们的阅读速读看起来就比其他人快出许多。所以，通常情况下，在初中时代积累了大量阅读量的学生，在高中时代的阅读速度大约会提高 10 倍左右。这样算下来，整个高中三年，喜好阅读的孩子通常会在这个时期保守估计积累超过 1 亿字的阅读量。
+Tác giả nói dữ liệu ấy cho biết một trẻ lớp năm đọc khoảng 170 từ tiếng Anh mỗi phút. Thực tế, theo ông, học sinh Trung Quốc khi đọc tiếng Trung có thể đạt khoảng từ 200 chữ mỗi phút trở lên, vì chữ Hán đơn âm tiết còn từ tiếng Anh thường không chỉ một âm tiết.
 
-这就好像飞行员也好、汽车司机也罢，夸耀自己驾驶水平时会 “很客观” 地强调自己的驾龄或者里程数一样，一个人的阅读量积累越多，他的阅读理解能力就越强，进而阅读速度就越快，进而阅读量更容易积累，从而形成良性循环。
+Nếu tính 200 chữ/phút, không kể tiểu học, chỉ ba năm cấp hai, trung bình mỗi trẻ đọc khoảng 15.000 chữ/ngày, tương đương chỉ 75 phút. Nói cách khác, tác giả suy ra một học sinh bình thường trong ba năm cấp hai đọc tổng hơn 16 triệu chữ; giả sử mỗi sách trung bình 200.000 chữ thì tương đương 80 cuốn.
 
-所以说，真正有用、有意义的快速阅读能力，是靠积累获得的，而非靠什么新鲜的不靠谱理论，或者蒙钱的培训班。
+Đến cấp ba, lượng đọc của trẻ thích sách tăng ngoài tưởng tượng thông thường, tác giả nói. Tốc độ tự nhiên tăng gấp hai đến ba lần; vì hiểu tốt hơn nhiều, thường chẳng cần “đọc nhanh” mà dùng đọc lướt để lấy thêm thông tin. Chẳng hạn tác giả một bài đưa ba ví dụ, ba đoạn, để chứng minh một ý; người hiểu có thể lướt ví dụ đầu, bỏ hai ví dụ sau rồi sang mục tiếp. Khi ấy tốc độ trông nhanh hơn người khác rất nhiều. Vì thế, tác giả cho rằng học sinh đã tích lũy nhiều ở cấp hai thường có tốc độ đọc cấp ba tăng khoảng mười lần. Tính như vậy, trong cả ba năm cấp ba, trẻ thích đọc thường tích lũy hơn 100 triệu chữ, theo ước tính ông gọi là thận trọng.
 
-## 7. 给自己种一棵读书种子
+Giống phi công hoặc tài xế khi khoe tay lái sẽ “rất khách quan” nhấn mạnh số năm hoặc quãng đường lái, người tích lũy đọc càng nhiều thì hiểu càng tốt, tốc độ càng cao, càng dễ đọc thêm, tạo vòng tốt, theo tác giả.
 
-经常听人们这样说：“我对英语非常感兴趣”，却很少听到有人这么说：“文字太美了！” 很多人对英语感兴趣，却对母语没兴趣，这只能说明他们不了解文字的意义，只不过是肤浅的实用主义者而已。他们看到的只不过是 “英语好的话薪水高，机会多……” 而已。要不然他们怎么会对越南语、缅甸语不感兴趣？人大多都如此，都想要自己配不上的东西 —— 这是他们的本质，也是他们最终不快乐的根源。当然，他们把这种莫名其妙的行为称之为 “追求”，并且对这个词有着特殊而又浓厚的情感。肤浅的实用主义者对英语的兴趣，就好像是一个不懂工程的人对工具的兴趣一样无聊。
+Vì vậy, theo ông, khả năng đọc nhanh thực sự có ích và ý nghĩa có được nhờ tích lũy, không nhờ lý thuyết mới lạ thiếu tin cậy hoặc lớp học moi tiền.
 
-英语不过是一种文字，这一点上来看，它并不比其它的文字更好、更高级、更优美。自认为自己的母语是全天下最美的语言，是最为幼稚的想法（都懒得加上之一）。印象中第一次意识到这种幼稚的存在，是读中学的时候，语文课本里有篇文章叫《最后一课》，作者都德激情地写道，“法语是世界上最美的语言！” 而在另外一个国度（这个国度里所使用的语言是地球上使用者最多的语言：汉语），（中文）语文老师激动地（某种意义上也避重就轻地）讲述着作者都德的爱国热情，一遍一遍地复述着都德那个狭隘民族主义的弱智句子 “法语是世界上最美的语言！” —— 有比这个更为荒唐的场景么？（当然，都德在那个特殊的时代拥有这种（狭隘）民主主义情绪，从另外一个意义上来说更可能应该被理解为 “英雄的”……）
+> **Ghi chú biên tập về số liệu:** Phép tính 622.000 ÷ (10 × 365) xấp xỉ 170,4 từ/phút, nhưng phép chia không tự chứng minh nghiên cứu đo tốc độ ấy. Tương tự, 200 × 75 × 365 × 3 = 16.425.000 chữ chỉ là kết quả nếu giữ các giả định thời gian và tốc độ mỗi ngày; không phải lượng đọc đo ở mọi trẻ. Cần phân biệt 200.000 chữ Hán với 200.000 từ tiếng Anh hoặc tiếng Việt. Các bước tăng gấp hai, ba rồi mười lần và hơn 100 triệu chữ chưa thành kết luận thực nghiệm chỉ từ các phép tính này. Trình độ học vấn không đủ để suy tốc độ hoặc chất lượng đọc của một cá nhân.
 
-任何语言文字都有它自己固有的独特之处，都有它独特美丽的根源。然而最终，语言文字是用来表述、记录、交流思想的。如果有什么真正美丽或者更加美丽的话，是思想，而不是语言文字本身。美丽的思想，用任何语言表达都美丽，用一种语言表达光芒四射，用另外一种语言表达四射光芒。电影[V for Vendetta](http://en.wikipedia.org/wiki/V_for_Vendetta_(film))中，主角 V 身中无数枪却不死，缓步逼近 Creedy，而 Creedy 的手枪里已经没有了子弹，于是绝望地大喊，“Why won't you die?!” V 淡然地说，“Beneath this mask there is more than flesh. Beneath this mask there is an idea, Mr. Creedy. And ideas are bulletproof.”
+> **Ghi chú biên tập về đọc nhanh:** Bỏ bớt ví dụ là đọc lướt có chọn lọc, không tương đương đọc đầy đủ mọi nội dung nhanh hơn mà vẫn giữ nguyên độ hiểu. Việc có nên bỏ phụ thuộc mục tiêu và quan hệ giữa các ví dụ; ví dụ sau có thể chứa giới hạn hoặc phản bác ví dụ trước. Chú ý, vốn từ, kiến thức nền, nhận diện từ và mức quen văn bản cũng liên quan đến đọc; không cần coi chỉ một yếu tố là nguyên nhân duy nhất.
 
-印象里第一次深刻体会到多懂一门语言的好处，是终于读到[Animal Farm](http://en.wikipedia.org/wiki/Animal_Farm)这本书的时候。这本书在国内许多年前曾经是禁书。经常可以在一些牛人的文章里看到这本书被提及，我却遍寻不得之，极为痛苦。终于有一天，搞到一本 Animal Farm 的英法对照本，于是一口气读完。当时的我当然看不懂法文了，而英文要靠不停地查词典才可以。那所谓的 “一口气” 大约是两个星期 —— 那书其实只不过是薄薄的一个小册子而已。Animal Farm 被誉为 20 世纪最伟大的小说之一。作者乔治•奥威尔（[Geroge Orwell](http://en.wikipedia.org/wiki/George_Orwell)）用他不留情的笔触讲了个让人毛骨悚然的寓言故事。
+## 7. Gieo cho mình một hạt giống đọc sách
 
-> 在英格兰有这么一个农场。农场的主人常常酗酒，也不懂得善待农场里的动物们。有一天，主人不在，有一头老猪把大伙召集到谷仓里开了个会。就看它颤颤巍巍爬上台，对台下的动物们说，“I had a dream……”还没讲完，农场主就回来了，动物们吓得赶紧散会。第二天，老猪就去世了。可是那天老猪的讲演却深刻而又顽固地留在动物们的脑海里，尽管大多数的动物并不是很懂老猪说的究竟是什么……后来有一天，有两头猪（猪是所有动物里智商最高的），一头叫Snowball，另外一头叫Napoleon，带着大伙起义了，把农场主赶了出去，占领了农场，建立了Animal Republic…农场里还有很多其它动物，比如，无论谁说什么都点头称是的鸭子们，无私奉献自己的蛋的鸡们，充当警察角色的狗们，一匹为首是瞻兢兢业业的低智商的马Boxer，一个只喜欢花丝带的小母马Mollie，一头什么都看不上愤世嫉俗的老驴Benjamin，还有一只说话不中听的乌鸦 Moses……Animal Republic有七戒，最后一条是“All animals are equal.”
+Thường nghe người ta nói “tôi rất thích tiếng Anh”, nhưng hiếm nghe “ngôn từ đẹp quá!”. Theo tác giả, nhiều người thích tiếng Anh mà không thích tiếng mẹ đẻ chỉ chứng tỏ chưa hiểu ý nghĩa của ngôn từ, là người thực dụng hời hợt. Họ chỉ thấy “giỏi tiếng Anh thì lương cao, nhiều cơ hội”; nếu không, vì sao chẳng thích tiếng Việt hoặc tiếng Myanmar, ông hỏi. Ông cho rằng đa số đều muốn thứ mình chưa xứng đáng; đó là bản chất và căn nguyên cuối cùng không hạnh phúc. Họ gọi hành vi khó hiểu ấy là “theo đuổi”, gắn với từ ấy tình cảm đậm và đặc biệt. Sự thích tiếng Anh của người thực dụng hời hợt, theo tác giả, chán như người không hiểu kỹ thuật lại thích công cụ.
 
-这本书读过很久之后的某一天，我突然意识到，多懂一门语言就相当于多出了一片天空。英语对我来说，不再是要 “学” 那么简单了，而是要用它获得自由，哪怕仅仅是精神上的自由 —— 再说还有什么比精神上的自由更为宝贵的东西呢？
+Tiếng Anh chỉ là một dạng ngôn ngữ, chữ viết; xét điểm ấy, nó không tốt hơn, cao cấp hơn hoặc đẹp hơn các ngôn ngữ khác, tác giả nói. Cho tiếng mẹ đẻ của mình đẹp nhất thế gian là ý nghĩ ngây thơ nhất, ông không buồn thêm “một trong những”. Tôi nhớ lần đầu nhận ra sự ngây thơ ấy là lúc học trung học: sách giáo khoa có *Buổi học cuối cùng*, Daudet viết đầy cảm xúc “Tiếng Pháp là ngôn ngữ đẹp nhất thế giới!”. Ở một đất nước khác, nơi theo nguồn dùng tiếng Hán có nhiều người nói nhất Trái Đất, giáo viên tiếng Trung xúc động, phần nào tránh nặng nói nhẹ, kể lòng yêu nước của Daudet rồi lặp đi lặp lại câu mà tác giả chê là ngu xuẩn, mang chủ nghĩa dân tộc hẹp hòi ấy. Còn cảnh nào vô lý hơn, ông hỏi. Tất nhiên, ông nói thêm, cảm xúc “chủ nghĩa dân chủ hẹp hòi”, đúng cách gọi ở câu cuối nguồn, của Daudet trong thời đặc biệt ấy, nhìn theo nghĩa khác có lẽ lại nên được hiểu là “anh hùng”…
 
-从某种意义上，我一直感激那个把 Animal Farm 禁掉的那个人（或 “那些” 我永远也不会知道是谁的人），如若他（们）未曾设置那样一道貌似不可逾越的障碍，我可能永远不会有这种特殊的体会。再后来，有一天听[Randy Pausch](http://en.wikipedia.org/wiki/Randy_Pausch)博士在他的 “The Last Lecture” 中说 “The brick walls are there for a reason. They're not there to keep us out. The brick walls are there to give us a chance to show how badly we want something…” —— 瞬间，热泪盈眶。
+> **Ghi chú biên tập về bối cảnh và lời đánh giá:** Việc tác giả lấy tiếng Việt, tiếng Myanmar làm đối chiếu phản ánh góc nhìn của nguồn, không phải định giá các ngôn ngữ hoặc động cơ người học Việt. Học vì công việc có thể là mục tiêu cụ thể, không tự chứng minh hời hợt. Trong *Buổi học cuối cùng*, nhận định về tiếng Pháp là lời thầy Hamel do người kể thuật lại; xem [bản in Daudet năm 1880](https://fr.wikisource.org/wiki/Page:Daudet_-_Contes_du_lundi,_Lemerre,_1880.djvu/18). Không dùng lời nhân vật văn học để xếp hạng ngôn ngữ. Câu cuối nguồn đổi từ “chủ nghĩa dân tộc” sang “chủ nghĩa dân chủ”; bản dịch giữ sai khác để đối chiếu, không sửa ngầm. Số người dùng một ngôn ngữ còn tùy cách đếm tiếng mẹ đẻ hay cả ngôn ngữ thứ hai.
 
-## 8. 只有人类才善于阅读
+Bất kỳ ngôn ngữ, chữ viết nào cũng có nét riêng vốn có, có cội nguồn vẻ đẹp riêng. Nhưng suy cho cùng, ngôn ngữ và chữ viết được dùng để biểu đạt, ghi lại và trao đổi tư tưởng. Nếu có thứ gì thực sự đẹp, hoặc đẹp hơn, thì đó là tư tưởng chứ không phải bản thân ngôn ngữ, chữ viết. Một tư tưởng đẹp được biểu đạt bằng ngôn ngữ nào cũng đẹp: diễn đạt bằng ngôn ngữ này thì ánh sáng tỏa bốn phía, diễn đạt bằng ngôn ngữ khác thì bốn phía tỏa ánh sáng. Trong phim [V for Vendetta](http://en.wikipedia.org/wiki/V_for_Vendetta_(film)), nhân vật chính V trúng vô số phát đạn mà chưa chết, chậm rãi tiến về phía Creedy. Súng của Creedy đã hết đạn, hắn tuyệt vọng hét lên: “Why won't you die?!” V bình thản nói: “Beneath this mask there is more than flesh. Beneath this mask there is an idea, Mr. Creedy. And ideas are bulletproof.”
 
-人类正是因为有了文字才与其它物种有了本质上的不同。而阅读，对于任何一个正常人类来说都具有非凡的意义。人类之外的物种只能依赖最落后但被称为神奇的方式积累经验：基因遗传。Terry Burnham 和 Jay Phelan 在 MEAN GENE 一书中提到，啄木鸟可以本能地采用最优算法获取食物 —— 而一个 MIT 的数学博士面对同样的问题却不见得可以迅速解决；而啄木鸟的小脑袋在没有受过高等教育的情况下，是如何得到结果的呢？答案是：通过基因遗传。
+Tôi nhớ lần đầu cảm nhận sâu sắc lợi ích của việc biết thêm một ngôn ngữ là khi cuối cùng cũng đọc được [Animal Farm](http://en.wikipedia.org/wiki/Animal_Farm). Nhiều năm trước, cuốn sách này từng bị cấm trong nước, theo lời tác giả về bối cảnh Trung Quốc. Tôi thường thấy nó được nhắc đến trong bài viết của những người tài giỏi, nhưng tìm khắp nơi vẫn không thấy, khổ sở vô cùng. Cuối cùng, một ngày nọ, tôi kiếm được bản *Animal Farm* song ngữ Anh - Pháp và đọc một mạch hết sách. Tất nhiên, lúc ấy tôi không hiểu tiếng Pháp, còn tiếng Anh thì phải tra từ điển liên tục mới đọc được. Cái gọi là “một mạch” ấy kéo dài khoảng hai tuần; thực ra, cuốn sách chỉ là một tập sách mỏng. *Animal Farm* được ca ngợi là một trong những tiểu thuyết vĩ đại nhất thế kỷ XX. Tác giả George Orwell ([nguyên bản viết nhầm Geroge Orwell](http://en.wikipedia.org/wiki/George_Orwell)) dùng ngòi bút không khoan nhượng kể một câu chuyện ngụ ngôn khiến người ta rợn tóc gáy.
 
-人类当然可以通过基因遗传积累经验。婴儿尽管没有见过蛇，但只要见到蛇就会嚎啕大哭；婴儿也没有见过枪，但他们却不怕这个比蛇要可怕不知道多少倍的东西 —— 人类祖祖辈辈被蛇咬过不知道多少次；然而，人们认识到枪的危险至今只不过两百年不到，还没来得及形成可以通过基因遗传的 “天生” 的恐惧。
+> Ở nước Anh có một trang trại như thế này. Chủ trang trại thường say rượu, cũng không biết đối xử tử tế với các con vật. Một hôm, khi chủ vắng nhà, một con lợn già tập hợp mọi con vật vào nhà kho họp. Nó run rẩy trèo lên bục, nói với những con vật bên dưới: “I had a dream…”. Chưa nói hết thì chủ trang trại về; các con vật sợ hãi, vội giải tán. Hôm sau, con lợn già qua đời. Nhưng bài nói hôm ấy vẫn in sâu, bám chặt trong đầu các con vật, dù phần lớn chẳng hiểu rõ nó đã nói gì… Về sau, một ngày nọ, hai con lợn, vốn là loài thông minh nhất trong đám vật nuôi, một con tên Snowball, con kia tên Napoleon, dẫn mọi con vật nổi dậy, đuổi chủ đi, chiếm trang trại và lập Animal Republic… Trang trại còn nhiều con vật khác: những con vịt ai nói gì cũng gật đầu tán thành; những con gà mái vô tư dâng trứng; những con chó đóng vai cảnh sát; con ngựa Boxer kém thông minh nhưng chăm chỉ tận tụy, nhất nhất nghe theo kẻ đứng đầu; cô ngựa cái nhỏ Mollie chỉ thích những dải ruy băng sặc sỡ; con lừa già Benjamin bất mãn với đời, chẳng coi gì ra gì; và con quạ Moses nói những điều khó nghe… Animal Republic có bảy điều răn, điều cuối cùng là “All animals are equal.”
 
-文字的出现，使人类与其他动物区分开来。文字的出现，使得人类的经验积累不再仅仅依赖基因遗传。人类开始使用文字记录并积累信息、获得知识、传播经验 …… 信息爆炸使得我们处于人类史上进步最为惊人的时代，日新月异这个词已经不够 —— 用 “分新秒异” 都并不过分。
+> **Ghi chú biên tập về cốt truyện:** Đoạn trên giữ cách tác giả kể lại, không phải bản tóm tắt chính xác mọi sự kiện. Trong [nguyên tác *Animal Farm*, chương I-II và IX](https://gutenberg.net.au/ebooks01/0100011h.html), Jones đang ngủ và bị tiếng hát đánh thức; Old Major chết sau ba đêm, không phải hôm sau. Trang trại được đổi tên thành *Animal Farm* sau cuộc nổi dậy; đến chương IX mới tuyên bố thành nước cộng hòa. Lời tác giả về việc tìm sách và kiểm duyệt được giữ trong bối cảnh trải nghiệm tại Trung Quốc, không chuyển thành khẳng định về Việt Nam.
 
-人类终于有了文字之后，并没有马上因此获得应有的恩惠。知识的传播与积累并没有一下子变得太过容易。从结绳记事到刻石颂德，从罄竹载罪到纶巾议论，从宣纸录史到革皮藏图，文字的载体从未易于保存、便于传播。小说《西游记》生动地讲了这样一个故事：在文字传播极为困难的时代，获取知识有多么地辛苦。
+Một ngày rất lâu sau khi đọc cuốn sách này, tôi chợt nhận ra: biết thêm một ngôn ngữ cũng như có thêm một khoảng trời. Với tôi, tiếng Anh không còn đơn giản chỉ là thứ phải “học”; tôi muốn dùng nó để có được tự do, dù chỉ là tự do tinh thần. Mà có gì quý hơn tự do tinh thần nữa đâu?
 
-然而，今天，文字传播的便易也已经到达前所未有的高度。可以说是互联网改变了一切。字处理程序、博客程序（blog engine）、微博客（比如 twitter）以及搜索引擎使得文字的书写、经验知识的记录、传播、共享、检索变得前所未有地容易。任何人只要稍有常识，就可以 “出版” 自己 “体验”、“试错”、“观察” 的文字记。搜索引擎简单而又清爽的界面背后几乎是宇宙量级的信息（用 “海量” 这个词已经不够）。知识共享的精神被前所未有地发扬光大，最直接的也是意义最重大的产物就是免费的维基百科（Wikipedia）。今天，只要拥有足够的阅读能力，任何人都可以获得过去难以获得的 “博士” 级的知识。
+Theo một nghĩa nào đó, tôi vẫn biết ơn người đã cấm *Animal Farm*, hay “những người” mà tôi sẽ chẳng bao giờ biết là ai. Nếu họ không dựng nên chướng ngại tưởng như không thể vượt qua ấy, có lẽ tôi sẽ chẳng bao giờ có được cảm nhận đặc biệt này. Sau đó nữa, một ngày, tôi nghe tiến sĩ [Randy Pausch](http://en.wikipedia.org/wiki/Randy_Pausch) nói trong “The Last Lecture”: “The brick walls are there for a reason. They're not there to keep us out. The brick walls are there to give us a chance to show how badly we want something…”. Ngay khoảnh khắc ấy, nước mắt tôi trào ra.
 
-在这样的时代里，“阅读” 突破了个体的 “体验” 或者单纯的 “试错” 的种种局限。“体验” 往往只能局限于自己，而 “试错” 局限于自己的阅历。然而，通过 “阅读”，我们可以得知他人的 “体验” 和 “试错” 结果（即所谓的 “经验”）。可以跨越时间、空间，不用说可以跨越种族和国度 —— 文字翻译工具越来越先进，而掌握两种或者两种以上语言的人数也在不停地增加。
+> **Ghi chú biên tập về lời trích:** [Bản chép lời chính thức của Carnegie Mellon, trang 8](https://www.cs.cmu.edu/~pausch/Randy/pauschlastlecturetranscript.pdf) có ý về bức tường như cơ hội thể hiện mình mong muốn điều gì đến mức nào, trong câu chuyện Pausch bị Walt Disney Imagineering từ chối. Câu tiếng Anh được giữ theo bản sách, có chỗ rút gọn so với transcript; không gọi đây là bản chép từng chữ của bài nói.
 
-“阅读” 的前提是使用文字记载的前人经验已经存在。而文字使得快速的经验积累成为可能 —— “对蛇（爬行动物）的恐惧” 可能需要几百代才能通过记忆遗传变成 “天生的知识”，但是，有了文字之后，一代之间，就有可能积累并获得千百年来积累的知识。现代人只需要通过小学、中学、大学总计差不多十五年左右的时间里，就有机会在学校里把哥白尼、伽利略、牛顿，或者达尔文、门捷列夫，甚至爱因斯坦等历史上的巨人们所拥有的全部知识囊括在自己的脑中。
+## 8. Chỉ con người mới giỏi đọc
 
-文字太重要了。但是，明显的另外一个事实是，小学、中学、大学总计差不多十五年左右的时间貌似并不可能，也没有做到 “教育” 出另外一个哥白尼、另外一个伽利略、另外一个牛顿，或者另外一个达尔文、另外一个门捷列夫，甚至另外一个爱因斯坦。显然，还应该有更重要的获取知识的方法，其使用以及传授的难度之高甚至连世世代代的精英们前仆后继呕心沥血精心设计的 “正规教育” 体系都往往以失败告终。
+> **Ghi chú biên tập trước khi đọc:** Phần này giữ lập luận và các khẳng định của nguyên tác về chữ viết, gene và học tập. Một số khẳng định khoa học, lịch sử không chính xác hoặc quá tuyệt đối; các ghi chú phía dưới phân biệt lời tác giả với bằng chứng đối chiếu. Khả năng đọc không phải thước đo giá trị của một con người.
 
-而习得第二语言（甚至更多语言）之后，就多出另外一片天空。而英文目前又是地球上文库信息量最大最高质的文字，而 Wikipedia 的出现，又进一步强化了英语在这方面的地位。尽管有些时候，部分英文书籍有相应的中译版，但，读译本有时很令人头痛，令人不痛快，因为
+Chính nhờ có chữ viết mà con người có sự khác biệt về bản chất với các loài khác. Đọc có ý nghĩa phi thường đối với bất kỳ con người bình thường nào. Những loài ngoài con người chỉ có thể dựa vào phương thức lạc hậu nhất nhưng vẫn được gọi là kỳ diệu để tích lũy kinh nghiệm: di truyền qua gene. Terry Burnham và Jay Phelan đề cập trong cuốn *MEAN GENE* rằng chim gõ kiến có thể dùng thuật toán tối ưu theo bản năng để kiếm thức ăn, trong khi một tiến sĩ toán học của MIT gặp cùng bài toán chưa chắc đã giải được nhanh. Vậy cái đầu nhỏ của chim gõ kiến, chưa từng qua giáo dục đại học, tìm ra kết quả bằng cách nào? Câu trả lời là: di truyền qua gene.
 
-1. 译文质量差；
-2. 译文也许经过裁剪 (censorship)；
-3. 译文也必然来得太晚……
+Tất nhiên, con người cũng có thể tích lũy kinh nghiệm qua di truyền. Một em bé chưa từng thấy rắn nhưng hễ thấy rắn sẽ khóc ré lên; em bé cũng chưa từng thấy súng, nhưng lại không sợ thứ đáng sợ hơn rắn không biết bao nhiêu lần ấy. Tổ tiên loài người qua bao đời đã bị rắn cắn không biết bao nhiêu lần; còn từ khi con người nhận ra sự nguy hiểm của súng đến nay chưa đầy hai trăm năm, chưa kịp hình thành nỗi sợ “bẩm sinh” có thể di truyền qua gene.
 
-也许有些人认为读译文更省时间，然而，从另外一个角度来说，习得第二语言才是真正节省时间提高效率的方法。习得第二语言根本没有那些失败者想像得那么难，相反可能很简单。那些人之所以觉得 “那么难”，其实无非是因为他们在这方面没有成功过而已。做得好的人也知道难，并且真的知道真的有多难，但他们好像并不怕难。其实也对，想想看吧，做什么事不难呢？怕又有什么用呢？
+> **Ghi chú biên tập về gene, học tập và nỗi sợ:** Các đoạn trên đã đánh đồng di truyền sinh học với học tập. Động vật còn học qua trải nghiệm và quan sát: [thí nghiệm của Alem và cộng sự, PLOS Biology, 2016](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002564) cho thấy ong nghệ có thể học kéo dây và truyền kỹ năng qua nhiều lượt cá thể học. [Nghiên cứu của Hoehl và cộng sự, 2017](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2017.01710/full) đo phản ứng đồng tử của trẻ sáu tháng khi nhìn ảnh; kết quả không chứng minh mọi trẻ nhìn thấy rắn đều khóc, hay ký ức bị rắn cắn được truyền nguyên vẹn qua gene. Mốc súng “chưa đầy hai trăm năm” cũng sai: [Royal Armouries](https://royalarmouries.org/objects-and-stories/stories/the-hundred-years-war-1337-1453) ghi nhận súng cầm tay trong Chiến tranh Trăm Năm và một người lính bị súng giết ở Agincourt năm 1415. Tên sách đúng là [*Mean Genes*](https://www.penguinrandomhouse.com/books/21452/mean-genes-by-terence-burnham-and-jay-phelan/), số nhiều; ví dụ chim gõ kiến/MIT ở đây là điều tác giả dẫn lại, bản biên tập chưa xác minh được đoạn đó trong sách.
 
-## 9. 如何拥一个像 Umberto Eco 教授的私人图书馆一样的甚至更好的图书馆
+Sự xuất hiện của chữ viết phân biệt con người với các động vật khác. Nhờ chữ viết, việc tích lũy kinh nghiệm của con người không còn chỉ dựa vào di truyền qua gene. Con người bắt đầu dùng chữ viết để ghi lại và tích lũy thông tin, thu nhận kiến thức, truyền đạt kinh nghiệm… Bùng nổ thông tin đưa chúng ta vào thời đại tiến bộ đáng kinh ngạc nhất trong lịch sử nhân loại. Cách nói “mỗi ngày, mỗi tháng đều đổi mới” đã không đủ; nói “mỗi phút, mỗi giây đều đổi mới” cũng chẳng quá lời.
 
-自古以来，想要读书，家底就要足够殷实。想想看吧，一年四季都不用下地干活，竟然还有饭吃，这是一般人能够拥有的条件么？我们读古诗，看马致远（约 1250~1324）慨叹 “枯藤老树昏鸦，小桥流水人家，古道西风瘦马，夕阳西下，断肠人在天涯。” 说得那个凄凉。但是，细想想，管它瘦还是不瘦，毕竟他还有一匹马（今天有多少比例的人有车开？），跟着个书童（今天有多少人雇得起私人秘书？），纸墨笔砚文房四宝（多贵的东西才叫 “宝”？其实成本价格可能要比今天最多只有 1/3 的人可以随身携带的笔记本电脑要高多了……）要随身携带 …… 很多人家并没有很丰裕的家底，不小心出了个读书人，好不容易几代人攒出来的家底就被他给 “败” 了。马致远仕途不畅，后隐居杭州。
+Sau khi cuối cùng có chữ viết, con người không lập tức nhận được mọi lợi ích đáng có. Việc truyền bá và tích lũy tri thức không bỗng chốc trở nên quá dễ dàng. Từ thắt nút dây ghi việc đến khắc đá ca tụng công đức, từ dùng hết thẻ tre để ghi tội đến những cuộc bàn luận của người đội khăn nho sĩ, từ ghi sử trên giấy Tuyên đến cất bản đồ bằng da, vật mang chữ viết chưa bao giờ dễ bảo quản, dễ truyền bá. Tiểu thuyết *Tây du ký* kể sinh động một câu chuyện như vậy: trong thời đại việc truyền bá chữ viết vô cùng khó khăn, tìm kiếm tri thức vất vả đến nhường nào.
 
-史书上常说清代的周永年（1730~1791）出身寒微。我觉得不然。此人爱书心切，见书必得，这不是穷人能养出来的习惯。史书中又说此人仕宦清苦，这颇为可信，因为他为了买书甚至不惜典当御寒衣物。周永年运气足够好，四十一岁终于中了进士，两年之后又晋升为翰林院庶吉士，再后来来有机会协助纪昀编纂《四库全书》，可算是尽管终生不曾得大富大贵，却从未断过精神食粮……
+Thế nhưng ngày nay, sự thuận tiện trong truyền bá chữ viết cũng đã đạt đến mức chưa từng có. Có thể nói Internet đã thay đổi tất cả. Chương trình xử lý văn bản, phần mềm blog (*blog engine*), tiểu blog như Twitter và công cụ tìm kiếm khiến việc viết, ghi lại kinh nghiệm và kiến thức, truyền bá, chia sẻ, tìm kiếm trở nên dễ dàng chưa từng thấy. Bất kỳ ai chỉ cần có chút hiểu biết thông thường đều có thể “xuất bản” bản ghi bằng chữ về những điều mình “trải nghiệm”, “thử và sai”, “quan sát”. Đằng sau giao diện đơn giản, gọn gàng của công cụ tìm kiếm là một lượng thông tin gần như ở quy mô vũ trụ; dùng từ “biển thông tin” đã không đủ. Tinh thần chia sẻ tri thức được phát huy mạnh mẽ chưa từng có; sản phẩm trực tiếp nhất, cũng có ý nghĩa lớn nhất, là bách khoa toàn thư miễn phí Wikipedia. Ngày nay, chỉ cần đủ năng lực đọc, bất kỳ ai cũng có thể tiếp cận những kiến thức “cấp tiến sĩ” mà trước kia khó có được.
 
-十七世纪末、十八世纪初的时候，法国有位哲学家，[Pierre Daniel Huet](http://en.wikipedia.org/wiki/Pierre_Daniel_Huet)，被认为是那个时代最为博学（erudite）的人。据说他为了不浪费时间，给自己配了个识字的仆人，随时带着书跟着他，一旦他闲下来的时候 —— 比如吃饭、如厕，或者在谁谁的客厅里等人的时候 —— 就读书给他听（我猜这位仆人也比大多数人博学）；而绝大多数人在大约两百年之后才有机会、有支付能力购买可以随身携带的 mp3 播放器用来随时听买来的 audiobook……于是他在二十岁的时候，就已经被认为是那个时代里最有前途的学者。
+Trong thời đại như vậy, “đọc” vượt qua nhiều giới hạn của việc cá nhân tự “trải nghiệm” hay đơn thuần “thử và sai”. “Trải nghiệm” thường bị giới hạn ở chính mình, còn “thử và sai” bị giới hạn bởi những gì mình đã trải qua. Nhưng nhờ “đọc”, chúng ta biết được “trải nghiệm” và kết quả “thử và sai” của người khác, tức điều gọi là “kinh nghiệm”. Ta có thể vượt qua thời gian, không gian, chưa kể chủng tộc và biên giới quốc gia. Công cụ dịch văn bản ngày càng tiến bộ, còn số người nắm được hai hay nhiều ngôn ngữ cũng không ngừng tăng.
 
-[Umberto Eco](http://en.wikipedia.org/wiki/Umberto_Eco)教授，一位意大利学者，也许是当今世界最博学的人之一（对了，他还是 007 邦德的粉丝）。他最有形有款的事情是他拥有一个藏书多达三万册的私人图书馆 —— 以他的渊博，选书也肯定一流，所以那可是三万本精品呢。他最看不起问他 “哇！Umberto Eco，这么多的书里你究竟读过多少本？” 的人 —— 因为，他认为藏书并非为了显摆自己的身份，并且，更深刻的是，他认为没读过的书要比读过的书更加重要，更具不可估量的价值。
+Điều kiện để “đọc” là kinh nghiệm của người đi trước đã được ghi bằng chữ phải tồn tại. Chữ viết khiến việc tích lũy kinh nghiệm nhanh chóng trở nên khả thi. “Nỗi sợ rắn, loài bò sát” có thể cần hàng trăm thế hệ mới biến thành “tri thức bẩm sinh” qua di truyền ký ức; nhưng khi đã có chữ viết, chỉ trong một thế hệ, con người có thể tích lũy và thu nhận tri thức được tích góp suốt hàng trăm, hàng nghìn năm. Người hiện đại chỉ cần trải qua tổng cộng khoảng mười lăm năm tiểu học, trung học và đại học là có cơ hội thu vào đầu mình, ngay trong trường học, toàn bộ tri thức của những người khổng lồ lịch sử như Copernicus, Galileo, Newton, Darwin, Mendeleev, thậm chí Einstein.
 
-对于绝大多数人来讲，读书本质上来看是很奢侈的爱好，如果考虑时间精力成本的话，读书比吸毒昂贵多了 —— 另外一方面，吸毒会严重缩短寿命，而读书基本上不会有这样的副作用，于是，读书的累计成本无疑要比吸毒高出不只一个量级 。不妨想象一下仅仅这三万册书本身的总价就不会低于 100 万美元……
+> **Ghi chú biên tập về giới hạn của phép so sánh:** Không có bằng chứng trong các nguồn đối chiếu ở trên cho cơ chế “di truyền ký ức” hay số thế hệ cố định mà đoạn này nêu. Mười lăm năm là con số khái quát của tác giả, không phải thời lượng chuẩn cho mọi hệ giáo dục. Học một phần thành quả khoa học qua sách không đồng nghĩa có toàn bộ tri thức, kỹ năng thực nghiệm hoặc năng lực sáng tạo của những nhà khoa học được kể tên. Việc tiếp cận tài liệu nghiên cứu cũng không tự tương đương với hoàn thành đào tạo tiến sĩ.
 
-然而，互联网改变了一切。以下我将告诉读者一个为自己建一个电子图书馆的方法。读者只需要一台电脑（两三千块钱而已的成本），有互联网连接，就可以拥有一个无限容量的私人图书馆，占地小，花钱少，成本低，效率高 —— 因为是藏电子书，所以还可以全文检索，这可是马致远、周永年也好，Pierre Daniel Huet 也罢，不敢想象、不曾体会的好处。Umberto Eco 最看不起问他 “哇！Umberto Eco，这么多的书里你究竟读过多少本？” 的人 —— 因为，他认为没读过的书要比读过的书更加重要，更具不可估量的价值。而终于，我们现在有机会为自己建一个读不完但可以随时检索的巨型图书馆！
+Chữ viết quá quan trọng. Nhưng một sự thật khác cũng rất rõ: tổng cộng khoảng mười lăm năm tiểu học, trung học và đại học dường như không thể, và cũng chưa “giáo dục” ra thêm một Copernicus, một Galileo, một Newton, một Darwin, một Mendeleev, hay thậm chí một Einstein khác. Hiển nhiên còn phải có phương pháp thu nhận tri thức quan trọng hơn. Việc sử dụng và truyền dạy phương pháp ấy khó đến mức ngay cả hệ thống “giáo dục chính quy”, được những người ưu tú qua bao thế hệ nối tiếp nhau dốc tâm sức thiết kế, cũng thường kết thúc trong thất bại.
 
-自从 Windows Vista 开始，Windows 就内建了已经羽翼丰满、性能良好、界面友好、使用方便的 “索引服务”。而在新推出的 Windows 7 上，索引服务的性能更令人满意 —— 尤其只是用来搜索自己的电子书的时候。
+Khi học được ngôn ngữ thứ hai, thậm chí nhiều ngôn ngữ hơn, ta có thêm một khoảng trời nữa. Theo tác giả, tiếng Anh hiện là ngôn ngữ có kho văn bản nhiều thông tin nhất và chất lượng cao nhất trên Trái Đất; sự xuất hiện của Wikipedia càng củng cố vị thế ấy của tiếng Anh. Dù đôi khi một số sách tiếng Anh có bản dịch tiếng Trung tương ứng, đọc bản dịch có lúc rất đau đầu, rất khó chịu, bởi vì:
 
-因为 pdf 是最常用的电子书格式，所以要现在计算机上下载并安装 Acrobat Reader。
+1. Chất lượng bản dịch kém;
+2. Bản dịch có thể đã bị cắt xén (*censorship*);
+3. Bản dịch cũng chắc chắn đến quá muộn…
 
-首先要确定 Windows 上已经启用了 “索引服务”:依次选择 “控制面板”>“程序”>“程序和功能”>“打开或关闭 Windows 功能”。
+Có lẽ một số người cho rằng đọc bản dịch tiết kiệm thời gian hơn. Nhưng nhìn từ một góc độ khác, học được ngôn ngữ thứ hai mới là cách thực sự tiết kiệm thời gian và nâng hiệu quả. Học ngôn ngữ thứ hai vốn không khó như những người thất bại tưởng tượng; ngược lại, có thể rất đơn giản. Những người ấy thấy nó “khó đến thế”, thực ra chẳng qua vì họ chưa từng thành công ở việc này. Người làm tốt cũng biết là khó, và thực sự biết khó đến mức nào, nhưng dường như họ không sợ khó. Nghĩ ra cũng đúng: làm việc gì mà chẳng khó? Sợ thì có ích gì?
 
-另外一个方法是：先按一下 “Windows 键”，然后输入 “打开或者关闭 Windows 功能”；事实上，只要输入 “打开或” 这三个字的时候，已经可以在 Windows 的 “开始菜单” 中看到 “打开或关闭 Windows 功能” 的链接了：
+> **Ghi chú biên tập cho người học Việt:** Nhận định xếp hạng kho tri thức và chất lượng ngôn ngữ ở trên là lời đánh giá của tác giả, không phải kết quả đo lường được cung cấp trong chương. Đoạn về bản dịch nói đến tiếng Trung trong bối cảnh nguyên tác. Khi dùng bản dịch tiếng Việt, hãy xét từng bản dịch, người dịch, nguồn và mức đầy đủ; không mặc định mọi bản dịch đều kém hoặc bị cắt. Có thể đọc bản Việt để hiểu vấn đề rồi đối chiếu bản Anh để học cách biểu đạt. Khó khăn khi học ngôn ngữ không tự chứng minh một người thiếu cố gắng hay là “người thất bại”.
+
+## 9. Xây một thư viện riêng như giáo sư Umberto Eco, hoặc còn tốt hơn
+
+Từ xưa, muốn đọc sách thì gia cảnh phải đủ khá giả. Nghĩ xem, quanh năm không phải xuống ruộng làm mà vẫn có cơm ăn, đó có phải điều người bình thường có được không? Đọc thơ cổ, ta thấy Mã Chí Viễn, khoảng 1250-1324, than: “Dây leo khô, cây già, quạ chiều; cầu nhỏ, nước chảy, nhà người; đường xưa, gió tây, ngựa gầy; chiều buông, người đoạn trường nơi chân trời.” Nghe thật thê lương. Nhưng nghĩ kỹ, gầy hay không thì ông vẫn có một con ngựa, ngày nay bao nhiêu người có xe riêng? Có một tiểu đồng đi theo, ngày nay bao nhiêu người thuê nổi trợ lý riêng? Còn phải mang theo bút, mực, giấy, nghiên, bốn báu vật thư phòng. Thứ gì mới đủ đắt để gọi là “báu vật”? Giá thành của chúng có lẽ còn cao hơn chiếc máy tính xách tay mà tối đa một phần ba số người ngày nay có thể mang theo. Nhiều gia đình không giàu có; nếu vô tình sinh ra một người ham đọc, của cải dành dụm qua nhiều thế hệ có khi bị người ấy “phá” hết. Mã Chí Viễn không thuận đường quan lộ rồi ẩn cư ở Hàng Châu.
+
+Sử sách thường nói Chu Vĩnh Niên, 1730-1791, đời Thanh, xuất thân nghèo khó. Tôi không nghĩ vậy. Ông mê sách đến mức hễ thấy sách là phải có, đó không phải thói quen mà người nghèo dễ nuôi được. Sử sách còn nói ông làm quan thanh bần, điều này khá đáng tin, vì để mua sách ông sẵn sàng cầm cố cả áo chống rét. Chu Vĩnh Niên đủ may mắn, bốn mươi mốt tuổi mới đỗ tiến sĩ; hai năm sau thăng làm Thứ cát sĩ Hàn Lâm viện, rồi có cơ hội giúp Kỷ Quân biên soạn *Tứ khố toàn thư*. Dù cả đời không đại phú đại quý, ông chưa từng thiếu lương thực tinh thần…
+
+Vào cuối thế kỷ XVII và đầu thế kỷ XVIII, có một triết gia Pháp là [Pierre Daniel Huet](http://en.wikipedia.org/wiki/Pierre_Daniel_Huet), được xem là một trong những người uyên bác nhất thời đại, *erudite*. Tương truyền để không phí thời gian, ông thuê một người hầu biết chữ, luôn mang sách theo. Hễ rảnh, như khi ăn, đi vệ sinh, hoặc ngồi chờ ở phòng khách của ai đó, ông lại bảo người ấy đọc sách cho nghe. Tôi đoán người hầu này cũng uyên bác hơn phần lớn mọi người. Khoảng hai trăm năm sau, đa số mới có cơ hội và khả năng mua máy nghe MP3 cầm tay để nghe audiobook đã mua. Vì vậy khi mới hai mươi tuổi, Huet đã được xem là học giả triển vọng nhất thời.
+
+Giáo sư [Umberto Eco](http://en.wikipedia.org/wiki/Umberto_Eco), một học giả Ý, có lẽ là một trong những người uyên bác nhất thế giới. Nhân tiện, ông còn là người hâm mộ James Bond. Điều thật đáng nể là ông có thư viện riêng đến ba mươi nghìn cuốn. Với sự uyên bác của ông, việc chọn sách hẳn cũng rất tốt, nên đó là ba mươi nghìn cuốn tinh tuyển. Ông rất không thích người hỏi: “Umberto Eco, trong ngần ấy sách ông đã đọc bao nhiêu cuốn?”. Theo ông, giữ sách không phải để khoe địa vị; sâu hơn nữa, những cuốn chưa đọc quan trọng hơn và có giá trị không thể ước lượng so với những cuốn đã đọc.
+
+Với phần lớn mọi người, đọc sách về bản chất là một thú vui rất tốn kém. Nếu tính cả thời gian và công sức, tác giả ví nó còn tốn hơn ma túy. Mặt khác, ma túy làm giảm tuổi thọ nghiêm trọng, còn đọc sách nhìn chung không gây tác dụng như vậy, nên tổng chi phí của việc đọc theo phép ví ấy càng cao hơn nhiều. Chỉ riêng giá của ba mươi nghìn cuốn sách đã có thể không dưới một triệu đô la Mỹ…
+
+Nhưng Internet đã thay đổi tất cả. Phần sau trình bày cách xây thư viện điện tử riêng. Chỉ cần một máy tính, chi phí khi nguồn được viết là hai hoặc ba nghìn tệ, cùng kết nối Internet, bạn có thể có một thư viện cá nhân dung lượng gần như không giới hạn: chiếm ít chỗ, ít tiền, chi phí thấp, hiệu quả cao. Vì là sách điện tử, bạn còn có thể tìm toàn văn, lợi ích mà Mã Chí Viễn, Chu Vĩnh Niên hay Pierre Daniel Huet khó tưởng tượng và trải nghiệm. Nhờ vậy, ngày nay ta có cơ hội xây một thư viện khổng lồ, không thể đọc hết nhưng có thể tra cứu bất cứ lúc nào.
+
+> **Ghi chú biên tập về bối cảnh, chi phí và quyền sử dụng:** Các nhận định về giàu nghèo, nghiện chất và giá sách là phép so sánh có tính tu từ của tác giả, không phải kết luận kinh tế hay y tế. Ý tưởng “thư viện của những cuốn chưa đọc” gắn với Eco, nhưng số lượng ba mươi nghìn và cách diễn giải trong chương cần được xem là bối cảnh nguồn. Chi phí máy tính, phần mềm và hướng dẫn Windows ở dưới thuộc thời Windows Vista/7; không suy ra chúng còn phù hợp với thiết bị hiện nay. Thư viện điện tử nên gồm sách tự mua, sách được cấp phép, tài liệu công cộng hoặc tài liệu do người dùng có quyền lưu giữ. Không tải hoặc chia sẻ bản sao xâm phạm bản quyền.
+
+Từ Windows Vista, Windows có sẵn một dịch vụ lập chỉ mục được tác giả đánh giá là tương đối hoàn thiện, hiệu năng tốt và dễ dùng. Trên Windows 7 mới ra mắt lúc đó, tác giả cho rằng dịch vụ còn đáp ứng tốt hơn, nhất là khi chỉ để tìm sách điện tử của chính mình.
+
+Vì PDF là định dạng ebook phổ biến, tác giả khuyên tải và cài Acrobat Reader trên máy tính. Trước hết, cần chắc rằng Windows đã bật “Indexing Service”: vào “Control Panel” > “Programs” > “Programs and Features” > “Turn Windows features on or off”.
+
+Một cách khác là nhấn phím Windows rồi gõ “turn Windows features on or off”. Theo hướng dẫn gốc, chỉ cần nhập “turn Windows features” là Start menu đã hiện liên kết tương ứng:
 
 ![](images/figure57.png)
 
-默认 Indexing Service 之前是没有打勾的，现在打上勾，然后按确定按钮。
+Theo màn hình Windows 7 gốc, mặc định mục “Indexing Service” chưa được chọn. Hãy chọn nó rồi nhấn “OK”.
+
+> **Ghi chú biên tập về Windows hiện nay:** Toàn bộ đường dẫn, ảnh chụp và các bước từ đây đến cuối phần này là hướng dẫn lịch sử cho Windows Vista/7. `Indexing Service` là thành phần cũ, đã được Windows Search thay thế và không còn là hướng dẫn phù hợp cho Windows hiện nay. Nếu dùng Windows mới, hãy cấu hình Windows Search cho đúng thư mục sách của mình và chỉ bật lập chỉ mục nội dung khi cần. Không cần bật dịch vụ cũ, hiện tệp ẩn hay bỏ phân biệt dấu như hướng dẫn gốc.
 
 ![](images/figure58.png)
 
-而后要配置 “索引选项”。在控制面板中找到 “索引选项” 并点击，会跳出 “索引选项” 对话框：
+Tiếp theo, cấu hình “Indexing Options”. Trong Control Panel, tìm và mở “Indexing Options”; hộp thoại cùng tên sẽ xuất hiện:
 
 ![](images/figure59.png)
 
-点对话框中的 “高级” 按钮，开始配置高级选项：1) 把 “将发音符号不同的相似单词当作不同的单词 (T)” 之前的勾去掉。因为我们用来索引的是英文电子书，所以并不希望计算机把 “resume” 和 “resumè” 当作两个词处理。2) 而后点击 “选择新位置” 按钮，更改 Windows 索引服务所生成的数据库存放位置。下面的图片是在虚拟机里截取的，所以显示的是 “C:\eLibrary Index Files”。事实上，我是用一块儿单独的硬盘（或者起码一个单独的分区）来存放电子书的。那块儿硬盘下只有三个目录：“x:\eLibrary”（用来存放 pdf、html、doc、rtf、txt 之类的电子书）、“x:\eLibrary Index Files”（用来存放索引文件），和 “Audios and Videos”（用来存放有声书和视频讲座）。
+Nhấn “Advanced” để xem tùy chọn nâng cao. Bản gốc đề xuất: 1) bỏ chọn “Treat similar words with diacritics as different words”, vì tác giả chỉ lập chỉ mục ebook tiếng Anh và không muốn máy coi “resume” và “resumè” là hai từ khác nhau; 2) nhấn “Select new location” để đổi nơi lưu cơ sở dữ liệu chỉ mục. Ảnh dưới được chụp trong máy ảo nên hiện “C:\eLibrary Index Files”. Tác giả thực tế dùng một ổ đĩa riêng, hoặc ít nhất một phân vùng riêng, gồm ba thư mục: “x:\eLibrary” cho ebook PDF, HTML, DOC, RTF, TXT và các định dạng tương tự; “x:\eLibrary Index Files” cho tệp chỉ mục; và “Audios and Videos” cho audiobook cùng bài giảng video.
+
+> **Lưu ý:** Cài đặt phân biệt dấu tùy thuộc ngôn ngữ và nhu cầu tìm kiếm của bạn. Tài liệu PDF quét ảnh không tự trở thành có thể tìm toàn văn chỉ vì đã lập chỉ mục; tệp cần có lớp văn bản hoặc được OCR, và khả năng lập chỉ mục còn phụ thuộc định dạng, bộ lọc cùng quyền truy cập.
 
 ![](images/figure60.png)
 
-而后还要配置索引服务所要索引的文件类型。默认情况下，已经在 Windows 中注册过的所有类型都会被索引，但是，我们只需要它去索引一个目录中的几种特定文件类型就可以了，包括：doc、docs、rtf、txt、html、和 pdf……
+Sau đó cấu hình loại tệp cần lập chỉ mục. Theo bản gốc, mặc định mọi định dạng đã đăng ký trong Windows đều được lập chỉ mục, nhưng thư viện này chỉ cần một số loại trong một thư mục, gồm `doc`, `docs`, `rtf`, `txt`, `html` và `pdf`.
 
-另外，要在 “应该如何索引此文件？” 下选择 “为属性和文件内容添加索引(C)” —— 以便将来我们可以对书库里的书籍进行 “全文检索”。
+Ở mục “How should this file be indexed?”, chọn “Index Properties and File Contents” để có thể tìm toàn văn trong thư viện sau này.
 
 ![](images/figure61.png)
 
-现在我们要选择 “索引位置”。在此之前，我们要先修改一下 Windows 的文件夹显示选项。在开始菜单中点击 “计算机”，按一下 “Alt” 键，就可以看到菜单栏，选择 “工具”“文件夹选项”，然后在 “查看” 标签中，找到 “隐藏文件和文件夹”，选中第二个选项：“显示隐藏的文件、文件夹和驱动器”。
+Tiếp theo là chọn “Indexed Locations”. Bản gốc yêu cầu đổi tùy chọn hiển thị thư mục trước: mở “Computer” từ Start menu, nhấn `Alt` để hiện thanh menu, chọn “Tools” > “Folder Options”, rồi trong thẻ “View”, tìm “Hidden files and folders” và chọn “Show hidden files, folders, and drives”. Đây chỉ là mô tả lại giao diện Windows 7 trong ảnh, không phải khuyến nghị cho hệ điều hành hiện nay.
 
 ![](images/figure62.png)
 
-现在，回到 “索引选项” 对话框中，点击 “修改(M)” 按钮。而后在 “索引位置” 对话框中选中 “eLibrary” 目录。
+Quay lại hộp thoại “Indexing Options”, nhấn “Modify”, rồi chọn thư mục “eLibrary” trong hộp thoại “Indexed Locations”.
 
 ![](images/figure63.png)
 
-如此配置之后，Windows 就会在计算机空闲的时候，就会为 “eLibrary” 目录中的所有电子书进行全文索引；而以后可以随时把新的电子书放到 “eLibrary” 目录中，Windows 会自动更新索引数据库。
+Với cấu hình ấy, Windows 7 sẽ lập chỉ mục nội dung cho ebook trong “eLibrary” khi máy rảnh. Khi thêm ebook mới vào thư mục, chỉ mục được cập nhật tự động.
 
-想要在自己的书库里找点什么的时候，只需要用 “资源管理器” 找到存放电子书的目录，而后在右上角的搜索输入框中填写所要搜索的关键字，即可看到搜索结果。更快捷一点的方法是，按一下 Windows 键，而后直接输入想要搜索的字符串。
+Khi cần tìm trong thư viện, dùng “Windows Explorer” mở thư mục chứa ebook rồi nhập từ khóa vào ô tìm kiếm ở góc trên bên phải. Theo bản gốc, một cách nhanh hơn là nhấn phím Windows rồi nhập trực tiếp chuỗi muốn tìm.
 
-## 5.8. 轻松搜索电子书
+> **Chú thích ảnh 57-63:** Đây là ảnh chụp giao diện Windows 7 bằng tiếng Trung, được giữ lại như tư liệu lịch sử. Các đoạn ngay trước mỗi ảnh đã chuyển toàn bộ thao tác và nhãn giao diện liên quan sang tiếng Việt.
 
-大约二十年前，获取大量有效信息的方法几乎只有一个，去图书馆；而在国内，图书馆是大城市的特权。互联网改变了一切，电子化的文档某种意义上早已经把纸媒远远抛在了身后。在英文世界里更是如此。
+### 9.1. Dễ dàng tìm ebook
 
-常用的搜索方法有这么几个：
+Khoảng hai mươi năm trước, cách gần như duy nhất để tiếp cận nhiều thông tin hữu ích là đến thư viện; trong bối cảnh tác giả, thư viện còn là đặc quyền của thành phố lớn. Internet đã thay đổi rất nhiều. Theo một nghĩa nào đó, tài liệu điện tử đã vượt xa báo in về tốc độ lưu thông, đặc biệt trong môi trường tiếng Anh.
 
-### 1. 在 Google 上直接搜索书名或者作者名。
+Sau đây là năm cách tìm kiếm tác giả từng dùng. Hãy xem chúng như tư liệu lịch sử và chỉ tiếp cận bản sao mà bạn có quyền dùng. Một kết quả tìm kiếm, định dạng tệp hay liên kết lưu trữ không tự tạo ra quyền tải xuống hoặc chia sẻ. Ưu tiên trang chính thức của tác giả, nhà xuất bản, thư viện được cấp phép, tác phẩm phạm vi công cộng hoặc giấy phép mở.
 
-有些作者可能会直接提供全文下载。比如，诺贝尔经济学奖得主米尔顿弗里德曼（Milton Friedman）的 “[Free to Choose](http://www.freetochoose.net/)” 不仅有文本，还有 PBS 为其制作的 15 集视频。《自私的基因》的作者；理查德道金斯（Richard Dawkins）的个人网站上提供他的大部分著作的下载。
+#### 1. Tìm trực tiếp tên sách hoặc tên tác giả trên Google
 
-### 2. 在 Google 搜索里指定文件格式
+Một số tác giả hoặc đơn vị giữ quyền có thể công bố hợp pháp toàn văn. Tác giả lấy ví dụ *[Free to Choose](http://www.freetochoose.net/)* của Milton Friedman, cùng loạt 15 tập do PBS thực hiện, và cho biết trang cá nhân của Richard Dawkins từng cung cấp tải xuống cho phần lớn tác phẩm của ông. Hãy kiểm tra trạng thái, phạm vi cấp phép và điều khoản hiện tại của từng nguồn trước khi sử dụng.
 
-电子书的最常用格式包括这么几个：chm, pdf, djvu。chm 格式无需特殊的阅读器，pdf 需要安装 Adobe Reader；而 djvu 也有自己的阅读器。而很多的时候，网络上这些电子书往往会被压缩成 rar、zip 或其它格式；最好安装一个 WinRAR 或者 7-Zip 解压程序。
+#### 2. Chỉ định định dạng tệp trong Google Search
 
-搜索时，在 Google 的输入框里输入作者名或者书名，之后填上 “filetype:pdf”。比如：
+Tác giả kể các định dạng ebook thường gặp: `chm`, `pdf`, `djvu`. `chm` không cần trình đọc riêng trong bối cảnh Windows cũ, `pdf` cần Adobe Reader, còn `djvu` có trình đọc riêng. Nhiều tệp trên Internet cũng được nén thành `rar`, `zip` hoặc định dạng khác; WinRAR hoặc 7-Zip là ví dụ về phần mềm giải nén.
+
+Khi tìm, tác giả đề xuất nhập tên tác giả hoặc tên sách rồi thêm `filetype:pdf`, ví dụ:
 
 > Tipping Point filetype:pdf
 
-总之，可以尝试的文件类型有：chm, pdf, djvu, doc, rtf, txt, rar, zip…
+Có thể thử các định dạng `chm`, `pdf`, `djvu`, `doc`, `rtf`, `txt`, `rar`, `zip`.
 
-### 3. 到 Google Books 上看看有没有可以直接浏览的版本
+> **Ghi chú về quyền:** Cú pháp `filetype:` chỉ lọc kết quả tìm kiếm. Nó không xác nhận một bản PDF, tệp nén hay bản quét được phép tải, đọc hoặc chia sẻ.
 
-Google Books 做的非常好，访问地址是http://books.google.com/。很多书籍都可以直接在线阅读；就算没有“Preview”的书籍，也提供检索功能。
+#### 3. Kiểm tra bản có thể xem trực tiếp trên Google Books
 
-### 4. 干脆自定义一个专门的搜索引擎
+Tác giả đánh giá Google Books rất hữu ích và dẫn địa chỉ `http://books.google.com/`. Một số sách có thể đọc trực tuyến; với sách khác, dịch vụ có thể chỉ cung cấp xem trước hoặc tìm trong phạm vi họ cho phép. Mức truy cập phụ thuộc quyền của từng cuốn sách.
 
-Google 的自定义搜索引擎（[Google CSE](http://www.google.com/cse/)）功能非常强大。我专门做了一个搜索电子书的 CSE，在这个页面上可以找到：http://is.gd/6nUgW
+#### 4. Tự tạo một công cụ tìm kiếm chuyên biệt
 
-### 5. 到 WikiPedia 上搜索一下作者和书名
+Tác giả từng đánh giá Google Custom Search Engine, [Google CSE](http://www.google.com/cse/), rất mạnh và đã tạo một CSE để tìm ebook tại `http://is.gd/6nUgW`. Đây là liên kết lịch sử trong nguyên tác, không được kiểm chứng là còn hoạt động, an toàn hay phù hợp để dùng hiện nay.
 
-在 WikiPedia 上往往可以找到很多相关信息；作者越著名，书籍越畅销，相关信息就越多。往往会顺藤摸瓜找到更多资源。
+#### 5. Tìm tác giả và tên sách trên Wikipedia
 
-## 10. 如何收集好书
+Wikipedia thường có nhiều thông tin liên quan. Tác giả càng nổi tiếng và sách càng phổ biến, thông tin liên quan thường càng nhiều; từ đó có thể lần theo các nguồn chính thức hoặc thư viện hợp pháp khác.
 
-如果说好书多得像大海一般汪洋，那么烂书就好像太空一样苍茫。周永年之所以见书必得，是因为那个年代成书太难，传书不易。而今却不一样，出版越来越容易，传播越来越便捷。人们总是说这是个信息爆炸的年代，但是我却深不以为然。要真的是有效信息爆炸就好了 —— 因为它爆炸了，我们就开心死了，爆炸了的有效信息不仅好找，而且好用。可事实上，爆炸的更可能是垃圾信息而已。互联网的出现，某种意义上只是加快了信息流动的速度而已，在有效信息创造方面的提升尽管很明显但效用从目前来看却依然有限。于是，更得益于传播速度增加的是垃圾信息、无效信息。而相对来看，有效信息却前所未有地更加难以寻找、筛选。
+## 10. Cách sưu tầm sách hay
 
-所以，花时间选书不仅一点都不浪费时间，更重要的是这个过程等同于在提高自己的生活质量。我个人对各种时间管理技巧都抱有一定程度的狐疑，只相信 “用正确的方法做正确的事情” 才能不虚度光阴。读书时需要消耗时间的，消耗时间等同于消耗生命，只要意识清醒，有谁愿意无谓地浪费生命呢？
+Nếu sách hay nhiều mênh mông như biển, tác giả ví sách dở còn mênh mông như không gian. Chu Vĩnh Niên thấy sách là muốn có vì thời của ông làm sách khó, truyền sách cũng khó. Bây giờ thì khác: xuất bản ngày càng dễ, lan truyền ngày càng tiện. Mọi người thường gọi đây là thời đại bùng nổ thông tin, nhưng tác giả không hoàn toàn đồng ý. Nếu thông tin hữu ích thật sự bùng nổ thì thật đáng mừng, vì nó vừa dễ tìm vừa dễ dùng. Theo tác giả, thứ bùng nổ có lẽ thường là thông tin rác. Internet, theo một nghĩa nào đó, chủ yếu làm thông tin lưu chuyển nhanh hơn; dù có đóng góp rõ rệt cho việc tạo thông tin hữu ích, hiệu quả ấy vẫn có giới hạn. Vì vậy, thông tin rác và vô ích hưởng lợi nhiều hơn từ tốc độ truyền bá, còn thông tin có giá trị lại khó tìm và sàng lọc hơn bao giờ hết.
 
-最先可以从作者入手，买牛人写的书，尝试着去理解牛人的看法和想法。想了解任何一个学科，都可以先去看看那个学科里当前最著名的人写过哪些书。最著名的人不一定是最好的作者，但，总体上来看，他还是最靠谱一些。我读宏观经济学的时候，第一本教课书读的是 MIT 的经济学教授 Paul Krugman 与 Maurice Obstfeld 合著的那本 International Economics: Theory and Policy；此书 1998 年第一版，到 2008 年已经是第八版了；同一年，Paul Krugman 获得诺贝尔经济科学奖。这样的作者所写的书，读起来相对更加放心一些 —— 尽管，时时刻刻保留一点怀疑态度没什么不对，也确实应该。再后来，想去认真读一下心理学的时候，我选的第一本书是宾夕法尼亚大学心理学教授 Martin E. P. Seligman 的 What You Can Change and What You Can't: The Complete Guide to Successful Self-Improvement。
+Do đó, dành thời gian chọn sách không hề là lãng phí thời gian, mà còn là một cách nâng chất lượng sống. Tác giả hoài nghi nhiều kỹ thuật quản lý thời gian và chỉ tin rằng “dùng phương pháp đúng để làm việc đúng” mới không phụ thời gian. Đọc sách cần thời gian, và thời gian là một phần đời sống; khi tỉnh táo, ai muốn lãng phí nó vô ích?
 
-有些时候，我们需要去了解一个之前全无了解的领域，这样的时候，我们可能几乎没办法知道那个领域里究竟有哪些牛人。那还有另外一个方法，从版次入手。一般来说，我只买第二版以后的书。大约在 1997 年前后，二十五六岁的我，突然有一天发现自己竟然缺乏足够的逻辑思维能力，于是只好跑到图书馆里找答案。从 “thinking” 这个词入手开始检索，发现有很多书的名字都以 “critical thinking” 为关键字 —— 那之前我都不知道还有这样一个词组（可见我有多么孤陋寡闻）。于是，在一大堆名字里有 “critical thinking” 的书籍里，选择了一本五六年前第一版、当时已经再版四次的书，Beyond Feelings: A Guide to Critical Thinking，作者是 Vincent Ruggiero，此书于 2007 年发行第八版。一点都不夸张地讲，这本书成了我那次重生的起点。直到今天，我都会时不时拿出这本书翻一翻。反复读过这本书之后，顺藤摸瓜又找到一批相关的好书，于是就不停地有着暗爽的机会……
+Có thể bắt đầu từ tác giả: mua sách của những người giỏi và cố hiểu quan điểm của họ. Khi muốn biết một ngành, hãy xem những người nổi tiếng trong ngành đó đã viết gì. Người nổi tiếng nhất chưa chắc là tác giả hay nhất, nhưng nhìn chung có thể là một điểm xuất phát đáng tin hơn. Khi học kinh tế vĩ mô, cuốn giáo trình đầu tiên tác giả đọc là *International Economics: Theory and Policy* do các giáo sư MIT Paul Krugman và Maurice Obstfeld cùng viết. Sách xuất bản lần đầu năm 1998, đến năm 2008 đã có bản thứ tám; cùng năm đó Paul Krugman nhận Giải Nobel Khoa học Kinh tế. Sách của những tác giả như vậy tạo cảm giác yên tâm hơn, dù vẫn nên giữ thái độ hoài nghi hợp lý. Sau đó, khi muốn học tâm lý học nghiêm túc, tác giả chọn cuốn đầu tiên là *What You Can Change and What You Can't: The Complete Guide to Successful Self-Improvement* của giáo sư tâm lý Martin E. P. Seligman, Đại học Pennsylvania.
 
-也是用同样的方法找到了 Joseph M. Williams 教授。当时在我需要的时候，找到了他那本在 1981 年首版、2000 年已经第六版的 Style: Ten Lessons In Clarity and Grace（此书于 2006 年发行第九版），然后一口气买了他的好几本：Style: Toward Clarity and Grace，The Craft of Argument（这本书我买的是第一版，2007 年此书发行第三版），The Craft of Research。
+Đôi khi ta cần tìm hiểu một lĩnh vực hoàn toàn mới và gần như không biết ai đáng đọc. Khi đó có thể nhìn vào các lần tái bản. Tác giả thường chỉ mua sách từ bản thứ hai trở đi. Khoảng năm 1997, ở tuổi hai mươi lăm hoặc hai mươi sáu, tác giả nhận ra mình thiếu năng lực tư duy logic nên đến thư viện tìm câu trả lời. Bắt đầu với từ “thinking”, ông phát hiện nhiều tựa sách có cụm “critical thinking”, một cụm từ mà trước đó ông còn chưa biết. Giữa nhiều cuốn có cụm này, ông chọn *Beyond Feelings: A Guide to Critical Thinking* của Vincent Ruggiero: bản đầu ra khoảng năm hoặc sáu năm trước đó và đã tái bản bốn lần; đến năm 2007 sách có bản thứ tám. Tác giả nói không hề phóng đại khi xem cuốn sách là điểm khởi đầu cho một lần tái sinh của mình. Đến nay, ông vẫn thỉnh thoảng mở lại, rồi từ đó lần theo để tìm thêm nhiều sách hay.
 
-还有一个淘宝的好地方是好书的 “参考文献” 部分。老外写书是非常严谨的，他们从来不会隐藏自己的想法的来源和根据，这些都要清清楚楚地罗列在 “参考文献” 之中。那么牛的人物写书所参考的书籍一般都是好书，而那些被参考的文献的作者，也往往都是骨灰级的大牛。而好书的内容中提到的、甚至给予极高评价的书籍，当然也同样值得找来一睹为快。
+Cũng bằng cách ấy, tác giả tìm thấy giáo sư Joseph M. Williams. Khi cần, ông tìm được *Style: Ten Lessons In Clarity and Grace*, xuất bản lần đầu năm 1981 và đã có bản thứ sáu vào năm 2000, sau đó có bản thứ chín năm 2006. Ông mua thêm nhiều sách của Williams: *Style: Toward Clarity and Grace*, *The Craft of Argument* và *The Craft of Research*.
 
-近两年我选书又多了两个标准：优选那些有电子版、有声版的书。电子版的书籍最好的地方在于可以随时搜索，而听有声书实际上是相当节省时间的，因为可以随时随地听，一本厚厚的书，其实全文朗读只不过是区区一二十个小时而已，往往一两周之内可以反复听上好几遍，而且占用的还只不过是走路、打车等无法阅读的时间而已，相当划算。
+Một nơi đáng khai thác khác là mục “Tài liệu tham khảo” của sách hay. Theo tác giả, các tác giả nước ngoài thường liệt kê rõ nguồn gốc và cơ sở cho ý tưởng của mình ở phần này. Những cuốn được người giỏi trích dẫn thường đáng tìm đọc, và những tác giả của tài liệu được trích dẫn cũng thường là người có chuyên môn sâu. Sách được nhắc đến hoặc đánh giá cao ngay trong nội dung của sách hay cũng có thể là manh mối đáng theo dõi.
 
-| [< 第六章: 语法](./chapter6.md) | [第八章: 叮嘱 >](./chapter8.md) |
+Trong vài năm gần đây, tác giả thêm hai tiêu chí: ưu tiên sách có bản điện tử và audiobook. Điểm mạnh của ebook là có thể tìm kiếm bất cứ lúc nào. Audiobook có thể tiết kiệm thời gian vì có thể nghe khi đi bộ, đi xe hoặc trong lúc không thể đọc; một cuốn dày khi đọc toàn văn thường chỉ mất mười đến hai mươi giờ, nên có thể nghe lặp lại trong một hoặc hai tuần.
+
+> **Ghi chú biên tập cho người học Việt:** Các tên sách, số lần tái bản, giải thưởng và nhận định trong mục này phản ánh thời điểm nguyên tác. Hãy kiểm tra ấn bản mới, uy tín nhà xuất bản, thư viện hoặc giấy phép trước khi mua, mượn hay tải. Đừng chỉ dựa vào danh tiếng, số lần tái bản hoặc một danh mục tham khảo để kết luận sách phù hợp với mục tiêu học tiếng Anh của mình.
+
+| [< Chương 6: Ngữ pháp](./chapter6.md) | [Chương 8: Lời nhắn >](./chapter8.md) |
 | ------------------------------- | ------------------------------- |

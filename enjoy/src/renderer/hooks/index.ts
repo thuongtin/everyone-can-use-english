@@ -1,6 +1,5 @@
 export * from "./use-ai-command";
 export * from "./use-audio";
-export * from "./use-camdict";
 export * from "./use-chat";
 export * from "./use-chat-agent";
 export * from "./use-conversation";

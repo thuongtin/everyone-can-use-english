@@ -1,97 +1,89 @@
-# 与智能体对话
+# Trò chuyện với tác nhân AI
 
-## 新建智能体
+## Tạo tác nhân AI {#create-agent}
 
-在 `聊天` 页面左侧栏右上角，点 `+` 按钮，弹出添加智能体对话框。
+Trên trang **Trò chuyện**, nhấn nút **+** ở góc trên bên phải của thanh bên trái để mở hộp thoại tạo tác nhân.
 
-目前 Enjoy 的智能体支持两种类别：
+Enjoy hỗ trợ hai loại tác nhân:
 
-- GPT
-- TTS
+- **GPT:** trò chuyện bằng văn bản, có thể đóng các vai trò khác nhau theo lời nhắc.
+- **TTS:** chuyển văn bản nhập vào thành giọng nói, có thể chọn ngôn ngữ và giọng đọc.
 
-GPT 智能体可以通过设定不同的提示语，扮演不同的角色，与用户进行文本对话。
+### Tác nhân GPT {#gpt-agent}
 
-TTS 智能体可以将用户输入的文本转换为语音，可以设定不同的语言和音色。
+Khi chọn loại GPT, bạn có thể chọn một lời nhắc có sẵn trong mục **Mẫu**.
 
-### GPT 智能体
+![Chọn mẫu tác nhân GPT](/images/enjoy/chat-gpt-select-template.png)
 
-当选择 GPT 类别时，Enjoy 内置了部分提示语的模板，可以从 `模板` 中选择。
+Sau khi chọn mẫu, ứng dụng tự điền tên, mô tả và lời nhắc của tác nhân. Bạn có thể sửa các mục này theo nhu cầu.
 
-![chat-gpt-select-template](/images/enjoy/chat-gpt-select-template.png)
+Nhấn **Lưu** để tạo tác nhân.
 
-选择任意模板后，智能体名称、描述、提示语会自动填充，也可以根据具体需求进行修改。
+### Tác nhân TTS {#tts-agent}
 
-点 `保存` 按钮，智能体即创建成功。
+Khi chọn loại TTS, ngoài tên và mô tả, cần cấu hình:
 
-### TTS 智能体
+- **Công cụ giọng nói:** chọn `OpenAI` nếu dùng khóa OpenAI riêng; chọn `EnjoyAI` nếu sử dụng dịch vụ của Enjoy.
+- **Mô hình giọng nói:** tài liệu gốc mô tả EnjoyAI hỗ trợ hai mô hình của OpenAI, cùng với `Azure/Speech`. Azure/Speech có nhiều lựa chọn ngôn ngữ và giọng địa phương hơn. Danh sách thực tế phụ thuộc dịch vụ và phiên bản đang dùng.
+- **Ngôn ngữ TTS:** áp dụng cho `Azure/Speech`, dùng để chọn ngôn ngữ và giọng địa phương.
+- **Giọng đọc:** với `Azure/Speech`, mỗi ngôn ngữ có các giọng đọc tương ứng để lựa chọn.
 
-当选择 TTS 类别时，除了名称和描述，还需要对 TTS 进行配置。
+![Cấu hình tác nhân TTS](/images/enjoy/chat-tts-agent.png)
 
-- 语音引擎： 如果想使用自备 OpenAI 密钥，可以选择 `OpenAI`，否则选择 `EnjoyAI`。
-- 语音模型： 当使用 `EnjoyAI` 时，支持 OpenAI 的两个模型，以及 `Azure/Speech`，后者支持更多语言和口音；
-- TTS 语言： 仅对 `Azure/Speech` 有效，支持更多语言和口音；
-- 语音音色： 当使用 `Azure/Speech` 时，不用语言对应多种音色，选择即可。
+Nhấn **Lưu** để tạo tác nhân.
 
-![chat-tts-config](/images/enjoy/chat-tts-agent.png)
+## Tạo cuộc trò chuyện {#new-chat}
 
-点 `保存` 按钮，智能体即创建成功。
+Chọn một tác nhân, rồi nhấn **Cuộc trò chuyện mới** ở phía dưới thanh bên trái.
 
-## 新建聊天
+Tác nhân GPT phản hồi câu hỏi của bạn dựa trên **lời nhắc đã cấu hình**. Câu trả lời do AI tạo cần được đối chiếu khi dùng làm tài liệu học.
 
-选择任意智能体，在左侧栏下点击 `新聊天` 按钮，即可开始对话。
+![Cuộc trò chuyện mới với GPT](/images/enjoy/chat-new-chat-gpt.png)
 
-GPT 智能体会根据**提示语的设定**回答用户的**任何问题**。
+Tác nhân TTS chuyển văn bản bạn nhập thành giọng nói.
 
-![chat-new-chat-gpt](/images/enjoy/chat-new-chat-gpt.png)
+![Cuộc trò chuyện mới với TTS](/images/enjoy/chat-new-chat-tts.png)
 
-TTS 智能体会把用户输入的任意文本转换为语音。
+## Cài đặt cuộc trò chuyện {#chat-settings}
 
-![chat-new-chat-tts](/images/enjoy/chat-new-chat-tts.png)
+Nhấn biểu tượng bánh răng ở góc trên bên phải để cấu hình cuộc trò chuyện và các thành viên hiện tại.
 
-## 聊天设置
+![Cài đặt cuộc trò chuyện](/images/enjoy/chat-settings.png)
 
-在聊天中，点击右上角齿轮图标，可以对聊天、当前聊天成员进行详细设置。
+::: info Lời nhắc bổ sung cho cả cuộc trò chuyện
+Có thể đặt **Lời nhắc bổ sung** trong cài đặt cuộc trò chuyện. Nội dung này được chia sẻ với tất cả tác nhân trong cuộc trò chuyện như một phần bổ sung của `SYSTEM PROMPT`.
 
-![chat-settings](/images/enjoy/chat-settings.png)
-
-::: info 提示
-
-在聊天设置中，可以设置 `额外提示语`，该提示语将会被聊天中的所有智能体共享，作为聊天成员额外的 `SYSTEM PRMOPT`。
-
-例如，如果你希望当前聊天限定在某个主题，可以通过聊天的 `额外提示语` 进行设置。
-
+Ví dụ, nếu muốn chỉ luyện một chủ đề nhất định, hãy nêu phạm vi đó trong lời nhắc bổ sung của cuộc trò chuyện.
 :::
 
-## 聊天成员设置
+## Cài đặt thành viên {#member-settings}
 
-当智能体被添加至新聊天中时，均可以对其进行更详细的设置。其 LLM 设置默认值为 `软件设置` 中的 `默认 AI 模型`，TTS 设置默认值为 `软件设置` 中的 `默认 TTS 模型`。
+Khi thêm tác nhân vào một cuộc trò chuyện mới, bạn có thể cấu hình riêng cho thành viên đó. Thiết lập LLM ban đầu lấy từ **Mô hình AI mặc định** trong cài đặt ứng dụng; thiết lập TTS ban đầu lấy từ **Mô hình TTS mặc định**.
 
-![chat-member-settings](/images/enjoy/chat-member-settings.png)
+![Cài đặt thành viên trò chuyện](/images/enjoy/chat-member-settings.png)
 
-::: info 提示
+::: info Lời nhắc bổ sung cho một thành viên
+**Lời nhắc bổ sung** trong cài đặt thành viên chỉ áp dụng cho tác nhân đó trong cuộc trò chuyện hiện tại.
 
-在聊天成员设置中，可以设置 `额外提示语`，与聊天设置中的 `额外提示语` 类似，但是该提示语仅对当前智能体生效。
+Ví dụ, nếu nhiều tác nhân đang tranh luận và bạn muốn một thành viên giữ một quan điểm cụ thể, hãy mô tả quan điểm đó tại đây.
 
-例如，多个智能体正在当前聊天中辩论，你希望当前智能体在当前聊天中保持某个特定观点，可以通过聊天成员的 `额外提示语` 进行设置。
-
-在 `提示语预览` 中，可以实时看到当前智能体在当前聊天中完整的 `SYSTEM PROMPT`，其中依次包含了 **聊天额外提示语**、**智能体自身的提示语** 和作为 **聊天成员的额外提示语**。
-
+Mục **Xem trước lời nhắc** hiển thị đầy đủ `SYSTEM PROMPT` của thành viên theo thời gian thực. Tài liệu gốc mô tả thứ tự là **lời nhắc bổ sung của cuộc trò chuyện**, **lời nhắc của tác nhân**, rồi **lời nhắc bổ sung của thành viên**. Trong mã nguồn hiện tại, thứ tự ghép để xem trước là **lời nhắc của tác nhân**, **lời nhắc bổ sung của cuộc trò chuyện**, rồi **lời nhắc bổ sung của thành viên**.
 :::
 
-## 语音输入
+## Nhập bằng giọng nói {#voice-input}
 
-在聊天中，点击输入框左侧的麦克风图标，可以激活语音输入。
+Nhấn biểu tượng micro ở bên trái ô nhập tin nhắn để bắt đầu nhập bằng giọng nói.
 
-录音后，Enjoy 会使用配置的 STT 服务将语音转换成文本，消息不会自动发出，而是处于编辑状态。
+Sau khi ghi âm, Enjoy dùng dịch vụ STT đã cấu hình để chuyển giọng nói thành văn bản. Tin nhắn chưa tự gửi mà được giữ trong ô soạn thảo.
 
-如果识别的文本不正确，可以手动修改，如果录音不理想，也可以重新录音。如果对自己的表达不满意，可以点击 `修改润色`，AI 给出修改建议，然后可以重新录音。
+Nếu nhận dạng sai, bạn có thể sửa văn bản hoặc ghi âm lại. Nếu muốn cải thiện cách diễn đạt, nhấn **Chỉnh sửa câu** để nhận gợi ý từ AI, rồi thử ghi âm lại.
 
-![chat-refine](/images/enjoy/chat-refine.png)
+![Gợi ý cải thiện cách diễn đạt](/images/enjoy/chat-refine.png)
 
-当一切确认无误时，你可以点击 `发送` 按钮，将消息发出，等待 AI 的回复。
+Khi nội dung đã đúng ý, nhấn **Gửi** và chờ phản hồi của AI.
 
-## 聊天建议
+## Gợi ý trò chuyện {#chat-suggestions}
 
-如果你想和 AI 进行对话练习，在 `聊天设置` 中可以勾选 `启用聊天助手`， 在输入框右侧会出现一个魔法棒图标，点击后，AI 会根据当前的聊天记录，给出对话建议。
+Để luyện đối thoại, có thể bật **Trợ lý trò chuyện** trong cài đặt cuộc trò chuyện. Biểu tượng đũa thần sẽ xuất hiện bên phải ô nhập. Nhấn vào đó để nhận gợi ý dựa trên lịch sử trao đổi hiện tại.
 
-![chat-suggest](/images/enjoy/chat-suggest.png)
+![Gợi ý tiếp tục cuộc trò chuyện](/images/enjoy/chat-suggest.png)

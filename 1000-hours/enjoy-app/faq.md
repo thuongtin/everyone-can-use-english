@@ -1,84 +1,91 @@
-# 常见问题
+# Câu hỏi thường gặp
 
-## 总是报网络错误怎么办？
+::: info Bối cảnh tài liệu
+Các mô tả dịch vụ, hạn mức và thanh toán bên dưới được dịch từ tài liệu gốc. Bản Việt hóa không xác nhận rằng chính sách thương mại hoặc địa chỉ dịch vụ thay thế vẫn còn hiệu lực. Hãy đối chiếu thông tin đang hiển thị trong tài khoản trước khi thay đổi cấu hình hoặc thanh toán.
+:::
 
-如果登录时报 `Network Error`，发音评估或者使用其他功能时报 `connect ETIMEDOUT` 错误，可以打开浏览器（不要在微信里打开），尝试打开 [https://enjoy.bot](https://enjoy.bot)。
+## Liên tục gặp lỗi mạng thì phải làm gì? {#network-errors}
 
-如果无法打开，或者跳转到了其他不相关页面，说明您当前的网络无法连接上 Enjoy 的服务。
+Nếu khi đăng nhập gặp `Network Error`, hoặc khi đánh giá phát âm hay sử dụng chức năng khác gặp `connect ETIMEDOUT`, hãy mở [trang Enjoy](https://enjoy.bot) bằng trình duyệt thông thường. Tài liệu gốc lưu ý không mở trong trình duyệt tích hợp của WeChat.
 
-可以按照以下步骤解决：
+Nếu không thể mở trang, hoặc bị chuyển sang một trang không liên quan, kết nối hiện tại có thể không tới được dịch vụ Enjoy. Cần kiểm tra kết nối, DNS, proxy và trạng thái dịch vụ thay vì mặc định rằng lỗi do tài khoản.
 
-1. [升级 Enjoy App](./install.md) 至 v0.3.2 以上；
-2. 在登录页面，点 `高级设置`（如果已登录，点 `软件设置`/`高级设置`），修改 API 设置，填入 `https://api.getenjoyapp.com`，点保存。
+Tài liệu gốc đưa ra cách xử lý sau:
 
-软件自动重载后即可。
+1. [Nâng cấp Enjoy App](./install.md) lên v0.3.2 trở lên.
+2. Tại trang đăng nhập, mở **Cài đặt nâng cao**. Nếu đã đăng nhập, mở **Cài đặt ứng dụng / Cài đặt nâng cao**. Đổi địa chỉ API thành `https://api.getenjoyapp.com`, rồi lưu.
+3. Chờ ứng dụng tải lại.
 
-另一种办法就是使用代理服务。
+Địa chỉ thay thế trên được giữ lại từ tài liệu gốc, chưa được xác minh là dịch vụ đang hoạt động cho bản Việt hóa. Một phương án khác mà tài liệu gốc đề cập là sử dụng proxy khi mạng đang dùng yêu cầu điều đó.
 
-## 为什么下载不了 YouTube 视频？
+## Vì sao không tải được video YouTube? {#youtube-download}
 
-国内网络无法直接访问 YouTube。如果您使用了代理，但无法全局代理，可以在 Enjoy 的 软件设置/高级设置/代理设置 中配置。其中`代理地址`请从您使用的代理软件中获取，例如 `http://localhost:7890`。
+Tài liệu gốc viết cho người dùng tại Trung Quốc, nơi kết nối trực tiếp tới YouTube bị hạn chế. Điều này không mặc nhiên áp dụng cho mạng tại Việt Nam.
 
-## 为什么无法分享录音到社区广场？
+Nếu kết nối của bạn cần proxy và phần mềm proxy chưa chuyển tiếp toàn bộ lưu lượng, có thể cấu hình trong **Cài đặt ứng dụng / Cài đặt nâng cao / Cài đặt proxy**. Lấy địa chỉ từ phần mềm proxy đang dùng, chẳng hạn `http://localhost:7890`. Địa chỉ ví dụ chỉ hoạt động khi máy thực sự có proxy lắng nghe tại cổng đó.
 
-分享录音之前，软件需要将录音上传值资源服务器，无法分享多数是因为网络原因导致无法链接资源服务器。可以在 Enjoy 的 软件设置/高级设置/网络状态 中查看资源服务器的连接情况。如果无法连接，请使用全局代理，或者在 软件设置/高级设置/代理设置 中设置代理。
+## Vì sao không chia sẻ được bản ghi âm lên cộng đồng? {#share-recording}
 
-## 如何多设备使用同一个帐号？
+Trước khi chia sẻ, ứng dụng phải tải bản ghi âm lên máy chủ tài nguyên. Theo tài liệu gốc, nguyên nhân thường gặp là không kết nối được máy chủ này.
 
-Enjoy App 的大部分数据均保存在本地（即您的计算机硬盘），具体来说，保存在一个名为 `EnjoyLibrary` 的文件夹里。
+Mở **Cài đặt ứng dụng / Cài đặt nâng cao / Trạng thái mạng** để kiểm tra kết nối tới máy chủ tài nguyên. Nếu mạng đang dùng yêu cầu proxy, sử dụng proxy toàn hệ thống hoặc cấu hình tại **Cài đặt ứng dụng / Cài đặt nâng cao / Cài đặt proxy**.
 
-Enjoy 目前不提供云同步的服务。如果您需要在多个设备上使用 Enjoy App，建议使用网盘服务来同步数据。
+## Dùng cùng một tài khoản trên nhiều máy như thế nào? {#multiple-devices}
 
-以百度网盘为例，可以参考以下步骤使用：
+Phần lớn dữ liệu của Enjoy App được lưu trên ổ đĩa máy tính, trong thư mục tên `EnjoyLibrary`.
 
-1. 将 `/EnjoyLirary` 文件夹（即[资源库保存路径](./settings.md#资源库保存路径)）加入到百度网盘的同步列表中；
-2. 每次使用完 Enjoy App，关机之前，确保 `/EnjoyLibrary` 文件夹全部同步完成；
-3. 在第二部电脑上，利用网盘，将 `/EnjoyLibrary` 文件夹最新状态同步完成；
-4. 在第二部电脑上，登录相同的 Enjoy 帐号使用；
-5. 重复 2~4 步骤。
+Theo tài liệu gốc, Enjoy không cung cấp đồng bộ đám mây cho thư viện này. Nếu cần dùng nhiều máy, có thể dùng dịch vụ lưu trữ đám mây để đồng bộ dữ liệu. Ví dụ gốc sử dụng Baidu Netdisk; với người dùng Việt Nam, có thể chọn dịch vụ có chức năng đồng bộ thư mục phù hợp, nhưng phải kiểm tra khả năng đồng bộ đầy đủ trước.
 
-另外需要注意，在利用网盘同步的情况下，不要同一时间在不同设置使用相同的 Enjoy 帐号，这样会导致数据冲突。
+Quy trình trong tài liệu gốc:
 
-## 怎样切换到 Enjoy AI？
+1. Thêm thư mục `EnjoyLibrary`, tức [đường dẫn lưu thư viện](./settings.md#library-path), vào danh sách đồng bộ.
+2. Sau mỗi lần sử dụng Enjoy, trước khi tắt máy, chờ toàn bộ thư mục `EnjoyLibrary` đồng bộ xong.
+3. Trên máy thứ hai, chờ dịch vụ đám mây tải đầy đủ phiên bản mới nhất của thư mục `EnjoyLibrary`.
+4. Đăng nhập cùng tài khoản Enjoy trên máy thứ hai.
+5. Lặp lại các bước 2 đến 4 khi đổi máy.
 
-如果您一开始使用自备的 OpenAI 密钥，想要切换至 Enjoy AI，可以参考以下步骤：
+Không sử dụng cùng thư viện trên nhiều máy cùng lúc khi đang đồng bộ theo cách này, vì có thể gây xung đột dữ liệu. Nên đóng Enjoy trước khi đồng bộ cơ sở dữ liệu và giữ một bản sao lưu có thể khôi phục.
 
-- 软件设置 / 基本设置 / 默认 AI 引擎，点`修改`按钮，将引擎改为 `Enjoy AI`；
+## Chuyển sang Enjoy AI như thế nào? {#switch-to-enjoy-ai}
 
-如果您之前有在用智能助手，请注意智能助手的对话，AI 引擎是无法修改的。或者切换默认引擎之后，需要新建一个对话使用。
+Nếu ban đầu dùng khóa OpenAI riêng và muốn chuyển sang Enjoy AI:
 
-## 超过每日使用限额怎么办？
+- Mở **Cài đặt ứng dụng / Cài đặt cơ bản / Dịch vụ AI mặc định**, nhấn **Chỉnh sửa**, rồi chọn `Enjoy AI`.
 
-Enjoy 的新用户会自动发放一定的体验金，新用户可以无需充值即可体验 Enjoy 的收费服务，但同时还有一个每天使用次数的限制，超过后则会报错。
+Với hội thoại trợ lý kiểu cũ được tài liệu gốc mô tả, dịch vụ AI được cố định khi tạo. Sau khi đổi dịch vụ mặc định, cần tạo hội thoại mới. Trong chức năng **Trò chuyện** hiện tại, có thể đổi dịch vụ AI trong [cài đặt riêng của thành viên](./chat-with-agent.md#member-settings).
 
-只要充值任意金额一次，即可解除限制。
+## Vượt hạn mức sử dụng hằng ngày thì phải làm gì? {#daily-limit}
 
-## 自备 OpenAI 密钥，还需要充值吗？
+Theo tài liệu gốc, người dùng mới được cấp một khoản tín dụng dùng thử để trải nghiệm các dịch vụ trả phí, đồng thời bị giới hạn số lần sử dụng mỗi ngày. Khi vượt giới hạn, ứng dụng sẽ báo lỗi.
 
-Enjoy App 很多功能都基于 AI。为了方便用户使用，Enjoy 提供了 EnjoyAI 服务，集成了当下流行的大模型服务商和热门模型供选择，用户只需要在 Enjoy 充值后即可使用。
+Tài liệu gốc cho biết nạp tiền một lần, với bất kỳ số tiền nào, sẽ gỡ giới hạn này. Đây là mô tả chính sách tại thời điểm biên soạn, không phải cam kết hiện tại của bản Việt hóa. Kiểm tra hạn mức và điều kiện thực tế trong tài khoản trước khi quyết định nạp tiền.
 
-当然，Enjoy 也允许用户自定义服务商和密钥，此种情况下，Enjoy 不会收取任何费用。
+## Dùng khóa OpenAI riêng có cần nạp tiền vào Enjoy không? {#own-openai-key}
 
-但是，发音评估功能并非 OpenAI 提供的服务，是 Enjoy 的收费功能，使用前必须保证 Enjoy 账户有余额。
+Nhiều chức năng của Enjoy App sử dụng AI. EnjoyAI được dự án gốc cung cấp để tích hợp nhiều nhà cung cấp và mô hình, cho phép sử dụng bằng số dư tài khoản Enjoy.
 
-## 为什么本地语音转文本服务无法使用？
+Enjoy cũng cho phép cấu hình nhà cung cấp và khóa riêng. Theo tài liệu gốc, Enjoy không thu phí cho phần sử dụng AI thông qua cấu hình riêng này; phí của nhà cung cấp do người dùng tự thanh toán theo tài khoản tương ứng.
 
-Enjoy 集成了 [whipser.cpp](https://github.com/ggerganov/whisper.cpp) 作为本地的语音转文本（STT）服务，但是由于兼容性的问题，某些配置较低或者操作系统版本较低的电脑无法使用。
+Tuy nhiên, đánh giá phát âm không phải dịch vụ do OpenAI cung cấp. Tài liệu gốc mô tả đây là chức năng trả phí của Enjoy và yêu cầu tài khoản Enjoy có số dư.
 
-如果您遇到这种情况，Enjoy 提供了其他 STT 的云服务，可以前往 [软件设置](./settings#语音转文本服务) 进行配置。推荐优先使用 Azure AI。
+## Vì sao chuyển giọng nói thành văn bản cục bộ không hoạt động? {#local-stt}
 
-## 403 Insufficient balance
+Enjoy tích hợp [whisper.cpp](https://github.com/ggerganov/whisper.cpp) để chuyển giọng nói thành văn bản (STT) trên máy. Một số máy có cấu hình thấp hoặc hệ điều hành cũ có thể gặp vấn đề tương thích.
 
-遇到这个报错，说明您正在使用 Enjoy 的付费功能，但是账户余额不足了。
+Khi gặp lỗi, có thể cấu hình dịch vụ STT đám mây khác trong [cài đặt chuyển giọng nói thành văn bản](./settings.md#speech-to-text). Tài liệu gốc ưu tiên Azure AI; hãy kiểm tra khả năng truy cập và điều kiện sử dụng của dịch vụ phù hợp với tài khoản của bạn.
 
-Enjoy 内有很多功能都由 AI 驱动，比如[智能助手](./ai-assistant)、智能翻译、句子分析等。如果您在 [软件设置](./settings#默认-ai-引擎) 中的配置了 `OpenAI` 作为默认 AI 引擎，在使用这些功能时候，会使用您配置的 OpenAI 信息进行实现，不会涉及 Enjoy 的扣费。
+## Lỗi `403 Insufficient balance` {#insufficient-balance}
 
-（需要注意的是，[智能助手](./ai-assistant) 的对话一旦创建，AI 引擎无法修改。如果需要切换，比如由 Enjoy AI 换成 Open AI，则需要新建一个对话）
+Theo tài liệu gốc, lỗi này xuất hiện khi đang dùng một chức năng trả phí của Enjoy nhưng số dư tài khoản không đủ.
 
-另外，[发音评估](./audios#发音评估) 是收费功能，并非 OpenAI 提供，所以无论 [默认 AI 引擎](./settings#默认-ai-引擎) 选了什么，使用发音评估时，总是会在 Enjoy 账户中扣费。
+Các chức năng như [trợ lý AI](./ai-assistant.md), dịch thông minh và phân tích câu sử dụng AI. Nếu chọn `OpenAI` làm [dịch vụ AI mặc định](./settings.md#default-ai-engine), chúng sử dụng cấu hình OpenAI riêng và theo mô tả gốc không trừ số dư Enjoy cho phần AI đó.
 
-如果需要充值，请参考[充值](./settings#充值)。
+Trong [hội thoại trợ lý kiểu cũ](./ai-assistant.md), dịch vụ AI không thay đổi sau khi tạo; muốn chuyển từ Enjoy AI sang OpenAI hoặc ngược lại, cần tạo hội thoại mới. Với chức năng **Trò chuyện** hiện tại, hãy kiểm tra [cấu hình dịch vụ của từng thành viên](./chat-with-agent.md#member-settings).
 
-## 如何下载音频、录音
+Riêng [đánh giá phát âm](./audios.md#pronunciation-assessment) là dịch vụ trả phí riêng, không do OpenAI cung cấp. Theo tài liệu gốc, chức năng này vẫn trừ số dư Enjoy bất kể lựa chọn dịch vụ AI mặc định.
 
-Enjoy 提供了音频、视频、录音的下载功能，以便可以在其他设备使用。
+Nếu cần tìm hiểu việc nạp tiền, xem [phần số dư và nạp tiền](./settings.md#deposit), rồi đối chiếu với điều kiện thực tế trong tài khoản.
+
+## Tải âm thanh và bản ghi âm như thế nào? {#download-audio}
+
+Enjoy cung cấp chức năng tải tệp âm thanh, video và bản ghi âm để có thể sử dụng trên thiết bị khác.

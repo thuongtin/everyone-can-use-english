@@ -4,6 +4,8 @@ import {
   DbProviderContext,
 } from "@renderer/context";
 import { t } from "i18next";
+import { useTranslation } from "react-i18next";
+import { BILINGUAL_DICTIONARIES, getDefaultDictionary } from "@/constants/bilingual-dictionaries";
 import { UserSettingKeyEnum } from "@/types/enums";
 
 type DictProviderState = {
@@ -27,12 +29,6 @@ const AIDict = {
   value: "ai",
 };
 
-const CamDict = {
-  type: "preset" as DictType,
-  text: t("cambridgeDictionary"),
-  value: "cambridge",
-};
-
 const initialState: DictProviderState = {
   installedDicts: [],
   dictSelectItems: [AIDict],
@@ -47,6 +43,7 @@ export const DictProviderContext =
   createContext<DictProviderState>(initialState);
 
 export const DictProvider = ({ children }: { children: React.ReactNode }) => {
+  const { i18n } = useTranslation();
   const { EnjoyApp, learningLanguage } = useContext(AppSettingsProviderContext);
   const [dicts, setDicts] = useState<Dict[]>([]);
   const [settings, setSettings] = useState<DictSettingType>({
@@ -54,8 +51,7 @@ export const DictProvider = ({ children }: { children: React.ReactNode }) => {
     removing: [],
     mdicts: [],
   });
-  const [currentDictValue, setCurrentDictValue] = useState<string>("");
-  const [currentDict, setCurrentDict] = useState<DictItem | null>();
+  const [currentDictValue, setCurrentDictValue] = useState<string>("en-vi");
   const { state: dbState } = useContext(DbProviderContext);
 
   const installedDicts = useMemo<DictItem[]>(() => {
@@ -81,27 +77,17 @@ export const DictProvider = ({ children }: { children: React.ReactNode }) => {
     );
   }, [installedDicts, settings]);
 
-  const dictSelectItems = useMemo(() => {
-    const presets = learningLanguage.startsWith("en")
-      ? [CamDict, AIDict]
-      : [AIDict];
+  const dictSelectItems = useMemo<DictItem[]>(() => [
+    ...BILINGUAL_DICTIONARIES.map(({ value, key }) => ({ type: "preset" as DictType, value, text: t(key) })),
+    { ...AIDict, text: t("aiLookup") },
+    ...availableDicts,
+  ], [availableDicts, i18n.language]);
 
-    return [...presets, ...availableDicts];
-  }, [availableDicts, learningLanguage]);
+  const currentDict = dictSelectItems.find(dict => dict.value === currentDictValue);
 
   useEffect(() => {
-    const defaultDict = availableDicts.find(
-      (dict) => dict.value === settings.default
-    );
-
-    if (defaultDict) {
-      handleSetCurrentDict(defaultDict.value);
-    } else {
-      setCurrentDictValue(
-        learningLanguage.startsWith("en") ? CamDict.value : AIDict.value
-      );
-    }
-  }, [availableDicts, settings]);
+    setCurrentDictValue(getDefaultDictionary(settings.default, dictSelectItems.map(dict => dict.value), learningLanguage));
+  }, [dictSelectItems, settings.default, learningLanguage]);
 
   useEffect(() => {
     if (dbState !== "connected") return;
@@ -135,12 +121,10 @@ export const DictProvider = ({ children }: { children: React.ReactNode }) => {
   const handleSetCurrentDict = (value: string) => {
     setCurrentDictValue(value);
 
-    const dict = availableDicts.find((dict) => dict.value === value);
-    if (dict) setCurrentDict(dict);
   };
 
   const setDefault = async (dict: DictItem | null) => {
-    updateSettings({ ...settings, default: dict?.value ?? "" });
+    await updateSettings({ ...settings, default: dict?.value ?? "" });
   };
 
   const remove = async (dict: DictItem) => {

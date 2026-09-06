@@ -122,6 +122,9 @@ export const LoginForm = () => {
                 <MixinLoginButton />
                 <BanduLoginButton />
               </div>
+              <p className="mt-3 text-center text-xs text-muted-foreground">
+                {t("loginOptionsDescription")}
+              </p>
             </div>
           </CardContent>
         </Card>

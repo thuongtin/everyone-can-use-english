@@ -8,6 +8,7 @@ import {
   SheetContent,
   SheetHeader,
   SheetTitle,
+  SheetDescription,
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
@@ -28,14 +29,15 @@ export const BanduLoginButton = () => {
         <Button
           variant="outline"
           size="icon"
+          aria-label={t("banduLogin")}
           data-tooltip-id="global-tooltip"
-          data-tooltip-content="学升"
+          data-tooltip-content={t("banduLogin")}
           className="w-10 h-10 rounded-full"
         >
           <img
             src="assets/bandu-logo.svg"
             className="w-full h-full"
-            alt="bandu-logo"
+            alt={t("banduLogin")}
           />
         </Button>
       </SheetTrigger>
@@ -45,7 +47,10 @@ export const BanduLoginButton = () => {
         aria-describedby={undefined}
       >
         <SheetHeader>
-          <SheetTitle className="sr-only">学升登录</SheetTitle>
+          <SheetTitle className="sr-only">{t("login")} Bandu</SheetTitle>
+          <SheetDescription className="sr-only">
+            {t("banduLoginDescription")}
+          </SheetDescription>
         </SheetHeader>
         <div className="w-full h-full flex">
           <div className="m-auto">{open && <BanduLoginForm />}</div>
@@ -57,7 +62,7 @@ export const BanduLoginButton = () => {
 
 export const BanduLoginForm = () => {
   const ref = useRef<HTMLInputElement>(null);
-  const [iti, setIti] = useState<any>(null);
+  const [iti, setIti] = useState<ReturnType<typeof intlTelInput>>(null);
   const [phoneNumber, setPhoneNumber] = useState<string>("");
   const [code, setCode] = useState<string>("");
   const [codeSent, setCodeSent] = useState<boolean>(false);
@@ -65,9 +70,11 @@ export const BanduLoginForm = () => {
   const { login, webApi } = useContext(AppSettingsProviderContext);
 
   const validatePhone = () => {
+    const numberTypes = intlTelInput.utils?.numberType;
     if (
       iti?.isValidNumber() &&
-      iti?.getNumberType() === (intlTelInput.utils.numberType as any)?.MOBILE
+      numberTypes && "MOBILE" in numberTypes &&
+      iti.getNumberType() === numberTypes.MOBILE
     ) {
       setPhoneNumber(iti.getNumber());
     } else {
@@ -78,19 +85,13 @@ export const BanduLoginForm = () => {
   useEffect(() => {
     if (!ref.current) return;
 
-    intlTelInput(ref.current, {
-      initialCountry: "cn",
-    });
-    setIti(intlTelInput(ref.current));
+    const instance = intlTelInput(ref.current);
+    setIti(instance);
 
     return () => {
-      iti?.destroy();
+      instance.destroy();
     };
-  }, [ref]);
-
-  useEffect(() => {
-    iti?.setCountry("cn");
-  }, [iti]);
+  }, []);
 
   useEffect(() => {
     let timeout: NodeJS.Timeout;
@@ -109,8 +110,15 @@ export const BanduLoginForm = () => {
   return (
     <div className="w-80">
       <div className="flex items-center justify-center mb-4">
-        <img src="assets/bandu-logo.svg" className="w-20 h-20" alt="bandu" />
+        <img
+          src="assets/bandu-logo.svg"
+          className="w-20 h-20"
+          alt={t("banduLogin")}
+        />
       </div>
+      <p className="mb-4 text-sm text-muted-foreground">
+        {t("banduLoginDescription")}
+      </p>
 
       <div className="grid gap-6">
         <div className="grid gap-4">
@@ -128,9 +136,9 @@ export const BanduLoginForm = () => {
           </div>
           {codeSent && (
             <div className="grid gap-2">
-              <Label htmlFor="verrificationCode">{t("verificationCode")}</Label>
+              <Label htmlFor="verificationCode">{t("verificationCode")}</Label>
               <InputOTP
-                id="verrificationCode"
+                id="verificationCode"
                 maxLength={5}
                 value={code}
                 pattern={REGEXP_ONLY_DIGITS}

@@ -1,13 +1,21 @@
-# 5. 一切都需要能量
+# 5. Mọi hoạt động đều cần năng lượng
 
-大脑在重量上大约只占人体的 2%，却要消耗掉 20% 以上的能量。
+Nguyên tác nêu não chỉ chiếm khoảng 2% khối lượng cơ thể nhưng tiêu thụ hơn 20% năng lượng. Đây là con số khái quát của tác giả; mức tiêu thụ còn tùy cách đo và trạng thái sinh lý.
 
-大脑几乎从不停止运转，哪怕在睡觉的时候，它依然在按照自己的进程运转。大脑工作的时候，很多神经元在同时发电，不是比喻，就是物理发电 —— 就好像电池发电的原理一样，这是大脑内各类物质之间不断发生的化学反应带来的结果。
+Não gần như không ngừng hoạt động, ngay cả khi ngủ vẫn vận hành theo các quá trình riêng. Tác giả mô tả nhiều neuron cùng tạo điện khi não làm việc, không phải ví von mà là hiện tượng vật lý, được ông so sánh với pin: kết quả của những phản ứng hóa học liên tục giữa các chất trong não.
 
-过去人们还不太理解，可现在脑科学家们却可以对大脑耗能进行精确的量化评估，数据表明，脑力活动的耗能效率远比体力活动高，也就是说，脑力工作相对更累。全世界所有作家都有相同的下意识动作，写着写着就饿了，写着写着就站起来冲向冰箱…… 大脑格外需要糖和氧，那些化学反应和物理放电，就是需要不断补充糖和氧才能持续下去。
+Tác giả nói trước đây chưa hiểu rõ, còn nay các nhà khoa học có thể định lượng chính xác năng lượng não dùng. Ông khẳng định dữ liệu cho thấy hoạt động trí óc có mức tiêu hao năng lượng cao hơn nhiều so với hoạt động thể lực, nên lao động trí óc tương đối mệt hơn. Ông mô tả mọi nhà văn trên thế giới đều vô thức đang viết thì đói, đứng dậy chạy tới tủ lạnh. Não đặc biệt cần đường và oxy; theo ông, các phản ứng hóa học và phát điện cần được bổ sung liên tục hai thứ đó. Đây là cách giải thích của nguyên tác, không phải hướng dẫn bổ sung đường hoặc oxy để học tốt hơn.
 
-大脑和身上的肌肉一样，累了就需要放松或者休息。与直觉相反的是，适当的体力活动往往更能起到放松大脑的作用。因为大脑对肢体支配太熟悉太自然了，几乎总是能以相当低的功耗就可以完成指定任务。再一次与直觉相反，若是躺在沙发上玩手机的话，那只是身体放松了，而大脑不仅没有休息，还是在继续超负荷工作。
+Giống cơ bắp, não mệt thì cần thư giãn hoặc nghỉ. Trái trực giác, tác giả cho rằng vận động thể chất vừa phải thường giúp não thư giãn hơn, vì não quá quen điều khiển cơ thể nên gần như luôn hoàn thành với mức tiêu thụ thấp. Ngược lại, ông cho rằng nằm trên sofa dùng điện thoại chỉ làm thân thể nghỉ, còn não vẫn làm việc quá tải. Các nhận xét này mô tả quan điểm nghỉ ngơi của tác giả, không đánh giá mọi hoạt động trên điện thoại như nhau.
 
-用适当的体力活动放松大脑，还有另外一个好处。因为大脑的耗能占比太高，耗能功率太大，所以，大脑总是对糖过于贪婪。它其实不需要那么多糖，它只是觉得自己需要更多。问题在于，过多的糖对身体有害，会导致身体肥胖，大脑反应迟钝。相对于糖，其实大脑更需要的是氧，可又因为氧这个东西好像无处不在随时可以通过呼吸得到，大脑并不会对氧像对糖那样过分苛求。适当的体力活动，正好可以调控大脑对糖和氧的本末倒置，获得了更多实际必要的氧，消耗掉了相当一部分实际没必要的糖。
+Tác giả nêu thêm lợi ích của vận động vừa phải: vì não dùng tỷ lệ và công suất năng lượng cao, nó luôn “tham đường”, dù không thực sự cần nhiều như nó tưởng. Ông cho rằng quá nhiều đường gây hại, béo phì và khiến phản ứng não chậm; thực ra não cần oxy hơn đường, nhưng vì oxy dường như luôn có thể lấy qua hít thở nên não không đòi quá mức như với đường. Theo ông, vận động điều chỉnh sự đảo lộn ưu tiên ấy, lấy thêm oxy thực sự cần và tiêu bớt lượng đường không cần. Đây là cách nhân hóa và suy luận của nguyên tác; cơ chế đường, oxy và vận động cần đọc cùng ghi chú biên tập.
 
-对大脑来说，最重要的是睡眠。高质量的睡眠是大脑工作效率的基础保障。稳定的作息时间虽然重要，但，充足的睡眠时长以及足够的睡眠质量才是关键。保证睡眠质量的方式，简单且又便宜，在保证适当的体力活动之外，还要保证充足的日晒 —— 这会让大脑分泌足够的褪黑素。
+Theo tác giả, quan trọng nhất với não là giấc ngủ. Ngủ chất lượng cao là nền tảng hiệu quả làm việc; giờ giấc ổn định quan trọng, nhưng đủ thời lượng và chất lượng mới là mấu chốt. Ông cho rằng cách bảo đảm giấc ngủ vừa đơn giản vừa rẻ: ngoài vận động thích hợp, cần đủ ánh nắng, điều ông nói sẽ khiến não tiết đủ melatonin. Mối liên hệ ánh sáng với melatonin được đính chính bên dưới; không áp dụng câu này thành yêu cầu phơi nắng nhiều hoặc coi ánh sáng trực tiếp làm tăng melatonin ngay lúc tiếp xúc.
+
+::: info Ghi chú biên tập cho bản tiếng Việt
+Cảm giác mệt khi suy nghĩ không đồng nghĩa tiêu hao nhiều năng lượng hơn vận động thể chất. Trong [thí nghiệm của Chaput và Tremblay](https://pubmed.ncbi.nlm.nih.gov/17023010/), nhiệm vụ đọc và viết 45 phút chỉ tạo chênh lệch tiêu hao khoảng 13 kJ so với nghỉ, dù người tham gia ăn nhiều hơn sau đó. Đây là kết quả trong điều kiện nghiên cứu cụ thể, không phải mức cố định cho mọi việc trí óc.
+
+Não cần năng lượng và oxy do cơ thể cung cấp, nhưng đó không phải chỉ dẫn ăn thêm đường để học tốt. Cách nói não “tham đường hơn oxy” là phép nhân hóa. [Giáo trình *Basic Neurochemistry*](https://www.ncbi.nlm.nih.gov/books/NBK28048/) giải thích vai trò glucose và oxy, không hỗ trợ cách lý giải hai chất thay nhau theo mức “ham muốn” của não.
+
+Ánh sáng giúp đồng bộ đồng hồ sinh học với chu kỳ ngày đêm. Melatonin thường tăng vào buổi tối khi tín hiệu ánh sáng giảm; không phải phơi nắng trực tiếp làm não tiết thêm melatonin. [NIGMS về nhịp sinh học](https://www.nigms.nih.gov/education/fact-sheets/Pages/circadian-rhythms) giải thích mối liên hệ này. Vận động và tiếp xúc ánh sáng phù hợp có thể là một phần thói quen sinh hoạt, nhưng không tự bảo đảm giấc ngủ tốt.
+:::

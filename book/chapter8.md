@@ -1,60 +1,62 @@
-# 第八章 叮嘱
+# Chương 8. Lời nhắn
 
-## 1. 速成绝不可能
+## 1. Không có chuyện thành thạo thật nhanh
 
-中国学生总觉得自己已经 “学” 了十多年英语，一想到这么多青春年华的逝去，就觉得自己特别可怜；转念一想，“可怜” 这个词是贬义，于是开始用 “悲壮” 形容自己。可事实上，真的学了那么多年吗？那么多年里真的学了吗？不问倒罢了，一旦正视这个问题，就知道过往许多年里的所谓 “学” 相当禁不住推敲。
+Nhiều học sinh Trung Quốc nghĩ mình đã “học” tiếng Anh hơn mười năm. Nghĩ đến từng ấy năm tuổi trẻ trôi qua, họ thấy mình thật đáng thương; rồi vì “đáng thương” có sắc thái tiêu cực, họ dùng từ “bi tráng” để tả bản thân. Nhưng có thật là đã học từng ấy năm không? Trong những năm đó có thật sự học không? Nếu đối diện câu hỏi này, ta sẽ thấy việc gọi quá khứ là “học” không đứng vững được bao nhiêu.
 
-其实大多数学生每天投入到英语学习的时间并没有多少。也许某段时间昏天暗地地突击，可是从未有过长期持续的努力 —— 如果有的话，哪怕很差的方法都会发生一定的甚至是很大的正面作用，早就不再为英语苦恼了。
+Thực tế, phần lớn học sinh không dành nhiều thời gian cho tiếng Anh mỗi ngày. Có thể có một giai đoạn ôn cấp tốc đến kiệt sức, nhưng không có nỗ lực lâu dài, liên tục. Theo tác giả, nếu có sự liên tục ấy, ngay cả phương pháp chưa tốt cũng đã tạo ra một số tác động tích cực.
 
-许多年前，我在网上读到 Peter Norvig 的一篇文章，“[Teach Yourself Programming in Ten Years](http://www.norvig.com/21-days.html)”。这位作者认为人们去买那种诸如 “7 天自学 Java 语言” 之类名字的书是很无知的表现。他认为用十年时间学会程序设计非常值当。
+Nhiều năm trước, tác giả đọc bài của Peter Norvig, [*Teach Yourself Programming in Ten Years*](http://www.norvig.com/21-days.html). Norvig phê phán những sách có tên như “tự học Java trong 7 ngày” và cho rằng dành mười năm để học lập trình là đáng giá.
 
-> 再看另一种类型的领域。披头士乐团似乎是在1964的Ed Sullivan 剧场表演突然地火起来并成为第一乐队的。但其实他们从 1957 年开始，就在利物浦、汉堡等地的小型俱乐部表演。虽然他们很早就显现强大的吸引力，但他们决定性的成功作品 Sgt Pepper 也到1967年才发行。Samuel Johnson 则认为或许还不止十年才行，他说：任何领域的卓越成就都必须用一生的努力才能取得; 稍微低一点的代价都是换不到的。Chaucer 则感叹道： “生命如此短促，学习技艺却要这么地长”
+> Hãy nhìn một lĩnh vực khác. The Beatles dường như bỗng nổi tiếng sau buổi diễn tại Ed Sullivan năm 1964 và trở thành ban nhạc số một. Nhưng họ đã diễn ở những câu lạc bộ nhỏ tại Liverpool, Hamburg và nơi khác từ năm 1957. Họ sớm có sức hút mạnh, nhưng *Sgt. Pepper*, tác phẩm đánh dấu thành công quyết định, đến năm 1967 mới phát hành. Samuel Johnson còn cho rằng mười năm có thể chưa đủ: thành tựu xuất sắc trong bất cứ lĩnh vực nào đòi hỏi nỗ lực cả đời, trả giá ít hơn thì không mua được. Chaucer than rằng: “Đời ngắn ngủi, còn học nghệ thì quá dài.”
 
-> 这两段引用的是[徐侑的译文](http://blog.youxu.info/fyi/21-days/)
+> Hai đoạn trên trích theo [bản dịch của Youxu](http://blog.youxu.info/fyi/21-days/).
 
-Peter Norvig 写这篇文章（2001）的几年后，2008 年 11 月，Malcolm Gladwell 出版了他那本畅销书《Outliers》，在这本书中 Malcolm Gladwell 把这 “十年” 换算成了更为精确的 “10000 小时” —— 想要出类拔萃，就要努力至少一万小时。让我们来算一下，一年三百六十五天，如果每天花在学英语的时间持续保持在三个小时，那么九年多一点点就能够积累 10000 小时的 “驾驶里程”；如果每天 4 个小时，则七年不到的时间就够了。如果每天 6 个小时，大约四年半就够了。
+Vài năm sau bài Norvig năm 2001, Malcolm Gladwell xuất bản *Outliers* tháng 11/2008 và quy hình ảnh “mười năm” thành “10.000 giờ”: muốn nổi trội thì cần ít nhất 10.000 giờ nỗ lực. Theo phép tính của tác giả, học tiếng Anh đều 3 giờ mỗi ngày sẽ mất hơn chín năm, 4 giờ mỗi ngày mất chưa đến bảy năm, 6 giờ mỗi ngày khoảng bốn năm rưỡi.
 
-如果你自己正在为英语学习所苦恼，不妨扪心自问，自己在过去的许多年里，持续努力的时间究竟有多久呢？病根就在这里。另外，请格外注意 “持续” 两个字。突击一个月不到，然后半年无消息，则相当于前功尽弃，毫无累积。
+Nếu đang khổ sở vì học tiếng Anh, hãy tự hỏi mình đã nỗ lực liên tục được bao lâu trong những năm qua. Tác giả cho rằng gốc rễ nằm ở đây, đặc biệt là chữ “liên tục”. Ôn chưa trọn một tháng rồi bỏ sáu tháng, theo ông, không tích lũy được gì.
 
-最近几年，我的学生中有很多高中生在托福考试中获得极高的成绩 —— 很多都在 110 分以上。按照[ETS的官方数据](ftp://ftp.ets.org/pub/toefl/ngt_percentile_information.pdf)，110 分的百分比等级（Percentile Rank）是 96.8%，即，每次考试中大约只有 3.2%的人成绩在 110 分以上。以我的经验，在大学生中获得 110 分以上托福成绩的人数感觉上要比高中生少很多。某种程度上我只能用我自己的经验去审视这个现象。我问自己的问题是，为什么我教的东西是一样的，但高中生却能获得比大学生更高的成绩呢？
+Trong những năm gần đây, tác giả kể có nhiều học sinh trung học của ông đạt điểm TOEFL rất cao, nhiều người trên 110. Theo dữ liệu ETS mà nguồn dẫn, 110 tương ứng percentile rank 96,8%, tức khoảng 3,2% thí sinh có điểm cao hơn. Dựa vào quan sát cá nhân, tác giả cảm thấy số sinh viên đại học đạt trên 110 ít hơn học sinh trung học, dù dạy cùng nội dung. Ông giải thích có thể vì học sinh trung học học lâu hơn và đã quen với lịch học dày, trong khi sinh viên có nhiều hoạt động khác. Từ đó, ông cho rằng ở các kỳ thi như TOEFL, người bỏ nhiều thời gian hơn thường có lợi thế lớn hơn.
 
-想来想去，最合理的解释也许是这个：高中生学习的时间更长。高中生还非常习惯上午上四节课，下午上四节课，晚上回家再做两个小时的作业。而反过来，大学生却不是如此，很多大学生一天要是学上两个半小时，就觉得自己已经很刻苦了！大学生可做的事情太多，要参加朋友的生日聚会，要谈恋爱，要参加各种活动，等等等等 —— 他们太 “忙”，像李宗盛描述的那样 “忙忙忙，忙是为了自己的理想还是为了不让别人失望？” 某种意义上，高中生能够获得比大学生更高的托福考试成绩 —— 这个现象本身就在证明托福这种考试考的不是智商，当然也不是智慧（生活经验在这里没有任何用处）。最终，在这样的考试上，谁花费的时间越多，谁就可能具备更多的优势。
+Như đã nói, muốn đổi đời thì phải đổi quan niệm. Hãy nhớ rằng không có chuyện thành thạo thật nhanh. Tin vào tích lũy, theo tác giả, khiến người học ít dễ buông xuôi hơn.
 
-正如之前所说的那样，想要改变生活，就要改变观念。从现在开始，请牢牢记住，“速成绝不可能”。如若真的相信这个简单的道理，就不大可能懈怠，因为相信这个道理就等于相信 “一切都靠积累”，而笃信这种简单道理的人怎么可能偷懒，怎么可能懈怠？
+Điểm then chốt khác là tiếng Anh, theo tác giả, không cần mười năm. Chỉ cần kiên trì sáu tháng là chắc chắn dần vào guồng; ông nói những học sinh trung học từng dạy đã cho ông thấy điều đó.
 
-而真正的关键又在于，用英语还真是几乎所有技能中最简单的 —— 因为它真的根本就不需要 10 年时间。实际情况是，只要坚持 6 个月，就肯定渐入佳境。这些年我教过的无数高中生向我清楚地证明了这点 —— 而后面的文字里，我还有进一步的说明。
+> **Ghi chú biên tập cho người học Việt:** “10.000 giờ”, sáu tháng và các so sánh điểm TOEFL là lập luận hoặc trải nghiệm tại thời điểm nguồn viết, không phải bảo đảm kết quả. Tiến bộ phụ thuộc đầu vào, phản hồi, sức khỏe, thời gian có thể duy trì, mục tiêu và nền tảng mỗi người. Hãy đặt mục tiêu nhỏ, đều, đo được, rồi điều chỉnh bằng kết quả học thực tế thay vì lấy một con số làm tiêu chuẩn năng lực.
 
-## 2. 英语不能只学不用
+## 2. Không chỉ học tiếng Anh mà không dùng
 
-大多数中国学生学不好英语的关键在于他们 “学得太久，用得太少。” 对大多数普通人来说，英语只不过是一种工具，或者说复杂点，英语是一种技能。如果再严格点，对大多数普通人来说，英语只能是一种工具，最多只能是一种技能。毕竟只有少数人会成为语言学家或者文学家（竟然使用第二语言）—— 因为很多人尽管梦想成为语言学家但最终大多无疾而终，就好像很多梦想成为画家的人最终会沦落为画匠一样。
+Theo tác giả, lý do chính khiến nhiều học sinh Trung Quốc không học tốt tiếng Anh là “học quá lâu, dùng quá ít”. Với đa số, tiếng Anh là một công cụ, hoặc chính xác hơn là một kỹ năng. Chỉ số ít sẽ trở thành nhà ngôn ngữ học hay nhà văn viết bằng ngôn ngữ thứ hai; nhiều người mơ ước điều đó nhưng không đi đến cùng, như nhiều người mơ thành họa sĩ rồi chỉ làm thợ vẽ.
 
-人们常常假定所谓的技能都必须熟练到一定程度才可以安全应用。这个假定在很多情况下确实是正确的。比如，如果你想以医生为职业，那么你必须通过考试获得行医资格之后被允许救死扶伤；如果你想以律师为职业，那么你也必须通过考试获得律师资格之后才可以去匡扶正义。哪怕再简单一些的技能也可能如此，比如，你买了一辆车想将其作为代步工具，那么就必须通过考试获得驾照之后才被允许开车上路 —— 无证驾驶是违法的。
+Mọi người thường nghĩ một kỹ năng phải thành thạo đến một mức an toàn rồi mới được dùng. Trong nhiều trường hợp điều này đúng: bác sĩ, luật sư cần có chứng chỉ; người lái xe cần giấy phép. Lỗi trong những nghề và hoạt động này có thể gây hại cho người khác, đôi khi không thể đảo ngược.
 
-然而这个假定并不适用于英语（或者说，其他的第二语言）这项技能的习得以及应用。司机、医生、律师需要通过考试才能应用所需技能的重要原因在于这些技能的应用如若出现差错很有可能会对他人造成伤害 —— 甚至可能是无可挽回的。但是， 英语这项技能的应用在大多数情况下很难对他人造成伤害。你英文发音再难听，听的人也不会因此晕死；你英文语法错误再多，读的人也不会因此疼痛；别人对你说英文你没听懂或者给你看英文你没读懂，若非极端情况，你也不会因此就从此真的无颜见人。
+Tác giả cho rằng giả định đó không áp dụng hoàn toàn cho việc học và dùng tiếng Anh hoặc ngôn ngữ thứ hai. Phát âm khó nghe hay sai ngữ pháp thường không làm người nghe đau đớn; không hiểu một câu nói hay bài viết, trừ tình huống đặc biệt, cũng không khiến một người không thể sống tiếp.
 
-英语这项技能并不是一定要学好到一定程度才可以使用的。甚至，从一开始就可以，也应该直接使用。但我们并没有。对很多中国学生来讲，其实学了这么多年英语，倒也不是从来都没用过，只不过，用在一个比较荒谬、离语言的真正应用八杆子打不着的一样东西上 —— 考试。原本世上从来就不曾存在过任何一个真正 “公平、合理、准确” 的考试，所有的考试都有一定程度的荒谬成分存在。而国内的英语考试更是如此 —— 这事实几近于公理，谁都知道，乃至于无需进一步证明。
+Vì vậy, tiếng Anh không cần phải được học đến một mức nào đó mới được sử dụng. Theo tác giả, người học có thể và nên dùng ngay từ đầu. Ông phê bình rằng nhiều học sinh Trung Quốc dù học lâu chỉ sử dụng tiếng Anh trong thi cử, thứ mà ông xem là xa rời việc dùng ngôn ngữ thật. Ông cũng cho rằng không có kỳ thi nào hoàn toàn công bằng, hợp lý và chính xác.
 
-第二语言习得与母语习得有很大的不同。母语习得过程中，我们是先会 “听”，之后才会 “说”，听说都已经很熟练了才开始 “读”，而 “写” 是最后习得的。由于 “写” 本质上最需要思考能力（另外一个更加难以学会使用的东西），所以事实上，很多人（比例可能高得惊人）至死都没有真正学会 “写” ——他们顶多 “识字” 而已。第二语言习得过程中，不仅这种自然的顺序被打乱了，对很多人来讲，听说读写哪一个都从来没有真正习得。
+Quá trình tiếp thu ngôn ngữ thứ hai khác nhiều so với tiếng mẹ đẻ. Với tiếng mẹ đẻ, theo mô tả của tác giả, ta thường nghe trước, nói sau, rồi mới đọc và cuối cùng mới viết. Ông xem viết là kỹ năng đòi hỏi năng lực tư duy cao và nhận xét rằng nhiều người đến hết đời chỉ biết chữ, chưa thật sự biết viết. Khi học ngôn ngữ thứ hai, trật tự tự nhiên ấy bị xáo trộn, và với nhiều người cả nghe, nói, đọc, viết đều không được tiếp thu trọn vẹn.
 
-对第二语言来讲，大多数人会很自然地先会 “读”，再会 “听”，之后很难会 “说”。至于 “写”，母语的都没弄明白呢，第二语言就不用提了。但是，事实上， “读” 已经是语言作为一种工具最为重要的功能了（关于过分强调口语的重要性，嘲笑 “哑巴英语” 的做法究竟为什么多少有些荒谬，我会写另外一篇文章），在第二语言是，“识字” 本身已经足够，“能言善辩” 当然很好，不过也算 “锦上添花” —— 就算没有花，也已经相当锦绣了。我们常说，大量的机会本质上都来自于信息不对称 —— “你知道的我不知道，所以我只好付费给你换取信息。” 那么，如果用英文可以获得更多的信息的话，是不是已经格外划算了呢？（还记得之前说过的 “其实连哑巴英语都并不那么坏” 么？）
+Với ngôn ngữ thứ hai, tác giả cho rằng nhiều người thường biết đọc trước, rồi mới nghe, và khó nói. Ông xem đọc là một công dụng đặc biệt quan trọng của ngôn ngữ, còn khả năng diễn đạt lưu loát là phần thêm vào. Cơ hội thường đến từ chênh lệch thông tin: nếu tiếng Anh giúp ta tiếp cận thêm thông tin, thì riêng điều đó đã có giá trị.
 
-## 3. 背单词不是学英语
+> **Ghi chú biên tập cho người học Việt:** Dùng tiếng Anh sớm là hữu ích trong các tình huống ít rủi ro như ghi chú, nhắn tin xã giao, đọc, nghe hoặc luyện nói. Với y tế, pháp lý, an toàn, hợp đồng, tài chính hay thông tin có thể ảnh hưởng người khác, cần kiểm tra kỹ, nhờ người có chuyên môn hoặc dùng bản dịch đáng tin cậy. Đọc, nghe, nói và viết hỗ trợ nhau; không nên xem một kỹ năng là đủ cho mọi mục tiêu.
 
-一不小心就把 “背单词” 当作英语学习的全部，这是中国学生学英语最常见的缪误。背单词并不等同于学英语，它原本只应该是英语学习的一小部分内容而已。在国内，几乎每个学生都买过若干本词汇书。我常常见到学生的书架上有高考词汇书、四级词汇书、六级词汇书、考研词汇书、TOEFL 词汇书、SAT 词汇书、GRE 词汇书 …… 有时候我禁不住问，“咦？你怎么就不买一本好词典呢？” 得到的回答竟然是 “哦，太贵了……” 很难弄明白这些学生究竟是怎么想的。
+## 3. Học từ vựng không phải là toàn bộ việc học tiếng Anh
 
-其实倒也不是猜不出来。当学生看不懂一篇英语文章之时，他所能体会到的最直接的尴尬来自于让他们无能为力的 “大量生词”。于是就自然而然地认为自己的最大问题在于 “没有足够的词汇量”，于是希望通过背一本词汇书迅速提高词汇量（请注意这再次出现的急于求成之心理）。可问题真的就如看起来的那样吗？
+Nhầm việc “học thuộc từ vựng” với toàn bộ việc học tiếng Anh là sai lầm phổ biến mà tác giả quan sát ở học sinh Trung Quốc. Học từ chỉ là một phần nhỏ. Ông thường thấy trên giá sách có sách từ vựng cho kỳ thi đại học, CET-4, CET-6, thi cao học, TOEFL, SAT và GRE, rồi hỏi vì sao không mua một quyển từ điển tốt. Câu trả lời đôi khi là “đắt quá”, điều ông khó hiểu.
 
-如果我们把每个单词比喻成一块的砖头，而把一篇文章比喻成一栋的房子的话，那么就很容易明白文章并不只由词汇构成 —— 除了砖头之外，还要有很多其他材料，最容易想到的起码还有钢筋和水泥。并不是你比别的人拥有更多的砖头就意味着说你肯定能够盖出比别人更大的房子；如果你只有砖头而没有钢筋水泥的话，你有的只不过是砖堆而已。实际上，我们都宁可砖头少一点，但一定要有足够的钢筋和水泥 —— 这样的话我们就能造出房子。哪怕因为砖头没那么多所以房子小了一点，但是，毕竟还有房子可住，比既不中看又不中用的砖堆好多了吧？我真的很喜欢这个类比，可以把事情讲得特别清楚：
+Lý do không khó đoán. Khi không hiểu một bài tiếng Anh, điều gây lúng túng rõ nhất là số lượng từ lạ. Người học dễ cho rằng thiếu vốn từ là vấn đề lớn nhất, rồi hy vọng học một cuốn từ vựng sẽ nhanh chóng tăng vốn từ. Tác giả nhắc rằng đây lại là tâm lý muốn thành nhanh.
+
+Nếu xem mỗi từ là một viên gạch và một bài viết là một ngôi nhà, ta thấy bài viết không chỉ có gạch. Còn có vật liệu khác, như thép và xi măng. Nhiều gạch hơn không bảo đảm xây được căn nhà lớn hơn; chỉ có gạch mà không có thép, xi măng thì chỉ là đống gạch. Thà ít gạch hơn nhưng đủ vật liệu để có một căn nhà còn hơn một đống gạch lớn mà không dùng được. Tác giả thích phép so sánh này vì nó làm ý rõ ràng hơn:
 
 > An essay is written with words just as a house is built with bricks, but merely a collection of words cannot be called an essay any more than a pile of bricks can be called a house.
 
-在分辨哪一种背单词方法最好（后文会有详细论述）之前，首先要明白仅仅背单词肯定是不够用的，甚至是全然没用的 —— 只有砖头没有钢筋水泥等材料还不如什么都没有，因为既盖不了房子又干着急。
+Trước khi bàn về cách học từ, điều đầu tiên cần hiểu là học thuộc từ đơn lẻ không đủ, thậm chí có thể khiến người học chỉ có “gạch” mà vẫn không xây được bài đọc hoặc bài viết. Theo tác giả, những “bí kíp” học từ thường không hiệu quả bằng cách đơn giản nhất: tích lũy từ qua lượng đọc lớn và tiêu hóa chúng bằng cách dùng thường xuyên.
 
-其实，各种各样背单词的 “神技” 几乎都没有多大用处。最好的、最有效的是最朴素的方法：通过大量阅读积累词汇，通过频繁使用消化词汇 —— 这也是不二法门。
+> **Ghi chú biên tập:** Vốn từ vẫn là nền tảng quan trọng. Học theo ngữ cảnh, cụm từ, phát âm, nghĩa, cấu trúc câu và tình huống dùng giúp từ trở nên dùng được. Danh sách từ, flashcard và ôn cách quãng có thể hữu ích nếu đi cùng đọc, nghe, viết, nói và kiểm tra cách dùng.
 
-## 4. 为了学好外语，绝不能忽视母语
+## 4. Muốn học ngoại ngữ tốt, đừng bỏ qua tiếng mẹ đẻ
 
-先请读者做一道 TOEFL 词汇题，然后再讲道理。
+Trước hết, hãy làm một câu từ vựng TOEFL rồi mới bàn tiếp.
 
 > The second possible benefit of communal roosts is that they act as "information centers." During the day, parties of birds will have spread out to forage over a very large area. When they return in the evening some will have fed well, but others may have found little to eat.
 
@@ -65,175 +67,172 @@ Peter Norvig 写这篇文章（2001）的几年后，2008 年 11 月，Malcolm G
     (C) feed
     (D) rest
 
-一个人的外语能力往往受限于自己的母语能力。第二语言学得再好，也很难比母语更好。即便是那些 “天生” 的多语使用者，在生活过程中必然会出现某一种语言使用得比其它语言更多的情况；于是，最终那个被使用得最多的语言将成为他们的 “主导语言”（The dominant language）；而其后，这些人再去学习其它语言的时候，能够达到的程度基本上会受限于他们 “主导语言” 的水平。其实，更加准确地来说，之所以一个人能够使用的众多语言之中母语使用能力总是处于最高水平，本质上是因为母语被使用的机会最多，套用司机的术语就是，母语的 “驾龄” 最久。语言与任何其他技能一样，越用越熟，熟能生巧，巧则可夺天工。
+Năng lực ngoại ngữ của một người, theo tác giả, thường bị giới hạn bởi năng lực tiếng mẹ đẻ. Dù học ngôn ngữ thứ hai tốt đến đâu, người ta khó vượt tiếng mẹ đẻ. Ngay cả người dùng nhiều ngôn ngữ cũng thường có một ngôn ngữ được dùng nhiều hơn, trở thành “ngôn ngữ chủ đạo” (*dominant language*); trình độ học ngôn ngữ khác sau đó bị giới hạn phần nào bởi ngôn ngữ chủ đạo. Tác giả nói chính vì tiếng mẹ đẻ được dùng nhiều nhất nên năng lực ở đó thường cao nhất, giống như có “thâm niên lái xe” lâu nhất. Ngôn ngữ như các kỹ năng khác: dùng càng nhiều càng thành thạo.
 
-甚至语言应用的各个方面（听、说、读、写）都是如此。我个人的经历来就是很好的例子。我是朝鲜族。小学二年级之前，我读的是全韩语授课的学校，那时候，尽管我能同时说汉语和韩语两种语言，但显然韩语的读与写要强过汉语的读与写，而听与说的能力在两种语言上很难看出太大差异。后来转学到全汉语授课的学校，没多久情况就逆转了过来，汉语的读写能力远远强过韩语的读写能力。原因很简单，用汉语读写的东西远远超过韩语读写。在全汉语授课的环境中不到两年的时间，由于长时间不说韩语，我甚至出现了相当长一段时间的韩语 “失语” 现象 —— 尽管依然能够听懂韩语，但就是说不出来（这种现象在双语使用地区往往非常普遍）。直到初中的时候全家随父母调动工作搬迁到延边朝鲜族自治州之后，由于必须说韩语的场合多了起来，几个月之内开始慢慢恢复，直至可以像过去一样流利地说韩语。许多年后在新东方教书七年，由于工作的需要，几乎每天都在长时间大量阅读英文资料。三五年下来，可以明显感到的是英文阅读能力开始慢慢超过中文阅读能力，但是说与写的能力还是英文远不如中文，道理也很明显，就是各方面的使用量各不相同而已。在离开新东方之前的几年里，教授的是作文，每天讲啊讲的同时也在写啊写，英文写作能力渐渐超过中文写作能力。而最近几年，每天都在写博客，能够清楚地感觉到中文写作能力在不断提高（每天都在进步所带来的感觉往往并不是沾沾自喜而是暗暗自卑 —— 因为每天都在进步很可能说明另外一个问题，那就是，之前实在是太差了），再次超过英文写作能力。现在，我的英文阅读能力最好，中文听说写能力次之，韩文的听说读写相对最差 —— 最差的是韩文的写作能力，几乎二十多年没有用韩文写过东西了 …… 一个人语言使用能力的 “用进废退” 有多么明显，由我的个人经历可窥见一斑。
+Ông kể trải nghiệm của mình như một ví dụ. Trước lớp hai, ông học trường dạy hoàn toàn bằng tiếng Hàn. Khi đó ông nói được cả tiếng Trung và tiếng Hàn, nhưng đọc viết tiếng Hàn mạnh hơn, còn nghe nói hai ngôn ngữ không khác rõ. Sau khi chuyển sang trường dạy bằng tiếng Trung, đọc viết tiếng Trung nhanh chóng vượt tiếng Hàn vì ông dùng tiếng Trung nhiều hơn. Trong chưa đến hai năm không nói tiếng Hàn, ông vẫn nghe hiểu nhưng từng không nói được trong một thời gian. Khi gia đình chuyển đến châu tự trị Diên Biên Triều Tiên và cần dùng tiếng Hàn thường xuyên hơn, khả năng này dần hồi phục. Sau nhiều năm dạy ở New Oriental, việc đọc lượng lớn tài liệu tiếng Anh khiến năng lực đọc tiếng Anh của ông dần vượt đọc tiếng Trung, dù nói và viết tiếng Anh vẫn kém hơn. Khi dạy viết, ông nói và viết tiếng Anh hằng ngày nên viết tiếng Anh dần vượt viết tiếng Trung; những năm viết blog sau đó, tiếng Trung lại vượt lên. Lúc viết, ông tự đánh giá đọc tiếng Anh tốt nhất, nghe nói viết tiếng Trung kế tiếp, còn bốn kỹ năng tiếng Hàn yếu nhất, đặc biệt là viết vì đã hơn hai mươi năm không viết tiếng Hàn. Câu chuyện này, theo ông, cho thấy rõ hiện tượng dùng thì tiến bộ, bỏ lâu thì suy giảm.
 
-然而，对于大多数人来说 —— 大多数人最初只是单语使用者 —— 无论如何都是母语使用能力最强、母语使用频率最高（无论听、说、读、写哪一方面）。而当我们运用语言汲取知识，交流经验，沟通讨论的时候，连带着语言一起使用的还有很多其他能力，比如，观察能力、概括能力、转述能力、逻辑能力、语言组织能力、换位思考能力，甚至肢体语言的运用能力等等。这些能力会自然地与语言文字运用能力交织在一起完成其功用。当我们使用母语的时候，这些必须与之搭配使用的能力会自然而然地被调用，进而各自的运用技巧会在不断的实践中被打磨甚至升华。与此同时，这些能力的提高会反过来影响母语语言文字运用能力的提高，它们之间相辅相成。
+Với phần lớn người khởi đầu đơn ngữ, tiếng mẹ đẻ vẫn là ngôn ngữ được dùng nhiều và mạnh nhất ở cả nghe, nói, đọc, viết. Khi dùng ngôn ngữ để học, trao đổi kinh nghiệm hoặc thảo luận, ta còn dùng quan sát, khái quát, thuật lại, logic, tổ chức lời nói, nhìn từ vị trí người khác và cả ngôn ngữ cơ thể. Những kỹ năng này đan xen với năng lực ngôn ngữ; thực hành tiếng mẹ đẻ vừa rèn chúng, vừa được chúng hỗ trợ trở lại.
 
-学习外语的时候，常常能观察到两个不同的人，即便智商大致相同，也好像花费了同样的时间精力却成效大不相同。最合理的解释就是两个人所拥有的上文提到的那些其它能力之间存在着巨大的差异，而这些能力会限制语言能力的习得与发挥。
+Khi học ngoại ngữ, hai người có vẻ có trí tuệ, thời gian và công sức tương tự vẫn có thể đạt kết quả rất khác. Tác giả cho rằng lời giải thích hợp lý nhất là khác biệt lớn ở các năng lực hỗ trợ vừa nêu, vì chúng có thể giới hạn việc tiếp thu và phát huy ngôn ngữ.
 
-很多中国学生醉心于背单词（其实，背单词是英语学习过程中最为简单的一件事情 —— 尽管大多数人不这么认为），可是他们之中的很多人并不知道，自己背单词感觉那么难的重要原因之一在于他们的母语词汇量就不足够大。根据阅读量、以及主动阅读（active reading）经验积累的不同，每个人的词汇量，以及每个人能够熟练使用、明晰分辨的词汇量都各不相同，往往差异巨大。如此说来，相对于那些母语词汇量大（能够熟练使用、明晰分辨的词汇量同样也相对更大）的人来说，他们可能在阅读中见到更多他们在母语中就没用过甚至干脆没见过的词汇，所以他们相对会遇到更多 “几乎无法逾越的” 阅读障碍；而在背诵单词列表的时候，他们也相对面临更多的困难。
+Nhiều học sinh Trung Quốc say mê học từ, dù tác giả cho rằng đây là việc đơn giản nhất trong học tiếng Anh. Một nguyên nhân khiến họ thấy khó, theo ông, là vốn từ tiếng mẹ đẻ chưa đủ. Lượng đọc và kinh nghiệm đọc chủ động khác nhau khiến vốn từ, nhất là những từ có thể dùng và phân biệt rõ, rất khác nhau. Người có vốn từ mẹ đẻ nhỏ có thể gặp nhiều từ mà ngay trong tiếng mẹ đẻ họ cũng chưa dùng hoặc chưa thấy, nên gặp thêm rào cản khi đọc và học danh sách từ.
 
-我在长期讲授 TOEFL 作文的过程中，最常观察到的现象是，很多学生写不出作文根本不是英文问题 —— 因为事实上，那些作文题目尽管貌似简单，但是实际上很可能就算让他们用中文写也不一定写得出来。更多的时候，他们不是不会写英文，而是干脆没什么东西可写，哪怕让他们用中文也一样没什么东西可写。老外的文章并不是因为辞藻华丽句式复杂才值得看（任何文化都一样 —— 包括中文世界 —— 讨厌 “金玉其外败絮其中” 的文风），而是因为好的文章简洁、有效、朴素、具体、生动（想想看，在中文世界里，这样的文风不也是被认为最佳的么？至少孙犁先生就这么认为。）平日里写中文文章就是空话连篇的人，如何教会他用英文写出 “using clearly appropriate examples or details to demonstrate his ideas”（使用清楚恰当的例子或者细节论证他的观点）的文章呢？（这一条几乎是所有留学考试——TOEFL、GRE、SAT、IELTS……——中的作文部分的最重要评分标准之一）
+Trong thời gian dạy viết TOEFL, tác giả thường thấy nhiều học sinh không viết được bài không hẳn vì tiếng Anh. Có đề tưởng đơn giản nhưng nếu bảo viết bằng tiếng Trung, họ cũng có thể không viết được. Nhiều khi vấn đề là không có gì để viết. Bài viết tốt không chỉ đáng đọc vì lời hoa mỹ hay câu phức tạp, mà vì ngắn gọn, hiệu quả, giản dị, chính xác, cụ thể và sinh động. Người thường viết đầy sáo ngữ bằng tiếng mẹ đẻ khó có thể lập tức viết tiếng Anh với “*using clearly appropriate examples or details to demonstrate his ideas*”, dùng ví dụ hoặc chi tiết rõ ràng, thích hợp để chứng minh ý tưởng. Tác giả nói đây gần như là tiêu chí chấm quan trọng trong phần viết của nhiều kỳ thi du học như TOEFL, GRE, SAT và IELTS.
 
-这甚至不是中文问题，而是思考习惯问题。我常常调侃很多学生写文章，“for example” 的时候只能 “for 一个 zample”（“for example” 的谐音），甚至很多时候连一个都没有 —— 这是平日里没有带着问题观察记录的习惯造成的，与语言（无论是中文还是英文）甚至没有任何关系。
+Theo tác giả, đây thậm chí là vấn đề của thói quen suy nghĩ, không chỉ của tiếng Trung. Ông đùa rằng nhiều học sinh khi viết “for example” chỉ có “for một zample”, thậm chí không có ví dụ nào. Điều đó đến từ việc không có thói quen quan sát và ghi chép với câu hỏi trong đầu, không phải từ riêng một ngôn ngữ.
 
-大多数人没有写作的习惯。于是，很多人根本就没有斟词酌句的经验。但是，很容易想象，一位在使用母语时经常斟词酌句的人，对各类同近义词之间的微妙差异就相对那些没有经验的人可能更加敏感。所以，这些人在学习外语的时候，同样可能会自然而然地更多关注各类同近义词之间的微妙差异，并且可以更加轻松地掌握。
+Nhiều người không có thói quen viết nên không có kinh nghiệm cân nhắc chữ nghĩa. Người thường cân nhắc từ khi dùng tiếng mẹ đẻ có thể nhạy hơn với khác biệt tinh tế giữa các từ gần nghĩa; khi học ngoại ngữ, họ cũng có thể chú ý và nắm các khác biệt ấy dễ hơn.
 
-同样的道理，没有大量朗读经验的人（很多人即便用母语也很少朗读），往往对语言的韵律并无恰当的敏感。很难想象他们在学习外语的时候却可以做到突然开始格外关注文字的韵律。而那些对母语的文字韵律就很敏感的人，在学习外语的时候，相对更有机会习得更加地道更加自然更加韵律感十足的语言文字用法。
+Tương tự, người thiếu kinh nghiệm đọc thành tiếng, kể cả bằng tiếng mẹ đẻ, thường không nhạy với nhịp điệu ngôn ngữ. Tác giả cho rằng khó mong họ đột nhiên chú ý mạnh đến nhịp điệu khi học ngoại ngữ, trong khi người đã nhạy với nhịp điệu tiếng mẹ đẻ có nhiều cơ hội hơn để học cách dùng ngôn ngữ tự nhiên, giàu nhịp điệu.
 
-大多数人事实上缺乏足够的转述能力（新 TOEFL 考试中很重视这种能力的测评），于是，我们身边只有少数人能做到读过一本书或者看过一个电影之后有声有色地讲述给他人，进而勾起他人一睹为快的欲望。我猜，差不多也只有这少数的人如果花费时间精力习得外语的话，最终同样也可以做到用英语做同样的事情达到同样的效果。
+Nhiều người cũng thiếu năng lực thuật lại. Chỉ một số ít có thể kể sinh động một cuốn sách hay bộ phim cho người khác đến mức khiến họ muốn xem. Tác giả đoán chính những người này, nếu đầu tư học ngoại ngữ, có thể làm điều tương tự bằng tiếng Anh.
 
-阅读母语的时候不注重上下文联系的人，阅读外语的时候往往更无暇顾及上下文联系（因为有很多生词需要处理，很多不熟悉的语法结构要解析），乃至于更经常 “阅读但不理解”。
+Người đọc tiếng mẹ đẻ mà không chú ý quan hệ ngữ cảnh thường càng khó chú ý quan hệ đó khi đọc ngoại ngữ, vì còn phải xử lý từ lạ và cấu trúc ngữ pháp không quen, nên dễ rơi vào trạng thái “đọc mà không hiểu”.
 
-刚才那道词汇题的考点是 “forage”，市面上的词汇书里这个单词取的往往是字典里的第一个意思，“名词，草料、干草”。可是，这道题下的四个选项却都是动词，于是 “forage” 在文章中的词性就只能是动词。那它是什么意思呢？（很多人就是这样被 “词汇书” 给害惨了。）背过这个单词的人也许会颤颤巍巍地猜想 “草料” 被名词动用，那就应该是 “feed” 的意思。恭喜你！做对了！
+Từ được hỏi trong câu TOEFL trên là “forage”. Sách từ vựng trên thị trường thường đưa nghĩa đầu tiên là danh từ “cỏ khô, thức ăn cho gia súc”. Nhưng bốn đáp án đều là động từ, nên trong đoạn này “forage” chỉ có thể là động từ. Người đã thuộc từ có thể đoán từ nghĩa danh từ suy sang “feed”, và như vậy làm đúng.
 
-可是这样能够做对这道题目的人究竟有多少呢？看看数字就知道了。最终做对这道题目的人只有 35%。把那些靠乱猜做对的人数去掉的话，就相当于仅有 26.25% （=35% X 75%）的人凭实力做对。可实际上，“forage” 并不是什么所谓的 “高难词汇”，大学英语四级词汇大纲中就有这个单词，在每一本四级词汇书的 “F” 列表里都有这个单词。换言之，TOEFL 考生里背过这个单词的人应该远远超过 26.25%这个比例才对。
+Tác giả nói chỉ 35% người làm đúng câu này. Nếu trừ phần đoán mò, ông tính còn 26,25% làm đúng nhờ năng lực thực. Nhưng “forage” không phải từ khó theo ông: nó có trong danh sách từ vựng CET-4 và mục chữ F của mọi sách từ vựng CET-4. Vì vậy, ông suy luận tỷ lệ thí sinh TOEFL từng học từ này phải cao hơn nhiều 26,25%.
 
-然而，就算不认识 “forage” 这个单词，能不能作对这道题呢？让我们看看上下文。前面那句句话说，“白天的时候，鸟们出去干了件事（至于干什么了，暂时不知道）”（During the day, parties of birds will have spread out to forage over a very large area. ），后面那句话说 “晚上它们回来的时候，其中的一些就吃饱了。”（When they return in the evening some will have fed well）现在，请听题 —— “它们干什么去了？” 这还用认识那个单词么？连脑筋急转弯都算不上，答案是 “吃” 去了么！大多数考生（至少七成以上）完全无法想象出题者有多么地体贴：出题者担心考生认不出 “fed” 是 “feed” 的不规则过去分词，还特意在后面再补上一个句子 —— “而另外的一些鸟几乎没吃着什么”（but others may have found little to eat.），用来说明 “fed” 其实就是 “eat”！于是，题目要求考生在四个选项中找一个 “fed” 和 “eat” 的同义词，那就是 “C” 选项，“feed” ——有什么理由做错这道题呢？奇怪。
+Ngay cả không biết “forage”, theo tác giả, vẫn có thể làm đúng nếu đọc ngữ cảnh. Câu trước nói ban ngày chim bay đi làm một việc chưa rõ; câu sau nói buổi tối trở về, có con đã ăn no. Vậy chúng đi làm gì? Là đi kiếm ăn. Người ra đề còn thêm “*but others may have found little to eat*” để giúp nhận ra `fed` liên quan `feed` và `eat`; vì vậy đáp án C, `feed`, là từ đồng nghĩa cần tìm. Tác giả ngạc nhiên rằng vẫn có nhiều người làm sai.
 
-讲解过后，读者就可以明白这道题竟然有七成以上的人做错有多么荒唐了吧？可是统计数据告诉我们这就是冷冰冰的事实 —— 七成以上的人完全不具备上下文联系能力。
+Sau khi giải thích, tác giả cho rằng việc hơn 70% làm sai là đáng kinh ngạc, nhưng ông xem con số đó là bằng chứng lạnh lùng rằng hơn 70% không có năng lực liên hệ ngữ cảnh. Nếu thấy tỷ lệ này gây sốc, ông mời người đọc nhìn lại cách mình đọc trong tiếng mẹ đẻ.
 
-七成以上。如果你觉得这个比例很惊人的话，相信我，1) 你并不孤独；2) 你又错了。让我们来审视一下我们自己在母语世界里的表现罢。
+> “Học mà thường xuyên ôn tập, chẳng phải vui sao? Có bạn cùng chí hướng từ xa đến, chẳng phải vui sao? Người khác không hiểu mình mà không giận, chẳng phải là người quân tử sao?”
+>
+> *Luận ngữ*, thiên Học nhi, bản dịch tiếng Việt của đoạn chữ Hán trong nguồn.
 
-> “学而时习之不亦说乎？友朋自远方来不亦乐乎？人不知而不愠不亦君子乎？”
+Ba câu này nên hiểu thế nào? Theo tác giả, lời giải trong sách giáo khoa trung học lúc đó cơ bản theo Chu Hy, học giả đời Tống, 1130-1200, đại ý như sau:
 
-> ——《论语》（学而第一）
+> Khổng Tử nói: “Học rồi thường xuyên ôn tập và thực hành, chẳng phải rất vui sao? Bạn đồng chí hướng từ xa đến, chẳng phải rất mừng sao? Người khác không hiểu mình mà mình không oán hận, bực tức, chẳng phải là người quân tử có đức sao?”
 
-这三句话应该如何理解呢？目前中学课本里的解释，基本上沿袭宋代学者朱熹（1130—1202）先生的解释，这三句话的译文大约是：
+Tiền Mục, 1895-1990, trong *Luận ngữ tân giải* cũng theo cách giải của Chu Hy, tác giả nói, chỉ là bản dịch mới. Bản diễn giải của Tiền Mục có thể chuyển là: “Học và thường xuyên ôn lại, lòng chẳng thấy vui sướng sao? Nhiều bạn từ xa đến, lòng chẳng thấy hạnh phúc sao? Người khác không biết ta mà lòng không có chút buồn bực nào, chẳng phải là một quân tử đã tu dưỡng sao?”
 
-> 孔子说：“学了又时常温习和练习，不是很愉快吗？有志同道合的人从远方来，不是很令人高兴的吗？人家不了解我，我也不怨恨、恼怒，不也是一个有德的君子吗？”
+Hơn hai nghìn năm, và theo tác giả đến cả ngày nay, cách hiểu này giữ vị trí chủ đạo. Nam Hoài Cẩn, 1918-2012, nêu ý kiến khác trong *Luận ngữ biệt tài*, dù có thể ông không phải người đầu tiên. Tác giả cũng không đồng ý mọi chi tiết trong phần giải dài hơn ba nghìn chữ của Nam Hoài Cẩn. Ví dụ, ông không cho rằng chữ “bạn” trong cụm “bạn bè” là chữ mượn để thay cho “có”; cụm ấy chỉ người đồng chí hướng hoặc người có thể đồng cảm với bạn trong một việc. Dù vậy, làm sao ai cũng hiểu hoàn toàn giống nhau một đoạn viết từ hơn hai nghìn năm trước?
 
-钱穆先生（1895—1990）在他的《论语新解》中对这几句话的解释其实依然沿袭朱熹，并没有什么新意，只不过是 “新译” 而已。
+Điểm chính, theo tác giả, là Nam Hoài Cẩn cho rằng ba câu không tách rời mà liên hệ với nhau, còn Chu Hy và Tiền Mục đã không xét quan hệ ấy, khiến ba câu bị hiểu rời rạc. Chỉ xét điểm này, tác giả cho rằng Nam Hoài Cẩn có năng lực đọc hiểu tốt hơn. Hiểu văn bản cần tìm quan hệ giữa các phần; nếu chữ nghĩa không liên hệ thì khó có ý nghĩa thật. Vì vậy, ông thích cách giải của Nam Hoài Cẩn hơn.
 
-> 先生说：“学能时时反复习之，我心不很觉欣畅吗？有许多朋友从远而来，我心不很感快乐吗？别人不知道我，我心不存些微怫郁不欢之意，不正是一位修养有成德的君子吗？”
+Tác giả thừa nhận không nhiều người đọc và hiểu được như Nam Hoài Cẩn. Nhưng theo ông, việc liên hệ ngữ cảnh vốn phải là điều tự nhiên, không phải khó, và ít người làm vì không hình thành thói quen từ đầu. Kinh nghiệm của ông cho rằng sửa thói quen này đơn giản, thậm chí không liên quan chỉ số thông minh.
 
-两千多年的时间里（直到今天也一样），这种解释一直占据主导地位。但是南怀瑾先生（1918 年—）在他的《论语别裁》里提出了异议（也许他并不是第一个）。关于南怀瑾先生的具体解释（南怀瑾先生对这三句话的解释超过三千字），细节上我个人也有不同意的地方。比如，我不认为 “友朋” 中的 “友” 字是用来表示 “有” 字的借用字。“友朋” 就是一个词，表示 “志同道合的人” 或者是能够在某一件事上 “能与你做到心领神会的人”。然而，对一段写于两千多年前的话又怎么可能每个人都理解得全都一样呢？
+Năng lực suy nghĩ bị giới hạn bởi trải nghiệm, còn trải nghiệm tương lai phần nào phụ thuộc cách nghĩ hôm nay, nên ta dễ rơi vào vòng lặp. Tác giả nói nhiều “số phận bi thảm” bắt đầu như vậy: người lớn lên trong môi trường khắc nghiệt dễ hình thành thế giới quan bi quan, tin vào các khẩu hiệu kiểu Darwin xã hội, không tin ai và làm mọi việc bằng mọi giá; thế giới quan ấy lại ảnh hưởng từng quyết định và dẫn đến kết cục xấu hơn. Người theo đuổi thành nhanh cũng vậy: vì chưa từng trải nghiệm lợi ích của tích lũy, họ không muốn tích lũy, xem lối tắt và thành nhanh là đúng. Khi thất vọng sau thời gian đã trôi, họ lại càng muốn một lối tắt hơn.
 
-可是关键在于南怀瑾先生认为这三句话不应该是各自孤立的，而应该是相互关联的；而之前的朱熹先生与钱穆先生全然不顾这三句话之间的联系，任凭这三句话被理解的七零八落。仅从这一点上来看，南怀瑾先生要比朱熹先生和钱穆先生拥有更好的阅读理解能力。理解文字的关键在于探寻文字之间的联系，文字互不关联就很难存在任何真正的意义。所以，我认为南怀瑾先生的解释要比朱熹或者钱穆的都要好。
+Cùng lý lẽ ấy, năng lực học ngoại ngữ bị giới hạn bởi trải nghiệm học tiếng mẹ đẻ. Tác giả khuyên học sinh dành thời gian mỗi ngày, chẳng hạn một hoặc hai giờ, để đọc bài tiếng Trung hay; như sinh viên khoa Ngữ văn, chọn một hoặc hai câu hay, suy ý, dụng ý, cách chọn từ và nhịp điệu rồi đọc lại nhiều lần. Theo ông, cách này âm thầm nâng năng lực dùng tiếng mẹ đẻ. Ông còn nói năng lực suy nghĩ phần lớn bị giới hạn bởi năng lực hiểu và dùng ngôn ngữ, và có học giả từng khẳng định thói quen đọc khi trẻ theo suốt đời. Vì vậy, tác giả khuyên tăng độ khó đọc hợp lý: đọc tạp chí *Dushu* đáng hơn *Duzhe*, và đọc *Duzhe* vẫn hơn chỉ đọc truyện tình cảm, kiếm hiệp hoặc các tạp chí kiểu *Zhiyin*. Ông thừa nhận lời khuyên này chỉ dành cho người quan tâm năng lực suy nghĩ; người chỉ cần niềm vui đọc hiện tại có thể bỏ qua.
 
-不得不承认，能够做到像南怀瑾先生那样阅读并理解文字的人确实不多。但，某种意义上这是原本不应该的事情。阅读的时候要联系上下文，这不应该是很自然的么？当然应该。这是很难的事情么？当然不是。那为什么很少有人做到？估计只不过是因为大多数人最初的时候没有养成好习惯而已。纠正难不难呢？以我的经验来看，很简单 —— 甚至与智商无关。
+Tác giả nêu Lý Ngao, Lâm Ngữ Đường và Tiền Chung Thư làm ví dụ người có tiếng Anh xuất sắc nhờ trước hết dùng tiếng mẹ đẻ vượt trội. Theo ông, họ là bậc thầy ngôn ngữ nên có cảm nhận, nhận thức, nhạy bén và kinh nghiệm hơn người thường; cùng thời gian học ngoại ngữ, họ vẫn có kết quả khiến người khác khâm phục. Họ đã bỏ nhiều thời gian và công sức hơn cho tiếng mẹ đẻ, và những thói quen đó khiến họ tiếp tục đầu tư nhiều, dùng kinh nghiệm cũ để làm kỹ năng cao hơn.
 
-我们的思考能力受到自身经历的局限，与此同时，我们未来的经历某种意义上取决于我们今天的思考能力。于是，我们往往一不小心就掉到死循环之中。不夸张地讲，绝大多数人的所谓 “悲惨命运” 其实就是这么造成的。举例来说，在一个恶劣的生活环境中成长的人更可能因其灰暗坎坷的经历而养成消极的人生观，信奉 “人为财死鸟为食亡之类” 的社会达尔文主义信条，从不相信任何人，做事从来都是不择手段；而他的这种人生观又会进而影响他生活中的每一个决定，最终注定遭遇更加暗淡的结局。追求速成的人某种意义上也是这样的。过去的生活经历从未让他有机会体会积累的好处。所以他们根本就没有积累的动力和愿望，在他们看来 “速成”、 “捷径” 才是正途。而正因为他们的这种想法，他们的结果往往是到头来才觉一场空。可是时间已经流逝，能够用来达成愿望的时间更少了，于是就更希望能够找到捷径，能够速成了。
+Người lớn rất dễ đánh giá quá cao năng lực tiếng mẹ đẻ. Sau khi rời trường, nhiều người không còn buộc thi môn ngữ văn nên không bị điểm kém làm tự ti và tự cho rằng mình khá hơn học sinh. Nhưng tác giả nói không hẳn vậy: có cử nhân, thậm chí học viên sau đại học hoặc tiến sĩ, không viết được hợp đồng thuê nhà cho ra dáng hoặc không hiểu hết hợp đồng lao động mình ký. Họ có thể cắt nghĩa rời rạc lời nói, bài viết không phải do cố ý mà vì không thấy, không nghe được chi tiết quan trọng. Ông cho rằng xác suất một bản thảo không cần biên tập sửa một chữ trước khi xuất bản gần bằng không, bởi luôn có thể có lỗi chính tả, ngữ pháp hoặc cách diễn đạt tự cho là đúng. Bỏ rèn tiếng mẹ đẻ, ông ví như đà điểu vùi đầu trước nguy hiểm, có thể bắt nguồn từ việc ước lượng sai năng lực của chính mình.
 
-同样的道理，我们的外语学习能力受到我们母语学习经历的局限。把母语修炼得更好，外语才可能学得好用得棒。所以，我常常建议我的学生，每天都要留出一定的时间（比如一两个小时）阅读好的中文文章。像那些中文系的学生一样，常常要从文章中挑出一两个精彩的句子，揣摩作者的立意、用意、选词技巧，甚至韵律的把握，而后反复诵读。潜移默化地提高自己的母语语言文字应用能力。某种意义上，一个人的思考能力，很大程度上受他语言文字理解能力、应用能力的局限。甚至有学者曾经断言，一个人少年时期的阅读习惯将伴随他的一生 —— 其实这种看法并不极端，某种意义上，我们每天都能看到很多人现在的生活在他很小的时候早就注定了，只不过他们自己并不自知而已。所以，适当提高一下自己的阅读难度是有必要的。从这个意义上来讲，读《读书》杂志就比读《读者》杂志更加划算，而哪怕读读《读者》杂志都比只看言情武侠小说或者《知音》之类的杂志不知道要强出多少倍。当然，以上的看法只针对在意自己思考能力的人有意义。很多只在意当前阅读快感而不在意自己未来收益的人（这也许也是一种生活策略）就可以忽略以上的建议，自行其是就好。
+Vì thế, theo tác giả, học ngôn ngữ còn khó hơn tập thể hình. Ông nói ai duy trì ba năm, mỗi tuần ít nhất ba ngày, mỗi lần hai giờ ở phòng gym có thể có vóc dáng rất đẹp, dù chỉ một phần mười nghìn làm được. Học ngôn ngữ cần nhiều kiến thức và kỹ năng hỗ trợ, mỗi thứ đều cần thời gian rèn; những tích lũy đó lại thúc đẩy việc tiếp thu và dùng ngôn ngữ. Không hiểu điều này mà muốn thành nhanh là một ảo tưởng non nớt, theo ông.
 
-李敖先生成年之后从未离开过台湾，即便他口语发音很差，但他用英文写的文章却漂亮得很。林语堂先生的英文文章远比中文文章更加深邃优雅。钱钟书先生的英文可以让很多牛津剑桥的教授自卑。某种意义上，我认为这些高人很可能并非拥有超人的智商才能做到如此令人惊叹。更可能是因为他们本身母语就用得过人若干等。他们自己就是语言大师，于是对语言文字的方方面面都有过人的感受、认知、敏感和心得。于是，他们哪怕花费与常人相同的时间精力去琢磨外语，也必然使常人望而兴叹、仰之弥高。更何况，这些人习得母语的时候就相对于常人花费了更多的时间精力，拥有更多的经验技巧，于是，他们在习得外语的时候，所需要耗费的时间精力自然而然就比常人更少（但他们过往的习惯会使得他们又自然而然地投入相对常人更多的时间与精力）；与此同时，他们通过运用（在母语习得中）已获得的经验技巧还会使那些经验技巧更加高超，于是他们的外语水平自然会使常人只能远远地望其项背而终生不得。
+Tác giả kể lần gặp một tài xế taxi ở Thiên Tân. Biết ông là giáo viên tiếng Anh, tài xế hỏi nghề này có kiếm nhiều không. Ông đáp “bình thường”, nói dạy học ở nơi đó không làm giàu lớn nhưng tiền kiếm được “sạch”. Tài xế than nghề lái xe vất vả, rồi hỏi: nếu từ giờ chỉ cho con trai học tiếng Anh, không học gì khác, có chắc học giỏi hơn mọi người không? Tác giả biết người ấy hỏi thật và muốn giải thích kỹ nhưng khó làm trong thời gian ngắn nên chỉ trả lời “chắc vậy”. Ông nghĩ đứa trẻ sẽ không làm nổi nếu nghe theo, làm nổi cũng không có kết quả tốt, và cuối cùng cũng không nghe bố vì chẳng ai muốn làm một việc tẻ nhạt như thế.
 
-人们特别容易高估自己，绝大多数成年人对自己的母语水平过度自信。他们以为自己的母语水平很高，却忘了另外一个事实：很可能他们的母语水平仅仅处在对母语使用者来说只不过是够格的级别上。只不过，大多数成年人从学校毕业之后（按照我们的教育体系教学内容设置来看，更可能是高中毕业之后）不再被强制参加各种语文考试，不再有机会因考试成绩差而自卑，于是自然而然地认为自己的语文水准已经 “相当高” —— “总比中学生强吧？” 他们这样想，可事实上还真的不见得。多少本科毕业生（甚至包括相当部分的研究生、博士）走入社会之后，竟然写不出一份像样的租房合同，或者竟然不能够完全读懂自己所签写的雇佣协议。很多人听人讲话、读人文章之后常常断章取义，其实并非出自故意，只不过是文字理解水平太差乃至于经常 “听不到”、“看不到” 一些重要内容而已。不妨想像一下，绝大多数人（这个比例绝对会超过 99%）无论多么认真地写一篇文稿，无论自己反复修改过多少次，能够正式出版之前，拿到编辑手里之后 “一字都不需改动” 的可能性几乎是零 —— 更可能的存在着一些有意无意的错别字、或隐蔽或明显的语法错误、自以为是的表达等等，往往需要另外一个人反复推敲才行。很多人忽视母语的修炼，像鸵鸟遇到危险时只顾着把头埋起来一样一头扎到英语学习中去，其实不见得是有意而为之，更深层次的原因很可能仅仅是对自己母语水平的错误估计。
+Vì vậy, tác giả cho rằng nếu ai học ngoại ngữ rất tốt, công lao thuộc về giáo viên ngữ văn tiểu học nhiều hơn tất cả giáo viên tiếng Anh sau này. Ông thêm rằng với nhiều người, giáo viên tiếng mẹ đẻ ấy chính là bản thân họ, vì họ không gặp được thầy cô tốt.
 
-这么看来，语言学习要比健身难多了。大多数人只要能做到坚持三年，每周至少三天去健身房锻炼两个小时，就可以塑造出魔鬼身材，男人雄壮，女人窈窕。当然，这只有万分之一的人做到（补充数据根据）。然而，语言的学习却需要很多知识技能的支撑，而这些知识技能也需要耗费大量的时间精力去获得、去打磨。这些其他知识技能的积累反过来又会促进语言的习得、促进语言应用能力的提高，它们之间相辅相成。可见语言学习有多难 —— 也就是说，不明就里想要速成只不过是幼稚造就的幻想而已。
+> **Ghi chú biên tập cho người học Việt:** Cả mối quan hệ giữa tiếng mẹ đẻ, ngoại ngữ, thông minh, thành công và số phận trong mục này là các nhận định rất rộng của tác giả. Chúng không đủ để kết luận ai đó không thể học tốt vì nền tảng hiện tại, hoặc để đánh giá một ngôn ngữ cao thấp. Câu TOEFL minh họa cách dùng ngữ cảnh, nhưng số liệu 35%, 26,25% và “hơn 70%” chưa có nguồn kiểm tra trong sách. Thay vì tự phán xét, hãy dùng một quy trình cụ thể: đọc câu trước và sau, xác định từ loại, gạch bằng chứng, diễn đạt lại ý bằng tiếng Việt, rồi kiểm tra từ điển và đáp án.
 
-有一次我到天津遇到一位出租车司机。他知道我是英语老师之后，说道，“现在是不是英语老师赚得很多啊？” 我说 “真的一般般……” 我没有撒谎，在这个国度靠教书是赚不了大钱的，只不过，赚的钱比较干净而已。他接着说，“你看我们开车的，唉，可怜着呢 …… 没办法呀，上学的时候不懂事儿 …… 哎，你说，从现在开始，我就让我儿子学英语，别的都不学了，只学英语，那是不是肯定学得比别人好啊？” 这位司机显然不是开玩笑，我也想很认真地回答他，可是我知道我很难短时间内给他讲清楚，只好说，“应该是吧……” 我知道他要是真的让儿子那么做的话，其一，他儿子就算竟然真的听话也根本做不到；其二，就算真的做到了也不会有好的结果；而我知道我这种敷衍不会害到任何人，因为其三，他儿子根本就不会听他的 —— 谁会愿意做那么无聊的事情呢？
+## 5. Mười phút ôn lại tiếng mẹ đẻ
 
-所以，某种意义上我总是觉得如若某个人能把外语学得很好的话，那么这更归功于他的小学语文老师多于他后来所有的英语老师。（当然，更多人的母语语文老师其实是自己 —— 因为实在没遇到过好老师……）
+Tác giả gọi đây là một nghịch lý: giáo dục trong mọi hệ thống dường như bất lực trước việc dạy viết; giáo dục ngôn ngữ yếu đến mức người làm giáo dục ở nhiều quốc gia thất vọng khi thấy ít nhất một nửa người trẻ sau “giáo dục đại học” vẫn không có năng lực đọc cơ bản. Đây là “hướng dẫn mười phút” để ôn lại tiếng mẹ đẻ. Ai cũng biết viết, ai cũng có điều muốn nói và ai cũng nên có thể viết tốt; trong thời đại xuất bản chữ dễ chưa từng có, chữ càng có sức mạnh.
 
-## 5. 十分钟重修语文
+### Phút thứ nhất: Từ vựng
 
-这真是异常吊诡的事情：任何一种体制下的教育制度都在 “写作” 方面无能为力 —— 语文教育是如此地苍白无力，乃至于各个国家的教育者都沮丧地发现年轻一代至少有半数在接受所谓的 “高等教育” 之后竟然连基本的 “阅读能力” 都不具备。这是个 “十分钟教程” —— 让我们重修一下语文。人人都会写字，人人都有话可说，人人都应该能够写好文章；在这个文字发表空前容易的年代，文字更有力量。
+Hãy nhìn từ vựng từ góc khác. Danh từ ghi lại sự vật ta cảm nhận, dù cụ thể hay trừu tượng. Tính từ ghi lại cảm nhận của ta về sự vật ấy. Động từ ghi lại hành động của sự vật ta cảm nhận. Trạng từ bổ nghĩa động từ thì ghi lại cảm nhận về hành động ấy; bổ nghĩa tính từ thì ghi lại cảm nhận về cảm nhận của ta về sự vật. Đoạn này có vẻ rắc rối, nhưng nếu ngắt câu đúng và hiểu đúng, tác giả nói cảm nhận về chữ nghĩa sẽ khác ngay.
 
-### 第一分钟：词汇（Vocabulary）
+### Phút thứ hai: Ngữ pháp
 
-最好换个角度重新认识词汇。名词是干什么的？名词是用来记录你所能够感知的事物 —— 管它是抽象的还是具体的。形容词是干什么的？你用形容词来记录你对你能够感知的那个事物的感知。动词呢？动词用来记录你能够感知的那个事物所发出的动作。那么最后，副词呢？副词修饰动词的时候，是用来记录你对你能够感知的那个事物所发出之动作的感知；副词用来修饰形容词的时候，是用来记录你对你能够感知的那个事物的感知的感知。（这一分钟的内容看起来比较拗口，只要能做到对这些文字断句准确，理解无误，那么仅在一分钟之后就已经脱胎换骨 —— 你对文字的感知已经大不相同。
+Không cần là nhà ngữ pháp, nhưng cần biết quy tắc cơ bản. Cũng như không cần thành Lynch hay Buffett mới đầu tư, không cần thành Tsui Hark hay Spielberg mới thưởng thức điện ảnh, nhưng phải biết luật chơi tối thiểu. Dù tiếng Trung hay tiếng Anh, một sách ngữ pháp là đủ để bắt đầu. Sau khi biết luật cơ bản, hãy viết và xem sách ngữ pháp như bản đồ: cần gì thì tra, tra nhiều rồi nhớ, như đi nhiều lần thì không cần nhìn bản đồ. Tác giả gay gắt cảnh báo đừng tin lời “không cần học ngữ pháp”.
 
-### 第二分钟：语法（Grammar）
+### Phút thứ ba: Logic
 
-你不一定要成为语法学家，但你起码要知道基本规则。这就好像投资股市不一定非要先成为林奇或者巴菲特，享受电影不一定要先成为徐克或者斯皮尔伯格；但起码要学习最基本的游戏规则。中文也好英文也罢，语法书一本就够。了解基本规则之后，就开始动手写字，把语法书当作地图，需要什么就去查什么，查多了就全记住了 —— 就好像一个地方去了好几次之后就再也用不着查地图了一样。千万不要相信那些鬼话，说什么 “不用学语法” —— 人家发疯是人家的事儿，你情愿当傻子相信疯子，那是你的问题。
+Tác giả xem logic là công cụ khó có của con người. Tam đoạn luận Aristotle là nền tảng, nhưng khi dùng logic trong đời sống phải đối mặt với bất định và phức tạp. Tam đoạn luận tất định như “mọi người đều chết; Socrates là người; Socrates sẽ chết” thường không có nhiều ý nghĩa thực tế. Đời sống thường giống: “chính trị gia thường không đáng tin; Obama là chính trị gia; vậy Obama đáng tin đến mức nào?” Kết luận không tất định, việc phân tích phức tạp. Theo tác giả, thách thức khi theo đuổi tính chính xác logic chủ yếu là dám đối diện bất định và phức tạp.
 
-### 第三分钟：逻辑（Logic）
+### Phút thứ tư: Văn phong
 
-逻辑应该是所有生物中人类所特有的得之不易的工具。亚里士多德的三段论是最基础的东西。但是，生活中运用逻辑时所要面对的是 “不确定性”、“复杂性”。必然成立的三段论 —— 比如，大前提：人都要死的；小前提：苏格拉底是人；结论：苏格拉底必然会死的 —— 往往没有什么实际意义。生活中要处理的更可能是这样的情形：大前提：政客通常都不可靠；小前提：奥巴马当然是政客；结论是不确定的、分析是复杂的：奥巴马到底有多可靠？追求逻辑上的准确所有的挑战基本上都来自于一个人是否勇于面对 “不确定性” 与 “复杂性”。
+Có thể chia bài viết thành văn chương và nghị luận. Bài văn chương thường chú ý tu từ, từ ngữ, sự hoa mỹ và bay bổng. Bài nghị luận nhằm giúp người khác hiểu, truyền thông tin, tích lũy tri thức và trao đổi kinh nghiệm, nên tốt nhất là “ngắn gọn, giản dị, hiệu quả, chính xác, cụ thể”. Đây không phải luật sắt: có thể dùng chữ hoa mỹ mà vẫn làm rõ luận điểm, hoặc kể chuyện cảm động bằng chữ giản dị. Nhưng tác giả khuyên người muốn diễn đạt suy nghĩ hiệu quả hãy nhớ mười chữ này.
 
-### 第四分钟：文风（Style）
+### Phút thứ năm: Tu từ
 
-常见的文章起码可以如此二分：文艺类文章与说理类文章。这两类文章很不相同。基本上，文艺类的文章可能更注重修辞、更考究措辞、更华丽更天马行空。然而，说理类文章的根本目的是为了让人看懂，传递信息，积累知识，交流经验；因此说理类文章的文字最好 “简洁、朴素、有效、准确、具体”。当然，这不是铁律，如果有能力用华丽的文字说清楚道理也不是不行；反过来，用朴素的语言叙述动人的故事也未尝不可。但是所有希望自己的思考结果能够有效表达的人都最好牢记这十个字的标准 —— 仅仅十个字而已，却已经足够。
-### 第五分钟：修辞（Rhetoric）
+Sức mạnh của tu từ là rõ ràng; tác giả cho rằng trong các biện pháp tu từ, có lẽ chỉ phép loại suy là không thể thiếu. Bản chất của nó là: muốn giải thích X lạ với mọi người, hãy tìm A mà họ quen và giống X nhất ở ít nhất một mặt, để X trở nên dễ hiểu. Giáo viên tiểu học nói cấu tạo Trái Đất gần như quả trứng; giáo viên trung học nói cấu tạo nguyên tử giống hệ Mặt Trời; người ta đáp lại một hai phản ví dụ bằng câu “chiếc đồng hồ hỏng cũng đúng hai lần mỗi ngày”. Đó đều là loại suy, chiếc cầu cần thiết để con người đi từ không biết đến biết. Các biện pháp khác có thời gian thì học, không thì cứ viết giản dị hơn.
 
-修辞的力量不言而喻。所有的修辞之中也许只有 “类比” 是不可或缺的。类比的本质是 “为了说清楚大家不熟悉的 X，先去找一个 1) 大家都熟悉的 2) 与 X（至少某一方面）最相似最接近的 A，最终做到 X 对大家来说不言而明”。小学老师说 “地球的构造就跟鸡蛋的构造差不多”；中学老师说 “原子内部的构造与太阳系的构造如出一辙”；对那些拿一两个 “反例” 试图反对某一观点的人我们说 “随便哪一只破烂钟表都能一天对两次呢”…… 这些都是类比，类比的力量就在于此：它是我们作为人类从无知跨越到有知必须的桥梁。其它的修辞手段，有空就学，没空就算 —— 大不了更朴素一点没有什么不好。
+### Phút thứ sáu: Tri thức
 
-### 第六分钟：知识（Knowledge）
+Chữ, từ, câu, ngữ pháp, văn phong và tu từ đều là công cụ biểu đạt. Không có gạo thì đầu bếp giỏi đến đâu cũng không nấu được cơm. Thay vì lý tưởng hóa “cầu tri”, tác giả thích nói giản dị là “làm bài tập chuẩn bị”. Làm việc gì cũng cần chuẩn bị: viết tiểu thuyết hay hướng dẫn đều cần. Chuẩn bị nhiều thì biết nhiều, có nhiều thứ để suy nghĩ, và chữ viết sẽ có chiều sâu, chất liệu. Bài viết hời hợt vì tác giả không chuẩn bị. Tri thức thay đổi số phận vì tri thức mới thay đổi toàn bộ thế giới của một người; theo tác giả, việc chuẩn bị không có điểm kết thúc.
 
-字、词、句、语法、风格、修辞等等，都是表达手段。没有米，无论是谁再巧做不出饭吃。“求知” 这个词的意味实在是太过理想化，还不如用比较朴素的另外一个说法 “做功课”。做好任何事情，都要提前做好功课。写小说也好、写教程也罢，都需要做功课；功课做得多了，知道的就多了，能够用来思考的也多了，这些东西多到一定程度，写出来的东西必然厚重、有质感。肤浅的文字之所以肤浅，一句话：作者没做功课。知识改变命运，只因为一个人获得新的知识之后，他的整个世界都会因此发生变化。相信我，功课无止境。
+### Phút thứ bảy: Giao tiếp
 
-### 第七分钟：沟通（Communication）
+Diễn đạt hiệu quả mới là mức cơ bản, giao tiếp hiệu quả mới là mục tiêu. Nghĩ từ nhiều góc đã khó, nghĩ từ góc của người phản đối mình còn khó hơn. Không làm được thì không thể là người nghe hay người đọc tốt. Đầu ra phụ thuộc đầu vào, tác giả ví như bò không ăn cỏ thì không có sữa. Giao tiếp không chỉ để thuyết phục mà chủ yếu để nhận phản hồi. Kỹ năng quan trọng nhất là đừng xem bản thân và ý kiến của bản thân là một. Làm được điều đó, ta dễ thấy giá trị trong phản hồi; không làm được, ngay cả lời góp ý thẳng cũng chỉ gây khó chịu.
 
-有效表达只是最基本的层次，有效沟通才是真正的目标。从多个角度出发思考已非易事，从反对自己观点之人的角度出发思考问题难上加难。但如若做不到这一点，就无法做一个好的听众、好的读者。输出取决于输入，是不变的真理；不吃草的话牛是挤不出奶的。沟通不仅仅是为了说服，更多是为了获取反馈。沟通的技巧最重要的只有一个：不要认为自己与自己的观点是一回事儿。做到这点，就很容易看到种种反馈之中的宝贵之处。对做不到这点的人来说，逆耳的不仅仅是忠言，甚至就没有听着顺耳看着顺眼的东西 —— 可怜、可悲。
+### Phút thứ tám: Thực hành
 
-### 第八分钟：实践（Practice）
+Kinh nghiệm cần tích lũy, và tích lũy chỉ có qua thực hành. Tác giả nói niềm tin “đặt bút là hay” là ảo tưởng của người không biết viết: bài hay không làm trong một lần, mà được sửa ra. Cảm hứng cũng thường xuất hiện trong thực hành hơn là từ hư không. Ông ví người viết với tài xế: tài xế đi đủ quãng đường mới gặp nhiều tình huống an toàn và có thể học cách tránh nguy hiểm; người viết viết đủ nhiều mới hiểu các thuộc tính của chữ nghĩa, không thể chỉ nhờ một sách hướng dẫn. Cần viết nhiều và chuẩn bị nhiều hơn để viết tốt, đó là điểm khởi đầu của vòng tích cực.
 
-经验需要积累，而积累只能通过实践。所谓 “下笔如有神” 一看就是不会写文章的人才可能相信的痴心妄想。好的文章从来都不是一蹴而就的，好的文章从来都是改出来的。所谓的 “灵感” 也更可能在实践中闪现，而不大可能凭空而出。作者写字就好像司机开车一样。司机要积累到一定的驾驶里程，才可能遇到所有可能遇到的安全问题，于是终究有一天经验足够到有可能回避一切危险。作者也一样，写字多到一定程度才可能知道文字的种种属性 —— 不大可能通过某一本写作教程就理解所有文字的属性。不仅要多写，还要为了写好而做更多的功课，这是良性循环的起点。
+### Phút thứ chín: Kỹ năng
 
-### 第九分钟：技巧（Skill）
+Kỹ năng chỉ dễ học khi biết nó dùng ở đâu. Cả mười mặt trong “hướng dẫn mười phút” đều cần kỹ năng, và qua thực hành ai cũng tự nhiên học được một số kỹ năng. Tác giả ưu tiên ba nhóm: kỹ năng có tri thức, từ quan sát, lắng nghe, đọc, suy ngẫm, đọc sách, ghi chú, dùng thư viện đến dùng công cụ tìm kiếm; sau đó là kỹ năng tư duy logic; rồi kỹ năng giao tiếp. Mọi kỹ năng đều cần thời gian nên khi có hạn phải chọn thứ tự.
 
-技巧这东西要等到明白究竟可以在哪里用得上的时候才容易学会。当前这篇 “十分钟教程” 里所提到的十个方面之中，个个都需要技巧。通过一定的实践，无论是谁也都会自然而然地掌握一些技巧。但有一个方面的技巧是应该最先打磨的 —— 获得知识的技巧：从观察到聆听，从阅读到反刍，从读书到笔记，从使用图书馆到使用搜索引擎，一切获得知识的手段需要技巧，并且还需要不停地打磨这些基本技巧。其次是逻辑思考的技巧，再次之是沟通的技巧。这三项是应该排在其他技巧之前，因为打磨任何一项技巧都需要时间，时间有限的情况下，只能划分轻重而为之。
+### Phút thứ mười: Sửa chữa
 
-### 第十分钟：修正（Rectification）
+Không ai hoàn hảo ngay từ đầu. Bài viết hay cần sửa nhiều lần, người viết tốt cũng cần sửa mình nhiều lần. Gần như mọi thứ cần và cần được sửa lại khi có thời gian, kể cả kỹ năng. Đôi lúc phải lật lại hoàn toàn để bắt đầu lại; điều đó cần dũng khí, kiên nhẫn và trí tuệ. Giữ đầu óc cởi mở khó vì có nỗi đau, tác giả dùng hình ảnh “nghiến răng nuốt máu” gắn với Tăng Quốc Phiên.
 
-没有人从一开始就能做到完美。正如一篇好文章是要反复修改才能成为好文章一样，一个作者也要反复修正自己才能成为好作者。几乎一切都需要修正，并且需要反复修正 —— 只要时间允许。前一分钟说每一项技巧都需要打磨，这一分钟要说的是连技巧都要反复修正。甚至，还有些时候要把一切都完全推翻从头再来，这需要的不仅是勇气，还需要耐心与智慧。让自己的心智保持开放，知易行难的原因在于其中蕴含着痛苦 —— 打破牙齿和血吞（曾国藩语）的痛苦。
+> **Ghi chú biên tập:** Đây là khung gợi ý của tác giả, không phải chương trình đủ trong đúng mười phút. Một số ví dụ và lời phê bình phản ánh giọng điệu nguồn. Người học Việt có thể dùng khung này để kiểm tra một bài viết: ý, bằng chứng, logic, người đọc, bản sửa và nguồn tham khảo.
 
-## 6. 如何看电影学英语？
+## 6. Học tiếng Anh qua phim như thế nào?
 
-“看电影学英语” 曾经是我颇为不屑的一种方式。一直以来我有个小小的偏见：一切花哨的东西都是不可取的。事实上，到今天我也不觉得 “看电影学英语” 是什么捷径。然而，学生中也好，读者中也罢，好像有很多人真的想通过 “看电影学英语” —— 他们的根据无非是 “要有兴趣才行” —— 其实兴趣根本没那么重要。
+“Học tiếng Anh qua phim” từng là cách tác giả khá xem nhẹ. Ông có thành kiến rằng mọi thứ hoa mỹ đều không đáng dùng, và đến lúc viết vẫn không xem phim là lối tắt. Tuy vậy, nhiều học sinh và độc giả muốn học bằng phim vì tin phải có hứng thú, dù tác giả cho rằng hứng thú không quan trọng đến thế.
 
-二零零八年，我在银川的唐中讲座，会后与一小女生闲聊，她提起自己有些科目成绩不错，因为感兴趣，而另外一些科目不理想，因为她不感兴趣。我想了想，告诉她，“能把感兴趣的事情学会并做好，这谁不会呢？真牛的是 ‘尽管没兴趣，但只要该学就能学会，而后也能用好’……”。时过境迁，那女生也应该高考过了吧？不知道她当时是否真的听懂了呢？
+Năm 2008 tại một buổi nói chuyện ở trường Đường Trung, Ngân Xuyên, tác giả trò chuyện với một nữ sinh. Em nói một số môn đạt điểm tốt vì thích, các môn khác kém vì không thích. Ông đáp: học tốt điều mình thích thì ai cũng làm được; điều đáng nể là dù không thích vẫn học điều cần học và dùng tốt. Tác giả tự hỏi nhiều năm sau liệu em có thật sự hiểu điều đó không.
 
-然而，作为老师，其实有很多的时候并不该太过在意学生的出发点是否正确恰当，无论基于什么原因，想学本身就已经相当难能可贵。所以，废话少说，无论如何都应该给那些想 “看电影学英语” 学生提一些有效的建议。
+Tuy nhiên, ông nói người dạy không nên quá bận tâm động cơ ban đầu có hoàn hảo hay không: muốn học đã là điều đáng quý. Vì vậy, ông đưa gợi ý cho người muốn học bằng phim.
 
-下载到自己想看的、喜欢看的之后，首先去 Google 搜索英文字幕。搜索关键字大抵上用这样的格式即可：
+Sau khi có bản phim mình thích và có quyền xem, hãy tìm phụ đề tiếng Anh bằng truy vấn dạng:
 
-> “电影名 发行年份 English subtitle”
+> “Tên phim năm phát hành English subtitle”
 
-比如，想找的是 “12 怒汉” 的英文字幕，那么就要搜索
+Ví dụ với *12 Angry Men* năm 1957:
 
 > 12 Angry Men 1957 English subtitle
 
-只要不是太新、太冷僻的电影，大多都能很容易用 Google 找到英文字幕。
+Tác giả nói phim không quá mới hoặc quá hiếm thường dễ tìm được phụ đề tiếng Anh qua Google. Có nhiều định dạng phụ đề; ông gợi ý `srt`, vì đây là tệp văn bản có thể mở trực tiếp bằng Notepad.
 
-字幕有很多种格式，建议只下载 “srt” 格式的英文字幕，因为这种格式的字幕可以直接用记事本程序打开（这种文件本身就是文本文件）。
+Mở phụ đề, nhấn `Ctrl+A` để chọn tất cả, `Ctrl+C` để sao chép vào tài liệu Word, rồi đọc kỹ. Tra mọi từ chưa biết, đồng thời nhận diện cụm từ, sau đó lập danh sách từ riêng. Bản gốc dẫn lại mục “Cách biến MS Word thành công cụ học tập”.
 
-用记事本打开字幕文件之后，“Ctrl+A”（全选），在 “Ctrl+C”（拷贝），把字幕内容拷贝到 Word 文档中去，而后，精读。
+Rồi mới xem phim. Hãy thử không bật phụ đề trước; nếu quá khó mới bật phụ đề tiếng Anh. Tác giả nhấn mạnh không xem phụ đề tiếng Trung mà tra từ điển khi không hiểu tiếng Anh. Sau đó ôn danh sách từ hai hoặc ba lần rồi xem lại phim.
 
-把不认识的词全部查过 —— 也要注意识别词组 —— 而后制作一个属于你自己的词表。（参考之前的 “如何把 MS Word 打造成学习利器”）。
+Nhiều người sẽ than cách này quá rườm rà, mất hết vui. Tác giả đã nghe phàn nàn ấy nhiều lần và cho rằng nó thiển cận: không ai cần làm tỉ mỉ như vậy mãi mãi. Sau ba đến năm phim, ông nói người học sẽ tiến bộ nhanh và hiểu phần lớn phim.
 
-然后再开始看电影。先尝试一下完全不用字幕行不行；如果吃力的话，才把英文字幕打开。注意：绝对不要看中文字幕，看不懂英文就去查词典。
+Nhìn chung, tác giả cho rằng phim chỉ nâng tiếng Anh có giới hạn. Phim và truyền hình kể chuyện phần lớn bằng hình ảnh, nhiều phim có hành động nhiều hơn đối thoại. Người thích phim hành động, đấu súng có thể chủ yếu nghe các câu như “Drop it!” hoặc “Go! Go! Go!”. Kể cả lời thoại phim nghệ thuật cũng bị giới hạn, nên ông xem đọc lượng lớn trực tiếp và hiệu quả hơn.
 
-而后再找时间把之前制作过的词表复习两三遍，抽空再看一遍电影。
+Các series khác nhau rất nhiều. Tác giả nói các phim như *24*, *Lost*, *The Sopranos* có lẽ chỉ cần khoảng 2.000 từ, còn phim lịch sử như *Rome*, *John Adams* cần nhiều hơn. *House M.D.* trông có vẻ nhiều thuật ngữ y học, nhưng qua một hai tập nhận ra chỉ có hơn một trăm từ như `MRI`, `spasm`; phần hấp dẫn của cốt truyện thường không thuộc y học. Các series đầy tiếng lóng như *Deadwood* ít hữu ích cho người mới. *The West Wing* kể chuyện vận hành Nhà Trắng nên lời thoại đẹp, câu hay, logic tinh tế và khá khó. Tác giả từng giới thiệu phim này nhưng chỉ ít học sinh thích; đa số chỉ muốn giải trí và dùng “học” làm cái cớ.
 
-讲到这里，一定会有读者说，“那岂不是太罗嗦？一点乐趣都没有了……” 相信我，我肯定不是第一次听到这样的抱怨（**怕麻烦的人啥都做不好**）。但是，这种抱怨是短视的 —— 无论是谁，都不用这样罗嗦一辈子。三五部电影之后，就会发现自己提高神速，大多数影片都可以理解个八九不离十了。
+> **Ghi chú biên tập về quyền và phương pháp:** Chỉ dùng phim, phụ đề và bản chép lời do bạn mua, mượn, được cấp phép hoặc thuộc phạm vi công cộng. Không phải mọi phụ đề tìm thấy đều chính xác, an toàn hay hợp pháp. Phụ đề tiếng Việt có thể dùng ở lượt đầu để hiểu cốt truyện; sau đó thử tiếng Anh, ghi một cụm và một câu có ích. Mục tiêu, độ khó và thời gian quyết định việc phim có phù hợp hơn đọc hay không.
 
-总体来说，靠看电影提高英语的程度相当有限。电影也好电视剧也罢，毕竟更多是靠画面讲故事的，大多数电影动作比对话多。喜欢看动作片、枪战片的同学更是如此，更多听到的不过是 “Drop it!” 或者是 “Go! Go! Go!!!” 之类的 “片语” 而已。即便是文艺片中的对话，所用的词藻也相当局限 —— 无论如何都不如 “海量阅读” 来得直接来得有效。
+## 7. Đừng tiếp tục tự gọi mình là “người mới bắt đầu”
 
-剧集与剧集的差异也非常大，像 24、Lost、The Sopranos 之类的剧集，基本上是 2000 词汇已经足够，一些历史剧所需要的词汇量就要稍微大一些，比如 Rome、John Adams 等等。另外一些剧集看起来好像难度很高，其实不然。典型的就是 House M.D.。刚看的时候会觉得充斥着大量医学名词，可一两集之后就明白一共就那么一百来个词，比如 MRI，spasm 什么的，到最后，就算医学相关内容听不懂也无所谓，因为剧情精彩的部分都跟医学无关。还有一些充满了俚语的剧集，比如 Dead Woods，对初学者意义并不大，那样的俚语就算学来，几乎没有什么用武之地的。The West Wing 是讲一帮精英如何运营美国白宫的，所以，其中的台词质量词藻华丽，句式精彩，逻辑精巧，难度颇高。私下推荐给一些学生看过，结果发现只有极少数学生感兴趣，大多数人其实只不过是 “图个乐” 而已，至于 “学习” 么，只不过是 “图乐” 的借口而已。
+Bản thảo đầu tiên của sách hoàn thành tháng 4/2010 và lan truyền rộng trên Internet trước khi chốt lại đầu năm 2011. Nhiều độc giả hỏi sách viết cho ai, ngay cả biên tập viên cũng hỏi các đoạn tiếng Anh dài không dịch có phù hợp với người mới hay không.
 
-## 7. 不要再当 “初学者” 了！
+Tác giả lặp lại điều đã nói: ông mong mọi người đừng tự xem mình là người mới bắt đầu nữa. Nắm một ngoại ngữ không có gì ghê gớm, chỉ cần bỏ công sức.
 
-这本书的初稿与 2010 年的 4 月份就已经完成。到 2011 年年初重新定稿期间，已经在网络上大面积传播。很多读者问：“这本书是面对哪个群体的？” 甚至此书的编辑们也问类似的问题：“这样大段的英文放在那里也没有翻译，适合初学者么？”
+Trong tiếp thu ngoại ngữ, tác giả tin hầu như mọi “trần kính” do chính mình dựng lên. Tự nhận là người mới khiến mọi bất lực tiếp theo có vẻ hiển nhiên: “Tôi mới nên không nghe được là bình thường”, “Tôi mới nên không đọc được cũng không lạ”, “Tôi mới nên chắc không nói tốt”. Những suy nghĩ ấy ràng buộc người học đến mức ở mãi trong vai người mới. Ông từng nói nhiều người vì muốn “đi từ từ” mà chỉ nghe VOA Special English rồi thành phụ thuộc, sẵn sàng dừng ở mức chỉ hiểu VOA.
 
-我只好把已经说过的话拿出来重新说一遍：我希望所有的人再也不要把自己当作初学者。掌握一门外语没什么了不起的，无非是花点功夫罢了。
+Đừng đóng vai người mới, tác giả nói. Sau khi học xong sách tiếng Anh cấp hai, bạn đã là người dùng tiếng Anh và có thể vừa dùng vừa học, vừa học vừa dùng, rồi tiếp tục dùng khi đã thấy thích.
 
-在外语习得这件事情上，可以肯定，基本上所有的玻璃顶都是自己设置的。认为自己是 “初学者” 的害处在于，一旦如此认定，接下来的一切无能都是理所应当的：“我是初学者，听不懂才是正常的……”、“我是初学者，读不懂不奇怪……”、“我是初学者，肯定说不好……” 这些想法是那么地自然，那么地合理，乃至于不知不觉之间，就被这种想法所牵制，结果就是：一辈子都是初学者。之前在第三章里提到很多人以为要 “循序渐进” 所以坚持听 VOA SE 节目的结果却是产生了依赖，心甘情愿地停留在 “只能听懂 VOA” 的境界。
+> Gặp đoạn không đọc được thì sao?<br />
+> **Tra từ điển.**
 
-别再把自己扮成 “初学者” 了，那不应该是你。 初中英语课本学完之后，你就已经是 “英语使用者” 了，你早就可以像母语使用者一样，边用边学，边学边用，用到享受还接着用……
+> Tra rồi không thấy thì sao?<br />
+> **Đổi từ điển khác để tra.**
 
-> 遇到读不懂的怎么办？ <br />
-> **—— 查词典呗!**
+> Tra vài từ điển vẫn không thấy thì sao?<br />
+> **Tìm trên Google hoặc công cụ tìm kiếm đáng tin.** Đặt câu tiếng Anh chưa hiểu trong dấu ngoặc kép, thêm truy vấn tiếng Việt như “nghĩa là gì”, rồi xem các kết quả. Với văn bản phổ biến, có thể người khác đã từng hỏi và đã có lời giải. Bản gốc nêu ví dụ tìm vì sao “John” được dịch là “Giăng”.
 
-> 查了，可是没查到怎么办？<br />
-> **—— 换本词典再查呗!**
+Nếu chưa biết dùng Google, tác giả gợi ý gõ “cách dùng Google” vào ô tìm kiếm rồi xem kết quả. Đây không phải việc cần lấy can đảm, mà là việc nên làm.
 
-> 查了好几个词典都没查到怎么办？<br />
-> **—— Google呗！** 你把看不懂的那句英文前后加上引号输入Google的对话框，然后再补上一句中文“什么意思啊？”而后按回车键……如果你正在阅读的是流行的文本，那么相信我，一定早就有人在你之前没看懂过，而他们中的一些人肯定在网上问过，而这些问题往往早就被回答过……（Google能回答各种“奇怪”的问题，比如，[“John”为什么被翻译成“约翰”？](https://www.google.com/search?q=%E2%80%9CJohn%E2%80%9D%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A2%AB%E7%BF%BB%E8%AF%91%E6%88%90%E2%80%9C%E7%BA%A6%E7%BF%B0%E2%80%9D%EF%BC%9F&oq=%E2%80%9CJohn%E2%80%9D%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A2%AB%E7%BF%BB%E8%AF%91%E6%88%90%E2%80%9C%E7%BA%A6%E7%BF%B0%E2%80%9D%EF%BC%9F&aqs=edge..69i57.428j0j1&sourceid=chrome&ie=UTF-8)）
+Theo tác giả, trong hai hoặc ba năm gần thời điểm viết, năng lực dùng tiếng Anh ở Trung Quốc thay đổi mạnh. Dù vẫn là thiểu số, nhiều người thay đổi quan niệm. Cuối năm 2010, trong một buổi nói chuyện tại Trường Trung học Thâm Quyến, ông biết nhiều học sinh lớp 10, 11 đọc hơn 50 sách tiếng Anh mỗi năm. Con số này có vẻ gây ngạc nhiên, nhưng ông xem đó là lượng dùng ngôn ngữ bình thường: năm mươi sách là khoảng một sách mỗi tuần. Những em đọc nhiều như vậy, không học luyện thi, có thể đạt trên 110 TOEFL và khó dưới 2300 SAT, theo tác giả. Ông nói nhiều trường nổi tiếng ở Trung Quốc như Nam Kinh Ngoại ngữ, Trường Nhã Lễ Trường Sa, Đông Bắc Dục Tài, Bắc Kinh số 4, Thái Nguyên số 5 có học sinh như thế; trong khi phần lớn sinh viên chuyên ngành tiếng Anh mà ông biết đọc không quá mười sách tiếng Anh mỗi năm. Đó là khác biệt do quan niệm, theo ông.
 
-如果你不会使用 Google，那就在 Google 的对话框里输入 “如何使用 Google” 而后回车，看看搜索结果……
+Đừng dùng các nhãn “người mới” hay “người chỉ yêu thích” để tự đánh lừa mình.
 
-这不是什么需要 “拿出勇气” 才能做的事情，这只不过是应该做的事情而已。
+**Hãy bắt đầu.**
 
-最近两三年里，国内的英语使用者的水平正在发生天翻地覆的变化。尽管比例上依然是少数，但已经有相当多数量的人改变了观念，走上了另外一条路。2010 年年底，我去深圳中学讲座，了解到很多高一高二的学生，一年读 50 本以上的英文书。这样的数量当然会令很多人跌破眼镜。可实际上，这只不过是正常人正常地使用语言的量级而已。想想吧，当年你读高中的时候，不也是一下午读完一本小说么？一年读 50 本书，只不过是一周一本的速度而已，实际上并不夸张。这样大量阅读的孩子，在没有参加任何培训班的情况下，去考 TOEFL，随随便便就是 110 分以上，去考 SAT，2300 分以下基本上不太可能。这就是国内正在发生的事情。据我所知，现在国内很多著名中学孩子都是这样的，比如，南京外国语学校、长沙雅礼中学、东北育才中学、北京四中、太原五中 …… 而那些脑子早就被限制住了的家伙们呢？我所知道的国内绝大多数英语专业的大学生一年读英文书的数量不会超过 10 本。这就是差别，这就是观念差异造成的结果。
+> **Ghi chú biên tập cho người học Việt:** Không ai cần phủ nhận mình đang ở trình độ đầu để bắt đầu dùng tiếng Anh. Hãy gọi đúng mức hiện tại, chọn đầu vào vừa sức và nâng độ khó dần, thay vì dùng nhãn đó để né việc thực hành. Nhận định về 50 cuốn sách, điểm TOEFL/SAT và các trường đều là trải nghiệm của tác giả trong bối cảnh Trung Quốc năm 2010, không phải dự báo kết quả cho từng người học.
 
-别再拿 “初学者”、“爱好者” 什么的骗自己了!
-
-**上路吧！**
-
-| [< 第七章: 精读](./chapter7.md) | [后记 >](./end.md) |
+| [< Chương 7: Đọc kỹ](./chapter7.md) | [Lời cuối >](./end.md) |
 | ------------------------------- | ------------------------------- |

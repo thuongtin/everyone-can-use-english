@@ -1,6 +1,7 @@
 import { ChatPromptTemplate } from "@langchain/core/prompts";
 import { textCommand } from "./text.command";
 import { LANGUAGES } from "@/constants";
+import type { ChatModelOptions } from "@/lib/chat-model";
 
 export const refineCommand = async (
   text: string,
@@ -9,12 +10,7 @@ export const refineCommand = async (
     nativeLanguage: string;
     context: string;
   },
-  options: {
-    key: string;
-    modelName?: string;
-    temperature?: number;
-    baseUrl?: string;
-  }
+  options: ChatModelOptions
 ): Promise<string> => {
   if (!text) throw new Error("Text is required");
 

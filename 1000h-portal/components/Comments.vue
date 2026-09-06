@@ -4,8 +4,12 @@
   >
     <div class="container m-auto">
       <div class="top py-[32px] md:py-[64px] text-center">
-        <div class="hint text-[13px] md:text-[14px]">Comment</div>
-        <div class="title text-[24px] md:text-[32px]">用户评价</div>
+        <div class="hint text-[13px] md:text-[14px]">Cộng đồng</div>
+        <div class="title text-[24px] md:text-[32px]">Nhận xét của người dùng</div>
+        <p class="mt-3 text-sm text-greyscale_4">
+          Bản dịch lời nhận xét từ cộng đồng Enjoy gốc, giữ nguyên tên hiển thị để dẫn nguồn.
+          Đây là trải nghiệm cá nhân của người viết, không phải lời chứng thực riêng cho bản Việt hóa.
+        </p>
       </div>
     </div>
 
@@ -49,161 +53,179 @@ export default {
 </script>
 
 <script lang="ts" setup>
-import { request } from "@/utils/http";
+import { parseUserStats, request, type UserStats } from "@/utils/http";
+
+type UserStatsEntry = {
+  mixinId: number;
+  stats: UserStats;
+};
 
 const items = ref([
   {
     width: 420,
     mixinId: 39491012,
     avatar: "/portal-static/images/avatar.png",
-    name: "刘岩^Box定投践行群7年践碟",
-    hint: "专注训练",
-    text: "Enjoy 使用非常方便，之前是自己写中文文稿，Enjoy 翻译成英文，再逐句话的跟着学发音和语音语调，直到95分以上，开始按照正确的语音背诵，现在是每天朗读背诵笑来老师整理的英语俚语，惯用语，积攒了好多不熟悉的用法，每天都能学到新东西，每天都有进步，真的感觉充实，感谢笑来老师，让大家一起走在正确的道路上",
+    name: "Liu Yan^Box-DCA Practice Group 7 Years",
+    hint: "Luyện tập tập trung",
+    text: "Enjoy rất tiện sử dụng. Trước đây tôi tự viết bản thảo tiếng Trung, để Enjoy dịch sang tiếng Anh rồi luyện từng câu theo phát âm và ngữ điệu mẫu. Khi đạt trên 95 điểm, tôi bắt đầu học thuộc theo cách phát âm đúng. Giờ tôi đọc thành tiếng và học thuộc các tiếng lóng, cách nói thông dụng mà thầy Xiaolai tổng hợp mỗi ngày. Tôi đã tích lũy được nhiều cách dùng trước đây chưa quen, ngày nào cũng học thêm điều mới và tiến bộ. Tôi thực sự thấy mỗi ngày có ý nghĩa. Cảm ơn thầy Xiaolai đã giúp mọi người cùng đi trên con đường đúng.",
   },
   {
     mixinId: 39279749,
     avatar: "/portal-static/images/avatar.png",
-    name: "龙小方aytc93",
-    hint: "专注训练",
-    text: "每天早上5点起床之后，会先用enjoy进行朗读。常用成语特别好，每天读10个，每个有3条语音；语音评估很好用，帮助看出哪个音节需要修正；把1000h上面的手册用enjoy翻译出来，生成语音，一次性准备好一个月的内容，这个文字鼓励我达成每天3小时。",
+    name: "Long Xiaofang aytc93",
+    hint: "Luyện tập tập trung",
+    text: "Mỗi sáng thức dậy lúc 5 giờ, tôi bắt đầu bằng việc đọc thành tiếng với Enjoy. Các thành ngữ thông dụng rất hay: mỗi ngày tôi đọc 10 mục, mỗi mục có 3 bản âm thanh. Đánh giá phát âm rất hữu ích, giúp biết âm tiết nào cần sửa. Tôi dùng Enjoy dịch cẩm nang trên 1000h rồi tạo âm thanh, chuẩn bị một lần đủ nội dung cho cả tháng. Những dòng chữ ấy khích lệ tôi luyện đủ 3 giờ mỗi ngày.",
   },
   {
     width: 420,
     mixinId: 37339898,
     avatar: "/portal-static/images/avatar.png",
     name: "Yvonne",
-    hint: "专注训练",
-    text: "这些天真实的感受是，练了就是有效果。好多以前完全注意不到的发音细节，都被灵敏识别并且标注出来了。这些天已经产生很大的变化了，在一系列喉舌唇齿的细小动作调整之后，现在得分比刚练的时候障碍小了太多。之前读了多少遍根本数不过来，单是系统记录到的评估次数一天都有四五百遍，但现在，9-10个句子，只用了两百多遍，就能拿到很多99-100这样不错的成绩了。特别提示：一定要特别特别重视评估结果里的颜色标记，及时地被纠正，这帮助太大了。功能里的“句子分析”太强大，直接拆清楚每个句子里的所有成分，对于理解语意、朗读断句、轻重缓急的拿捏，都提供了非常强大的支持。伙伴们加油！",
+    hint: "Luyện tập tập trung",
+    text: "Cảm nhận thực tế của tôi những ngày qua là có luyện tập thì có hiệu quả. Nhiều chi tiết phát âm trước kia tôi hoàn toàn không để ý đều được nhận diện và đánh dấu rõ. Tôi đã thay đổi rất nhiều trong những ngày này. Sau hàng loạt điều chỉnh nhỏ ở họng, lưỡi, môi và răng, việc đạt điểm cao dễ hơn nhiều so với lúc mới tập. Trước đây tôi đọc đi đọc lại không biết bao nhiêu lần; riêng hệ thống đã ghi nhận 400 đến 500 lượt đánh giá mỗi ngày. Giờ với 9 đến 10 câu, chỉ hơn 200 lượt là tôi đã có nhiều điểm 99 đến 100. Xin nhấn mạnh: hãy đặc biệt chú ý các dấu màu trong kết quả đánh giá để sửa ngay, điều này giúp ích rất nhiều. Tính năng phân tích câu cũng rất mạnh, tách rõ mọi thành phần của từng câu, hỗ trợ hiểu nghĩa, ngắt câu khi đọc và điều chỉnh nhấn mạnh, nhịp độ. Mọi người cùng cố gắng nhé!",
   },
   {
     mixinId: 37306363,
     avatar: "/portal-static/images/avatar.png",
-    name: "京焕",
-    hint: "专注训练",
-    text: "Enjoy 太强大了！我们一家在韩国生活，孩子们的母语自然是韩语，惊讶于 Enjoy竟然支持韩文语法注释翻译！年初决定带着5年级的老大用 Enjoy练习英语后，果断把课外英语补习班停掉。经过半年的练习，孩子的进步非常明显，在班里英语成绩一直最好，口语更是不像话得好。更何况很多同学们花钱在英语补习班学习。",
+    name: "Jing Huan",
+    hint: "Luyện tập tập trung",
+    text: "Enjoy thật mạnh mẽ! Gia đình tôi sống ở Hàn Quốc nên tiếng mẹ đẻ của các con đương nhiên là tiếng Hàn. Tôi rất ngạc nhiên khi Enjoy hỗ trợ cả bản dịch chú giải ngữ pháp bằng tiếng Hàn! Đầu năm, sau khi quyết định cùng con lớn học lớp 5 luyện tiếng Anh bằng Enjoy, tôi đã dừng lớp tiếng Anh ngoại khóa. Sau nửa năm luyện tập, con tiến bộ rất rõ: điểm tiếng Anh luôn tốt nhất lớp và khả năng nói thì rất xuất sắc. Trong khi đó, nhiều bạn cùng lớp vẫn trả tiền học thêm tiếng Anh.",
   },
   {
     mixinId: 1054922,
     avatar: "/portal-static/images/avatar.png",
-    name: "侯亮",
-    hint: "专注训练",
-    text: "Enjoy 非常好用，它对于我最重要的功能是无限拆分任务，几乎把学英语降低到0，就像小孩子学说话一样简单，最后只剩一个字”练“。如果没学好就是自己练得不够多。感谢Enjoy的开发团队，Enjoy让我欲罢不能。",
+    name: "Hou Liang",
+    hint: "Luyện tập tập trung",
+    text: "Enjoy rất dễ dùng. Với tôi, tính năng quan trọng nhất là chia nhỏ nhiệm vụ gần như không giới hạn, khiến việc học tiếng Anh trở nên đơn giản như trẻ nhỏ tập nói, gần như không còn ngưỡng bắt đầu. Cuối cùng chỉ còn một việc: luyện tập. Nếu học chưa tốt thì là do bản thân luyện chưa đủ. Cảm ơn đội ngũ phát triển Enjoy; ứng dụng khiến tôi muốn luyện mãi.",
   },
   {
     mixinId: 39637034,
     avatar: "/portal-static/images/avatar.png",
     name: "BigGang",
-    hint: "专注训练",
-    text: "Enjoy 让我们家学习英语口语变得像吃饭一样自然。我和两个孩子用 Enjoy 每天复述小猪佩奇一集，孩子三个月下来口语突飞猛进，孩子幼儿园毕业外教英语老师给了极高的评价。我相信随着我们练习的时间逐渐积累，可能三年或更短时间孩子的英语将完全解锁。Enjoy 是每一位想学习练习英语的神器，非常推荐。",
+    hint: "Luyện tập tập trung",
+    text: "Enjoy khiến việc luyện nói tiếng Anh của gia đình tôi tự nhiên như ăn cơm. Tôi và hai con dùng Enjoy để kể lại một tập Peppa Pig mỗi ngày. Sau ba tháng, khả năng nói của các con tiến bộ vượt bậc; giáo viên tiếng Anh người nước ngoài đánh giá rất cao khi con tốt nghiệp mẫu giáo. Tôi tin rằng khi thời gian luyện tập tích lũy dần, có thể chỉ ba năm hoặc ít hơn, các con sẽ sử dụng tiếng Anh hoàn toàn thoải mái. Enjoy là công cụ rất hữu ích cho bất cứ ai muốn học và luyện tiếng Anh. Tôi rất khuyến khích sử dụng.",
   },
   {
     mixinId: 37381381,
     avatar: "/portal-static/images/avatar.png",
-    name: "杨秀程",
-    hint: "专注训练",
-    text: "Enjoy 是我的健脑房，在每一个发音动作从笨拙到熟练的过程中，我感到很开心。",
+    name: "Yang Xiucheng",
+    hint: "Luyện tập tập trung",
+    text: "Enjoy là phòng tập cho não bộ của tôi. Tôi thấy vui khi từng động tác phát âm dần chuyển từ vụng về sang thành thạo.",
   },
   {
     mixinId: 31766,
     avatar: "/portal-static/avatars/31766.jpg",
-    name: "阿信",
-    hint: "专注训练",
-    text: "发现自己发音错误很有帮助，之前是不知不觉，现在注意到了，开始纠正练习。",
+    name: "A Xin",
+    hint: "Luyện tập tập trung",
+    text: "Việc phát hiện mình phát âm sai rất hữu ích. Trước đây tôi không nhận ra; giờ đã chú ý và bắt đầu luyện để sửa.",
   },
   {
     mixinId: 39503702,
     avatar: "/portal-static/avatars/39503702.jpg",
-    name: "二十初仲夏的树",
-    hint: "专注训练",
-    text: "五个月，语感和口语熟练度提高了很多，附带着阅读能力也提高了，感觉读多了以后大胆了很多，估计碰到外国人敢开口了，有时候甚至自己都能小小造句了。",
+    name: "Early Summer Tree",
+    hint: "Luyện tập tập trung",
+    text: "Sau năm tháng, cảm nhận ngôn ngữ và độ thành thạo khi nói của tôi tốt hơn rất nhiều, khả năng đọc cũng tiến bộ theo. Càng đọc nhiều tôi càng mạnh dạn. Tôi nghĩ mình sẽ dám mở lời khi gặp người nước ngoài; đôi khi còn tự đặt được vài câu ngắn.",
   },
   {
     mixinId: 37300002,
     avatar: "/portal-static/avatars/37300002.jpg",
-    name: "黄明英",
-    hint: "专注训练",
-    text: "跟着朗读，慢慢有停顿、升调降调感觉。",
+    name: "Huang Mingying",
+    hint: "Luyện tập tập trung",
+    text: "Đọc theo mẫu dần giúp tôi cảm nhận được chỗ ngắt nghỉ và lên, xuống giọng.",
   },
   {
     mixinId: 39440639,
     avatar: "/portal-static/avatars/39440639.jpg",
-    name: "朱国庆",
-    hint: "专注训练",
-    text: "App 帮助我解决发音问题，就像一位私人教练，随时纠正发音错误，很多旧的发音习惯得到了纠正，让我的英语发音比之前有了很大的提高。 ",
+    name: "Zhu Guoqing",
+    hint: "Luyện tập tập trung",
+    text: "Ứng dụng giúp tôi giải quyết vấn đề phát âm, giống một người hướng dẫn riêng luôn sẵn sàng sửa lỗi. Nhiều thói quen phát âm cũ đã được sửa, giúp phát âm tiếng Anh của tôi tiến bộ rất nhiều so với trước.",
   },
   {
     mixinId: 40303463,
     avatar: "/portal-static/images/avatar.png",
-    name: "东心木",
-    hint: "专注训练",
-    text: "朗读更流利了，表达更地道了。",
+    name: "Dongxinmu",
+    hint: "Luyện tập tập trung",
+    text: "Tôi đọc lưu loát hơn và diễn đạt tự nhiên hơn.",
   },
   {
     avatar: "/portal-static/images/avatar.png",
-    name: "匿名用户",
+    name: "Người dùng ẩn danh",
     hint: "-",
-    text: "在英语方面，提升了发音质量，同时提高了背诵速度及效果；在学习方面，养成了一定的学习习惯，同时也迫使自己不断的输出。",
+    text: "Về tiếng Anh, tôi phát âm tốt hơn, đồng thời học thuộc nhanh và hiệu quả hơn. Về việc học, tôi đã hình thành được thói quen nhất định và cũng buộc mình phải liên tục vận dụng điều đã học.",
   },
   {
     avatar: "/portal-static/images/avatar.png",
-    name: "匿名用户",
+    name: "Người dùng ẩn danh",
     hint: "-",
-    text: "跟着读了这些天，对学英语不再有恐惧感了，仿佛没有读不了的句子了，有这个软件，英语的学习计划也直接提前了。",
+    text: "Sau những ngày đọc theo mẫu, tôi không còn sợ học tiếng Anh nữa, cứ như không có câu nào mình không đọc được. Có phần mềm này, kế hoạch học tiếng Anh của tôi cũng được đẩy nhanh.",
   },
   {
     avatar: "/portal-static/images/avatar.png",
-    name: "匿名用户",
+    name: "Người dùng ẩn danh",
     hint: "-",
-    text: "纠正发音、方便跟读、了解读音的轻重缓急。",
+    text: "Sửa phát âm, thuận tiện luyện đọc theo mẫu và hiểu cách nhấn mạnh, điều chỉnh nhịp độ khi đọc.",
   },
   {
     avatar: "/portal-static/images/avatar.png",
-    name: "匿名用户",
+    name: "Người dùng ẩn danh",
     hint: "-",
-    text: "纠正了很多过去读错，混淆的音。翻译超快，有语音可以跟读练习真是太好用了！学到了很多自己没想到过的表达方式，还有很多新词。记录自己的练习，也让自身很有成就感，不再担心学英语有什么用，练起来，这个过程就足够有用了！",
+    text: "Tôi đã sửa được nhiều âm trước kia đọc sai hoặc nhầm lẫn. Dịch rất nhanh, lại có âm thanh để luyện đọc theo nên thật tiện! Tôi học được nhiều cách diễn đạt chưa từng nghĩ tới cùng nhiều từ mới. Ghi lại quá trình luyện tập cũng khiến tôi thấy mình làm được điều gì đó. Tôi không còn băn khoăn học tiếng Anh có ích gì nữa: cứ luyện tập, riêng quá trình đó đã đủ hữu ích rồi!",
   },
   {
     avatar: "/portal-static/images/avatar.png",
-    name: "匿名用户",
+    name: "Người dùng ẩn danh",
     hint: "-",
-    text: "自动音标生成、逐句跟读功能让练习很方便，快捷键也很好用，口语水平提高了不少。",
+    text: "Tự động tạo phiên âm và luyện đọc từng câu khiến việc luyện tập rất thuận tiện. Phím tắt cũng dễ dùng, khả năng nói của tôi đã tiến bộ đáng kể.",
   },
 ]);
 
-const infos = ref<any[]>([]);
+const infos = ref<UserStatsEntry[]>([]);
 
 const comments = computed(() => {
   return items.value.map((item) => {
-    const info = infos.value.find((info) => info.mixinId === item.mixinId);
+    const stats = infos.value.find((info) => info.mixinId === item.mixinId)?.stats;
 
-    if (!info) return item;
-
-    const sumHours = Number(info.recordings_duration) / 1000 / 60 / 60;
+    if (!stats) return item;
 
     return {
       ...item,
-      name: info.name,
-      avatar: info.avatar_url || "/portal-static/images/avatar.png",
-      hint: `专注训练 ${sumHours.toFixed(1)} 小时`,
+      ...(stats.name ? { name: stats.name } : {}),
+      ...(stats.avatarUrl ? { avatar: stats.avatarUrl } : {}),
+      ...(stats.recordingsDuration !== undefined
+        ? {
+            hint: `Luyện tập tập trung ${(stats.recordingsDuration / 1000 / 60 / 60).toLocaleString("vi-VN", { maximumFractionDigits: 1 })} giờ`,
+          }
+        : {}),
     };
   });
 });
 
 onMounted(async () => {
-  requestUserInfo();
+  await requestUserInfo();
 });
 
 async function requestUserInfo() {
-  infos.value = await Promise.all(
-    items.value
-      .filter((item) => item.mixinId)
-      .map(async (item) => {
-        const resp = await request(
-          `https://enjoy.bot/api/users/${item.mixinId}/stats`
+  const mixinIds = items.value
+    .map((item) => item.mixinId)
+    .filter((mixinId): mixinId is number => Number.isInteger(mixinId));
+
+  const results = await Promise.all(
+    mixinIds.map(async (mixinId) => {
+      try {
+        const stats = parseUserStats(
+          await request(`https://enjoy.bot/api/users/${mixinId}/stats`)
         );
 
-        return { ...resp, mixinId: item.mixinId };
-      })
+        return stats ? { mixinId, stats } : null;
+      } catch (error) {
+        console.warn("comment stats request failed", error);
+        return null;
+      }
+    })
+  );
+
+  infos.value = results.filter(
+    (result): result is UserStatsEntry => result !== null
   );
 }
 </script>

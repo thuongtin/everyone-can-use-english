@@ -1,15 +1,19 @@
-# 2. 一切都是连接
+# 2. Tất cả là những kết nối
 
-我们能做的一切，对大脑来说，都只不过是 “**神经元间连接**”。
+Theo cách nhìn của tác giả, mọi điều chúng ta có thể làm, đối với não, đều chỉ là **kết nối giữa các neuron**.
 
-当然，我们能够完成的一切动作，无论是肢体动作还是思考过程，都复杂到不可能仅仅动用两个神经元间的连接就可以完成 —— 每一个我们认为轻而易举的动作，对大脑来说，都是一个又一个实际上非常庞大且又复杂的，由众多神经元连接起来构成的 “**基础功能局域网**”（学名 “**神经回路**”）相互通讯相互协作的结果。
+Tất nhiên, mọi động tác và quá trình suy nghĩ đều phức tạp đến mức không thể chỉ dùng kết nối giữa hai neuron để hoàn thành. Mỗi hành động ta thấy dễ dàng là kết quả phối hợp, trao đổi giữa nhiều mạng rất lớn và phức tạp. Tác giả gọi chúng là **mạng cục bộ chức năng cơ sở**, liên hệ với thuật ngữ **mạch thần kinh**, được tạo bởi nhiều neuron kết nối với nhau.
 
-而众多的 “基础功能局域网” 还可以灵活地组合，形成 “**高级功能局域网**” 完成更为复杂更为精巧的任务……
+Nhiều “mạng cục bộ chức năng cơ sở” còn có thể kết hợp linh hoạt, tạo thành những “mạng cục bộ chức năng cấp cao” để làm nhiệm vụ phức tạp và tinh tế hơn. Các tên gọi mạng cục bộ là phép ví của tác giả.
 
-大脑内的神经元实在太多了，多到每个人都终生用不完的地步 —— 这就是为什么大脑具备极强**可塑性**的原因。即便大脑的某一部分损坏了，大脑还有充足的未启用神经元完全可以重新学会损坏的那一部分曾经拥有的功能 —— 弄不好可以学得更好。
+Tác giả khẳng định số neuron trong não nhiều đến mức mỗi người không thể dùng hết trong cả đời, và cho rằng đó là nguyên nhân não có **tính mềm dẻo** rất cao. Ông còn khẳng định ngay cả khi một phần não tổn thương, vẫn có đủ neuron chưa dùng để học lại toàn bộ chức năng của phần đó, thậm chí có thể học tốt hơn. Đây là lời khẳng định của nguyên tác; tính mềm dẻo và khả năng phục hồi cần đọc cùng ghi chú đính chính bên dưới, không coi là bảo đảm phục hồi sau tổn thương.
 
-大脑内的神经元通过相互连接构成了一个四通八达的网络。在这个网络里，不存在所谓的 “孤岛”，只不过是远近而已，只不过是直接间接而已，每个 “基础功能局域网” 之间最终都可以相互通讯。
+Tác giả ví neuron kết nối thành mạng thông khắp các hướng. Trong mạng ấy không có “đảo biệt lập”, chỉ có gần hay xa, trực tiếp hay gián tiếp; mọi “mạng cục bộ chức năng cơ sở” cuối cùng đều có thể trao đổi với nhau theo hình dung của ông.
 
-这就意味着说，在大脑里，没有 “用不上的局域网”…… 任何技能，只要的确被大脑掌握，那么，本质上来看，它其实都是被拆解成很多个 “基础功能局域网” 之后存在于整个网络之中，随时组合起来调用。关键在于，这些基础功能局域网还随时可能用其它的方式组合起来，完成新的功能…… 所谓的 “融会贯通”，就是这样的过程。
+Từ đó, tác giả suy ra trong não không có “mạng cục bộ không dùng đến”. Một kỹ năng thực sự được nắm vững tồn tại dưới dạng nhiều “mạng chức năng cơ sở” trong toàn mạng, có thể kết hợp để gọi dùng. Quan trọng hơn, chúng có thể kết hợp theo cách khác để làm chức năng mới. Ông xem quá trình đó là sự liên hệ và vận dụng kiến thức thông suốt.
 
-对大脑来说，不可能存在学了之后竟然用不上的技能，学得越多越好，学得越多越快。人们生活中感受到的 “学了之后用不上”，其实是一种幻觉，因为对大脑来说，那原本应该是 “从来都没学会过”。
+Tác giả khẳng định với não không thể tồn tại kỹ năng đã học mà không dùng được: học càng nhiều càng tốt, càng nhiều càng nhanh. Điều mọi người cảm thấy là “học xong không dùng được”, theo ông, chỉ là ảo giác, vì thực ra “chưa từng học được”. Đây là kết luận của nguyên tác, không phải căn cứ phủ nhận việc chuyển kỹ năng sang ngữ cảnh mới có thể khó hoặc cần luyện riêng.
+
+::: info Ghi chú biên tập cho bản tiếng Việt
+Tính mềm dẻo của não gồm khả năng thay đổi và tổ chức lại hoạt động, kết nối. Không nên giải thích bằng một kho neuron chưa dùng luôn đủ thay vùng tổn thương. Khả năng phục hồi phụ thuộc vị trí, mức độ tổn thương và nhiều yếu tố khác. [NINDS về phục hồi sau đột quỵ](https://www.ninds.nih.gov/health-information/stroke/recovery) phân biệt việc lấy lại khả năng với học cách bù đắp những suy giảm còn lại; không bảo đảm hồi phục hoàn toàn.
+:::

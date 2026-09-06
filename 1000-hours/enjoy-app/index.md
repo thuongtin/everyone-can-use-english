@@ -1,7 +1,9 @@
-# Enjoy 简介
+# Giới thiệu Enjoy
 
-AI 是当今世界上最好的外语老师，Enjoy 做 **AI 最好的助教**。
+Dự án gốc đặt ra quan điểm: “AI là giáo viên ngoại ngữ tốt nhất hiện nay”, và định hướng Enjoy trở thành **trợ giảng tốt nhất cho AI**. Đây là tuyên ngôn của dự án, không phải kết luận nghiên cứu so sánh giáo viên.
 
-::: warning 重要提示
-Enjoy App 的开发仍处于早期的快速迭代阶段，文档可能落后于开发，导致功能描述可能不符，以最新发布的软件版本为准。
+Trong bản Việt hóa, Enjoy hướng tới việc giúp người Việt học tiếng Anh qua nghe, nhại theo giọng đọc, ghi âm, đọc tài liệu và trò chuyện có hỗ trợ AI.
+
+::: warning Tài liệu và phiên bản ứng dụng
+Theo tài liệu gốc, Enjoy App còn trong giai đoạn phát triển nhanh. Tài liệu có thể cập nhật chậm hơn mã nguồn, nên một số mô tả khác với giao diện thực tế. Hãy đối chiếu với phiên bản đang dùng. Các ảnh minh họa được giữ từ tài liệu gốc vẫn đang chờ Việt hóa và kiểm tra lại.
 :::

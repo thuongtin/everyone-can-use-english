@@ -204,12 +204,10 @@ class RecordingsHandler {
       ],
       where,
     })
-      .then((stats) => {
-        if (!stats) {
-          return [];
-        }
-        return stats.toJSON();
-      })
+      .then((stats) => ({
+        count: Number(stats?.get("count") ?? 0),
+        duration: Number(stats?.get("duration") ?? 0),
+      }))
       .catch((err) => {
         event.sender.send("on-notification", {
           type: "error",

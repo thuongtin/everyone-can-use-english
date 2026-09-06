@@ -1,0 +1,103 @@
+[
+  {
+    "group": "nuxt",
+    "url": "https://github.com/thecodrr/fdir/blob/master/src/functions/resolve-symlink.ts",
+    "reason": "Đường dẫn source hiện tại trả 404.",
+    "fallback_tried": [
+      "https://github.com/thecodrr/fdir/commit/bef3d32dafbee31922b3b3e77b0494fd519ca06c",
+      "https://github.com/thecodrr/fdir/pull/137"
+    ],
+    "final_status": "resolved_via_fallback"
+  },
+  {
+    "group": "nuxt",
+    "url": "https://raw.githubusercontent.com/thecodrr/fdir/master/src/functions/resolve-symlink.js",
+    "reason": "Không có file JavaScript source tương ứng trên nhánh master.",
+    "fallback_tried": [
+      "https://registry.npmjs.org/fdir/6.4.4",
+      "https://github.com/thecodrr/fdir/commit/65d500b7fc8f4f58c69c672b5a05b91be9254793"
+    ],
+    "final_status": "resolved_via_fallback"
+  },
+  {
+    "group": "nuxt",
+    "url": "https://github.com/thecodrr/fdir/commit/126",
+    "reason": "URL dùng commit shorthand không hợp lệ.",
+    "fallback_tried": [
+      "https://github.com/thecodrr/fdir/pull/126"
+    ],
+    "final_status": "resolved_via_fallback"
+  },
+  {
+    "group": "nuxt",
+    "url": "https://github.com/SuperchupuDev/tinyglobby/releases/tag/v0.2.10",
+    "reason": "Tag release không có tiền tố v.",
+    "fallback_tried": [
+      "https://github.com/SuperchupuDev/tinyglobby/releases"
+    ],
+    "final_status": "resolved_via_fallback"
+  },
+  {
+    "group": "nuxt",
+    "url": "https://github.com/SuperchupuDev/tinyglobby/releases/tag/v0.2.9",
+    "reason": "Tag release không có tiền tố v.",
+    "fallback_tried": [
+      "https://github.com/SuperchupuDev/tinyglobby/releases"
+    ],
+    "final_status": "resolved_via_fallback"
+  },
+  {
+    "group": "ui-runtime",
+    "url": "https://github.com/JohannesKlauss/react-hotkeys-hook/blob/v5.3.3/src/parseHotkeys.ts",
+    "reason": "GitHub blob URL không mở được qua web trong phiên này.",
+    "fallback_tried": [
+      "https://raw.githubusercontent.com/JohannesKlauss/react-hotkeys-hook/v5.3.3/packages/react-hotkeys-hook/src/lib/parseHotkeys.ts"
+    ],
+    "final_status": "fallback_success"
+  },
+  {
+    "group": "ui-runtime",
+    "url": "https://registry.npmjs.org/react-hotkeys-hook/4.6.1",
+    "reason": "web safe-open chặn registry.npmjs.org, không lấy được publication metadata.",
+    "fallback_tried": [
+      "https://raw.githubusercontent.com/JohannesKlauss/react-hotkeys-hook/v4.6.1/src/useHotkeys.ts",
+      "https://raw.githubusercontent.com/JohannesKlauss/react-hotkeys-hook/v4.6.1/src/parseHotkeys.ts"
+    ],
+    "final_status": "fallback_success_without_publication_year"
+  },
+  {
+    "group": "ui-runtime",
+    "url": "https://registry.npmjs.org/wavesurfer.js/7.9.1",
+    "reason": "web safe-open chặn registry.npmjs.org, không lấy được publication metadata.",
+    "fallback_tried": [
+      "https://raw.githubusercontent.com/katspaugh/wavesurfer.js/7.9.1/src/wavesurfer.ts",
+      "https://raw.githubusercontent.com/katspaugh/wavesurfer.js/7.9.1/src/renderer.ts",
+      "https://github.com/katspaugh/wavesurfer.js/releases"
+    ],
+    "final_status": "fallback_success_without_publication_year"
+  },
+  {
+    "group": "ui-runtime",
+    "url": "https://registry.npmjs.org/sequelize/6.37.6",
+    "reason": "web safe-open chặn registry.npmjs.org, không lấy được publication metadata.",
+    "fallback_tried": [
+      "https://raw.githubusercontent.com/sequelize/sequelize/v6.37.6/src/sequelize.js",
+      "https://sequelize.org/docs/v6/getting-started/"
+    ],
+    "final_status": "fallback_success_without_publication_year"
+  },
+  {
+    "group": "youtube",
+    "url": "https://raw.githubusercontent.com/LuanRT/YouTube.js/main/src/parser/map.ts",
+    "reason": "Raw path trả 404, vì nhánh main không có file ở đường dẫn này.",
+    "fallback_tried": "https://raw.githubusercontent.com/LuanRT/YouTube.js/main/src/parser/index.ts",
+    "final_status": "failed_404"
+  },
+  {
+    "group": "youtube",
+    "url": "https://raw.githubusercontent.com/LuanRT/YouTube.js/main/src/parser/YTNodes.ts",
+    "reason": "Raw path trả 404, tên file không tồn tại ở đường dẫn đã thử.",
+    "fallback_tried": "",
+    "final_status": "failed_404"
+  }
+]

@@ -1,15 +1,23 @@
-# 7. 短时间内足量重复
+# 7. Lặp lại đủ nhiều trong thời gian ngắn
 
-一切的学习，本质上来看，都是在创建新的连接，构建新的局域网 —— 这很是耗费能量，需要大量的化学反应和物理放电，需要糖和氧。
+Theo tác giả, mọi hoạt động học về bản chất là tạo kết nối và mạng cục bộ mới, rất tốn năng lượng, cần nhiều phản ứng hóa học, phát điện, đường và oxy.
 
-单个神经元，被神经胶质细胞支撑在特定的位置，原本可能与邻近的某个神经元之间相互绝缘。但，相邻的两个神经元可能因为什么原因长出更多的突触，而那些突触可以慢慢延伸，直至两个神经元的突触连接在一起，形成可供电流通过的通路 —— 连接！这个过程不仅难度高，要耗费大量的能量，并且耗费的时间弄不好也很长。
+Tác giả mô tả một neuron được tế bào đệm giữ ở vị trí cụ thể, ban đầu có thể cách điện với neuron lân cận. Vì một nguyên nhân nào đó, hai neuron có thể mọc thêm synapse; chúng từ từ kéo dài đến khi nối vào nhau, tạo đường cho dòng điện đi qua: một kết nối. Ông cho rằng quá trình này khó, tốn năng lượng và có thể mất nhiều thời gian. Đây là mô tả giản lược của nguyên tác; synapse và truyền tín hiệu cần đọc cùng ghi chú biên tập, không hình dung mọi synapse đều là hai dây điện nối liền.
 
-创建新连接，构建新局域网，对大脑来说，最划算的办法就是**短时间内足量重复**。凡事都一样，刚开始可能不会做，开始做的时候很笨拙，但，做得多了也就熟练了。可问题在于，做得多，有两种方式，在很长时间里重复相同的数量，在很短的时间里重复相同的数量 —— 显然，后者更划算，这不仅事关**效率**，更关键的是**效果**。
+Tác giả khẳng định cách có lợi nhất cho não để tạo kết nối và mạng mới là **lặp lại đủ nhiều trong thời gian ngắn**. Việc gì cũng vậy: ban đầu không biết, lúc làm còn vụng, làm nhiều thì thành thạo. Nhưng cùng số lần có thể trải trên thời gian dài hoặc tập trung trong thời gian ngắn; ông cho rằng cách thứ hai rõ ràng có lợi hơn, không chỉ về **hiệu suất** mà quan trọng hơn là **hiệu quả**. Khẳng định so sánh này được giữ theo nguyên tác và đối chiếu bằng chứng về cách phân bố luyện tập bên dưới.
 
-专业的弦乐演奏者都会 “轮指” —— 几个手指以均匀的节奏但以极快的速度地拨动琴弦…… 这显然很有难度，因为最终绝大多数人的手指做不出这样的动作。其实，任何人都能做到，大约一天三个小时差不多一个月多一点就可以练成。可是，如果每天 5 分钟，练上 1200 天行不行呢？估计不行 —— 更重要的是，虽然每天只练 5 分钟好像很容易，但，连续练 1200 天却可能难到不可能的地步。同样差不多 100 小时的练习，在越短的天数里越集中地完成，不仅效率更高，效果也越好。
+Tác giả dẫn kỹ thuật gảy luân phiên ngón (*tremolo*) của người chơi nhạc cụ dây chuyên nghiệp: nhiều ngón gảy dây với nhịp đều nhưng rất nhanh. Ông cho rằng phần lớn mọi người không làm được, song thực ra ai cũng có thể tập khoảng ba giờ mỗi ngày, hơn một tháng là thành. Nếu chỉ năm phút mỗi ngày trong 1.200 ngày thì ông đoán không được; quan trọng hơn, dù năm phút có vẻ dễ, duy trì 1.200 ngày có thể khó đến mức không thể. Cùng xấp xỉ 100 giờ, ông khẳng định càng tập trung vào ít ngày thì hiệu suất và kết quả càng cao. Đây là ước lượng và nhận định của tác giả, không phải lịch luyện đã được kiểm nghiệm cho mọi người.
 
-这个现象的根源在于，你在耗时费力练习的同时，大脑在默默地执行**用进废退**。把时间拉得太长，频率搞得太低，重复次数太少，会使大脑自动降低此项活动的重要性，不认为它是必要的，不认为它是必需的，于是，无形之中形成了一个越来越大的阻力。
+Tác giả giải thích rằng trong khi ta mất công luyện, não âm thầm thực hiện **dùng thì giữ, không dùng thì suy giảm**. Kéo thời gian quá dài, tần suất quá thấp và số lần quá ít khiến não tự hạ mức quan trọng của hoạt động, không xem nó là cần thiết hay bắt buộc, vô hình tạo lực cản ngày càng lớn.
 
-另外，人们普遍对**足量**有严重的误解。小朋友从开始尝试到能够吐字清晰地喊妈妈，需要尝试的次数，不是十次八次，不是几十次，不是几百次，而是至少 5,000 次以上。**知道**只需要见识一次就可以，可是**做到**却需要大脑新建连接新建网络，这不只需要时间，更需要的是重复，并且还是远超大多数人误以为的重复次数。
+Ông cho rằng mọi người hiểu sai nghiêm trọng thế nào là **đủ nhiều**. Từ lần thử đầu đến khi gọi “mẹ” rõ, tác giả khẳng định trẻ phải thử không phải tám, mười lần, vài chục hay vài trăm, mà ít nhất hơn 5.000 lần. **Biết** chỉ cần thấy một lần, nhưng **làm được** cần não tạo kết nối và mạng mới, không chỉ cần thời gian mà cần số lần lặp vượt xa điều phần lớn mọi người tưởng. Con số 5.000 là khẳng định của nguyên tác, chưa có nguồn thực nghiệm kèm theo trong bài.
 
-有意义的学习，往往是复杂且又系统的，我们都知道心急不得，不应该急于求成。但，所有细节上的专项**练习**，最好是专项**集训**，重复数量要足够多，重复频率要足够高足够密，即，**短时间内足量重复** —— 这也是我对所谓**努力**的定义。
+Việc học có ý nghĩa thường phức tạp và có hệ thống, không nên nóng vội. Nhưng với **bài luyện chuyên biệt** cho từng chi tiết, tác giả cho rằng tốt nhất là **đợt luyện tập trung**: đủ nhiều lần lặp, tần suất đủ cao và dày, tức **lặp đủ nhiều trong thời gian ngắn**. Ông cũng xem đó là định nghĩa của mình về **nỗ lực**.
+
+::: info Ghi chú biên tập cho bản tiếng Việt
+Không phải mọi kết nối neuron đều là hai đầu nối liền cho dòng điện chạy xuyên qua. Ở synapse hóa học, các tế bào cách nhau bởi khe synapse và truyền tín hiệu bằng chất dẫn truyền thần kinh. Xem [*Neuroscience*, Chemical Synapses](https://www.ncbi.nlm.nih.gov/books/NBK11009/). Hình ảnh “nối dây” trong bài chỉ là cách hình dung giản lược.
+
+Lặp lại đủ là quan trọng, nhưng không có quy tắc mọi kỹ năng đều học tốt hơn khi dồn cùng số giờ vào ít ngày nhất. Ôn cách quãng có bằng chứng hỗ trợ ghi nhớ lâu dài trong [hướng dẫn thực hành của IES](https://ies.ed.gov/ncee/wwc/PracticeGuide/1). Lịch tập cần phù hợp kỹ năng và mục tiêu; không suy ra rằng tập ngắn hằng ngày luôn vô ích.
+
+Nguyên tác không dẫn nguồn xác minh ngưỡng tối thiểu 5.000 lần trước khi trẻ gọi rõ “mẹ”. Đây không phải số lần bắt buộc hoặc mốc phát triển chuẩn cho mọi trẻ. [NIDCD](https://www.nidcd.nih.gov/health/speech-and-language) mô tả khác biệt giữa trẻ và các mốc phát triển ngôn ngữ, không đưa ngưỡng 5.000 lần.
+:::

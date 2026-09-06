@@ -19,14 +19,22 @@ declare module "segment" {
   export = Segment;
 }
 
-type SupportedLlmProviderType = "enjoyai" | "openai";
+type SupportedLlmProviderType =
+  | "enjoyai"
+  | "openai"
+  | "gemini"
+  | "deepseek"
+  | "openrouter"
+  | "ollama"
+  | "lmstudio";
 
 type LlmProviderType = {
-  name?: "enjoyai" | "openai";
+  name: string;
   key?: string;
   model?: string;
   baseUrl?: string;
-  models?: string;
+  models: string;
+  transcriptionModel?: string;
 };
 
 type DownloadStateType = {

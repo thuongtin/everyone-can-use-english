@@ -92,16 +92,7 @@ export const DictImportButton = () => {
                 <div className="mb-2">{t("importAdaptionDict")}</div>
                 <div className="text-xs text-muted-foreground mb-2">
                   {t("adaptionDictTip")}
-                  <a
-                    className="text-blue-600 cursor-pointer"
-                    onClick={() => {
-                      EnjoyApp.shell.openExternal(
-                        "https://1000h.org/enjoy-app/settings.html#词典设置"
-                      );
-                    }}
-                  >
-                    {t("howToDownload")}
-                  </a>
+                  <p>{t("bilingual.legacyImport")}</p>
                 </div>
               </div>
 

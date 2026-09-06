@@ -1,77 +1,84 @@
-# 1. 用兵打仗
+# 1. Đưa quân vào trận
 
-人们为教育从不吝于支付金钱…… 可惜的是，人们往往不愿意为教育支付注意力 —— 英文的习惯用法很准确，**注意什么东西**是 *pay attention to something*。
+Mọi người không tiếc tiền cho giáo dục. Tiếc là họ thường không muốn dành sự chú ý cho giáo dục. Cách nói tiếng Anh rất chính xác: **chú ý đến điều gì** là *pay attention to something*, dùng động từ *pay*, “trả”.
 
-我们手里通常有三种资源，**金钱**，**时间**，**注意力**。教育的本质是**投资**自我。天下的投资都一样，投资就需要时间作为基本生产资料，不花时间的或者只花很少时间的不是**投资**，我们对这样的行为有另外一个称呼，叫作**投机**。
+Ta thường có ba nguồn lực: **tiền**, **thời gian**, **sự chú ý**. Bản chất của giáo dục là **đầu tư** vào bản thân. Đầu tư trên đời đều giống nhau: cần thời gian làm tư liệu sản xuất cơ bản. Không bỏ thời gian, hoặc chỉ bỏ rất ít, thì không phải **đầu tư**; ta có tên khác cho hành vi ấy: **đầu cơ**.
 
-投资的时候，我们做的事情，本质上来看都一样，其实是在**往时间里倾注金钱**。如果采用定投策略的话，那就是**不断往时间里倾注金钱但绝不倾注注意力**。当我们学习的时候，或者说，当我们投资自我的时候，有个重点区别，我们要往**时间**里倾注的也有**金钱**，但与此同时，更重要的是**注意力**。
+Khi đầu tư, về bản chất ta đều đang **rót tiền vào thời gian**. Nếu dùng chiến lược đầu tư định kỳ, đó là **liên tục rót tiền vào thời gian nhưng tuyệt đối không rót sự chú ý**. Khi học, hay đầu tư vào bản thân, có một khác biệt quan trọng: thứ cần rót vào **thời gian** cũng có **tiền**, nhưng đồng thời, quan trọng hơn là **sự chú ý**.
 
-从这个角度望过去，一切学习失败的根源，无非以下两种：
+Nhìn từ góc ấy, mọi thất bại trong học tập không ngoài hai căn nguyên:
 
-> * 花钱不花时间
-> * 花时间不花注意力
+> * Bỏ tiền nhưng không bỏ thời gian.
+> * Bỏ thời gian nhưng không dành sự chú ý.
 
-到最后，所有的失败都一样，只不过都是因为**没有往时间里倾注足够的注意力**而已。
+Cuối cùng, mọi thất bại đều giống nhau: chỉ vì **không rót đủ sự chú ý vào thời gian**.
 
-人们总是误以为决定学习成败的关键在于智商，并且还总是误以为智商这个东西是一成不变的。可实际上，这两个观点都是基于误解的幻觉。
+Mọi người thường lầm tưởng IQ quyết định thành bại học tập, lại lầm tưởng IQ là thứ bất biến. Thực ra, cả hai quan điểm ấy đều là ảo tưởng dựa trên hiểu lầm.
 
-真正的决定性因素在于**注意力**。
+Yếu tố thực sự quyết định là **sự chú ý**.
 
- 我有一个较为形象的说法。如果一个人可以做到持续 25 分钟左右注意力集中，那么，他就相当于是位**将军**，**有兵可用**。一次持续 25 分钟的注意力集中相当于一个兵。如果一个人在一整天的时间里能做到若干次持续 25 分钟的注意力集中，那就相当于**这位将军有若干个兵可用**。
+Tôi có một cách nói hình tượng. Nếu một người có thể tập trung liên tục khoảng 25 phút, người ấy giống một **vị tướng có quân để dùng**. Mỗi lần tập trung liên tục 25 phút tương đương một người lính. Nếu trong một ngày làm được vài lần như vậy thì **vị tướng có vài người lính để dùng**.
 
-兵越多当然就越好。只不过一天里的时间是有限的，与此同时，为了注意力集中大脑必需消耗大量的能量，所以，兵不可能无限多。然而，对绝大多数普通人来说，只要一天能带上七八个兵，就能做很多事情，若是能够持续下去，就一定能够达成相当惊人的成绩。
+Càng nhiều quân tất nhiên càng tốt. Nhưng thời gian mỗi ngày hữu hạn, mà để tập trung, não phải tiêu nhiều năng lượng, nên quân không thể vô hạn. Tuy vậy, với đại đa số người bình thường, chỉ cần mỗi ngày có bảy, tám người lính đã làm được nhiều việc. Nếu duy trì, chắc chắn có thể đạt thành tích đáng kinh ngạc.
 
-**有兵可用**之后要**有仗可打**。养兵靠打仗。没仗可打，兵就会慢慢废掉。只要兵在不断地打仗，它就会变得更为强大，具体表现就是，从**可以持续 25 分钟注意力集中**，发展成**可以持续 30 分钟 40 分钟甚至更长时间注意力集中**。兵当然越强越好。只要是强兵，用很少的兵也可以打很大的仗。
+**Có quân để dùng** rồi còn phải **có trận để đánh**. Nuôi quân bằng việc đánh trận. Không có trận, quân dần suy yếu. Chỉ cần liên tục ra trận, quân sẽ mạnh hơn: từ **tập trung được 25 phút** phát triển thành **30 phút, 40 phút hoặc lâu hơn**. Quân càng mạnh càng tốt; quân mạnh thì ít người cũng đánh được trận lớn.
 
-用强**兵**打什么**仗**呢？学习就是用兵打仗，自学就是自己用兵打仗…… 我们这一辈子的绝大部分时间都应该用来**自学**。学什么？学生产知识、学销售知识、学投资知识 —— 用来创造物质财富，然后还要学很多其他知识 —— 用来追求精神财富，然后才能用时间做更多的事情。
+Dùng **quân** mạnh đánh **trận** nào? Học là điều quân đánh trận; tự học là tự mình điều quân. Phần lớn thời gian đời người nên dành cho **tự học**. Học gì? Kiến thức sản xuất, bán hàng, đầu tư để tạo của cải vật chất; rồi nhiều kiến thức khác để theo đuổi sự phong phú tinh thần, từ đó dùng thời gian làm thêm nhiều việc.
 
 ```mermaid
 flowchart LR
-  beginning([起点])--> self_teaching((自学))--> k(知识) --> other_knowledge(其他知识)-->persuits((追求))-->spirits[(精神\n财富)]-->doing_more([做更多的事])
-  k --> knowledge_of_investing(投资知识)-->investing((投资))-->wealth[(物质\n财富)]
-  k --> knowledge_of_sales(销售知识)-->selling((销售))-->wealth[(物质\n财富)]-->doing_more([做更多的事])
-  k --> knowledge_of_production(生产知识)-->producing((生产))-->wealth
-  beginning -...-|时间|doing_more
+  beginning([Điểm xuất phát])--> self_teaching((Tự học))--> k(Kiến thức) --> other_knowledge(Kiến thức khác)-->persuits((Theo đuổi))-->spirits[(Của cải\ntinh thần)]-->doing_more([Làm thêm nhiều việc])
+  k --> knowledge_of_investing(Kiến thức đầu tư)-->investing((Đầu tư))-->wealth[(Của cải\nvật chất)]
+  k --> knowledge_of_sales(Kiến thức bán hàng)-->selling((Bán hàng))-->wealth[(Của cải\nvật chất)]-->doing_more([Làm thêm nhiều việc])
+  k --> knowledge_of_production(Kiến thức sản xuất)-->producing((Sản xuất))-->wealth
+  beginning -...-|Thời gian|doing_more
 ```
 
-遗憾的是，大多数人压根就**无兵可用**，他们根本做不到持续 25 分钟注意力集中。所以他们也不大可能是这个类比中的将军。他们也**无仗可打**，所以他们也根本养不出兵…… 这跟智商或者天分没有任何关系，手里没兵，再聪明都没用。手里有点兵但无仗可打，还是没用，并且因为无仗可打，所以哪怕就那一点兵早晚还是会废掉…… 还是一样的，再聪明也没用。
+Tiếc là đa số hoàn toàn **không có quân để dùng**, không tập trung liên tục nổi 25 phút, nên khó làm vị tướng trong phép ví này. Họ cũng **không có trận để đánh**, nên không nuôi được quân. Điều này chẳng liên quan IQ hay năng khiếu: không có quân thì thông minh đến đâu cũng vô ích. Có chút quân nhưng không có trận vẫn vô ích; vì không có trận, ngay chút quân ấy sớm muộn cũng suy yếu. Vẫn vậy, thông minh đến đâu cũng chẳng ích gì.
 
-猜一猜最令人遗憾的事情是什么？
+Thử đoán điều đáng tiếc nhất là gì?
 
-> **每个人原本都有兵，并且还都是强兵**。
+> **Mỗi người ban đầu đều có quân, lại toàn quân mạnh**.
 
-小朋友的注意力持续时间都很长，只要不被打扰，他们很容易被某个事物或者活动吸引，然后就会一直专注下去，除非饿了。
+Trẻ nhỏ có thể chú ý rất lâu. Nếu không bị quấy rầy, chúng dễ bị một sự vật hay hoạt động cuốn hút, rồi cứ tập trung cho đến khi đói.
 
-父母们往往并不知道要呵护自家孩子的注意力 —— 不管孩子在干嘛，他们都可能随时冲上去抱一下，亲一下，只顾着满足自己。学校也很可能是破坏大多数孩子注意力的帮凶，虽然肯定不是出于故意 —— 长期被迫坐在枯燥的课堂里一口气几十分钟，很多孩子并没有学会注意力集中，真正练出来的是如何坐在那里走神但不被发现。商品经济已经演化成注意力经济，全世界都在争夺我们的注意力。最近十几年兴起的移动智能设备，把地球上绝大多数人的注意广度（Attention Span）生生压缩到了两分钟之内……
+Cha mẹ thường không biết cần gìn giữ sự chú ý của con. Bất kể con đang làm gì, họ có thể lao tới ôm hoặc hôn, chỉ lo thỏa mãn mình. Nhà trường cũng có thể góp phần phá sự chú ý của đa số trẻ, dù chắc chắn không cố ý. Bị buộc ngồi lâu trong lớp nhàm chán, nhiều em không học được cách tập trung; điều thực sự luyện được là ngồi mơ màng mà không bị phát hiện. Kinh tế hàng hóa đã thành kinh tế chú ý, cả thế giới tranh giành sự chú ý của ta. Theo khẳng định trong nguyên tác, thiết bị di động thông minh nổi lên hơn mười năm gần đây đã ép khoảng chú ý (*attention span*) của đại đa số người trên Trái Đất xuống dưới hai phút.
 
-就这样，大多数人逐步变成了彻底**无兵可用**、压根**无仗可打**的人 —— 可无比遗憾的是，他们每一个人都一样，在最初的时候，都是天生就带着强兵的强将。
+Cứ vậy, đa số dần trở thành người hoàn toàn **không có quân**, cũng **không có trận**. Điều vô cùng đáng tiếc là mỗi người trong số họ, thuở ban đầu, vốn đều là tướng mạnh sinh ra cùng quân mạnh.
 
-表现出来被别人看得到的聪明，其实都是积累出来的 —— 别说聪明了，连所谓的天分都是如此，如果天分这个东西真的存在的话。
+Sự thông minh thể hiện ra cho người khác thấy đều được tích lũy. Không chỉ thông minh, ngay cái gọi là năng khiếu cũng vậy, nếu năng khiếu thực sự tồn tại.
 
-过去，人们认为**标准音高**（Perfect Pitch）是一种天分，有就是有，没有就是没有，人群中恨不得只有十万分之一的人拥有这种天分，比如莫扎特 —— 莫扎特可以分辨任何声音的音高（Pitch），哪怕是你在另外一个房间咳嗽一下，他都可以用琴键弹出你刚刚那声咳嗽的音高。
+Trước kia, người ta xem **khả năng nhận biết cao độ tuyệt đối** (*perfect pitch*) là năng khiếu: có thì có, không thì không. Theo số liệu tác giả nêu, gần như chỉ một trên một trăm nghìn người có nó, chẳng hạn Mozart. Mozart có thể phân biệt cao độ (*pitch*) của mọi âm thanh; ngay cả khi bạn ho ở phòng bên, ông cũng có thể dùng phím đàn chơi lại cao độ tiếng ho ấy.
 
-可后来研究者们发现，人们过往误以为的天分，其实都是**练**出来的，无一例外 —— **练出来**的诀窍竟然只不过是**练的久**…… 对那些被称为天才的人，他们真正的**优势**其实只不过是**练得早**，所以才**相对练得久**…… 越来越多的脑科学家们的研究结果在不断支持这个结论，每个人天生可能都有差不多的**潜力**，只不过这个潜力要**练**才能**实现**…… 换句话讲，很多人不是没有天分，而是因为虚度了时光才错过了失去了实现天分的机会。
+Nhưng về sau, theo tác giả, các nhà nghiên cứu phát hiện mọi thứ từng bị tưởng là năng khiếu thực ra đều do **luyện**, không ngoại lệ. Bí quyết **luyện mà thành** chỉ là **luyện lâu**. Lợi thế thực sự của người được gọi là thiên tài chỉ là **luyện sớm**, nên **tương đối luyện lâu hơn**. Ông cho rằng ngày càng nhiều nghiên cứu não bộ ủng hộ kết luận mọi người có thể sinh ra với **tiềm năng** gần như nhau, chỉ cần **luyện** mới **hiện thực hóa**. Nói cách khác, nhiều người không phải không có năng khiếu, mà vì để thời gian trôi phí nên bỏ lỡ cơ hội hiện thực hóa nó.
 
-练习标准音高没多难，没多复杂，网上甚至有很多免费的开源程序。今天，人群当中拥有标准音高的比例，早已不再是十万分之一，也不是万分之一、或者千分之一…… 早就超过了百分之一，并且，这个比例还在不断提高。无数实例表明，任何人都可以习得标准音高，只要练习的密度足够大时间足够久，从任何年龄开始都可以 —— 为什么？这压根不是什么**有就有没有就没有**的东西，它只不过是**练就有不练就没有的东西**……
+Theo tác giả, luyện cao độ tuyệt đối không khó hay phức tạp, trên mạng còn có nhiều chương trình mã nguồn mở miễn phí. Ông khẳng định tỷ lệ người có khả năng này nay không còn là một phần một trăm nghìn, một phần mười nghìn hay một phần nghìn, mà đã vượt một phần trăm và vẫn tăng. Vô số ví dụ, theo lời ông, cho thấy ai cũng học được ở bất kỳ tuổi nào, chỉ cần mật độ tập đủ cao và thời gian đủ lâu. Vì sao? Đây không phải thứ **có thì có, không thì không**, mà là thứ **luyện thì có, không luyện thì không**.
 
-人和人之间毕竟有所差异，所以，人们常说的**天分**还有另外一层意思指的是这种**不可避免的天生差异**。比如，手指短的人可能弹琴相对吃亏一点，个子矮的人可能打篮球相对吃亏一点，长得帅的人在人际沟通中相对可能更有优势，有标准音高的人在学外语尤其是练语音的时候肯定相对更有优势…… 这好像是不可否认的事实。但与此同时，我们总是可以看到更多的**反例**，手指短的钢琴大师其实不少，个子矮的篮球明星并不罕见，长得丑但成功率更高的谈判专家非常普遍……
+Suy cho cùng, con người vẫn khác nhau, nên “năng khiếu” còn có nghĩa là **khác biệt bẩm sinh không tránh khỏi**. Chẳng hạn người ngón tay ngắn có thể hơi bất lợi khi chơi đàn; người thấp có thể hơi bất lợi khi chơi bóng rổ; người đẹp trai có thể thuận lợi hơn trong giao tiếp; người có cao độ tuyệt đối chắc chắn có lợi thế tương đối khi học ngoại ngữ, nhất là luyện phát âm. Điều ấy dường như không thể phủ nhận. Nhưng đồng thời ta luôn thấy nhiều **phản ví dụ**: không ít bậc thầy piano ngón ngắn, ngôi sao bóng rổ thấp không hiếm, chuyên gia đàm phán ngoại hình kém hấp dẫn nhưng tỷ lệ thành công cao thì rất phổ biến.
 
-学就是了，练就是了。反正，你应该是一位将军，你原本的确是一位将军，你要带兵打仗。
+Cứ học, cứ luyện. Dù sao bạn nên là một vị tướng, bạn vốn đúng là một vị tướng: hãy đưa quân vào trận.
 
-一场又一场的胜仗打下来，积累的不仅是成绩，还有越来越强越来越多的兵，以及调用指挥这些强兵的经验。如此看来，到最后，一个人能拥有的最强能力，就是**调用并指挥注意力的能力**。一旦真的拥有了这个能力，有兵可调，有仗可打，那就只能所向披靡，无往不利 —— 这跟智商和天分显然全无关系…… 如果真的有关系的话，应该是人们常常把这种能力的展现理解为智商或者天分吧。
+Sau hết trận thắng này đến trận thắng khác, thứ tích lũy không chỉ là thành tích, mà còn là quân ngày càng mạnh, ngày càng đông và kinh nghiệm điều động, chỉ huy. Nhìn vậy, năng lực mạnh nhất cuối cùng một người có thể có là **huy động và chỉ huy sự chú ý**. Một khi thực sự có năng lực ấy, có quân để điều, có trận để đánh thì chỉ còn tiến đâu thắng đó, việc gì cũng thuận. Điều này rõ ràng chẳng liên quan IQ hay năng khiếu. Nếu có, có lẽ chỉ là mọi người thường hiểu biểu hiện của năng lực này thành IQ hoặc năng khiếu.
 
-还是**换个观念吧！**
+Hãy **đổi quan niệm**!
 
-> 天分这个东西就算真的存在，和所谓的智商一样，都是**练出来**的，都是**攒出来**的，而不是像某个配件一样可以直接安装或者干脆预装的。
+> Năng khiếu dù thực sự tồn tại cũng giống cái gọi là IQ: đều **do luyện**, **do tích lũy**, chứ không phải linh kiện có thể lắp thẳng vào hoặc được lắp sẵn.
 
-在这方面换个更合理的观念非常划算的，因为那等于轻松且又瞬间地直接换了个脑子 —— 比所谓的脱胎换骨实在多了。
+Đổi sang quan niệm hợp lý hơn ở đây rất đáng giá, vì gần như trong chớp mắt bạn đã thay được bộ não, thực tế hơn nhiều so với cách nói lột xác hoàn toàn.
 
-以下分步的陈述可能更准确更有效：
+Có lẽ trình bày từng bước sẽ chính xác và hiệu quả hơn:
 
-> - 你有无穷的**潜力**；
-> - 你的**潜力**能否**实现**，取决于你**练不练**，**练多久**，**练多早**，**练多狠**；
-> - 你能实现**多少潜力**，取决于你有**多少时间**；
-> - **你的时间**是否有效，取决于你向其倾注了**多少注意力**。
+> - Bạn có **tiềm năng** vô hạn.
+> - Tiềm năng có **thành hiện thực** hay không phụ thuộc bạn **có luyện không**, **luyện bao lâu**, **bắt đầu sớm đến đâu**, **luyện quyết liệt đến đâu**.
+> - Bạn hiện thực hóa được **bao nhiêu tiềm năng** phụ thuộc **có bao nhiêu thời gian**.
+> - **Thời gian của bạn** có hiệu quả hay không phụ thuộc **rót bao nhiêu sự chú ý vào đó**.
 
-学习的理由无数。但从这个角度望过去，倒也非常简单直接清楚：我们必须**拥强兵为强将**，否则多可怕啊！用我们的时间，调兵打仗。无仗可打的话就找仗去打。生命不息，战斗不止，能实现多少潜力就实现多少潜力。
+Có vô số lý do để học. Nhưng từ góc này, lý do rất đơn giản, trực tiếp và rõ: ta phải **có quân mạnh để làm tướng mạnh**, nếu không thì đáng sợ biết bao. Dùng thời gian để điều quân đánh trận. Không có trận thì đi tìm trận. Còn sống còn chiến đấu, hiện thực hóa được bao nhiêu tiềm năng thì làm bấy nhiêu.
 
+::: info Ghi chú biên tập cho bản tiếng Việt
+Quân, tướng và trận đánh là phép ví của tác giả cho sự chú ý và nhiệm vụ học. Mốc 25 phút, bảy hoặc tám lượt mỗi ngày không phải ngưỡng sinh học hay số buổi bắt buộc. Các khẳng định mọi thất bại chỉ do thiếu chú ý, mọi trẻ vốn tập trung lâu, hoặc thiết bị di động làm hầu hết mọi người chỉ chú ý dưới hai phút không được bài này dẫn chứng. Xem đối chiếu ở [bài về sự chú ý](../in-the-brain/12-unreproducible.md).
+
+Đoạn về đầu tư là phép so sánh phục vụ quan điểm giáo dục của tác giả, không phải hướng dẫn đầu tư tài chính. Nhận xét về nhà trường và cha mẹ phản ánh quan điểm nguyên tác, không phải kết luận về mọi gia đình hoặc trường học Việt Nam.
+
+*Absolute pitch*, thường gọi là **cảm âm tuyệt đối**, là khả năng xác định tên nốt không cần âm tham chiếu. Một số người trưởng thành có thể cải thiện hoặc đạt khả năng này qua luyện tập, nhưng chưa thể suy ra mọi người ở mọi tuổi đều thành công chỉ cần tập đủ lâu. [Van Hedger và cộng sự (2019)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0223047) ghi nhận phần lớn người tham gia chỉ tiến bộ vừa phải; [Wong và cộng sự (2025)](https://link.springer.com/article/10.3758/s13423-024-02620-2) nghiên cứu 12 người có kinh nghiệm âm nhạc, tuổi 19 đến 44, cũng cho kết quả khác nhau. Các thí nghiệm không xác nhận tỷ lệ toàn dân đã vượt 1% hoặc đang tăng như nguyên tác khẳng định. Không dùng thành tích cảm âm để kết luận người học có hoặc không có năng khiếu tiếng Anh.
+:::

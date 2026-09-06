@@ -1,19 +1,22 @@
-# 3. 音素详解
+# 3. Tìm hiểu từng âm
 
-理论上来讲，把每个音素读准本身其实并不难；更何况每种语言都一样，从音素的数量上来看并不是很多，比如英语，总计就那么 50 多个而已……
+Theo tác giả, phát đúng từng âm riêng lẻ về lý thuyết không quá khó. Mỗi ngôn ngữ cũng không có quá nhiều âm; ông lấy tiếng Anh làm ví dụ với khoảng hơn 50 mục trong cách liệt kê của giáo trình.
 
-> 本教程中罗列基本音标数量为[^1]：
-> * 英式英语（总计 52 个）
->    * 元音 24 个
->    * 辅音 28 个
-> * 美式英语（总计 56 个）
->    * 元音 27 个
->    * 辅音 29 个
+Số ký hiệu cơ bản được giáo trình liệt kê là[^1]:
 
-主要的难点来自于两个方面。
+- **Tiếng Anh Anh: 52**, gồm 24 nguyên âm và 28 phụ âm.
+- **Tiếng Anh Mỹ: 56**, gồm 27 nguyên âm và 29 phụ âm.
 
-首先是在连贯的自然语流中，几乎每个音素都有这样那样的变化。于是，我们只能通过 “**反复**”，反复阅读材料，反复练习，反复自我纠正，并且还要对种种细节谙熟于心，最终能将那些起初看起来极为繁杂的知识点逐一突破而后熟练且连贯地使用。
+::: info Cách đọc các con số
+Đây là số mục trong bảng của tác giả, có cả tổ hợp và biến thể được tách riêng để luyện. Không coi chúng là một số lượng âm vị duy nhất, cố định cho mọi giọng tiếng Anh hoặc mọi hệ thống phân tích.
+:::
 
-更大的困难来自于我们的大脑机制。随着年龄的增加，大脑会过滤母语中用不到的声音，以便提高语音识别的效率 —— 也恰恰是这一点造成了绝大多数成年人学外语的最大障碍。有些声音我们听不到、听不清楚，有些声音听到了却无法分辨，有些声音被我们自己在不知不觉中替换成了另外的样子…… 然而，这并不是什么无解的困境，因为我们的大脑 “**可塑性**” 极强 —— 并且还是 “终身可塑性极强”。核心关键在于，练习的时候要做到 “注意力集中”，不仅如此，还要做到 “**长时间注意力集中**”，只有这样才能突破。
+Khó khăn chủ yếu đến từ hai phía.
 
-[^1]: 我们罗列的音标数量比《剑桥英语发声词典》略多。比如，<span class="pho">tr/dz</span> 在《剑桥英语发声词典》的音标指南里就没有收录。
+Thứ nhất, trong lời nói tự nhiên liền mạch, gần như mỗi âm đều có những biến đổi. Vì vậy, cần **lặp lại**: đọc lại hướng dẫn, luyện lại, tự sửa lại và nhớ các chi tiết. Dần dần, những điểm ban đầu tưởng phức tạp có thể được xử lý riêng rồi kết hợp linh hoạt, liên tục.
+
+Khó khăn lớn hơn, theo cách giải thích của tác giả, đến từ cơ chế của não. Khi lớn lên, não lọc bớt các âm không dùng trong tiếng mẹ đẻ để nhận dạng lời nói hiệu quả hơn. Ông xem đây là trở ngại lớn nhất của phần lớn người trưởng thành học ngoại ngữ: có âm nghe không rõ, có âm nghe được nhưng chưa phân biệt được, có âm bị vô thức thay bằng âm quen thuộc. Tác giả khẳng định đây không phải bế tắc vì não có **khả năng thích nghi rất mạnh suốt đời**; điều cốt yếu là **tập trung chú ý**, và theo yêu cầu của chương trình gốc, **duy trì tập trung trong thời gian dài** mới vượt qua được.
+
+**Ghi chú biên tập:** đoạn trên giữ cách lý giải và mức nhấn mạnh của tác giả, không phải một mô hình chẩn đoán não bộ của từng người. Khi học tiếng Anh từ nền tiếng Việt, hãy dùng cặp từ, bản mẫu và bản ghi của chính mình để xác định âm nào thực sự cần luyện, rồi chọn độ dài buổi học có thể duy trì.
+
+[^1]: Bảng của giáo trình có nhiều mục hơn hướng dẫn của Cambridge English Pronouncing Dictionary. Ví dụ nguyên tác nêu <span class="pho">tr/dz</span> là các mục không có trong hướng dẫn đó. Đây là cách đếm của tác giả, bao gồm cả tổ hợp âm.

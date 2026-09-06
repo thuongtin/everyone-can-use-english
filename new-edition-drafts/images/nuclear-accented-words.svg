@@ -8,9 +8,9 @@
                     <tspan x="0" y="17">Marianna made the marmalade…</tspan>
                 </text>
             </g>
-            <g id="这两个单词被-“强读”-了" fill="#000000" fill-rule="nonzero" font-family="STKaiti" font-size="18" font-weight="normal">
+            <g id="hai-tu-duoc-nhan-manh" fill="#000000" fill-rule="nonzero" font-family="Arial, sans-serif" font-size="18" font-weight="normal">
                 <text>
-                    <tspan x="0" y="19">这两个单词被 “强读” 了</tspan>
+                    <tspan x="0" y="19">Hai từ này được nhấn mạnh</tspan>
                 </text>
             </g>
             <polygon id="Line" fill="#979797" fill-rule="nonzero" points="73.6570048 32.8105441 73.9232304 33.2337744 108.397 88.039 111.783239 85.9090536 112.766226 95.9232304 104.165092 90.7011136 107.551 88.571 73.0767696 33.7662256 72.8105441 33.3429952"></polygon>
@@ -19,14 +19,14 @@
             <polygon id="Line-Copy-3" fill="#979797" fill-rule="nonzero" transform="translate(225.4613, 163.1225) scale(-1, 1) rotate(-180) translate(-225.4613, -163.1225)" points="207.049503 129.064084 207.294406 129.5 240.772 189.088903 244.259884 187.130209 244.744903 197.180819 236.413404 191.538468 239.9 189.578903 206.422575 129.989806 206.177672 129.553891"></polygon>
             <polygon id="Line-Copy-2" fill="#979797" fill-rule="nonzero" points="382.494251 32.7929166 383.207083 33.4942514 382.856416 33.8506674 327.817 89.791 330.66909 92.596934 321.149333 95.856416 324.253601 86.284921 327.105 89.089 382.143584 33.1493326"></polygon>
             <polygon id="Line-Copy-5" fill="#979797" fill-rule="nonzero" points="322.605634 168 322.605634 172 375 172 375 173 322.605634 173 322.605634 177 315 172.5"></polygon>
-            <g id="这个词-“句内最强”" transform="translate(310, 0)" fill="#000000" fill-rule="nonzero" font-family="STKaiti" font-size="18" font-weight="normal">
+            <g id="tu-manh-nhat-cau" transform="translate(310, 0)" fill="#000000" fill-rule="nonzero" font-family="Arial, sans-serif" font-size="18" font-weight="normal">
                 <text>
-                    <tspan x="0" y="19">这个词 “句内最强”</tspan>
+                    <tspan x="0" y="19">Từ này mạnh nhất câu</tspan>
                 </text>
             </g>
-            <g id="这两个词没有被-“强读”" transform="translate(96, 202)" fill="#000000" fill-rule="nonzero" font-family="STKaiti" font-size="18" font-weight="normal">
+            <g id="hai-tu-khong-nhan-manh" transform="translate(96, 202)" fill="#000000" fill-rule="nonzero" font-family="Arial, sans-serif" font-size="18" font-weight="normal">
                 <text>
-                    <tspan x="0" y="19">这两个词没有被 “强读”</tspan>
+                    <tspan x="0" y="19">Hai từ này không được nhấn mạnh</tspan>
                 </text>
             </g>
             <line x1="113.5" y1="130.5" x2="113.5" y2="155.5" id="Line-2" stroke="#979797" stroke-linecap="square"></line>
@@ -41,12 +41,12 @@
                     <tspan x="0" y="15">H*</tspan>
                 </text>
             </g>
-            <g id="这两个音节的-“音高”-更高" transform="translate(388, 151)" fill="#000000" fill-rule="nonzero" font-family="STKaiti" font-size="18" font-weight="normal">
-                <text id="这两个音节的">
-                    <tspan x="0" y="19">这两个音节的</tspan>
+            <g id="hai-am-tiet-cao-hon" transform="translate(375, 151)" fill="#000000" fill-rule="nonzero" font-family="Arial, sans-serif" font-size="14" font-weight="normal">
+                <text id="hai-am-tiet">
+                    <tspan x="0" y="19">Hai âm tiết này có</tspan>
                 </text>
-                <text id="“音高”-更高">
-                    <tspan x="0" y="41">“音高” 更高</tspan>
+                <text id="cao-do-cao-hon">
+                    <tspan x="0" y="41">cao độ cao hơn</tspan>
                 </text>
             </g>
         </g>

@@ -37,8 +37,6 @@ import {
 import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const INSTALL_URL = "https://1000h.org/enjoy-app/install.html";
-
 export const TitleBar = () => {
   const [isMaximized, setIsMaximized] = useState(false);
   const [isFullScreen, setIsFullScreen] = useState(false);
@@ -47,15 +45,22 @@ export const TitleBar = () => {
     "checking-for-update" | "update-available" | "update-downloaded" | "error"
   >();
   const [quiting, setQuiting] = useState(false);
-  const { EnjoyApp, version, setDisplayPreferences, initialized } = useContext(
-    AppSettingsProviderContext
-  );
+  const {
+    EnjoyApp,
+    distribution,
+    version,
+    setDisplayPreferences,
+    initialized,
+  } = useContext(AppSettingsProviderContext);
   const { active, setActive } = useContext(CopilotProviderContext);
   const navigate = useNavigate();
 
   const checkUpdate = () => {
-    if (platform === "linux") {
-      EnjoyApp.shell.openExternal(INSTALL_URL);
+    if (!distribution.updateFeedUrl || platform === "linux") {
+      EnjoyApp.shell.openExternal(distribution.downloadUrl);
+      if (!distribution.updateFeedUrl) {
+        toast.info(t("automaticUpdatesUnavailable"));
+      }
     } else if (updaterState === "update-downloaded") {
       EnjoyApp.app.quitAndInstall();
     } else {
@@ -181,7 +186,7 @@ export const TitleBar = () => {
             <DropdownMenuGroup>
               <DropdownMenuItem
                 onClick={() =>
-                  EnjoyApp.shell.openExternal("https://1000h.org/enjoy-app/")
+                  EnjoyApp.shell.openExternal(distribution.docsUrl)
                 }
                 className="flex justify-between space-x-4"
               >
@@ -207,12 +212,15 @@ export const TitleBar = () => {
                 <span className="absolute top-1 right-1 bg-red-500 rounded-full size-1.5"></span>
               )}
               <span className="capitalize flex items-center gap-2">
-                {updaterState === "checking-for-update" &&
-                  t("checkingForUpdate")}
-                {updaterState === "update-available" && t("updateAvailable")}
-                {updaterState === "update-downloaded" && t("quitAndInstall")}
-                {(!updaterState || updaterState === "error") &&
-                  t("checkUpdate")}
+                {!distribution.updateFeedUrl
+                  ? t("automaticUpdatesUnavailable")
+                  : updaterState === "checking-for-update"
+                    ? t("checkingForUpdate")
+                    : updaterState === "update-available"
+                      ? t("updateAvailable")
+                      : updaterState === "update-downloaded"
+                        ? t("quitAndInstall")
+                        : t("checkUpdate")}
               </span>
             </DropdownMenuItem>
           </DropdownMenuContent>

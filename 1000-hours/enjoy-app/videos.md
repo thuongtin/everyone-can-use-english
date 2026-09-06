@@ -1,16 +1,16 @@
-# 视频资源
+# Tài nguyên video
 
-视频资源的使用与 [音频资源](./audios.md) 基本一致。
+Cách sử dụng video về cơ bản giống [tài nguyên âm thanh](./audios.md).
 
-![视频资源播放页面](/images/enjoy/video-page.png)
-_\* 视频播放页面_
+![Trang phát video trong tài liệu gốc](/images/enjoy/video-page.png)
+_* Trang phát video từ tài liệu gốc._
 
-## 视频大小的限制
+## Giới hạn kích thước video {#video-size-limit}
 
-过大的视频文件会导致加载卡死而无法使用，目前 Enjoy 将添加视频的大小限制在 100 Mb，超过则会提示添加失败。
+Tệp video quá lớn có thể khiến ứng dụng tải rất lâu hoặc không phản hồi. Tài liệu gốc nêu giới hạn thêm video là 100 MB; vượt giới hạn sẽ báo thêm thất bại. Hãy đối chiếu thông báo của phiên bản đang dùng.
 
-后续会针对大文件做相应优化，以支持更大的文件。
+Dự án gốc dự kiến tối ưu việc xử lý tệp lớn để hỗ trợ dung lượng cao hơn. Đây là định hướng trong tài liệu gốc, không phải xác nhận đã triển khai.
 
-## Youtube 视频
+## Video YouTube {#youtube}
 
-Enjoy 支持添加 Youtube 视频，添加资源时直接输入 Youtobe 网址即可。当然前提是当前网络条件支持访问 Youtube。
+Enjoy hỗ trợ thêm video YouTube bằng cách nhập URL khi thêm tài nguyên. Kết nối mạng đang dùng phải truy cập được YouTube để tải video.

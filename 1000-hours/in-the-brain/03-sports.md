@@ -1,11 +1,17 @@
-# 3. 一切都是体育课
+# 3. Mọi việc đều như giờ thể dục
 
-我们的中枢神经系统，主要由**白质**和**灰质**构成。白质由神经元的轴突组成，所以本身不具有处理信息的功能，仅仅在不同灰质之间或者灰质与周围器官之间传递信息。灰质是中枢神经系统中大量神经元聚集的部位，也是中枢神经系统对信息进行深入处理的部位。神经元之间存在大量突触作为通信途径，形成极其复杂的神经回路，实现多种多样的感觉、运动或中间信息处理。
+Nguyên tác trình bày hệ thần kinh trung ương chủ yếu gồm **chất trắng** và **chất xám**. Tác giả mô tả chất trắng được tạo bởi sợi trục neuron, nên không tự xử lý thông tin mà chỉ truyền giữa các vùng chất xám hoặc giữa chất xám với cơ quan ngoại vi. Chất xám là nơi tập trung nhiều neuron và xử lý thông tin sâu. Giữa các neuron có nhiều synapse làm đường trao đổi, tạo mạch thần kinh rất phức tạp để thực hiện cảm giác, vận động và các quá trình xử lý trung gian. Cách phân chia chức năng tuyệt đối trong đoạn này được giữ theo nguyên tác, không phải mô tả đầy đủ mọi thành phần mô thần kinh.
 
-人与人之间，虽然大脑的构成大体一致，但，各个组成部分的尺寸大小相互之间有着巨大的差别。这就好像虽然大家都是同样结构的肢体，但，健美运动员身上的每一块肌肉都可以更大一样。
+Cấu tạo não giữa mọi người nhìn chung tương tự, nhưng tác giả nhấn mạnh kích thước từng phần có thể khác nhau rất lớn. Ông ví điều đó với cơ thể cùng cấu trúc tay chân nhưng từng khối cơ của vận động viên thể hình có thể lớn hơn.
 
-一个人拥有的某项技能越强，相应部位的**灰质体积就越大且密度越高**；一个人拥有的技能越多，大脑皮层表面的**白质覆盖面积就越广**。对大脑进行的 fMRI 表明，音乐家、数学家，多语使用者，相对来看，都有体积更大密度更高的灰质以及覆盖面积更大的白质。
+Tác giả khẳng định một kỹ năng càng mạnh thì **thể tích chất xám ở vùng tương ứng càng lớn và mật độ càng cao**; càng có nhiều kỹ năng thì **diện tích chất trắng phủ trên bề mặt vỏ não càng rộng**. Ông cho rằng fMRI cho thấy nhạc sĩ, nhà toán học và người dùng nhiều ngôn ngữ đều có chất xám lớn, dày đặc hơn và chất trắng phủ rộng hơn. Những khẳng định về cấu trúc, phép đo và quan hệ với kỹ năng này cần đọc cùng ghi chú biên tập bên dưới.
 
-与体外可见的肌肉一样，对我们来说无法直接用自己的眼睛看到的大脑内每个部位，都可能会因为**专项训练**而体积增大密度变高。伦敦的出租车司机，与世界上其他的出租车司机相比，海马体的体积更大 —— 因为他们每天都要面对伦敦那无以伦比的复杂交通情况…… 这就是专项训练。而只需要经过一段时间之后，他们的海马体体积就变得越来越大…… 他们退休后，海马体体积多少会有点收缩，但，还是比普通人的大很多 —— 这就好像专业运动员退休之后，身体机能虽然会有所退化，但，依然与众不同。
+Giống cơ bắp nhìn thấy bên ngoài, tác giả cho rằng mọi vùng não không thể quan sát trực tiếp bằng mắt đều có thể tăng thể tích và mật độ nhờ **luyện tập chuyên biệt**. Ông dẫn tài xế taxi London, cho rằng hồi hải mã của họ lớn hơn tài xế ở mọi nơi khác vì hằng ngày phải đối mặt mạng giao thông phức tạp không nơi nào sánh được. Theo mô tả của ông, chỉ cần một thời gian tập như vậy, hồi hải mã sẽ ngày càng lớn; sau khi nghỉ hưu có co lại chút ít nhưng vẫn lớn hơn rất nhiều so với người bình thường. Ông ví với vận động viên đã nghỉ thi đấu: chức năng cơ thể có giảm nhưng vẫn khác biệt. Đây là câu chuyện và suy rộng của nguyên tác; xem phạm vi nghiên cứu gốc trong ghi chú biên tập.
 
-从这个角度望过去，无论我们学什么，对大脑来说，其实没有任何区别，反正都是一模一样的**体育课** —— 创建连接、强化连接，构建新的基础功能局域网，组合新的高级功能局域网…… 肉眼可见的结果就是大脑内的某些相应部位面积变大体积变大密度变高。
+Từ góc nhìn đó, tác giả cho rằng dù học gì, với não đều là cùng một **giờ thể dục**: tạo và củng cố kết nối, xây mạng chức năng cơ sở mới, kết hợp thành mạng cấp cao mới. Ông khẳng định kết quả nhìn thấy là một số vùng tương ứng tăng diện tích, thể tích và mật độ. Đây là phép ví về luyện tập, không dùng kích thước não làm thước đo đơn giản cho năng lực học tiếng Anh.
+
+::: info Ghi chú biên tập cho bản tiếng Việt
+Nghiên cứu hình ảnh não không cho phép suy ra rằng mọi kỹ năng càng giỏi thì vùng tương ứng càng lớn, hay càng nhiều kỹ năng thì chất trắng càng phủ rộng. [Nghiên cứu dọc của Woollett và Maguire (2011)](https://pubmed.ncbi.nlm.nih.gov/22169537/) ghi nhận tăng thể tích chất xám có chọn lọc ở phần sau hồi hải mã của nhóm học lái taxi London thi đạt sau nhiều năm học. Đây không phải so sánh mọi tài xế trên thế giới. MRI đo cấu trúc cũng không đồng nghĩa với fMRI đo hoạt động.
+
+Chi tiết tài xế nghỉ hưu có liên quan đến [Woollett và cộng sự (2009), hình 1](https://www.fil.ion.ucl.ac.uk/wp-content/uploads/2019/11/Woollett_PhilT.pdf), nhưng so sánh các nhóm nhỏ đang làm, đã nghỉ và đối chứng không chứng minh cùng một người chắc chắn bị co hồi hải mã sau khi nghỉ. Không dùng kích thước não làm điểm số học tập.
+:::

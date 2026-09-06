@@ -1,60 +1,71 @@
-# 后记
+# Lời cuối
 
-这本书几经易稿，终于快要完成之时，我收到一封读者林山（@bojia）的来信。于我来说，无异于上天赐给我的礼物。以下，是她来信的全文：
+Sau nhiều lần sửa bản thảo, khi cuốn sách sắp hoàn thành, tôi nhận được thư của bạn đọc Lâm Sơn (Lin Shan, @bojia). Với tôi, đó chẳng khác nào món quà trời ban. Dưới đây là toàn văn lá thư của cô ấy:
 
 <hr />
-我一个退役运动员。
+Tôi là một vận động viên đã giải nghệ.
 
-08 年开始看笑来老师的博客，两年时间里，我从几乎是零基础到
-获得雅思 6.5 分，留学申请成功──今年 9 月去爱丁堡大学读研究生。身边的人都特别惊讶，问我这个没上过初中高中的人是怎么学习英语的。几天前，我请笑来老师吃饭，当面感谢他的时候，他也很惊讶，也很高兴。告诉我一定要把我学英语的过程，和我的一些感受写下来，供大家参考。所以就有了这篇文章。
+Tôi bắt đầu đọc blog của thầy Tiếu Lai năm 2008. Trong hai năm, từ gần như không có nền tảng, tôi đạt IELTS 6.5 và xin du học thành công; tháng 9 năm nay sẽ đến Đại học Edinburgh học cao học. Những người xung quanh rất ngạc nhiên, hỏi một người chưa từng học trung học cơ sở hay trung học phổ thông như tôi đã học tiếng Anh thế nào. Mấy hôm trước, tôi mời thầy Tiếu Lai ăn cơm để trực tiếp cảm ơn. Thầy cũng ngạc nhiên và rất vui, bảo tôi nhất định phải viết lại quá trình học cùng những cảm nhận của mình để mọi người tham khảo. Vì vậy mới có bài viết này.
 
-我十岁进入省队，开始我的职业运动员生涯。别的孩子每天背着书包去上学，我和队友们每天 8 小时，一周 6 天，拿着拍子在球场上练球。6 年之后，因为我 自身的条件还有当时队里的环境，像许多运动员一样，我并没有取得太好的成绩。我选择退役，进入大学学习。我清楚地记得，当我做出这个选择的时候，当时我的 教练泼我冷水：“你以为学习就比训练容易吗，我保证你读一个星期就读不下去了。”
+Mười tuổi, tôi vào đội tuyển tỉnh, bắt đầu sự nghiệp vận động viên chuyên nghiệp. Trong khi những đứa trẻ khác ngày ngày mang cặp đến trường, tôi và đồng đội cầm vợt tập trên sân tám giờ mỗi ngày, sáu ngày một tuần. Sáu năm sau, do điều kiện bản thân và hoàn cảnh trong đội lúc ấy, cũng như nhiều vận động viên khác, tôi không đạt thành tích quá tốt. Tôi chọn giải nghệ và vào đại học. Tôi nhớ rõ, khi tôi quyết định, huấn luyện viên dội gáo nước lạnh: “Em tưởng học dễ hơn tập à? Tôi bảo đảm em học được một tuần là không chịu nổi nữa”.
 
-我当时心里也没底，毕竟这么多年没念书，基础差的不是一星半点，直接上大学能跟得上吗。但是比起继续训练，我更愿意换个环境重新开始，所以我报考了一所体育院校。
+Lúc ấy tôi cũng không chắc. Bao năm không đi học, nền tảng thiếu hụt đâu phải chút ít; vào thẳng đại học liệu có theo kịp không? Nhưng so với tiếp tục tập luyện, tôi muốn đổi môi trường và bắt đầu lại hơn, nên đăng ký thi vào một trường đại học thể dục thể thao.
 
-相比起运动队，大学简直是天堂，没有早操，没有教练的控制，当然田径场还是有的，不过再也没有人逼着跑长跑了。众所周知，体育类院校真正在学习的人 少之又少，像清华北大那些因为学习压力大而跳楼的人在我们学校是不存在的。人家学校每年都有 “自杀率”，我们学校每年是 “杀他率” 和 “被杀率”。我一边后 悔自己怎么没上个综合性大学，一边放任自己在这个环境里心安理得地享受着混吃等死的安逸日子。直到后来找工作写简历时，我才发现，本科的时光真的过得比我 的成绩单还要更空虚一些。当时真恨不得把三围也写进去，照片贴张 5 寸的，好让简历能凑够一页。
+So với đội tuyển, đại học đúng là thiên đường: không tập thể dục sáng sớm, không chịu sự kiểm soát của huấn luyện viên. Tất nhiên vẫn có sân điền kinh, nhưng không còn ai ép chạy đường dài. Ai cũng biết trong các trường thể dục thể thao, số người thực sự học rất ít. Chuyện sinh viên nhảy lầu vì áp lực học hành như ở Thanh Hoa hay Đại học Bắc Kinh không có ở trường tôi. Trường người ta hằng năm có “tỷ lệ tự sát”, còn trường tôi có “tỷ lệ giết người” và “bị giết”. Tôi vừa hối tiếc sao không vào một đại học tổng hợp, vừa mặc mình yên tâm hưởng những ngày nhàn nhã, sống qua ngày trong môi trường ấy. Mãi đến khi tìm việc, viết hồ sơ, tôi mới thấy những năm đại học thực sự còn trống rỗng hơn cả bảng điểm. Khi đó tôi chỉ muốn ghi thêm cả số đo ba vòng, dán một ảnh cỡ 5 inch, để hồ sơ đủ một trang.
 
-大四的时候，我跟很多人一样，把出国留学当成最后的救命稻草。报了新东方托福班，笑来老师当时是教写作。说实话，当时上课完全听不懂。现在想想，当 时想去考托福完全是异想天开。我上大学开始学英语，大学里的英语课只有四学期，大学的英语老师也假定你是有一定语法基础的，对我这种零基础的来说无异于天 书，所以当时考试基本靠小抄，成绩一直在及格线附近徘徊。这种程度，在半年之内想托福考到 90，不管上什么补习班，都是不可能的。结果可想而知，59 分的 托福成绩让最后一点希望也破灭了。我当时觉得自己这辈子肯定完了。没有什么文化知识，基础知识，数学、物理、化学、地理、历史统统没学过；唯一的技能只能 从事教练或者老师的工作，就业面非常窄。我怎么和那些从小上学的孩子在社会上竞争呢。哪个公司会要一个四肢发达、头脑简单的退役运动员呢。我开始埋怨父 母，当初为什么要送我去练球；我埋怨学校，为什么不给我提供一个好的学习环境；我埋怨自己，为什么当初不好好珍惜时间，恶补文化课知识。
+Năm tư, như nhiều người khác, tôi xem du học là chiếc phao cứu mạng cuối cùng. Tôi đăng ký lớp TOEFL ở Tân Đông Phương; thầy Tiếu Lai khi ấy dạy viết. Nói thật, trên lớp tôi hoàn toàn không hiểu. Giờ nghĩ lại, định thi TOEFL lúc đó đúng là viển vông. Tôi bắt đầu học tiếng Anh khi vào đại học, mà trường chỉ có bốn học kỳ tiếng Anh. Giáo viên cũng mặc định sinh viên có nền tảng ngữ pháp nhất định; với người bắt đầu từ số không như tôi, bài học chẳng khác gì sách trời. Vì vậy, thi cử lúc đó về cơ bản dựa vào phao, điểm cứ quanh mức đỗ tối thiểu. Với trình độ ấy, muốn TOEFL đạt 90 trong nửa năm, dù học lớp bổ túc nào cũng không thể. Kết quả dễ đoán: 59 điểm TOEFL làm chút hy vọng cuối cùng tan vỡ. Tôi thấy đời mình chắc chắn hết rồi. Chẳng có kiến thức phổ thông hay nền tảng; toán, lý, hóa, địa lý, lịch sử đều chưa học. Kỹ năng duy nhất chỉ có thể đưa tôi đến nghề huấn luyện viên hoặc giáo viên, phạm vi việc làm rất hẹp. Làm sao cạnh tranh ngoài xã hội với những người đã đi học từ nhỏ? Công ty nào muốn nhận một vận động viên giải nghệ “tứ chi phát triển, đầu óc đơn giản”? Tôi bắt đầu trách cha mẹ sao trước kia cho mình đi tập, trách trường sao không cho môi trường học tốt, trách bản thân sao không biết quý thời gian mà bù đắp kiến thức phổ thông.
 
-那时候在笑来博客里看到一段话：
+Lúc ấy, trên blog của thầy Tiếu Lai tôi đọc được một đoạn:
 
-> 缺乏耐心几乎是所有人的本性，也是绝大多数人最终未能矫正的习惯。很多人在生活的方方 面面都因为缺乏耐心而处处吃亏却又从不自知；处处吃亏的结果是越来越急于求成，越来越缺乏耐心——于是一生都只能在这个死循环中左冲右撞而后最终混个死因不详。
+> Thiếu kiên nhẫn gần như là bản tính của mọi người, cũng là thói quen mà tuyệt đại đa số cuối cùng không sửa được. Nhiều người chịu thiệt khắp các mặt của cuộc sống vì thiếu kiên nhẫn mà không tự biết. Càng chịu thiệt, họ càng nóng lòng muốn thành công, càng thiếu kiên nhẫn. Thế là cả đời chỉ có thể lao trái đâm phải trong vòng luẩn quẩn ấy, rồi cuối cùng chết mà chẳng rõ nguyên nhân.
 
-这简直是我当时状态的最佳写照。我当时觉得我年龄还不大，还有时间再读个研究生，读完研究生以后就业时选择的面就宽多了，所以我想到了去英国读研。 但是留学考试是凭实力的，而我的外语这么差。所以我觉得我要想留学的话，一定要把外语提高上去，而且这次要吸取教训，不能再急功近利了。因此，我又跟父母 商量，要去留学。父母还是心存疑虑的，毕竟有前车之鉴，所以要求我必须先考过雅思再开始申请学校。我跟他们保证说，这次我一定会考过的，而且我要考 7 分， 上一所好的学校。我想以前这么训练这么累都坚持过来了，只要我有耐心坚持下去，一定能做到的。
+Đó đúng là bức chân dung chính xác nhất của tôi khi ấy. Tôi nghĩ mình còn trẻ, vẫn có thời gian học cao học; học xong thì lựa chọn việc làm sẽ rộng hơn nhiều. Vì thế tôi nghĩ đến học cao học ở Anh. Nhưng kỳ thi du học đòi hỏi thực lực, còn ngoại ngữ của tôi quá kém. Muốn du học, tôi nhất định phải nâng trình độ ngoại ngữ. Lần này phải rút kinh nghiệm, không nóng vội tìm lợi ích trước mắt nữa. Tôi lại bàn với cha mẹ chuyện du học. Họ vẫn nghi ngại vì đã có bài học trước, nên yêu cầu tôi phải thi đạt IELTS rồi mới bắt đầu nộp hồ sơ vào trường. Tôi bảo đảm lần này sẽ đỗ, và còn muốn đạt 7 điểm để vào một trường tốt. Tôi nghĩ trước kia tập luyện mệt mỏi đến vậy còn vượt qua được; chỉ cần kiên nhẫn theo đến cùng, nhất định tôi làm được.
 
-我从剑桥中级英语语法开始，坚持做三遍，一来培养耐心，二来恶补语法。配合记录时间的习惯，每天记录下来我学习英语的时间。08 年七月开始，每天 2 个单元，用时大约 90 分钟。第二遍大约 60 分钟做完两个单元，第三遍的时候速度更快了，平均 30 分钟就能做完，另外用 30 分钟把例句读熟。我要求自己，不管再累在忙，每天一定要完成 2 个单元。 中间当然也有间断的时候，我就跟自己说，这是我最后的机会了，如果我放弃了，我又得重头开始了，我不能再重蹈覆辙了。为了给自己洗脑，我把很多笑来文章中 的句子，抄在本子上，每天早上读几遍。08 年 9 月我在新东方学习新概念二册。09 年 3 月初的时候总算把三遍剑桥中级语法，接着报了新概念三。09 年 5 月的 时候新三学完，我报了 6 月的雅思，想先裸考一次，看看自己现在到底什么水平。这中间的一个月时间，一边复习新三，一边用笑来的如何提高阅读速度那几篇文章里的方法读老托福的文章；用老托福 PART-C 的文章做跟读训练。刚开始的时候觉得这些方法实在是太慢了，太麻烦了，直到考前一共才看了 5 篇阅读，跟读练了 2 篇。6 月的雅思考试成绩并不理想，阅读 5.5，听力 6，口语 6.5,写作 5，总分 5.5。我当时的目标是考 7 分，5.5 离目标差得不 是一星半点。
+Tôi bắt đầu với *Ngữ pháp tiếng Anh trình độ trung cấp của Cambridge*, kiên trì làm ba lượt, vừa rèn kiên nhẫn vừa bù kiến thức ngữ pháp. Kết hợp thói quen ghi chép thời gian, mỗi ngày tôi ghi lại thời gian học tiếng Anh. Từ tháng 7 năm 2008, mỗi ngày hai bài, mất khoảng 90 phút. Lượt thứ hai, tôi làm hai bài trong khoảng 60 phút. Lượt thứ ba nhanh hơn nữa, trung bình 30 phút là xong, rồi dành thêm 30 phút đọc cho quen các câu ví dụ. Tôi yêu cầu bản thân dù mệt hay bận đến đâu, mỗi ngày nhất định phải hoàn thành hai bài. Tất nhiên vẫn có lúc gián đoạn. Tôi tự nhủ đây là cơ hội cuối; nếu bỏ cuộc, tôi sẽ lại phải bắt đầu từ đầu, không thể đi vào vết xe đổ nữa. Để tự “tẩy não”, tôi chép nhiều câu trong bài viết của thầy Tiếu Lai vào sổ, mỗi sáng đọc vài lần. Tháng 9 năm 2008, tôi học quyển 2 của *New Concept English* tại Tân Đông Phương. Đến đầu tháng 3 năm 2009, cuối cùng tôi hoàn thành ba lượt ngữ pháp Cambridge trung cấp, rồi đăng ký học quyển 3 *New Concept English*. Tháng 5 năm 2009 học xong quyển 3, tôi đăng ký IELTS tháng 6, muốn thi thử một lần không ôn chuyên biệt để biết trình độ thực tế. Trong tháng ấy, tôi vừa ôn quyển 3 vừa dùng phương pháp trong các bài của thầy Tiếu Lai về tăng tốc độ đọc để đọc bài TOEFL cũ; dùng bài TOEFL PART-C cũ luyện nghe và đọc theo. Ban đầu tôi thấy những cách này quá chậm, quá phiền; đến trước kỳ thi mới đọc tổng cộng năm bài và luyện đọc theo hai bài. Kết quả IELTS tháng 6 không như ý: đọc 5.5, nghe 6, nói 6.5, viết 5, tổng 5.5. Mục tiêu khi ấy là 7; khoảng cách từ 5.5 đến mục tiêu đâu phải nhỏ.
 
-我当时仔细回忆我当运动员的时候，我当时是怎么训练的，每项技术是怎么打磨的。我发现其实这些都和学英语有共通之处。每个技术动作的要领并不复杂， 教练教会基本动作之后剩下的就是大量的重复。在无数次的重复中，纠正错误动作，模仿优秀运动员的动作并结合自身的特点，最终形成自己的动作。同样，应用到 学习英语中。我已经掌握了基本的语法、基础的词汇和学习方法，那么剩下就是大量应用、练习了。最重要的是，清楚什么是自己能控制的，什么是不能控制的。比赛的时候，天气、场地、观众、对手还有结果这些都是属于不能控制 的事情，唯一能控制的就是自己。我是不是每一个动作都尽力做好了，我是不是按既定的战术执行了，我在累的时候有没有坚持住，这些是我能够控制的。同理，考 试的题目不是我能控制的，结果更不是我能控制的了，那么我还老想着我要考多少分，时刻关注机经模板除了浪费时间和让自己更焦虑之外没有任何用处。
+Tôi cẩn thận nhớ lại thời làm vận động viên: mình tập ra sao, mài giũa từng kỹ thuật thế nào. Tôi thấy những việc ấy thực ra có điểm chung với học tiếng Anh. Yếu lĩnh của mỗi động tác không phức tạp. Sau khi huấn luyện viên dạy động tác cơ bản, phần còn lại là lặp lại thật nhiều. Trong vô số lần lặp, ta sửa động tác sai, bắt chước vận động viên giỏi và kết hợp đặc điểm bản thân, cuối cùng hình thành động tác của mình. Áp dụng tương tự vào tiếng Anh: tôi đã nắm ngữ pháp cơ bản, từ vựng nền tảng và phương pháp học, phần còn lại là sử dụng, luyện tập thật nhiều. Quan trọng nhất là biết rõ điều gì mình kiểm soát được và điều gì không. Khi thi đấu, thời tiết, sân bãi, khán giả, đối thủ và kết quả đều không nằm trong kiểm soát; điều duy nhất kiểm soát được là bản thân. Tôi có cố làm tốt từng động tác không, có thực hiện chiến thuật đã định không, có trụ được khi mệt không: đó là những điều tôi kiểm soát được. Tương tự, đề thi không do tôi kiểm soát, kết quả lại càng không. Vậy cứ nghĩ mãi phải đạt bao nhiêu điểm, lúc nào cũng chú ý các bộ đề được người thi nhớ lại và bài mẫu, ngoài phí thời gian và làm mình lo hơn, chẳng có ích gì.
 
-想明白之后，就该干嘛干嘛了。
+Nghĩ thông rồi thì cứ làm việc cần làm.
 
-### 阅读
-* 如何迅速提高阅读能力里的方法精读剑 4-7 的每一篇文章。
-* 新托福 iBT 词汇分类突破 认真背了 3 遍。
+### Đọc
 
-### 听力
-* 托福听说训练 练习了 20 多篇。
-* 抄写基础词表：GSL 和 AWL，恶补拼 写。
-* 剑 4-7 里的听力部分做了两遍。
+* Dùng phương pháp trong *Cách nhanh chóng nâng cao khả năng đọc* để đọc kỹ từng bài của bộ Cambridge IELTS 4-7.
+* Học thuộc thật kỹ ba lượt cuốn *Đột phá từ vựng TOEFL iBT mới theo chủ đề*.
 
-### 写作
-* TOEFL iBT 高分作文仿写、背诵经典的句子。
-* 大作文写了不到二十篇，小作文 7 篇。
-* 慎晓嶷 ‘七天’ 里的小作文每种图表背了个一篇。
-* ‘如何准备留学考试系列’ 里的有力模式、立场选择等文章打印出来、认真读了 N 遍。
+### Nghe
 
-### 口语
-* 第一部分，准备了九十多道真题，一个英语很好的朋友帮我写的。第二部分，准备了十个左右话题。第三部分，背了经典的句型若干。
-* 对照[这个网站](http://www.uiowa.edu/~acadtech/phonetics/english/frameset.html)对着镜子模仿口型和发音。每天半小时，1 个月时间。
-其他
-* 想明白系列，反复看了若干遍。
+* Luyện hơn 20 bài trong *Luyện nghe nói TOEFL*.
+* Chép các danh sách từ vựng cơ bản GSL và AWL để bù kỹ năng chính tả.
+* Làm hai lượt phần nghe trong Cambridge IELTS 4-7.
 
-考前没有报任何培训班。10 月的雅思成绩是，听力和阅读都考了 7，口语还是 6.5，写作 5.5，总分 6.5。虽然没考到理想的 7 分，但这个成绩也已 经够申请的标准了。我当时很激动，我证明了自己并不比那些从小一直学习的同学差。我的经历告诉我，首先一个人只要有坚定的信念，只要努力不怕苦，没有办不 成的事。有人总是强调别人的是个例，来宽恕自己的不努力。这个过程有多苦吗，有多难吗，我没觉得。可能这也得感谢我从小受的训练吧，忍耐枯燥的训练和服从 教练的指示。
+### Viết
 
-其次，自信来自于能力，任何能力都是靠自己努力学习来的，是一个非常明显的从无到有的过程。我从英语零基础到考过雅思，自学能力一点点打磨出 来。这个凭能力产生的从无到有的过程，才是提高我自信的动机。在这个世界上除了你的本领和能力是真正属于你的，没有什么是能够与你共生的。这些才是产生自 信的真正动力。
+* Dựa theo *Bài luận điểm cao TOEFL iBT* để tập viết mô phỏng và học thuộc những câu tiêu biểu.
+* Viết chưa đến 20 bài Task 2 và bảy bài Task 1.
+* Với phần Task 1 trong sách *Bảy ngày* của Thận Hiểu Nghi, học thuộc một bài cho mỗi loại biểu đồ.
+* In các bài về mô hình lập luận có sức thuyết phục, lựa chọn lập trường và những nội dung khác trong loạt *Cách chuẩn bị các kỳ thi du học*, đọc kỹ không biết bao nhiêu lần.
 
-最后，希望我的经历能够多多少少给那些真正想学好英语的同学一些帮助。
+### Nói
 
-[](https://twitter.com/BoJia)谢谢笑来老师，如果没有你这么无私的分享这些学习方法和人生感悟，我也不可能在这么短的时间内完成我的目标。
-## --完--
-[ 目录 ](./README.md)
+* Phần 1: chuẩn bị hơn 90 câu hỏi từ đề thi thật, nhờ một người bạn giỏi tiếng Anh viết giúp. Phần 2: chuẩn bị khoảng mười chủ đề. Phần 3: học thuộc một số mẫu câu tiêu biểu.
+* Đối chiếu [trang web này](http://www.uiowa.edu/~acadtech/phonetics/english/frameset.html), nhìn gương bắt chước khẩu hình và phát âm. Mỗi ngày nửa giờ, trong một tháng.
+
+### Khác
+
+* Đọc đi đọc lại loạt bài *Nghĩ cho thông* nhiều lần.
+
+Trước kỳ thi, tôi không đăng ký khóa luyện thi nào. Kết quả IELTS tháng 10 là nghe và đọc đều 7, nói vẫn 6.5, viết 5.5, tổng 6.5. Dù không đạt 7 như mong muốn, điểm này đã đủ điều kiện nộp hồ sơ. Tôi rất xúc động: tôi chứng minh mình không kém những bạn được đi học liên tục từ nhỏ. Trải nghiệm cho tôi biết, trước hết, một người chỉ cần có niềm tin vững vàng, chịu cố gắng và không sợ khổ thì không có việc gì không làm được. Có người luôn nhấn mạnh người khác chỉ là trường hợp cá biệt để tha thứ cho việc bản thân không cố gắng. Quá trình ấy có khổ, có khó lắm không? Tôi không thấy vậy. Có lẽ cũng phải cảm ơn việc tập luyện từ nhỏ, khả năng chịu những buổi tập buồn tẻ và làm theo chỉ dẫn của huấn luyện viên.
+
+Thứ hai, tự tin đến từ năng lực. Mọi năng lực đều do chính mình cố gắng học mà có, là quá trình từ không đến có rất rõ ràng. Từ không có nền tảng tiếng Anh đến thi đạt IELTS, khả năng tự học của tôi được mài giũa từng chút. Chính quá trình từ không đến có dựa trên năng lực ấy làm tôi tự tin hơn. Trên đời, ngoài bản lĩnh và năng lực thực sự thuộc về mình, chẳng có gì có thể gắn bó cùng mình suốt cuộc sống. Đó mới là động lực thực sự tạo ra tự tin.
+
+Cuối cùng, hy vọng trải nghiệm của tôi ít nhiều giúp được những bạn thực sự muốn học tốt tiếng Anh.
+
+[Lâm Sơn (@BoJia)](https://twitter.com/BoJia): Cảm ơn thầy Tiếu Lai. Nếu thầy không vô tư chia sẻ những phương pháp học và chiêm nghiệm cuộc sống như vậy, tôi cũng không thể hoàn thành mục tiêu trong thời gian ngắn đến thế.
+
+> **Ghi chú biên tập cho bản tiếng Việt:** Đây là thư kể trải nghiệm trong bối cảnh Trung Quốc, với các mốc 2008-2009 và dự định du học vào tháng 9 của năm người viết kể chuyện. Bản dịch giữ số điểm, tài liệu và lịch học gốc; không phải danh sách luyện thi cập nhật hoặc cam kết đầu vào của Đại học Edinburgh hiện nay. Các nhận xét về trường thể thao, “tỷ lệ” bạo lực, ngoại hình và việc “không có gì không làm được” là lời kể, cách nói nhấn mạnh của người viết, không phải số liệu đã kiểm chứng hay đánh giá về mọi vận động viên.
+>
+> Điểm tháng 6 có sai khác nội tại: trung bình bốn điểm 5.5, 6, 6.5 và 5 là 5.75, trong khi thư ghi tổng 5.5. Bản dịch giữ số liệu trong thư, không tự sửa thành bảng điểm được xác nhận. “Cambridge IELTS 4-7” chỉ các quyển 4 đến 7; các tên tài liệu tiếng Việt còn lại là tên dịch để nhận diện nguồn trong lời kể, không khẳng định đã có ấn bản Việt tương ứng. Với người học ở Việt Nam, điều có thể áp dụng là ghi thời gian học thực tế, luyện đều, sửa lỗi và điều chỉnh khối lượng theo hoàn cảnh của mình; không cần học thuộc câu trả lời thi hoặc theo đúng lịch của người viết.
+
+## Hết
+
+[Mục lục](./README.md)

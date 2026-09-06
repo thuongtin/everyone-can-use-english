@@ -2,16 +2,12 @@ import { ChatPromptTemplate } from "@langchain/core/prompts";
 import { z } from "zod";
 import { jsonCommand } from "./json.command";
 import { LANGUAGES } from "@/constants";
+import type { ChatModelOptions } from "@/lib/chat-model";
 
 export const extractStoryCommand = async (
   text: string,
   learningLanguage: string,
-  options: {
-    key: string;
-    modelName?: string;
-    temperature?: number;
-    baseUrl?: string;
-  }
+  options: ChatModelOptions
 ): Promise<{ words: string[]; idioms: string[] }> => {
   const schema = z.object({
     words: z.array(z.string().describe("extracted word")),

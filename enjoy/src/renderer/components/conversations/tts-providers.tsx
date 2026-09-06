@@ -1,11 +1,19 @@
 import { t } from "i18next";
+import {
+  ENJOYAI_TTS_MODELS,
+  OPENAI_TTS_MODELS,
+  OPENAI_TTS_VOICES,
+} from "@/lib/speech-models";
 
 export const TTS_PROVIDERS: { [key: string]: any } = {
   enjoyai: {
     name: "EnjoyAI",
-    models: ["openai/tts-1", "openai/tts-1-hd", "azure/speech"],
+    models: [
+      ...ENJOYAI_TTS_MODELS.map((model) => `openai/${model}`),
+      "azure/speech",
+    ],
     voices: {
-      openai: ["alloy", "echo", "fable", "onyx", "nova", "shimmer"],
+      openai: [...OPENAI_TTS_VOICES],
       azure: [
         {
           label: "Katja (Female)",
@@ -736,8 +744,8 @@ export const TTS_PROVIDERS: { [key: string]: any } = {
   openai: {
     name: "OpenAI",
     description: t("youNeedToSetupApiKeyBeforeUsingOpenAI"),
-    models: ["tts-1", "tts-1-hd"],
-    voices: ["alloy", "echo", "fable", "onyx", "nova", "shimmer"],
+    models: [...OPENAI_TTS_MODELS],
+    voices: [...OPENAI_TTS_VOICES],
     configurable: ["model", "language", "voice", "baseUrl"],
   },
 };

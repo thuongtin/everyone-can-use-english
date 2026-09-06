@@ -1,15 +1,23 @@
-## 14. 安全阈值决定成果
+# 14. Ngưỡng an toàn quyết định kết quả
 
-之前我们提到过，大脑 “痴迷于节能”，我们也提到过 “大脑最怕死” —— 之所以如此，就是大脑要保障整个身体的安全，毕竟，大脑是必须被其它器官支撑才有意义的器官。
+Trước đây ta đã nói não “say mê tiết kiệm năng lượng” và “sợ chết nhất”. Lý do là não phải bảo đảm an toàn cho toàn cơ thể; suy cho cùng, nó là cơ quan chỉ có ý nghĩa khi được các cơ quan khác hỗ trợ.
 
-所以，大脑不会允许你超负荷工作。正如汽车发动机若是发挥其 100% 效能的话，它工作不了多久就有可能报废。所以，工程师会为发动机设定一个安全阈值，比如，能启用的最大功率是实际最高功率的 70%…… 这样才能保证安全，还能保持长期稳定。
+Vì thế, não không cho phép bạn làm việc quá tải. Giống động cơ ô tô, nếu phát huy 100% hiệu năng thì có thể chẳng chạy được bao lâu đã hỏng. Kỹ sư sẽ đặt ngưỡng an toàn, chẳng hạn công suất tối đa được sử dụng là 70% công suất cao nhất thực tế, để vừa bảo đảm an toàn vừa duy trì ổn định lâu dài.
 
-这也是为什么大脑在严格执行用进废退机制之后永远只倾向于 “按需学习” 的原因，从本能上来看，它不会选择超额学习。超额学习，某种意义上也是一种习得的技能，它是不小心尝到甜头之后才能启动的新直觉。
+Đó cũng là lý do, sau khi nghiêm ngặt thực hiện cơ chế dùng thì phát triển, không dùng thì suy giảm, não luôn chỉ nghiêng về “học theo nhu cầu”. Theo bản năng, nó không chọn học vượt nhu cầu. Theo một nghĩa nào đó, học vượt nhu cầu cũng là kỹ năng học được, một trực giác mới chỉ khởi động sau khi tình cờ nếm được lợi ích.
 
-通过几十万年的基因遗传积累下来的进化成果并不适应这个知识爆炸的时代。大脑内部是一个有神经元构成的比银河系还要复杂不知道多少倍的网络，知识是更为无垠且不断扩张的网络。整个世界随时都在发生着变化，趋势一直就是变化越来越快，变化越来越大。说实话，大脑很难太适应这些变化，更不适应这样的变化速度。
+Thành quả tiến hóa tích lũy qua hàng trăm nghìn năm di truyền không thích ứng với thời đại bùng nổ tri thức. Bên trong não là mạng neuron phức tạp hơn Ngân Hà không biết bao nhiêu lần; tri thức còn là mạng vô tận hơn và không ngừng mở rộng. Thế giới thay đổi từng lúc, xu hướng luôn là nhanh hơn và lớn hơn. Nói thật, não khó thích ứng hoàn toàn với những thay đổi ấy, càng khó theo kịp tốc độ của chúng.
 
-最不适应的，可能就是那些大脑默认的安全阈值。过去的几十万年里，生存一直是问题，所以，大脑要不顾一切地先保障生存。突然之间，生存不是问题了，生活环境超级安全，生活必需的成本越来越低…… 在这种情况下，遵循一切大脑以几十万年的经验而设定的安全阈值，那就只能是所谓的彻底躺平，什么都不用干才对。一日两三餐，每餐一杯牛奶两个鸡蛋半个苹果就已经足够生存。
+Điều khó thích ứng nhất có lẽ là các ngưỡng an toàn mặc định của não. Trong hàng trăm nghìn năm trước, sinh tồn luôn là vấn đề, nên não phải bằng mọi giá bảo đảm sống sót trước tiên. Theo cách nhìn của tác giả, đột nhiên sinh tồn không còn là vấn đề, môi trường sống cực kỳ an toàn, chi phí thiết yếu ngày càng thấp. Nếu vẫn tuân theo mọi ngưỡng an toàn được đặt bằng kinh nghiệm hàng trăm nghìn năm ấy, ta chỉ còn nằm yên hoàn toàn, chẳng cần làm gì. Nguyên tác đưa ví dụ ăn hai hoặc ba bữa mỗi ngày, mỗi bữa một cốc sữa, hai quả trứng và nửa quả táo là đủ sống.
 
-所以，日常生活中，你能发挥的并不是你真正的潜力，而是你的大脑为你设定的一个安全阈值之下能够发挥的所有能力。随着生存变得越来越容易，大脑为自己设定的安全阈值也就越来越低。可人的潜力究竟有多大呢？没办法精准测量。但，肯定比自己以为的大很多。
+::: info Ghi chú biên tập cho bản tiếng Việt
+Mức 70% thuộc phép ví động cơ của tác giả, không phải ngưỡng công suất não đã được đo hoặc mức an toàn áp dụng cho mọi người. Không dùng phép ví này để bỏ qua mệt mỏi hay nhu cầu nghỉ ngơi.
 
-到底要不要想办法调整自己大脑所设定的安全阈值呢？这是个好问题。
+Công thức chỉ sữa, trứng và táo không nên được xem là khẩu phần đủ chất, đủ năng lượng hoặc phù hợp lâu dài cho mọi người. [WHO về chế độ ăn lành mạnh](https://www.who.int/news-room/fact-sheets/detail/healthy-diet) nhấn mạnh tính đầy đủ, cân đối, đa dạng và nhu cầu khác nhau theo cá nhân. Nguồn này hỗ trợ phần dinh dưỡng, không xác nhận phép ví về ngưỡng não.
+
+Nhận định sinh tồn đã trở nên dễ dàng là cách nhìn của nguyên tác, không đại diện cho hoàn cảnh của mọi người học Việt Nam.
+:::
+
+Vì thế, theo tác giả, điều bạn phát huy hằng ngày không phải tiềm năng thật, mà là toàn bộ khả năng dưới một ngưỡng an toàn do não đặt ra. Sinh tồn càng dễ, ngưỡng an toàn não tự đặt càng thấp. Tiềm năng con người lớn đến đâu? Không thể đo chính xác, nhưng chắc chắn lớn hơn rất nhiều so với mình tưởng.
+
+Rốt cuộc có nên tìm cách điều chỉnh ngưỡng an toàn mà não tự đặt hay không? Đây là một câu hỏi hay.

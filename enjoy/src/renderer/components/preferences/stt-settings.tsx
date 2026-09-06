@@ -15,6 +15,15 @@ import {
 import { useContext, useEffect, useState } from "react";
 import { SttEngineOptionEnum } from "@/types/enums";
 import { EchogardenSttSettings } from "@renderer/components";
+import {
+  normalizeOpenAiTranscriptionModel,
+  OPENAI_TRANSCRIPTION_MODELS,
+  sanitizeSpeechError,
+} from "@/lib/speech-models";
+
+type OpenAiSettingsWithTranscriptionModel = LlmProviderType & {
+  transcriptionModel?: string;
+};
 
 export const SttSettings = () => {
   const {
@@ -22,10 +31,40 @@ export const SttSettings = () => {
     setSttEngine,
     echogardenSttConfig,
     setEchogardenSttConfig,
+    openai,
+    setOpenai,
   } = useContext(AISettingsProviderContext);
   const { EnjoyApp } = useContext(AppSettingsProviderContext);
 
   const [editing, setEditing] = useState(false);
+  const openAiSettings = openai as
+    | OpenAiSettingsWithTranscriptionModel
+    | null
+    | undefined;
+  const currentOpenAiSettings: OpenAiSettingsWithTranscriptionModel =
+    openAiSettings || { name: "openai", models: "" };
+  let transcriptionModel = "whisper-1";
+  try {
+    transcriptionModel = normalizeOpenAiTranscriptionModel(
+      openAiSettings?.transcriptionModel
+    );
+  } catch {
+    // Keep an unknown saved value usable in the settings screen until it is replaced.
+  }
+
+  const handleOpenAiTranscriptionModelChange = async (model: string) => {
+    if (!setOpenai) return;
+
+    try {
+      await setOpenai({
+        ...currentOpenAiSettings,
+        transcriptionModel: normalizeOpenAiTranscriptionModel(model),
+      });
+      toast.success(t("saved"));
+    } catch (error) {
+      toast.error(sanitizeSpeechError(error));
+    }
+  };
 
   const handleCheck = async () => {
     toast.promise(
@@ -69,6 +108,29 @@ export const SttSettings = () => {
           {sttEngine === SttEngineOptionEnum.OPENAI &&
             t("openaiSpeechToTextDescription")}
         </div>
+        {sttEngine === SttEngineOptionEnum.OPENAI && (
+          <div className="mt-4 space-y-2 text-sm text-muted-foreground">
+            <div className="flex items-center space-x-2">
+              <span>{t("openaiTranscriptionModel")}:</span>
+              <Select
+                value={transcriptionModel}
+                onValueChange={handleOpenAiTranscriptionModelChange}
+              >
+                <SelectTrigger className="min-w-fit">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {OPENAI_TRANSCRIPTION_MODELS.map((model) => (
+                    <SelectItem key={model} value={model}>
+                      {model}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+            <div>{t("openaiTranscriptionModelDescription")}</div>
+          </div>
+        )}
         <div
           className={`text-sm text-muted-foreground mt-4 px-1 ${
             editing ? "" : "hidden"
@@ -96,7 +158,7 @@ export const SttSettings = () => {
         <Select
           value={sttEngine}
           onValueChange={(value) => {
-            setSttEngine(value);
+            setSttEngine(value as SttEngineOptionEnum);
           }}
         >
           <SelectTrigger className="min-w-fit">

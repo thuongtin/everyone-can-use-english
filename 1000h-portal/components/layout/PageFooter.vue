@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
-    <div>© {{ year }} 般渡株式会社</div>
-    <div class="opacity-50 mt-1">All rights reserved.</div>
+    <div>© {{ year }} Bandu Co., Ltd. (pháp nhân Bandu tại Nhật Bản)</div>
+    <div class="opacity-50 mt-1">Bảo lưu mọi quyền.</div>
   </div>
 </template>
 

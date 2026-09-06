@@ -1,94 +1,100 @@
-# 5. 基础之上
+# 5. Vượt lên trên nền tảng
 
-语音是基础的基础，在此之上，路漫漫其修远。
+Phát âm là nền tảng của nền tảng. Từ đó, con đường phía trước vẫn còn dài.
 
-## 5.1. 流利
+## 5.1. Nói trôi chảy {#fluency}
 
-学习另外一种语言，总是要处理很多与母语**不一样**的细节。
+Khi học một ngôn ngữ khác, ta luôn cần xử lý nhiều chi tiết **khác** tiếng mẹ đẻ.
 
-> **凡是和母语发声方式不一样的地方，都是语音塑造的重点**。
+> **Những điểm khác cách phát âm của tiếng mẹ đẻ chính là trọng tâm khi rèn phát âm.**
 
-在语音中，最重要且最普遍被忽视的**差异**是：
+Tác giả cho rằng **khác biệt** quan trọng nhất và thường bị bỏ qua nhất là:
 
-> 英文的**音节**在**绝大多数情况下**读出来都比亚洲语言的**字**要**长**许多……
+> Trong **phần lớn trường hợp**, **âm tiết** tiếng Anh được đọc **dài hơn nhiều** so với một **chữ** trong các ngôn ngữ châu Á. Đây là khẳng định của nguyên tác, cần đọc cùng ghi chú biên tập bên dưới.
 
-首先，英文的元音有长短之分，除了 *6* 个基础元音 <span class="pho">ʌ</span>、<span class="pho">e</span>、<span class="pho">ə</span>、<span class="pho">ɪ</span>、<span class="pho">ʊ</span>、<span class="pho">ɒ</span> 是短元音之外，剩下的十几个都是**相对更长**的元音；而亚洲语言的元音都是等长的。
+Trước hết, tác giả lập luận rằng nguyên âm tiếng Anh có dài và ngắn: ngoài sáu nguyên âm cơ sở <span class="pho">ʌ</span>, <span class="pho">e</span>, <span class="pho">ə</span>, <span class="pho">ɪ</span>, <span class="pho">ʊ</span>, <span class="pho">ɒ</span> được ông xếp là ngắn, hơn mười dạng còn lại đều **tương đối dài hơn**; ông khẳng định nguyên âm các ngôn ngữ châu Á đều dài bằng nhau. Phần khái quát này được giữ đúng lời tác giả, không coi là quy tắc đã được xác nhận.
 
-除此之外，在英文中，当一个短元音处于重音音节的时候，会出现因强调而发生的短元音变长的情况。比如，你可以试着说一下 *This is a **big** **city**!* —— 为了强调 *big*，你会不由自主地将它读成长长的 <span class="pho alt">biːg</span>，而不是 <span class="pho alt">bɪg</span>，如果强调 *city*，它的第一个 <span class="pho alt">sɪ</span> 也会稍微变长一点点（你可以把 <span class="pho">s</span> 拉长）……
+Ngoài ra, nguyên âm ngắn trong âm tiết mang trọng âm của tiếng Anh có thể được kéo dài do nhấn mạnh. Hãy thử *This is a **big** **city**!* Tác giả cho rằng khi nhấn *big*, bạn sẽ vô thức đọc thành <span class="pho alt">biːg</span> dài thay vì <span class="pho alt">bɪg</span>; nếu nhấn *city*, <span class="pho alt">sɪ</span> đầu từ cũng dài hơn một chút, và bạn có thể kéo dài <span class="pho">s</span>. Nhấn mạnh *big* không đồng nghĩa đổi `/ɪ/` thành `/iː/`; giữ chất âm mục tiêu và nghe mẫu thay vì bắt chước `/biːg/` như một quy tắc. [Cambridge ghi big là `/bɪɡ/`](https://dictionary.cambridge.org/pronunciation/english/big).
 
-而英文的音节构成也相对更为复杂，元音前有可能是两个辅音。亚洲语言的**音节**（字）几乎没有两个辅音作为开头的情况，在英文中这种情况却非常普遍。亚洲语言的音节同样没有两三个辅音作为结尾并且还要发声清晰的情况，在英文中这种情况同样非常普遍。每个辅音都要发声清晰的话，就会占用一定的时长。比如，*flexed*, <span class="pho alt">flekst</span>，虽然整体上只是一个音节（<span class="pho">ccvccc</span> 的结构），可即便这个音节中的元音 <span class="pho">e</span> 是短元音，整体发声时它也比任何一个亚洲语言中的 “字”（同样是一个音节）都长。
+Tác giả cũng nhận xét cấu tạo âm tiết tiếng Anh tương đối phức tạp hơn: trước nguyên âm có thể có hai phụ âm. Ông khẳng định âm tiết, tương ứng với chữ trong phép so sánh của ông, của các ngôn ngữ châu Á gần như không bắt đầu bằng hai phụ âm, cũng không kết thúc bằng hai hoặc ba phụ âm phải phát rõ, trong khi tiếng Anh thường có. Mỗi phụ âm được phát rõ sẽ chiếm thời gian. Ví dụ *flexed* <span class="pho alt">flekst</span>, dù chỉ là một âm tiết có cấu trúc <span class="pho">ccvccc</span> và nguyên âm <span class="pho">e</span> ngắn, tác giả vẫn khẳng định toàn bộ âm tiết dài hơn bất kỳ “chữ” một âm tiết nào trong ngôn ngữ châu Á. Đây là khái quát của nguyên tác, không phải kết quả đo mọi ngôn ngữ.
 
-平均来看，英文的音节中**辅音数量**可能是亚洲语言的**两三倍以上** —— 这造成的结果就是，说英文的时候，舌头比说其他语言的时候相对要忙太多…… 并且，因此英文单个音节的发声时长也相对更长 —— 不是长一点点，而是长很多。
+Theo ước lượng của tác giả, **số phụ âm** trung bình trong âm tiết tiếng Anh có thể gấp **hai, ba lần hoặc hơn** các ngôn ngữ châu Á. Ông cho rằng điều đó khiến lưỡi bận hơn nhiều khi nói tiếng Anh, đồng thời làm một âm tiết dài hơn đáng kể, không chỉ một chút. Nguyên tác không cung cấp phép đo cho tỷ lệ này.
 
-音节上的长短差异会造成语音在韵律和节奏上的巨大差异。
+Khác biệt độ dài âm tiết có thể tạo khác biệt lớn về ngữ điệu và nhịp.
 
-若是忽视了这一点，那么，在节奏韵律上的巨大差异会形成一个无法逾越的障碍。很多人压根就不知道这里有一个巨大的障碍，于是，从来就没有可能跨越它 —— 请问，你如何跨越一个你不知其存在的障碍呢？
+Tác giả cho rằng nếu bỏ qua điểm này, khác biệt về ngữ điệu và nhịp sẽ tạo ra một rào cản không thể vượt. Nhiều người không hề biết rào cản lớn ấy tồn tại nên chưa từng có khả năng vượt qua. Ông đặt câu hỏi: làm sao vượt một rào cản mà bạn không biết đang ở đó?
 
-还有另外一个比较隐蔽的却也同样重要的差异：
+Một khác biệt khác ít lộ rõ nhưng cũng quan trọng theo tác giả là:
 
-> 英语的自然语音中有大量的**塞音**存在于音节之间。这些音我们虽然听不到，也看不到发声器官的动作，但这些动作却是完整完成的 —— 也就是说，它们也是占用时长的。
+> Lời nói tự nhiên tiếng Anh có nhiều **âm tắc** giữa các âm tiết. Dù không nghe thấy các âm đó và không thấy động tác cơ quan phát âm, tác giả cho rằng động tác vẫn được hoàn tất, nên cũng chiếm thời gian. Xem [ghi chú phân loại âm tắc](4.3-grouping#stop) để không đồng nhất mọi phụ âm không có tiếng bật với im lặng hoàn toàn.
 
-还没有完…… 记得吗？两个元音直接连在一起的时候，还有可能存在**加音**（<span class="pho">ʲ/ʷ</span>），以及很常见的 <span class="pho">l</span> 之前的加音 <span class="pho">ᵊ</span>……
+Chưa hết: khi hai nguyên âm nối trực tiếp, còn có thể có **âm thêm** <span class="pho">ʲ/ʷ</span>, và theo cách trình bày của tác giả, âm thêm <span class="pho">ᵊ</span> thường gặp trước <span class="pho">l</span>.
 
-所有这些细节加在一起，造成了一个格外普遍的现象：
+Tác giả cho rằng tổng hợp các chi tiết ấy tạo ra một hiện tượng đặc biệt phổ biến:
 
-> **亚洲人讲英文的时候速度都过快……**
+> **Người châu Á đều nói tiếng Anh quá nhanh.** Đây là nguyên văn mức khẳng định của tác giả, không phải đánh giá áp dụng sẵn cho người Việt hoặc từng người học.
 
-常常把**长元音**和**双元音**，以及美式英语特有的**半长元音**读成更短的版本（尤其是 <span class="pho">æ</span>），很多**辅音**没有清楚地发音，很多实际存在的微妙**停顿**（比如**塞音**）全都忽略，甚至可能在某些辅音之后插入了原本**不存在的元音**，但是，反过来常见的**加音**却实际上缺席……
+Ông mô tả các lỗi: thường đọc **nguyên âm dài**, **nguyên âm đôi** và những dạng ông gọi là **nguyên âm nửa dài đặc trưng tiếng Anh Mỹ** thành ngắn hơn, nhất là <span class="pho">æ</span>; không phát rõ nhiều **phụ âm**; bỏ qua những **chỗ ngắt** tinh tế thực sự tồn tại, như **âm tắc**; thậm chí chèn **nguyên âm vốn không có** sau một số phụ âm, trong khi những **âm thêm** thường gặp theo mô tả của ông lại vắng mặt.
 
-整体结果就是，同样一句话，亚洲人总是能够做到更快、很快、甚至太快地讲完。可问题在于，从理解的角度来看，在英文母语使用者耳中，几乎所有的韵律和节奏全都是错的。用错误的韵律节奏，讲的速度越快，就越难以被理解。
+Theo tác giả, kết quả là cùng một câu, người châu Á luôn có thể nói nhanh hơn, rất nhanh, thậm chí quá nhanh. Nhưng về khả năng hiểu, ông cho rằng trong tai người bản ngữ tiếng Anh, gần như toàn bộ ngữ điệu và nhịp đều sai. Khi dùng nhịp và ngữ điệu sai, càng nói nhanh càng khó hiểu. Đây là đánh giá khái quát của nguyên tác, không phải nhận định về mọi người nói tiếng Anh tại châu Á.
 
-还没有完……
+Vẫn còn một yếu tố khác.
 
-另外一个影响初学者讲英文时语速不正常地快的原因，更微妙，来自于一种基于普遍误解的心理压力。在这一点上，全世界的人都一样，当人们听到自己听不懂的另外一种语言的时候，总是**误以为**对方**说话速度很快**。
+Tác giả cho rằng một nguyên nhân tinh tế hơn khiến người mới nói nhanh bất thường là áp lực tâm lý từ một hiểu lầm phổ biến: ở khắp nơi, khi nghe một ngôn ngữ khác mà mình không hiểu, con người luôn **lầm tưởng** đối phương **nói rất nhanh**.
 
-可这就是因误解而生的幻觉。之所以幻觉对方语速快，是因为自己听不懂。听母语的时候，大脑甚至可以以句子为单位处理信息，可突然之间，要退回到音节级别，又因为那声音里充满了自己并不习惯甚至没听过的音素，不习惯的韵律和节奏，当然需要更多的精力…… 听不懂，当然记不住。于是，大脑更不够用，更是误以为对方说话太快。
+Ông gọi đó là ảo giác nảy sinh từ việc không hiểu. Khi nghe tiếng mẹ đẻ, não thậm chí có thể xử lý thông tin theo câu; với tiếng lạ, phải quay lại mức âm tiết, đồng thời gặp nhiều âm tố, ngữ điệu và nhịp chưa quen hoặc chưa từng nghe, nên cần nhiều sức hơn. Không hiểu thì không nhớ được; não càng quá tải, càng tưởng đối phương nói quá nhanh. Đây là cách tác giả diễn giải trải nghiệm nghe, không phải chẩn đoán thần kinh.
 
-其实，全世界的人在说话的时候，不管使用任何语言都一样，都会不由自主地**划分意群**，下意识地**选择轻重**，并且都会有意无意地**适当停顿**，不仅是在句子之间，句子之内也有。
+Tác giả nhận xét rằng mọi người, bất kể dùng ngôn ngữ nào, đều tự nhiên **chia cụm ý**, vô thức **chọn chỗ mạnh yếu**, và **ngắt nghỉ thích hợp**, không chỉ giữa các câu mà cả bên trong câu.
 
-可是，突然之间，只是因为听不懂、记不住，大脑就像一台同时运行了太多软件的电脑， CPU 过热，内存溢出，恨不得当场死机。于是，不知不觉之间产生了幻觉，就是觉得对方说话快，即便对方正在以再正常不过的语速讲话。
+Ông ví việc không hiểu và không nhớ được như máy tính mở quá nhiều phần mềm cùng lúc: CPU quá nóng, bộ nhớ tràn và sắp treo. Từ đó, người nghe vô thức cảm thấy đối phương nói nhanh, dù đối phương đang dùng tốc độ hoàn toàn bình thường. Đây là phép ví von của nguyên tác.
 
-基于上面这个普遍误解的下一个误解，同样微妙，人们常常误以为**语速够快**就能构成**讲得足够流利**。其实，**流利**的构成与**语速快慢**几乎全无关系。**是否流利**更多是发音是否正确，措辞是否准确，句法和用法是否符合习惯，逻辑是否顺畅，等等等等 —— 以及，很多人可能并未意识到的另外一个很重要的东西，叫做**节奏**。
+Hiểu lầm tiếp theo cũng tinh tế: mọi người thường tưởng **nói đủ nhanh** đồng nghĩa **nói đủ trôi chảy**. Tác giả khẳng định **trôi chảy** gần như không liên quan tốc độ; theo ông, nó phụ thuộc nhiều hơn vào phát âm đúng, chọn từ chính xác, cú pháp và cách dùng tự nhiên, logic thông suốt, cùng một yếu tố quan trọng thường bị bỏ quên: **nhịp**. Phân biệt giữa tốc độ và độ trôi chảy được làm rõ trong ghi chú biên tập.
 
-所以，刚开始的时候，**要刻意放慢自己的语速**。记住，流利不靠语速，起码不只靠语速。语速过快，容易出错，越快出错越多。再说，流利也不是一上来就需要追求的东西，速度更不是。
+Vì vậy, lúc mới bắt đầu, tác giả khuyên **chủ động nói chậm lại**. Hãy nhớ độ trôi chảy không chỉ dựa vào tốc độ. Nói quá nhanh dễ sai, càng nhanh càng nhiều lỗi. Hơn nữa, trôi chảy không phải điều cần theo đuổi ngay từ đầu, tốc độ càng không phải.
 
-好莱坞动作明星阿诺德·施瓦辛格口音很重但表达清楚且流利 —— 这是怎么回事呢？一般来说，决定一个人讲话**流利与否**的因素，从听众角度出发，如果能够按照重要性排列的话，大抵应该如下：
+Tác giả lấy ví dụ ngôi sao hành động Hollywood Arnold Schwarzenegger: giọng ngoại quốc rõ nhưng diễn đạt rõ ràng và trôi chảy. Ông đặt câu hỏi vì sao, rồi đề xuất thứ tự tương đối về các yếu tố quyết định **độ trôi chảy** từ góc nhìn người nghe:
 
-> - **语意完整**
-> - **上下文足够丰富**
-> - **符合习惯**
-> - **逻辑清晰**
-> - **语法正确**
-> - **措辞准确**
-> - **发音**
->    - 节奏
->      - 停顿
->      - 轻重
->      - 缓急
->    - 韵律
->      - 高低
->      - 起伏
->    - 音素
->      - 元音
->      - 辅音
+> - **Ý nghĩa đầy đủ**
+> - **Ngữ cảnh đủ phong phú**
+> - **Cách nói tự nhiên theo thông lệ**
+> - **Logic rõ ràng**
+> - **Ngữ pháp đúng**
+> - **Chọn từ chính xác**
+> - **Phát âm**
+>    - Nhịp
+>      - Ngắt nghỉ
+>      - Mạnh yếu
+>      - Nhanh chậm
+>    - Ngữ điệu
+>      - Cao thấp
+>      - Lên xuống
+>    - Âm tố
+>      - Nguyên âm
+>      - Phụ âm
 
-即便是到了相对最不重要的**音素**层面，也有重要性上的先后顺序，**元音比辅音更重要**。然而，绝大多数人在整个练习过程中，在最不重要的层面上就被卡住了…… 越是重要的越没机会练习，越是重要的，越没能力去关注 —— 这才是失败的关键吧？
+Ngay ở mức **âm tố**, được ông xếp là tương đối ít quan trọng nhất, tác giả vẫn đặt **nguyên âm quan trọng hơn phụ âm**. Ông cho rằng phần lớn mọi người bị kẹt ở mức ít quan trọng nhất suốt quá trình luyện: càng quan trọng càng không có cơ hội tập, càng quan trọng càng không đủ khả năng chú ý. Theo ông, có lẽ đó mới là điểm mấu chốt dẫn đến thất bại. Đây là thứ tự ưu tiên của tác giả, không phải lý do bỏ luyện phụ âm hoặc đánh giá năng lực chỉ bằng một yếu tố.
 
-## 5.2. 情绪
+::: info Ghi chú biên tập: đánh giá độ trôi chảy
+Nói nhanh không đồng nghĩa nói trôi chảy, nhưng tốc độ có liên quan đến độ trôi chảy. Cần xét cả tốc độ, độ dài chuỗi nói và cách ngắt nghỉ. Mục tiêu là lời nói rõ, liền mạch và phù hợp ngữ cảnh; không phải tăng tốc tối đa hoặc luôn cố nói chậm. [Nghiên cứu can thiệp của Tavakoli, Campbell và McCormack](https://onlinelibrary.wiley.com/doi/10.1002/tesq.244) ghi nhận tiến bộ về độ trôi chảy cùng tốc độ nói, tốc độ cấu âm và độ dài chuỗi nói. Không diễn giải kết quả này thành “càng nhanh càng tốt”.
 
-学习语音的唯一有效方法只有**模仿**。在模仿的时候，最难模仿的，其实并不是我们已经讲解过的各种重点…… 还有一个可能无法模仿的，和另外一个其实可以模仿的。
+Các ngôn ngữ châu Á không có cùng một hệ thống âm tiết hay độ dài nguyên âm. Chẳng hạn, tiếng Thái có đối lập nguyên âm ngắn và dài làm đổi nghĩa; xem [Roengpitya, University of California Berkeley, ICPhS 1999](https://www.internationalphoneticassociation.org/icphs-proceedings/ICPhS1999/p14_1827.html). Không áp dụng khẳng định nguyên âm đều dài bằng nhau hoặc mọi người châu Á đều nói tiếng Anh quá nhanh cho từng người Việt; hãy đánh giá bản ghi và lỗi cụ thể của mình.
+:::
 
-可能无法模仿的是对方的**音质**，因为到最后，每个人的声音都不一样，声线、音域、音量都不一样…… 通常来说，除非是模仿能力特别强的人，才能做到发出和别人同样音质的声音 —— 虽然不是谁都做不到，但，这个要求多少的确有点过份……
+## 5.2. Cảm xúc {#emotion}
 
-然而，的确有确实可以模仿的 —— **情绪**。紧张、兴奋、疲惫、失望、恐惧、悲伤、快乐、期待，等等等等。就算不能模仿得一模一样，终归能按照自己的方式去表现同样的情绪 —— 瞬间就能做到八九不离十。
+Tác giả khẳng định **bắt chước** là phương pháp duy nhất có hiệu quả để học phát âm. Khi bắt chước, khó nhất không phải những trọng điểm đã giải thích; còn một thứ có thể không bắt chước được và một thứ thực ra có thể bắt chước.
 
-用 AI 生成的真人语音，最大的问题在于，它目前还不能做到**情绪饱满**，它只是尽量做到了 “听起来像是真人说话”，虽然已经很好，但就是缺乏情绪表达 —— 它也的确没有什么真正的情绪……
+Thứ có thể không bắt chước được là **chất giọng**. Mỗi người cuối cùng có giọng, quãng giọng và âm lượng riêng. Theo tác giả, thường chỉ người có khả năng bắt chước đặc biệt tốt mới tạo được chất giọng giống người khác. Không phải không ai làm được, nhưng yêu cầu đó quả thực có phần quá mức.
 
-各种惊悚片动作片都很精彩，很吸引人…… 可实际上它们真的不是最好的学习材料，因为这类影视内容的对话事实上非常枯燥，警匪片里最常重复的，只不过是 *Freeze! Drop your gun!* 要么就是 *You have the right to remain silent*... 战争片里最常重复的更加迷离，反反复复最多的都是 *Get down!* 或者 *Go! Go! Go!* —— 动作太多，语言就只能太少。至于情绪么，往往更多的只有愤怒或者悲伤。
+Còn một thứ thực sự có thể bắt chước là **cảm xúc**: căng thẳng, hào hứng, mệt mỏi, thất vọng, sợ hãi, buồn, vui, mong đợi. Dù không giống hệt, bạn vẫn có thể biểu đạt cùng cảm xúc theo cách của mình. Tác giả cho rằng có thể lập tức đạt mức khá gần.
 
-这就是为什么**生活情景剧**和**脱口秀**常常是很好的学习材料的重要原因 —— 主要是情绪丰富且饱满。另外，**纪录片**往往都是很好的学习材料。它们的特点是，措辞简单明了，语速慢，吐字清晰，并且情绪饱满。情绪更加饱满的，是各种给青少年甚至婴幼儿看的动画片或者绘本讲解，情绪丰富饱满到夸张的地步……
+Ở thời điểm viết, tác giả cho rằng vấn đề lớn nhất của giọng AI nghe như người thật là chưa có **cảm xúc đầy đặn**: chỉ cố làm cho “nghe giống người đang nói”, dù đã rất tốt vẫn thiếu biểu đạt cảm xúc; bản thân AI cũng không thực sự có cảm xúc. Đây là nhận xét theo bối cảnh nguyên tác, không phải kiểm thử các hệ tổng hợp giọng hiện tại.
 
-如果觉得这些都太尴尬，还有个办法是不断学唱**英文歌曲** —— 每个音节都带着不同的音高曲调，甚至有可能一个词就唱了满满一两个小节，容不得一丝的错误，真的是绝佳的练习场景。
+Phim giật gân và hành động rất hấp dẫn, nhưng tác giả cho rằng không phải học liệu tốt nhất vì hội thoại thực ra khá đơn điệu. Phim cảnh sát thường lặp *Freeze! Drop your gun!* hoặc *You have the right to remain silent*; phim chiến tranh thường lặp *Get down!* hay *Go! Go! Go!* Theo ông, quá nhiều hành động khiến ít lời thoại; cảm xúc thường chủ yếu là giận dữ hoặc buồn bã.
 
-语音的功用，如果说有 *20%* 是用来传递对事实的感受的话，那么，剩下的 *80%* 肯定并且只能用来传递情绪，不是吗？一直以来，大家在 “学外语” 的时候，都太理智了，不是吗？理智的确是一种很好的品质，但，有时候，它可能会成为不可逾越的障碍…… 真的很可惜！
+Đó là lý do quan trọng khiến tác giả thường chọn **phim tình huống đời thường** và **chương trình trò chuyện, độc thoại hài** làm học liệu: cảm xúc phong phú và đầy đặn. Ông cũng đánh giá **phim tài liệu** thường là học liệu tốt vì từ ngữ rõ, đơn giản, nói chậm, phát âm rõ và có cảm xúc. Hoạt hình hoặc phần kể sách tranh cho thiếu niên, trẻ nhỏ và trẻ sơ sinh còn biểu đạt cảm xúc phong phú, thậm chí cường điệu hơn.
+
+Nếu thấy những lựa chọn đó quá ngượng, tác giả đề xuất tiếp tục học hát **bài hát tiếng Anh**. Mỗi âm tiết có cao độ, giai điệu riêng, có khi một từ kéo dài một hoặc hai ô nhịp, không cho phép sai lệch nhỏ. Ông xem đó là một bối cảnh luyện tập tuyệt vời. Khi áp dụng, cần phân biệt phát âm và nhịp hát với lời nói thường ngày.
+
+Tác giả đặt câu hỏi tu từ: nếu *20%* công dụng của giọng nói là truyền đạt cảm nhận về sự thật, thì *80%* còn lại chắc chắn chỉ có thể để truyền đạt cảm xúc, phải không? Ông cho rằng lâu nay mọi người quá lý trí khi học ngoại ngữ. Lý trí là phẩm chất tốt, nhưng đôi khi có thể trở thành rào cản không thể vượt, thật đáng tiếc. Các tỷ lệ ở đây là phép diễn đạt của nguyên tác, không phải số liệu nghiên cứu.
 

@@ -1,10 +1,23 @@
 import { VitePlugin } from "@electron-forge/plugin-vite";
 import os from "os";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { FusesPlugin } from "@electron-forge/plugin-fuses";
 import { FuseV1Options, FuseVersion } from "@electron/fuses";
 import pkg from "./package.json" with { type: "json" };
+import { removeRecursiveNodeModulesLink } from "./scripts/package-guard.mjs";
+
+const projectRoot = path.dirname(fileURLToPath(import.meta.url));
 
 const config = {
+  hooks: {
+    prePackage: async () => {
+      await removeRecursiveNodeModulesLink(projectRoot);
+    },
+    generateAssets: async () => {
+      await import("./scripts/download-dictionaries.mjs");
+    },
+  },
   packagerConfig: {
     asar: {
       // Binary files won't work in asar, so we need to unpack them
@@ -31,15 +44,9 @@ const config = {
     {
       name: "@electron-forge/maker-zip",
       platforms: ["darwin", "linux"],
-      config: (arch) => ({
-        macUpdateManifestBaseUrl: `https://dl.enjoy.bot/app/darwin/${arch}`,
-      }),
     },
     {
       name: "@electron-forge/maker-squirrel",
-      config: (arch) => ({
-        remoteReleases: `https://dl.enjoy.bot/app/win32/${arch}`,
-      }),
     },
     {
       name: "@electron-forge/maker-deb",

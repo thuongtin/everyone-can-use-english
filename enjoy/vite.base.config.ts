@@ -7,6 +7,22 @@ export const builtins = ['electron', ...builtinModules.map((m) => [m, `node:${m}
 
 export const external = [...builtins, ...Object.keys('dependencies' in pkg ? (pkg.dependencies as Record<string, unknown>) : {})];
 
+const distributionEnvironmentKeys = [
+  'ENJOY_UPDATE_FEED_URL',
+  'ENJOY_DOWNLOAD_URL',
+  'ENJOY_DOCS_URL',
+  'ENJOY_REPO_URL',
+] as const;
+
+export function getDistributionDefine() {
+  return Object.fromEntries(
+    distributionEnvironmentKeys.map((key) => [
+      `process.env.${key}`,
+      JSON.stringify(process.env[key] ?? ''),
+    ])
+  );
+}
+
 export function getBuildConfig(env: ConfigEnv<'build'>): UserConfig {
   const { root, mode, command } = env;
 
@@ -53,7 +69,7 @@ export function getBuildDefine(env: ConfigEnv<'build'>) {
     return { ...acc, ...def };
   }, {} as Record<string, any>);
 
-  return define;
+  return { ...getDistributionDefine(), ...define };
 }
 
 export function pluginExposeRenderer(name: string): Plugin {

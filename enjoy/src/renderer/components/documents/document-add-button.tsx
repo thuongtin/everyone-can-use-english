@@ -88,7 +88,7 @@ export const DocumentAddButton = () => {
 
       const file = await EnjoyApp.cacheObjects.writeFile(
         `${doc.title}.html`,
-        Buffer.from(article.content)
+        Uint8Array.from(new TextEncoder().encode(article.content)).buffer
       );
       createFromLocalFile(file, url);
     } else if (state === "did-fail-load") {

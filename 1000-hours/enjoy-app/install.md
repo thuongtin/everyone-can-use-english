@@ -1,60 +1,71 @@
-# 下载安装
+# Tải xuống và cài đặt
 
-Enjoy App 是一个跨平台的桌面应用，可以在 Windows、Mac 和 Linux 等电脑设备上运行。
+Enjoy App là ứng dụng máy tính đa nền tảng, chạy trên Windows, Mac và Linux. Hãy chọn gói cài đặt phù hợp với hệ điều hành và loại chip của máy.
 
-请根据电脑设备的操作系统，下载相应的版本安装使用。
-
-当前最新版本：**v0.7.9**
+::: info Phiên bản của các liên kết bên dưới
+Tài liệu gốc giới thiệu **v0.7.9** là phiên bản mới nhất tại thời điểm biên soạn. Các liên kết bên dưới được giữ lại để tham khảo bản phát hành của dự án gốc, không phải gói cài đặt của bản Việt hóa này. Để biết bản phát hành hiện có, xem [trang Releases của dự án gốc](https://github.com/zuodaotech/everyone-can-use-english/releases).
+:::
 
 ## Windows
 
-支持 Windows 10 以上版本。
+Theo tài liệu gốc, ứng dụng hỗ trợ Windows 10 trở lên.
 
-[点击下载](https://dl.enjoy.bot/app/win32/x64/Enjoy-0.7.9%20Setup.exe)
+[Tải gói cài đặt Windows v0.7.9](https://dl.enjoy.bot/app/win32/x64/Enjoy-0.7.9%20Setup.exe)
 
-下载后，双击即可安装。
+Sau khi tải xuống, nhấp đúp vào tệp để cài đặt.
 
-::: tip Windows 10 安装报错怎么办？
-Windows 10 系统在安装时可能会报错：
+::: tip Xử lý lỗi cài đặt trên Windows 10
+Nếu gặp thông báo:
 
-```bash
+```text
 A JavaScript error occurred in the main process
 ```
 
-这是由于缺少某些依赖导致，可以尝试以下步骤解决：
+Một nguyên nhân được tài liệu gốc ghi nhận là máy thiếu thành phần phụ thuộc. Có thể thử:
 
-1. 升级系统，将操作系统升级到最新版本；
-2. 下载 [vs_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe) 安装。
+1. Cập nhật hệ điều hành.
+2. Tải và cài đặt [Microsoft Visual C++ Redistributable x64](https://aka.ms/vs/17/release/vc_redist.x64.exe).
 
-然后再尝试安装 Enjoy。
+Sau đó thử cài đặt Enjoy lại. Nếu lỗi vẫn xảy ra, giữ lại thông báo lỗi để xác định nguyên nhân cụ thể.
 :::
 
 ## Mac
 
-根据使用 Mac 电脑的芯片不同，需要下载不同的版本。
+Chọn phiên bản theo chip của máy Mac:
 
-- [Silicon 芯片版本(arm64)](https://dl.enjoy.bot/app/darwin/arm64/Enjoy-0.7.9-arm64.dmg)
-- [Intel 芯片版本(x64)](https://dl.enjoy.bot/app/darwin/x64/Enjoy-0.7.9-x64.dmg)
+- [Apple Silicon, arm64, v0.7.9](https://dl.enjoy.bot/app/darwin/arm64/Enjoy-0.7.9-arm64.dmg)
+- [Intel, x64, v0.7.9](https://dl.enjoy.bot/app/darwin/x64/Enjoy-0.7.9-x64.dmg)
 
-::: info 如何查看本机配置
-M1 以后的 Mac 电脑型号(M1、M2、M3)，均为 Silicon 芯片。
+::: info Kiểm tra cấu hình máy
+Các máy Mac dùng chip M1, M2, M3 và những chip thuộc dòng Apple M là máy Apple Silicon.
 
-如果你不清楚自己电脑的具体型号，可以点击屏幕左上方的  符号，在弹出来的菜单中，选择第一个选项 “关于本机（About This Mac）”，在弹出的窗口中，即可看到本机的硬件和系统配置。
-
-如果显示的是 _Apple M 系列_，即为 Silicon 芯片。
+Nếu chưa biết loại chip, nhấp biểu tượng  ở góc trên bên trái màn hình, chọn **Giới thiệu về máy Mac này (About This Mac)**. Cửa sổ hiện ra cho biết phần cứng và hệ điều hành. Nếu tên chip thuộc dòng **Apple M**, hãy chọn bản Apple Silicon.
 :::
 
-::: warning 警告
-推荐使用 macOS 12 及以上版本，macOS 11 可能无法使用部分功能。
+::: warning Phiên bản macOS
+Tài liệu gốc khuyến nghị macOS 12 trở lên; một số chức năng có thể không hoạt động trên macOS 11.
 :::
 
 ## Linux
 
-请根据不同发行版本选用安装文件。
+Chọn định dạng phù hợp với bản phân phối Linux đang dùng:
 
-- [下载 deb 版本](https://dl.enjoy.bot/app/linux/x64/enjoy_0.7.9_amd64.deb)
-- [下载 zip 版本](https://dl.enjoy.bot/app/linux/x64/Enjoy-linux-x64-0.7.9.zip)
+- [Tải gói deb v0.7.9](https://dl.enjoy.bot/app/linux/x64/enjoy_0.7.9_amd64.deb)
+- [Tải gói zip v0.7.9](https://dl.enjoy.bot/app/linux/x64/Enjoy-linux-x64-0.7.9.zip)
 
-## 历史版本
+## Các phiên bản trước {#previous-releases}
 
-所有历史版本均可在 [这里](https://github.com/zuodaotech/everyone-can-use-english/releases) 找到。
+Các bản phát hành trước nằm trên [trang Releases của dự án gốc](https://github.com/zuodaotech/everyone-can-use-english/releases).
+
+## Chạy bản Việt hóa từ mã nguồn {#vietnamese-source-build}
+
+Phần này được bổ sung cho bản Việt hóa. Hiện chưa có gói cài đặt tiếng Việt được phát hành từ kho mã này. Trong môi trường phát triển đã kiểm tra, Node.js 20 và bản Yarn đi kèm kho mã có thể cài các thành phần phụ thuộc và khởi chạy ứng dụng Electron.
+
+Từ thư mục gốc của kho mã, chạy:
+
+```sh
+node .yarn/releases/yarn-4.6.0.cjs install --immutable
+node .yarn/releases/yarn-4.6.0.cjs enjoy:start
+```
+
+Sử dụng Node.js 20 cho các lệnh trên. Các thành phần native có thể cần công cụ biên dịch của hệ điều hành. Đây là hướng dẫn chạy mã nguồn, không phải xác nhận rằng mọi chức năng học, AI hoặc mọi hệ điều hành đã được kiểm thử hoàn tất.

@@ -1,6 +1,7 @@
 import { ChatPromptTemplate } from "@langchain/core/prompts";
 import { z } from "zod";
 import { jsonCommand } from "./json.command";
+import type { ChatModelOptions } from "@/lib/chat-model";
 
 export const chatSuggestionCommand = async (
   params: {
@@ -8,12 +9,7 @@ export const chatSuggestionCommand = async (
     nativeLanguage: string;
     context: string;
   },
-  options: {
-    key: string;
-    modelName?: string;
-    temperature?: number;
-    baseUrl?: string;
-  }
+  options: ChatModelOptions
 ): Promise<{
   suggestions: {
     text: string;

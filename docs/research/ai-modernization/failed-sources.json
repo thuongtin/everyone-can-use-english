@@ -1,0 +1,211 @@
+{
+  "metadata": {
+    "report": "Enjoy AI modernization failed and fallback ledger",
+    "retrieved_date": "2026-09-06",
+    "explicit_failed_attempts_unique": 12,
+    "failed_url_records_unique": 12,
+    "failed_fetch_events": 13,
+    "attempted_url_records_unique": 106,
+    "attempted_success_noncanonical_unique": 1,
+    "source_count_effect": "Initial source ledger: 12 failed URL records tương ứng 13 failed fetch events không tăng successful source count. Recheck history is tracked separately: Apple canonical had two metadata-only attempts and the DocC JSON fallback had one failed event. Redirect alias thành công nhưng đã được tách vào attempted_success_noncanonical vì trỏ tới nguồn transcription đã đại diện.",
+    "fallback_policy": "Chỉ dùng fact từ canonical URL hoặc fallback đã fetch thành công; unreachable claim bị loại.",
+    "failed_by_ledger": {
+      "openai": 1,
+      "chat": 1,
+      "crosscheck": 2,
+      "local": 5,
+      "speech": 3
+    },
+    "failed_url_records_by_ledger": {
+      "openai": 1,
+      "chat": 1,
+      "crosscheck": 2,
+      "local": 5,
+      "speech": 3
+    },
+    "failed_fetch_events_by_ledger": {
+      "openai": 1,
+      "chat": 1,
+      "crosscheck": 3,
+      "local": 5,
+      "speech": 3
+    },
+    "failed_entries_in_file": 13,
+    "random_recheck": {
+      "plan_path": "/tmp/enjoy-ai-random-recheck-plan.json",
+      "seed": 20260906,
+      "coverage_urls_unique": 36,
+      "coverage_processed": 36,
+      "content_verified_coverage": 35,
+      "not_evaluable_coverage": 1,
+      "prior_reverified_reused_unique": 7,
+      "new_records_unique": 29,
+      "new_content_verified_records_unique": 28,
+      "new_not_evaluable_records_unique": 1,
+      "apple_canonical_recheck_attempts": 2,
+      "fallback_failed_url_records_unique": 1,
+      "fallback_failed_fetch_events": 1,
+      "fallback_url": "https://developer.apple.com/tutorials/data/documentation/speech/sfspeechrecognizer/supportsondevicerecognition.json",
+      "note": "The initial failed-sources counters remain scoped to the initial source ledger: 12 unique failed URL records and 13 failed fetch events. The Apple canonical recheck had two metadata-only content attempts, and its DocC JSON fallback adds one failed event. Neither is a new useful canonical source."
+    }
+  },
+  "failed": [
+    {
+      "url": "https://developers.openai.com/api/docs/guides/migrate-to-responses.md",
+      "ledger_groups": [
+        "openai"
+      ],
+      "reason": "Internal fetch error; HTML fallback succeeded",
+      "attempts": 1,
+      "status": "failed",
+      "used_as_evidence": false,
+      "fallback": [
+        "https://developers.openai.com/api/docs/guides/migrate-to-responses"
+      ]
+    },
+    {
+      "url": "https://api-docs.deepseek.com/",
+      "ledger_groups": [
+        "chat"
+      ],
+      "reason": "Web fetch trả Internal Error/timeout tại landing page.",
+      "attempts": 1,
+      "status": "failed",
+      "used_as_evidence": false,
+      "fallback": [
+        "https://api-docs.deepseek.com/guides/function_calling"
+      ]
+    },
+    {
+      "url": "https://api-docs.deepseek.com/guides/thinking_mode",
+      "ledger_groups": [
+        "crosscheck"
+      ],
+      "reason": "Timeout through web tool; no thinking parameter claims extracted",
+      "attempts": 2,
+      "status": "failed",
+      "used_as_evidence": false
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/file-transcription",
+      "ledger_groups": [
+        "crosscheck"
+      ],
+      "reason": "Web tool internal error; no page content used",
+      "attempts": 1,
+      "status": "failed",
+      "used_as_evidence": false
+    },
+    {
+      "url": "https://docs.ollama.com/api/show",
+      "ledger_groups": [
+        "local"
+      ],
+      "reason": "web__run trả Internal Error khi mở trang",
+      "attempts": 1,
+      "status": "failed",
+      "used_as_evidence": false,
+      "impact": "Không dùng claim từ trang này; không gọi endpoint runtime"
+    },
+    {
+      "url": "https://docs.ollama.com/api/version",
+      "ledger_groups": [
+        "local"
+      ],
+      "reason": "web__run trả Internal Error khi mở trang",
+      "attempts": 1,
+      "status": "failed",
+      "used_as_evidence": false,
+      "impact": "Không dùng claim từ trang này; không gọi endpoint runtime"
+    },
+    {
+      "url": "https://ai-sdk.dev/docs/foundations/providers-and-models",
+      "ledger_groups": [
+        "local"
+      ],
+      "reason": "web__run không xử lý được content type text/markdown",
+      "attempts": 1,
+      "status": "failed",
+      "used_as_evidence": false,
+      "impact": "Dùng README provider chính thức của Vercel thay thế",
+      "fallback": [
+        "https://github.com/vercel/ai/blob/main/packages/openai-compatible/README.md"
+      ]
+    },
+    {
+      "url": "https://registry.npmjs.org/@langchain/openai/0.4.6",
+      "ledger_groups": [
+        "local"
+      ],
+      "reason": "web__run từ chối URL đã encode scope package vì safe URL policy",
+      "attempts": 1,
+      "status": "failed",
+      "used_as_evidence": false,
+      "impact": "Metadata vẫn được kiểm tra thành công bằng npm view chỉ đọc",
+      "fallback": [
+        "https://registry.npmjs.org/@langchain/openai"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/langchain-ai/langchainjs/8fc15659c071b818a4582ad0f5f4d043c35984af/libs/providers/langchain-openai/src/chat_models.ts",
+      "ledger_groups": [
+        "local"
+      ],
+      "reason": "404 do đường dẫn source không tồn tại ở commit đó",
+      "attempts": 1,
+      "status": "failed",
+      "used_as_evidence": false,
+      "impact": "Dùng đường dẫn chính thức libs/langchain-openai/src/chat_models.ts",
+      "fallback": [
+        "https://raw.githubusercontent.com/langchain-ai/langchainjs/54f7314a56185bcf52d832148a9f08b961f574bf/libs/langchain-openai/src/chat_models.ts"
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/realtime-transcription.md",
+      "ledger_groups": [
+        "speech"
+      ],
+      "reason": "Endpoint Markdown bị từ chối với lỗi 400 Unsupported content-type: text/markdown khi mở qua web tool.",
+      "attempts": 1,
+      "status": "failed",
+      "used_as_evidence": false
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/models/gpt-realtime-2.1.md",
+      "ledger_groups": [
+        "speech"
+      ],
+      "reason": "Endpoint Markdown bị từ chối với lỗi 400 Unsupported content-type: text/markdown khi mở qua web tool.",
+      "attempts": 1,
+      "status": "failed",
+      "used_as_evidence": false
+    },
+    {
+      "url": "https://developers.openai.com/api/reference/javascript/resources/audio/subresources/transcriptions/methods/create",
+      "ledger_groups": [
+        "speech"
+      ],
+      "reason": "Trang JavaScript API reference trả Internal Error khi mở; Python và CLI API reference canonical đã mở được.",
+      "attempts": 1,
+      "status": "failed",
+      "used_as_evidence": false
+    },
+    {
+      "url": "https://developer.apple.com/tutorials/data/documentation/speech/sfspeechrecognizer/supportsondevicerecognition.json",
+      "canonical_reference": "https://developer.apple.com/documentation/speech/sfspeechrecognizer/supportsondevicerecognition",
+      "ledger_groups": [
+        "random-recheck"
+      ],
+      "reason": "Web tool returned a non-retryable safe-open error and no document content.",
+      "attempts": 1,
+      "status": "failed",
+      "used_as_evidence": false,
+      "retrieved_date": "2026-09-06",
+      "selection": "fallback for selected random source",
+      "claim_checked": "Whether on-device speech capability documentation can be verified from the primary DocC representation",
+      "evidence_location": "Apple DocC JSON fallback",
+      "limitations": "No capability claim was extracted. The canonical documentation page remained metadata-only in the random recheck.",
+      "fallback_role": "failed fallback event for selected Apple canonical source; no fact extracted"
+    }
+  ]
+}

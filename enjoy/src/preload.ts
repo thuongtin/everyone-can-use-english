@@ -322,10 +322,9 @@ contextBridge.exposeInMainWorld("__ENJOY_APP__", {
       ipcRenderer.removeAllListeners("db-on-transaction");
     },
   },
-  camdict: {
-    lookup: (word: string) => {
-      return ipcRenderer.invoke("camdict-lookup", word);
-    },
+  bilingual: {
+    lookup: (direction: BilingualDirection, word: string) =>
+      ipcRenderer.invoke("bilingual-lookup", direction, word),
   },
   mdict: {
     remove: (dict: Dict) => ipcRenderer.invoke("mdict-remove", dict),

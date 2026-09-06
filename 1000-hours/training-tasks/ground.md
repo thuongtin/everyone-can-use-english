@@ -1,29 +1,33 @@
-# 4. 任务并不高级
+# 4. Nhiệm vụ không quá phức tạp
 
-**语音塑造**和**记忆扩展**这两个任务，是任何 6 岁以下的小朋友都已经可以做到的事情。我们自己当初就做到过，所以我们每个人其实都有足够的经验 —— 只不过，我们的记忆可能随着年龄的增加早就模糊了而已。
+::: info Ghi chú biên tập
+Chương này giữ lập luận của tác giả nhưng có các khái quát về trẻ em, não bộ và giai đoạn học ngôn ngữ chưa được chứng minh bằng nguồn trong bài. Thông điệp thực hành là người lớn vẫn có thể học và nên tận dụng hiểu biết, công cụ cùng thói quen luyện tập; không cần coi tuổi tác là lý do để bỏ cuộc, cũng không suy ra rằng mọi người sẽ tiến bộ theo cùng một tốc độ.
+:::
 
-小朋友 6 岁前后的时候，早已经**吐字清晰**。与此同时，他们的**记忆力惊人**，很多诗词他们其实并不了解其中的含义，甚至干脆不知道某些音节串起来到底是什么意思，但它们就是能够完整地记下来 —— 怎么做到呢？都一样，重复次数够多，别无其他。
+Theo tác giả, **rèn luyện phát âm** và **mở rộng trí nhớ** là hai việc trẻ dưới sáu tuổi đã từng làm được. Chính chúng ta cũng từng trải qua, nên mỗi người đều có kinh nghiệm, dù ký ức về quá trình ấy đã mờ dần theo tuổi tác.
 
-不只是他们，我们自己小时候也那样。
+Khoảng sáu tuổi, nhiều trẻ đã **nói rõ tiếng**. Trẻ cũng có thể thể hiện **khả năng ghi nhớ đáng ngạc nhiên**, chẳng hạn thuộc những bài thơ chưa hiểu hết ý nghĩa, thậm chí chưa hiểu các chuỗi âm. Tác giả lý giải điều đó chủ yếu bằng việc lặp lại đủ nhiều.
 
-因为观察到很多小朋友学语言看起来毫不费力，同时其实更是因为已经忘了自己小时候多么笨拙多么吃力，曾经有学者提出过**语言学习关键期**的概念 —— 声称人过了一定岁数之后，就会彻底失去学习新语言的能力。并且，还找来一只幼猫，把它的左眼蒙起来一段时间至其失明之后，再根据那只猫眼永远不能再用去旁证那所谓的语言学习关键期的理论。
+Không chỉ trẻ em bây giờ; khi còn nhỏ, chúng ta cũng từng làm như vậy.
 
-在接下来的许多年里，这个理论被广泛传播，刺激了一代又一代原本就极端焦虑的家长，各种事实上完全无效的早教方法层出不穷，甚至，有人还要把时间再往前推，早教已经不够用了，还要胎教……
+Tác giả kể rằng vì thấy trẻ học ngôn ngữ có vẻ nhẹ nhàng, đồng thời quên mất sự vụng về thời nhỏ của mình, **một số học giả đã đề xuất giai đoạn tới hạn trong học ngôn ngữ**, và theo cách ông mô tả lý thuyết ấy, họ khẳng định quá một độ tuổi thì con người hoàn toàn mất khả năng học ngôn ngữ mới. Đây là cách nguyên tác trình bày quan điểm của các học giả, không phải bản mô tả học thuật đã được kiểm chứng của mọi lý thuyết về giai đoạn tới hạn. Nguyên tác còn nhắc đến thí nghiệm che một mắt mèo con trong giai đoạn phát triển thị giác, gây mất thị lực kéo dài, như một ví dụ được đem liên hệ sang việc học ngôn ngữ.
 
-幸运的是，现在**语言学习关键期**的说法已经被学者们从多个角度证明为是彻头彻尾的无稽之谈。小朋友学语言的时候，事实上并不轻松，他们 18 个月左右开始牙牙学语，前后要经过差不多 30 ～ 36 个月左右才能做到彻底吐字清晰。
+Theo lời phê bình của tác giả, quan niệm này lan truyền nhiều năm, làm các bậc cha mẹ vốn lo lắng càng sốt ruột. Các phương pháp giáo dục sớm xuất hiện liên tục, rồi thời điểm bắt đầu còn bị đẩy lùi đến trước khi trẻ sinh ra, thành giáo dục thai nhi. Tác giả đánh giá nhiều phương pháp ấy là không hiệu quả, nhưng đoạn gốc không đưa nghiên cứu cho từng phương pháp.
 
-关键在于，他们一路挣扎的过程中，并没有习得人们普遍误解的所谓**语言能力**，他们只是人家说什么就自己跟着说什么，他们也尽量思考，但，由于头脑简单，所以也事实上没办法给自己造成太大的语言表达困难。当然，他们根本就没机会像成年人那样被所谓的文采或者口才拖累。
+Nguyên tác khẳng định mạnh rằng lý thuyết giai đoạn tới hạn đã bị bác bỏ hoàn toàn từ nhiều phía. Đồng thời, tác giả lưu ý trẻ thực ra học không nhẹ nhàng: khoảng 18 tháng bắt đầu bập bẹ và cần thêm khoảng 30 đến 36 tháng mới nói rõ. Đây là cách trình bày của nguyên tác; không nên dùng các mốc này làm tiêu chuẩn chẩn đoán phát triển, hoặc xem lời khẳng định về lý thuyết là kết luận khoa học đã được chứng minh trong tài liệu này.
 
-相对于成年人，他们也的确有一定的优势。大脑里没有**旧的近似网络**与**新建网络竞争**；他们认为一切都有学习的必要；他们处于父母的保护之中，也不知道这个世界的危险，所以，大脑在很多方面尚未给他们设定**安全阈值**；他们不在意甚至也不知道外界对他们的**关注**；他们做得不好也兴高采烈；他们的所有注意力都集中在自己正在模仿的动作上；他们无论干什么都不厌其烦地**重复**，并且还乐于不断**更换**各种奇怪的**方式**……
+Điểm tác giả muốn nhấn mạnh là trong quá trình chật vật ấy, trẻ chủ yếu nghe người khác nói rồi bắt chước, chưa phải xử lý toàn bộ những kỹ năng thường bị gom chung vào **năng lực ngôn ngữ**. Trẻ có suy nghĩ, nhưng điều muốn diễn đạt còn đơn giản nên chưa tự tạo ra nhiều yêu cầu khó như người lớn. Trẻ cũng chưa bị áp lực phải viết hay hoặc nói thật hùng biện.
 
-原本随着年龄的增加，成年人的学习能力要变得越来越强才对。成年人理论上应该学什么都比小孩子学得快。成年人相对来看应该有更强的理解能力，应该有更强的自我控制能力，成年人可以学习甚至研究方法论，成年人还可以使用更多的辅助工具……
+Tác giả liệt kê một số lợi thế tương đối của trẻ: chưa có nhiều **thói quen gần giống đã hình thành** cạnh tranh với **thói quen mới**; thấy mọi thứ đều đáng học; được cha mẹ bảo vệ và chưa biết hết nguy hiểm; chưa bị ràng buộc bởi nhiều **ngưỡng an toàn** theo cách giải thích của tác giả; ít chú ý đến việc bị người khác **quan sát**; làm chưa tốt vẫn vui; tập trung vào động tác đang bắt chước; và không ngại **lặp lại** cũng như **thử nhiều cách khác nhau**.
 
-相对来看，为什么到最后大部分成年人更可能失败呢？最合理的解释，大抵上应该是：
+Mặt khác, về lý thuyết, người trưởng thành có nhiều lợi thế để học nhanh hơn trẻ: hiểu biết tốt hơn, khả năng tự kiểm soát tốt hơn, có thể tìm hiểu phương pháp học và sử dụng nhiều công cụ hỗ trợ.
 
-> 绝大多数成年人虽然年龄增加了，但，在自学能力上从未有所进步，甚至，一直在退化……
+Vậy tại sao, theo quan sát của tác giả, nhiều người lớn vẫn dễ thất bại? Ông đưa ra lời giải thích sau:
 
-我们的训练任务，将要达到的重要效果之一，若是真讲出来，听着都有点好笑：
+> Tuổi tác của phần lớn người trưởng thành tăng lên, nhưng khả năng tự học không tiến bộ tương ứng, thậm chí còn suy giảm.
 
-> 找回我们自己学龄前的能力……
+Một hiệu quả quan trọng mà chương trình luyện tập này hướng tới nghe có vẻ lạ:
 
-曾经，每个人都的确是天才，却最终大多都被教育成了笨蛋 —— 相信我，**人傻都是被教出来的**。
+> Tìm lại những khả năng chúng ta từng có trước tuổi đi học.
+
+Tác giả kết thúc bằng lời phê bình gay gắt: mỗi người từng là một thiên tài, nhưng nhiều người bị giáo dục thành vụng về; theo cách nói của ông, “sự kém cỏi cũng có thể là điều được dạy cho”. Đây là quan điểm phê bình giáo dục của tác giả, không phải nhãn đánh giá năng lực của người học.

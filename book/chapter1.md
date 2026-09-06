@@ -1,395 +1,431 @@
-# 第一章 起点
+# Chương 1. Điểm khởi đầu
 
-## 1. 我们有可能把外语用得比母语更好吗？
+## 1. Chúng ta có thể dùng ngoại ngữ giỏi hơn tiếng mẹ đẻ không?
 
-能。
+Có.
 
-过去我跟你一样不相信。但，现在我信了，因为我这些年教出了太多这样的学生。我亲眼见证了太多这样在别人看来是 “奇迹” 的平常事件。
+Trước kia, tôi cũng không tin, giống bạn. Nhưng bây giờ tôi tin, bởi trong những năm qua, tôi đã dạy quá nhiều học sinh như vậy. Tôi tận mắt chứng kiến quá nhiều chuyện bình thường mà người khác xem là “kỳ tích”.
 
-所有的多语使用者（multilingual）都一样，最终，在他们所使用的多种语言之中，总是有一个 “主导语言”（Dominant Language）。究竟哪一个是主导语言，并不取决于哪一个是母语，而取决于哪一个语言被使用得最多。
+Người sử dụng nhiều ngôn ngữ (multilingual) đều như vậy: cuối cùng, trong những ngôn ngữ họ sử dụng, luôn có một “ngôn ngữ chủ đạo” (Dominant Language). Ngôn ngữ nào giữ vai trò đó không phụ thuộc vào việc nó có phải tiếng mẹ đẻ hay không, mà phụ thuộc vào ngôn ngữ nào được dùng nhiều nhất.
 
-我自己从小就是双语使用者（Bilingual）──因为我是朝鲜族。韩文、中文，对我来说都是母语，反正从小都会，一样的流利。然而，随着日子的推移，由于在生活中使用中文的频度远远高于韩文，最终，对我来说，主导语言就是中文了──只因为我使用它是最多的。
+Bản thân tôi đã song ngữ (Bilingual) từ nhỏ, vì tôi là người dân tộc Triều Tiên tại Trung Quốc. Với tôi, tiếng Hàn và tiếng Trung đều là tiếng mẹ đẻ; từ nhỏ tôi đã biết cả hai và nói lưu loát như nhau. Nhưng theo thời gian, tần suất dùng tiếng Trung trong cuộc sống vượt xa tiếng Hàn, nên cuối cùng tiếng Trung trở thành ngôn ngữ chủ đạo của tôi, đơn giản vì tôi dùng nó nhiều nhất.
 
-在过去的五年里，我带出很多高中生。他们从高一（其中的一些稍微晚一些）就开始为了出国留学做准备。在保证在校课业的前提下，他们需要付出额外的努力，获得 TOEFL 高分，获得 SAT 高分，以便最终在高三毕业的那一年秋季漂洋过海到美国名校读书。我所接触的最早的那一批高中生，现在早已经本科毕业，绝大多数都在常青藤名校中攻读博士学位……
+Trong năm năm qua, tôi đã dìu dắt nhiều học sinh trung học phổ thông. Các em bắt đầu chuẩn bị du học từ lớp 10, một số muộn hơn đôi chút. Vừa phải bảo đảm việc học ở trường, các em vừa phải cố gắng thêm để đạt điểm TOEFL và SAT cao, rồi sang học tại những trường đại học danh tiếng ở Mỹ vào mùa thu năm tốt nghiệp phổ thông. Nhóm học sinh đầu tiên tôi từng tiếp xúc nay đã tốt nghiệp đại học từ lâu; tuyệt đại đa số đang học tiến sĩ ở các trường danh tiếng thuộc Ivy League…
 
-对这些人来说，从实际情况看，他们的主导语言可能早已不再是他们的母语，而是英文。因为在他们成长最为迅猛、获取知识信息最为集中而又丰厚的阶段里，他们所使用几乎全部是英文。事实上，在他们离开中国之前的三年里，他们的英语水平就已经远远超出其他人的想象──很多学生 SAT 成绩 2300 分以上：这样的成绩，即便是在美国人之中，也是属于百里挑一的[^1]。在到达美国之后，仅从他们的阅读量来看，就只能是越来越大而不可能越来越小，他们使用英文的频率和中文的频率，尤其是在听说方面，早已经拉开差距。（注意，2016 年之后，SAT 总分更改为 1600 分。）
+Xét thực tế, ngôn ngữ chủ đạo của những người này có thể từ lâu đã là tiếng Anh, thay vì tiếng mẹ đẻ. Bởi trong giai đoạn trưởng thành nhanh nhất, tiếp nhận kiến thức và thông tin tập trung, phong phú nhất, gần như mọi thứ họ sử dụng đều bằng tiếng Anh. Thực ra, ngay trong ba năm trước khi rời Trung Quốc, trình độ tiếng Anh của họ đã vượt xa tưởng tượng của người khác. Nhiều em đạt SAT trên 2.300 điểm; ngay trong số người Mỹ, đây cũng là thành tích thuộc nhóm một phần trăm đứng đầu[^1]. Sau khi sang Mỹ, riêng lượng đọc của họ chỉ có thể tăng chứ không thể giảm; tần suất dùng tiếng Anh và tiếng Trung đã cách xa nhau, đặc biệt ở nghe và nói. (Lưu ý: từ năm 2016, tổng điểm SAT đổi thành 1.600.)
 
-甚至，他们之中的一些人（不见得是少数），从入读美国名校的那一刻起，就开始学习另外一门外语，比如法语、西班牙语、德语等；而两三年之后，他们已经可以熟练地使用 “第三语言” 听说读写……
+Thậm chí một số em, có lẽ không phải số ít, bắt đầu học thêm một ngoại ngữ khác ngay khi vào trường đại học danh tiếng ở Mỹ, chẳng hạn tiếng Pháp, tiếng Tây Ban Nha hoặc tiếng Đức. Hai, ba năm sau, các em đã có thể nghe, nói, đọc, viết thành thạo bằng “ngôn ngữ thứ ba”…
 
-我在国内大学举办讲座的时候，常常提起这些学生，而台下很多为了四六级考试苦苦挣扎的学生往往向我报以怀疑的态度：“切，谁信啊？”，“怎么可能呢！” 我理解。对他们来说，这种事情是绝对不可能的──尽管，那只是他们觉得不可能而已。
+Khi diễn thuyết tại các trường đại học trong nước, tôi thường nhắc đến những học sinh này. Nhiều sinh viên bên dưới đang chật vật với kỳ thi CET-4 và CET-6 thường tỏ vẻ nghi ngờ: “Xì, ai mà tin!”, “Làm sao có thể được!”. Tôi hiểu. Với họ, chuyện đó tuyệt đối không thể xảy ra, dù thực chất chỉ là họ cảm thấy không thể mà thôi.
 
-“我们能把外语用得比母语更好吗？”
+“Chúng ta có thể dùng ngoại ngữ giỏi hơn tiếng mẹ đẻ không?”
 
-这个问题的答案是 “能”。
+Câu trả lời là “Có”.
 
-而这仅有一个字的答案非常重要。
+Và câu trả lời ngắn gọn ấy vô cùng quan trọng.
 
-尽管不是每个人都能做到，但，“能” 或起码 “有可能” 这个事实，会改变一切的，至少可以改变一些人的一切。这就好像总是有一小部分人会真正明白：1 和 99 之间的差别再大，也不如 0 和 1 之间的差别大。
+Dù không phải ai cũng làm được, sự thật rằng “có thể”, hoặc ít nhất “có khả năng”, sẽ thay đổi tất cả, ít nhất là mọi thứ đối với một số người. Cũng như luôn có một số ít người thực sự hiểu rằng: chênh lệch giữa 1 và 99 dù lớn đến đâu cũng không bằng chênh lệch giữa 0 và 1.
 
-知道这一个字的答案，很可能就是一些人重生的起点。
+Biết câu trả lời ấy rất có thể là điểm khởi đầu để một số người làm lại cuộc đời.
 
-[^1]: 读者有兴趣可以到 collegeboard.com 上查看一下官方的[SAT Percentile Ranks](http://www.collegeboard.com/prod_downloads/highered/ra/sat/composite_CR_M_W_percentile_ranks.pdf)
+[^1]: Bạn đọc quan tâm có thể xem bảng [SAT Percentile Ranks](http://www.collegeboard.com/prod_downloads/highered/ra/sat/composite_CR_M_W_percentile_ranks.pdf) chính thức trên collegeboard.com.
 
-## 2. 可为什么大多数人就是学不好？
+> **Ghi chú biên tập cho bản tiếng Việt:** Lời kể dùng bối cảnh và các mốc thời gian của tác giả tại Trung Quốc. CET-4 và CET-6 là các kỳ thi tiếng Anh đại học của Trung Quốc, không phải kỳ thi tại Việt Nam. Điểm SAT 2.300 thuộc thang 2.400 cũ; liên kết ở chú thích là tài liệu lịch sử. “Ngôn ngữ chủ đạo” có thể khác nhau theo kỹ năng và hoàn cảnh sử dụng; đây không phải yêu cầu người Việt phải thay thế tiếng mẹ đẻ mới học tiếng Anh thành công.
 
-“学了这么多年，怎么却越学越差……”
+## 2. Vậy vì sao phần lớn mọi người vẫn học không giỏi?
 
-这是我当初的困惑。多年来四处巡回演讲、授课，也让我知道很多很多人都有只多不少的共鸣──我并不孤独。
+“Học bao nhiêu năm rồi, sao càng học lại càng kém…”
 
-为什么我们竟然越学越差？
+Đó từng là điều khiến tôi băn khoăn. Những năm đi diễn thuyết và giảng dạy khắp nơi giúp tôi biết rằng rất nhiều người còn đồng cảm sâu sắc hơn nữa. Tôi không đơn độc.
 
-因为我们从未相信自己能够学会、学好！
+Vì sao chúng ta lại càng học càng kém?
 
-更令人在想明白之后不寒而栗的是：我们甚至可能并不知道 “我们从未相信过”。
+Vì chúng ta chưa từng tin mình có thể học được, học giỏi!
 
-骨子里我们中的绝大多数人从来都不相信我们能够学好一门外语──更不用说多种语言。那些精通多种语言的人，在我们眼里都是天赋异禀的人，“和我们普通人不一样”。
+Điều còn khiến người ta lạnh gáy khi hiểu ra là: có thể chúng ta thậm chí không biết rằng “mình chưa từng tin”.
 
-尽管在过去的许多年里（小学六年、中学六年、本科四年……）我们一直都在 “努力” 学习英语，可事实上收效甚微。一旦肯坦然面对，每个 “努力学英语” 十数年而不得的人都会承认：这些年其实真正学习的时间少之又少。
+Trong thâm tâm, tuyệt đại đa số chúng ta chưa từng tin mình có thể học tốt một ngoại ngữ, huống chi nhiều ngôn ngữ. Trong mắt chúng ta, người thông thạo nhiều thứ tiếng đều có thiên tư đặc biệt, “khác với người bình thường như mình”.
 
-一方面是确实知道英语这东西非常有用所以最好能够习得，一方面又是因骨子里不相信自己确实能够习得而造成实际上并不努力，而还有一方面是这两个截然相反的观念导致学习者焦虑和无奈。
+Dù suốt nhiều năm qua, sáu năm tiểu học, sáu năm trung học, bốn năm đại học…, chúng ta luôn “cố gắng” học tiếng Anh, kết quả thực tế lại rất ít. Chỉ cần sẵn lòng nhìn thẳng, bất cứ ai đã “cố học tiếng Anh” hơn chục năm mà chưa thành công đều sẽ thừa nhận: thời gian thực sự học trong những năm ấy ít đến đáng ngạc nhiên.
 
-究竟是什么使得我们 “从未相信” 呢？究竟是什么让我们 “从未相信” 而又并不自知呢？
+Một mặt, ta biết rõ tiếng Anh rất hữu ích nên tốt nhất là học được. Mặt khác, vì sâu thẳm không tin mình thực sự có thể học được, ta lại không thực sự cố gắng. Hai quan niệm trái ngược ấy còn khiến người học lo âu và bất lực.
 
-也许有很多原因。但我们的中学英语课本绝对是罪魁祸首（起码是之一）。在我们国家，高考英语词汇大纲，基本上由 3500 个左右的词汇构成。由于区域的不同，教材不同，我们姑且往多了算一点，算它 3600。尽管我们并不知道这个数字给我们带来的影响究竟是什么，但不可争辩的事实是，我们确实知道这个数字──起码知道个大概。
+Rốt cuộc điều gì khiến chúng ta “chưa từng tin”? Điều gì khiến chúng ta “chưa từng tin” mà không tự biết?
 
-高中毕业之前，我们至少学了 6 年的英语──小学和幼儿园姑且不算数。那这意味着什么呢？3600 这个数字告诉我们，每年我们能够习得 600 个英文单词就可以了──如果真的做到了的话，那么在高考的英语考试中，成绩必然名列前茅 …… 一年有 365 天，那平均每天学多少个单词就够了呢？不到 2 个就够了……
+Có thể có nhiều nguyên nhân. Nhưng sách giáo khoa tiếng Anh trung học của chúng ta chắc chắn là thủ phạm chính, ít nhất là một trong số đó. Ở Trung Quốc, danh mục từ vựng tiếng Anh cho kỳ thi tuyển sinh đại học gaokao về cơ bản gồm khoảng 3.500 từ. Do khác biệt giữa các vùng và bộ sách, hãy tính dư lên một chút, thành 3.600. Dù không biết con số ấy ảnh hưởng đến mình thế nào, có một sự thật không thể tranh cãi: chúng ta quả thực biết con số đó, ít nhất cũng biết đại khái.
 
-高考词汇大纲里的英文词汇数量，悄无声息地向每一个孩子传递着这样的消息：
-1. 英语很难很难……
-2. 你很笨很笨……
-3. 一天能学两个单词就很了不起了！
+Trước khi tốt nghiệp phổ thông, ta đã học tiếng Anh ít nhất sáu năm, tạm chưa tính tiểu học và mẫu giáo. Điều đó có nghĩa gì? Con số 3.600 nói rằng mỗi năm chỉ cần học được 600 từ tiếng Anh. Nếu thực sự làm được, điểm thi tiếng Anh gaokao hẳn sẽ thuộc nhóm đầu… Một năm có 365 ngày, vậy trung bình mỗi ngày cần học bao nhiêu từ? Chưa đến hai từ là đủ…
 
-嗯。就是这样。
+Số từ tiếng Anh trong danh mục gaokao âm thầm truyền đến mỗi đứa trẻ những thông điệp sau:
 
-2010 年春天，我完成此书的初稿。当时我还觉得很难向读者简洁明了地把这个道理讲明白说清楚 。幸运的是，2010 年秋天，好莱坞的导演克里斯托弗•诺兰拍了一部誉满全球的大片──“Inception”（中译 “盗梦空间”）。这个片名（直译为 “植入”）成为众人皆知的概念。这帮了我一个大忙！诺兰在电影里向观众交代：一个想法必须足够简单才可能被植入；越是简单的想法，在植入之后越是根深蒂固；因为拥有这个想法的人无法分辨这个想法是自己的还是被植入的 …… 同样的道理，高考词汇大纲就是以这种方式，把那个极为简单的想法悄悄地 “植入” 到我们的大脑之中，进而使其根深蒂固，影响我们一生……
+1. Tiếng Anh khó lắm, khó lắm…
+2. Em ngốc lắm, ngốc lắm…
+3. Mỗi ngày học được hai từ đã là giỏi lắm rồi!
 
-很多的时候，**人傻是被教出来的**。教育这东西，从来都是在失败中发挥作用──所以成功必然是偶然。教育的古怪之处在于，如果把学生当做天才去教育，学生几乎注定不会成为天才，因为天才是靠自学的；但是，如果把学生当做弱智去教育，那学生肯定会变成弱智──因为人傻是被教出来的。
+Ừ. Chính là như vậy.
 
-还好，谁都有自学的权利，而事实上，无论是谁都多多少少有一定的自学能力。更好的是，有一些知识是可以瞬间点透并发挥作用的。之前的一节，回答了这个问题，“我们有可能把外语用得比母语还好吗？” 答案是 “能”。知道这个答案的意义就在于它能够把之前被植入的想法斩草除根。
+Mùa xuân năm 2010, tôi hoàn thành bản thảo đầu tiên của cuốn sách này. Khi ấy, tôi vẫn thấy khó giải thích ý trên sao cho ngắn gọn, rõ ràng với bạn đọc. May thay, mùa thu năm 2010, đạo diễn Hollywood Christopher Nolan làm bộ phim bom tấn nổi tiếng toàn cầu “Inception”, tên tiếng Trung có nghĩa là “Không gian đánh cắp giấc mơ”. Tên phim, mà tôi diễn giải sát nghĩa là “cấy vào”, trở thành một khái niệm ai cũng biết. Điều đó giúp tôi rất nhiều! Trong phim, Nolan giải thích với khán giả: một ý tưởng phải đủ đơn giản mới có thể được cấy vào; ý tưởng càng đơn giản thì sau khi được cấy càng bám rễ sâu, bởi người mang ý tưởng ấy không phân biệt được nó do mình nghĩ ra hay được cấy vào… Tương tự, danh mục từ vựng gaokao đã âm thầm “cấy” ý tưởng cực kỳ đơn giản kia vào não chúng ta, khiến nó ăn sâu, ảnh hưởng đến cả đời…
 
-## 3. 为什么另外一些人却 “轻松” 学会了？
+Nhiều khi, **người ta trở nên ngốc nghếch vì được dạy thành như thế**. Giáo dục luôn phát huy tác động qua thất bại, nên thành công tất yếu chỉ là ngẫu nhiên. Điều kỳ lạ ở giáo dục là: nếu dạy học sinh như những thiên tài, gần như chắc chắn các em sẽ không thành thiên tài, vì thiên tài dựa vào tự học; nhưng nếu dạy các em như những người thiểu năng trí tuệ, các em chắc chắn sẽ trở thành như vậy, bởi sự ngốc nghếch là thứ được dạy mà ra.
 
-与 “越学越差” 的人相对，有一些人，也许是少数，却轻松地学会了，学好了──正如我之前提到的那些已经在美国名校读书的 “幸运儿” 们一样。
+May mà ai cũng có quyền tự học. Thực ra, bất cứ ai cũng ít nhiều có năng lực tự học. Tốt hơn nữa, có những điều chỉ cần được chỉ ra là ta hiểu ngay và chúng bắt đầu phát huy tác dụng. Mục trước đã trả lời câu hỏi: “Chúng ta có thể dùng ngoại ngữ giỏi hơn cả tiếng mẹ đẻ không?”. Câu trả lời là “Có”. Ý nghĩa của việc biết câu trả lời này nằm ở chỗ nó có thể nhổ tận gốc ý tưởng đã bị cấy vào trước đó.
 
-问题在于，他们也被植入了同样的想法──他们也在国内的高中读书，他们用的也是同样的教材，在同样的课堂里上课，遇到的是同样的英语老师 …… 那为什么他们没有受到影响呢？
+> **Ghi chú biên tập:** Các con số về số năm học, từ vựng và gaokao mô tả bối cảnh Trung Quốc trong nguyên tác, không phải chuẩn chương trình Việt Nam. Đoạn phê phán giáo dục dùng lời lẽ tuyệt đối và cách gọi mang tính miệt thị của tác giả; đó không phải chẩn đoán về năng lực hay khuyết tật trí tuệ của người học. Không nên quy mọi khó khăn học tập cho việc thiếu niềm tin. “Cấy ý tưởng” là mô-típ của phim *Inception*, không phải bằng chứng nghiên cứu về tác động của danh mục từ vựng; *inception* trong tiếng Anh nghĩa là sự bắt đầu hoặc khởi đầu, không phải bản dịch sát nghĩa của “cấy vào”.
 
-答案是，他们被植入了另外一种想法，尽管他们自己可能并不知道实情。
-这些学生绝大多数都是成长在中国的都会城市中，在那些城市里，都会至少有一个提供 TOEFL/SAT 培训的机构。
+## 3. Vì sao những người khác lại học được một cách “dễ dàng”?
 
-这类培训机构存在的本身，比它们的 “教学质量” 更重要。这类培训机构在不停地向外散播一个消息：有一个考试叫 TOEFL（这两年它们又让更多人了解到另外一个考试，叫 SAT），很多人去学，很多人去考，最终也有很多人获得了高分（至于得到消息的人是否在这里犯了逻辑错误并不重要，重要的是，连这种错误的逻辑关系都是向外传递的强大信息的重要组成部分[^2]）…… 更为重要的是，那些去学、去考、最终获得高分的人就在身边；而人们看到 “甚至还不如自己 [^3]” 的人去学、去考、最终获得高分的时候，采取行动就是自然而然的了。
+Trái với những người “càng học càng kém”, có một số người, có lẽ là số ít, lại học được và học giỏi một cách dễ dàng, giống những “người may mắn” tôi đã nói đến, đang theo học tại các trường danh tiếng ở Mỹ.
 
-换言之，“这种培训机构的存在” 这个事实本身对学生来讲可能要比 “去某个培训机构上课” 更有意义、更有影响。这不是我自己的理论，事实上，在国外有种专门的课程，叫做 “Power of the place”──地理学的一个分支，专门研究这种机理及其影响。
+Vấn đề là họ cũng bị cấy cùng ý tưởng ấy. Họ cũng học phổ thông trong nước, dùng cùng sách giáo khoa, ngồi trong những lớp học tương tự, gặp những giáo viên tiếng Anh tương tự… Vậy tại sao họ không bị ảnh hưởng?
 
-这就是观念的力量。如果你不知道 TOEFL 考试的存在，你甚至没机会去参加那个考试。如果你不认为那是个有可能获得高分的考试，那你甚至可能根本不会尝试去努力。仅仅因为你知道了它的存在，你就有可能开始努力；仅仅因为你看到 “甚至还不如你的人”（尽管这很可能干脆就是个幻觉）获得了高分，你就没有理由不去努力，最终你也有可能获得高分……
+Câu trả lời là họ đã được cấy một ý tưởng khác, dù bản thân có thể không biết chuyện đó.
+Phần lớn những học sinh này lớn lên ở các đô thị Trung Quốc. Tại đó, ít nhất cũng có một cơ sở luyện thi TOEFL/SAT.
 
-事实上，“**我也行**” 这三个字是绝大多数普通人最现实最有效的动力。在像习得第二语言这样基本上不需要依赖天赋的领域之中更是如此。
+Chỉ riêng sự tồn tại của những cơ sở này đã quan trọng hơn “chất lượng giảng dạy” của chúng. Chúng liên tục phát ra một thông điệp: có kỳ thi tên TOEFL, và trong hai năm gần đây chúng còn giúp nhiều người biết thêm kỳ thi SAT; nhiều người đi học, nhiều người đi thi, cuối cùng nhiều người đạt điểm cao. Việc người tiếp nhận thông tin có mắc lỗi logic ở đây hay không không quan trọng; điều quan trọng là ngay cả mối liên hệ logic sai ấy cũng góp phần tạo nên thông điệp mạnh mẽ được truyền đi[^2]… Quan trọng hơn, những người đi học, đi thi rồi đạt điểm cao ở ngay bên cạnh họ. Khi thấy người “thậm chí còn kém mình[^3]” đi học, đi thi và đạt điểm cao, việc bắt tay hành động trở nên tự nhiên.
 
-[^2]: 人们常常误会因果关系：他们看到别人先去参加某个培训，后来获得了高分，于是就认为“那个培训班”和“获得高分”之间是因果关系；这和“认为鸡叫唤起了太阳”本质上没什么两样。
+Nói cách khác, đối với học sinh, sự thật rằng “cơ sở luyện thi như vậy tồn tại” có thể có ý nghĩa và ảnh hưởng lớn hơn việc “đến một cơ sở nào đó học”. Đây không phải lý thuyết của riêng tôi. Thực ra, ở nước ngoài có một môn học chuyên biệt gọi là “Power of the place”, một nhánh của địa lý học nghiên cứu cơ chế này và ảnh hưởng của nó.
 
-[^3]: 人们总是倾向于高估自己。比如，有一个有趣的调查发现，70%以上的司机认为自己的驾驶水平处于中等以上。所以，“甚至还不如自己”很多的时候只不过是一个幻觉。
+Đó là sức mạnh của quan niệm. Nếu không biết kỳ thi TOEFL tồn tại, bạn thậm chí không có cơ hội dự thi. Nếu không nghĩ đây là kỳ thi có thể đạt điểm cao, bạn có thể chẳng thử cố gắng. Chỉ vì biết nó tồn tại, bạn có thể bắt đầu nỗ lực; chỉ vì thấy “người thậm chí còn kém mình” đạt điểm cao, dù nhận định ấy rất có thể chỉ là ảo tưởng, bạn không còn lý do để không cố gắng, và cuối cùng bạn cũng có thể đạt điểm cao…
 
-## 4. 观念是如何影响我的？
+Thực ra, câu “**Tôi cũng làm được**” là động lực thực tế và hiệu quả nhất đối với tuyệt đại đa số người bình thường. Điều này càng đúng trong lĩnh vực về cơ bản không cần dựa vào thiên bẩm như việc tiếp thu ngôn ngữ thứ hai.
 
-观念的力量有时如此之大，乃至于某个观念上的一点点改变，就可能够改变一个人的一生。
+[^2]: Người ta thường hiểu nhầm quan hệ nhân quả: thấy người khác đi học một khóa luyện thi rồi đạt điểm cao, họ cho rằng “khóa luyện thi ấy” và “đạt điểm cao” có quan hệ nhân quả. Về bản chất, điều này chẳng khác gì cho rằng “tiếng gà gáy gọi mặt trời mọc”.
 
-穿透表象深入实质并不像说起来的那么容易。历史学家们许多年的研究过后才达成共识，当初打败印第安人的并不是欧洲人的先进军火，而是欧洲人身上所存在的、那无论是当时的欧洲人还是印第安人都看不见摸不着的病毒打败了印第安人，使他们成群地病倒、死去，使当时的欧洲人看起来 “有如神助” ……
+[^3]: Người ta luôn có xu hướng đánh giá mình quá cao. Chẳng hạn, một khảo sát thú vị cho thấy hơn 70% tài xế cho rằng khả năng lái xe của mình trên mức trung bình. Vì vậy, “thậm chí còn kém mình” nhiều khi chỉ là ảo tưởng.
 
-所以，很多时候问题的实际根源与那显而易见的表象之间总是相去甚远。而观念的力量在我个人身上也有过一次戏剧性的体现。
+> **Ghi chú biên tập:** Nguyên tác không nêu nguồn cụ thể cho khảo sát tài xế hoặc môn học “Power of the place”. Các nhận định về cơ sở luyện thi và thiên bẩm là lập luận của tác giả, không phải bảo đảm rằng cần mua khóa học mới tiến bộ. Với người học ở Việt Nam, có thể tìm những ví dụ gần mình: một đồng nghiệp đọc được tài liệu tiếng Anh, một người bạn giao tiếp được trong công việc, hoặc chính một việc nhỏ bạn làm được tốt hơn tuần trước.
 
-大约二十年前（1988 年前后）我刚上高中。我父亲的教研室里 有位教英语的副教授去考了一次托福，成绩是 570 分（满分 677 分）。大家提起这事儿的时候都说，“这个成绩已经不错了！”（因为之前有另外一个教授去考过，是 530 分……）尽管我不懂那是什么样的考试，但留下了个印象：这是个很难的考试。
+## 4. Quan niệm đã ảnh hưởng đến tôi thế nào?
 
-又过了好几年，1993 年，我读大三。隔壁班的一位同学据说要考托福。现在想来，当时在北京读书的大学生们都在如火如荼地准备这个考试，可是当时的长春，根本没有人知道这个考试。在那里，我就算见多识广的了。某天晚上回到寝室大家提起这件事儿的时候，我就给大家讲了讲托福考试有多难。大家听到大学老师也只不过考了个 570 分的时候，吐了吐舌头，都说，“这干脆就不是人考的么！” 之后，大家给那位同学起了个外号 —— “牲口”。
+Sức mạnh của quan niệm đôi khi lớn đến mức một thay đổi rất nhỏ trong cách nghĩ cũng có thể thay đổi cả cuộc đời một người.
 
-那一年夏天，我到北京找在清华读书的一个高中同学，请他学计算机的同学为我攒一台 486 电脑。路上走过一处平房的时候，他指着那房子说，“那就是新东方”。他的口气就好像是我应该知道一样。于是我问，“什么新东方？” 他告诉我那是个英语培训机构，要出国，就到那里参加培训。据说大学生都在传：“去那里不一定能打高分，但是不去那里肯定打不了高分。” 转瞬间这个话题就过去，我们接着聊了些什么，现在的我早已经没有了记忆……
+Đi xuyên qua bề ngoài để chạm đến bản chất không dễ như lời nói. Các nhà sử học phải nghiên cứu nhiều năm mới đi đến đồng thuận rằng: thứ đánh bại người bản địa châu Mỹ thuở ấy không phải vũ khí tối tân của người châu Âu, mà là virus họ mang theo, thứ cả người châu Âu lẫn người bản địa khi ấy đều không nhìn thấy hay sờ được. Virus khiến người bản địa đổ bệnh và chết hàng loạt, làm người châu Âu trông như “được thần linh phù hộ”…
 
-许多年后，我在新东方教书好几年之后的某一天，我才突然记起，实际上很多很多年前，俞敏洪同学还处于创业阶段的时候，我其实就听说过新东方……
-而当时寝室里的讨论，很快就被同学们忘得一干二净。我现在甚至不大记得那位同学的名字。当然更不知道他托福究竟考了多少分，但他第二年去了美国，这我倒是知道的。
+Vì vậy, nhiều khi căn nguyên thực sự của vấn đề rất xa với biểu hiện tưởng như hiển nhiên. Sức mạnh của quan niệm cũng từng thể hiện đầy kịch tính trong cuộc đời tôi.
 
-2000 年年底，已经从大学毕业多年，期间做销售、做批发赚了很多钱，后又在家陪父亲养病而花光了积蓄的我，急需一份稳定的工作。后来有个高中同校的朋友从北京打来电话，说，“笑来，来北京吧，到新东方教书，收入不错。” 这时我早已忘了六年前曾经听北京的同学提过新东方，只是问他，“收入确定不低吗？” 朋友说，“放心，以你的口才，肯定没问题！” 我就这样坐火车到北京，到新东方报了一期班；又在新东方的门口费力买来各种题集，而后把自己关在海淀区双榆树的一个 11 层的一居小房子里四个月时间，考了托福、考了 GRE，拿着变态成绩去新东方应聘。而后一口气那里教了七年。期间，新东方教育科技集团在美国纽约证交所上市，代码为 EDU。
+Khoảng hai mươi năm trước, quanh năm 1988, tôi vừa vào trung học phổ thông. Một phó giáo sư dạy tiếng Anh trong bộ môn của cha tôi thi TOEFL được 570 điểm, trên tổng 677. Mọi người nhắc đến đều nói: “Điểm thế là tốt rồi!”. Trước đó, một giáo sư khác đi thi được 530 điểm… Dù không hiểu đó là kỳ thi gì, tôi vẫn giữ lại ấn tượng rằng nó rất khó.
 
-2003 年，《托福核心词汇 21 天突破》 出版发行的那天，我请客， 一大堆朋友闲聊，不知怎么一下子想起来 1994 年（那是已经是大约十年前了）我去中关村攒电脑时路过新东方旧址的情形，进而又一下想起来那个被我们起了外号叫 “牲口” 的同学，不禁打了个寒颤。
+Mấy năm nữa trôi qua. Năm 1993, tôi học năm ba đại học. Nghe nói một bạn lớp bên định thi TOEFL. Nghĩ lại bây giờ, sinh viên ở Bắc Kinh khi ấy đang ôn thi sôi nổi, nhưng ở Trường Xuân thì chẳng ai biết kỳ thi này. Ở đó, tôi đã được xem là người biết rộng. Một tối về ký túc xá, khi mọi người nhắc đến chuyện ấy, tôi kể TOEFL khó đến mức nào. Nghe rằng giảng viên đại học cũng chỉ được 570 điểm, ai nấy lè lưỡi: “Thế thì có phải kỳ thi dành cho con người đâu!”. Sau đó, mọi người đặt biệt danh cho bạn ấy là “thú vật”.
 
-这个寒颤之前，我一直觉得自己 2000 年以 28 岁的 “高龄” 把自己关到一个小屋子里四个月就搞定托福、GRE 高分是一件值得自吹自擂的事情；可是这个寒颤之后，我突然发现我其实 “很傻很天真”（1993 年）的时候，就有机会去考托福、GRE，可当时竟然以为那是 “不可能” 的事情；还自以为是地与其他同学一样叫那位同学 “牲口”…… 如若那年我去准备托福、GRE 考试（而不是 28 岁那年 —— 七年之差啊！），现在想来当时若以我还在学校的聪明脑瓜，也许不用四个月（可能三个月？）就能搞定高分。如若真的如此，此后的人生岂不是天壤之别？现在想来，那是我的心智简直就是 “畜生”，不禁暗自虚汗犹如大雨磅礴 。
+Mùa hè năm ấy, tôi đến Bắc Kinh gặp một bạn phổ thông đang học ở Đại học Thanh Hoa, nhờ bạn học ngành máy tính của cậu ấy lắp cho tôi một máy 486. Đi ngang một dãy nhà một tầng, cậu ấy chỉ vào và nói: “Đó là Tân Đông Phương”. Giọng cậu ấy như thể tôi hẳn phải biết. Tôi hỏi: “Tân Đông Phương nào?”. Cậu ấy bảo đó là cơ sở đào tạo tiếng Anh, muốn ra nước ngoài thì đến đó luyện thi. Nghe nói sinh viên truyền tai nhau: “Đến đó chưa chắc đạt điểm cao, nhưng không đến thì chắc chắn không đạt điểm cao”. Câu chuyện lướt qua rất nhanh; sau đó chúng tôi nói gì, giờ tôi không còn nhớ…
 
-我经常把我的这段经历讲给我的学生听。人就是这样，大道理听多了到最后都听不进去，看得见摸得着的真实例子才会打动他们。这些年来，我知道我的这段经历给身边很多的学生带来了足够的触动，改变了一些人，改变了一些其他我并不知道的什么。
-## 5. 这样的结论是否有理论依据？
+Nhiều năm sau, khi đã dạy ở Tân Đông Phương được vài năm, có hôm tôi mới chợt nhớ ra: hóa ra từ rất lâu, khi Du Mẫn Hồng còn đang khởi nghiệp, tôi đã nghe nói về Tân Đông Phương…
+Còn cuộc bàn tán trong ký túc xá nhanh chóng bị các bạn quên sạch. Giờ tôi thậm chí không nhớ rõ tên người bạn kia, càng không biết cuối cùng cậu ấy thi TOEFL được bao nhiêu. Nhưng tôi biết năm sau cậu ấy sang Mỹ.
 
-GRE 考试中有一作文题目 ：
+Cuối năm 2000, tôi đã tốt nghiệp đại học nhiều năm, từng kiếm được nhiều tiền từ bán hàng và bán buôn, rồi tiêu hết khoản tiết kiệm khi ở nhà chăm cha dưỡng bệnh. Tôi cần gấp một công việc ổn định. Một người bạn cùng trường phổ thông gọi từ Bắc Kinh: “Tiếu Lai, đến Bắc Kinh đi, dạy ở Tân Đông Phương, thu nhập khá lắm”. Tôi đã quên chuyện người bạn ở Bắc Kinh nhắc đến Tân Đông Phương sáu năm trước, chỉ hỏi: “Chắc chắn thu nhập không thấp chứ?”. Bạn tôi bảo: “Yên tâm, với khả năng ăn nói của cậu thì chắc chắn được!”. Thế là tôi đi tàu đến Bắc Kinh, đăng ký một khóa ở Tân Đông Phương, vất vả mua đủ loại bộ đề trước cổng trung tâm, rồi nhốt mình bốn tháng trong căn hộ nhỏ một phòng ngủ ở tầng 11, khu Song Du Thụ, quận Hải Điến. Tôi thi TOEFL, thi GRE, mang những điểm số cao đến khó tin đến xin việc tại Tân Đông Phương, rồi dạy liền ở đó bảy năm. Trong thời gian ấy, New Oriental Education & Technology Group niêm yết trên Sở Giao dịch Chứng khoán New York với mã EDU.
+
+Năm 2003, vào ngày cuốn *Đột phá từ vựng cốt lõi TOEFL trong 21 ngày* được phát hành, tôi mời bạn bè ăn mừng. Đang trò chuyện, chẳng hiểu sao tôi chợt nhớ cảnh đi ngang địa điểm cũ của Tân Đông Phương khi đến Trung Quan Thôn lắp máy tính năm 1994, lúc ấy đã gần mười năm trước. Rồi tôi nhớ ngay đến người bạn bị chúng tôi gọi là “thú vật”, và bất giác rùng mình.
+
+Trước cái rùng mình ấy, tôi luôn nghĩ việc nhốt mình trong căn phòng nhỏ bốn tháng rồi đạt điểm TOEFL, GRE cao vào năm 2000, ở “tuổi cao” 28, là chuyện đáng khoe khoang. Nhưng sau đó, tôi chợt nhận ra: ngay khi còn “rất ngốc, rất ngây thơ” năm 1993, tôi đã có cơ hội thi TOEFL và GRE, thế mà lại nghĩ đó là điều “không thể”. Tôi còn tự cho mình đúng, cùng các bạn khác gọi người bạn ấy là “thú vật”… Nếu năm đó tôi chuẩn bị thi TOEFL, GRE, thay vì đợi đến 28 tuổi, chênh nhau những bảy năm, thì với đầu óc còn lanh lợi khi đang đi học, có lẽ chưa cần bốn tháng, biết đâu ba tháng, tôi đã đạt điểm cao. Nếu thật như vậy, cuộc đời sau đó chẳng phải đã khác một trời một vực sao? Nghĩ lại, chính đầu óc tôi khi ấy mới chẳng khác gì “súc vật”; tôi không khỏi toát mồ hôi lạnh như mưa.
+
+Tôi thường kể trải nghiệm này cho học sinh. Con người là vậy: nghe mãi những đạo lý lớn lao rồi cũng không lọt tai nữa; những ví dụ có thật, nhìn thấy và chạm đến được mới khiến họ xúc động. Qua những năm ấy, tôi biết câu chuyện của mình đã tác động đủ sâu đến nhiều học sinh xung quanh, thay đổi một số người và cả những điều khác mà tôi không biết.
+
+> **Ghi chú biên tập:** Tân Đông Phương là New Oriental, tổ chức giáo dục ở Trung Quốc. TOEFL 570/677 là thang điểm lịch sử. Nguyên tác đặt chuyến lắp máy tính sau mốc 1993, nhưng đoạn hồi tưởng lại ghi 1994 và “sáu năm trước” năm 2000; bản dịch giữ sai khác này thay vì tự chọn một năm. Những biệt danh miệt thị được giữ để phản ánh sự hối tiếc trong lời kể, không phải cách gọi người học. Cách giải thích việc chinh phục châu Mỹ chỉ bằng virus là sự giản lược của tác giả, không bao quát các yếu tố quân sự, chính trị và xã hội.
+
+## 5. Kết luận ấy có cơ sở lý thuyết không?
+
+Trong kỳ thi GRE có một đề bài luận như sau:
 
 > "No field of study can advance significantly unless outsiders bring their knowledge and experience to that field of study."
 
-> 除非有外来者带来其它领域的知识与经验，任何一个领域都不可能大幅度进步。
+> Không lĩnh vực nghiên cứu nào có thể tiến bộ đáng kể nếu không có người ngoài mang kiến thức và kinh nghiệm từ lĩnh vực khác đến.
 
-尽管这话并非永远成立，但它确实是常常发生的现象。比如，这是一本关于第二语言习得（英语学习）的书，却需要从别处开始说起。
+Dù điều này không phải lúc nào cũng đúng, nó quả thực thường xảy ra. Chẳng hạn, đây là cuốn sách về tiếp thu ngôn ngữ thứ hai, tức học tiếng Anh, nhưng câu chuyện lại cần bắt đầu từ nơi khác.
 
-约翰霍普金斯大学的两位研究人员 David Hubel 和 Torsten Wiesel 于 1959 年年底开始做的一项实验在其后的许多年里，影响了全球不计其数的第二语言习得者 —— 只不过，这影响主要是负面的 —— 尽管该实验本身的目的与外语学习看起来没有什么直接联系：研究动物视觉系统的早期发展 。
+Một thí nghiệm mà hai nhà nghiên cứu David Hubel và Torsten Wiesel tại Đại học Johns Hopkins bắt đầu vào cuối năm 1959 đã ảnh hưởng đến vô số người học ngôn ngữ thứ hai trên toàn thế giới trong nhiều năm sau đó. Chỉ có điều, ảnh hưởng ấy chủ yếu là tiêu cực, dù mục đích của thí nghiệm dường như không liên quan trực tiếp đến học ngoại ngữ: nghiên cứu sự phát triển ban đầu của hệ thị giác ở động vật.
 
-> 他们将出生几个月的猫或者猴的一只眼睛用手术缝合；经过一段时间之后再重新打开。研究表明，即便后来重新打开缝合的眼睑，这些动物的眼睛也不能再获得视觉功能。在这段时间内关闭一只眼睛对于动物脑中视觉区域的结构有明显的影响。但是，对于成年猫进行同样时间或更长时间的视觉剥夺既不会影响它们的视觉能力，也不会影响它们的大脑结构。只有年幼的动物在它们发展的“关键期”（Critical Period）才会因此剥夺视觉敏感。
+> Họ phẫu thuật khâu kín một mắt của mèo hoặc khỉ vài tháng tuổi, rồi mở lại sau một thời gian. Nghiên cứu cho thấy ngay cả khi mí mắt được mở trở lại, mắt những con vật ấy cũng không lấy lại chức năng nhìn. Việc bịt một mắt trong giai đoạn này ảnh hưởng rõ rệt đến cấu trúc vùng thị giác trong não. Nhưng nếu tước kích thích thị giác ở mèo trưởng thành trong cùng khoảng thời gian, hoặc lâu hơn, thì khả năng nhìn và cấu trúc não của chúng đều không bị ảnh hưởng. Chỉ động vật còn nhỏ, đang ở “giai đoạn tới hạn” (Critical Period) trong quá trình phát triển, mới bị mất độ nhạy thị giác do sự tước đoạt ấy.
 
 > ![](images/figure01.png)
 
-> youtube上有这个实验的记录片：
+> Trên YouTube có phim tư liệu về thí nghiệm này:
 > * http://www.youtube.com/watch?v=IOHayh06LJ4
 > * http://www.youtube.com/watch?v=KE952yueVLA
 
-这项研究及其成果最终使这两个人于 1981 年获得了诺贝尔医学奖，“因为这项研究对理解视觉系统如何处理信息有着巨大贡献”。但是，人们好像对这项研究中提出的 “关键期” 概念更感兴趣。科学家们很快就发现大脑的其它部分也都需要获得刺激才能够发展，并且好像它们都符合关键期理论。而根据关键期理论，只有在关键期内，大脑才是 “可塑的”（Plastic），这时大脑所接受到的外部刺激甚至会改变大脑的结构；而关键期过后，大脑就不再是可塑的了。很快，“关键期” 这个概念延伸到了各个科学领域。
+Nghiên cứu và kết quả của nó cuối cùng giúp hai ông nhận giải Nobel Y học năm 1981, “vì những đóng góp to lớn giúp hiểu cách hệ thị giác xử lý thông tin”. Tuy nhiên, mọi người dường như quan tâm hơn đến khái niệm “giai đoạn tới hạn” được nêu trong nghiên cứu. Các nhà khoa học nhanh chóng phát hiện những phần khác của não cũng cần kích thích để phát triển, và dường như đều phù hợp với lý thuyết này. Theo cách lý giải đó, chỉ trong giai đoạn tới hạn, não mới “có tính dẻo” (Plastic); kích thích bên ngoài tiếp nhận khi ấy thậm chí có thể thay đổi cấu trúc não. Khi giai đoạn tới hạn qua đi, não không còn tính dẻo nữa. Khái niệm “giai đoạn tới hạn” nhanh chóng lan sang nhiều lĩnh vực khoa học.
 
-语言学家 Eric Heinz Lenneberg 出生于德国，二战时期逃亡巴西，后移民美国，先后就读于芝加哥大学、哈佛大学。后作为心理学和神经生物学教授，曾在哈佛大学医学院、密西根安娜堡大学以及康奈尔大学医学院任职。Lenneberg 教授在 1967 年提出 “语言习得关键期假说”（Language acquisition Critical period hypothesis），认为语言习得的关键期始于婴儿出生，止于从八岁到青春期结束之间的某一时刻。“关键期” 过后，习得第二语言的能力将大幅度下降，并且没办法去除来自母语的口音影响。
+Nhà ngôn ngữ học Eric Heinz Lenneberg sinh ở Đức, chạy sang Brazil trong Thế chiến II, rồi nhập cư vào Mỹ. Ông lần lượt học tại Đại học Chicago và Harvard. Sau đó, với tư cách giáo sư tâm lý học và sinh học thần kinh, ông từng làm việc tại Trường Y Harvard, Đại học Michigan ở Ann Arbor và Trường Y Đại học Cornell. Năm 1967, giáo sư Lenneberg đề xuất “giả thuyết giai đoạn tới hạn trong tiếp thu ngôn ngữ” (Language acquisition Critical period hypothesis), cho rằng giai đoạn này bắt đầu khi trẻ chào đời và kết thúc vào một thời điểm từ tám tuổi đến hết tuổi dậy thì. Sau “giai đoạn tới hạn”, khả năng tiếp thu ngôn ngữ thứ hai sẽ giảm mạnh, đồng thời không thể loại bỏ ảnh hưởng của giọng tiếng mẹ đẻ.
 
-事实上，Lenneberg 教授相当谨慎，提出的是个 “假说”（Hypothesis）。可是，几乎所有的科学研究结果一旦进入大众传播领域，或多或少都会掺杂着误解，甚至被故意歪曲。比如，当年宾夕法尼亚大学的 Martin Seligman 教授的 “Learned Optimism” 提出之后，瞬间就被成功学大师们拿去当作自己手中的道具，全然不顾 Seligman 教授所持的保留态度及其严谨。同样，Lenneberg 教授的 “假说” 到了市场上，就变成了 “理论”（Theory）。原本的 “始于婴儿出生，止于从八岁到青春期结束之间的某一时刻”，也变成了 “始于 0 岁，止于 10 岁” —— 在大洋另一端的中国，这几乎成了所有少儿英语项目的主要宣传工具，其潜台词的目的不过是恐吓家长赶紧交钱，“否则就来不及了！”。
-更为普遍的是，这个 “关键期理论” 成了很多人安慰自己的借口。学不好是正常的，因为 “关键期早就过了么！” 或者 “不是小时候学的就不行……” 再或者 “都这么大岁数了，没戏了！”，等等。
+Thực ra, giáo sư Lenneberg rất thận trọng: ông đưa ra một “giả thuyết” (Hypothesis). Nhưng gần như mọi kết quả nghiên cứu khoa học khi đi vào truyền thông đại chúng đều ít nhiều bị hiểu nhầm, thậm chí cố tình bóp méo. Chẳng hạn, khi giáo sư Martin Seligman ở Đại học Pennsylvania đưa ra “Learned Optimism”, các bậc thầy dạy thành công lập tức lấy nó làm công cụ của mình, bất chấp sự dè dặt và chặt chẽ của Seligman. Tương tự, “giả thuyết” của Lenneberg khi ra thị trường biến thành “lý thuyết” (Theory). Khoảng thời gian ban đầu, “từ lúc chào đời đến một thời điểm từ tám tuổi đến hết tuổi dậy thì”, biến thành “từ 0 đến 10 tuổi”. Ở Trung Quốc bên kia đại dương, điều này gần như thành công cụ quảng cáo chủ yếu của mọi chương trình tiếng Anh thiếu nhi, với ngụ ý hù phụ huynh mau đóng tiền, “nếu không sẽ không kịp nữa!”.
+Phổ biến hơn, “lý thuyết giai đoạn tới hạn” trở thành cái cớ để nhiều người tự an ủi. Học không giỏi là bình thường, vì “giai đoạn tới hạn đã qua từ lâu rồi!”, hoặc “không học từ bé thì không được…”, hay “từng này tuổi rồi, hết hy vọng!”, vân vân.
 
-其实 David Hubel 和 Torsten Wiesel 的真正贡献在于他们证明了大脑是 “可塑” 的，而非一成不变的。而他们两人的局限恰恰在于人们津津乐道的 “关键期”。当时，他们俩还是 “区域论” 的坚定支持者──而区域论，很久之后才被学术界推翻。
+Thực ra, đóng góp thực sự của David Hubel và Torsten Wiesel là chứng minh não “có tính dẻo”, chứ không bất biến. Còn hạn chế của hai ông lại chính là “giai đoạn tới hạn” được mọi người say sưa bàn luận. Khi ấy, cả hai vẫn kiên định ủng hộ “thuyết định khu”, thứ mà rất lâu sau giới học thuật mới bác bỏ.
 
 ![](images/figure02.png)
 
-区域论（Localizationism）认为大脑就好像是一台复杂的机器，而这个机器的每个部件都有其特定的功能；进而，每个特定的功能都是受硬件限制的（Hardwired）。而区域论的言外之意则是，一旦大脑的某个区域损坏，那么那个区域所管辖的功能就无法恢复了。而临床观察也好像确实能够印证这个结论：比如，中风[^4]患者的瘫痪肢体看起来是无论如何都无法恢复的。
+Thuyết định khu (Localizationism) xem não như một cỗ máy phức tạp, mỗi bộ phận có chức năng riêng; từ đó, mỗi chức năng cụ thể đều bị giới hạn bởi phần cứng (Hardwired). Hàm ý là một khi vùng nào của não bị hỏng, chức năng do vùng ấy phụ trách sẽ không thể phục hồi. Quan sát lâm sàng dường như cũng xác nhận điều này: chẳng hạn, chi bị liệt ở người đột quỵ[^4] trông như không thể hồi phục bằng bất cứ cách nào.
+
+> **Ghi chú biên tập về lịch sử và thuật ngữ khoa học:** Các đoạn trên trình bày cách tác giả diễn giải nghiên cứu. Nobel năm 1981 ghi nhận khám phá của Hubel và Wiesel về xử lý thông tin trong hệ thị giác, không chỉ riêng thí nghiệm khâu mắt; Wiesel kể hai người bắt đầu cộng tác năm 1958. Tính dẻo không phủ nhận sự chuyên hóa chức năng của các vùng não, cũng không chứng minh mọi khả năng học giữ nguyên suốt đời. Trong khoa học, *theory* là hệ thống giải thích dựa trên bằng chứng, không đồng nghĩa với chân lý tuyệt đối; tên gọi *hypothesis* cũng không đủ để phủ nhận bằng chứng của một nhận định. Nguồn: [Nobel về giải thưởng](https://www.nobelprize.org/prizes/medicine/1981/hubel/facts/), [phỏng vấn Wiesel](https://www.nobelprize.org/nobel_prizes/medicine/laureates/1981/wiesel-interview.html), [National Academy of Sciences về thuật ngữ](https://www.ncbi.nlm.nih.gov/books/NBK208858/).
 
 ![](images/figure03.png)
 
-很漂亮的一个男孩，是不是？注意到了么，他的眼睛？这不是特效，这男孩的眼睛就那么亮。这个男孩是海洋吉普赛人（Sea Gypsies），他们的眼睛都这么亮。
+Một cậu bé rất đẹp, phải không? Bạn có chú ý đến đôi mắt không? Đây không phải hiệu ứng đặc biệt; mắt cậu bé sáng như vậy đấy. Cậu thuộc cộng đồng mà nguyên tác gọi là “người Gypsy biển” (Sea Gypsies), và mắt họ đều sáng như thế.
 
-海洋吉普赛人生活在泰国西海岸附近，属于游牧民族，只不过，他们以捕食海鲜为生。他们生命中的绝大部分都漂流在海上。这个男孩就是在海上出生的。他 们在学会说话学会走路之前就能够学会游泳。他们可以在不使用任何设备的情况下轻松潜入水面 30 英尺以下 —— 有个叫做苏鲁的部落，他们常常要潜到 75 英尺之下去采珍珠。他们能够控制并降低自己的心率，进而控制自己的氧消耗，他们可以在水下滞留很长时间，往往两倍于普通人以上。
+Những người Gypsy biển sống gần bờ tây Thái Lan, thuộc nhóm du mục, nhưng sinh kế là đánh bắt hải sản. Phần lớn cuộc đời họ lênh đênh trên biển. Cậu bé này cũng sinh ra trên biển. Họ học bơi trước cả khi biết nói và biết đi. Không dùng thiết bị nào, họ vẫn có thể dễ dàng lặn sâu hơn 30 feet; một bộ tộc tên Sulu thường lặn quá 75 feet để lấy ngọc trai. Họ có thể kiểm soát và làm chậm nhịp tim, qua đó kiểm soát lượng oxy tiêu thụ, lưu lại dưới nước rất lâu, thường hơn gấp đôi người bình thường.
 
-当然，最令人惊讶的是他们的眼睛。他们可以在水下保持良好的、甚至更好的视力。因为他们学会了如何控制自己的瞳孔尺寸，能够把瞳孔缩小 22%。而一直以来，人们认为瞳孔的收缩尺度是固定的（由人类的基因决定的），并且应该是不受意识控制的，受制于 “自主神经系统”。
+Tất nhiên, điều đáng kinh ngạc nhất là đôi mắt. Dưới nước, họ vẫn giữ được thị lực tốt, thậm chí tốt hơn. Bởi họ đã học cách kiểm soát kích thước đồng tử, làm nó nhỏ đi 22%. Trong khi đó, từ lâu người ta cho rằng mức co đồng tử là cố định, do gene người quyết định, và không chịu sự kiểm soát có ý thức mà thuộc “hệ thần kinh tự chủ”.
 
-科学家们认为，这不是 “基因突变” 的结果，而是大脑的 “可塑性”（Plasticity）造成的。因为科学家 Anna Gislen 以及她的同伴把海洋吉普赛人带到欧洲，很快就教会了一群瑞典孩子如何收缩瞳孔。现在科学家们相信，大脑的可塑性极强，并且从始至终一直存在着这种可塑性。一切来自外部的刺激（尤其是系统 的训练）都会对我们的大脑产生影响，而大脑的结构和功能都会随之发生变化。
+Các nhà khoa học cho rằng đây không phải kết quả của “đột biến gene”, mà do “tính dẻo” (Plasticity) của não. Bởi nhà khoa học Anna Gislen và các cộng sự đưa những người Gypsy biển sang châu Âu, rồi nhanh chóng dạy được một nhóm trẻ Thụy Điển cách co đồng tử. Giờ đây, các nhà khoa học tin rằng tính dẻo của não rất mạnh và luôn tồn tại từ đầu đến cuối cuộc đời. Mọi kích thích bên ngoài, đặc biệt là luyện tập có hệ thống, đều tác động đến não, khiến cấu trúc và chức năng của nó thay đổi theo.
 
-古人观察说，“非我族类，其心必异”。从这个意义上是正确的，因为由此看来，文化这个东西显然在不停地塑造受这个文化影响的人们的大脑。一直以来被 认为是 “硬件” 局限的问题，现在已经清楚地被证明（至少部分是）是 “软件” 开发问题。我们的大脑就好像一台神奇的计算机 —— 因为它的硬件甚至有能力去 “适应” 安装进去的 “软件”。
+Người xưa quan sát rằng: “Không cùng tộc với ta, lòng dạ ắt khác”. Theo nghĩa này thì câu ấy đúng, bởi nhìn như vậy, văn hóa rõ ràng không ngừng định hình não của những người chịu ảnh hưởng từ nó. Những vấn đề lâu nay tưởng là giới hạn “phần cứng” giờ đã được chứng minh rõ ràng, ít nhất một phần, là vấn đề phát triển “phần mềm”. Não chúng ta giống một máy tính kỳ diệu, vì ngay cả phần cứng cũng có khả năng “thích nghi” với “phần mềm” được cài vào.
 
-之所以科学家们推断说海洋吉普赛人的 “特异功能” 不是 “基因突变” 的结果，主要根据来自两个方面：
+Các nhà khoa học suy đoán “khả năng đặc biệt” của những người Gypsy biển không do “đột biến gene” chủ yếu dựa trên hai điểm:
 
-1. 研究表明，几万年以来，人类大脑的构造几乎没有发生过任何变化；
-2. 这种能力是在一代人之间就可以学会的，无需遗传积累。
+1. Nghiên cứu cho thấy cấu trúc não người gần như không thay đổi trong hàng chục nghìn năm;
+2. Khả năng này có thể học được trong một thế hệ, không cần tích lũy qua di truyền.
 
 ![](images/figure04.png)
 
- 近一百年来，全球各地都发现了大量的 “洞穴壁画”（Cave Painting）。经碳同位素分析，这些壁画最久远的是三万年前的作品，最近的也是约一万年之前的作品。而这些作品往往让现代画家们惊讶，甚至沮丧。毕加索在 1940 年参观当时新发现的位于法国多尔多涅镇的 Lascaux 洞穴之时，看到这些壁画（上图是其中之一），多少有些失落，提起所谓现代艺术，评价道 “我们其实啥都没学会。[^5]”
+Trong gần một thế kỷ qua, rất nhiều “tranh hang động” (Cave Painting) đã được phát hiện khắp thế giới. Phân tích đồng vị carbon cho thấy những bức cổ nhất có niên đại ba mươi nghìn năm, còn mới nhất cũng khoảng mười nghìn năm. Các tác phẩm này thường khiến họa sĩ hiện đại kinh ngạc, thậm chí nản lòng. Khi Picasso đến thăm hang Lascaux mới được phát hiện ở vùng Dordogne, Pháp, năm 1940, nhìn những bức tranh, trong đó có bức trên, ông phần nào thất vọng. Nói đến cái gọi là nghệ thuật hiện đại, ông nhận xét: “Thực ra chúng ta chẳng học được gì cả[^5]”.
 
-事实上，这并不是坏消息。相反，它恰好是最好的好消息。几万年前人们能够做出这样神奇的作品，说明那时人类的大脑就拥有足够的潜力，而今天我们的发展和进步，某种意义上就是开发这种潜力的结果。
+Thực ra, đó không phải tin xấu. Ngược lại, đó là tin tốt nhất. Việc con người cách đây hàng chục nghìn năm có thể tạo ra những tác phẩm kỳ diệu như vậy cho thấy não người khi ấy đã có đủ tiềm năng. Theo một nghĩa nào đó, sự phát triển và tiến bộ hôm nay là kết quả của việc khai mở tiềm năng ấy.
 
-Anna Gislen 让一群欧洲孩子在八个月内就学会了像海洋吉普赛人一样收缩瞳孔，[^6]证明了这种能力并非由遗传获得。也许大多数人看不出这个证明的具体现实意义，但是对于第二语言习得者来说，这无疑是意义非凡的发现。一直以来，科学界就存在着争论：“语言能力到底是不是天生的？”
+Anna Gislen giúp một nhóm trẻ châu Âu học được cách co đồng tử giống những người Gypsy biển chỉ trong tám tháng[^6], chứng minh khả năng này không có được nhờ di truyền. Có thể phần lớn mọi người không thấy ý nghĩa thực tế cụ thể của bằng chứng ấy, nhưng đối với người tiếp thu ngôn ngữ thứ hai, đây chắc chắn là phát hiện rất có ý nghĩa. Từ lâu, giới khoa học đã tranh luận: “Năng lực ngôn ngữ có phải bẩm sinh không?”.
 
-其实，根本无需争论。很显然，语言能力并非天生的，而是后天习得的。事实上，语言文字的出现迄今为止也不过几千年而已，之前的人类大脑并非没有能力处理语言文字，而是没有语言文字可供处理。事实上，科学家们早就发现他们可以在一代之间就能教会那些原始部落的人使用 “新” 的语言和文字。而我国的扫盲工作，本质上来看也是一样的道理。与其他动物相比，人类的语言能力更强是因为大脑容量更大，潜力更广。很多科学家都成功做到教会猴子或者其他动物一些人类的语言──只不过，它们记忆力太差，潜力有限，所以不大可能达到人类的境界而已。
+Thực ra, chẳng cần tranh luận. Rõ ràng năng lực ngôn ngữ không bẩm sinh, mà được học sau khi sinh. Ngôn ngữ và chữ viết thực ra mới xuất hiện vài nghìn năm. Não người trước đó không phải không có khả năng xử lý ngôn ngữ và chữ viết, mà chưa có ngôn ngữ, chữ viết để xử lý. Các nhà khoa học từ lâu đã thấy rằng chỉ trong một thế hệ, họ có thể dạy người ở những bộ tộc nguyên sơ sử dụng ngôn ngữ và chữ viết “mới”. Về bản chất, công tác xóa mù chữ ở Trung Quốc cũng theo nguyên lý ấy. So với động vật khác, con người có năng lực ngôn ngữ mạnh hơn vì não lớn hơn, tiềm năng rộng hơn. Nhiều nhà khoa học đã dạy thành công cho khỉ hoặc động vật khác một phần ngôn ngữ của con người; chỉ vì trí nhớ chúng quá kém, tiềm năng có hạn, nên chúng khó đạt đến trình độ của con người mà thôi.
 
-如果说，1) 大脑是可塑的；2) 语言能力是后天习得的，那么理论上来讲，任何人都可以习得任何语言才对。可事实上看起来并非如此。而 “关键期” 理论又给希望蒙上了一层阴影。因为按照关键期的说法，大脑只在最初的一段时间里是可塑的。不过，二三十年之后，终于有科学家证明：
+> **Ghi chú biên tập về trẻ Moken và ngôn ngữ:** Hai nghiên cứu được đối chiếu ở đây khảo sát trẻ Moken, không đại diện cho mọi cộng đồng sống trên biển. Nghiên cứu năm 2003 ghi nhận đường kính đồng tử trung bình 1,96 mm ở nhóm Moken và 2,50 mm ở nhóm trẻ châu Âu; khoảng 22% là chênh lệch giữa hai nhóm trong phép đo này. Nghiên cứu năm 2006 cho trẻ châu Âu tập 11 buổi trong một tháng, rồi ghi nhận kết quả tương đương khi kiểm tra tám tháng sau buổi tập cuối; hiệu quả liên quan cả co đồng tử và điều tiết mắt. Các nghiên cứu này không chứng minh câu chuyện đưa người Moken sang châu Âu để dạy trẻ, cũng không xác minh toàn bộ chi tiết bơi, lặn và nhịp tim trong lời kể. Nguồn: [Gislén và cộng sự, 2003](https://pubmed.ncbi.nlm.nih.gov/12747831/), [Gislén và cộng sự, 2006](https://pubmed.ncbi.nlm.nih.gov/16806388/). Các đơn vị trong nguyên tác: 30 feet khoảng 9,14 m; 75 feet khoảng 22,86 m.
+>
+> Cần phân biệt ngôn ngữ với chữ viết: chữ viết xuất hiện tương đối gần đây, còn thời điểm hình thành ngôn ngữ nói chưa xác định chắc chắn và có thể lâu đời hơn rất nhiều. Việc học một ngôn ngữ cụ thể không chứng minh năng lực ngôn ngữ hoàn toàn không có nền tảng sinh học. Các suy luận về kích thước não, trí nhớ động vật và di truyền ở trên là diễn giải giản lược của tác giả. Xem [Smithsonian về ngôn ngữ và ký hiệu](https://humanorigins.si.edu/human-characteristics/language-symbols). Câu cổ ngữ về người khác tộc không phải căn cứ để đánh giá phẩm chất của một cộng đồng. Các mốc tuổi tranh và giai thoại Picasso được giữ theo nguyên tác, chưa được xác nhận đầy đủ trong bản biên tập này; không dùng chúng như danh mục niên đại khảo cổ hiện hành.
 
-1. 大脑是可塑的；
-2. 并且它自始至终都是可塑的；
-3. 甚至它还会重新组织自己（Reorganizing），通过恰当的训练，它能用另外一个区域习得已被毁坏区域的能力……
+Nếu 1) não có tính dẻo và 2) năng lực ngôn ngữ được học sau khi sinh, thì về lý thuyết bất cứ ai cũng phải có thể học bất cứ ngôn ngữ nào. Nhưng thực tế dường như không phải vậy. “Lý thuyết giai đoạn tới hạn” lại phủ bóng lên hy vọng, vì theo cách giải thích ấy, não chỉ có tính dẻo trong một khoảng thời gian đầu đời. Tuy nhiên, hai, ba mươi năm sau, cuối cùng các nhà khoa học đã chứng minh:
 
-只不过，这个证明过程格外地不顺利。
-请读者猜猜下图中，这个正在[美国UAB康复中心]( http://www.uabhealth.org)治疗的小女孩受伤的是左臂还是右臂？
+1. Não có tính dẻo;
+2. Tính dẻo ấy tồn tại suốt cuộc đời;
+3. Não thậm chí còn tự tái tổ chức (Reorganizing): với luyện tập phù hợp, một vùng khác có thể học được năng lực của vùng đã bị phá hủy…
+
+Chỉ có điều, quá trình chứng minh ấy đặc biệt trắc trở.
+Bạn hãy đoán xem cô bé trong ảnh dưới, đang điều trị tại [Trung tâm Phục hồi chức năng UAB, Mỹ](http://www.uabhealth.org), bị thương ở tay trái hay tay phải?
 
 ![](images/figure05.png)
 
-其实她的左臂没有受伤，而之所以把左臂固定起来就是因为那是一条没有受伤的手臂，而右臂才是受伤、需要通过训练恢复的 …… 咦？这是怎么回事儿？可是从生理上来看，大脑受损的部分是没办法恢复的，她又怎么能通过训练来让已经受伤的右臂恢复正常呢？
+Thực ra, tay trái của em không bị thương. Nó được cố định chính vì đó là tay lành, còn tay phải mới bị thương và cần luyện tập để hồi phục… Ủa, chuyện gì vậy? Xét về sinh lý, phần não đã tổn thương không thể phục hồi, vậy làm sao luyện tập lại giúp tay phải bị thương hoạt động bình thường?
 
-大脑的神奇之处在于它可以利用其它未受损的部分重新习得受损部分的功能（学术上叫做 “remap”、“reroute”、或者 “rewire”）。之所以要把行动自如的左臂绑起来，是因为如果不这么做的话，面对任何需求，大脑中负责控制左臂的部分（或称为 “左臂脑图”）都会 “优先启动”；因为这部分是未受损的，而原本控制右臂的部分已经受损了。换言之，这时，大脑中尚不存在一个能够控制右臂的部分。而把左臂固定住之后，尽管负责控制左臂的大脑部分依然 “优先启动”，但实际上却无法自如操纵左臂。而在这种情况下，就可以通过让大脑的其他部分慢慢专注于右臂，进而习得控制右臂的方法 —— 即，可以通过这样的训练，慢慢使大脑未受损的某个区域 “习得” 原本只有那个已经受损的区域所负责的功能。没有多久，这个女孩子的右臂就恢复了，活动起来与原来没什么两样。可是她的大脑不再是原来的样子了，尽管某一部分受损且不可恢复，但她大脑的另外一个区域已经被开发，能够别无二致地完成受损区域曾经可以完成的功能。
+Điều kỳ diệu của não là nó có thể dùng những phần còn lành để học lại chức năng của phần bị tổn thương, trong học thuật gọi là “remap”, “reroute” hoặc “rewire”. Phải buộc tay trái đang cử động tự do lại, vì nếu không, trước bất kỳ nhu cầu nào, phần não điều khiển tay trái, hay “bản đồ não của tay trái”, đều sẽ “khởi động trước”. Phần này còn lành, còn vùng vốn điều khiển tay phải đã bị tổn thương. Nói cách khác, lúc đó trong não chưa có một phần có thể điều khiển tay phải. Sau khi cố định tay trái, dù phần não phụ trách nó vẫn “khởi động trước”, nó không thể điều khiển tay trái hoạt động tự do. Trong hoàn cảnh này, có thể để những phần khác của não dần tập trung vào tay phải và học cách điều khiển nó. Tức là, qua luyện tập, một vùng não còn lành có thể dần “học” chức năng vốn chỉ do vùng đã hỏng đảm nhiệm. Không lâu sau, tay phải cô bé hồi phục, cử động gần như trước kia. Nhưng não em không còn như cũ: dù một phần bị tổn thương không thể phục hồi, một vùng khác đã được phát triển để thực hiện không khác gì chức năng mà vùng bị hỏng từng làm.
 
-仅仅在 2004 年之前，这种疗法是完全不可想象的。这种最初看起来匪夷所思的疗法叫做 “CI 活动疗法”（Constraint-Induced Movement Therapy，简称 “CI” 或者 “CIMT”）的发明者是[Edward Taub](http://en.wikipedia.org/wiki/Edward_Taub)教授。今天，这种疗法渐渐开始在全世界范围内普及，帮助无数偏瘫[^7]患者找回原来的自我和生活。可是 Taub 教授的研究经历却一波三折。为了找到偏瘫的治疗方案，他需要人为地使猴子偏瘫（故意破坏猴子大脑的某个区域），而后再想办法通过训练让那些猴子从偏瘫状态中恢复过来 …… 上个世纪八十年代初，他被一个动物权益保护组织告上法庭，导致实验室被关闭，经费被冻结，最后甚至失去了工作，几乎所有的人都对他避之唯恐不及。接下来的六年时间里，Taub 教授的所有时间精力都被耗费在为自己辩护上 —— 巨大的社会压力使得他甚至找不到愿意为他辩护的律师，所以他只好自己做自己的律师。案发之前，Taub 教授总计有大约 10 万美元的存款，到他最终胜诉洗清所有罪名之时，他只剩下了大约四千美元的积蓄。当然，时至今日，基于他的理论及其实践为人类创造的巨大价值，Taub 教授被公认为当今全球最杰出的科学家之一。
+Chỉ ngay trước năm 2004 thôi, liệu pháp như vậy vẫn hoàn toàn ngoài sức tưởng tượng. Người phát minh liệu pháp ban đầu nghe rất khó tin này, “liệu pháp vận động cưỡng bức” (Constraint-Induced Movement Therapy, viết tắt “CI” hoặc “CIMT”), là giáo sư [Edward Taub](http://en.wikipedia.org/wiki/Edward_Taub). Ngày nay, liệu pháp dần phổ biến khắp thế giới, giúp vô số người liệt nửa người[^7] tìm lại bản thân và cuộc sống trước kia. Nhưng hành trình nghiên cứu của Taub vô cùng lận đận. Để tìm cách điều trị liệt nửa người, ông cần chủ động gây tình trạng đó ở khỉ, cố ý phá một vùng não, rồi tìm cách luyện tập để chúng hồi phục… Đầu thập niên 1980, một tổ chức bảo vệ quyền động vật đưa ông ra tòa, khiến phòng thí nghiệm bị đóng, kinh phí bị phong tỏa, cuối cùng ông mất cả việc. Gần như ai cũng tìm cách tránh xa ông. Trong sáu năm tiếp theo, toàn bộ thời gian và sức lực của Taub dồn vào tự bào chữa. Áp lực xã hội lớn đến mức ông không tìm được luật sư sẵn lòng bào chữa, đành tự làm luật sư cho mình. Trước vụ việc, ông có khoảng 100.000 USD tiết kiệm; đến khi thắng kiện và được xóa mọi cáo buộc, ông chỉ còn khoảng 4.000 USD. Tất nhiên, đến nay, với giá trị to lớn mà lý thuyết và thực hành của ông tạo ra cho nhân loại, Taub được công nhận là một trong những nhà khoa học xuất sắc nhất thế giới đương thời.
 
-Taub 教授 CI 疗法的成功首先证明区域论是错误的（至少不是完全正确的）—— 大脑可以重新组织自己；其次证明大脑自始至终都是可塑的，甚至可以重组 —— 即，用一个新的脑图完成原本由受损的脑图完成的功能；最后证明的也是最重要的：脑图之间存在着相互竞争 —— 所以，为了治好受损的右臂，要先把未受损的左臂给限制住。如果不把未受损的左臂给限制住的话，那么左臂的脑图将永远处于优势，进而，使得大脑对已经受损的右臂产生 “习得之弃用”（Learned Nonuse）[^8]。
+Thành công của liệu pháp CI trước hết chứng minh thuyết định khu sai, ít nhất là không hoàn toàn đúng: não có thể tự tái tổ chức. Thứ hai, nó chứng minh não có tính dẻo suốt đời, thậm chí có thể tái cấu trúc, dùng một bản đồ não mới làm chức năng vốn do bản đồ bị tổn thương đảm nhiệm. Cuối cùng, và quan trọng nhất, nó chứng minh các bản đồ não cạnh tranh với nhau. Vì thế, muốn chữa tay phải bị thương, trước tiên phải hạn chế tay trái còn lành. Nếu không hạn chế tay trái, bản đồ não của nó sẽ luôn chiếm ưu thế, khiến não hình thành “sự không sử dụng do học được” (Learned Nonuse) đối với tay phải bị thương[^8].
 
-这最后一条可以用来清楚地解释原本用 “关键期论” 错误地解释的现象：为什么成年后学习第二语言显得更为困难？
+Điểm cuối này có thể giải thích rõ hiện tượng trước kia bị “lý thuyết giai đoạn tới hạn” giải thích sai: vì sao học ngôn ngữ thứ hai khi trưởng thành dường như khó hơn?
 
-成年之后，第二语言学习显得更为困难的原因并不在于关键期论所说的 “此后大脑不再可塑”，而实际上在于这是第二语言所使用的脑图要与已经形成强大势力的母语脑图竞争 —— 当然越来越难[^9]。然而，恰恰是这样的认识给了人们希望。目前，有很多教育学家开始提倡 “浸泡式学习”，有一定的依据，也有相当的效果。所谓 “浸泡式学习”，就是在特定的时间、特定的环境里，强迫学生只使用第二语言，禁止使用母语，进而刺激大脑加速构建新的脑图。风靡全球的罗赛塔石碑语言学习软件（[Rosetta Stone](https://www.rosettastone.com)）就是基于这个原理开发出来的。
+Nguyên nhân không nằm ở việc “não không còn tính dẻo” sau giai đoạn tới hạn, mà thực chất là bản đồ não dành cho ngôn ngữ thứ hai phải cạnh tranh với bản đồ tiếng mẹ đẻ đã rất vững mạnh. Đương nhiên ngày càng khó[^9]. Tuy nhiên, chính nhận thức ấy mang lại hy vọng. Hiện nhiều nhà giáo dục bắt đầu đề xướng “học trong môi trường ngôn ngữ hoàn toàn”, một cách làm có cơ sở nhất định và hiệu quả đáng kể. Theo mô tả này, trong thời gian và môi trường cụ thể, học sinh bị buộc chỉ dùng ngôn ngữ thứ hai, cấm dùng tiếng mẹ đẻ, qua đó kích thích não xây dựng bản đồ mới nhanh hơn. Phần mềm học ngôn ngữ nổi tiếng toàn cầu [Rosetta Stone](https://www.rosettastone.com) được phát triển dựa trên nguyên lý này.
 
-对于第二语言习得者来说，最直观、最有意义的好消息是：
-1. 什么时候开始学都不晚；
-2. 只要方法得当，并加以时日，一定能学好。
-3. 甚至，第二语言也可能超越母语成为主导语言。
+> **Ghi chú biên tập về CIMT và học ngoại ngữ:** UAB ghi nhận CIMT được phát triển và hoàn thiện từ năm 1987, nên mốc “trước năm 2004” trong nguyên tác không chính xác. Nghiên cứu nền tảng do Taub mô tả tác động lên đường cảm giác hướng tâm ở rễ thần kinh tủy, khác với lời kể “phá một vùng não”. CIMT là trị liệu chuyên biệt có chuyên viên hướng dẫn; kết quả tùy người và tổn thương, không bảo đảm hồi phục y như cũ và không phải hướng dẫn tự buộc tay. Nguồn: [UAB về CIMT](https://www.uab.edu/shp/home/neuroplasticity-rehabilitation-program/about-cimt), [bài nghiên cứu của Taub, 1994](https://www.uab.edu/citherapy/images/CIT_training/Taub_1994_Shaping.pdf), [NINDS về phục hồi sau đột quỵ](https://www.ninds.nih.gov/health-information/stroke/recovery). Các chi tiết tố tụng và tiền tiết kiệm là lời kể lịch sử của tác giả, chưa được đối chiếu đầy đủ ở đây.
+>
+> Suy từ CIMT sang “cạnh tranh bản đồ não là nguyên nhân người lớn học ngoại ngữ khó, vì vậy phải cấm tiếng mẹ đẻ” là diễn giải của tác giả, không phải kết luận trực tiếp từ nghiên cứu CIMT. Nghiên cứu ngữ pháp tiếng Anh công bố năm 2018, sau bản thảo năm 2010, vẫn ghi nhận ảnh hưởng của tuổi; điều này không có nghĩa người lớn không thể học ngoại ngữ. Xem [Hartshorne và cộng sự, 2018](https://pubmed.ncbi.nlm.nih.gov/29729947/). Với người Việt, có thể tăng thời gian dùng tiếng Anh và dùng giải thích tiếng Việt khi cần hiểu nghĩa; không cần cấm tiếng Việt để được xem là đang học đúng.
 
-（当然，接下来的内容中，读者会知道有一个比 “学” 更好的方法……）
-在学习这件事儿是，相信自己一定能学好，并不一定保证真的能够学好；但是，反过来，如果相信自己不可能学好，那最终真的就不可能学好。所谓 “自证预言”（[Self-fulfilling prophecy](http://en.wikipedia.org/wiki/Self-fulfilling_prophecy) ）就是这样，总是在负面起作用。事实上，“语言习得关键期” 之说四十多年来在全球造成了难以估计的恶果，不计其数的人在不经意之间把 “假说” 当成了 “定论”，相信自己不可能学好，进而成为 “自证预言” 注定的受害者。
+Với người tiếp thu ngôn ngữ thứ hai, những tin tốt trực tiếp và có ý nghĩa nhất là:
 
-“我没天分”、“我就学不好”、“英语太难了” 之类的话，甚至这类的念头，其实都是强大的诅咒。它们有着既强大又邪恶的力量。观察一下身边的人，你会惊讶地发现很多学了英语很多年的人，说得最流利发音最标准的一句英语竟然是：“I’m sorry, my English is poor…” 如果还有前缀的话，要么是 “(I beg your) Pardon…” 或者就是用错的 “Excuse me…”…… 从这样的例子里我们就可以看到那 “诅咒” 的强大和无所不在。
+1. Bắt đầu học lúc nào cũng chưa muộn;
+2. Chỉ cần phương pháp đúng và đủ thời gian, nhất định sẽ học giỏi;
+3. Thậm chí ngôn ngữ thứ hai có thể vượt tiếng mẹ đẻ, trở thành ngôn ngữ chủ đạo.
 
-[罗伯特•莫顿](http://en.wikipedia.org/wiki/Robert_K._Merton)教授发现了这个现象，为这类现象取了个名字叫做 “自证预言”（Self-fulfilling prophecy）。
+(Tất nhiên, trong phần tiếp theo, bạn đọc sẽ biết một cách còn tốt hơn “học”…)
+Đối với việc học, tin chắc mình sẽ học giỏi chưa chắc bảo đảm thực sự học giỏi. Nhưng ngược lại, nếu tin mình không thể học giỏi, cuối cùng quả thực sẽ không thể học giỏi. Cái gọi là “lời tiên tri tự ứng nghiệm” ([Self-fulfilling prophecy](http://en.wikipedia.org/wiki/Self-fulfilling_prophecy)) là vậy, luôn tác động theo hướng tiêu cực. Thực ra, hơn bốn mươi năm qua, quan niệm “giai đoạn tới hạn trong tiếp thu ngôn ngữ” đã gây ra những hậu quả xấu khó ước lượng trên toàn cầu. Vô số người vô tình coi “giả thuyết” là “kết luận cuối cùng”, tin mình không thể học giỏi, rồi trở thành nạn nhân đã được định sẵn của “lời tiên tri tự ứng nghiệm”.
 
-> 当人们相信某件事情会发生（事实上那件事情原本并不见得一定会发生），那么此事最终真的会发生。
+Những lời như “Tôi không có năng khiếu”, “Tôi chẳng học giỏi được đâu”, “Tiếng Anh khó quá”, thậm chí chỉ những ý nghĩ ấy, thực chất đều là lời nguyền mạnh mẽ. Chúng có sức mạnh vừa lớn vừa độc hại. Quan sát những người xung quanh, bạn sẽ ngạc nhiên khi thấy nhiều người học tiếng Anh rất lâu mà câu nói trôi chảy nhất, phát âm chuẩn nhất lại là: “I’m sorry, my English is poor…”. Nếu có lời mở đầu, hoặc là “(I beg your) Pardon…”, hoặc là câu “Excuse me…” dùng sai… Qua đó, ta thấy sức mạnh và sự hiện diện khắp nơi của “lời nguyền”.
 
-西方神话里充满了这种故事：
+Giáo sư [Robert K. Merton](http://en.wikipedia.org/wiki/Robert_K._Merton) phát hiện hiện tượng này và đặt tên là “lời tiên tri tự ứng nghiệm” (Self-fulfilling prophecy).
 
-> 底比斯（Thebes）国王拉伊奥斯（Laius）与王后约卡斯塔（Jocasta）生下俄狄浦斯之后得到神谕说，这个孩子会终究会弑父娶母。为了躲避厄运，拉伊奥斯刺穿了新生儿的脚踝（oidipous在希腊语中的意思是“肿胀的脚”），令牧人将孩子丢弃在野外等死。
+> Khi người ta tin một việc sẽ xảy ra, dù thực tế ban đầu chưa chắc nó sẽ xảy ra, thì cuối cùng việc ấy thực sự xảy ra.
 
-> 可是牧人于心不忍，于是，就把孩子偷偷送给了柯林斯（Corinth）的国王波吕波斯（Polybus）。波吕波斯很喜欢这个孩子，就把他当作亲生孩子抚养。俄狄浦斯长大之后，从神殿得知神谕，了解到自己最终会弑父娶母；而他却不知道国王波吕波斯与王后并非自己的亲生父母。为了避免神谕成真，他便离开柯林斯并发誓永远不在回来。
+Thần thoại phương Tây có rất nhiều câu chuyện như vậy:
 
-> 后来，俄狄浦斯在流浪的过程中，在一个岔路口与一群陌生人发生冲突，失手杀死了人，而其中就有他的亲生父亲拉伊奥斯。而此后又因为解开了狮身人面兽斯芬克斯（Sphinx）的谜题而继承了底比斯的王位，娶了国王的遗孀为妻。
+> Sau khi vua Laius của Thebes và hoàng hậu Jocasta sinh Oedipus, họ nhận được lời sấm rằng đứa trẻ cuối cùng sẽ giết cha, lấy mẹ. Để tránh tai họa, Laius đâm xuyên mắt cá chân đứa trẻ sơ sinh, *oidipous* trong tiếng Hy Lạp có nghĩa là “bàn chân sưng”, rồi ra lệnh cho người chăn cừu bỏ nó ngoài đồng chờ chết.
 
-> 俄狄浦斯登上王位之后，底比斯不断发生灾祸，包括瘟疫。于是俄狄浦斯求助于神祇。先知提瑞西阿斯（Tiresias）揭示之后，俄狄浦斯才知道他是拉伊奥斯的儿子，弑父娶母的不幸命运最终应验。震惊不已的约卡斯塔羞愧地上吊自杀，而同样悲愤不已的俄狄浦斯，则刺瞎了自己的双眼。
+> Nhưng người chăn cừu không đành lòng, nên bí mật trao đứa trẻ cho vua Polybus của Corinth. Polybus rất yêu đứa trẻ, nuôi như con ruột. Khi trưởng thành, Oedipus biết lời sấm từ đền thờ rằng mình cuối cùng sẽ giết cha, lấy mẹ, nhưng không biết vua Polybus và hoàng hậu không phải cha mẹ đẻ. Để ngăn lời sấm thành hiện thực, chàng rời Corinth và thề không bao giờ trở lại.
 
-而莫顿教授用银行挤兑的例子说明自证预言的作用机理：
+> Sau đó, trên đường phiêu bạt, Oedipus xung đột với một nhóm người lạ ở ngã rẽ và lỡ tay giết người, trong đó có cha ruột Laius. Về sau, nhờ giải được câu đố của nhân sư Sphinx, chàng kế vị ngai vàng Thebes và cưới góa phụ của nhà vua.
 
-> 一家银行本来运作得好好的，但不知怎么就开始有谣言说这家银行要倒闭了。流言越传越广，越来越多的人开始信以为真，开始有人跑到银行把自己的存款提走；进而恐慌开始蔓延，并且变得真实，更多的人冲进银行提走自己的存款……最终，挤兑发生了，银行真的倒闭了。
+> Sau khi Oedipus lên ngôi, Thebes liên tục gặp tai họa, kể cả dịch bệnh. Chàng bèn cầu xin thần linh giúp đỡ. Qua lời tiết lộ của nhà tiên tri Tiresias, Oedipus mới biết mình là con Laius; số phận giết cha, lấy mẹ cuối cùng đã ứng nghiệm. Jocasta kinh hoàng, tủi hổ và treo cổ tự sát; Oedipus cũng đau đớn, phẫn uất, tự chọc mù hai mắt.
 
-自证预言的运作机理颇有些令人迷惑：好事儿很少心想事成，坏事往往却竟然可以无中生有。但也不是不能解释清楚：也许这与人类大脑中根深蒂固的 “恐惧情绪” 心理有关。相对来看，喜悦会使一个人停下行动去享受喜悦，而恐惧却恰恰相反，会引发一个人马上采取行动去避免危险 —— 尽管有的时候事与愿违。事实上，出于恐惧的决策几乎总是事与愿违。
+Giáo sư Merton dùng ví dụ rút tiền hàng loạt ở ngân hàng để giải thích cơ chế của lời tiên tri tự ứng nghiệm:
 
-这种诅咒一旦启动，就几乎无法阻止它起作用，这正是它的可怕之处。我们的幸运在于，生活在一个已经证明这种诅咒不存在的时代──感谢 Edward Taub 等诸多科学家们的不懈努力，我们终于清楚地知道这种诅咒确实是不存在的，那些曾经的恐惧是没有必要的，也感谢这些年来我的学生，让我清楚地看到无数成功的事实，使我、他们之后很多的学生、以及我的读者从 “暗黑时代” 中走出来，朝霞满天。
+> Một ngân hàng vốn hoạt động bình thường, nhưng không hiểu sao xuất hiện tin đồn rằng nó sắp phá sản. Tin đồn lan rộng, ngày càng nhiều người tin là thật, bắt đầu đến rút tiền gửi. Nỗi hoảng loạn tiếp tục lan ra và trở nên có thật, càng nhiều người ùa vào rút tiền… Cuối cùng xảy ra một đợt rút tiền hàng loạt, và ngân hàng thực sự phá sản.
 
-[^4]: “中风”其实是中国传统医疗概念，在现代医学概念中，这种病症叫做“Stroke”：血管因某种原因（比如存在血栓）突然阻塞而无法向大脑供血，于是就会引发部分脑细胞死亡，进而脑损伤会导致肢体的某些部分失去知觉。
+Cơ chế của lời tiên tri tự ứng nghiệm có phần khó hiểu: chuyện tốt hiếm khi thành chỉ vì mong muốn, trong khi chuyện xấu lại thường có thể từ không thành có. Nhưng không phải không giải thích được. Có lẽ nó liên quan đến “nỗi sợ” ăn sâu trong tâm lý con người. So sánh mà nói, niềm vui khiến người ta dừng hành động để tận hưởng, còn nỗi sợ thì ngược lại, thúc đẩy hành động ngay để tránh nguy hiểm, dù đôi khi kết quả trái ý muốn. Thực ra, quyết định vì sợ hãi gần như luôn cho kết quả trái ý muốn.
 
-[^5]:  "[We have discovered nothing.](http://news.bbc.co.uk/2/hi/science/nature/1577421.stm)"
+Một khi lời nguyền này khởi động, gần như không thể ngăn nó phát huy tác dụng, và đó chính là điều đáng sợ. May mắn của chúng ta là sống trong thời đại đã chứng minh lời nguyền ấy không tồn tại. Nhờ nỗ lực bền bỉ của Edward Taub và nhiều nhà khoa học khác, cuối cùng ta hiểu rõ nó thực sự không tồn tại, những nỗi sợ trước kia là không cần thiết. Tôi cũng cảm ơn các học sinh trong những năm qua: các em giúp tôi thấy rõ vô số trường hợp thành công, đưa tôi, nhiều học sinh đến sau và bạn đọc bước ra khỏi “thời kỳ tăm tối”, hướng đến bầu trời rực sáng bình minh.
+
+[^4]: “Trúng phong” vốn là một khái niệm của y học truyền thống Trung Quốc. Trong y học hiện đại, bệnh này được gọi là “Stroke”: mạch máu đột ngột bị tắc vì một nguyên nhân nào đó, chẳng hạn có cục máu đông, không thể cấp máu cho não, khiến một phần tế bào não chết; tổn thương não sau đó làm một số phần chi mất cảm giác.
+
+[^5]: "[We have discovered nothing.](http://news.bbc.co.uk/2/hi/science/nature/1577421.stm)"
 
 [^6]: Visual training improves underwater vision in children , Vision Research, Volume 46, Issue 20, October 2006, Pages 3443-3450
 
-[^7]: 在中文语境（或中医语境）中，偏瘫就是中风的症状；西医把这个叫做“Stroke”──之前提到过。
+[^7]: Trong bối cảnh tiếng Trung, hoặc y học cổ truyền Trung Quốc, liệt nửa người là triệu chứng của trúng phong; y học phương Tây gọi nó là “Stroke”, như đã nói ở trên.
 
-[^8]: 这又是一个足以改变你的观念的重要概念，不是么？
+[^8]: Đây lại là một khái niệm quan trọng đủ sức thay đổi quan niệm của bạn, phải không?
 
-[^9]: 之前提到过每个多语使用者都有一种“主导语言”。主导语言的形成，也是基于这个原因，因为脑图之间存在竞争。
+[^9]: Phía trên đã nhắc rằng mỗi người sử dụng nhiều ngôn ngữ có một “ngôn ngữ chủ đạo”. Sự hình thành của ngôn ngữ chủ đạo cũng dựa trên nguyên nhân này, vì các bản đồ não cạnh tranh với nhau.
 
-## 6. 不要再 “学” 英语，你就该 “用” 英语！
+> **Ghi chú biên tập về các chú thích và lời khuyến học:** Chú thích 4 và 7 ở trên được dịch từ nguyên tác. Đột quỵ gồm cả thiếu máu não và xuất huyết não; liệt nửa người là một biểu hiện có thể gặp, không đồng nghĩa với đột quỵ. Xem [NINDS về đột quỵ](https://www.ninds.nih.gov/health-information/stroke/stroke-overview). Các câu “nhất định học giỏi”, “tin không thể thì chắc chắn không thể” và “tự ứng nghiệm luôn tiêu cực” là cách nhấn mạnh của tác giả, không phải quy luật bảo đảm kết quả. Sự tự tin cần đi cùng điều kiện học, luyện tập và hỗ trợ phù hợp. “Excuse me” có thể dùng đúng trong nhiều tình huống; nguyên tác không cung cấp hội thoại cụ thể để kết luận mọi cách dùng câu đó là sai.
 
-语言是人类最宝贵的工具，然而，有些时候，语言也有副作用，给使用它的人带来限制。从某种意义上毫不夸张地说，“学” 这个字很可能实际上是很多人语言习得路上的最大障碍之一。因为人们往往对 “学” 这个字充满了敬畏，甚至常常是不必要的敬畏。
+## 6. Đừng “học” tiếng Anh nữa, hãy “dùng” tiếng Anh!
 
-这种敬畏体现在大多数人总是假定不论是什么事情，都要先 “学” 好了之后才能 “用”。这个假定在很多情况下确实是正确的。比如，如果你想以医生为职业，那么你必须通过考试获得行医资格之后被允许救死扶伤；如果你想以律师为职业，那么你也必须通过考试获得律师资格之后才可以去匡扶正义。哪怕再简单一些的技能也可能如此，比如，你买了一辆车想将其作为代步工具，那么就必须通过考试获得驾照之后才被允许开车上路 —— 无证驾驶是违法的。
+Ngôn ngữ là công cụ quý giá nhất của con người. Tuy nhiên, đôi khi nó cũng có tác dụng phụ, đặt ra giới hạn cho người sử dụng. Theo một nghĩa nào đó, nói không hề quá lời, chữ “học” rất có thể là một trong những trở ngại lớn nhất trên con đường tiếp thu ngôn ngữ của nhiều người. Bởi người ta thường quá kính sợ chữ “học”, thậm chí kính sợ một cách không cần thiết.
 
-然而，这个假定并不适用于英语这项技能的习得及应用（或者说，其他的第二语言、甚至第三语言）。司机、医生、律师需要通过考试才能应用所需技能的重要原因在于这些技能的应用如若出现差错很有可能会对他人造成伤害 —— 甚至可能是无法挽回的。但是， 英语这项技能的应用在大多数情况下很难对他人造成伤害。你英文发音再难听，听的人也不会因此猝死；你英文语法错误再多，读的人也不会因此疼痛；别人对你说英文你没听懂或者给你看英文你没读懂，若非极端情况，你也不会因此就从此真的无颜见人。
+Sự kính sợ ấy thể hiện ở chỗ phần lớn mọi người luôn mặc định rằng, bất kể việc gì, phải “học” cho giỏi trước rồi mới được “dùng”. Giả định này quả thực đúng trong nhiều trường hợp. Chẳng hạn, nếu muốn làm bác sĩ, bạn phải thi lấy tư cách hành nghề rồi mới được phép cứu chữa người bệnh. Muốn làm luật sư, bạn cũng phải thi lấy tư cách hành nghề rồi mới có thể bảo vệ công lý. Ngay cả kỹ năng đơn giản hơn cũng có thể như vậy: mua xe làm phương tiện đi lại thì phải thi lấy bằng lái rồi mới được lái ra đường; lái xe không có bằng là phạm pháp.
 
-而事实上，无论哪一种知识都必须经过实践才能够真正习得。即便医生必须先获得行医资格才能挂牌行医，但是，在此之前，他们都要经过很多年的实习才行──只不过，为了安全起见，他们的实习是在严格监管之下进行的。为了获得驾照，一定要有机会开车才能学会，只不过，通常情况下，在获得驾照之前基本上只能在驾校里开车……
+Tuy nhiên, giả định ấy không áp dụng cho việc tiếp thu và sử dụng tiếng Anh, hay một ngôn ngữ thứ hai, thậm chí thứ ba khác. Một lý do quan trọng khiến người lái xe, bác sĩ và luật sư phải thi trước khi vận dụng kỹ năng là: nếu làm sai, họ rất có thể gây hại cho người khác, thậm chí không thể cứu vãn. Nhưng trong phần lớn trường hợp, việc dùng tiếng Anh khó gây hại cho ai. Bạn phát âm khó nghe đến đâu cũng không khiến người nghe đột tử; viết sai ngữ pháp đến đâu cũng không khiến người đọc đau đớn; người khác nói tiếng Anh mà bạn không nghe hiểu, hoặc đưa tiếng Anh mà bạn không đọc hiểu, thì trừ tình huống cực đoan, bạn cũng không đến mức từ đó không còn mặt mũi gặp ai.
 
-只 “学” 不 “用”（这是大多数中国学生的写照）的下场就是在十几年之后依然在学依然无用（这是大多数中国学生的现实）。
+Thực ra, bất cứ kiến thức nào cũng phải qua thực hành mới có thể thực sự tiếp thu. Dù bác sĩ phải có tư cách hành nghề mới được mở phòng khám, trước đó họ vẫn cần thực tập nhiều năm; chỉ có điều, để bảo đảm an toàn, việc thực tập được giám sát nghiêm ngặt. Muốn lấy bằng lái, nhất định phải có cơ hội lái xe mới học được; chỉ là thông thường, trước khi có bằng, về cơ bản bạn chỉ được lái trong trường dạy lái…
 
-既然 “用” 英语不会伤害任何人，既然不 “用” 就 “学” 不好，那莫不如从一开始就直接 “用”。
+Chỉ “học” mà không “dùng”, hình ảnh của phần lớn học sinh Trung Quốc, dẫn đến kết cục hơn chục năm sau vẫn đang học mà vẫn chưa dùng được, cũng là thực tế của phần lớn học sinh Trung Quốc.
 
-也可以这样理解：只有不断地 “用”，才能真正地 “学”，因为所有技能的习得，都要靠试错（Trial and Error）。很多人宁愿 “学一辈子”，却坚持 “一辈子不用” 的原因就在于害怕犯错。儿时犯错往往招致惩罚，成年之后，就算没有来自他人的惩罚，还有因为犯错而导致自己自卑和尴尬，所以，很多人是 “不惜一切代价” 避免出错的。然而，要知道知识的习得过程离不开试错，没有试错，就不可能有全面而真实的进步。所以，要知道犯错是正常的，甚至是不可或缺的。做事的时候，出错是必然的，如果正在做事却一点错都没有，那不是做事──那是在做梦。
+Nếu “dùng” tiếng Anh không làm hại ai, và nếu không “dùng” thì không thể “học” giỏi, chi bằng ngay từ đầu hãy trực tiếp “dùng”.
 
-把 “学” 改为 “用” 是很重要的，尽管看起来并没有什么了不起。书名《人人都能用英语》中的 “用” 字就是这个用意。而之前的章节标题中，我们的问题是 “我们有可能把外语用的比母语更好么？” 而不是 “我们有可能把外语学得比母语更好么？” 也是给予同样的考虑。
+Cũng có thể hiểu thế này: chỉ liên tục “dùng” mới thực sự “học”, vì tiếp thu mọi kỹ năng đều dựa vào thử và sai (Trial and Error). Nhiều người thà “học cả đời” mà vẫn nhất quyết “cả đời không dùng” vì sợ mắc lỗi. Khi nhỏ, mắc lỗi thường bị phạt; lớn lên, dù không còn bị người khác phạt, ta vẫn tự ti và ngượng ngùng vì lỗi sai. Vì thế, nhiều người tránh sai “bằng mọi giá”. Nhưng cần biết rằng quá trình tiếp thu kiến thức không thể thiếu thử và sai. Không thử và sai thì không thể tiến bộ toàn diện, thực chất. Mắc lỗi là bình thường, thậm chí không thể thiếu. Khi làm việc, sai sót là tất yếu; nếu đang làm mà không sai chút nào, thì đó không phải làm việc, đó là nằm mơ.
 
-至于在哪儿用、怎么用，后面的章节中我们将从多个角度反复审视。然而，原则却很简单：你是怎么用母语的，你就应该怎么用英语。要对 “使用外语” 等闲视之──所谓 “使用一种语言”，本质上来看，不就是说话识字而已么？肯定不简单，但也绝对没有那么难。
+Đổi từ “học” sang “dùng” rất quan trọng, dù trông chẳng có gì ghê gớm. Từ “dùng” trong tên sách *Ai cũng có thể dùng tiếng Anh* mang chính ý đó. Cũng vì lý do ấy, câu hỏi ở mục trước là “Chúng ta có thể dùng ngoại ngữ giỏi hơn tiếng mẹ đẻ không?”, thay vì “Chúng ta có thể học ngoại ngữ giỏi hơn tiếng mẹ đẻ không?”.
 
-## 7. 英文真的有用么？
+Dùng ở đâu, dùng thế nào, các chương sau sẽ xem xét nhiều lần từ nhiều góc độ. Nhưng nguyên tắc rất đơn giản: bạn dùng tiếng mẹ đẻ thế nào thì nên dùng tiếng Anh thế ấy. Hãy xem việc “sử dụng ngoại ngữ” là chuyện bình thường. Suy cho cùng, “dùng một ngôn ngữ” chẳng phải chỉ là nói và biết chữ sao? Chắc chắn không đơn giản, nhưng cũng tuyệt đối không khó đến thế.
 
-好像每个人都知道英文很有用，必须学，并且必须学好。可是，你真的相信么？事实上，大多数人相信的是另外一回事儿。
+> **Ghi chú biên tập cho người học Việt Nam:** Ý thực hành ở đây phù hợp với việc đọc, nghe, viết và trò chuyện phục vụ học tập hằng ngày. Các ví dụ bác sĩ, luật sư và bằng lái là minh họa của tác giả, không phải hướng dẫn pháp lý tại Việt Nam. Với nội dung y tế, hợp đồng hoặc tình huống có hậu quả thực tế, vẫn cần kiểm tra nghĩa và nhờ người đủ chuyên môn hỗ trợ khi cần. Có thể bắt đầu bằng một việc nhỏ bằng tiếng Anh ngay hôm nay, rồi dùng tiếng Việt để làm rõ điều chưa hiểu.
 
-我与无数的学生沟通，最终的结果是，大多数人 “学” 了英文十数年之后在现实世界中的应用只不过是考试而已。一路下来考了无数的试，中考、高考、四级、六级、考研、雅思、托福、SAT、GRE、GMAT……这过程中，什么时候不再考了，英文也就扔下了。
+## 7. Tiếng Anh có thực sự hữu ích không?
 
-大多数人就是这样的：无论父母、老师、甚至整个社会如何灌输，他们骨子里其实并不相信英文有用。只不过，很多的时候，这种 “不相信” 并不那么明显，甚至非常隐蔽，很多人甚至在不断声称 “我对英文非常感兴趣” 的同时，其实并不相信英文真的不可或缺。
+Dường như ai cũng biết tiếng Anh rất hữu ích, phải học, và phải học giỏi. Nhưng bạn có thực sự tin không? Thực ra, phần lớn mọi người tin một điều khác.
 
-而现实也确实无时不刻地在向我们布道：没有英文地球照样转，生活照样缤纷多彩。看看自己的身边吧。你父母都精通英文么？也许不是，可他们不都过得好好的么？你那个生意上很成功的远方亲戚懂英文么？不懂。甚至，可能都没有受过所谓的高等教育，那不还是好好的么？不懂英文怎么了？不懂就不懂，大不了请个翻译，翻得不好就再换一个……
+Tôi đã trao đổi với vô số học sinh. Kết quả cuối cùng là: sau hơn chục năm “học” tiếng Anh, cách phần lớn các em vận dụng nó trong thế giới thực chẳng qua chỉ là thi cử. Suốt chặng đường, các em thi không biết bao nhiêu kỳ: tuyển sinh trung học phổ thông, gaokao, CET-4, CET-6, tuyển sinh cao học, IELTS, TOEFL, SAT, GRE, GMAT… Trong quá trình ấy, khi nào ngừng thi thì cũng bỏ tiếng Anh xuống.
 
-道理再清楚不过：如果有一样东西你必须学，它不可或缺，你学不会就无法继续生活 …… 那这样东西不用任何人逼你，不用任何人向你灌输 “它太有用了！”，你都会玩命地去搞定它。假设有人挡住你的去路，阻挠你学那个不可或缺的它，你甚至可能为此拼命……
+Phần lớn mọi người là vậy: dù cha mẹ, thầy cô, thậm chí toàn xã hội truyền đạt thế nào, trong thâm tâm họ thực ra không tin tiếng Anh hữu ích. Chỉ có điều, nhiều khi sự “không tin” ấy không rõ ràng, thậm chí được che rất kỹ. Nhiều người vừa liên tục nói “Tôi rất hứng thú với tiếng Anh”, vừa không thực sự tin rằng tiếng Anh là thứ không thể thiếu.
 
-生活中，随处可见 “自己并不知道自己并不相信” 的例子。这也是大多数父母教育孩子失败的重要原因之一。
+Và thực tế cũng không ngừng giảng cho chúng ta rằng: không có tiếng Anh, Trái Đất vẫn quay, cuộc sống vẫn muôn màu. Hãy nhìn quanh. Cha mẹ bạn có đều giỏi tiếng Anh không? Có thể không, nhưng chẳng phải họ vẫn sống tốt sao? Người họ hàng xa kinh doanh rất thành công có biết tiếng Anh không? Không. Thậm chí có thể chưa từng học cái gọi là giáo dục đại học, chẳng phải vẫn ổn sao? Không biết tiếng Anh thì sao? Không biết thì thôi, cùng lắm thuê phiên dịch; dịch không tốt thì đổi người khác…
 
-几乎每个父母都教育自己的孩子 “最好练一手好字”。可事实上，绝大多数父母最终只能不了了之──观察下自己的周边吧，写一手好字的人从来都是极少数（当然，任何领域都只有极少数人做到好）。问题出在哪儿？
+Lý lẽ quá rõ: nếu có thứ bạn buộc phải học, không thể thiếu, không học được thì không thể sống tiếp, bạn sẽ dốc sức chinh phục nó mà không cần ai ép hay nhồi vào đầu rằng “Nó hữu ích lắm!”. Nếu ai đó chặn đường, ngăn bạn học thứ không thể thiếu ấy, có thể bạn còn liều mình vì nó…
 
-以下是我在某处读来的一位父亲的苦恼：
+Trong cuộc sống, đâu đâu cũng thấy chuyện “bản thân không biết mình không tin”. Đây cũng là một nguyên nhân quan trọng khiến phần lớn cha mẹ thất bại trong việc giáo dục con.
 
-> 昨天女儿给我讲，爸爸，我不想学书法了。我这个人很民主，肯定不搞棍棒教育，真拿起棍棒来，我们家也是女儿打我这个“怪兽”，都是中奥特曼的毒太深。于是我问她：是不是觉得写书法很枯燥呢？是的！那我又问她：你想不想成为学校很牛的学生呢？想！那要成为很牛的学生，要不要成绩好？要！每次成绩都考90分能不能成为很牛的学生？（她的成绩目前还不能稳定做到过90）女儿想了半天，我又启发，是不是成绩好的经常考100分？对。每次都考100分难不难？难。但如果你每次能考90分，又会打乒乓球，又会写毛笔字，那是不是不一样？嗯。那这样的小朋友是不是有特长，才很牛？对。那你要不要成为这样的小朋友？要！那是不是应该坚持学好毛笔字？不学！诱导半天，启发失败，看来女儿聪明，知道我绕弯子教育她，虽然六岁不到，但总是逆反回答，也让人头痛。唯小人及女子其为难养也！我这女儿两样都占全了！
+Gần như cha mẹ nào cũng dạy con “tốt nhất nên luyện chữ đẹp”. Nhưng thực tế, tuyệt đại đa số cuối cùng đều bỏ dở. Hãy nhìn quanh: người viết chữ đẹp luôn chỉ là số ít; tất nhiên, lĩnh vực nào cũng chỉ số ít làm tốt. Vấn đề nằm ở đâu?
 
-这位父亲 “启发” 失败的原因在于，他一方面向孩子有意识地灌输 “书法很有用”（尽管他的 “尽力启发” 实际上很牵强），但，另外一方面他在无意识地向孩子传递 “书法不好也没啥” 的事实。
+Dưới đây là nỗi băn khoăn của một người cha mà tôi đọc được ở đâu đó:
 
-如果，这位父亲是一位喜欢书法，每天都在精练书法，也经常因此常常被人夸奖的人，那么他的女儿可能无需他 “有意启发”，早就开始自愿天天练字了。可事实是相反的：这位父亲自己并不练书法，而女儿也看到父亲书法不怎样也无所谓（却让我练书法──不公平！），这种 “无声的事实” 是很强大的，强大到绝不可掩盖的地步。
+> Hôm qua con gái nói với tôi: “Bố ơi, con không muốn học thư pháp nữa”. Tôi vốn dân chủ, chắc chắn không dùng đòn roi. Nếu có cầm gậy trong nhà thì cũng là con gái đánh “quái vật” là tôi, vì mê Ultraman quá rồi. Tôi hỏi: “Có phải con thấy viết thư pháp chán không?”. “Vâng!”. Tôi lại hỏi: “Con có muốn trở thành học sinh thật giỏi ở trường không?”. “Có!”. “Muốn thật giỏi thì có cần điểm tốt không?”. “Có!”. “Lần nào cũng được 90 điểm thì đã thành học sinh thật giỏi chưa?”. Điểm của con hiện còn chưa ổn định trên 90. Con nghĩ một lúc lâu, tôi lại gợi: “Có phải các bạn học giỏi thường được 100 điểm không?”. “Đúng”. “Lần nào cũng được 100 có khó không?”. “Khó”. “Nhưng nếu lần nào con cũng được 90, lại biết bóng bàn, biết viết chữ bằng bút lông, thì có khác không?”. “Dạ”. “Bạn nhỏ như thế có sở trường nên mới giỏi, đúng không?”. “Đúng”. “Vậy con có muốn thành bạn nhỏ như thế không?”. “Có!”. “Thế có nên kiên trì học viết bút lông cho giỏi không?”. “Không học!”. Dẫn dắt nửa ngày, gợi mở thất bại. Xem ra con bé thông minh, biết tôi vòng vo để dạy nó. Dù chưa đầy sáu tuổi, nó luôn trả lời ngược lại, thật đau đầu. Chỉ tiểu nhân và phụ nữ là khó nuôi dạy! Con gái tôi chiếm đủ cả hai!
 
-曾有人质疑我，“那如果我作为父母，不懂英文的话，按你的说法，我让自己的孩子学英文倒是不行的了？！”
+Người cha này “gợi mở” thất bại vì một mặt cố ý truyền cho con rằng “thư pháp rất hữu ích”, dù nỗ lực ấy thực ra khá gượng ép; mặt khác, ông vô thức truyền đi sự thật rằng “thư pháp không giỏi cũng chẳng sao”.
 
-父母期望孩子学好任何一样东西，都是天经地义的。可是，仅仅出于好意是不够的。如果仅靠 “一番好意” 就可以成就事情，那这世界该多美好！可惜，现实并非如此。
+Nếu người cha yêu thư pháp, ngày nào cũng miệt mài luyện và thường được khen vì điều đó, có lẽ con gái đã tự nguyện luyện chữ hằng ngày từ lâu mà không cần ông “cố ý gợi mở”. Nhưng thực tế ngược lại: cha không luyện thư pháp, con cũng thấy chữ cha chẳng ra sao mà vẫn không hề gì, thế mà lại bắt mình luyện, thật bất công! “Sự thật không lời” này rất mạnh, mạnh đến mức không thể che giấu.
 
-潜移默化的教育最有效。
+Từng có người chất vấn tôi: “Vậy nếu tôi là cha mẹ mà không biết tiếng Anh, theo anh, tôi bảo con học tiếng Anh cũng không được sao?!”.
 
-高考的时候，我在大学里做英语教授的父亲帮我选择了会计专业，而事实上，我一天的会计都没有做过。我自作主张，在大学毕业之后，做了几年的销售。而后几经辗转，居然跑去从事英语教学。这样的 “巧合” 其实背后有着必然的联系。
+Cha mẹ mong con học giỏi bất cứ thứ gì là điều tự nhiên. Nhưng chỉ có ý tốt thì chưa đủ. Nếu chỉ cần “một tấm lòng tốt” là làm nên việc, thế giới này đã đẹp biết bao! Tiếc rằng thực tế không như vậy.
 
-因为讲课受学生欢迎，我常常被要求去培训新教师。在培训教师的过程中，我很意外地发现，经常有人（比例远远超出我最初的想象）问我这样的问题：“李老师，你讲了这么多年的课，是不是早就不用再备课了？” 说实话，我很惊讶，他们怎么会问出这样的问题？尤其当遇到师范专业毕业生问这样的问题，我就更是惊诧莫名了──备课怎么可能有尽头呢？讲到老就要备到老啊！
+Giáo dục qua ảnh hưởng âm thầm là hiệu quả nhất.
 
-经过一段时间的反思，我才想明白。从小，我就看到父亲每天晚饭之后都在备课。那教科书的页边页眉早就被密密麻麻的笔记填满，再过两学期，那书里又会多出许多夹页 …… 所以，我从小就以为 “老师都是这样的”（当然现在已经知道其实并非如此）。所以，有一天，我 “竟然” 做了老师，也就按照 “都是那样” 的方式做事 …… 而问我那个问题的人，尽管是师范专业毕业的，他们没见过我父亲那种老师，所以，他们不会像我那样认为 “老师都是那样的”，于是，他们以为的是另外一个样子……
+Khi tôi thi đại học, cha tôi, một giáo sư tiếng Anh ở trường đại học, giúp tôi chọn ngành kế toán. Nhưng thực tế tôi chưa làm kế toán lấy một ngày. Tự quyết theo ý mình, sau khi tốt nghiệp tôi làm bán hàng vài năm. Rồi qua nhiều ngã rẽ, không ngờ lại đi dạy tiếng Anh. Đằng sau sự “trùng hợp” ấy thực ra có mối liên hệ tất yếu.
 
-从他人身上获得的这种潜移默化的影响极为强大。看来 “自己相信或者不相信” 的影响，对自己更加潜移默化，影响力更加强大。
+Vì bài giảng được học sinh yêu thích, tôi thường được đề nghị đào tạo giáo viên mới. Trong quá trình ấy, tôi bất ngờ thấy nhiều người, với tỷ lệ vượt xa tưởng tượng ban đầu, hỏi: “Thầy Lý, thầy dạy bao nhiêu năm rồi, chắc từ lâu không cần soạn bài nữa nhỉ?”. Nói thật, tôi ngạc nhiên: sao họ hỏi được câu như vậy? Đặc biệt khi người hỏi tốt nghiệp sư phạm, tôi càng kinh ngạc. Soạn bài làm sao có điểm kết thúc? Dạy đến già thì phải soạn đến già chứ!
 
-2003 年，我开始去健身房。经过一段时间，身边的很多人觉得我去健身房很有效果，于是，也都纷纷报名买了健身卡。我身边的人当然绝大多数是老师。
-我是请健身教练的，那价格不高不低：一小时 150 元。十几位老师之中，只有我一个人请教练。私下里，他们认为我花钱太大手大脚了，另外，他们也觉得一小时 150 元不值。
+Suy ngẫm một thời gian, tôi mới hiểu. Từ nhỏ, tôi đã thấy cha soạn bài mỗi ngày sau bữa tối. Lề và đầu trang sách giáo khoa sớm đã kín đặc ghi chú; thêm hai học kỳ, trong sách lại xuất hiện nhiều trang giấy chèn thêm… Vì vậy, từ nhỏ tôi tưởng “giáo viên ai cũng thế”, dù giờ đã biết thực ra không phải. Thế nên có ngày tôi “lại” trở thành giáo viên, tôi cũng làm theo cách mình nghĩ là “ai cũng thế”… Còn những người hỏi tôi, dù tốt nghiệp sư phạm, chưa từng thấy kiểu giáo viên như cha tôi. Họ không nghĩ “giáo viên ai cũng thế” như tôi, mà hình dung một kiểu khác…
 
-从我的角度，我不太理解为什么这些自身职业为教师的人却不肯花钱请教练。
-观察了很久，也有过几次讨论，我自己有了个结论，尽管这些不肯花钱请教练的人肯定不赞同这个结论：他们不相信教学的作用──尽管他们是老师，他们甚至很可能在课堂上讲的就是自己不相信的东西 …… 别惊讶，尽管你会觉得我多少有些偏激，但我确信很多老师一生都在讲授自己并不相信的东西。所以，潜移默化之中，他们根本不相信健身教练能教他们什么有用的东西，因为他们教别人的东西之中也有很多是自己都知道根本没有用的──尽管他们自己并不见得清楚自己真正的想法。
+Ảnh hưởng âm thầm tiếp nhận từ người khác mạnh vô cùng. Có vẻ ảnh hưởng của việc “bản thân tin hay không tin” đối với chính mình còn âm thầm hơn, mạnh hơn nữa.
 
-不到半年的时间里，这些人都不再去健身房了，现在，整个健身房里，只有我一个人是七年的会员。最重要的是，在健身教练的指导下，这么多年，我在健身房从未受伤。事实上，很多人不是坚持不下去，而是在练的过程中由于方法不当，最终造成了各种各样的损伤，于是，无法练下去了 …… 并且，教练在大约两年之后，基本上就教完了，普通人没必要请一辈子教练的。经过这样迂回地讲解，读者应该能够理解很多人声称 “对英文感兴趣” 或 “英文很重要等”，但实际情况却并非如此。
+Năm 2003, tôi bắt đầu đến phòng tập. Sau một thời gian, nhiều người xung quanh thấy việc tập luyện có hiệu quả với tôi, nên cũng đăng ký thẻ hội viên. Đương nhiên, phần lớn những người quanh tôi là giáo viên.
+Tôi thuê huấn luyện viên, với mức giá không cao không thấp: 150 nhân dân tệ một giờ. Trong hơn chục giáo viên, chỉ mình tôi thuê người hướng dẫn. Riêng với nhau, họ cho rằng tôi tiêu tiền quá mạnh tay, đồng thời thấy một giờ 150 nhân dân tệ là không đáng.
 
-“叶公好龙” 这个成语早已存在超过千年。这不是什么稀奇的现象，也没那么难以理解。
+Từ góc nhìn của mình, tôi không hiểu vì sao những người làm nghề giáo lại không chịu bỏ tiền thuê huấn luyện viên.
+Sau khi quan sát lâu và thảo luận vài lần, tôi đi đến một kết luận mà chắc chắn những người không chịu thuê ấy sẽ không đồng ý: họ không tin vào tác dụng của việc dạy học. Dù là giáo viên, rất có thể ngay trên lớp họ cũng giảng những điều chính mình không tin… Đừng ngạc nhiên. Dù bạn thấy tôi có phần cực đoan, tôi tin chắc nhiều giáo viên cả đời dạy những điều họ không tin. Vì vậy, một cách âm thầm, họ căn bản không tin huấn luyện viên thể hình có thể dạy họ điều hữu ích, bởi trong những thứ họ dạy người khác cũng có nhiều điều họ biết là vô dụng, dù chưa chắc họ hiểu rõ suy nghĩ thực sự của mình.
 
-另外，对于那些希望自己孩子学好英文自己却一点都不懂的父母来说，倒是有个实用的建议：为了让孩子自然而然地学，父母就应该跟孩子一起学──我的意思是 “真学”，而不是做做样子。如果，你坚信英文有用，一定会有所挣扎；只要挣扎，就一定会有进步；只要有进步，就一定会开心，相信我，开心是传染性非常高的。当然，如果发现自己确实做不到，那么，请你也别对孩子有太多要求，随他去吧，看他自己的造化。
+Chưa đầy nửa năm, những người ấy đều thôi đến phòng tập. Giờ đây, cả phòng tập chỉ có mình tôi là hội viên suốt bảy năm. Quan trọng nhất, dưới sự hướng dẫn của huấn luyện viên, tôi chưa từng bị thương trong những năm tập ấy. Thực ra, nhiều người không phải không kiên trì được, mà vì tập sai cách dẫn đến đủ loại chấn thương, rồi không thể tập tiếp… Hơn nữa, khoảng hai năm sau, huấn luyện viên về cơ bản đã dạy xong những điều cần thiết; người bình thường không cần thuê huấn luyện viên cả đời. Qua cách giải thích vòng vèo này, hẳn bạn đọc hiểu vì sao nhiều người nói “hứng thú với tiếng Anh”, “tiếng Anh rất quan trọng”…, nhưng thực tế không như vậy.
 
-## 8. 我自己是从什么时候开始确认英文有用的？
+Thành ngữ “Diệp Công thích rồng” đã tồn tại hơn nghìn năm. Đây không phải hiện tượng hiếm lạ, cũng không khó hiểu đến vậy.
 
-最初的时候，我的英文成绩不仅不好，甚至应该正确描述为 “很差” 才对。从小我就被误解，很多人误以为我英文成绩一定会不错，因为我的父亲是英文教授。
+Ngoài ra, với những cha mẹ mong con học giỏi tiếng Anh nhưng bản thân không biết chút nào, có một gợi ý thực tế: muốn con học một cách tự nhiên thì cha mẹ nên học cùng con. Ý tôi là “học thật”, không phải làm ra vẻ. Nếu tin chắc tiếng Anh hữu ích, bạn sẽ phải vật lộn đôi chút; chỉ cần vật lộn thì nhất định tiến bộ; chỉ cần tiến bộ thì nhất định vui. Tin tôi đi, niềm vui lây lan rất mạnh. Tất nhiên, nếu phát hiện mình thực sự không làm được, xin cũng đừng đòi hỏi con quá nhiều; cứ để con tự tìm đường, xem cơ duyên của nó.
 
-可恰恰因为我父亲是英文教授，我才学不好！这不是什么奇怪的现象，而是普遍现象──看看实际情况吧，一般来说，教师子女成绩不好的情况其实很常见；并且，子女学不好很可能恰恰是父母所教授的那一门课程。
+> **Ghi chú biên tập:** “Diệp Công thích rồng” nói về người miệng bảo yêu thích nhưng lại sợ hoặc tránh khi gặp điều ấy thật. Đoạn người cha dẫn lời miệt thị phụ nữ được giữ như một trích dẫn trong nguyên tác, không phản ánh nguyên tắc giáo dục của bản tiếng Việt. Không biết tiếng Anh, không có thời gian học cùng con hoặc không thuê huấn luyện viên không chứng minh một phụ huynh hay giáo viên thiếu thiện chí. Mức 150 nhân dân tệ/giờ và bảy năm hội viên là trải nghiệm lịch sử của tác giả, không phải giá hay lời khuyên mua dịch vụ hiện nay. Với gia đình Việt Nam, có thể cùng con chọn một bài nghe phù hợp, khuyến khích con kể điều vừa hiểu và ghi nhận nỗ lực, kể cả khi cha mẹ chưa biết tiếng Anh.
 
-可能性是这样的：教师把耐心全都耗费在学生身上了，以至于回到家里，对自己的孩子却不知不觉失去了耐心。这就是发生在我身上的事情，小时候父亲也尝试教我英文，可总是几句话之后就一巴掌打过来，“这么笨，是我儿子么！” 我也倔强，“你不说我是捡来的么！哼！” 然后就是不欢而散。
+## 8. Tôi bắt đầu biết chắc tiếng Anh hữu ích từ khi nào?
 
-然而，有一天，注定要发生的事情终于发生了 。
+Ban đầu, điểm tiếng Anh của tôi không chỉ không tốt, mà nói chính xác phải là “rất kém”. Từ nhỏ tôi đã bị hiểu nhầm: nhiều người tưởng điểm tiếng Anh của tôi chắc chắn tốt, vì cha tôi là giáo sư tiếng Anh.
 
-大学的时候，几经辗转，我终于搞到了一本英法对照（不是 “中英对照”）的 “Animal Farm”。乔治•奥威尔的这本书，在我成长的年代是一本禁书[^10]。人是很奇怪的动物，如果这书让你随便看你还未必愿意看；可如果它是禁书，你就有无穷无尽的动力去搞到它。
+Nhưng chính vì cha là giáo sư tiếng Anh nên tôi mới học không giỏi! Đây không phải chuyện kỳ lạ mà là hiện tượng phổ biến. Hãy nhìn thực tế: nhìn chung, con giáo viên học không tốt là chuyện khá thường gặp, và môn con học kém rất có thể lại chính là môn cha mẹ dạy.
 
-这本书被推崇为上个世纪最伟大的政治预言。薄薄的册子，讲述了一个看似平实却又惊天动地的故事：
+Một khả năng là: giáo viên dành hết kiên nhẫn cho học sinh, đến khi về nhà lại vô thức mất kiên nhẫn với con mình. Đó là chuyện xảy ra với tôi. Khi nhỏ, cha cũng thử dạy tiếng Anh cho tôi, nhưng thường chỉ sau vài câu là một cái tát: “Sao ngốc thế, có phải con tao không!”. Tôi cũng bướng: “Chẳng phải bố nói nhặt được con sao! Hừ!”. Rồi hai cha con kết thúc trong bực bội.
 
-> 一个农场里，一头老猪趁着酒鬼农场主出门的时机，把所有动物召集到谷仓，给大伙开了个会。
+Nhưng có một ngày, chuyện nhất định xảy ra cuối cùng cũng xảy ra.
 
-> 这头老猪颤颤巍巍爬上谷堆，张口说：“I had a dream……”
+Khi học đại học, sau nhiều lần tìm kiếm vòng vèo, cuối cùng tôi kiếm được một bản “Animal Farm” song ngữ Anh - Pháp, không phải Trung - Anh. Cuốn sách của George Orwell là sách bị cấm trong thời tôi trưởng thành[^10]. Con người là loài vật kỳ lạ: nếu được đọc tự do, chưa chắc bạn muốn đọc; nhưng nếu sách bị cấm, bạn có động lực vô tận để kiếm cho được.
 
-> 没说几句话，农场主琼斯就醉醺醺地回来了，大伙之后四散。
+Cuốn sách được ca ngợi là lời tiên tri chính trị vĩ đại nhất thế kỷ trước. Tập sách mỏng kể một câu chuyện trông bình dị mà làm chấn động lòng người:
 
-> 第二天，这头老猪就去世了，大伙记不得它究竟都说了些什么，却一想起来就很激动，也不知道为什么……
+> Trong một trang trại, một con lợn già nhân lúc ông chủ nghiện rượu đi vắng, gọi tất cả động vật đến kho thóc họp.
 
-> 猪是所有动物里最聪明的。老猪去世之后不久，两头猪，一头叫拿破仑，另一头叫雪球，带着大伙起义了，把琼斯赶走，自己占领了农场，建立了动物共和国……
+> Con lợn già run rẩy trèo lên đống thóc, mở miệng nói: “I had a dream……”.
 
-> 这些动物甚至有宣言的：“All animals are born equal.”
+> Chưa nói được mấy câu, ông chủ Jones đã say khướt trở về, thế là cả đàn tản đi.
 
-> 再后来，猪们发现酒很好喝。可问题在于，酒不是无穷无尽的，不够喝。于是就有猪建议，“只有猪才能喝酒。”可问题又来了，外面的墙上明明写着“All animals are born equal.”于是，酒足饭饱之后，一头猪去在墙上又刷了一些字。
+> Hôm sau, con lợn già qua đời. Không ai nhớ rõ nó đã nói gì, nhưng cứ nghĩ đến là xúc động, cũng chẳng biết vì sao…
 
-> 第二天，所有的动物们都看到了，墙上的标语长了一点点：“All animals are born equal, but some animals are more equal than others.”
-……
+> Lợn thông minh nhất trong các loài vật. Không lâu sau khi lợn già chết, hai con lợn, một tên Napoleon, một tên Snowball, lãnh đạo cả đàn nổi dậy, đuổi Jones đi, tự chiếm trang trại và lập nước cộng hòa động vật…
 
-拿到这本书的时候，我已经寻它好几年了，很容易想象我当时如饥似渴的程度。而那与英文对照的法文并没有让我沮丧，因为我知道怎么查词典──查词典多有用，本书后面会提到。我花了大约半个月的时间才读完这本书，却一点都不觉得辛苦。甚至不知不觉就读完了──可事实上那是半个月啊！
-许多年后，回想起这件事请，我知道 “Animal Farm” 的内容对我的影响并没有另外一件事情更大。读过这本书之后，我脑子里闪过的是这样一个句子：“English, for me, means freedom.”
-自由的感觉真好。
+> Những con vật ấy thậm chí có tuyên ngôn: “All animals are born equal.”
 
-或许对你而言学英语不是为了自由，但不管是什么，只要你发现了，你的动力将无穷尽。
+> Về sau, lũ lợn phát hiện rượu uống rất ngon. Nhưng rượu không vô tận, không đủ uống. Thế là có con đề nghị: “Chỉ lợn mới được uống rượu”. Vấn đề lại xuất hiện: trên tường bên ngoài rõ ràng viết “All animals are born equal.”. Sau khi ăn uống no say, một con lợn ra tường quét thêm vài chữ.
 
-[^10]: 现在这本书早已经不再是禁书，你甚至可以在新浪读书频道里面找到这本书的全本中译版《动物农庄》。
+> Hôm sau, tất cả động vật thấy khẩu hiệu trên tường dài thêm một chút: “All animals are born equal, but some animals are more equal than others.”
+…
 
-## 9. 寻找英文对你的真正的用处
+Lúc cầm được cuốn sách, tôi đã tìm nó mấy năm, nên dễ hình dung tôi háo hức đến mức nào. Phần tiếng Pháp đối chiếu với tiếng Anh không làm tôi nản, vì tôi biết cách tra từ điển; phần sau của sách này sẽ nói tra từ điển hữu ích ra sao. Tôi mất khoảng nửa tháng mới đọc xong mà không hề thấy vất vả, thậm chí đọc xong lúc nào không hay. Nhưng thực tế đó là nửa tháng đấy!
+Nhiều năm sau, nhớ lại chuyện ấy, tôi biết nội dung “Animal Farm” không ảnh hưởng đến mình mạnh bằng một điều khác. Sau khi đọc xong, trong đầu tôi lóe lên một câu: “English, for me, means freedom.”
+Cảm giác tự do thật tuyệt.
 
-对每个人来说，英文的用处应该是非常不一样的。即便是听说读写译这几个方面，人与人之间的要求也可能有天壤之别。
+Có thể bạn học tiếng Anh không phải vì tự do. Nhưng dù là vì điều gì, chỉ cần tìm thấy nó, động lực của bạn sẽ không có điểm tận cùng.
 
-不过，无论如何，一定要想明白对自己来说，英文真正的用处在哪儿？
+[^10]: Giờ đây cuốn sách đã không còn bị cấm từ lâu. Thậm chí bạn có thể tìm thấy toàn văn bản dịch tiếng Trung mang tên *Trang trại động vật* trên chuyên mục đọc sách của Sina.
 
-听与读是输入，说与写是输出，译，从来都不可能是机械的──否则 Google 翻译早就该替代人工翻译了。翻译，实际上大部分工作内容是 “再创作”。
+> **Ghi chú biên tập:** Tình trạng xuất bản trong chú thích 10 là lời kể tại thời điểm viết và trong bối cảnh Trung Quốc, không phải xác nhận pháp lý hay tình trạng truy cập hiện nay tại Việt Nam. Chuyện bị cha tát là trải nghiệm của tác giả; đánh mắng không phải phương pháp được khuyến nghị cho người học.
+>
+> Đoạn *Animal Farm* trên là lời tác giả kể lại, không phải trích chính xác toàn bộ tác phẩm của Orwell. Bản dịch giữ các câu tiếng Anh theo nguyên tác sách này; riêng từ “born” trong hai khẩu hiệu không có trong câu tương ứng của Orwell, và Old Major chết ba đêm sau cuộc họp, không phải hôm sau. Diễn biến uống rượu và sửa khẩu hiệu cũng đã được kể giản lược. Có thể đối chiếu chương II và X trong [văn bản *Animal Farm* tại Project Gutenberg Canada](https://www.gutenberg.ca/ebooks/orwellg-animalfarm/orwellg-animalfarm-00-h.html). Câu “English, for me, means freedom.” có nghĩa: “Với tôi, tiếng Anh có nghĩa là tự do”.
 
-事实上，对每个人来说，输入很可能要远比输出重要得多。因为输出依赖于输入，要先输入足够的信息，经过处理（思考）之后才能获得输出结果。所以，没有输入哪儿来的输出？即便是输入本身，都是有一定要求的，因为，把大脑比作计算机的话，我们可以将那个著名的计算机理论应用到大脑运行机制中：“Garbage in, garbage out.” 进来的是垃圾，出去的就是垃圾──变废为宝往往只不过是传说而已……
+## 9. Tìm công dụng thực sự của tiếng Anh đối với bạn
 
-我一直认为大多数人其实没必要害怕自己只学到了 “哑巴英语”。事实上，绝大多数人其实开口说英语的机会并不多。我当然不是反对开口说英语，我只是在讲述一个事实：对很多人来说，其实只要能够流利阅读英语或许已经足够了。
-能够流利阅读英语的好处很多。自由两个字基本上就是最大的概括。比如，我们可以直接阅读一手的文献资料，而不必经过漫长的等待之后去读实际上错误百出的译文。译文往往并不靠谱，因为翻译真的是很难很难的工作。很多的时候，译文不靠谱都怪不得译者，起码，至少有一部分语言是根本无法翻译的。如若你能够流利阅读英语，那你在阅读译作的时候，一定会时不时笑出来──很多翻译错的句子，你甚至可以根据经验在脑子里还原出原本的英文。不用依赖翻译，是一种莫大的解脱。当你的英文阅读熟练到一定程度之时，你会自然而然地庆幸，那是一种千金不换的庆幸。不过，现在还没到那时候，至于当下么，信不信只能由你。
+Với mỗi người, công dụng của tiếng Anh hẳn rất khác nhau. Ngay cả trong nghe, nói, đọc, viết và dịch, yêu cầu giữa người này với người khác cũng có thể khác một trời một vực.
 
-另外一个不争的事实是，英文是科技文献量最大的语言，在这方面它全面超越所有语言。所以，一旦你需要查阅科技文献，基本上只能去用英文。对另外一些特定的人群来说，写可能更重要。我认识很多外媒驻中的工作人员就是如此。尽管他们讲英文也相当流利，但是，他们自己清楚，写的能力对他们来说有多么的关键。于是，他们将尽一切可能去提高他们的检索能力、思考能力及写作能力。为了更快更准地获取关键信息，他们还要耗费大量的时间精力去编织必要的人际关系 …… 千万不要误以为写出几千字的文章只需要词汇语法知识就可以。
+Nhưng dù thế nào, nhất định phải nghĩ rõ: với mình, tiếng Anh thực sự hữu ích ở đâu?
 
-我并不想唱反调，我不仅同样认为口语能力很重要，并且也深知练就熟练的口语究竟有多难。因为我自己就是耗费了很多时间，走了很多弯路才做到可以正常表达。
+Nghe và đọc là đầu vào; nói và viết là đầu ra. Dịch chưa bao giờ có thể chỉ là thao tác máy móc, nếu không Google Translate đã phải thay thế dịch thuật của con người từ lâu. Thực ra, phần lớn công việc dịch là “tái sáng tạo”.
 
-口语之所以难以习得，是因为它本身属于输出，所以，一定要比输入难度高很多。有效的输出，不仅需要有效的输入，还需要有效的处理（思考），这样来看，练就流利的口语比练就流利的阅读难上八倍都不止……
+Với mỗi người, đầu vào rất có thể quan trọng hơn đầu ra nhiều. Bởi đầu ra phụ thuộc vào đầu vào: phải tiếp nhận đủ thông tin, xử lý bằng suy nghĩ, rồi mới có kết quả đầu ra. Không có đầu vào thì đầu ra từ đâu? Ngay cả đầu vào cũng có yêu cầu nhất định. Nếu ví não với máy tính, ta có thể áp dụng nguyên lý máy tính nổi tiếng vào cơ chế hoạt động của não: “Garbage in, garbage out.”. Đưa rác vào thì nhận rác ra; biến phế thải thành báu vật thường chỉ là chuyện truyền thuyết…
 
-不过，无论如何，输入是基础。很多人无法输出的根本原因在于输入太少。究竟少到什么程度，他们自己并不清楚。这句话可以用在任何一个学习的领域：**不知道并不可怕，可怕的是自己不知道 “自己不知道”**。
-## 10. 我们过去对自己要求太低了……
+Tôi luôn cho rằng phần lớn mọi người thực ra không cần sợ mình chỉ học được “tiếng Anh câm”. Thực tế, tuyệt đại đa số không có nhiều dịp nói tiếng Anh. Tất nhiên tôi không phản đối việc nói; tôi chỉ nêu một sự thật: với nhiều người, có lẽ đọc tiếng Anh trôi chảy đã là đủ.
+Đọc tiếng Anh trôi chảy có nhiều lợi ích. Hai chữ “tự do” về cơ bản đã khái quát được điều lớn nhất. Chẳng hạn, ta có thể đọc thẳng tài liệu gốc, không phải chờ rất lâu để rồi đọc bản dịch thực ra đầy lỗi. Bản dịch thường không đáng tin, vì dịch thật sự rất, rất khó. Nhiều khi không thể trách người dịch; ít nhất có một phần ngôn ngữ căn bản không thể chuyển dịch. Nếu đọc tiếng Anh trôi chảy, khi đọc bản dịch bạn hẳn thỉnh thoảng sẽ bật cười: với nhiều câu dịch sai, bạn thậm chí có thể dựa vào kinh nghiệm mà dựng lại câu tiếng Anh gốc trong đầu. Không phải lệ thuộc bản dịch là một sự giải thoát lớn. Khi đọc tiếng Anh thành thạo đến một mức nào đó, tự nhiên bạn sẽ thấy may mắn, một niềm vui không đổi được bằng tiền. Nhưng giờ chưa đến lúc ấy; còn hiện tại, tin hay không là ở bạn.
 
-过去，我们不仅不相信自己能够学好、用好英语，更为重要的是，即便挣扎其中，我们都对自己要求太低了，乃至于 “学傻” 或者 “被教傻”。
+Một sự thật không thể tranh cãi khác là tiếng Anh có lượng tài liệu khoa học và công nghệ lớn nhất, vượt mọi ngôn ngữ khác trong lĩnh vực này. Vì vậy, khi cần tra cứu tài liệu khoa học, về cơ bản bạn phải dùng tiếng Anh. Với một số nhóm người khác, viết có thể quan trọng hơn. Nhiều người làm cho truyền thông nước ngoài tại Trung Quốc mà tôi quen là như vậy. Dù nói tiếng Anh khá lưu loát, họ hiểu rõ khả năng viết quan trọng đến mức nào. Họ làm mọi cách để nâng cao khả năng tìm kiếm thông tin, suy nghĩ và viết. Để lấy thông tin then chốt nhanh, chính xác hơn, họ còn dành rất nhiều thời gian, công sức xây dựng những quan hệ cần thiết… Đừng tưởng chỉ cần kiến thức từ vựng, ngữ pháp là viết được bài vài nghìn chữ.
 
-除了之前提到的 “词汇量”（高考词汇大纲）之外，还有就是阅读量。我们的初中英语教材中的课文，从几句话一篇开始，最终每篇没超过 500 词；高中英语教材中的课文每篇也就不到 1000 词；大学英语精读教材中的课文最长也就 2500 词。它们的共同特征是：要求学生几天内（最长一周）读完、学完一篇课文。
+Tôi không định nói ngược số đông. Tôi cũng cho rằng khả năng nói rất quan trọng, đồng thời hiểu sâu sắc việc luyện nói thành thạo khó đến mức nào. Chính tôi đã mất nhiều thời gian và đi nhiều đường vòng mới có thể diễn đạt bình thường.
 
-如果把阅读比作跑步，把我们初中时期的课文比作 100 米，那么很多人 “学” 了很多年英语之后，渐渐能够适应的、最长的距离只不过是 2000 米左右 …… 多年来习惯于最长阅读量是 2000 词，导致的结果是，看一会儿英文就头疼 …… 事实上，在读到 1000 词的时候，大脑就开始说 “再坚持一下啊！” 到 1500 词的时候说 “顶住！” 到 1800 词的时候大脑在不停地喊 “差不多了，就这样吧……”
+Nói khó học vì bản thân nó là đầu ra, nên nhất định khó hơn đầu vào rất nhiều. Đầu ra hiệu quả không chỉ cần đầu vào hiệu quả, mà còn cần xử lý, tức suy nghĩ, hiệu quả. Nhìn như thế, luyện nói trôi chảy khó hơn luyện đọc trôi chảy không chỉ tám lần…
 
-可是，一个正常人是怎样使用语言的呢？看看我们自己使用母语的情况吧：
+Nhưng dù thế nào, đầu vào vẫn là nền tảng. Nguyên nhân gốc khiến nhiều người không tạo được đầu ra là đầu vào quá ít. Ít đến mức nào, chính họ không rõ. Câu này có thể áp dụng cho bất cứ lĩnh vực học tập nào: **Không biết không đáng sợ; đáng sợ là không biết rằng “mình không biết”.**
 
-> 小学的时候，识字其实也没有怎么太过痛苦。甚至，很多孩子在幼儿园阶段就已经识字不少了。
+> **Ghi chú biên tập cho người học Việt Nam:** “Tiếng Anh câm” là cách gọi trong nguyên tác; ở đây nên hiểu là đọc, nghe được nhưng ít luyện nói, không phải nhận xét về người có khuyết tật giao tiếp. “Khó hơn tám lần” là lời nhấn mạnh, không có phép đo được dẫn kèm. Bạn có thể ưu tiên kỹ năng theo nhu cầu: đọc tài liệu chuyên môn, nghe bài giảng, viết thư công việc hay trò chuyện khi đi du lịch. Nếu mục tiêu có giao tiếp, hãy thêm thực hành nói hoặc viết cùng với đầu vào. Nhận xét về Google Translate phản ánh thời điểm tác giả viết, không phải đánh giá cập nhật về mọi công cụ dịch hoặc AI hiện nay.
 
-> 在你初中毕业之后，中文阅读能力早就达到这样的水平：在坐地铁（或其他交通工具）前往某处的三十分钟里，你大概能把一本《读者》杂志从头到尾翻阅完毕。在这个过程里，你可以轻松分辨哪些文章“没劲，懒得看”，哪些文章“嗯！好像不错！”而读完之后，文章的好坏你早就判断完毕，如果好的话，回头你还会向你的朋友推荐，甚至为了推荐把那文章的内容向朋友重新复述一遍……
+## 10. Trước đây, chúng ta đã đặt yêu cầu quá thấp cho mình…
 
-> 当然，如果你是大学毕业生，初中过后又有七年的高强度阅读积累（在学校里不论我们情愿与否，都要大量阅读），你的阅读能力早就登上另外一个台阶：大多数杂志报纸在你侯车或排队的过程中就能被消化掉，大多数小说你可以几个下午之内搞定，甚至，对你来说，很多专业书籍也根本不需要“一学期”的长度……
+Trước đây, chúng ta không chỉ không tin mình có thể học giỏi, dùng tốt tiếng Anh. Quan trọng hơn, ngay cả khi vật lộn trong việc học, ta vẫn đặt yêu cầu cho mình quá thấp, đến mức “học thành ngốc” hoặc “bị dạy thành ngốc”.
 
-所以，在正常情况下，大多数正常人每天都在语言的使用上 “跑马拉松”，并且还是在毫不费力的情况下。
+Ngoài “vốn từ” trong danh mục gaokao đã nói, còn có lượng đọc. Bài khóa trong sách tiếng Anh trung học cơ sở của chúng ta bắt đầu từ vài câu một bài, cuối cùng mỗi bài vẫn không quá 500 từ. Bài ở trung học phổ thông chưa đến 1.000 từ; bài dài nhất trong giáo trình đọc kỹ ở đại học chỉ khoảng 2.500 từ. Điểm chung là yêu cầu học sinh đọc và học xong một bài trong vài ngày, lâu nhất một tuần.
 
-最为关键的是，最初阅读文字可能会比较累（想想我们小时候背着词典上学的过程吧）。但是，很快就会渐入佳境。那之后，大多数人其实是在 “享受文字”。用它获取信息，用它娱乐精神，用它沟通交流，而不是 “研究语文”。
+Nếu ví việc đọc với chạy bộ và bài khóa thời trung học cơ sở với 100 mét, thì sau nhiều năm “học” tiếng Anh, quãng đường dài nhất mà nhiều người dần thích nghi chỉ khoảng 2.000 mét… Quen suốt nhiều năm với lượng đọc dài nhất 2.000 từ dẫn đến kết quả là đọc tiếng Anh một lúc đã đau đầu… Thực ra, vừa đến 1.000 từ, não đã nói: “Cố thêm chút nữa!”. Đến 1.500 từ: “Ráng chịu!”. Đến 1.800 từ, não không ngừng hét: “Gần đủ rồi, thôi thế thôi…”.
 
-现在，对比下我们在英语上的学习过程，只能说过去我们对自己要求太低了。
-我们应该做的是，用最快的速度完成对 “马拉松” 的适应，而后哪怕每天 “马拉松” 也不觉得异常，甚至应该早忘记当初的痛苦，而去专注于语言的主要功用：用英语获取信息，用英语交流……**反正，用就是了。**
+Nhưng một người bình thường dùng ngôn ngữ thế nào? Hãy nhìn cách chính chúng ta dùng tiếng mẹ đẻ:
 
-| [< 目录](./README.md) | [第二章: 口语 >](./chapter2.md) |
+> Khi học tiểu học, việc biết chữ thực ra cũng không quá khổ sở. Thậm chí nhiều trẻ đã biết khá nhiều chữ từ mẫu giáo.
+
+> Sau khi tốt nghiệp trung học cơ sở, khả năng đọc tiếng Trung của bạn từ lâu đã đạt mức: trong ba mươi phút đi tàu điện ngầm hoặc phương tiện khác đến một nơi nào đó, bạn có thể lật đọc hết một số tạp chí *Độc Giả*. Trong quá trình ấy, bạn dễ dàng phân biệt bài nào “chán, chẳng muốn đọc”, bài nào “ừm, có vẻ hay!”. Đọc xong, bạn đã đánh giá được bài hay hay dở. Nếu hay, bạn còn giới thiệu cho bạn bè, thậm chí kể lại nội dung để giới thiệu…
+
+> Tất nhiên, nếu đã tốt nghiệp đại học, bạn có thêm bảy năm tích lũy đọc với cường độ cao sau trung học cơ sở, vì ở trường dù muốn hay không ta cũng phải đọc nhiều. Khả năng đọc từ lâu đã lên một bậc khác: phần lớn báo, tạp chí có thể được đọc xong lúc chờ xe hoặc xếp hàng; phần lớn tiểu thuyết chỉ mất vài buổi chiều; thậm chí nhiều sách chuyên môn cũng hoàn toàn không cần đến “một học kỳ”…
+
+Vì vậy, trong hoàn cảnh bình thường, phần lớn người bình thường mỗi ngày đều “chạy marathon” trong việc dùng ngôn ngữ, lại làm điều đó chẳng mấy nhọc nhằn.
+
+Điều then chốt nhất là: lúc mới đọc chữ, có thể ta hơi mệt, hãy nhớ thời nhỏ mang từ điển đến trường. Nhưng rất nhanh, mọi thứ dần dễ chịu hơn. Từ đó, phần lớn mọi người thực ra đang “thưởng thức chữ nghĩa”: dùng nó để lấy thông tin, giải trí tinh thần, giao tiếp với nhau, thay vì “nghiên cứu môn ngữ văn”.
+
+Giờ đối chiếu với quá trình học tiếng Anh của mình, chỉ có thể nói rằng trước đây ta đặt yêu cầu quá thấp.
+Điều nên làm là thích nghi với “marathon” nhanh nhất có thể, để dù ngày nào cũng “chạy marathon” ta không còn thấy khác thường, thậm chí quên từ lâu nỗi vất vả ban đầu và tập trung vào công dụng chính của ngôn ngữ: dùng tiếng Anh để lấy thông tin, dùng tiếng Anh để giao tiếp… **Tóm lại, cứ dùng đi.**
+
+> **Ghi chú biên tập:** Số từ, số năm học, tạp chí *Độc Giả* và việc đọc tiếng Trung thuộc bối cảnh gốc, không phải thống kê về người học Việt Nam. “Marathon” là hình ảnh so sánh về việc tăng dần sức đọc, không phải yêu cầu cố đọc bất chấp mệt mỏi. Có thể chọn một bài tiếng Anh liên quan đến nhu cầu thực tế, đọc trong khoảng thời gian phù hợp, tra hoặc hỏi nghĩa bằng tiếng Việt khi cần, rồi tăng dần độ dài khi đã quen. Ghi nhận điều bạn hiểu và sử dụng được sẽ hữu ích hơn việc chỉ đếm số từ.
+
+| [< Mục lục](./README.md) | [Chương 2: Nói >](./chapter2.md) |
 | ------------------------------- | ------------------------------- |

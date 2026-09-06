@@ -1,45 +1,51 @@
-# 使用案例：利用 AI 生成训练材料
+# Ví dụ: tạo tài liệu luyện tập bằng AI
 
-用外语说我们自己想说的话是学习外语的其中一个重要目的。市面上的口语书实际上并不实用，因为那些话大都不是我们想要说的，我们需要创建专属自己的口语书。使用 Enjoy 可以很容易做到这一点。
+Một mục tiêu quan trọng khi học ngoại ngữ là diễn đạt được điều chính mình muốn nói. Tài liệu gốc nhận xét rằng nhiều câu trong sách hội thoại có sẵn không đúng với nhu cầu thực tế của từng người, và đề xuất tự tạo một cuốn sách hội thoại riêng. Enjoy có thể hỗ trợ quy trình này.
 
-## 确保 AI 服务正常
+## Kiểm tra dịch vụ AI {#check-ai-service}
 
-在开始之前，先要确保 AI 服务可以正常使用，要么配置好自己的 [OpenAI 密钥](./settings#openai-配置)，要么使用 Enjoy 提供的 AI 服务并确保账户 [余额](./settings#充值) 充足。
+Trước khi bắt đầu, cần có dịch vụ AI hoạt động: cấu hình [OpenAI riêng](./settings.md#openai-settings), hoặc sử dụng dịch vụ AI của Enjoy với [số dư và hạn mức](./settings.md#deposit) phù hợp. Thao tác tạo văn bản và giọng đọc phụ thuộc kết nối, tài khoản và dịch vụ đã chọn.
 
-## 创建英语教练
+## Tạo huấn luyện viên tiếng Anh {#create-english-coach}
 
-点击 Enjoy 左侧栏的 `智能助手` 进入页面，点击 `新对话` 开始创建。
+Trong giao diện trợ lý được mô tả ở tài liệu gốc, chọn **Trợ lý AI** ở thanh bên trái, rồi nhấn **Cuộc trò chuyện mới**. Chọn vai trò có sẵn **Huấn luyện viên tiếng Anh**.
 
-角色定义选择预设的 `英语教练`。
+Trong giao diện trò chuyện mới hơn, tạo tác nhân từ mẫu huấn luyện viên theo [hướng dẫn tác nhân AI](./chat-with-agent.md#gpt-agent), rồi tạo cuộc trò chuyện với tác nhân đó.
 
-![选择 AI 角色](/images/enjoy/select-ai-role.png)
-_\* 选择 AI 角色_
+![Chọn vai trò AI trong tài liệu gốc](/images/enjoy/select-ai-role.png)
+_* Chọn vai trò AI trong giao diện được tài liệu gốc mô tả._
 
-具体配置里，根据具体情况，修改 AI 引擎 为 OpenAI 或者 Enjoy AI。如果使用 [OpenAI](./settings#openai-配置)，可能还需要检查配置 `接口地址`。
+Chọn công cụ AI là OpenAI hoặc Enjoy AI theo tài khoản đang sử dụng. Với [OpenAI riêng](./settings.md#openai-settings), kiểm tra cả **Địa chỉ API** nếu dùng cấu hình tùy chỉnh.
 
-将配置拉到最下面，`TTS 引擎` 也需要做相应配置。
+Cuộn xuống cuối phần cấu hình và chọn **Công cụ TTS** phù hợp để tạo giọng đọc.
 
-![对话设置](/images/enjoy/conversation-form.png)
-_\* 对话设置_
+![Cấu hình cuộc trò chuyện trong tài liệu gốc](/images/enjoy/conversation-form.png)
+_* Cấu hình cuộc trò chuyện._
 
-配置完成后，点击下面的 `确认` 按钮，即可创建成功。
+Sau khi điền xong, nhấn **Xác nhận** để tạo.
 
-## 发送任意文字
+## Gửi điều bạn muốn nói {#send-text}
 
-智能助手的使用跟聊天窗口类似，将你想要说的话发给 `英语教练`，作为回复，AI 会将你的文字翻译成地道的纽约腔英语。
+Gửi nội dung muốn diễn đạt cho huấn luyện viên như khi nhắn tin. Mẫu trong tài liệu gốc yêu cầu AI chuyển nội dung sang tiếng Anh tự nhiên theo cách nói New York.
 
-## 生成语音
+::: info Điều chỉnh cho người học Việt Nam
+Mẫu huấn luyện viên trong bản Việt hóa hướng tới người Việt học tiếng Anh: trả lời bằng tiếng Anh và giải thích bằng tiếng Việt khi được yêu cầu. Mẫu mới áp dụng khi tạo trợ lý; không tự sửa lời nhắc của cuộc trò chuyện đã lưu.
 
-如果你对 AI 的回复感到满意，点击信息下方的朗读图标，将其转化为语音。
+Bạn có thể bắt đầu bằng một tình huống thật, chẳng hạn: “Tôi muốn xin đổi lịch họp sang sáng thứ Sáu. Hãy giúp tôi nói lịch sự bằng tiếng Anh và giải thích cách dùng từ bằng tiếng Việt.”
+:::
 
-![英语教练对话](/images/enjoy/english-coach-gpt-conversation.png)
-_\* 英语教练对话_
+## Tạo giọng đọc {#generate-speech}
 
-## 跟读训练
+Đọc lại câu trả lời. Nếu nội dung đúng ý, nhấn biểu tượng đọc thành tiếng bên dưới tin nhắn để tạo âm thanh.
 
-继而点击麦克风图标，将该语音加入资源库，进行跟读训练。
+![Trò chuyện với huấn luyện viên tiếng Anh](/images/enjoy/english-coach-gpt-conversation.png)
+_* Ví dụ trò chuyện từ tài liệu gốc._
 
-![添加跟读训练](/images/enjoy/conversation-add-speech-to-audio.png)
-_\* 添加跟读训练_
+## Luyện nhại theo giọng đọc {#shadowing}
 
-随后也可以在 [音频页面](./audios.md) 找到该材料，继续练习。
+Nhấn biểu tượng micro để thêm âm thanh vừa tạo vào thư viện và bắt đầu luyện nhại.
+
+![Thêm giọng đọc vào thư viện luyện tập](/images/enjoy/conversation-add-speech-to-audio.png)
+_* Thêm âm thanh làm tài liệu luyện tập._
+
+Sau đó, bạn có thể tìm lại tài liệu trong [trang âm thanh](./audios.md) để tiếp tục luyện.

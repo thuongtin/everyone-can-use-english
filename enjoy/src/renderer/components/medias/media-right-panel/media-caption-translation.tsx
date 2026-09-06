@@ -1,3 +1,4 @@
+import { isBilingualDirection } from "@/constants/bilingual-dictionaries";
 import { useContext } from "react";
 import {
   AppSettingsProviderContext,
@@ -9,7 +10,7 @@ import { t } from "i18next";
 import { TimelineEntry } from "echogarden/dist/utilities/Timeline.d.js";
 import { convertWordIpaToNormal } from "@/utils";
 import {
-  CamdictLookupResult,
+  BilingualLookupResult,
   DictLookupResult,
   AiLookupResult,
   TranslateResult,
@@ -115,8 +116,8 @@ const SelectedWords = (props: {
       <Separator className="my-4" />
 
       <div className="rounded-lg overflow-hidden mr-10">
-        {currentDictValue === "cambridge" ? (
-          <CamdictLookupResult word={word} />
+        {isBilingualDirection(currentDictValue) ? (
+          <BilingualLookupResult word={word} direction={currentDictValue} />
         ) : currentDictValue === "ai" ? (
           <AiLookupResult
             word={word}

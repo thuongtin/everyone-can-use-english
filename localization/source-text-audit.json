@@ -1,0 +1,721 @@
+{
+  "version": 1,
+  "scope": "All tracked SVG and notebook assets were read in full and contain no Han characters in source text.",
+  "method": "source-full-text-no-han",
+  "records": [
+    {
+      "path": "1000-hours/public/images/5-chars.svg",
+      "kind": ".svg",
+      "sha256": "403477413fa2b63945081b025c7ada02c0557ab2af86ea4549f4415c474ae0d9",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/5-syllables-individual.svg",
+      "kind": ".svg",
+      "sha256": "a6172ebf8db008af4f28caa3518cd74e2f6d5f22d5955b8168df8d3197f61558",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/5-syllables.svg",
+      "kind": ".svg",
+      "sha256": "a3d52c25adfca74c148b7fb6a21f940a51937af6eb5a5a89fa33c8b911d7b1f6",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/English_language_distribution.svg",
+      "kind": ".svg",
+      "sha256": "f934ddc8c27c55559d938d8583d005193a80b2731079f621c00718368bffcd04",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/IPA_chart_2020.svg",
+      "kind": ".svg",
+      "sha256": "ee598e5d3ff45357ffc6d88e9e9a42eefb6c29e8ce1a8490a7c6182d312750c0",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/Lobes_of_the_brain_NL.svg",
+      "kind": ".svg",
+      "sha256": "f1f41c48cf9bbd91b455d9c6198b1c657068f1cfb5fb38bf344844f40d1b4067",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/so-do-duong-phat-am.svg",
+      "kind": ".svg",
+      "sha256": "8597492fb986f4d26bc75bf93d6212ad914c5db1ab52873a4706680771b34373",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/ariticulatory-atonomy.svg",
+      "kind": ".svg",
+      "sha256": "9e7f6dadd2d28ad6a1eda2f4c58a1656da391692e124d5563fc909a5488a1d7c",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/articulator-tongue-tip-chzh.svg",
+      "kind": ".svg",
+      "sha256": "e87ad7c64a8f77192bd7150278e71d33072995418885e4a13f11c479863a2901",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/articulator-tongue-tip-fv.svg",
+      "kind": ".svg",
+      "sha256": "d524af5dc601d4d8aba4d55d385dec43716062278a33dc1413eccb35ecad36fb",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/articulator-tongue-tip-kg.svg",
+      "kind": ".svg",
+      "sha256": "07f05aed2868cb4ef4c9bf0a544d1939c42875976ead3ef90f7ff9ea9338330f",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/articulator-tongue-tip-positions.svg",
+      "kind": ".svg",
+      "sha256": "72139d7582cf980423fefc22cacea5822ce6f997f0e50738454e5cd6d0d6dbb1",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/articulator-tongue-tip-r.svg",
+      "kind": ".svg",
+      "sha256": "b8286542c4f545f5e63e72049a163615d9002dfe9443b711c7d9c0a1f47accbe",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/articulator-tongue-tip-sh.svg",
+      "kind": ".svg",
+      "sha256": "95d48733b93025ca9a1fc03ab3531b0b14379402afacf03472b243002aba85c0",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/articulator-tongue-tip-sz.svg",
+      "kind": ".svg",
+      "sha256": "ccca08a4158b872db4f469bffa60673dada0f270b401a5109f17c9a744045ec5",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/articulator-tongue-tip-td.svg",
+      "kind": ".svg",
+      "sha256": "44abaceff86f4d6e3b59c048f7cbddc0152251de0e25a4f3145122f86f9bd1a1",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/articulator-tongue-tip-th.svg",
+      "kind": ".svg",
+      "sha256": "835c4bca48a02945faab86b35e400f9ea204196491c451257415766315d88b43",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/articulator-tongue-tip-trdr.svg",
+      "kind": ".svg",
+      "sha256": "e87ad7c64a8f77192bd7150278e71d33072995418885e4a13f11c479863a2901",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/articulator-tongue-tip-ɚ.svg",
+      "kind": ".svg",
+      "sha256": "d3938302ec086786ce92a030f007a4ccd06928bd6a5aaf66a1bb9fc90f9967af",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/so-do-co-quan-phat-am.svg",
+      "kind": ".svg",
+      "sha256": "b8e26cfa2312f4810d249e9ef0579b391e5bfc1a062f8cde860013efb162f664",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/articulators-en.svg",
+      "kind": ".svg",
+      "sha256": "d12dd8a154cfd7ba2832877c93dfc886b866410a3df719f23a1892b7dd1d788a",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/articulators.svg",
+      "kind": ".svg",
+      "sha256": "b8e26cfa2312f4810d249e9ef0579b391e5bfc1a062f8cde860013efb162f664",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/brain-structure.svg",
+      "kind": ".svg",
+      "sha256": "e42981bd57d3ccb8888b9594dff13d4ee4e1a406682e50f7a904f4cec70ac972",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/broca-wernicke.svg",
+      "kind": ".svg",
+      "sha256": "bdc798ab0db565d91ae98855d3e9f538954897ec231b2331bd85ce24b63d9124",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/clock.svg",
+      "kind": ".svg",
+      "sha256": "540d74d2e82659666c33d868e297e6d774658c3478a36b8dbd9d5b28809febf5",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/dep-graph.svg",
+      "kind": ".svg",
+      "sha256": "df0d29fbb82a29a28fcea4889896baf408968ef4a6b7682f00854d1106a2c08e",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/don-quixote.svg",
+      "kind": ".svg",
+      "sha256": "11f7cf81f771effcb62c6191189c6d83e50b123219fecee99866f17f7623e16a",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/inb.svg",
+      "kind": ".svg",
+      "sha256": "8477eb162160d57513397a73df4d93f85bf93bd8a68bd60c0e9f0088d8071061",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/l-r.svg",
+      "kind": ".svg",
+      "sha256": "5004d1056e19533273bf820d24154bdc7f8ce9daaa2c28530da27f646c9a540c",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/nuclear-accented-words.svg",
+      "kind": ".svg",
+      "sha256": "7ce42553be05516369e9254181829fa64283f19392dcf4e20ce98094394da817",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/retroflex-bunched-r.svg",
+      "kind": ".svg",
+      "sha256": "e0ec85841aba78250fc5287deac5b2bbd751760d3f9963731bd78aa44c89b0a6",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/speaker-black.svg",
+      "kind": ".svg",
+      "sha256": "0a3d0b09216f7b04183d4265de623bbb9ef4841172bbd86c288c0ca5f8a2f097",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/speaker-blue.svg",
+      "kind": ".svg",
+      "sha256": "5162f2f4dccfc969e4cd8c765aa4dd999793ec1fce3da3d554844db81af30a9b",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/speaker-brown.svg",
+      "kind": ".svg",
+      "sha256": "cf2aa3fd669455704fb8750e1eabfb792c07b2755169e6e1a71d270deb6b124c",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/speaker-white.svg",
+      "kind": ".svg",
+      "sha256": "8baee7428021fceea1f0453e863a9a6917067042ad019560311ccf026d496108",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/speech-tract-l.dark.svg",
+      "kind": ".svg",
+      "sha256": "c2771a276a16a906b7e6b87038097706408c7f3cf914fe19b0a98b4fca35233d",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/speech-tract-l.light.svg",
+      "kind": ".svg",
+      "sha256": "c7177eb2280292afcea65d8d2daf7d17c32e072929d3febb054376df205e8e55",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/speech-tract-l.svg",
+      "kind": ".svg",
+      "sha256": "38f3042ebc92091d0bfe9296d077bfda7b4f77ccddb616b779eb6efb46cd5391",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/speech-tract-lr.dark.svg",
+      "kind": ".svg",
+      "sha256": "92376bad9609180a64f17e9c07ed8c5c0a5719ff706951ebf8a5aaff5bebe2a7",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/speech-tract-lr.light.svg",
+      "kind": ".svg",
+      "sha256": "021f08d652ba7d5d1310a39c22d0822033f89836b0fd2caa7f44673b4098b629",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/speech-tract-lr.svg",
+      "kind": ".svg",
+      "sha256": "021f08d652ba7d5d1310a39c22d0822033f89836b0fd2caa7f44673b4098b629",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/speech-tract-r.dark.svg",
+      "kind": ".svg",
+      "sha256": "fd44bc3877cc510743a8561718ca2522c8e86699bdd2a8fff2f42d2056953b39",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/speech-tract-r.light.svg",
+      "kind": ".svg",
+      "sha256": "ad37942d574f78b0b12cad71ed585e0747182ffa3d739a964df20d9c9a1b7105",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/speech-tract-r.svg",
+      "kind": ".svg",
+      "sha256": "adda2e2bfeb658cdd1053dba52a0696141999c0e9ccae0c418ea9d476330d3cd",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/speech-tract-tdsz.dark.svg",
+      "kind": ".svg",
+      "sha256": "9bfeb258b44b6d3987746441ce365651c7354569d23ca62e197a4fca68bebd6f",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/speech-tract-tdsz.light.svg",
+      "kind": ".svg",
+      "sha256": "cfa53861b89d8328afd9dc7d138a4d4dccbcc230cbdf87c390c57183be10138a",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/speech-tract-tdsz.svg",
+      "kind": ".svg",
+      "sha256": "cfa53861b89d8328afd9dc7d138a4d4dccbcc230cbdf87c390c57183be10138a",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/speech-tract-θð.dark.svg",
+      "kind": ".svg",
+      "sha256": "364fdbbdde8b73220391bf5080ada09c4266aa4b36bba3e0a909462e142cada9",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/speech-tract-θð.light.svg",
+      "kind": ".svg",
+      "sha256": "50a64bd8d5f0cfd7074d43c823d4e9a4fe9eebeec999a5bf66b7fa8bdcbf3858",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/speech-tract-θð.svg",
+      "kind": ".svg",
+      "sha256": "50a64bd8d5f0cfd7074d43c823d4e9a4fe9eebeec999a5bf66b7fa8bdcbf3858",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/speech-tract.svg",
+      "kind": ".svg",
+      "sha256": "c3cb7f6fa7d604121b6736486e2e376100b3de93157b6431b3990fbf35177fe5",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/tongue-positions-of-vowels.svg",
+      "kind": ".svg",
+      "sha256": "dfe49560d15e8b043d60331644a423d866d52446acb0711bdde94b7d8ca1cf6c",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/volumeUp.svg",
+      "kind": ".svg",
+      "sha256": "452299f7bc025d39c3907555dd6ceb725a1474f05e0c673457a69a8a7324cb0b",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/vowel-positions-california.svg",
+      "kind": ".svg",
+      "sha256": "2c410225593659f32de44e88568e21d73c89d676f2a71e7eb3efce6881626dbf",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/vowel-positions.svg",
+      "kind": ".svg",
+      "sha256": "ba01ca3fe2554060ceaea9918f47eedc29f5eba79d68c26a046f23a377a7646b",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/vowels-mouth-e-æ.svg",
+      "kind": ".svg",
+      "sha256": "fb47e6837eec03ff8119a5b2cdf8f6a97995b4edba927bdd5ceb42f7bee9d9f7",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/vowels-mouth-shape-aɪ.svg",
+      "kind": ".svg",
+      "sha256": "90823422170d20319b90a5bd9869c00737104f9ec0de66db6770f07d6038f306",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/vowels-mouth-shape-aʊ.svg",
+      "kind": ".svg",
+      "sha256": "0ce420cd2ec92cde769811095065aa77a1b2e81a96bd01117a333df9fbc78fab",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/vowels-mouth-shape-e.svg",
+      "kind": ".svg",
+      "sha256": "7f8fa8e3050cb87a6c7b792f89664459eb07d224a62fdfc18574fddb0a6bd5dc",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/vowels-mouth-shape-eə.svg",
+      "kind": ".svg",
+      "sha256": "61121f95bad729f26bacdc4654b04bb9ca177c9c665ec0ae3abd9b14f064c028",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/vowels-mouth-shape-i.svg",
+      "kind": ".svg",
+      "sha256": "f2e1a2fe0a9bb2fa3cd1e8f71845e3f8d2f312d6d253c4ccc300fb1103bf5cc0",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/vowels-mouth-shape-u.svg",
+      "kind": ".svg",
+      "sha256": "5ec0a2c6e77485c92f1879b03f2c7c610a8c8caceac975c531d41a748960c13d",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/vowels-mouth-shape-ɒ-ɔ.svg",
+      "kind": ".svg",
+      "sha256": "5fc2402cbcb1c8d5c090a5a83227408292e60c8acfeda9708c7e541b1e0fbf0a",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/vowels-mouth-shape-ɔ.svg",
+      "kind": ".svg",
+      "sha256": "5f9581418cbe3f02f85b58dfec9a18f8da0b2b4a1c9ac626b0da05d1fad5efa6",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/vowels-mouth-shape-ə.svg",
+      "kind": ".svg",
+      "sha256": "2742aa32932d9e3763f1eb6308b3570ca0d8205cf6ab27def464618819e465b2",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/vowels-mouth-shape-ɪ-i.svg",
+      "kind": ".svg",
+      "sha256": "af90d1750d1acbc0679918a72503b123110073ce2f90af95ef3a6fcf40e0d9fc",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/vowels-mouth-shape-ʌ-ɑ.svg",
+      "kind": ".svg",
+      "sha256": "f0035ae9b2aef01deba43cbeea6f2cbb5fa12cd635ba1910810310dc2437e6fa",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/vowels-mouth-shape.svg",
+      "kind": ".svg",
+      "sha256": "adc8946ef71a20e427a13e6385d6a437f898e3d50a4b00d98bf8886e2aa79c4a",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/vowels-mouth-ɔ-u.svg",
+      "kind": ".svg",
+      "sha256": "385b43c26055c2385f056602e88b77deb9caaeb191686e027c5477970f9e2137",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/vowels-mouth-ʌ-ɑ.svg",
+      "kind": ".svg",
+      "sha256": "86a303703ebd2a76aaaea4a1880e2dfa680bf3cd7328c24101e860a50a5e3d4f",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/images/vowels-positions.svg",
+      "kind": ".svg",
+      "sha256": "80fe0a2f016e2a9b79ff60c04f79d28efe014a60c7e6529919c91ab0118886f0",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/jupyter-notebooks/8.4-daily-speech-exercises.zip!/8.4-daily-speech-exercises/8.4-daily-speech-exercises.ipynb",
+      "kind": ".ipynb",
+      "sha256": "0794a05b60b195fa952a6cd4c0f85054e3d80d02c0fc5f8274dfe360a3d93924",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/jupyter-notebooks/chapter4.ipynb",
+      "kind": ".ipynb",
+      "sha256": "8f92f4e24de75e9ceb90ba7cae061884ae5b729b10a1c7d1d1bade626991a91f",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/jupyter-notebooks/check-media.ipynb",
+      "kind": ".ipynb",
+      "sha256": "4b0c970fc9d4b4aec019ec2dc9cdd5b309a574916b7c953e27c3fb145a497578",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/jupyter-notebooks/color-training.ipynb",
+      "kind": ".ipynb",
+      "sha256": "c97714d4a6d6192ca1321a136738861a976f23e4c955cc7582f55925aa9489c0",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/jupyter-notebooks/copy-select-mp3-files.ipynb",
+      "kind": ".ipynb",
+      "sha256": "a905ae4aad9c80d91f1e444298fee237212c3a21e8efb2603e7a8d7ba2edd910",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/jupyter-notebooks/digits-short-term-memory-raining.ipynb",
+      "kind": ".ipynb",
+      "sha256": "84019b297ffbcbed553f2af501d68065b302fe31638acee5355b1f227c251a70",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/jupyter-notebooks/edge-tts-valcab-pronounciation.ipynb",
+      "kind": ".ipynb",
+      "sha256": "9df21c6b0e1eba5f990d1278a6d9ab7a14976447e946ea0762b67039d52ae58b",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/jupyter-notebooks/edge-tts.ipynb",
+      "kind": ".ipynb",
+      "sha256": "ec94a57a37fd60a5392fb974c3a4bdcf51ae6830119a389b68fe38f183891096",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/jupyter-notebooks/eng-to-ipa.ipynb",
+      "kind": ".ipynb",
+      "sha256": "a892dbac39dcd58cb42230e36ba6e2fb9bc746d3be6a7533b782fc14a8186102",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/jupyter-notebooks/ja-daily-speech-practice.ipynb",
+      "kind": ".ipynb",
+      "sha256": "ea9e140f383e3f1c14a938c874e68da4c9b76a33fe1188ada75f0b65cd82ef4f",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/jupyter-notebooks/parselmouth.ipynb",
+      "kind": ".ipynb",
+      "sha256": "6bec215ab771487739bb7c8dfcecb0bd5c8b12131296ef9ada4c9d834c48990e",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/jupyter-notebooks/phonetics-fill-in-exercise.ipynb",
+      "kind": ".ipynb",
+      "sha256": "0e91df4f5e3e94979d9dccae8b1665cf16331c8df4186a18be87a849acff31b5",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/jupyter-notebooks/phonetics.ipynb",
+      "kind": ".ipynb",
+      "sha256": "59653de0c11256d5a9a42ce1926ac1f797d1fceed39765e1dbcad465736583a2",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/jupyter-notebooks/rename.ipynb",
+      "kind": ".ipynb",
+      "sha256": "9e4c0fdbca5133dfa45f11c8de54a6006ffa80abf1daab6d71c69c916fd69633",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/jupyter-notebooks/sentence-openai.ipynb",
+      "kind": ".ipynb",
+      "sha256": "c0cd8f3c0080fc4f0f03e78439cf30ed8e82cf16147917f70e7d03aeb6b18c19",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/jupyter-notebooks/spaCy.ipynb",
+      "kind": ".ipynb",
+      "sha256": "122c4eb36668eecf2b80386da37a8e088c19369b34d02399b17094dc2e6af8ae",
+      "han_characters": 0
+    },
+    {
+      "path": "1000-hours/public/jupyter-notebooks/spelling-rules.ipynb",
+      "kind": ".ipynb",
+      "sha256": "930eb5333422d84159eda17e3871425e76dc552a62766ce3614b2ff20af02888",
+      "han_characters": 0
+    },
+    {
+      "path": "1000h-portal/public/portal-static/icon/arrow-right.svg",
+      "kind": ".svg",
+      "sha256": "2d9e14ead7eb18816ccd6cf82a5faa2ac26543e3952043a4737a7e491bb0be62",
+      "han_characters": 0
+    },
+    {
+      "path": "1000h-portal/public/portal-static/icon/arrow-upright.svg",
+      "kind": ".svg",
+      "sha256": "8144c7f2941edb4b09ea1c4a015e4d54cf4b60f75feafd9f17add1d3339860d2",
+      "han_characters": 0
+    },
+    {
+      "path": "1000h-portal/public/portal-static/icon/check.svg",
+      "kind": ".svg",
+      "sha256": "006ce887d7c6a5130ede704cb437dfbfa0a9c5edf6171376107e36ac3962842b",
+      "han_characters": 0
+    },
+    {
+      "path": "1000h-portal/public/portal-static/icon/double-quote-2.svg",
+      "kind": ".svg",
+      "sha256": "c5b50cae246ae1ae1219d8a60d4afa1861ab70fcfdadc0ff8e56804174b5d68a",
+      "han_characters": 0
+    },
+    {
+      "path": "1000h-portal/public/portal-static/icon/double-quote.svg",
+      "kind": ".svg",
+      "sha256": "567eb237f2470c94236946871c85656b840f821d48ae61cf6b7155ba81cd9df6",
+      "han_characters": 0
+    },
+    {
+      "path": "1000h-portal/public/portal-static/icon/enjoy-app.svg",
+      "kind": ".svg",
+      "sha256": "7d4f1875a2a9484892aadc0614db61adb1056ec4de25fc008e1a5094fa7bb5e5",
+      "han_characters": 0
+    },
+    {
+      "path": "enjoy/assets/bandu-logo.svg",
+      "kind": ".svg",
+      "sha256": "84cb348ce960820cb562928f4a7d95656f010b3389077bc7d999fbb7b8d32f9d",
+      "han_characters": 0
+    },
+    {
+      "path": "enjoy/assets/ffmpeg-logo.svg",
+      "kind": ".svg",
+      "sha256": "a63505f069b97d780138a91fe45c19ce2a4abb197164c825d13cf28770448a37",
+      "han_characters": 0
+    },
+    {
+      "path": "enjoy/assets/logo-light.svg",
+      "kind": ".svg",
+      "sha256": "71fa435ccf5284947d0b7c3029e1fb1257bb3d718acb7da59acac6a4c3f32aeb",
+      "han_characters": 0
+    },
+    {
+      "path": "new-edition-drafts/images/English_language_distribution.svg",
+      "kind": ".svg",
+      "sha256": "f934ddc8c27c55559d938d8583d005193a80b2731079f621c00718368bffcd04",
+      "han_characters": 0
+    },
+    {
+      "path": "new-edition-drafts/images/Vowels Positions.svg",
+      "kind": ".svg",
+      "sha256": "0f42e23734c21f4e19fad75a9af7397fbcdd8c0b55764049490aed0898cc0b54",
+      "han_characters": 0
+    },
+    {
+      "path": "new-edition-drafts/images/ariticulatory-atonomy.svg",
+      "kind": ".svg",
+      "sha256": "4bb80ce0d9f4d876958003648a16294f0bbb2785276ad0c1a0f049116d7f077e",
+      "han_characters": 0
+    },
+    {
+      "path": "new-edition-drafts/images/dep-graph.svg",
+      "kind": ".svg",
+      "sha256": "df0d29fbb82a29a28fcea4889896baf408968ef4a6b7682f00854d1106a2c08e",
+      "han_characters": 0
+    },
+    {
+      "path": "new-edition-drafts/images/media_g-bilingual-gray-matter.svg",
+      "kind": ".svg",
+      "sha256": "df3cb87e6e3db678ac3199c458c12b831e007e7b6e0986a718e4a36eef41ce4f",
+      "han_characters": 0
+    },
+    {
+      "path": "new-edition-drafts/images/nuclear-accented-words.svg",
+      "kind": ".svg",
+      "sha256": "5b73d492e61ef82df233450010e200c7f3df2dee2eba8abfe65df5ee92365d5f",
+      "han_characters": 0
+    },
+    {
+      "path": "new-edition-drafts/images/speech-tract-l.svg",
+      "kind": ".svg",
+      "sha256": "c7177eb2280292afcea65d8d2daf7d17c32e072929d3febb054376df205e8e55",
+      "han_characters": 0
+    },
+    {
+      "path": "new-edition-drafts/images/speech-tract-lr.svg",
+      "kind": ".svg",
+      "sha256": "d154d4276c1ebacc756a782b3041e9df5666714cc8d2dd55a1e539eb996dc1a0",
+      "han_characters": 0
+    },
+    {
+      "path": "new-edition-drafts/images/speech-tract-r.svg",
+      "kind": ".svg",
+      "sha256": "fd5887a2ef104ec1a86a06ab401678264290ac6191e2a55ae4fc2938eb879d12",
+      "han_characters": 0
+    },
+    {
+      "path": "new-edition-drafts/images/speech-tract-tdsz.svg",
+      "kind": ".svg",
+      "sha256": "897f0fc69b03c664e1deeedfceeb8f6e24bea9c7a0037545146899a49f840926",
+      "han_characters": 0
+    },
+    {
+      "path": "new-edition-drafts/images/speech-tract-θð.svg",
+      "kind": ".svg",
+      "sha256": "3e322be13aa6e872c59107b1cb8f859eab243cb6ae9dd543736ab8bbddadc405",
+      "han_characters": 0
+    },
+    {
+      "path": "new-edition-drafts/images/speech-tract.svg",
+      "kind": ".svg",
+      "sha256": "b7255de7172fe18b2b268ed21728058a54b45b6fa8bd96258848d54cf1cf7934",
+      "han_characters": 0
+    },
+    {
+      "path": "new-edition-drafts/images/vowel-positions-california.svg",
+      "kind": ".svg",
+      "sha256": "36ef1c4f1f02d119ebb07501b1f73081b337010eb0ab237be17a147e41b1bdb1",
+      "han_characters": 0
+    },
+    {
+      "path": "new-edition-drafts/images/vowel-positions.svg",
+      "kind": ".svg",
+      "sha256": "607d8c0fbcc29b55ed03a53533cc419000ffe3811a687941d710cfd4023bb80f",
+      "han_characters": 0
+    },
+    {
+      "path": "new-edition-drafts/jupyter-notebooks/color-training.ipynb",
+      "kind": ".ipynb",
+      "sha256": "202e7e63748b9e5424779603f12805e13e278a26c6c708c5b957cb4d148ba699",
+      "han_characters": 0
+    },
+    {
+      "path": "new-edition-drafts/jupyter-notebooks/daily-speech-practice.ipynb",
+      "kind": ".ipynb",
+      "sha256": "0f2a770545b67f41461a4e5146c7dfa57ce3271b71552ef9d9365dce7cf59a8c",
+      "han_characters": 0
+    },
+    {
+      "path": "new-edition-drafts/jupyter-notebooks/digits-short-term-memory-raining.ipynb",
+      "kind": ".ipynb",
+      "sha256": "92163153e0e9ff55db097eb3e8285170e82d492c539b6b50db38d14313e30ca7",
+      "han_characters": 0
+    },
+    {
+      "path": "new-edition-drafts/jupyter-notebooks/edge-tts.ipynb",
+      "kind": ".ipynb",
+      "sha256": "012709f771a3bdd28fb6375068d8e641c0fadf01f06bc5bea5f2788bd72e62d8",
+      "han_characters": 0
+    },
+    {
+      "path": "new-edition-drafts/jupyter-notebooks/eng-to-ipa.ipynb",
+      "kind": ".ipynb",
+      "sha256": "fd3ec3d766cd3883eee3daccdd1f023712b05ed3be03cf2497336a47eba99f45",
+      "han_characters": 0
+    },
+    {
+      "path": "new-edition-drafts/jupyter-notebooks/ja-daily-speech-practice.ipynb",
+      "kind": ".ipynb",
+      "sha256": "76f83a9f32a1473f1d21b52b62a1ca22e52dd0f40aa4e346852b71b3147c96c3",
+      "han_characters": 0
+    },
+    {
+      "path": "new-edition-drafts/jupyter-notebooks/parselmouth.ipynb",
+      "kind": ".ipynb",
+      "sha256": "3b5f923997116b1aff4e8829d7c46589772164bb558ffd76bf407ce2c84e4330",
+      "han_characters": 0
+    },
+    {
+      "path": "new-edition-drafts/jupyter-notebooks/spaCy.ipynb",
+      "kind": ".ipynb",
+      "sha256": "122c4eb36668eecf2b80386da37a8e088c19369b34d02399b17094dc2e6af8ae",
+      "han_characters": 0
+    }
+  ]
+}

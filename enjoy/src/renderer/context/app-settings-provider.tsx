@@ -1,5 +1,12 @@
-import { createContext, useContext, useEffect, useState } from "react";
-import { WEB_API_URL, LANGUAGES, IPA_MAPPINGS } from "@/constants";
+import { resolveUiLanguage, type UiLanguage } from "@/constants/ui-language";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
+import {
+  DISTRIBUTION_CONFIG,
+  WEB_API_URL,
+  LANGUAGES,
+  IPA_MAPPINGS,
+} from "@/constants";
+import type { DistributionConfig } from "@/constants/distribution";
 import { Client } from "@/api";
 import i18n from "@renderer/i18n";
 import ahoy from "ahoy.js";
@@ -27,8 +34,7 @@ import {
 import { t } from "i18next";
 import { redirect } from "react-router-dom";
 import { Deposit } from "@renderer/components";
-import Bugsnag from "@bugsnag/electron";
-import BugsnagPluginReact from "@bugsnag/plugin-react";
+import { syncDbSession } from "@renderer/lib/db-session-sync";
 
 type AppSettingsProviderState = {
   webApi: Client;
@@ -37,15 +43,16 @@ type AppSettingsProviderState = {
   user: UserType | null;
   initialized: boolean;
   version?: string;
-  latestVersion?: string;
   libraryPath?: string;
   login?: (user: UserType) => void;
   logout?: () => void;
   refreshAccount?: () => Promise<void>;
   setLibraryPath?: (path: string) => Promise<void>;
   EnjoyApp: EnjoyAppType;
-  language?: "en" | "zh-CN";
-  switchLanguage?: (language: "en" | "zh-CN") => void;
+  distribution: DistributionConfig;
+  language?: UiLanguage;
+  savedUiLanguage?: string;
+  switchLanguage?: (language: UiLanguage) => void;
   nativeLanguage?: string;
   switchNativeLanguage?: (lang: string) => void;
   learningLanguage?: string;
@@ -73,6 +80,7 @@ const initialState: AppSettingsProviderState = {
   user: null,
   initialized: false,
   EnjoyApp: EnjoyApp,
+  distribution: DISTRIBUTION_CONFIG,
 };
 
 export const AppSettingsProviderContext =
@@ -84,14 +92,15 @@ export const AppSettingsProvider = ({
   children: React.ReactNode;
 }) => {
   const [version, setVersion] = useState<string>("");
-  const [latestVersion, setLatestVersion] = useState<string>("");
   const [apiUrl, setApiUrl] = useState<string>(WEB_API_URL);
   const [webApi, setWebApi] = useState<Client>(null);
   const [cable, setCable] = useState<Consumer>();
+  const cableRef = useRef<Consumer>();
   const [user, setUser] = useState<UserType | null>(null);
   const [libraryPath, setLibraryPath] = useState("");
-  const [language, setLanguage] = useState<"en" | "zh-CN">();
-  const [nativeLanguage, setNativeLanguage] = useState<string>("zh-CN");
+  const [language, setLanguage] = useState<UiLanguage>("vi");
+  const [savedUiLanguage, setSavedUiLanguage] = useState<string>();
+  const [nativeLanguage, setNativeLanguage] = useState<string>("vi-VN");
   const [learningLanguage, setLearningLanguage] = useState<string>("en-US");
   const [vocabularyConfig, setVocabularyConfig] =
     useState<VocabularyConfigType>(null);
@@ -111,12 +120,14 @@ export const AppSettingsProvider = ({
     const language = await EnjoyApp.userSettings.get(
       UserSettingKeyEnum.LANGUAGE
     );
-    setLanguage((language as "en" | "zh-CN") || "en");
-    i18n.changeLanguage(language);
+    const uiLanguage = resolveUiLanguage(language);
+    setSavedUiLanguage(language);
+    setLanguage(uiLanguage);
+    i18n.changeLanguage(uiLanguage);
 
     const _nativeLanguage =
       (await EnjoyApp.userSettings.get(UserSettingKeyEnum.NATIVE_LANGUAGE)) ||
-      "zh-CN";
+      "vi-VN";
     setNativeLanguage(_nativeLanguage);
 
     const _learningLanguage =
@@ -125,12 +136,13 @@ export const AppSettingsProvider = ({
     setLearningLanguage(_learningLanguage);
   };
 
-  const switchLanguage = (language: "en" | "zh-CN") => {
+  const switchLanguage = (language: UiLanguage) => {
     EnjoyApp.userSettings
       .set(UserSettingKeyEnum.LANGUAGE, language)
       .then(() => {
         i18n.changeLanguage(language);
         setLanguage(language);
+        setSavedUiLanguage(language);
       });
   };
 
@@ -211,11 +223,21 @@ export const AppSettingsProvider = ({
     });
   };
 
-  const createCable = async (token: string) => {
+  const createCable = async (
+    token: string | null | undefined,
+    isActive: () => boolean = () => true
+  ) => {
     if (!token) return;
 
     const wsUrl = await EnjoyApp.app.wsUrl();
+    if (!isActive()) return;
     const consumer = createConsumer(wsUrl + "/cable?token=" + token);
+    if (!isActive()) {
+      consumer.disconnect();
+      return;
+    }
+    cableRef.current?.disconnect();
+    cableRef.current = consumer;
     setCable(consumer);
   };
 
@@ -292,7 +314,9 @@ export const AppSettingsProvider = ({
       new Client({
         baseUrl: apiUrl,
         accessToken: user?.accessToken,
-        locale: language,
+        // Keep the existing server locale contract until Vietnamese is supported.
+        locale: "en",
+        errorLocale: language,
         onError: (err) => {
           if (user && user.accessToken && err.status == 401) {
             setUser({ ...user, accessToken: null });
@@ -312,37 +336,47 @@ export const AppSettingsProvider = ({
 
   useEffect(() => {
     if (!webApi) return;
-    if (ipaMappings && latestVersion) return;
 
     webApi.config("ipa_mappings").then((mappings) => {
       if (mappings) setIpaMappings(mappings);
     });
-
-    webApi.config("app_version").then((config) => {
-      if (config.version) setLatestVersion(config.version);
-    });
   }, [webApi]);
 
   useEffect(() => {
-    if (!user) return;
+    if (!user?.id) return;
 
-    db.connect().then(async () => {
-      // Login via API, update profile to DB
-      if (user.accessToken) {
-        EnjoyApp.userSettings.set(UserSettingKeyEnum.PROFILE, user);
-        createCable(user.accessToken);
-      } else {
-        // Auto login from local settings, get full profile from DB
-        const profile = await EnjoyApp.userSettings.get(
-          UserSettingKeyEnum.PROFILE
-        );
-        setUser(profile);
-        EnjoyApp.appSettings.setUser({ id: profile.id, name: profile.name });
-      }
+    let active = true;
+    const sessionUserId = user.id;
+    const connectAndSync = async () => {
+      await syncDbSession(sessionUserId, user.accessToken, {
+        connect: () => db.connect?.() || Promise.resolve(undefined),
+        isActive: () => active,
+        persistAuthenticatedProfile: () =>
+          EnjoyApp.userSettings.set(UserSettingKeyEnum.PROFILE, user),
+        createCable: () => createCable(user.accessToken, () => active),
+        getLocalProfile: () =>
+          EnjoyApp.userSettings.get(UserSettingKeyEnum.PROFILE),
+        applyLocalProfile: async (profile) => {
+          setUser(profile);
+          if (!active) return;
+          await EnjoyApp.appSettings.setUser({
+            id: profile.id,
+            name: profile.name,
+          });
+        },
+      });
+    };
+
+    void connectAndSync().catch((error) => {
+      if (active) console.error(error);
     });
+
     return () => {
-      db.disconnect();
-      setUser(null);
+      active = false;
+      cableRef.current?.disconnect();
+      cableRef.current = undefined;
+      setCable(undefined);
+      void db.disconnect?.();
     };
   }, [user?.id]);
 
@@ -350,14 +384,15 @@ export const AppSettingsProvider = ({
     <AppSettingsProviderContext.Provider
       value={{
         language,
+        savedUiLanguage,
         switchLanguage,
         nativeLanguage,
         switchNativeLanguage,
         learningLanguage,
         switchLearningLanguage,
         EnjoyApp,
+        distribution: DISTRIBUTION_CONFIG,
         version,
-        latestVersion,
         webApi,
         apiUrl,
         setApiUrl: setApiUrlHandler,

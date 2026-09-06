@@ -1,214 +1,240 @@
-# 10. 返璞归真
+# 10. Trở về điều cốt lõi
 
-原本，学习是天下最有趣，进步是最令人痴迷…… 可为什么到最后人们竟然几乎全都对学习失去了兴趣，对进步也不再抱有任何幻想了呢？这种奇怪的现象到了什么地步呢？我们可以从那些哪怕最终做得还算不错的人传授经验时所用的措辞就可以窥见一斑：
+Vốn dĩ học là điều thú vị nhất trên đời, tiến bộ là điều khiến ta say mê nhất. Vì sao cuối cùng gần như mọi người đều mất hứng thú học, không còn kỳ vọng tiến bộ? Hiện tượng lạ ấy đến mức nào? Có thể thấy qua lời truyền kinh nghiệm của cả những người cuối cùng làm khá tốt:
 
-> 一定要下**苦**功夫**笨**功夫……
+> Nhất định phải bỏ công **chịu khổ**, bỏ công **vụng về**.
 
-哪怕换成诗意一点的训诫，也还是 “书山有路勤为径，学海无涯**苦**作舟” —— 搞得好像只有**苦大仇深**才是真正的动力一样。
+Dù đổi sang lời răn thơ hơn, vẫn là núi sách lấy siêng năng làm đường, biển học vô bờ lấy **khổ** làm thuyền, như thể chỉ nỗi khổ sâu nặng mới là động lực thực sự.
 
-## 1. 曾经的天才
+## 1. Thiên tài thuở trước
 
-如果我们能够穿越回去，仔细观察刚刚出生的我们自己，我们每个人都会发出一模一样的惊叹 —— “**那时候的我真聪明，完全是个天才！**” 说实话，每一个父母当时也不止一次如此慨叹过。小孩子就是很聪明，小孩子就是很厉害，很多事情竟然可以不教就会，很多事情竟然可以那么早就能做到做好……
+Nếu có thể trở về quan sát kỹ chính mình lúc mới sinh, mỗi người sẽ cùng kinh ngạc: **“Hồi ấy mình thông minh quá, hoàn toàn là thiên tài!”** Nói thật, cha mẹ lúc ấy cũng từng cảm thán không chỉ một lần. Trẻ nhỏ thật thông minh, thật giỏi: nhiều việc không dạy đã biết, nhiều việc làm được và làm tốt sớm đến thế.
 
-事实上，这真不是幻觉。每个新生大脑，都是非常完善的**贝叶斯推理机**，都是**超级学习机器**。把贝叶斯推理写出来，当然是用数学这个 “**人工语言**” 书写的公式：
+Thực ra đây không phải ảo giác, theo tác giả. Mỗi bộ não mới sinh đều là **cỗ máy suy luận Bayes** rất hoàn thiện, **cỗ máy học siêu việt**. Viết suy luận Bayes ra thì tất nhiên dùng toán, một “ngôn ngữ nhân tạo”:
 
 > $P(H|e) = \frac{P(H) \times P(e|H)}{P(e)}$
 
-用 “**自然语言**” 尽量简单地描述的话，就是：
+Nếu mô tả đơn giản nhất bằng “ngôn ngữ tự nhiên”:
 
-> 贝叶斯推理就是 “不断使用新的证据调整预测模型参数进而提高预测准确度的过程”。
+> Suy luận Bayes là quá trình liên tục dùng bằng chứng mới để điều chỉnh tham số mô hình dự đoán, từ đó tăng độ chính xác dự đoán.
 
-你小时候拿着弹弓打树上的鸟，就是一个**贝叶斯推理过程**。你有个**模型**，这个模型有一些**参数**，比如，你手臂举起来的高度和角度，皮筋被拉长的程度、小石块的大小等等，你的**预测**是**打中树上那只小鸟**……
+Hồi nhỏ, khi bạn dùng ná bắn chim trên cây, theo phép ví của tác giả, đó là một **quá trình suy luận Bayes**. Bạn có **mô hình** với các **tham số**, như độ cao và góc nâng tay, mức kéo dây cao su, kích thước viên đá; **dự đoán** là **trúng con chim trên cây**.
 
-当然，第一次你没有打中。
+Tất nhiên, lần đầu không trúng.
 
-但是，那射出去的那石头的轨迹，对你来说是**新的证据**，然后，你会根据这个新的证据调整你的**预测模型**的**参数**，可能是同时调整多个参数，也可能是只调整某个特定的参数…… 然后**再来一次**，成了就成了，不成的话，你就再一次根据新的证据去做调整…… 直至预测的准确度提高到足够用的地步……
+Nhưng quỹ đạo viên đá là **bằng chứng mới**. Bạn dựa vào đó chỉnh **tham số** của **mô hình dự đoán**, có thể chỉnh nhiều tham số hoặc một tham số cụ thể, rồi **thử lại**. Trúng thì xong, không thì tiếp tục chỉnh theo bằng chứng mới, đến khi độ chính xác đủ dùng.
 
-这就是贝叶斯推理过程。虽然你不知道贝叶斯定理是什么，那时候当然也不曾听说，但你小时候很早就不止一次地这么干过。
+Đó là quá trình suy luận Bayes theo cách trình bày này. Dù chưa biết định lý Bayes, hồi ấy tất nhiên chưa nghe, bạn từ nhỏ đã làm vậy nhiều lần.
 
-事实上，你人生第一次应用贝叶斯定理去做推理，是你甚至不会说话的时候 —— 因为**你天生就会**。婴儿在学说话的时候，采用的并不是成年人学习第二语言的方式，而是用本质上等同于贝叶斯推理过程的反复试错排除法。
+Thực ra, theo tác giả, lần đầu bạn dùng định lý Bayes để suy luận là khi còn chưa biết nói, vì **bẩm sinh đã biết**. Trẻ học nói không dùng cách người lớn học ngôn ngữ thứ hai, mà dùng quá trình lặp lại thử, sai và loại trừ mà ông xem là tương đương suy luận Bayes.
 
-他们先学会的并不是某句话或者某个词汇的真实含义，他们只是记住了声音，即，音素的组合 —— 当然，那么复杂的音素组合在他们甚至说不出来的时候就能记住，绝对是了不起的杂技。然后他们最后是如何知道那个声音究竟是什么意思的呢？通过一次又一次的尝试排除非正确选项，最终找到正确答案……
+Điều trẻ học trước không phải nghĩa thật của một câu hay từ, mà chỉ nhớ âm thanh, tức tổ hợp âm vị. Nhớ được tổ hợp phức tạp khi chưa nói ra nổi tất nhiên đã là màn trình diễn đáng nể. Vậy cuối cùng trẻ biết âm ấy nghĩa gì bằng cách nào? Thử nhiều lần, loại đáp án không đúng, cuối cùng tìm đáp án đúng.
 
-**试错排除** —— 我们所说的**生学硬练** —— 并不像看起来的那么低效，事实上，恰恰相反，它异常高效 —— 这也是每个孩子都是天才的原因 —— 注意措辞，我说的不是 “每个孩子都**像**天才”，而是，“每个孩子都**是**天才”…… 因为他们的的确确就是天才 —— 就在于每个新生大脑都是**天生且不知疲倦的贝叶斯推理机**。
+**Thử, sai và loại trừ**, điều ta gọi là **kiên trì thử và luyện**, không kém hiệu quả như bề ngoài. Trái lại, theo tác giả, nó cực kỳ hiệu quả, cũng là lý do mỗi trẻ đều là thiên tài. Chú ý cách nói: không phải mỗi trẻ **giống** thiên tài, mà mỗi trẻ **là** thiên tài, vì mỗi não mới sinh thực sự là **cỗ máy suy luận Bayes bẩm sinh, không biết mệt**.
 
-天才到什么地步呢？
+Thiên tài đến đâu?
 
-> 任何健康出生的婴儿都天生具备习得地球上任何语言的潜力。
+> Bất kỳ trẻ sơ sinh khỏe mạnh nào cũng bẩm sinh có tiềm năng tiếp thu bất kỳ ngôn ngữ nào trên Trái Đất.
 
-请注意这句话中的措辞，两个 “**任何**”。试想，有一对双胞胎，刚出生就分别被带到两个国家的家庭收养，那么，最终这对基因上最接近的两个人类幼崽，各自会习得不同的 “母语” —— 人们过去觉得神秘且难以逾越的 “关键期” 或者 “敏感期” 在这件事儿上发挥不了任何作用。这样的案例也无需凭空杜撰，历史上很多次战争之后都有双胞胎被不同国家的人收养的诸多案例。
+Hãy chú ý hai chữ **bất kỳ**. Thử nghĩ cặp song sinh vừa sinh đã được hai gia đình ở hai nước nhận nuôi. Cuối cùng, hai đứa trẻ gần nhau nhất về gene ấy sẽ học hai “tiếng mẹ đẻ” khác nhau. Theo tác giả, cái gọi là “giai đoạn tới hạn” hay “giai đoạn nhạy cảm” từng bị coi là bí ẩn, khó vượt không có tác dụng trong chuyện này. Ông nói không cần bịa ví dụ: lịch sử nhiều lần chiến tranh có nhiều cặp song sinh được người ở các nước khác nhau nhận nuôi.
 
-语言是什么来着？语言是一切知识的基础，甚至天下所有的学科到最后都是 “语文”。所以说，每个婴儿都是**天生超级学习机器**，每个婴儿的大脑具备习得天下所有科目的潜力 —— 这是事实，尽管是惊人的事实。
+Ngôn ngữ là gì? Là nền tảng mọi kiến thức; thậm chí mọi môn cuối cùng đều là “môn ngôn ngữ”. Vì thế tác giả kết luận mỗi trẻ là cỗ máy học siêu việt bẩm sinh, mỗi não trẻ có tiềm năng học mọi môn trên đời. Ông gọi đây là sự thật, dù đáng kinh ngạc.
 
-“超级” 的意思是说，这种学习机器不仅是天生的，并且还真的天生超级。在两岁之前，即便还不会说话的时候，他们已经习得很多元音的区别了……当他们吹灭第一根蜡烛的时候，他们已经在几个层面上为其母语的主要规则打下了基础，从基本的声音、音素到韵律、词汇和甚至一些语法规则……
+“Siêu việt” nghĩa là cỗ máy không chỉ bẩm sinh mà còn bẩm sinh vượt trội. Trước hai tuổi, dù chưa nói, trẻ đã học phân biệt nhiều nguyên âm. Khi thổi cây nến sinh nhật đầu tiên, trẻ đã đặt nền cho các quy tắc chính của tiếng mẹ đẻ ở nhiều tầng: từ âm cơ bản, âm vị đến nhịp điệu, từ vựng và thậm chí vài quy tắc ngữ pháp.
 
-不仅如此，他们还记忆力超群。两三岁孩子的家长时常会惊讶不已，因为他们发现自己的孩子吐字还不清晰的时候，竟然在他们事实上并不理解内容含义的前提下，整段流利且毫无遗漏地背诵诗词或者篇章 —— 虽然篇幅可能短了点。家长们之所以惊讶，是因为他们知道自己完全不可能在不经意之间背下一段自己并不了解含义的文字。
+Không chỉ vậy, trí nhớ cũng vượt trội. Cha mẹ trẻ hai, ba tuổi thường kinh ngạc vì con còn nói chưa rõ đã đọc thuộc cả đoạn thơ hoặc văn trôi chảy, không sót, dù thực ra chưa hiểu nghĩa, tuy đoạn có thể ngắn. Họ ngạc nhiên vì biết mình không thể vô tình nhớ một đoạn chữ chưa hiểu như vậy.
 
-人们经常开玩笑，说这是 “**四年级之前的天才**”。孩子还在四年级之前的时候，家长们总是忍不住在朋友圈晒娃…… 不过，只要孩子过了这个阶段，也就是十来岁的时候，家长们开始不约而同地停止晒娃。为什么？因为到了这时候，家长们开始 “**发现**” 自己的孩子正在不可避免地走向**平庸**，再也看不出当初的聪明当初的天才，甚至再也想象不出当初那种学啥都快学啥都会的样子……
+Mọi người hay đùa đó là **“thiên tài trước lớp bốn”**. Trước lớp bốn, cha mẹ thường không nhịn được khoe con trên mạng. Nhưng qua giai đoạn ấy, khoảng mười tuổi, họ cùng ngừng khoe. Vì sao? Vì bắt đầu “phát hiện” con tất yếu đi về **bình thường**, không còn thấy thông minh, thiên tài ban đầu, thậm chí không tưởng tượng nổi dáng vẻ học gì cũng nhanh, cũng biết thuở trước.
 
-有人会说，“谁不觉得自己家孩子好呢？” —— 所以，他们认为觉得自家孩子聪明觉得自家孩子天才，完全是普遍的幻觉。实际上，这才是真正的幻觉。天下哪儿有不起作用的贝叶斯推理机？哪儿有不好的天生超级学习机器？
+Có người nói: “Ai chẳng thấy con mình tốt?” Họ cho rằng thấy con thông minh, thiên tài chỉ là ảo giác phổ biến. Tác giả nói chính quan điểm ấy mới là ảo giác: trên đời đâu có cỗ máy suy luận Bayes không hoạt động, đâu có cỗ máy học siêu việt bẩm sinh không tốt?
 
-聪明怎么就不见了呢？天才怎么就消失了呢？令人遗憾且又颇令人心寒的一个事实是：
+Thông minh đi đâu, thiên tài biến mất thế nào? Điều tác giả gọi là một sự thật đáng tiếc và lạnh lòng là:
 
-> 整个教育体系在长期持续且又系统化地破坏贝叶斯推理机。
+> Toàn bộ hệ thống giáo dục đang phá hủy cỗ máy suy luận Bayes một cách lâu dài, liên tục và có hệ thống.
 
-这不是哪个国家的问题，全球的教育体系在这方面都一样，都是**好心办坏事** —— 这倒也是整个世界运转过程中竟然出现的现象：**好的意图并不一定保证好的结果**。
+Không phải vấn đề một nước. Theo ông, hệ thống giáo dục toàn cầu đều giống nhau, **ý tốt làm việc xấu**. Đây lại là hiện tượng của thế giới: **ý định tốt không bảo đảm kết quả tốt**.
 
-人们在上学之前，各个都是天才。
+Trước khi đến trường, ai cũng là thiên tài:
 
-> 他们对什么都**好奇**，不管什么都**敢于尝试**，做什么都很**专注**，**不知疲倦不怕重复，不知道枯燥为何物**，更重要的是，**完全不在意他人的看法**……
+> Họ **tò mò** mọi thứ, **dám thử** mọi thứ, làm gì cũng **tập trung**, **không biết mệt, không sợ lặp lại, không biết nhàm chán là gì**. Quan trọng hơn, **hoàn toàn không bận tâm người khác nghĩ gì**.
 
-所谓的 “天才” 不就是这样的吗？
+Cái gọi là thiên tài chẳng phải vậy sao?
 
-## 2. 学校的问题
+::: info Ghi chú biên tập về mô hình học ở trẻ
+Công thức Bayes được giữ nguyên. “Não trẻ là cỗ máy Bayes hoàn thiện” là mô hình giải thích của tác giả, không có nghĩa trẻ thực hiện có ý thức phép tính này, hoặc mọi suy luận đều tối ưu. Ví dụ dùng ná là câu chuyện gốc để minh họa phản hồi, không phải bài tập bản Việt hóa đề xuất.
 
-### 2.1. 华而不实
+Trẻ lớn lên trong môi trường ngôn ngữ khác nhau có thể học các tiếng mẹ đẻ khác nhau; ví dụ ấy tự nó không bác bỏ vai trò của tuổi hay giai đoạn nhạy cảm, vì các trẻ đều tiếp xúc từ sớm. Các mốc và tiến trình ngôn ngữ có khác biệt giữa trẻ, như [NIDCD trình bày](https://www.nidcd.nih.gov/health/speech-and-language). Những từ “mọi trẻ là thiên tài”, “không biết mệt” và “hệ thống giáo dục phá hủy não” thể hiện lập luận của tác giả, không phải chẩn đoán hoặc kết luận về mọi trẻ, mọi trường.
+:::
 
-之前我们就讨论过教育的**华而不实**。学校里只管发书讲课 —— 这只是知识获取而已，事实上最不值钱的服务。我们早就生活在一个知识获取成本可以几近于零的时代。至于最关键最起作用的，需要倾注自己的注意力才能对自己奏效的**刻意练习**，被老师们认为并非己任 —— 巧了，这也的确是学生自己的事，也的确是只有学生自己才能做的事 —— 并不属于家长们支付高昂学费所购买的服务内容。
+## 2. Những vấn đề của nhà trường
 
-### 2.2. 消磨主动
+### 2.1. Hào nhoáng nhưng thiếu thực chất
 
-大脑就是这样，严格执行 “用进废退”，它讨厌浪费能量，它更害怕能量的过度消耗。用得多，它就想尽一切办法加强那些连接和网络，只要用得不够多，它就直接暂时启用或者转作其它用途。
+Trước đây ta đã bàn sự **hào nhoáng, thiếu thực chất** của giáo dục. Nhà trường chỉ lo phát sách, giảng bài, tức tiếp nhận kiến thức, điều tác giả xem là dịch vụ ít giá trị nhất. Ta đã sống trong thời chi phí tiếp nhận kiến thức gần bằng không. Còn **luyện tập có chủ đích**, phần quan trọng và hiệu quả nhất cần rót sự chú ý của mình mới tác động lên mình, lại bị giáo viên coi không phải trách nhiệm. Trùng hợp, đó đúng là việc học sinh, chỉ học sinh mới làm được, không thuộc dịch vụ cha mẹ mua bằng học phí cao.
 
-老师讲得再好，讲得再精彩，也只是完成了 “整个教育中的 5%” 而已，弄不好这都算多了。同时，我们也遗憾地观察到，大多数老师讲得并不精彩，甚至连及格都谈不上。孩子们被迫坐在下面听那么无聊的东西连续 45 分钟，锻炼的根本就不是集中注意力的能力，真正练出来的，只不过是保持一个动作不被看出来自己正在走神的习惯……
+### 2.2. Mài mòn sự chủ động
 
-成年累月地把孩子关进课堂里，逼着他们认真听讲的另外一个意想不到却又更加普遍更加严重的后果是，随着时间的推移，这些孩子逐步丧失了自主阅读理解能力。他们的大脑也越来越不在乎自主阅读理解，反正，有老师讲，不懂可以问，为什么要自己消耗能量去挣扎？
+Não là vậy, thực hiện nghiêm “dùng thì phát triển, không dùng thì suy giảm”. Nó ghét phí năng lượng, còn sợ tiêu quá mức hơn. Dùng nhiều thì nó tìm mọi cách tăng kết nối, mạng; dùng chưa đủ thì tạm ngưng hoặc chuyển sang việc khác.
 
-很多人在离开学校的那一瞬间，带着欢喜决定此后再也不读书！事实上他们就是这么做的。一项 [2024 年的美国全国调查](https://testprepinsight.com/resources/us-book-reading-statistics/)显示，几乎有一半的受访者（48.5%）在过去一年中没有阅读过任何书籍。不要误以为那是因为他们学历低，那些去年没读过任何一本书的人，包括占总比 11% 的拥有学士或者更高学位的人。
+Giáo viên giảng hay đến đâu cũng mới hoàn thành **“5% toàn bộ giáo dục”**, thậm chí tác giả cho rằng thế còn nhiều. Ông tiếc rằng phần lớn giáo viên giảng không hay, thậm chí chưa đạt. Trẻ buộc ngồi nghe thứ nhàm chán suốt 45 phút, không rèn khả năng tập trung mà chỉ rèn thói quen giữ tư thế để người khác không thấy mình đang lơ đãng.
 
-他们甚至不知道自己的问题出在哪里，甚至开始相信自己的理解能力正在变得越来越差 —— 可这只不过好像是一种病症，的确存在，但并非不能治愈。他们反复告诉自己的大脑，岁数大了，不行了…… 可实际上，原本岁数越大学习能力越强才对。
+Nhốt trẻ trong lớp, ép nghe nghiêm túc năm này qua năm khác còn có hậu quả bất ngờ, phổ biến và nghiêm trọng hơn: chúng dần mất khả năng tự đọc hiểu. Não cũng ngày càng không quan tâm tự đọc, vì đã có thầy giảng, chưa hiểu thì hỏi, sao phải tự tiêu năng lượng vật lộn?
 
-他们也不是不上进，也不是不想学新东西，尤其是生活出现困境的时候。可是，他们能想到的唯一方法就是跳回多年前的陷阱，再一次花很多很多的钱购买最不重要的服务，不是自己主动看书，而是找个学习班听老师讲解。
+Nhiều người vừa rời trường đã vui vẻ quyết từ nay không đọc sách nữa, và thực sự làm vậy. Một [khảo sát tại Mỹ năm 2024](https://testprepinsight.com/resources/us-book-reading-statistics/) được nguyên tác dẫn cho biết gần nửa người trả lời, 48,5%, không đọc cuốn sách nào trong năm trước. Đừng tưởng vì học vấn thấp; trong nhóm không đọc còn có người có bằng cử nhân trở lên, được nguyên tác mô tả là chiếm 11% tổng số.
 
-然后呢？然后从来都不做必要的练习，理由也非常正当 —— 真的没时间。是啊，有时间的时候，没干过正事么……
+::: info Ghi chú về khảo sát đọc sách
+Trang được nguyên tác dẫn hiện đã đổi sang **khảo sát 2025**, ghi cập nhật ngày **1/4/2026**. Trang vẫn nêu 48,5%, nhưng phương pháp là khảo sát Google Forms tự nguyện với 1.621 người trưởng thành và chính trang lưu ý mẫu có thể không đại diện toàn bộ Mỹ. Nội dung hiện không có tỷ lệ 11% theo bằng cấp.
 
-### 2.3. 非个性化
+Bản dịch giữ 48,5% và 11% như lời dẫn lịch sử trong nguyên tác; chưa đối chiếu được bản khảo sát 2024 hoặc mẫu số của 11%. Không dùng dữ liệu hiện tại để xác nhận số liệu lịch sử, cũng không từ khảo sát này suy ra nhà trường là nguyên nhân khiến người ta ngừng đọc.
+:::
 
-另外，学校里的教育还有个始终无法解决的问题，**无法个性化**。同一个知识点，对每个人来说，难度可能并不相同 —— 无论是学的难度，还是练的难度。预习过的和没预习过的不一样，见识过的和没见识过的不一样，大脑里有没有近似连接或者近似网络也会造成巨大的不同。
+Họ không biết vấn đề ở đâu, còn tin khả năng hiểu ngày càng kém. Theo tác giả, điều ấy như một triệu chứng có thật nhưng không phải không chữa được. Họ lặp lại với não rằng già rồi, không còn được; ông cho rằng vốn dĩ tuổi càng cao khả năng học càng phải mạnh.
 
-然而，一个令人沮丧的事实是，我们一直一致以为超级贵的教育，实际上是众包之后的价格，也就是说，一个班级的配置，其实是十几个家庭或者几十个家庭齐心协力才能共同负担的价格。这就是现实。
+Họ không phải không muốn tiến bộ, không muốn học mới, nhất là lúc gặp khó trong đời. Nhưng cách duy nhất nghĩ ra là nhảy lại bẫy cũ: bỏ rất nhiều tiền mua dịch vụ ít quan trọng nhất, không chủ động đọc mà tìm lớp nghe giảng.
 
-小学里，班上只要五个人以上，语文课里实际上最重要的活动就无法进行了 —— 复述。所有老师都知道，复述是最能锻炼理解能力的活动，也是最靠谱的学习效果验收手段。可问题在于说，在多人的课堂上，它就是不可行，理由既简单又明确：时间不够 —— 更别说十几人甚至几十人的课堂上了。
+Rồi sao? Rồi không bao giờ làm bài luyện cần thiết, với lý do rất chính đáng: thật sự không có thời gian. Đúng vậy, khi có thời gian thì đã chẳng làm việc cần làm.
 
-别说复述了，连集体讨论或者分组讨论，都是相对罕见的。因为资源是众包的，所以，自然而然地造成人数过多，时间不够。在课堂上，即便是那些有想法的老师，到最后也只能退而求其次，能带着学生一起做的，并且老师们也自信的确有效的，只剩下了朗读和背诵。
+### 2.3. Không cá nhân hóa
 
-绝大多数人离开学校之后，并不具备写作能力，更不具备讲演能力。人数越多班级越大的学生越是如此。其实，写作也好讲演也罢，99% 的时间和篇幅里，都是在复述，要么是复述别人的成果，要么是复述自己过去的想法…… 写作能力差、讲演能力无，共同的核心原因是同一个，复述能力差。
+Giáo dục trong trường còn vấn đề chưa giải quyết được: **không thể cá nhân hóa**. Cùng một kiến thức, độ khó học và luyện với mỗi người có thể khác. Đã chuẩn bị trước khác chưa chuẩn bị, từng thấy khác chưa thấy, có kết nối hoặc mạng gần đúng trong não cũng tạo khác biệt lớn.
 
-小朋友上学之前，复述能力是很强的，他们无论看到什么，回家都想跟爸爸妈妈或者兄弟姐妹绘声绘色地讲至少一遍…… 可是，这样的天性和天分，在上学之后的数年间里，逐步被消磨，直至殆尽。再一次，只不过是用进废退。
+Nhưng có một sự thật khiến người ta nản: nền giáo dục ta nhất trí là cực đắt thực ra đã là giá chia sẻ giữa nhiều gia đình. Cấu hình một lớp phải mười mấy hoặc vài chục gia đình chung sức mới chi trả nổi. Đó là thực tế.
 
-到最后，学校里的讲解也好，老师留的作业也罢，到最后都是为了应对考试而设计 —— 这是家长们求锤得锤的结果。
+Trong tiểu học, chỉ cần lớp hơn năm người, theo tác giả, hoạt động quan trọng nhất của môn ngôn ngữ đã không làm được: **kể lại bằng lời mình**. Mọi giáo viên đều biết đây là cách rèn hiểu tốt nhất, kiểm tra hiệu quả học đáng tin nhất. Nhưng lớp đông thì không khả thi, lý do rõ và đơn giản: không đủ thời gian, chưa nói lớp mười mấy hay vài chục người.
 
-### 2.4. 糊弄一切
+Đừng nói kể lại, ngay thảo luận cả lớp hoặc theo nhóm cũng tương đối hiếm. Vì nguồn lực góp chung nên tự nhiên nhiều người, thiếu thời gian. Trong lớp, ngay giáo viên có ý tưởng cuối cùng cũng phải lùi xuống lựa chọn kém hơn: chỉ còn đọc thành tiếng và học thuộc là việc có thể cùng làm và họ tin có hiệu quả.
 
-**考试被严重误解了**。考试的核心作用，根本就不是考验每个人的能力，考试的核心作用，是筛选。为什么筛选呢？很简单，一切重要的社会资源都必然是有限的，所以最终只能分配给少数人。
+Đại đa số rời trường không có năng lực viết, càng không có năng lực nói trước đám đông; lớp càng đông càng vậy. Theo tác giả, 99% thời gian và dung lượng viết hoặc nói đều là kể lại, hoặc kết quả người khác, hoặc suy nghĩ trước đó của mình. Viết kém, không biết trình bày đều chung nguyên nhân cốt lõi: kể lại kém.
 
-这是永恒不变的事实。这就解释了为什么越是重要的考试越有奇怪题目的原因，并不是那些奇怪的题目可以甄别出某项必需的能力，可以更好地分配社会资源，甚至可以提高整个社会效率…… 都不是，就是为了筛掉大部分人。所以，考试成绩差，结果就是被筛掉；而考试成绩好，结果只不过是幸存而已。
+Trước khi đến trường, trẻ kể lại rất giỏi. Thấy gì cũng muốn về kể sinh động ít nhất một lượt cho cha mẹ hoặc anh chị em. Nhưng thiên tính và năng khiếu ấy dần bị mài mòn tới hết trong những năm đi học. Một lần nữa, tác giả cho rằng chỉ là dùng hay suy giảm.
 
-你可以说这很不公平，但从另外一个角度来看，它看起来有多不公平它就事实上有多公平 —— 既然事实如此，何必伪装？
+Cuối cùng, giảng bài trong trường và bài tập giáo viên giao đều để đối phó kỳ thi, kết quả của việc cha mẹ muốn gì được nấy.
 
-看穿了这个实质之后，你就能理解学校里的那些老师有多么无奈，所作所为有多么徒劳。他们没办法直接创造更多更好的社会资源，他们没办法让更少的人被筛掉，他们能做得最好的，本质上来看，只不过是满足焦虑的父母们因误解而产生的幻觉。也算是一种各取所需，双向奔赴。
+### 2.4. Đối phó với mọi thứ
 
-事实上并不知所谓的作业，其实并不能改变命运的考试，夹在这其中长达十多年的结果是，所有的学生都学会了**糊弄**。他们不仅在学校里写作业的时候想尽一切办法糊弄老师，回到家里也要想尽一切办法糊弄家长，为了考试，要在校外花钱报辅导班期待能够获得一些秘籍最终竟然可以糊弄考试……
+**Thi cử bị hiểu sai nghiêm trọng.** Theo tác giả, chức năng cốt lõi không phải kiểm tra năng lực mỗi người mà là **sàng lọc**. Vì sao? Đơn giản, mọi nguồn lực xã hội quan trọng đều hữu hạn, cuối cùng chỉ có thể phân cho số ít.
 
-终于有一天，离开了父母的近距离监控，到了大学校园 —— 糊弄都不掩饰了，直接喊出六十分万岁，并引以为荣，比比皆是。
+Ông xem đó là sự thật bất biến, giải thích vì sao thi càng quan trọng càng có câu kỳ lạ. Không phải những câu ấy nhận diện năng lực cần thiết, phân bổ nguồn lực tốt hơn hay tăng hiệu suất xã hội, mà chỉ để loại phần lớn. Điểm thấp thì bị loại; điểm cao cũng chỉ là sống sót.
 
-**用尽废退**。糊弄多了的结果是，不知不觉开始糊弄自己。坐在课堂里就以为自己的确听讲了，打开教科书就觉得自己的确读书了，坐在课外辅导班在台下玩手机就可以告诉家长告诉自己，已经尽力了……
+Bạn có thể bảo không công bằng, nhưng từ góc khác, theo tác giả, trông không công bằng đến đâu thì thực ra công bằng đến đó. Đã là vậy, sao cần giả vờ?
 
-到最后，花了那么多钱，耗费了整个青春，毕业之后养出来的最大本事竟然就是四处糊弄…… 只可惜，命运容不得糊弄，时间容不得糊弄，最终时间不耐烦了，命运不耐烦了，反手一击的时候，都不知道应该从哪里开始后悔。
+Nhìn ra bản chất ấy sẽ hiểu giáo viên bất lực thế nào, việc làm vô vọng ra sao. Họ không trực tiếp tạo thêm nguồn lực tốt, không thể khiến ít người bị loại hơn. Điều tốt nhất họ làm, xét bản chất, chỉ là thỏa mãn ảo tưởng từ hiểu lầm của cha mẹ lo lắng. Cũng là đôi bên lấy điều mình cần, cùng hướng về nhau.
 
-### 2.5. 脱离生产
+Bài tập thực ra không rõ để làm gì, kỳ thi thực ra không đổi được số phận, kẹt giữa đó hơn mười năm, theo tác giả, mọi học sinh đều học được **đối phó**. Không chỉ tìm mọi cách qua mặt giáo viên khi làm bài, về nhà còn qua mặt cha mẹ; vì thi thì trả tiền học thêm, mong kiếm bí quyết đến mức qua mặt cả kỳ thi.
 
-还没完…… 最大最可怕的问题是，学校的设计目标从一开始就不太正常。花那么多钱，浪费那么多的青春，如此挣扎，到最后，图什么呢？一切都是为了考试，为了升学，为了求职 —— 弄明白了，原来到最后是为了成为一个出类拔萃的打工人啊！
+Cuối cùng rời giám sát gần của cha mẹ, đến đại học, họ không che đối phó nữa mà hô “60 điểm là đủ”, lại tự hào. Chuyện có khắp nơi.
 
-打工并不是不好。问题在于，有必要只是为了打工就如此费尽周折吗？为了避免名词之争，让我们从另外一个角度看这个问题。
+**Dùng thì phát triển, không dùng thì suy giảm.** Đối phó nhiều dẫn đến âm thầm đối phó với mình. Ngồi trong lớp tưởng đã nghe, mở sách tưởng đã đọc, ngồi học thêm mà chơi điện thoại vẫn nói với cha mẹ và mình rằng đã cố hết.
 
-天下一切的财富，最正当且持续的来源是**生产**，**唯有生产**。坑蒙拐骗偷虽然也是某种方法，它们的问题在于，无法长期持续。只要你会你能做出很多人肯买的商品或者服务，不仅你的生活有了保证，连生活地位都可能顺其自然地出现。获得了足够的物质财富，就有机会追求精神财富。
+Cuối cùng tiêu ngần ấy tiền, cả tuổi trẻ, năng lực lớn nhất sau tốt nghiệp lại là đối phó khắp nơi. Tiếc là số phận và thời gian không chịu bị đối phó. Khi chúng mất kiên nhẫn, đáp trả, ta chẳng biết nên bắt đầu hối hận từ đâu.
 
-可我们的教育在干什么？它的核心目标不是培养生产者，而是为社会上已有的合格生产者、有效生产者输送合格劳动力 —— 对，合格生产者，有效生产者，就是整个社会的稀缺资源，必需筛掉很多人，才够分配。（更多关于时间、自学、知识、追求精神财富和物质财富的讨论，请参考《财富的真相》）
+### 2.5. Tách rời việc tạo ra sản phẩm và dịch vụ
 
-那为什么不从一开始就以 “**成为生产者**” 为目标呢？不用参加任何人为设计的考试，唯一的考试就是投放市场之后看销量 —— 这不好吗？
+Chưa hết. Vấn đề lớn, đáng sợ nhất là mục tiêu thiết kế nhà trường từ đầu đã không bình thường. Tiêu tiền, phí tuổi trẻ, vật lộn ngần ấy để làm gì? Đều để thi, lên lớp, vào trường tiếp, tìm việc. Hiểu rồi, cuối cùng là làm người làm thuê xuất sắc.
 
-在学校那么多年，最初的时候也不是没问过 “学这个有什么用啊？” 长期以来能得到的只有一致的回答，“等你长大就知道了……” 后来的确长大了，但早就忘了应该索要当初这个问题的正确答案。等到自己的孩子问出一模一样的问题，还是不知道应该怎么回答，于是，拿出标准答案，对自己的孩子说，“等你长大就知道了……”
+Làm thuê không phải không tốt. Vấn đề là có cần chỉ để làm thuê mà vất vả vòng vèo thế? Để tránh tranh cãi danh từ, hãy nhìn góc khác.
 
-这并非社会普遍共识，这是我心甘情愿作为极少数人愿意为自己和自家孩子捍卫的看法：
+Nguồn chính đáng và bền vững nhất của mọi của cải là **sản xuất**, **chỉ sản xuất**. Lừa gạt, gian dối, trộm cắp dù cũng là cách, vấn đề là không lâu bền. Chỉ cần biết và làm được sản phẩm, dịch vụ nhiều người chịu mua, không chỉ đời sống được bảo đảm mà địa vị có thể tự nhiên đến. Có đủ của cải vật chất thì có cơ hội theo đuổi sự phong phú tinh thần.
 
-> **一切学习的目标都很清楚，只能是为了生产……**
+Giáo dục đang làm gì? Theo tác giả, mục tiêu cốt lõi không phải đào tạo người sản xuất, mà cung cấp lao động đạt yêu cầu cho những người sản xuất có năng lực, hiệu quả sẵn trong xã hội. Những người sản xuất ấy chính là nguồn lực khan hiếm, phải loại nhiều người mới đủ phân phối. Để đọc thêm về thời gian, tự học, kiến thức và theo đuổi của cải tinh thần, vật chất, tác giả dẫn *Sự thật về của cải*.
 
-家长每天都要提醒的，小孩每天都要思考的，兄弟姐妹朋友之间每天都要讨论的，都要**从生产出发**。这个东西很好，怎么做出来的？那个服务很畅销，怎么做出来的？生活里的这个问题要是能被解决就好了，那么，针对它，人们需要什么样的商品和服务？在资讯如此发达的今天，哪儿哪儿都有答案，哪儿哪儿都有线索。
+Vậy sao không từ đầu đặt mục tiêu **“trở thành người tạo ra sản phẩm và dịch vụ”**? Không cần kỳ thi do ai thiết kế; kỳ thi duy nhất là đưa ra thị trường rồi xem bán được bao nhiêu. Chẳng tốt sao?
 
-还有个丑陋的事实必需提醒：**生产者**和消费者之间的关系，从某个角度望过去，其实是生物界赤裸裸的捕食者和被捕食者之间的关系。在大自然里，你到底是捕食者还是被捕食者，几乎是不可更改的天命，在人生里，做个生产者还是做个消费者，在最初是个非常轻松且又明显的选择。只不过是等到绝大多数人清醒的时候竟然发现已经来不及了而已。
+Bao năm trong trường, lúc đầu cũng từng hỏi “Học cái này có ích gì?” Câu trả lời thống nhất lâu nay chỉ là “Lớn lên sẽ biết”. Sau đó thực sự lớn, lại quên đòi câu trả lời đúng. Đến khi con hỏi y hệt, vẫn không biết đáp, nên lấy câu chuẩn: “Lớn lên sẽ biết”.
 
-### 2.6. 英语问题
+Đây không phải đồng thuận xã hội; tôi sẵn lòng là số rất ít bảo vệ quan điểm này cho mình và con:
 
-关于**英语教育**，不得不单独拿出来说一说。毫无疑问，英语教育是学校里最大的灾区。那么多年的 “学习” 和 “教育”，**最终的效果几近于零** —— 全无夸张。
+> **Mục tiêu mọi việc học đều rất rõ: chỉ có thể để tạo ra sản phẩm và dịch vụ.**
 
-核心来自两个方面：
+Điều cha mẹ nhắc mỗi ngày, trẻ nghĩ mỗi ngày, anh chị em bạn bè bàn mỗi ngày đều phải **bắt đầu từ việc tạo ra sản phẩm và dịch vụ**. Thứ này tốt, làm thế nào? Dịch vụ kia bán chạy, tạo ra sao? Vấn đề trong đời nếu giải được thì tốt, vậy người ta cần sản phẩm, dịch vụ gì? Trong thời thông tin phát triển, đâu cũng có đáp án, manh mối.
 
-> * 不以语音为核心；
-> * 只用 “系统二” 学，不用 “系统一” 练。
+Còn một sự thật xấu xí tác giả muốn nhắc: quan hệ người sản xuất và người tiêu dùng, từ một góc, giống trần trụi quan hệ kẻ săn mồi và con mồi trong tự nhiên. Trong tự nhiên, thuộc bên nào gần như là số phận không đổi. Trong đời, làm người sản xuất hay tiêu dùng ban đầu là lựa chọn rất nhẹ nhàng, rõ ràng. Chỉ là đến khi đa số tỉnh ra, họ thấy đã quá muộn.
 
-语言本身，只能**以语音为核心**，没有语音作为基础，文字很难发挥实际作用。然而，也许是基于过去的现实局限，语音几乎从未成为课堂的核心内容。说实话，过去的条件也的确有限 —— 比如，外教稀缺，而本地教师发音也不一定过关…… 更为重要的是，班级里总是人数太多，乃至于语音训练仅从课堂时间分配上来看就很不现实……
+### 2.6. Vấn đề dạy tiếng Anh
 
-更为关键的是，学校里的学习都是以考试为导向的，于是，会被考试形式本身误导 —— 考试的内容，总是考核输入更多，考核输出更少，因为输入可以使用客观题测试，输出却只能通过主观题测试；而主观题比例总是最少…… 也许是它很难被统一评判的缘故。
+Phải nói riêng **giáo dục tiếng Anh**. Theo tác giả, đây không nghi ngờ gì là vùng thất bại lớn nhất trong trường. Bao năm “học” và “giáo dục”, **hiệu quả cuối gần bằng không**, ông khẳng định không hề phóng đại.
 
-试卷里的客观题，都是只需要动用系统二就可以完成的任务。但，语言的实际应用，却几乎截然相反，99% 都是由系统一处理的…… 所以才出现那么普遍的现象，很多人，英语四六级都过了，甚至 TOEFL、IELTS 都高分了，却依然说不了写不出。
+Cốt lõi có hai mặt:
 
-## 3. 名校无用
+> * Không lấy âm thanh và phát âm làm trung tâm.
+> * Chỉ dùng “Hệ thống 2” để học, không dùng “Hệ thống 1” để luyện.
 
-如果你是名校毕业，你也许可以理直气壮的说，“名校也没什么用” —— 甚至无需加上额外的语气或者情绪，完全可以轻描淡写。如果你不是，你说同样的话，不仅自己可能气短，别人听到之后也会不服。
+Bản thân ngôn ngữ, theo tác giả, chỉ có thể **lấy âm thanh làm trung tâm**. Không có nền âm thanh, chữ khó phát huy tác dụng thật. Nhưng có lẽ do giới hạn thực tế trước đây, phát âm gần như chưa từng là trọng tâm lớp học. Điều kiện xưa thực sự hạn chế: giáo viên nước ngoài hiếm, giáo viên địa phương chưa chắc phát âm đạt. Quan trọng hơn, lớp luôn quá đông, chỉ xét phân bổ giờ đã thấy luyện phát âm thiếu thực tế.
 
-如果平日里你即便自己不是名校出身也能理直气壮地说 “名校就是没什么用！”，那我们可以佩服你的倔强，但，面对 “自家孩子要不要上名校？” 这个问题的时候，你还是会想尽一切办法送他们读名校的话，我们不仅不会感到意外，甚至还是可以表示理解 —— 面对整个社会的共识，无论对错，我们不都总是在关键的时候基于这样那样的原因倾向于妥协吗？
+Mấu chốt hơn là học trong trường hướng thi, nên bị hình thức thi dẫn sai. Nội dung thi luôn kiểm tra tiếp nhận nhiều, tạo đầu ra ít, vì tiếp nhận có thể kiểm tra bằng câu khách quan, còn đầu ra chỉ bằng câu chủ quan. Tỷ lệ câu chủ quan luôn thấp nhất, có lẽ vì khó chấm thống nhất.
 
-哈佛大学的教授们也经常问这个问题，他们不仅怀疑他们正在执教的学校有没有用，更担心的是自己的教学到底有没有用…… 对他们来说，事实很清楚，那些学生该翘课翘课，该不做功课就不做功课，该熬夜就熬夜，该吸大麻吸大麻，该开趴踢就开趴踢 —— 但，到最后，大多都能混到毕业，毕业之后，职场薪水就是比普通院校毕业的人高出至少 30%。
+Câu khách quan trên đề chỉ cần Hệ thống 2. Nhưng sử dụng ngôn ngữ thực tế gần như ngược lại: theo tác giả, 99% do Hệ thống 1 xử lý. Vì vậy mới phổ biến chuyện đã qua các kỳ tiếng Anh bậc 4, bậc 6 tại Trung Quốc, thậm chí TOEFL, IELTS điểm cao mà vẫn không nói, không viết được.
 
-而名校毕业的人赚得更多这个事实，其实很容易解释。比起名校和名师的作用，有另外一个更起作用且更为明显的因素 —— 这些学校通过考试招进来的都是最顶级的学生，他们本来就相对更有能力，到了社会上多赚 30% 以上其实是四年前甚至更早就注定的结果。另外，整个社会的共识决定了说，品牌效应无所不在 —— 这个因素也明显比名校名师本身起的作用更大。
+::: info Ghi chú biên tập về các phê bình giáo dục
+Trong mục 2.2, nguyên tác viết từ có nghĩa “tạm kích hoạt”, nhưng ngữ cảnh đang nói giảm sử dụng; bản dịch chọn “tạm ngưng” theo ngữ cảnh và ghi rõ đây là cách hiểu biên tập, không phải câu nguồn nguyên vẹn.
 
-反正，事实摆在那里，没必要继续争论。
+Các tỷ lệ 5%, 99%, ngưỡng lớp hơn năm người, lời khẳng định “mọi kỳ thi chỉ sàng lọc”, “hiệu quả tiếng Anh gần bằng không” và những đánh giá bao trùm nhà trường là quan điểm hoặc số liệu không có phép đo cụ thể trong nguyên tác. Không dùng chúng như mô tả đã được xác minh về trường học Việt Nam.
 
-但，我们也的确不应该彻底抹煞环境的力量。
+“Hệ thống 1” và “Hệ thống 2” là cách mô tả hai kiểu xử lý nhận thức, không phải hai cơ quan tách rời có thể gán chính xác 99% hoạt động ngôn ngữ. Tự luyện nghe, nói, đọc, viết có thể bổ sung cho học có hướng dẫn. Không cần xem bỏ học hoặc từ chối mọi hỗ trợ là điều kiện để tự học tốt.
 
-所谓水涨船高。在更优秀的群体里生存，本身就抬高了生存线。烂校里学生开趴踢吸大麻然后昏昏沉沉弄不好还得再来一个二场甚至三场；名校里的学生同样参加趴踢玩得够疯，但他们不一定吸大麻，并且，其中有相当数量的人已经习惯了玩得筋疲力尽之后回到宿舌把该做的功课做完再睡觉，两小时之后冲进教室，听完课之后再抓紧抽空补觉……
+“Sản xuất” trong lập luận của tác giả gồm cả tạo dịch vụ. So sánh người sản xuất với kẻ săn mồi là quan điểm tu từ, không phải bản chất bắt buộc của kinh doanh. Người Việt học tiếng Anh có thể theo đuổi nhiều mục tiêu: giao tiếp, nghề nghiệp, học thuật, hiểu biết hoặc sở thích; các mục tiêu ấy không nhất thiết chỉ đo bằng doanh số.
+:::
 
-所以，如果把学校理解成孩子锻炼社交能力的场所，那每个学校都挺有用的。烂校起码做到了把那些精力旺盛无处宣泄的年轻人大部分时间都关起来省得他们危害社会，名校起码让优秀的年轻人有机会接触到更多更优秀的年轻人 —— 仅仅涨了见识本身，比多看几本书多上几门课可有用太多了。
+## 3. Trường danh tiếng không hữu ích
 
-人就是社交动物，从始至终都是。然而，社交的前提往往被忽略，这世界不存在什么向上社交，或者向下社交，社交的前提就是匹配。交朋友相对来看是弱关系社交，结婚相对来看就是强关系社交，到最后，所有的社交都一样，不匹配就不稳定。
+Nếu tốt nghiệp trường danh tiếng, bạn có thể nói rất tự tin “Trường danh tiếng cũng chẳng hữu ích lắm”, thậm chí nói nhẹ nhàng không thêm cảm xúc. Nếu không, nói cùng câu có thể tự thấy yếu thế và người nghe cũng không phục.
 
-[查理芒格的说法](https://www.youtube.com/watch?v=GYCQNSWA9uA)极为朴素：
+Nếu dù không học trường danh tiếng bạn vẫn tự tin nói câu ấy, ta có thể nể sự cứng cỏi. Nhưng khi gặp câu hỏi con có nên học trường danh tiếng mà bạn vẫn tìm mọi cách gửi con vào, ta không chỉ chẳng ngạc nhiên mà còn hiểu. Trước đồng thuận xã hội, đúng sai thế nào, chẳng phải ta thường vì đủ lý do mà thỏa hiệp lúc quan trọng?
 
-> 想要获得你想要的东西，最安全的方法是努力配得上它。
+Theo tác giả, giáo sư Harvard cũng thường hỏi vậy: không chỉ nghi trường mình có ích không mà còn lo việc dạy có ích không. Ông mô tả sinh viên vẫn trốn học, không làm bài, thức đêm, dùng cần sa, tiệc tùng; cuối cùng phần lớn vẫn tốt nghiệp và lương sau đó cao hơn sinh viên trường thường ít nhất 30%.
+
+Tác giả cho rằng việc người tốt nghiệp trường danh tiếng kiếm nhiều hơn dễ giải thích. Có yếu tố rõ và mạnh hơn trường, thầy: trường tuyển qua thi những học sinh hàng đầu, vốn tương đối có năng lực hơn, nên ra xã hội kiếm hơn 30% đã định từ bốn năm trước, thậm chí sớm hơn. Đồng thuận xã hội cũng khiến hiệu ứng thương hiệu có khắp nơi, và yếu tố ấy theo ông còn mạnh hơn tác dụng bản thân trường, thầy.
+
+Dù sao, tác giả xem sự thật đã đó, không cần tranh luận thêm.
+
+Nhưng ta cũng không nên phủ nhận hoàn toàn sức mạnh môi trường.
+
+Nước lên thuyền lên. Sống giữa nhóm xuất sắc hơn tự nó nâng mức cần đạt để tồn tại. Theo mô tả của tác giả, học sinh trường kém tiệc tùng, dùng cần sa rồi mơ màng, có khi đi tăng hai, tăng ba. Sinh viên trường danh tiếng cũng chơi rất hết mình, nhưng chưa chắc dùng cần sa; khá nhiều người quen chơi mệt rồi về ký túc xá làm xong bài mới ngủ, hai giờ sau lao vào lớp, học xong mới tranh thủ ngủ bù.
+
+Vì vậy, nếu hiểu trường là nơi trẻ rèn giao tiếp xã hội thì trường nào cũng khá hữu ích. Tác giả nói trường kém ít nhất giữ những người trẻ dư năng lượng trong phần lớn thời gian để tránh gây hại xã hội; trường danh tiếng ít nhất cho người trẻ xuất sắc gặp thêm người còn giỏi hơn. Chỉ mở mang ấy đã hữu ích hơn nhiều so với đọc thêm vài sách, học thêm vài môn.
+
+Con người từ đầu đến cuối là động vật xã hội. Nhưng tiền đề giao tiếp thường bị bỏ qua. Theo tác giả, không có giao tiếp “lên trên” hay “xuống dưới”, tiền đề là phù hợp. Kết bạn tương đối là quan hệ yếu, kết hôn tương đối là quan hệ mạnh; cuối cùng mọi quan hệ đều vậy, không phù hợp thì không ổn định.
+
+[Charlie Munger nói](https://www.youtube.com/watch?v=GYCQNSWA9uA) rất giản dị:
+
+> Cách an toàn nhất để cố đạt điều mình muốn là cố trở nên xứng đáng với điều ấy.
 >
 > The safest way to try to get what you want is to try to deserve what you want.
 
-所以，“名校到底有没有用？” 很可能干脆问错了，更应该问的其实是，“我自己行不行？” 自己到底行不行，要看自己过往的学习与积累，行就是行，不行就是不行，但，行不行肯定不是收没收到名校录取通知书那一瞬间决定的，它总是一个发展出来的结果。
+Vậy “Trường danh tiếng có ích không?” có thể ngay từ đầu đã hỏi sai. Nên hỏi “Bản thân mình có đủ năng lực không?” Cần xem việc học, tích lũy trước đó. Được là được, chưa là chưa, nhưng chắc chắn không do khoảnh khắc nhận thư trúng tuyển quyết định; luôn là kết quả phát triển.
 
-也许，在高中毕业的那一瞬间可能还不行，又或者，在大学毕业的那一瞬间依然不行，但，这并不意味着说以后就永远不行，因为学习或积累事实上从任何时候都可以开始，怕只怕时间再次过去，你自己并没有发生任何变化。
+Có thể lúc hết phổ thông chưa được, hoặc tốt nghiệp đại học vẫn chưa, nhưng không có nghĩa mãi không được. Học, tích lũy thực ra bắt đầu lúc nào cũng được. Chỉ sợ thời gian lại qua mà mình không thay đổi.
 
-从父母角度来看，“名校到底有没有用？” 同样是错误的提问。真正的问题，或者更有效的问题，可能应该是 “我们家庭的影响是否足够强？” 完全依赖外面的学校和老师教育自家孩子，本身就是家庭影响几近于零的表现。教育这个东西，如果真的存在，最关键的部分都是无法外包的，只能亲力亲为。家庭教育做好了，外面的学校和老师都只不过是辅助工具，但，全靠外面的学校和老师的话，也只能焦虑 “名校有没有用” 了 —— 可这个问题到底是什么样的答案，在这种情况下，跟自己又有什么真正的关系呢？
+Từ phía cha mẹ, hỏi trường danh tiếng có ích không cũng sai. Câu hỏi thật, hay hữu ích hơn, có lẽ là “Ảnh hưởng gia đình đủ mạnh chưa?” Hoàn toàn dựa vào trường, giáo viên bên ngoài để dạy con tự nó biểu hiện ảnh hưởng gia đình gần bằng không, theo tác giả. Nếu giáo dục thực sự tồn tại, phần then chốt nhất không thể thuê ngoài, chỉ có thể tự làm. Gia đình làm tốt thì trường, giáo viên là công cụ hỗ trợ; hoàn toàn dựa vào bên ngoài thì chỉ còn lo trường danh tiếng có ích không. Nhưng trong trường hợp ấy, dù đáp án thế nào, thực sự còn liên quan gì đến mình?
 
-很多家长苦恼于孩子的所谓 “**叛逆**”。其实，孩子从来就没有是否叛逆这一说。根本就不是什么孩子长大了，到了所谓的 “叛逆期”…… 别说这个 “叛逆期” 莫名其妙的名词了， 孩子所谓的**叛逆**，只不过是**外界影响**彻底打败了**家庭影响**这个隐含事实的表面展现而已。如果，家庭影响更强更大，外面影响发挥不了太大的作用，孩子为什么要叛逆呢？有什么好处呢？动机又何在？
+Nhiều cha mẹ khổ vì cái gọi là **con nổi loạn**. Theo tác giả, không hề có chuyện trẻ có nổi loạn hay không; không phải lớn lên đến “giai đoạn nổi loạn”. Ông coi đó là tên gọi khó hiểu, còn sự nổi loạn chỉ là biểu hiện bề mặt của việc **ảnh hưởng bên ngoài** đánh bại hoàn toàn **ảnh hưởng gia đình**. Nếu gia đình mạnh hơn, bên ngoài không tác động lớn, trẻ nổi loạn để làm gì, có lợi gì, động cơ ở đâu?
 
-换个更简单的说法，如果你作为父母能够赢得孩子的尊重，你就没机会看到自家孩子叛逆，就这么简单，还是同样的话。如何赢得尊重？—— 全都是一样的啊！想要获得你想要的东西，最安全的方法是努力配得上它。
+Nói đơn giản hơn, theo ông, nếu cha mẹ giành được sự tôn trọng của con thì sẽ không có cơ hội thấy con nổi loạn. Vẫn cùng lời ấy: muốn được tôn trọng bằng cách nào? Muốn có điều mình muốn, cách an toàn nhất là cố xứng đáng với nó.
 
-## 4. 找回自我
+::: info Ghi chú biên tập về trường học và gia đình
+Các mô tả bao trùm sinh viên, hành vi ở trường “kém” hay “danh tiếng” và mức lương tối thiểu cao hơn 30% là nhận định của tác giả; bài không đưa nghiên cứu để kiểm chứng hoặc tách tác động tuyển chọn, gia đình, ngành học và nhà trường. Không dùng các đoạn này để đánh giá một sinh viên hoặc chọn trường chỉ bằng danh tiếng.
 
-一旦我们经历了整个自我训练过程，每个人都能在这个过程中一致体会的事实是：
+Câu chuyện ngủ hai giờ là mô tả trong nguyên tác, không phải lịch học nên làm theo. Các kết luận con bất đồng luôn do cha mẹ thiếu ảnh hưởng hoặc không đáng tôn trọng cũng không được bài chứng minh; không dùng chúng để quy lỗi cho trẻ hoặc cha mẹ. Giữ giao tiếp, sự tôn trọng hai chiều và phản hồi phù hợp là định hướng biên tập cho người học, gia đình Việt Nam.
+:::
 
-> **一切良好自我训练所必需的特征，其实都是我们小时候曾经具备的**：
+## 4. Tìm lại chính mình
+
+Khi trải qua toàn bộ tự luyện, theo tác giả, điều mỗi người đều có thể cảm nhận là:
+
+> **Mọi đặc điểm cần cho tự luyện tốt đều từng có ở ta lúc nhỏ**:
 >
-> > * 把一切都当做生存**必需对待** —— 这事关大脑设定的**安全阈值**，不只是**好奇心**那么简单；
-> > * 无论什么都肯**生学硬练**，无限重复，不怕枯燥；
-> > * 无论什么都敢于**尝试**，从来没有想过自己竟然学不会竟然做不好；
-> > * 特别容易**专注**；主要原因来自于压根就不在乎别人的看法；
-> > * 痴迷于**进步**而不是痴迷于某个具象的事物或者与他人比较；
-> > * 对自己格外**诚实**，不可能糊弄自己；
-> > * 一切的学习都既**主动**又**不可阻挡**；
+> > * Xem mọi thứ như **điều cần để sống**, liên quan **ngưỡng an toàn** của não, không chỉ tò mò.
+> > * Việc gì cũng chịu **kiên trì thử và luyện**, lặp vô hạn, không sợ chán.
+> > * Việc gì cũng dám **thử**, chưa từng nghĩ mình không học được hoặc không làm tốt được.
+> > * Rất dễ **tập trung**, chủ yếu vì không bận tâm người khác nghĩ gì.
+> > * Say mê **tiến bộ**, không say mê một sự vật cụ thể hoặc so với người khác.
+> > * Đặc biệt **thành thật** với mình, không thể tự đối phó.
+> > * Mọi việc học đều **chủ động**, **không thể ngăn**.
 > >
-> > ……
+> > …
 
-反思对比之后，我们只能慨叹，**人傻竟然都是被教出来的**…… 长达十数年的教育，虽然并非出自故意，整体上来看却一直在**毁人不倦**，多少令人无奈。
+Suy ngẫm và so lại, tác giả cảm thán **con người hóa ngốc lại đều do được dạy**. Hơn mười năm giáo dục, dù không cố ý, xét toàn thể vẫn không ngừng làm hại người, thật bất lực.
 
-我们无意反复批评学校的各种问题，也知道学校对孩子来说是一种必要的存在 —— 起码，要为他们找到一个可以安全成长的场所…… 但，与此同时，作为家长，应该了解那些问题，进而想办法发展出一套属于自己的方法论去应对那些问题。
+Ta không định phê bình mãi các vấn đề nhà trường, cũng biết trường là sự tồn tại cần thiết với trẻ, ít nhất để tìm nơi các em lớn lên an toàn. Nhưng đồng thời, cha mẹ cần hiểu vấn đề, từ đó phát triển cách riêng để ứng phó.
 
-更为重要的是，千万不能忘了自己曾经是天生的超级学习机器，天生拥有贝叶斯推理能力，大脑里的神经元之间有无限的连接可能…… 成长的关键，说一千道一万，只不过是找回当初的自己，找回学龄前的自己，毫无畏惧，勇往直前，保持天真。
-
-
+Quan trọng hơn, đừng quên mình từng là cỗ máy học siêu việt bẩm sinh, vốn có khả năng suy luận Bayes, và giữa các neuron có vô hạn khả năng kết nối, theo hình dung của tác giả. Mấu chốt trưởng thành, nói bao nhiêu đi nữa, chỉ là tìm lại mình thuở trước, mình trước tuổi đi học: không sợ hãi, tiến về trước, giữ sự hồn nhiên.

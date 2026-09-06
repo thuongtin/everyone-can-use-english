@@ -1,6 +1,6 @@
 import log from "@main/logger";
-import * as cheerio from "cheerio";
 import { WebContentsView, ipcMain } from "electron";
+import { extractYoutubeVideos, type YoutubeVideo } from "./youtube-video-parser";
 
 const logger = log.scope("providers/youtube-provider");
 
@@ -35,38 +35,11 @@ export class YoutubeProvider {
     });
   };
 
-  extractVideos = async (html: string) => {
+  extractVideos = async (html: string): Promise<YoutubeVideo[]> => {
     try {
-      const json = cheerio
-        .load(html)("script")
-        .text()
-        .match(/ytInitialData = ({.*?});/)[1];
-      const data = JSON.parse(json);
-
-      const videoContents =
-        data.contents.twoColumnBrowseResultsRenderer.tabs[1].tabRenderer.content
-          .richGridRenderer.contents;
-
-      const videoList = videoContents
-        .filter((i: any) => i.richItemRenderer)
-        .map((video: any) => {
-          const thumbnails =
-            video.richItemRenderer.content.videoRenderer.thumbnail.thumbnails;
-
-          return {
-            title:
-              video.richItemRenderer.content.videoRenderer.title.runs[0].text,
-            thumbnail: thumbnails[thumbnails.length - 1].url,
-            videoId: video.richItemRenderer.content.videoRenderer.videoId,
-            duration:
-              video.richItemRenderer.content.videoRenderer.lengthText
-                ?.simpleText,
-          };
-        });
-
-      return videoList;
-    } catch (e) {
-      logger.error(e);
+      return extractYoutubeVideos(html);
+    } catch (error) {
+      logger.warn("Failed to parse YouTube videos", error);
       return [];
     }
   };

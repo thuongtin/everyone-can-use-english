@@ -15,6 +15,12 @@ import {
   SelectItem,
   Textarea,
 } from "@renderer/components/ui";
+import {
+  isLegacyProviderModel,
+  providerSupportsOption,
+  resolveProviderSwitchBaseUrl,
+  type AiProviderId,
+} from "@/lib/ai-providers";
 
 export const ConversationFormGPT = (props: {
   conversation: Partial<ConversationType>;
@@ -22,6 +28,19 @@ export const ConversationFormGPT = (props: {
   gptProviders: any;
 }) => {
   const { form, gptProviders, conversation } = props;
+  const selectedEngine = form.watch("engine") as AiProviderId;
+  const selectedModel = form.watch("configuration.model") as string | undefined;
+  const provider = gptProviders[selectedEngine];
+  const supports = (
+    option: Parameters<typeof providerSupportsOption>[1]
+  ) => providerSupportsOption(selectedEngine, option, selectedModel, provider);
+  const modelOptions = Array.from(
+    new Set(
+      [ ...(provider?.models || []), selectedModel ].filter(
+        (model): model is string => typeof model === "string" && model.length > 0
+      )
+    )
+  );
 
   return (
     <>
@@ -33,7 +52,31 @@ export const ConversationFormGPT = (props: {
             <FormLabel>{t("models.conversation.engine")}</FormLabel>
             <Select
               disabled={Boolean(conversation?.id)}
-              onValueChange={field.onChange}
+              onValueChange={(value) => {
+                const currentProvider = form.getValues("engine");
+                const currentBaseUrl = form.getValues(
+                  "configuration.baseUrl"
+                );
+                field.onChange(value);
+                const nextProvider = gptProviders[value as AiProviderId];
+                const firstModel = nextProvider?.models?.[0];
+                form.setValue("configuration.model", firstModel || "", {
+                  shouldDirty: true,
+                  shouldValidate: true,
+                });
+                form.setValue(
+                  "configuration.baseUrl",
+                  resolveProviderSwitchBaseUrl(
+                    currentProvider,
+                    value,
+                    currentBaseUrl
+                  ),
+                  {
+                    shouldDirty: true,
+                    shouldValidate: true,
+                  }
+                );
+              }}
               value={field.value}
             >
               <FormControl>
@@ -50,7 +93,9 @@ export const ConversationFormGPT = (props: {
               </SelectContent>
             </Select>
             <FormDescription>
-              {gptProviders[form.watch("engine")]?.description}
+              {provider?.descriptionKey
+                ? t(provider.descriptionKey)
+                : t("aiEngineNotSupported")}
             </FormDescription>
             <FormMessage />
           </FormItem>
@@ -70,13 +115,13 @@ export const ConversationFormGPT = (props: {
                 </SelectTrigger>
               </FormControl>
               <SelectContent>
-                {(gptProviders[form.watch("engine")]?.models || []).map(
-                  (option: string) => (
-                    <SelectItem key={option} value={option}>
-                      {option}
-                    </SelectItem>
-                  )
-                )}
+                {modelOptions.map((option) => (
+                  <SelectItem key={option} value={option}>
+                    {isLegacyProviderModel(selectedEngine, option)
+                      ? `${option} (legacy)`
+                      : option}
+                  </SelectItem>
+                ))}
               </SelectContent>
             </Select>
             <FormMessage />
@@ -100,9 +145,7 @@ export const ConversationFormGPT = (props: {
         )}
       />
 
-      {gptProviders[form.watch("engine")]?.configurable.includes(
-        "temperature"
-      ) && (
+      {supports("temperature") && (
         <FormField
           control={form.control}
           name="configuration.temperature"
@@ -130,9 +173,7 @@ export const ConversationFormGPT = (props: {
         />
       )}
 
-      {gptProviders[form.watch("engine")]?.configurable.includes(
-        "maxTokens"
-      ) && (
+      {supports("maxTokens") && (
         <FormField
           control={form.control}
           name="configuration.maxTokens"
@@ -157,9 +198,7 @@ export const ConversationFormGPT = (props: {
         />
       )}
 
-      {gptProviders[form.watch("engine")]?.configurable.includes(
-        "presencePenalty"
-      ) && (
+      {supports("presencePenalty") && (
         <FormField
           control={form.control}
           name="configuration.presencePenalty"
@@ -186,9 +225,7 @@ export const ConversationFormGPT = (props: {
         />
       )}
 
-      {gptProviders[form.watch("engine")]?.configurable.includes(
-        "frequencyPenalty"
-      ) && (
+      {supports("frequencyPenalty") && (
         <FormField
           control={form.control}
           name="configuration.frequencyPenalty"
@@ -215,9 +252,7 @@ export const ConversationFormGPT = (props: {
         />
       )}
 
-      {gptProviders[form.watch("engine")]?.configurable.includes(
-        "numberOfChoices"
-      ) && (
+      {supports("numberOfChoices") && (
         <FormField
           control={form.control}
           name="configuration.numberOfChoices"
@@ -270,7 +305,7 @@ export const ConversationFormGPT = (props: {
         )}
       />
 
-      {gptProviders[form.watch("engine")]?.configurable.includes("baseUrl") && (
+      {supports("baseUrl") && (
         <FormField
           control={form.control}
           name="configuration.baseUrl"

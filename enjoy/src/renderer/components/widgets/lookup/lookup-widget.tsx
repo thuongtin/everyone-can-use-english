@@ -1,3 +1,4 @@
+import { isBilingualDirection } from "@/constants/bilingual-dictionaries";
 import { useEffect, useContext, useState, useRef } from "react";
 import {
   AppSettingsProviderContext,
@@ -18,7 +19,7 @@ import {
   DictLookupResult,
   DictSelect,
   AiLookupResult,
-  CamdictLookupResult,
+  BilingualLookupResult,
   scoreColor,
   PronunciationAssessmentScoreDetail,
   PronunciationAssessmentFulltextResult,
@@ -76,8 +77,8 @@ export const LookupWidget = () => {
         .trim()
         .replace(/[.,/#!$%^&*;:{}=\-_`~()]+$/, "");
 
-      // can only lookup single word
-      if (!word || word.indexOf(" ") > -1) return;
+      // Accept phrases and Vietnamese multi-syllable words.
+      if (!word || word.length > 200) return;
     }
 
     if (!context) {
@@ -130,45 +131,46 @@ export const LookupWidget = () => {
         }}
       />
       <PopoverContent
-        className="w-full p-0 z-50"
+        className="w-[min(24rem,calc(100vw-32px))] max-w-[calc(100vw-32px)] max-h-[var(--radix-popover-content-available-height)] overflow-hidden p-0 z-50"
+        collisionPadding={{ top: 40, right: 16, bottom: 16, left: 16 }}
         updatePositionStrategy="always"
       >
         {selected?.word && (
-          <ScrollArea>
-            <div className="w-96 h-96 flex flex-col">
-              <div className="p-2 border-b space-y-2">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center">
-                    {history.length > 1 && (
-                      <div className="mr-1 flex items-center">
-                        <Button
-                          variant="ghost"
-                          className="w-6 h-6 p-0"
-                          onClick={handleViewFirst}
-                        >
-                          <ChevronFirst />
-                        </Button>
-                        <Button
-                          variant="ghost"
-                          className="w-6 h-6 p-0"
-                          onClick={handleViewLast}
-                        >
-                          <ChevronLeft />
-                        </Button>
-                      </div>
-                    )}
-                    <div className="font-bold">{current}</div>
-                  </div>
-                  <div className="w-40">
-                    <DictSelect />
-                  </div>
+          <div className="flex max-h-[var(--radix-popover-content-available-height)] min-h-0 flex-col">
+            <div className="shrink-0 p-2 border-b space-y-2">
+              <div className="flex justify-between items-center gap-2">
+                <div className="flex min-w-0 items-center">
+                  {history.length > 1 && (
+                    <div className="mr-1 flex shrink-0 items-center">
+                      <Button
+                        variant="ghost"
+                        className="w-6 h-6 p-0"
+                        onClick={handleViewFirst}
+                      >
+                        <ChevronFirst />
+                      </Button>
+                      <Button
+                        variant="ghost"
+                        className="w-6 h-6 p-0"
+                        onClick={handleViewLast}
+                      >
+                        <ChevronLeft />
+                      </Button>
+                    </div>
+                  )}
+                  <div className="truncate font-bold">{current}</div>
                 </div>
-
-                <div className="">
-                  <VocabularyPronunciationAssessment word={current} />
+                <div className="w-40 shrink-0">
+                  <DictSelect />
                 </div>
               </div>
-              <div className="p-2 pr-1 flex-1">
+
+              <div className="">
+                <VocabularyPronunciationAssessment word={current} />
+              </div>
+            </div>
+            <ScrollArea className="min-h-0 flex-1">
+              <div className="p-2 pr-1">
                 {currentDictValue === "ai" ? (
                   <AiLookupResult
                     word={selected?.word}
@@ -176,14 +178,14 @@ export const LookupWidget = () => {
                     sourceId={selected?.sourceId}
                     sourceType={selected?.sourceType}
                   />
-                ) : currentDictValue === "cambridge" ? (
-                  <CamdictLookupResult word={selected?.word} />
+                ) : isBilingualDirection(currentDictValue) ? (
+                  <BilingualLookupResult word={current} direction={currentDictValue} />
                 ) : (
                   <DictLookupResult word={current} onJump={handleLookup} />
                 )}
               </div>
-            </div>
-          </ScrollArea>
+            </ScrollArea>
+          </div>
         )}
       </PopoverContent>
     </Popover>

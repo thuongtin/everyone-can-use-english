@@ -29,7 +29,14 @@ export default () => {
   const [searchParams] = useSearchParams();
   const { addDblistener, removeDbListener } = useContext(DbProviderContext);
   const { EnjoyApp, webApi } = useContext(AppSettingsProviderContext);
-  const { currentGptEngine } = useContext(AISettingsProviderContext);
+  const { currentGptEngine, ttsConfig } = useContext(AISettingsProviderContext);
+  const getDefaultTtsConfig = () => ({
+    engine: "enjoyai",
+    model: "openai/tts-1",
+    voice: "alloy",
+    ...(ttsConfig || {}),
+  });
+  const defaultTtsConfig = getDefaultTtsConfig();
   const [conversations, dispatchConversations] = useReducer(
     conversationsReducer,
     []
@@ -42,14 +49,11 @@ export default () => {
     ttsPreset: {
       key: "tts",
       name: "TTS",
-      engine: currentGptEngine?.name,
+      engine: defaultTtsConfig.engine,
       configuration: {
         type: "tts",
         tts: {
-          engine: currentGptEngine?.name,
-          model:
-            currentGptEngine?.name === "enjoyai" ? "openai/tts-1" : "tts-1",
-          voice: "alloy",
+          ...defaultTtsConfig,
         },
       },
     },
@@ -132,6 +136,7 @@ export default () => {
 
   const preparePresets = async () => {
     let presets = GPT_PRESETS;
+    const savedTtsConfig = getDefaultTtsConfig();
     let defaultGptPreset = {
       key: "custom",
       engine: currentGptEngine.name,
@@ -141,21 +146,18 @@ export default () => {
         engine: currentGptEngine.name,
         model: currentGptEngine.models.default,
         tts: {
-          engine: currentGptEngine.name,
-          model: currentGptEngine.name === "enjoyai" ? "openai/tts-1" : "tts-1",
+          ...savedTtsConfig,
         },
       },
     };
     let defaultTtsPreset = {
       key: "tts",
       name: "TTS",
-      engine: currentGptEngine.name,
+      engine: savedTtsConfig.engine,
       configuration: {
         type: "tts",
         tts: {
-          engine: currentGptEngine.name,
-          model: currentGptEngine.name === "enjoyai" ? "openai/tts-1" : "tts-1",
-          voice: "alloy",
+          ...savedTtsConfig,
         },
       },
     };
@@ -169,17 +171,35 @@ export default () => {
         presets = [...gptPresets];
       }
 
-      if (defaultGpt.engine === currentGptEngine.name) {
+      if (defaultGpt?.engine === currentGptEngine.name) {
         defaultGpt.key = "custom";
         defaultGpt.name = t("custom");
+        defaultGpt.configuration ||= {};
         defaultGpt.configuration.model = currentGptEngine.models.default;
-        defaultGpt.configuration.tts.engine = currentGptEngine.name;
+        defaultGpt.configuration.tts = {
+          ...defaultGpt.configuration.tts,
+          ...savedTtsConfig,
+        };
 
         defaultGptPreset = defaultGpt;
       }
 
-      if (defaultTts.engine === currentGptEngine.name) {
-        defaultTtsPreset = defaultTts;
+      if (
+        defaultTts?.engine === savedTtsConfig.engine ||
+        defaultTts?.configuration?.tts?.engine === savedTtsConfig.engine
+      ) {
+        defaultTtsPreset = {
+          ...defaultTts,
+          engine: savedTtsConfig.engine,
+          configuration: {
+            ...defaultTts.configuration,
+            type: "tts",
+            tts: {
+              ...defaultTts.configuration?.tts,
+              ...savedTtsConfig,
+            },
+          },
+        };
       }
     } catch (error) {
       console.error(error);
@@ -193,9 +213,7 @@ export default () => {
           model: currentGptEngine.models.default,
           tts: {
             ...preset.configuration.tts,
-            engine: currentGptEngine.name,
-            model:
-              currentGptEngine.name === "enjoyai" ? "openai/tts-1" : "tts-1",
+            ...savedTtsConfig,
           },
         },
       })
@@ -210,7 +228,7 @@ export default () => {
 
   useEffect(() => {
     preparePresets();
-  }, [currentGptEngine]);
+  }, [currentGptEngine, ttsConfig]);
 
   return (
     <div className="min-h-full px-4 py-6 lg:px-8 max-w-5xl mx-auto">

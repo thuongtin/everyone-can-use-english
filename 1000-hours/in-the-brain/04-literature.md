@@ -1,15 +1,19 @@
-# 4. 一切都是语文课
+# 4. Mọi việc đều như giờ ngôn ngữ
 
-人类的高速发展，建立在文字基础之上。没有文字，人类就只能像其它动物那样，靠遗传和变异在这个世界里缓慢且有随机地发展。有了文字之后，人类不仅可以即时沟通，还可以跨区域、跨时代地沟通，并且还能进行越来越复杂的记录、传播、思考、沟通……
+Tác giả cho rằng sự phát triển nhanh của con người được xây trên chữ viết. Nếu không có chữ viết, ông nói con người chỉ có thể phát triển chậm và ngẫu nhiên như các loài khác, dựa vào di truyền và biến dị. Có chữ viết, con người không chỉ giao tiếp ngay lúc đó mà còn vượt vùng địa lý, vượt thời đại, thực hiện việc ghi chép, truyền bá, suy nghĩ và trao đổi ngày càng phức tạp.
 
-毫不夸张地讲，一切的文明，都建立在文字之上。
+Theo tác giả, không hề quá lời khi nói toàn bộ nền văn minh đều được xây dựng trên chữ viết.
 
-每一次书写工具的改良，每一次文字的标准化，每一次传播工具的变革，都能同时引发整个世界巨大的进步。擅用文字的人越多，文字的传播就越多、思想的碰撞就越多，创新就越多……  根据梅特卡夫定律，一个网络的价值与该网络中的节点数量的平方成正比。这就是人类的发展曲线越来越陡峭的最根本原因。
+Ông cho rằng mỗi lần cải tiến công cụ viết, chuẩn hóa chữ viết hoặc thay đổi phương tiện truyền bá đều có thể đồng thời tạo tiến bộ lớn cho thế giới. Càng nhiều người sử dụng chữ viết thành thạo, truyền bá càng rộng, ý tưởng gặp nhau càng nhiều và đổi mới càng nhiều. Tác giả dẫn định luật Metcalfe, theo đó giá trị mạng tỷ lệ với bình phương số nút, rồi xem đó là nguyên nhân căn bản nhất khiến đường phát triển của nhân loại ngày càng dốc. Đây là cách tác giả vận dụng một mô hình mạng để giải thích lịch sử, không phải phép chứng minh định lượng toàn bộ tiến bộ xã hội.
 
-现在的人类不仅拥有语言文字，对其还有更为精确的划分：灵活但有些含混的**自然语言**，以及简单精确且毫无歧义的**人工语言**，在科学技术领域，比如，数学、物理、化学，逻辑、编程，人们所使用的都是人工语言。
+Con người ngày nay không chỉ có ngôn ngữ và chữ viết mà còn phân loại: **ngôn ngữ tự nhiên** linh hoạt nhưng có thể mơ hồ, và **ngôn ngữ nhân tạo** được tác giả mô tả là đơn giản, chính xác, không có nhập nhằng. Trong khoa học và kỹ thuật, như toán, vật lý, hóa học, logic và lập trình, ông nói mọi người dùng ngôn ngữ nhân tạo. Cần hiểu đây là sự đối chiếu khái quát của nguyên tác, không có nghĩa mọi văn bản hoặc hệ ký hiệu trong những lĩnh vực ấy đều hoàn toàn không mơ hồ.
 
-曾经，有些人理解有误，非得把知识分为文科理科，好像它们是截然不同的两类东西，甚至有可能相互对立一样。然而对大脑来说，一切都是语文课，若是非说有什么差异的话，无非是一个可能使用自然语言更多，另外一个使用人工语言更多 —— 可问题在于，完全只用自然语言就完不成精巧复杂的工作，完全使用人工语言就无法更大面积传播。
+Tác giả phê bình việc chia kiến thức thành khối xã hội và khối tự nhiên như hai loại hoàn toàn khác nhau, thậm chí đối lập. Ông cho rằng với não, mọi việc đều là giờ ngôn ngữ; nếu phải chỉ khác biệt, chỉ là bên dùng nhiều ngôn ngữ tự nhiên hơn, bên dùng nhiều ngôn ngữ nhân tạo hơn. Theo ông, chỉ dùng ngôn ngữ tự nhiên thì không hoàn thành công việc tinh vi, phức tạp, còn chỉ dùng ngôn ngữ nhân tạo thì không thể truyền bá rộng.
 
-所以，无论学什么知识，学什么技能，对大脑来说，其实都是语文课 —— 哪怕那些看起来完全属于体力范畴的技能，本质上也都是如此…… 大脑要理解，要总结，要归纳，要复习，要检索，要调用，要反思，更重要的是，总是要沟通 —— 这些都无一例外地依赖语言。
+Vì thế, tác giả kết luận học bất kỳ kiến thức hay kỹ năng nào cũng là giờ ngôn ngữ đối với não, kể cả những kỹ năng trông hoàn toàn thuộc thể lực. Não cần hiểu, tổng kết, quy nạp, ôn lại, tìm lại, gọi dùng, suy ngẫm và quan trọng hơn là giao tiếp; ông khẳng định không hoạt động nào trong số đó ngoại lệ khỏi sự phụ thuộc vào ngôn ngữ. Đây là luận điểm của nguyên tác, không phải định nghĩa cho mọi hình thức tư duy hoặc học vận động.
 
-另外，从这个意义上来看，人类中有一部分早就把自己打造成了 “双语使用者”，他们可以同时熟练使用自然语言和人工语言。
+Theo nghĩa ấy, tác giả xem một bộ phận con người từ lâu đã tự trở thành “người dùng hai ngôn ngữ”: thành thạo cả ngôn ngữ tự nhiên lẫn ngôn ngữ nhân tạo.
+
+::: info Ghi chú biên tập cho bản tiếng Việt
+“Mọi việc đều là giờ ngôn ngữ” là phép ví và luận điểm của tác giả. Nó không có nghĩa mọi năng lực tư duy đều phụ thuộc hoàn toàn vào ngôn ngữ. [Varley và cộng sự, *Agrammatic but numerate*](https://eprints.whiterose.ac.uk/id/eprint/337/1/varleyra1.pdf) ghi nhận khả năng tính toán được bảo tồn ở những người có suy giảm nặng về ngữ pháp ngôn ngữ.
+:::

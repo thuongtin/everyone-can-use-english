@@ -1,75 +1,72 @@
-# Nuxt 3 Minimal Starter
+# Portal Enjoy bản Việt
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Đây là landing page Nuxt 3 cho bản Việt hóa của Enjoy. Portal giới thiệu cách học, học liệu tiếng Anh và đường dẫn đến mã nguồn trong fork đã xác minh:
 
-## Setup
+`https://github.com/thuongtin/everyone-can-use-english`
 
-Make sure to install the dependencies:
+## Cấu hình đường dẫn
 
-```bash
-# npm
-npm install
+Các CTA đọc cùng một runtime public config:
 
-# pnpm
-pnpm install
+- `NUXT_PUBLIC_DOCS_URL`: trang hướng dẫn học.
+- `NUXT_PUBLIC_DOWNLOAD_URL`: trang hướng dẫn tải và cài Enjoy App.
+- `NUXT_PUBLIC_REPOSITORY_URL`: mã nguồn bản phân phối.
 
-# yarn
-yarn install
+Nuxt tự ánh xạ ba biến trên vào `runtimeConfig.public.docsUrl`, `runtimeConfig.public.downloadUrl` và `runtimeConfig.public.repositoryUrl`. Mỗi giá trị phải là URL `http` hoặc `https` không chứa thông tin đăng nhập. Khi biến bị bỏ trống hoặc không hợp lệ, portal dùng các trang nguồn trong fork:
 
-# bun
-bun install
+- Hướng dẫn: `README.md` ở thư mục gốc của fork.
+- Tải và cài đặt: `1000-hours/enjoy-app/install.md` trong fork.
+- Mã nguồn: trang gốc của fork.
+
+## Dependency cho static build
+
+Root `package.json` ghim `fdir` exact ở bản `6.4.4` qua `resolutions`. Bản này chứa upstream fix cho lỗi recursive symlink crawl mà Nuxt và `unimport` có thể gặp khi generate trong workspace hoặc thư mục tạm. Chi tiết release và source fix được ghi tại https://github.com/thecodrr/fdir/releases/tag/v6.4.4.
+
+Ví dụ cấu hình local trước khi generate:
+
+```sh
+export NUXT_PUBLIC_DOCS_URL="http://127.0.0.1:3000/huong-dan"
+export NUXT_PUBLIC_DOWNLOAD_URL="http://127.0.0.1:3000/tai-app"
+export NUXT_PUBLIC_REPOSITORY_URL="http://127.0.0.1:3000/ma-nguon"
+export NUXT_SITE_URL="http://127.0.0.1:3000"
 ```
 
-## Development Server
+`NUXT_SITE_URL` là tùy chọn. Chỉ khi biến này là URL `http` hoặc `https` hợp lệ thì cấu hình SEO mới có canonical site URL. Không cần đặt biến này cho bản preview local nếu không muốn sinh canonical.
 
-Start the development server on `http://localhost:3000`:
+Sitemap chỉ được bật khi `NUXT_SITE_URL` là URL `http` hoặc `https` hợp lệ. Khi biến này bỏ trống hoặc không hợp lệ, portal tắt sitemap để generate không yêu cầu một domain canonical giả.
 
-```bash
-# npm
-npm run dev
+## Phát triển
 
-# pnpm
-pnpm run dev
+Từ thư mục gốc của repo, dùng Node.js 24 và chạy:
 
-# yarn
-yarn dev
-
-# bun
-bun run dev
+```sh
+node 1000h-portal/node_modules/nuxt/bin/nuxt.mjs dev 1000h-portal --host 127.0.0.1
 ```
 
-## Production
+Hoặc từ thư mục portal:
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+```sh
+cd 1000h-portal
+node node_modules/nuxt/bin/nuxt.mjs dev --host 127.0.0.1
 ```
 
-Locally preview production build:
+Portal dev server mặc định dùng địa chỉ local `http://127.0.0.1:3000`.
 
-```bash
-# npm
-npm run preview
+## Generate bản static
 
-# pnpm
-pnpm run preview
+Lệnh generate được chạy từ thư mục gốc:
 
-# yarn
-yarn preview
-
-# bun
-bun run preview
+```sh
+node 1000h-portal/node_modules/nuxt/bin/nuxt.mjs generate 1000h-portal
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Nuxt tạo site static trong `1000h-portal/.output/public`. Các giá trị `NUXT_PUBLIC_*` cần có trước lệnh generate vì chúng được đưa vào runtime config của bản build. Có thể phục vụ thư mục output bằng static server hoặc adapter đã cấu hình cho môi trường triển khai.
+
+Để xem output local sau khi generate:
+
+```sh
+cd 1000h-portal
+node node_modules/nuxt/bin/nuxt.mjs preview --host 127.0.0.1
+```
+
+Địa chỉ preview thường là `http://127.0.0.1:3000`. Domain triển khai không được giả định trong repo này.

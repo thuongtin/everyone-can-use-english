@@ -1,28 +1,26 @@
-# 第三章 语音
+# Chương 3. Phát âm
 
-## 1. 发音很重要，但显然不是最重要的
+## 1. Phát âm quan trọng, nhưng rõ ràng không phải quan trọng nhất
 
-2009 年 4 月 17 日，大卫莱特曼（David Letterman）邀请了一位嘉宾，黄西（Joe Wong）。现在在优酷上搜索一下 “黄西” 就能能找到很多视频。
+Ngày 17 tháng 4 năm 2009, David Letterman mời một vị khách: Hoàng Tây, Joe Wong. Bây giờ, tìm “Joe Wong” trên Youku là có thể thấy nhiều video.
 
-黄西非常消瘦，戴着副眼镜，一脸木纳。可他一开口只一句话全场已经笑翻。接下来的六分钟里，一个又一个的段子（翻译成中文就失去了味道的美式笑话）当在场观众笑得东倒西歪，数次掌声雷鸣。到了最后，连他的沉默都成了笑料 —— 这可是大师级的表现。这位一炮而红的黄西，1970 年出生于吉林省白山市；本科就读吉林大学化学系，1994 年赴美留学，1999 年获得莱斯大学生化博士学位。
+Hoàng Tây rất gầy, đeo kính, vẻ mặt ngây ngô. Nhưng vừa mở miệng nói một câu, cả khán phòng đã cười nghiêng ngả. Trong sáu phút tiếp theo, hết chuyện cười này đến chuyện khác, những câu đùa kiểu Mỹ dịch sang tiếng Trung sẽ mất vị, khiến khán giả cười ngả nghiêng, nhiều lần vỗ tay như sấm. Đến cuối, ngay cả sự im lặng của anh cũng thành chất liệu gây cười: đúng là trình diễn bậc thầy. Hoàng Tây nổi tiếng chỉ sau một lần xuất hiện ấy sinh năm 1970 ở Bạch Sơn, tỉnh Cát Lâm; học đại học ngành hóa tại Đại học Cát Lâm, sang Mỹ du học năm 1994 và nhận bằng tiến sĩ hóa sinh của Đại học Rice năm 1999.
 
-黄西讲着一口浓重中国口音的英语征服了美国的观众。这在绝大多数国内正在拼命学习英语的学生来说是件匪夷所思的事情。从小学起，无论是老师还是学生，主流的看法就是 “发音一定要标准”。无数的老师以自己被认为能够讲一口 “标准” 的美音或者英音而自豪、而被羡慕。学生也好、老师也罢，常常相互争论应该学习 “美音” 还是 “英音”，甚至为此面红耳赤。
+Hoàng Tây chinh phục khán giả Mỹ bằng tiếng Anh mang giọng Trung Quốc rất đậm. Với tuyệt đại đa số học sinh trong nước đang cố sống cố chết học tiếng Anh, đây là chuyện khó tin. Từ tiểu học, quan niệm chủ đạo của cả giáo viên và học sinh là “phát âm nhất định phải chuẩn”. Vô số giáo viên tự hào và được ngưỡng mộ vì được cho là nói giọng Mỹ hoặc Anh “chuẩn”. Cả học sinh lẫn giáo viên thường tranh luận nên học “giọng Mỹ” hay “giọng Anh”, thậm chí đỏ mặt tía tai.
 
-中国学生往往不是不会说英文，也不是不愿说英文，更不是不能说英文，基本上都是不敢说英文。为什么不敢呢？很多原因。其中有一个是最普遍的，害怕自己的发音不标准。可是第二语言习得者发音不准不是很正常的事情么？就算是母语，我们都是花了很长时间才可以做到基本上说清楚的。当你能够用母语清楚地表达自己的时候，多大了？那凭什么一个人可以从一开始就能用第二语言做到清楚准确表达呢？并且还要 “发音标准”？
+Học sinh Trung Quốc thường không phải không biết, không muốn hay không thể nói tiếng Anh, mà về cơ bản là không dám. Vì sao không dám? Có nhiều nguyên nhân. Một nguyên nhân phổ biến nhất là sợ phát âm không chuẩn. Nhưng người học ngôn ngữ thứ hai phát âm chưa chuẩn chẳng phải rất bình thường sao? Ngay cả tiếng mẹ đẻ, chúng ta cũng mất rất lâu mới nói cơ bản rõ ràng. Bạn bao nhiêu tuổi khi diễn đạt rõ được bằng tiếng mẹ đẻ? Vậy dựa vào đâu một người ngay từ đầu đã phải diễn đạt rõ, đúng bằng ngôn ngữ thứ hai, lại còn “phát âm chuẩn”?
 
-不妨试一下，以下十个中文词汇，能够读得标准的有多少？
+Thử xem, trong mười từ tiếng Trung sau, bạn đọc chuẩn được bao nhiêu? Bản dịch dùng phiên âm để không để lại chữ Hán chưa được xử lý: *biāozhì, fēiwén, jídù, qiánlì, gòudàng, wèijiè, liánlěi, bēibǐ, qíngbùzìjīn, réncáijǐjǐ*.[^1]
 
-标识、绯闻、嫉妒、潜力、勾当、慰藉、连累、卑鄙、情不自禁、人才济济[^1]
+Hãy mở mắt nhìn thế giới xung quanh. Thực ra, tuyệt đại đa số người dùng tiếng mẹ đẻ cũng phát âm không chuẩn. Nếu không tin, hãy xem chính mình trước, rồi nhìn quanh có bao nhiêu người không phân biệt âm không uốn lưỡi với âm uốn lưỡi, bao nhiêu người không phân biệt âm mũi trước và sau? Ngay cả ở Bắc Kinh, được gọi là trái tim tổ quốc, nơi tiếng Bắc Kinh được cho là cơ sở “phát âm chuẩn” tiếng Trung, mỗi ngày bạn vẫn nghe đủ loại giọng. Ở Trung Quốc, rốt cuộc bao nhiêu phần trăm nói được tiếng phổ thông chuẩn và dễ nghe? Có được 1% không? Hãy đến trường đào tạo phát thanh xem những người dẫn chương trình chuyên nghiệp, chắc chắn là người bản ngữ, phải bỏ bao nhiêu thời gian, công sức mới đạt chuẩn. Trung Quốc như vậy thì nước ngoài cũng không khác quá nhiều. Ở các nước nói tiếng Anh, tương tự, chưa đến 1% có thể nói chuẩn và dễ nghe một giọng cụ thể nào đó.
 
-睁开眼睛看看我们身边的世界吧。事实上，绝大多数母语使用者的发音都并不标准，不信的话，你可以先审视一下你自己，然后再看看身边有多少人平卷舌不分？多少人前鼻音后鼻音不分？即便你身处北京（据说是祖国的心脏，中文的 “标准发音” 据说以北京话为准），你每天还是可以听到各式各样的口音。在我们国家，究竟有多少比例的人能够讲一口标准且悦耳的普通话？有 1%么？去广播学院看看吧，那些专业主持人（毫无疑问都是母语使用者）需要花费多大的时间精力才能把自己训练到达标的地步？中国如此，外国在这方面也不应该有太大的差别。在英语国家，同样也只有 1%不到的人能够讲一口标准且悦耳的某种特定腔调。
+Mọi ngôn ngữ trên thế giới đều vậy, ngôn ngữ nào cũng có nhiều giọng. Tiếng Anh có lẽ là ngôn ngữ nhiều giọng nhất Trái Đất. Ở Mỹ, giọng Nam California và Bắc California đã rất khác, đại khái như khác biệt tiếng Trung giữa người Sơn Đông và Sơn Tây. Phát âm người New York và Detroit đương nhiên cũng rất khác. Ở London, khác biệt giữa phía đông và phía nam đã rõ. Chưa kể “giọng Scotland”, “giọng Canada”, “giọng Australia”, “giọng New Zealand”, “giọng Ấn Độ”…
 
-全世界所有的语言都是如此，每种语言都有各种各样的口音。英语也许是地球上口音最多的语言。在美国，南加利福尼亚和北加利福尼亚的口音就已经非常不同，大 抵上相当于在中国山东人之间山西人讲中文的差异。纽约人和底特律人的发音当然也非常不一样。在伦敦，东部和南部的口音差异就已经非常明显。更不消说还有 “苏格兰口音”、“加拿大口音”、“澳大利亚口音”、“新西兰口音”、“印度口音”……
-
-Paul Meier（paulmeier.com）是享誉全球的语音培训专家，很多到好莱坞打天下的演员都要求助于他，经由他的训练把自己的 “外地口音消除”，说一口 “地道” 的美式英语。他的学生包括（这里所罗列的只是其中的一小部分）：
+Paul Meier (paulmeier.com) là chuyên gia luyện giọng nổi tiếng toàn cầu. Nhiều diễn viên muốn gây dựng sự nghiệp ở Hollywood phải nhờ ông huấn luyện để “loại bỏ giọng địa phương”, nói tiếng Anh Mỹ “tự nhiên”. Học viên của ông gồm những người sau, chỉ là một phần nhỏ:
 
 John Ales, Jonathan Brandis, A.J. Buckley,Jewel Kilcher, Jim Caviezel, Simon Baker Denny, Peter Coyote, Stewart Finlay-McLennan, Louise Fletcher, Bill Irwin, Gabrielle Fitzpatrick, Diana Hardcastle, Tom Hulce, Kris Kristofferson, Elizabeth Lackey, Tobey Maguire, Stephen Mailer, Terrence Mann, Callum Keith Rennie, Jonathan Rhys Meyers, Kim Myers, Mark Ruffalo, Skeet Ulrich, Celia Weston, David Wenham, Valerie Wildman, Peter Wingfield, Tom Wilkinson, Jeffrey Wright…
 
-在 Paul Meier 的网站上，有一个[页面](http://www.paulmeier.com/booklets.html)，其中有各种各样口音的英语方言示范，包括：
+Trên website của Paul Meier có một [trang](http://www.paulmeier.com/booklets.html) minh họa nhiều phương ngữ, giọng tiếng Anh, gồm:
 
 - Cockney
 - Hampshire
@@ -37,259 +35,287 @@ John Ales, Jonathan Brandis, A.J. Buckley,Jewel Kilcher, Jim Caviezel, Simon Bak
 - General New York
 - South Boston…
 
-几乎其中的每一种都不是在中国大陆多年只习惯 “某种发音” 的学生可以听懂的。而在[这个页面](http://alt-usage-english.org/audio_archive.shtml)上也可以找多种方言的语音示范，读者也不妨去仔细听听。然后再仔细想想，有必要一定 “标准” 么？就算真的有必要，又应该使用哪一个 “标准” 呢？
+Gần như mỗi giọng trong đó đều khiến những học sinh ở Trung Quốc đại lục nhiều năm chỉ quen “một kiểu phát âm” không nghe hiểu. Trên [trang này](http://alt-usage-english.org/audio_archive.shtml) cũng có nhiều mẫu phương ngữ; bạn đọc nên nghe kỹ. Rồi nghĩ kỹ: có nhất thiết phải “chuẩn” không? Dù thật sự cần, nên dùng “chuẩn” nào?
 
-显然会有很多人不同意 “发音其实没那么重要” 的观点，但这并不妨碍这个观点的正确性及其重要意义。英语课堂上，老师过分强调 “标准发音”，甚至不惜嘲弄一些 “典型”，其实是在扼杀学生进步的可能，尽管这并非那些老师的本意。首先，所谓 “标准发音” 可能并不存在。每个人的声线、音色都各不相同，怎么可能 “一致地标准”？尤其又是在使用外语的情况下。其次，又因为英语本身是世界上 “口音” 最多的语言（没有之一），如果发音不 “标准” 就不可以说英语的话，那爱尔兰人、加拿大人、印度人都不要讲英语了 —— 因为他们用的既不是 “标准美音”，也不是 “标准英音”。
+Rõ ràng nhiều người sẽ không đồng ý rằng “phát âm thực ra không quan trọng đến thế”, nhưng điều đó không cản trở tính đúng đắn và ý nghĩa của quan điểm này. Trong lớp tiếng Anh, giáo viên quá nhấn mạnh “phát âm chuẩn”, thậm chí chế giễu vài trường hợp “điển hình”, thực ra đang bóp chết khả năng tiến bộ của học sinh, dù đó không phải ý định ban đầu. Trước hết, cái gọi là “phát âm chuẩn” có thể không tồn tại. Chất giọng, âm sắc mỗi người khác nhau, làm sao “chuẩn giống nhau”, đặc biệt khi dùng ngoại ngữ? Thứ hai, vì tiếng Anh là ngôn ngữ nhiều “giọng” nhất thế giới, không phải một trong số nhiều nhất mà là nhất, nếu phát âm không “chuẩn” thì không được nói, người Ireland, Canada, Ấn Độ cũng đừng nói tiếng Anh nữa, vì họ không dùng “giọng Mỹ chuẩn” hay “giọng Anh chuẩn”.
 
-我并不是在说发音并不重要，而是在说它只不过是良好表达的众多因素之一。某种意义上，那些发音并不好（更谈不上标准）但是却可以自如表达的人更值得羡慕（比如黄西），因为他们早已经上路，而非像大多数人那样 “永远” 徘徊在起点。
+Tôi không nói phát âm không quan trọng, mà chỉ nói nó là một trong nhiều yếu tố của việc diễn đạt tốt. Theo một nghĩa nào đó, người phát âm chưa tốt, càng chưa nói đến chuẩn, nhưng diễn đạt tự nhiên còn đáng ngưỡng mộ hơn, như Hoàng Tây. Bởi họ đã lên đường, thay vì “mãi mãi” quanh quẩn ở điểm xuất phát như phần lớn mọi người.
 
-所以，作为将英语作为第二语言使用的人，完全不必因为自己的发音不标准、不好听、不清楚感到自卑，那其实是正常的、自然的、不可避免的。而语言使用，本质上以沟通为目的。要知道仅仅发音标准，并不意味着说就肯定可以有效沟通。有效沟通还需要用词、文法、逻辑、内容等等更多因素，而后面提到的所有这些因素，无一不比 “标准发音” 更重要。想像一下吧，联合国开会的时候，难道每个国家的发言人都用的是 “标准英音”？或者 “标准美音”？尽管每个国家的发言人都要用英文发言，但全都用掺杂自己特定口音，可是从未影响有效沟通。
+Vì vậy, người dùng tiếng Anh như ngôn ngữ thứ hai hoàn toàn không cần tự ti vì phát âm chưa chuẩn, chưa dễ nghe, chưa rõ. Đó thực ra là chuyện bình thường, tự nhiên, không tránh khỏi. Bản chất sử dụng ngôn ngữ là giao tiếp. Chỉ phát âm chuẩn không có nghĩa chắc chắn giao tiếp hiệu quả. Còn cần từ ngữ, ngữ pháp, logic, nội dung và nhiều yếu tố khác; tất cả những yếu tố vừa kể đều quan trọng hơn “phát âm chuẩn”. Hãy tưởng tượng khi Liên Hợp Quốc họp, chẳng lẽ đại diện nước nào cũng dùng “giọng Anh chuẩn” hoặc “giọng Mỹ chuẩn”? Dù đại diện mỗi nước đều phải phát biểu bằng tiếng Anh, ai cũng pha giọng riêng, nhưng chưa bao giờ điều đó cản giao tiếp hiệu quả.
 
-作为英语使用者，也不要被英语老师所迷惑。作为老师，教育产品的一部分，他当然会强调 “正确”、“准确”、“标准” —— 无论他们自己是否真的 “正确”、“准确”、“标准”。有时候想想挺悲哀的，大部分老师不得不抬高对自己的要求，并不是出于对进步的渴望，而只不过是为了满足 “消费者” 的实际上并不合理的期望，英语老师也是人，于是其中的大多数有着与其他大多数人一样的心理局限或者说人性局限。一个人做不到的时候，就会装，一直装到自己都信了为止 ——之后就不用装了，因为已经到了 “真诚地虚伪” 的境界。那些在课堂上反复强调 “标准发音” 的老师（就算他自己竟然真的 “标准”），其实并没有认真想过他们那么做的副作用 —— 吓倒了学生，自己倒是获得了 “敬重” 或者 “敬畏”，而后这些学生一生都对说英语有着严重的心理障碍。
+Là người dùng tiếng Anh, cũng đừng bị giáo viên làm cho lẫn lộn. Là giáo viên, một phần của sản phẩm giáo dục, đương nhiên họ nhấn mạnh “đúng”, “chính xác”, “chuẩn”, bất kể bản thân có thật sự như vậy không. Đôi khi nghĩ cũng buồn: phần lớn giáo viên buộc phải nâng yêu cầu với chính mình không phải vì khao khát tiến bộ, mà chỉ để đáp ứng kỳ vọng thực ra thiếu hợp lý của “người tiêu dùng”. Giáo viên tiếng Anh cũng là người, nên đa số có giới hạn tâm lý, hoặc giới hạn con người, giống đa số người khác. Khi không làm được, người ta giả vờ, giả đến khi chính mình tin; sau đó không cần giả nữa vì đã đạt cảnh giới “đạo đức giả một cách chân thành”. Giáo viên liên tục nhấn mạnh “phát âm chuẩn”, ngay cả khi bản thân thật sự chuẩn, thực ra chưa suy nghĩ nghiêm túc về tác dụng phụ: học sinh bị dọa sợ, còn mình nhận “kính trọng” hay “kính sợ”, rồi các em mang trở ngại tâm lý nghiêm trọng với việc nói tiếng Anh suốt đời.
 
-[^1]: 标识(zhì)、绯(fēi)闻、嫉(jí)妒、潜(qián)力、勾(gòu)当、慰藉(jìe)、连累(lěi)、卑鄙(bǐ)、情不自禁(jīn)、人才济(jǐ)济(jǐ)
+[^1]: Theo thứ tự, các từ có âm cần chú ý là *zhì, fēi, jí, qián, gòu, jiè, lěi, bǐ, jīn, jǐ, jǐ*.
 
-## 2. 我们完全有能力大幅度改善发音
+> **Ghi chú biên tập cho người Việt:** Các từ tiếng Trung và pinyin ở chú thích là bài thử đọc tiếng phổ thông của nguyên tác, không phải bài kiểm tra tiếng Việt. Theo thứ tự, nghĩa của chúng là: dấu hiệu hoặc ký hiệu; tin đồn tình ái; ghen tị; tiềm năng; việc làm mờ ám; an ủi; liên lụy; đê tiện; không kìm được cảm xúc; nhiều người tài tụ hội. Pinyin “jìe” trong chú thích nguồn đặt dấu sai, dạng đúng ở đây là “jiè”. Những nhận xét về tỷ lệ dưới 1%, thứ hạng số giọng và toàn bộ giáo viên không kèm khảo sát. “Chuẩn” và “dễ hiểu” cần phân biệt với việc xóa mọi dấu vết giọng địa phương. Người Việt có thể ưu tiên nói rõ, đặt trọng âm và ngắt ý phù hợp, không phải bỏ giọng Việt mới được giao tiếp. Lời kể tại Liên Hợp Quốc cũng không có nghĩa mọi đại biểu bắt buộc dùng tiếng Anh; xem [quy định ngôn ngữ của Đại hội đồng](https://www.un.org/en/ga/about/ropga/lang.shtml), cho phép sáu ngôn ngữ chính thức và quy định phiên dịch khi dùng ngôn ngữ khác. Thông tin biểu diễn, danh sách học viên và website là bối cảnh lịch sử của tác giả.
 
-让我们再看看科学事实。地球上究竟有多少种语言，无从得知，保守估计应该有 6700 种以上的语言，这些语言所使用的语音全部加起来大约 6000 种左右。[Patricia K. Kuhl](http://ilabs.washington.edu/kuhl/)博士是华盛顿大学听说科学系（Department of Speech & Hearing Sciences）的教授，她的[研究](http://ilabs.washington.edu/news/Times_Pacific_3_6_05.pdf)表明，刚出生的婴儿实际上有能力习得地球上的任何一种语言；也就是说，刚出生的婴儿实际上是 “世界公民”（Citizens of the world），他们的大脑有能力处理那 6700 多种语言所用到的大约 6000 种语音中的任何一种。
+## 2. Chúng ta hoàn toàn có khả năng cải thiện phát âm đáng kể
 
-而大约到了 6 个月的时候，婴儿已经开始对母语更为关注，Kuhl 教授的解释是这样的：
+Hãy nhìn lại các sự thật khoa học. Rốt cuộc có bao nhiêu ngôn ngữ trên Trái Đất thì không thể biết; ước tính thận trọng là hơn 6.700, sử dụng tổng cộng khoảng 6.000 âm. Tiến sĩ [Patricia K. Kuhl](http://ilabs.washington.edu/kuhl/), giáo sư Khoa Khoa học Lời nói và Thính giác (Department of Speech & Hearing Sciences) tại Đại học Washington, có [nghiên cứu](http://ilabs.washington.edu/news/Times_Pacific_3_6_05.pdf) cho thấy trẻ sơ sinh thực ra có khả năng tiếp thu bất cứ ngôn ngữ nào trên Trái Đất. Tức là trẻ mới sinh là “công dân thế giới” (Citizens of the world): não có khả năng xử lý bất kỳ âm nào trong khoảng 6.000 âm của hơn 6.700 ngôn ngữ.
 
-> 这个时候，这些婴儿并非是“失去”了语音分辨能力，而是他们的大脑开始发展出一套过滤（filter）机制，能够把那些与母语无关的语音过滤掉，或者，把那些与母语中存在的语音相似的语音归为同一类。于是，最终的表现是他们无法分辨某些语音以及某些语音之间的差别了——当然是与母语无关的语音。后文还会提到，大脑需要这样的过滤器还有另外一个理由，那就是还要把不同的音色的人发出的同一个语音归为一类，大脑才能不出错地理解语言。
+Khoảng sáu tháng tuổi, trẻ bắt đầu chú ý tiếng mẹ đẻ nhiều hơn. Giáo sư Kuhl giải thích:
 
-实际上，每一种语言所使用的语音都是有限的。瑞典语使用 16 个元音，英语使用 8 个元音，日语只使用 5 个元音；而中文使用 6 个元音 —— 比日语多了一个，这也能从侧面解释为什么中国人学英语的语音要比日本人稍微容易一些。在我们国家，有些地区的人分不清楚 “r” 和 “l” 的区别，在他们（成年人）的听觉中，“row” 和 “low”、“rake” 和 “lake” 都是没区别的。大约到了婴儿 11 个月的时候，他们的大脑中那个过滤机制已经非常健全了，于是他们就从 “世界公民” 变成了 “某一语言的公民”。到了 18 个月的时候，婴儿已经多多少少开始关注语法现象、语言模式了，例如他们可以猜得出来 “-ing” 和 “-ed” 结尾的词大抵上是动词了。
+> Lúc này, trẻ không “mất” khả năng phân biệt âm, mà não bắt đầu phát triển một cơ chế lọc (filter), lọc bỏ âm không liên quan đến tiếng mẹ đẻ, hoặc xếp âm giống âm trong tiếng mẹ đẻ vào cùng một loại. Vì vậy, biểu hiện cuối cùng là không phân biệt được một số âm và khác biệt giữa chúng, đương nhiên là những âm không liên quan đến tiếng mẹ đẻ. Phần sau còn nói một lý do khác khiến não cần bộ lọc: phải gom cùng một âm do người có âm sắc khác nhau tạo ra thành một loại, não mới hiểu ngôn ngữ không sai.
 
-Kuhl 教授的研究中更为有趣的是她进一步调查了多语环境中成长的婴儿的大脑发育过程。地球上有一些区域是 “天然的多语区域”，比如欧洲的卢森堡[^2]、再比如我国许多少数民族聚居区[^3]。在这样的区域中长大的孩子，真正受到影响的应该是他们大脑中的那个 “过滤机制”。由于他们从小接受多种语言的刺激，于是，他们的 “过滤器” 与单语使用者不一样，因此他们能够识别更多的语音。
+Thực ra, mỗi ngôn ngữ dùng số âm hữu hạn. Tiếng Thụy Điển dùng 16 nguyên âm, tiếng Anh dùng tám, tiếng Nhật chỉ năm, còn tiếng Trung dùng sáu, hơn tiếng Nhật một. Điều đó cũng gián tiếp giải thích vì sao người Trung Quốc học âm tiếng Anh hơi dễ hơn người Nhật. Ở Trung Quốc, người một số vùng không phân biệt “r” với “l”; trong thính giác người trưởng thành ở đó, “row” và “low”, “rake” và “lake” không khác nhau. Khoảng 11 tháng tuổi, cơ chế lọc trong não trẻ đã rất hoàn chỉnh, nên các em từ “công dân thế giới” thành “công dân của một ngôn ngữ”. Đến 18 tháng, trẻ đã ít nhiều chú ý hiện tượng ngữ pháp, mô hình ngôn ngữ, chẳng hạn đoán được từ kết thúc bằng “-ing” hoặc “-ed” phần lớn là động từ.
 
-这样的研究结果，显然会被 “语言习得关键期” 的支持者当作支持自己看法的论据。因为，事实摆在那里 —— 又有一个研究表明成年之后第二语言习得难上加难。但，同样的研究结果也可以证明 “我们原本有能力习得任何一种语音”，“我们现在也有能力习得任何一种语音”，只不过，我们要花时间修正我们的 “过滤器”，甚至，我们可以干脆重建我们的 “过滤器” —— 因为大脑是可塑的，大脑甚至是可以重组的。只不过，需要时间而已。
+Điều thú vị hơn trong nghiên cứu Kuhl là bà tiếp tục khảo sát phát triển não của trẻ lớn lên trong môi trường đa ngôn ngữ. Trái Đất có những vùng “đa ngôn ngữ tự nhiên”, như Luxembourg ở châu Âu[^2], hoặc nhiều khu vực cộng đồng dân tộc thiểu số Trung Quốc sinh sống[^3]. Trẻ lớn lên ở đó thực sự chịu ảnh hưởng ở “cơ chế lọc” trong não. Vì tiếp nhận kích thích từ nhiều ngôn ngữ từ nhỏ, “bộ lọc” khác người chỉ dùng một ngôn ngữ, nên nhận biết được nhiều âm hơn.
 
-“语言习得关键期” 滥用者最大的谬误在于他们把 “语音” 等同于 “语言” —— 明摆着是两回事儿的东西竟然分不清楚。事实上，尽管关键期真的存在，但它所影响的准确地来说，是 “语音”，而非 “语言”。语音只不过是语言的一个方面。年幼的人更容易习得的其实只有语音而已，而语言的其它方面并非都是如此，比如，词汇的习得，显然是越学越快，青年人强过少年，老年人（那些活到老学到老的人）强过青年人；本质上来看，一个人知识越渊博，对他来说习得新概念和新词汇就越容易。再比如，逻辑能力是文字运用的重要基础，缺乏逻辑训练的人，能够使用的和接触到的语言文字范围就要狭窄许多许多，语音再 “标准” 又如何？学外语不简单，但从另外一个角度来讲，又没有难到不可能学好的地步，说穿了，不就是说话、识字吗？世界的各个角落都有无数没文化的人也能讲一口流利的、语音几近完美的母语，可是，仅仅靠语音能解决什么问题呢？语音学习和语言学习是两回事儿，退一万步讲，仅仅语言本身都是无意义的，因为它最终只不过是记录、传递、交流思想的载体和媒介而已。
+Kết quả ấy rõ ràng sẽ được người ủng hộ “giai đoạn tới hạn trong tiếp thu ngôn ngữ” lấy làm bằng chứng, vì sự thật ở đó: lại có nghiên cứu cho thấy học ngôn ngữ thứ hai khi trưởng thành khó càng thêm khó. Nhưng cùng kết quả cũng có thể chứng minh “vốn dĩ chúng ta có khả năng học bất cứ âm nào”, “bây giờ chúng ta vẫn có khả năng học bất cứ âm nào”. Chỉ là cần thời gian chỉnh sửa “bộ lọc”, thậm chí xây lại hoàn toàn, vì não có tính dẻo, còn có thể tái tổ chức. Chỉ cần thời gian mà thôi.
 
-在科学家看来，学习一门技能，本质上来看就是大脑中的神经细胞建立连接的过程。美国加利福尼亚大学的退休名誉教授[Michael Merzenich](http://en.wikipedia.org/wiki/Michael_Merzenich)认为，每一项新技能的习得，都需要在大脑神经细胞之间中建立亿万个新的连接。这样艰巨的任务当然要耗费大量的时间。而在这耗时费力的过程中还存在所谓的 “平台期” —— 即，某一段时间无论如何大量训练都看起来毫无进步。神经可塑性研究的鼻祖，Paul Bach-y-Rita 教授认为，“平台期” 只是一种表象，在此期间大脑并未停止发展，神经细胞之间新建的连接在不停地被巩固；如果中断练习，那么大脑就会遵循 “不用即废” 的原则丢弃那些无用的连接。那么神经细胞之间的连接需要巩固多长时间才能变得 “难以弃用” 呢？Paul Bach-y-Rita 教授的解释是 “六个月” —— 这个时限与人类生育普遍需要十月怀胎一样很难跨越。
+Sai lầm lớn nhất của người lạm dụng “giai đoạn tới hạn” là đồng nhất “âm lời nói” với “ngôn ngữ”, rõ ràng hai thứ khác nhau mà không phân biệt. Thực ra, dù giai đoạn tới hạn tồn tại, thứ nó ảnh hưởng chính xác là “âm lời nói”, không phải “ngôn ngữ”. Âm lời nói chỉ là một mặt. Điều người nhỏ tuổi dễ tiếp thu hơn thực ra chỉ là âm mà thôi; các mặt khác không phải đều thế. Chẳng hạn, từ vựng rõ ràng càng học càng nhanh, thanh niên hơn thiếu niên, người già học suốt đời hơn thanh niên. Về bản chất, một người hiểu biết càng rộng thì càng dễ học khái niệm, từ mới. Hoặc năng lực logic là nền tảng quan trọng của việc sử dụng chữ nghĩa. Người thiếu rèn luyện logic có phạm vi ngôn ngữ có thể dùng và tiếp xúc hẹp hơn rất nhiều; phát âm “chuẩn” đến đâu thì sao? Học ngoại ngữ không đơn giản, nhưng nhìn góc khác cũng không khó đến mức không thể học tốt. Nói cho cùng, chẳng phải nói và biết chữ sao? Khắp thế giới, vô số người không có học vấn vẫn nói lưu loát, phát âm tiếng mẹ đẻ gần như hoàn hảo. Nhưng chỉ phát âm giải quyết được gì? Học âm và học ngôn ngữ là hai chuyện khác nhau. Lùi xa hơn, ngay cả bản thân ngôn ngữ cũng không có ý nghĩa, vì cuối cùng nó chỉ là vật mang, phương tiện ghi lại, truyền đạt và trao đổi tư tưởng.
 
-“改装” 自己的语音过滤器绝对是有可能的，甚至连 “重建” 自己的过滤器都是有可能的。可是为什么大多数人做不到呢？[Paul Bach-y-Rita](http://en.wikipedia.org/wiki/Paul_Bach-y-Rita)教授的解释给了我们一个相对清楚的线索，大多数人很少能够坚持六个月以上。更为可惜的是那些坚持了五个月的人，因为他们明明快跨过平台期了，但由于提前那么一点点放弃，于是，“前功尽弃” —— 脑神经细胞的突触可不知道惋惜，它们只有一个原则：“不用即弃”。如若想要重建，对不起，还是需要至少六个月 —— 而且这个时间会随着年龄的增长而越来越长。
+Theo các nhà khoa học, học một kỹ năng về bản chất là quá trình tế bào thần kinh trong não tạo liên kết. Giáo sư danh dự đã nghỉ hưu [Michael Merzenich](http://en.wikipedia.org/wiki/Michael_Merzenich) của Đại học California, Mỹ, cho rằng mỗi kỹ năng mới cần tạo vô số, đến hàng trăm triệu liên kết mới giữa tế bào thần kinh. Nhiệm vụ nặng nề ấy đương nhiên tốn rất nhiều thời gian. Trong quá trình tốn công ấy còn có “giai đoạn chững”: một thời gian dù luyện nhiều đến đâu cũng có vẻ không tiến bộ. Người tiên phong nghiên cứu tính dẻo thần kinh, giáo sư Paul Bach-y-Rita, cho rằng chững chỉ là bề ngoài. Não không ngừng phát triển; những liên kết mới liên tục được củng cố. Nếu ngừng luyện, não theo nguyên tắc “không dùng thì bỏ” mà loại các liên kết vô dụng. Vậy liên kết cần củng cố bao lâu mới “khó bị bỏ”? Bach-y-Rita giải thích là “sáu tháng”, một giới hạn khó vượt như việc con người thường cần mười tháng mang thai mới sinh.
 
-[^2]: 因为卢森堡毗邻法国和德国，那里的人从小就熟练使用三种语言：卢森堡语、法语和德语。到了中学，他们开始学习英语。他们所学的第四语言——相当于我们学“二外”。
-[^3]: 比如我的老家，吉林省延边朝鲜族自治区。在那里很多人都能够同等熟练地使用中文和韩文——两个完全不同语系的语言。事实上，中国幅原辽阔，很多地方都是多语地区。从语音上来看，上海话、粤语、吴语等等都是不同的语言。
+“Cải tạo” bộ lọc âm của mình hoàn toàn có thể, thậm chí “xây lại” cũng có thể. Nhưng vì sao phần lớn không làm được? Giải thích của giáo sư [Paul Bach-y-Rita](http://en.wikipedia.org/wiki/Paul_Bach-y-Rita) cho một đầu mối tương đối rõ: phần lớn ít khi kiên trì quá sáu tháng. Đáng tiếc hơn là người kiên trì năm tháng: rõ ràng sắp qua giai đoạn chững, nhưng bỏ sớm một chút nên “mọi công sức đổ sông”. Synapse thần kinh không biết tiếc, chỉ có nguyên tắc “không dùng thì bỏ”. Muốn xây lại thì xin lỗi, vẫn cần ít nhất sáu tháng, và thời gian này còn dài thêm theo tuổi.
 
-## 3. 最大的障碍：害怕被嘲弄
+[^2]: Vì Luxembourg giáp Pháp và Đức, người dân ở đó dùng thành thạo ba ngôn ngữ từ nhỏ: tiếng Luxembourg, Pháp và Đức. Đến trung học, họ bắt đầu học tiếng Anh. Ngôn ngữ thứ tư của họ tương đương việc chúng ta học “ngoại ngữ thứ hai”.
+[^3]: Chẳng hạn quê tôi, Châu tự trị dân tộc Triều Tiên Diên Biên, tỉnh Cát Lâm. Nhiều người ở đó dùng tiếng Trung và tiếng Hàn thành thạo ngang nhau, hai ngôn ngữ thuộc hai ngữ hệ hoàn toàn khác. Thực ra Trung Quốc rộng lớn, nhiều nơi là vùng đa ngôn ngữ. Xét âm lời nói, tiếng Thượng Hải, Quảng Đông, Ngô… đều là những ngôn ngữ khác nhau.
 
-不敢开口说英语还有另外一个重要的担心，被周围的人所嘲弄。这确实令人厌烦。可是，想想吧：一个正常的人会嘲弄婴儿蹒跚的脚步么？不会。一个正常人会嘲弄残疾人么？不会，也不应该。那么再看看，有人讲外语发音不标准或者难听却会招致嘲弄，有道理么？有人讲外语一辈子带着口音并且改不过来而招致嘲弄，有道理么？
+> **Ghi chú biên tập:** Liên kết tác giả gọi là “nghiên cứu” thực chất là bài báo năm 2005 của Paula Bock; [bản lưu tại I-LABS](https://ilabs.uw.edu/wp-content/uploads/Times_Pacific_3_6_05.pdf) ghi 600 phụ âm và 200 nguyên âm, không phải 6.000 âm. Các con số ngôn ngữ, âm và nguyên âm phụ thuộc cách phân loại; “tiếng Anh có tám nguyên âm” không mô tả đầy đủ một hệ phát âm tiếng Anh thông dụng. Không thể chỉ lấy số nguyên âm để xếp mức dễ học của người Trung Quốc, Nhật Bản hay Việt Nam. “Bộ lọc” là hình ảnh giải thích sự thích nghi trong tri giác lời nói, không phải bộ phận có một hạn sử dụng sáu tháng cố định. Nguyên tác chưa cung cấp nghiên cứu đủ để kết luận mọi kỹ năng đều cần đúng sáu tháng, bỏ ở tháng thứ năm là mất sạch, hay mọi người đều có thể học mọi âm đến cùng một mức. Tính dẻo không loại bỏ ảnh hưởng của tuổi đối với các thành phần khác của ngôn ngữ; [nghiên cứu ngữ pháp năm 2018 được dẫn ở chương 1](https://pmc.ncbi.nlm.nih.gov/articles/PMC6559801/) là một ví dụ, xuất bản sau bản thảo này. [Bài Page, Gater và Bach-y-Rita năm 2004](https://pubmed.ncbi.nlm.nih.gov/15295770/) bàn giai đoạn chững trong phục hồi vận động sau đột quỵ, không chứng minh lịch sáu tháng cho học ngoại ngữ. Chú thích về Luxembourg mô tả khái quát của tác giả, không có nghĩa mọi cư dân đều có cùng lịch sử học; tiếng Thượng Hải thuộc nhóm tiếng Ngô, không phải hai nhóm loại trừ nhau.
 
-每个人身边都一定有喜欢嘲弄别人的人。可是，嘲弄他人是愚蠢的。如果仅仅因为某个人在某方面比另外一个人更好或者做得更好就可以嘲弄对方的话，那么，此人终究也会被其他人嘲弄，有谁可能在任何方面都比别人更好呢？嘲弄他人对他人来讲永远是破坏性的，对自己来讲也不可能是建设性的，因为嘲弄他人本身并不会提高自己的水准，顶多获得一些快乐的幻觉。
+## 3. Trở ngại lớn nhất: Sợ bị chế giễu
 
-婴儿是先学会听后学会说的，之所以如此的根本原因在于 “说” 比 “听” 难多了 —— “听” 也许只需要 “分辨”，可是 “说” 则要在 “分辨” 清楚的基础上再运用另外一个器官发出声音，并且还经常需要矫正和调整。所以，日常生活中，一个人只要多少有点基础就可以分辨出别人的外语发音好不好，无论自己的发音怎么样。有趣的是，大部分的嘲弄恰恰来自于这种 “宽于律己、严于律人” 的感受而已，本质上来看毫无价值，即便是发出嘲弄的人获得的也只不过是虚假的幻觉而已。
+Một nỗi lo quan trọng khác khiến người ta không dám mở miệng nói tiếng Anh là bị người xung quanh chế giễu. Điều ấy quả thực khó chịu. Nhưng hãy nghĩ: người bình thường có cười nhạo bước đi chập chững của em bé không? Không. Có cười nhạo người khuyết tật không? Không, và không nên. Vậy nhìn lại: người nói ngoại ngữ phát âm chưa chuẩn hoặc khó nghe lại bị chế giễu, có lý không? Người mang giọng riêng suốt đời, không sửa được, lại bị chế giễu, có lý không?
 
-真正文明的人，是不会嘲弄别人的。文明的人可能处于愤怒而说粗话、脏话，但他们不会随便骂人，更不会随意嘲弄他人，因为他们早就学会了建设性批评，也懂得尊重他人尊重自己。只有不文明的人才会嘲弄他人。随意嘲弄他人的人是可耻的，比随地吐痰更不文明。
+Ai cũng có người thích chế giễu quanh mình. Nhưng chế giễu người khác là ngốc nghếch. Nếu chỉ vì ai giỏi hơn hoặc làm tốt hơn người khác ở một mặt mà được quyền chế giễu, cuối cùng người ấy cũng bị người khác chế giễu: ai có thể hơn người khác ở mọi mặt? Chế giễu luôn gây hại cho người bị nhắm đến, cũng không xây dựng gì cho bản thân, vì nó không nâng trình độ của mình, nhiều nhất chỉ tạo ảo giác vui vẻ.
 
-凡事做得好的人，也很难去嘲弄他人。因为他们都知道做好一件事情究竟有多难 —— 他们自己亲身经历过。有一学生曾经问大提琴大师[Pablo Casals](http://en.wikipedia.org/wiki/Pablo_Casals)怎么还在天天长时间练琴，大师说：“因为我每天还在进步啊！” 很难想象这样的大师有什么心思和欲望去嘲弄别人。梅兰芳先生晚年教弟子唱戏，从不批评他们。每当他们犯了错的时候，梅兰芳先生总是说，“再练练就好了，练好很难的……”
+Trẻ học nghe trước nói vì nguyên nhân căn bản là “nói” khó hơn “nghe” rất nhiều. Nghe có thể chỉ cần phân biệt, còn nói phải phân biệt rõ rồi dùng cơ quan khác tạo âm, lại thường phải sửa và điều chỉnh. Vì vậy, trong đời sống, chỉ cần có chút nền tảng, một người có thể phân biệt người khác phát âm ngoại ngữ tốt hay không, bất kể bản thân phát âm ra sao. Thú vị là phần lớn chế giễu bắt nguồn từ cảm giác “dễ dãi với bản thân, nghiêm khắc với người khác” ấy; về bản chất không có giá trị, ngay cả người chế giễu cũng chỉ nhận ảo giác giả tạo.
 
-所以，真的不要意来自他人的嘲弄。如果犯了错，改了就好。如果改不了，只要没有伤害他人就好 —— 其实你根本无法仅仅用带点口音的英语伤人。英语发音差一点，带的口音重了点，根本不是你的错，你也从未、也不大可能因此伤害任何其他人。嘲弄你的人应该被你嘲弄，只不过因为你是文明人，所以没办法跟他一般见识而已。对于来自他人的嘲弄，如果你竟然在意了，那就真的让人家得逞了，因为你受伤了，他幸灾乐祸了。如果你全然不在意，他就没劲了，因为无法因此获得快感了 —— 脆弱的家伙就只能自己生气了，或者生自己的气了。
+Người thực sự văn minh không chế giễu người khác. Khi giận, họ có thể nói thô, nói tục, nhưng không tùy tiện chửi hay chế giễu, vì đã học cách phê bình xây dựng, biết tôn trọng người và mình. Chỉ người thiếu văn minh mới chế giễu. Tùy tiện chế giễu là đáng hổ thẹn, còn kém văn minh hơn khạc nhổ bừa bãi.
 
-## 4. 多听多听再多听
+Người làm việc tốt cũng khó đi chế giễu người khác, vì biết làm tốt một việc khó thế nào, bản thân đã trải qua. Có học sinh từng hỏi bậc thầy cello [Pablo Casals](http://en.wikipedia.org/wiki/Pablo_Casals) vì sao vẫn tập lâu mỗi ngày. Ông đáp: “Vì mỗi ngày tôi vẫn tiến bộ!”. Khó tưởng tượng bậc thầy ấy có tâm trí hay ham muốn chế giễu ai. Những năm cuối đời, Mai Lan Phương dạy học trò hát hí khúc không bao giờ phê bình. Mỗi khi học trò sai, ông luôn nói: “Tập thêm sẽ tốt thôi, luyện cho giỏi khó lắm…”.
 
-重塑自己的语音，应该从 “改建” 或者 “重建” 自己的语音过滤器开始。我们必须重新习得对目标语言（比如，英语）所使用的语音的识别能力。因为我们很难说清自己分辨不清楚的语音。去报各种各样的口语培训班往往除了心理安慰作用之外并没有太多实际的帮助。最有效的方法其实是零成本的 —— 大幅度提高听觉输入量。
+Vì vậy, thật sự đừng bận tâm lời chế giễu. Sai thì sửa là được. Không sửa được, chỉ cần không gây hại cho ai; thực ra bạn không thể chỉ bằng tiếng Anh có chút giọng riêng mà làm ai bị thương. Phát âm kém một chút, giọng đậm một chút căn bản không phải lỗi của bạn; bạn chưa từng và cũng khó vì thế gây hại người khác. Người chế giễu bạn đáng bị bạn chế giễu, chỉ vì bạn văn minh nên không thể chấp nhặt như họ. Nếu lại bận tâm, bạn thực sự để họ đắc ý: bạn tổn thương, họ vui trên nỗi khổ của bạn. Nếu hoàn toàn không để ý, họ mất hứng vì chẳng có khoái cảm; kẻ yếu đuối ấy chỉ còn tự giận, hoặc giận chính mình.
 
-我们在习得母语的过程中，听觉几乎是全天接受母语语音刺激的，可是学外语的过程中相对来看却少得可怜。据我观察，大多数大学生，尽管声称自己已经学了十多年的英语，可实际上每天英语听觉输入的时间最长不会超过两个小时，并且，从未持续输入很多天。为了达到最好的效果，必须保证大量输入，并且正如之前所提到的那样，起码要持续如此六个月才行。
+> **Ghi chú biên tập cho người học Việt Nam:** Không chế giễu giọng nói là nguyên tắc tôn trọng, không cần so sánh giá trị giữa những người có hay không có khuyết tật. Bị tổn thương bởi lời chế giễu cũng không phải lỗi của người học. Có thể chọn người góp ý cụ thể, đề nghị họ nói chậm hoặc chỉ một âm cần sửa, và đặt giới hạn với hành vi xúc phạm.
 
-很多人也许没有想到的是 “是否听懂” 在这里并不重要。大幅度提高听觉输入量的目的在于重建语音识别能力，重点并不在于文字理解能力。婴儿在 18 个月的时候，已经构建好母语的语音过滤器，可是他们其实并不能全然听懂他们每天听到的内容。Kuhl 教授的研究结果启发我们，其实英语幼教是可以不花钱的：父母不会说英语没关系，只要在孩子活动的环境里不停地播放各种英语语音（童谣、小说、电视剧等等），并长期持续。只要这么做，小孩子根本就不需要上什么培训班，到小学入学的时候，孩子的 “双语语音过滤器” 早就应该固化了。事实上，我很怀疑各种英语幼教占用了太多原本可以用来习得其它技能的时间，进而限制了幼儿大脑的发展。不过，不能指望只听听录音看看电视，孩子就可以学会外语 —— 刚刚已经说过，语音学习和语言学习是两回事儿。语言学习还需要很多其它方面的刺激和努力。对于成年人来说也一样，大幅度提高听觉输入量是为了迅速重建自己的语音过滤器。在此之后，想要获得进步，“听得懂” 就非常重要了。因为只有听得懂才可以注意力集中，而注意力集中是一切学习的根本前提。
+## 4. Nghe nhiều, nghe nhiều, rồi nghe thêm nữa
 
-另外一个很多人没想到的事情是 “循序渐进” 不一定是好策略，至少在 “重建语音过滤器” 时不是好策略。应该从一开始就听正常语速的材料。美国之音(VOA)有个著名的节目，叫做 Special English，是很多中国人学习英语的 “入门” 或者 “中级” 学习资源。曾几何时，无数的人冒着可能被扣上 “偷听敌台” 之罪名的风险去收听这个节目，只为了学好英语。我相信这个节目的设计初衷是好的，它认为人们学英语应该 “循序渐进”，正常语速、正常措辞的英语对初学者太难了；所以，它只使用大约 1500 个左右的 “基础词汇”、只使用最初级的语法结构，并且以刻意降低的语速播音。但我很怀疑它的真正作用。我的观察是很多人一旦开始听 VOA SE，没多久就放不下来了 —— 因为 “能够完全听懂” 的感觉实在是太好了；过一段时间转头去听 CNN 或者其他的正常语速的材料，马上就觉得吃力，而后 “觉得” 自己 “基础还不够好”，于是又退回 VOA SE，转眼许多年过去了，还在听 VOA SE。最重要的理由和上一点一样：这个时候，是否听得懂并不重要；真正重要的是要让自己负责听觉的那部分大脑长期持续接受足够多的英语语音刺激。
+Định hình lại phát âm nên bắt đầu từ “cải tạo” hoặc “xây lại” bộ lọc âm. Ta phải học lại khả năng nhận biết âm của ngôn ngữ đích, chẳng hạn tiếng Anh, vì khó nói rõ âm mình không phân biệt rõ. Đăng ký đủ loại lớp nói thường không giúp nhiều ngoài việc an ủi tinh thần. Cách hiệu quả nhất thực ra không tốn tiền: tăng mạnh lượng đầu vào nghe.
 
-还有一个看似不合常理的建议是 “不要只听标准录音”。很多人的学习之所以事倍功半，就是因为他们的做法与 “语言自然习得方式” 相左。婴儿的大脑之所以要发展出 “母语语音过滤器”，除了这么做会更容易理解母语之外，还有另外一个原因：大脑要处理很多同一个语音的许多变体 —— 因为婴儿每天听很多不同的人使用同样的语音，而每个人的音质、音色、音调都可能是有他自己的独特之处。所以，大脑必须要有这样的过滤器，能够将输入的同一语音的不同变体归为一类 —— 只有这样才能不出差错地处理语音输入。所以，在大幅度提高自己的英语听觉输入量之时，要涉猎不同的音质、不同的音色、不同的音调，甚至不同的口音才对。这个意义上来看，广播剧要比课本录音强出不知道多少倍，因为有好多个人在说话，而非从头至尾只有一个 “标准” 声音。进而，我常常建议自己的学生不要把自己的输入材料只限制于 “标准美音” 或者 “标准英音”；其实无所谓的，连颇具特色的 “黑人英语” 都可以听，甚至，越杂越好。我常常推荐的是[CNN 的广播](http://www.cnn.com/audio/radio/radio.html)，里面有各种各样腔调的英语，真的可以大开 “耳” 界。
+Khi tiếp thu tiếng mẹ đẻ, thính giác gần như cả ngày nhận kích thích âm của ngôn ngữ ấy. Nhưng khi học ngoại ngữ, lượng tương ứng ít đến đáng thương. Theo quan sát của tôi, phần lớn sinh viên dù nói đã học tiếng Anh hơn mười năm, thực tế thời gian đầu vào nghe mỗi ngày dài nhất cũng không quá hai giờ, lại chưa từng duy trì nhiều ngày liên tiếp. Để đạt hiệu quả tốt nhất, phải bảo đảm đầu vào lớn, và như đã nói, ít nhất phải kéo dài sáu tháng.
 
-二十多年前，学英语的设备很落后，全班用一个台式录卡座音机，一学期就那么一盘磁带翻过来掉过去地放。现在的学生可以用很便宜的价格买到可以装载无数材料的 MP3 播放器，甚至，随身携带的手机就可以播放 MP3，实在是方便。我自己近十来年里每天都听 audiobook，设备换过不少，从新加坡创新出品的 32M 播放器开始，到后来的惠普 PDA，到后来的 HTC 智能手机，再到现在的 iPhone。有一个小技巧，听英语音频的时候不要两只耳朵全都戴上耳机 —— 只用一只耳朵戴耳机。因为自然语音输入和耳机输入是不一样的。在自然环境中，我们听到的语言语音从来都不是 “单独” 的 —— 总是伴随着各种各样的背景声音。戴着耳机的时候却基本上就只有 “纯粹的语音” 了，这对我们重建自己的语音过滤器来说并不是好事。只用一只耳朵戴耳机的另外一个好处是可以经常换着耳朵听，不至于损伤耳朵。
+Điều nhiều người chưa nghĩ đến là “có nghe hiểu không” ở đây không quan trọng. Mục đích tăng mạnh đầu vào nghe là xây lại khả năng nhận biết âm, không nhấn vào hiểu chữ nghĩa. Trẻ 18 tháng đã tạo bộ lọc âm tiếng mẹ đẻ, nhưng thực ra không hiểu hết nội dung nghe hằng ngày. Kết quả Kuhl gợi ý rằng giáo dục tiếng Anh sớm có thể không mất tiền: cha mẹ không nói được tiếng Anh cũng không sao, chỉ cần liên tục bật đủ loại tiếng Anh trong môi trường trẻ hoạt động, như đồng dao, tiểu thuyết, phim truyền hình, và duy trì lâu dài. Chỉ cần thế, trẻ căn bản không cần lớp học nào; đến tuổi vào tiểu học, “bộ lọc âm song ngữ” hẳn đã cố định từ lâu. Thực ra, tôi rất nghi ngờ các kiểu dạy tiếng Anh sớm chiếm quá nhiều thời gian vốn có thể học kỹ năng khác, từ đó hạn chế phát triển não trẻ. Nhưng không thể mong chỉ nghe băng, xem truyền hình là trẻ học được ngoại ngữ: như vừa nói, học âm và học ngôn ngữ là hai việc. Học ngôn ngữ còn cần kích thích, nỗ lực ở nhiều mặt khác. Người lớn cũng vậy: tăng mạnh đầu vào nghe nhằm xây lại nhanh bộ lọc âm. Sau đó, muốn tiến bộ thì “nghe hiểu” rất quan trọng, vì chỉ hiểu mới tập trung được, mà tập trung là tiền đề căn bản của mọi việc học.
 
-正如之前所提到的那样，至少要坚持六个月，我个人建议每天的输入时间不要低于四个小时 —— 只要开始做，就会发现其实并不难，因为 “哪怕听不懂都无所谓”。听得多了，听得久了，早晚有一天想听不懂都不太容易。当然，即便是最初的时候，为了效果更佳，可以有意识地渐渐提高文本难度，并且最好配合精读。这期间几乎所有的人都会感觉没什么进步，但是，这种 “感觉” 是不靠谱的 —— 事实上，我们的感觉几乎总是极不靠谱。看看下面的两条直线哪个更长？
+> **Ghi chú biên tập về trẻ nhỏ:** Đoạn trên là suy diễn và đề xuất của tác giả, không nên coi việc bật âm thanh nền liên tục là cách đã được chứng minh tạo song ngữ. [Nghiên cứu của Kuhl, Tsao và Liu năm 2003](https://doi.org/10.1073/pnas.1532872100) cho trẻ chín tháng tiếp xúc khoảng năm giờ trong 12 buổi: nhóm tương tác trực tiếp cải thiện phân biệt âm, cùng tư liệu thu âm hoặc ghi hình không có hiệu quả ấy. Điều này không có nghĩa bản thu vô ích ở mọi tuổi. Cần phân biệt tiếp xúc với âm thanh, tương tác trực tiếp và phát triển ngôn ngữ. Việc chọn thời lượng, nội dung cho trẻ phải phù hợp tuổi và hoàn cảnh, không lấy lời khuyên “bật liên tục” làm yêu cầu của bản tiếng Việt.
+
+Một điều khác nhiều người không nghĩ tới: “từng bước từ dễ đến khó” chưa chắc là chiến lược tốt, ít nhất khi “xây lại bộ lọc âm”. Nên nghe tài liệu tốc độ bình thường ngay từ đầu. Đài Tiếng nói Hoa Kỳ, VOA, có chương trình nổi tiếng Special English, tài nguyên “nhập môn” hoặc “trung cấp” cho nhiều người Trung Quốc. Từng có thời vô số người mạo hiểm bị quy tội “lén nghe đài địch” để nghe nó, chỉ mong học tốt tiếng Anh. Tôi tin ý định thiết kế ban đầu là tốt: người học nên tiến dần, tiếng Anh với tốc độ và cách dùng từ bình thường quá khó cho người mới. Vì vậy chương trình chỉ dùng khoảng 1.500 từ cơ bản, cấu trúc ngữ pháp đơn giản nhất và cố tình đọc chậm. Nhưng tôi rất nghi ngờ tác dụng thật. Tôi quan sát nhiều người bắt đầu nghe VOA SE rồi chẳng bao lâu không rời được, vì cảm giác “hiểu hết” quá tốt. Sau một thời gian, quay sang CNN hoặc tài liệu tốc độ bình thường, họ thấy khó ngay, rồi “cảm thấy” mình “chưa đủ nền tảng”, lại quay về VOA SE. Chớp mắt nhiều năm qua, vẫn nghe VOA SE. Lý do quan trọng nhất giống điểm trước: lúc này, hiểu hay không không quan trọng; thực sự quan trọng là để phần não phụ trách nghe tiếp nhận lâu dài, liên tục đủ kích thích âm tiếng Anh.
+
+Còn một lời khuyên có vẻ trái lẽ thường: “Đừng chỉ nghe bản thu chuẩn”. Nhiều người bỏ nhiều công mà ít kết quả vì làm trái “cách tiếp thu ngôn ngữ tự nhiên”. Não trẻ cần phát triển “bộ lọc âm tiếng mẹ đẻ” không chỉ để hiểu ngôn ngữ ấy dễ hơn, mà còn để xử lý nhiều biến thể của cùng một âm. Mỗi ngày trẻ nghe nhiều người dùng cùng âm, trong khi chất giọng, âm sắc và cao độ mỗi người có nét riêng. Vì vậy, não cần bộ lọc gom các biến thể đầu vào của cùng một âm thành một loại; chỉ vậy mới xử lý không sai. Khi tăng mạnh đầu vào tiếng Anh, nên tiếp xúc nhiều chất giọng, âm sắc, cao độ, thậm chí nhiều giọng địa phương. Theo nghĩa ấy, kịch truyền thanh tốt hơn băng giáo trình không biết bao nhiêu lần, vì có nhiều người nói thay vì từ đầu đến cuối một giọng “chuẩn”. Vì thế, tôi thường khuyên học sinh đừng chỉ giới hạn đầu vào ở “giọng Mỹ chuẩn” hoặc “giọng Anh chuẩn”. Thực ra không sao cả, ngay cả “tiếng Anh của người da đen” rất đặc trưng cũng có thể nghe; thậm chí càng đa dạng càng tốt. Tôi thường giới thiệu [radio CNN](http://www.cnn.com/audio/radio/radio.html), có đủ giọng tiếng Anh, thật sự mở rộng tầm “tai”.
+
+Hơn hai mươi năm trước, thiết bị học rất lạc hậu. Cả lớp dùng chung máy cassette để bàn, cả học kỳ chỉ một cuộn băng lật qua lật lại. Bây giờ sinh viên mua được máy MP3 giá rẻ chứa vô số tài liệu, thậm chí điện thoại mang theo cũng phát MP3, rất tiện. Gần mười năm qua, ngày nào tôi cũng nghe audiobook, đổi nhiều thiết bị: từ máy 32M của Creative, Singapore, đến PDA HP, điện thoại thông minh HTC, rồi iPhone hiện nay. Có mẹo nhỏ: nghe tiếng Anh đừng đeo tai nghe cả hai tai, chỉ đeo một bên. Vì đầu vào âm tự nhiên khác đầu vào qua tai nghe. Trong tự nhiên, lời nói ta nghe chưa bao giờ “riêng lẻ”, luôn đi cùng đủ loại âm nền. Đeo tai nghe thì về cơ bản chỉ còn “lời nói thuần túy”, không tốt cho việc xây lại bộ lọc. Lợi ích khác của đeo một bên là thường xuyên đổi tai, tránh làm tai tổn thương.
+
+Như đã nói, phải kiên trì ít nhất sáu tháng. Cá nhân tôi khuyên mỗi ngày không dưới bốn giờ đầu vào. Bắt đầu làm sẽ thấy không khó, vì “dù không hiểu cũng chẳng sao”. Nghe nhiều và lâu, sớm muộn có ngày muốn không hiểu cũng khó. Tất nhiên, ngay từ đầu, để hiệu quả hơn, có thể chủ động tăng dần độ khó văn bản và tốt nhất kết hợp đọc kỹ. Trong thời gian đó, gần như ai cũng cảm thấy không tiến bộ, nhưng “cảm giác” ấy không đáng tin. Thực ra, cảm giác của ta gần như luôn cực kỳ không đáng tin. Hãy xem hai đường thẳng dưới đây, đường nào dài hơn?
 
 ![](images/figure06.png)
 
-感觉上当然是下面第二条直线更长，可实际上这两条直线是一样长的。有些人甚至觉得上面的两个方块比下面的两个方块更小，那也是错觉；有些人觉得下面那条直线比上面的直线更粗，那还是错觉。每当因觉得自己毫无进步而觉得气馁的时候，不妨想想这张图片，提醒自己 “感觉并不靠谱”，而后再回想一下刚刚 Paul Bach-y-Rita 教授对 “平台期” 的解释。而后尽快恢复心平气和的状态，接着干活就是了。
+Cảm giác đương nhiên là đường thứ hai bên dưới dài hơn, nhưng thực tế chúng bằng nhau. Có người còn thấy hai khối vuông phía trên nhỏ hơn hai khối dưới, cũng là ảo giác; có người thấy đường dưới dày hơn đường trên, lại là ảo giác. Mỗi khi nản vì cảm thấy không tiến bộ, hãy nhớ hình này, tự nhắc “cảm giác không đáng tin”, rồi nhớ giải thích về “giai đoạn chững” của Bach-y-Rita. Sau đó mau lấy lại bình tĩnh và tiếp tục làm.
 
-## 5. 计算机辅助工具
+> **Ghi chú biên tập về luyện nghe:** Bốn giờ mỗi ngày và sáu tháng là lịch tác giả đề xuất, không phải ngưỡng chung bảo đảm tiến bộ. Người Việt có thể kết hợp tài liệu vừa sức, bản chép lời, nghe lại và nhiều giọng nói; không cần loại bỏ tài liệu đọc chậm hoặc bỏ qua nghĩa. Cách gọi tiếng Anh của người da đen trong nguồn không có nghĩa mọi người da đen nói cùng một giọng. Đổi tai hay chỉ đeo một tai không tự bảo vệ thính lực; âm lượng và thời lượng tiếp xúc vẫn quan trọng. Xem [WHO về nghe an toàn](https://www.who.int/news-room/questions-and-answers/item/deafness-and-hearing-loss-safe-listening); bốn giờ mỗi ngày không phải mức an toàn chung. Các thiết bị, giá cả và URL chương trình được giữ như bối cảnh lịch sử, không phải khuyến nghị mua hiện nay. Hình ảo giác minh họa giới hạn cảm nhận, không chứng minh mọi cảm giác về học tập đều sai; có thể theo dõi tiến bộ bằng một bản thu định kỳ và mục tiêu cụ thể.
 
-另外，如果熟悉计算机操作的话（其实也必须熟悉才对），还可以找一些音频编辑软件作为辅助工具，如 Cool Edit，Audio Edit Deluxe，Audacity 等等。这些软件对用户来说相当于 “音频视觉化”，可以通过音频图谱清楚地看到语音之间的空隙、音量的大小强弱等等。并且，用它们很容易做到把某一段音频（比较精确地定义起点和终点）反复播放无数遍。
+## 5. Công cụ hỗ trợ trên máy tính
+
+Ngoài ra, nếu quen thao tác máy tính, thực ra cũng phải thành thạo, bạn có thể tìm phần mềm chỉnh âm thanh hỗ trợ như Cool Edit, Audio Edit Deluxe hoặc Audacity. Với người dùng, chúng tương đương “trực quan hóa âm thanh”: qua biểu đồ, có thể nhìn rõ khoảng trống giữa âm, mức lớn nhỏ, mạnh yếu. Dùng chúng cũng rất dễ phát lặp vô số lần một đoạn âm thanh với điểm đầu, điểm cuối được xác định tương đối chính xác.
 
 ![](images/figure07.png)
 
-AudioEdit Deluxe v4.10 截图
+Ảnh chụp AudioEdit Deluxe v4.10.
 
-### AudioEdit 使用简要说明
+### Hướng dẫn ngắn về AudioEdit
 
-如图中所示：
+Như trong hình:
 
-1. 打开声音文件（mp3、wav）文件
-2. 循环播放按钮
-3. 用鼠标左键点击定义起点，用鼠标右键点击定义终点，选中音频中的一段
-4. 将鼠标指针放在选中区域，用鼠标滚轮放大缩小音频图
+1. Mở tệp âm thanh mp3 hoặc wav.
+2. Nút phát lặp.
+3. Bấm chuột trái đặt điểm đầu, bấm chuột phải đặt điểm cuối để chọn một đoạn âm thanh.
+4. Đưa con trỏ vào vùng đã chọn, dùng con lăn chuột phóng to hoặc thu nhỏ biểu đồ.
 
-尽管成年之后再学英语（或成年之后才开始好好学英语）的人语音无论如何都做不到完美，但是，只要方法的当，尽心尽力，总是可以有很大的改善余地。我个人就是明证。小时候我的英语发音据说不错，可那是我的初中老师说的，现在想来并不靠谱。再后来与国内大多数在校学生一样，若干年没有开口说过哪怕一个英文单词。毕业之后很多年，阴差阳错开始在新东方教书的时候，口语发音差得一塌糊涂。刚开始教的是阅读，再后来教的是写作，期间还教过各种各样的课程。尽管课教得足够好，但发音还是经常遭到嘲笑。
+Dù người học tiếng Anh khi trưởng thành, hoặc đến lúc ấy mới bắt đầu học nghiêm túc, không thể phát âm hoàn hảo bằng bất cứ cách nào, chỉ cần phương pháp đúng và dốc lòng, luôn có dư địa cải thiện rất lớn. Chính tôi là bằng chứng. Hồi nhỏ, nghe nói phát âm tiếng Anh của tôi khá, nhưng đó là lời giáo viên trung học cơ sở, giờ nghĩ lại không đáng tin. Về sau, như phần lớn học sinh Trung Quốc, mấy năm tôi không mở miệng nói dù một từ tiếng Anh. Nhiều năm sau tốt nghiệp, tình cờ bắt đầu dạy ở Tân Đông Phương, khả năng nói và phát âm tệ vô cùng. Ban đầu tôi dạy đọc, sau dạy viết, trong thời gian đó còn dạy đủ loại khóa. Dù dạy đủ tốt, phát âm vẫn thường bị cười nhạo.
 
-如果说我有什么让我自己偷着乐的优良品质的话，那就是我不太容易受到他人嘲弄的打击。这也许跟我不太在意自己的缺点的同时善于安慰自己有关系。长得难看就难看吧，反正男人也不靠长相（事实上是，我这样的想靠也没得靠）；个子不高就不高吧，反正长得太高穿衣服还费布料（事实上我也知道，高个子的人相对来看更容易获得信任 —— 这不是我说的，是心理学家调研出来的结果）；发音差就差吧，反正我也不是最差的（那时候我还在新东方，最差的是谁不能说，否则可能会被他解雇，哈哈；现在我已经离开新东方，还是不能说，否则人家会认为我不厚道，嘿嘿）—— 再怎么差也比大多数日本人强吧？
+Nếu có phẩm chất tốt khiến tôi thầm vui, đó là tôi không dễ bị lời chế giễu làm nhụt chí. Có lẽ vì không quá bận tâm khuyết điểm và giỏi tự an ủi. Xấu thì xấu, đàn ông đâu sống nhờ ngoại hình; thực ra người như tôi có muốn cũng chẳng có gì để nhờ. Không cao thì thôi, cao quá mặc quần áo còn tốn vải; thực ra tôi cũng biết người cao tương đối dễ được tin hơn, không phải tôi nói mà là kết quả khảo sát của nhà tâm lý. Phát âm kém thì kém, dù sao tôi cũng chưa kém nhất. Khi còn ở Tân Đông Phương, không thể nói ai kém nhất, kẻo bị người ấy sa thải, ha ha; giờ đã rời nơi ấy vẫn không thể nói, kẻo bị cho là không tử tế, hì hì. Kém đến đâu cũng hơn phần lớn người Nhật chứ?
 
-不过，我还是挣扎着重塑了一下自己的语音，用的材料是[托福听力考试的录音](http://toefl.xdf.cn/bj/ziliao/listening/201207/108000714.html)。集中训练的时间其实真的不是很长，大约三个月左右，就大大改善了一次。而后就是长期听各种各样的有声电子书籍，一转眼已经许多年过去，已经不再有谁因为我的发音嘲弄我了。也许是他们已经嘲弄疲劳了，也许是因为我的语音已经基本上过关了 —— 我想，后者的可能性应该更大一些。因为说话这东西，说着说着就好起来了。
+Nhưng tôi vẫn vật lộn định hình lại phát âm, dùng [bản thu bài nghe TOEFL](http://toefl.xdf.cn/bj/ziliao/listening/201207/108000714.html). Thời gian tập trung thực ra không dài, khoảng ba tháng, đã có một đợt cải thiện lớn. Sau đó tôi nghe lâu dài đủ loại sách nói điện tử. Chớp mắt nhiều năm qua, không còn ai chế giễu phát âm nữa. Có lẽ họ mệt vì chế giễu, hoặc phát âm tôi đã cơ bản đạt yêu cầu. Tôi nghĩ khả năng sau lớn hơn, vì nói là thứ cứ nói rồi sẽ khá lên.
 
-## 6. 要宽于律己
+> **Ghi chú biên tập:** Các thao tác trên mô tả AudioEdit Deluxe v4.10 trong ảnh gốc; phần mềm khác có thể dùng thao tác chọn đoạn khác. Ảnh và phần mềm được giữ để hiểu hướng dẫn lịch sử, không phải yêu cầu cài phiên bản này. Nhận xét về ngoại hình, chiều cao, người Nhật và việc người lớn “không thể hoàn hảo” là lời tác giả, không phải cơ sở đánh giá một người học Việt Nam. Có thể dùng chức năng chọn đoạn và phát lặp của công cụ đang có để nghe, thu âm, đối chiếu; theo dõi mức rõ ràng của chính mình thay vì xếp hạng theo quốc tịch.
 
-“严于律己” 是好习惯。但是，在尝试着重塑自己的语音之时，则大可 “宽于律己”。实践中，我甚至告诉学生，第一原则就是（至少）暂时不必过分追求 “标准” —— 事实上，追求也没用，因为无论是谁也做不到短时间之内就达到所谓 “标准”。
+## 6. Hãy rộng lượng với bản thân
 
-使用不同语言的人之间，口腔动作习惯是很不一样的。刚刚出生的婴儿不会说话，是因为他还不知道怎样运用嘴唇、舌头、咽喉、声带等器官，也不知道应该控制气流振动进而发出不同的声音。他要周而复始地听、观察、分辨、模仿、矫正之后才能够咿咿呀呀地开始说话。之后还要经过若干年，甚至更长的时间，小孩子才能做到口齿清晰 —— 当然还有相当一部分人也许一辈子都做不到口齿清晰（比如大家比较熟悉的周杰伦先生）。
+“Nghiêm với bản thân” là thói quen tốt. Nhưng khi thử định hình lại phát âm, bạn hoàn toàn có thể “rộng lượng với mình”. Trong thực hành, tôi thậm chí nói với học sinh rằng nguyên tắc đầu tiên là ít nhất tạm thời không quá theo đuổi “chuẩn”. Thực ra theo đuổi cũng vô ích, vì không ai đạt cái gọi là chuẩn trong thời gian ngắn.
 
-一旦各个参与发声的器官开始适应一种语言之后，各个器官将慢慢更习惯于做某些动作，而同时渐渐更难做出一些讲母语时不常用或者甚至干脆不用的动作。说外语的时候，某些口腔动作很难做出的话，各个器官将组合起来不由自主地做出一个相对最为接近的动作，于是最终说出来的听起来却是另外一个音。比如大多韩国人很难发出 “v” 这个音 —— 因为他们的语言中不存在这个音，所以当他们把语音教程中的讲解研习完毕之后，“依葫芦画瓢” 发出的声音却永远是 “b”。这个道理和很多南方人发不出辅音 “f”、“n”、或者分不清前鼻音后鼻音一样，他们可能把 “皮肤” 说成 “皮乎”，把 “女子” 说成 “驴子”，或者把 “女篮” 说成 “女郎”……
+Người dùng các ngôn ngữ khác nhau có thói quen vận động miệng rất khác. Trẻ sơ sinh chưa nói vì chưa biết dùng môi, lưỡi, họng, dây thanh…, cũng chưa biết kiểm soát luồng hơi rung để tạo âm khác nhau. Trẻ phải nghe, quan sát, phân biệt, bắt chước, chỉnh sửa lặp đi lặp lại rồi mới bi bô. Sau đó còn cần nhiều năm, thậm chí lâu hơn, mới nói rõ. Tất nhiên khá nhiều người có thể cả đời không nói rõ, chẳng hạn Châu Kiệt Luân mà nhiều người biết.
 
-我有个韩国朋友，永远把 “video” 说成 “bideo”，刚开始我很不习惯，不自觉地纠正了他一两次，却发现他好像并不知道自己把 “video” 说成了 “bideo”，而更像是他一直以为自己说的就是 “video”。后来有一天我逗他玩，学着他把 “video” 说成 “bideo”，结果他马上跳起来（一点都没发现我实在开玩笑）说，“哈，你发音不对，那个词应该读成'bideo'！” —— 这我才明白还有这么好玩的事儿：发错音的人听不出来自己的发音是错的，但是同样的错误别人说出来他瞬间就能判断出来。于是我想 “我自己也很可能有这样的时候罢” —— 后来发现果不其然，只不过我发错的、并且不知道自己错的是另外一些音而已。
+Khi các cơ quan tạo tiếng đã thích nghi với một ngôn ngữ, chúng dần quen một số động tác, đồng thời khó hơn với những động tác ít hoặc không dùng khi nói tiếng mẹ đẻ. Nếu lúc nói ngoại ngữ có động tác miệng khó làm, các cơ quan sẽ phối hợp, bất giác làm động tác gần nhất, khiến âm phát ra nghe thành âm khác. Chẳng hạn phần lớn người Hàn khó phát “v”, vì ngôn ngữ của họ không có âm ấy. Nên dù nghiên cứu hết lời giải thích trong giáo trình, khi làm theo, âm tạo ra vẫn luôn là “b”. Cũng giống nhiều người miền nam Trung Quốc không phát được phụ âm “f”, “n”, hoặc không phân biệt âm mũi trước, sau: nguyên tác đưa các cặp pinyin *pífū/píhū*, *nǚzǐ/lǘzi* và *nǚlán/nǚláng* để minh họa thay âm.
 
-很多语音教程尽管出发点是无可厚非的，但是它们把各个发音的过程讲解的太细、太繁琐，乃至于过分复杂难以学会。事实上，先做到个大概就可以了。这并不是说，那些发音的原理是不应该学的，恰恰相反，要学，还应该好好学；只不过，事实是就算暂时不学也不是完全不行 —— 只要多听多说，慢慢就会越来越接近标准。只不过大多数人误会 “多听多说” 中的 “多” 究竟是怎样的一个练习量而已。而所谓的 “多”，肯定不是一两个小时，不是一两天，也不是一个月两个月，而是至少每天不间歇的一两年。有些人据称是学了好多年，事实上，那些年里真正用来练习的时间其实断断续续间隔太长乃至于等同于零。所以其实还需要更多、更密集的练习。小孩子是从无到有地习得那些常用口腔动作模式，那还需要好多年才慢慢做到熟练（即口齿清晰）呢；而成年人往往需要运用更多的努力去与已经养成的习惯作斗争，难道不应该需要更长的时间吗？
+Tôi có một bạn Hàn Quốc luôn nói “video” thành “bideo”. Ban đầu tôi rất không quen, bất giác sửa một, hai lần, nhưng thấy anh dường như không biết mình nói “video” thành “bideo”; đúng hơn, anh luôn nghĩ mình đang nói “video”. Sau có hôm tôi trêu, bắt chước nói “bideo”, anh lập tức bật lên, không nhận ra tôi đùa: “Ha, anh phát âm sai, từ đó phải đọc là 'bideo'!”. Tôi mới hiểu có chuyện thú vị thế: người phát sai không nghe ra lỗi của mình, nhưng cùng lỗi ấy người khác nói thì nhận ra ngay. Tôi nghĩ “Chắc mình cũng có lúc như thế”. Sau phát hiện đúng thật, chỉ là những âm tôi phát sai mà không biết thuộc nhóm khác.
 
-人们在学习外语发音的时候，大多都不自觉地把短期目标设得太高，最终导致必然遭遇不可想象的挫折感，只因为给自己设了个根本达不到的目标。老师们对学生的要求往往太高 —— 刚开始没多久就开始指责学生的发音不标准，过早急于纠正。事实上学生们也对自己要求太高，刚刚开始学的时候就要求自己标准是不可能做到的。练习一段时间之后，就要更加仔细地研习语音教程中的发音原理，尝试着去理解各种规则，而后通过反复的实践运用这些知识矫正自己。但更重要的还是要多说多练。只要听的说的练的足够多，其实无论是谁都可以做得足够好。
+Nhiều giáo trình phát âm có ý định không đáng trách, nhưng giải thích quá chi tiết, rườm rà, khiến quá phức tạp, khó học. Thực ra trước hết làm gần đúng là được. Điều ấy không có nghĩa không nên học nguyên lý; ngược lại, nên học và học kỹ. Chỉ là tạm chưa học cũng không phải hoàn toàn không được. Nghe, nói nhiều, dần sẽ gần chuẩn hơn. Phần lớn chỉ hiểu nhầm “nhiều” trong “nghe nhiều, nói nhiều” là lượng luyện bao nhiêu. “Nhiều” chắc chắn không phải một, hai giờ, một, hai ngày, hay một, hai tháng, mà ít nhất một, hai năm không gián đoạn mỗi ngày. Có người được cho là học nhiều năm, nhưng thời gian thực luyện trong những năm ấy đứt quãng, khoảng nghỉ dài đến mức tương đương số không. Vì vậy cần luyện nhiều, dày hơn. Trẻ tiếp thu những kiểu vận động miệng thường dùng từ số không còn phải mất nhiều năm mới dần thành thạo, nói rõ. Người lớn thường cần nỗ lực nhiều hơn để chống lại thói quen đã hình thành, chẳng lẽ không nên cần thời gian dài hơn?
 
-## 7. 放慢你的语速
+Khi học phát âm ngoại ngữ, phần lớn bất giác đặt mục tiêu ngắn hạn quá cao, cuối cùng tất yếu gặp cảm giác thất bại khó tưởng tượng, chỉ vì tự đặt mục tiêu không thể đạt. Giáo viên thường yêu cầu quá cao: học chưa lâu đã trách phát âm chưa chuẩn, vội sửa quá sớm. Thực ra học sinh cũng đòi hỏi quá cao ở mình; vừa bắt đầu mà đã yêu cầu chuẩn là không thể. Sau một thời gian luyện, nên nghiên cứu nguyên lý trong giáo trình kỹ hơn, thử hiểu các quy tắc, rồi qua thực hành lặp lại mà dùng kiến thức ấy tự sửa. Nhưng quan trọng hơn vẫn là nói nhiều, luyện nhiều. Chỉ cần nghe, nói, luyện đủ, bất cứ ai cũng làm đủ tốt.
 
-回头再看的时候，我发现自己和其他许多人一样，犯了很多低级错误。比如，曾经竟然以为 “说得快” 就是 “说的流利”。稍加观察、稍加思考，就应该知道其实 “快” 和 “流利” 根本不是一这回事儿。
+> **Ghi chú biên tập về đối chiếu ngôn ngữ:** Các cặp pinyin trong nguyên tác minh họa thay âm: *pífū* (da) thành *píhū* (dạng viết mô phỏng âm sai); *nǚzǐ* (phụ nữ) thành *lǘzi* (con lừa); *nǚlán* (bóng rổ nữ) thành *nǚláng* (cô gái). Chúng không phải quy tắc tiếng Việt. Ví dụ “video/bideo” là câu chuyện một cá nhân, không chứng minh mọi người Hàn chỉ có thể phát /b/ hoặc không sửa được /v/. Nhận xét về Châu Kiệt Luân cũng không phải đánh giá lâm sàng. Người Việt có thể tập vị trí môi, răng, lưỡi của từng âm và xin phản hồi cụ thể; lịch “một, hai năm không gián đoạn” không phải ngưỡng cố định cho mọi người.
 
-事实上，很多中国学生都在抱怨正常速度的英文 “太快、听不懂” 的同时，他们自己讲英文的时候却比老外快很多 —— 这并不是一个很容易观察清楚，也不是一个很容易能够说清楚的现象。人们往往混淆因果。听外语的时候，其实并不是 “因为人家说得太快所以我才听不懂”，而是 “因为我听不懂所以才觉得人家说得太快”。
+## 7. Giảm tốc độ nói
 
-例如，你听到的某句话里有个你并不认识的词，比如，“idiosyncratic”；当时你听到的是一串组合起来之后并不知道是什么意思的音节，于是你的大脑就会不由自主地去思索（哪怕是猜测）那到底是什么 —— 这是需要时间精力的（哪怕以毫秒为单位）。而在不熟练的情况下，我们的大脑很难同时处理一个以上的任务，而在你费力思索的时候，讲话者却自顾自地说下去，于是你就可能 “漏掉” 了一些信息 —— 你当然觉得人家 “说得太快” 了。
+Nhìn lại, tôi thấy mình giống nhiều người, từng mắc nhiều lỗi sơ đẳng. Chẳng hạn, tôi từng nghĩ “nói nhanh” chính là “nói trôi chảy”. Chỉ cần quan sát, suy nghĩ một chút là biết “nhanh” và “trôi chảy” căn bản không phải cùng một chuyện.
 
-搞清楚这个因果关系其实很重要。因为这是很多人讲不好英文的重要原因之一。正是因为搞错了这个因果关系，很多人在讲英语，尤其是想讲 “好” 英语的时候（比如考试的时候，比如面试的时候），就会不由自主地快起来，不仅快，还快得过分，最后可能会快到老外都听不懂的地步。
+Thực ra, nhiều học sinh Trung Quốc vừa than tiếng Anh tốc độ bình thường “quá nhanh, không hiểu”, vừa nói tiếng Anh nhanh hơn người nước ngoài rất nhiều. Đây không phải hiện tượng dễ quan sát rõ hoặc giải thích rõ. Người ta thường nhầm nhân quả. Nghe ngoại ngữ không phải “vì người ta nói quá nhanh nên tôi không hiểu”, mà là “vì tôi không hiểu nên thấy người ta quá nhanh”.
 
-就算没有这个因素，中国人讲英语还是会不由自主地更快。其原因在于中文的每个字都是一个声母加上一个韵母构成的，而中文的韵母是不分长短的。英文则不同，元音不仅有长短之分，还单双不同，另外还有一个 “短” 元音比别的短元音稍微长一点、比长元音稍微短一点：/æ/（读者不妨听听韦氏词典里 “ab” 这个单词的读音和 “ebb” 这个单词的读音，区分一下/æ/和/e/）。所以，中国学生说 apple 的时候其实说出来的都是 epple（还好没有这个词存在，所以也就不会被听话者混淆）；大多中国学生都把 important 读成/ɪmpɔtənt/，而非/ɪmpɔːtənt/，尽管他们也都知道 “海滩” 这个单词 “beach” 要是读短了就是另外一个意思；再比如，/aɪ/这个双元音，中国学生也基本上都读成中文的 “爱” 字。
+Chẳng hạn, trong câu nghe được có từ bạn không biết, như “idiosyncratic”. Bạn nghe một chuỗi âm tiết mà không biết nghĩa khi ghép lại, nên não bất giác suy nghĩ, dù chỉ đoán, đó là gì. Việc này cần thời gian và công sức, dù tính bằng mili giây. Khi chưa thành thạo, não khó xử lý hơn một việc cùng lúc. Trong lúc bạn cố nghĩ, người kia vẫn nói tiếp, nên có thể bạn bỏ lỡ thông tin, đương nhiên thấy họ “nói quá nhanh”.
 
-由于每个长元音都被读成短元音，所以，中国学生在讲英文的时候动不动就在某些地方比老外快了 “半拍”，一句话说下来，不知不觉就比老外快了好几拍 …… 所以，刚开始练习跟读的时候，要跟自己较较劲，一方面要克服自己想 “快” 一点的欲望，另外一方面还要刻意防止自己一不留神地快起来 —— 元音该长的就要长，而双元音要尽量饱满。
+Hiểu rõ quan hệ nhân quả này quan trọng, vì đó là một nguyên nhân khiến nhiều người nói tiếng Anh không tốt. Chính vì hiểu sai, nhiều người khi nói, đặc biệt muốn nói “hay”, như lúc thi hoặc phỏng vấn, bất giác nhanh lên, không chỉ nhanh mà quá nhanh, cuối cùng có thể đến mức người nước ngoài cũng không hiểu.
 
-## 8. 比连读更重要的是停顿
+Ngay cả không có yếu tố ấy, người Trung Quốc vẫn bất giác nói tiếng Anh nhanh hơn. Vì mỗi chữ tiếng Trung cấu tạo từ một thanh mẫu và một vận mẫu, mà vận mẫu không phân biệt dài ngắn. Tiếng Anh khác: nguyên âm không chỉ dài, ngắn, mà còn đơn, đôi. Có thêm một nguyên âm “ngắn” hơi dài hơn nguyên âm ngắn khác, hơi ngắn hơn nguyên âm dài: /æ/. Bạn có thể nghe “ab” và “ebb” trong từ điển Merriam-Webster để phân biệt /æ/ và /e/. Vì vậy, học sinh Trung Quốc nói apple thực ra đều thành epple; may không có từ ấy nên người nghe không nhầm. Phần lớn đọc important thành /ɪmpɔtənt/ thay vì /ɪmpɔːtənt/, dù đều biết từ “beach”, bãi biển, đọc ngắn sẽ thành nghĩa khác. Hoặc nguyên âm đôi /aɪ/ về cơ bản đều bị đọc giống *ài*, âm tiếng Trung có nghĩa là yêu.
 
-也许是因为人们在讲外语的时候总是不由自主地想更快一点，所以，在研究自然语流特征的时候，都不由自主地更为关注 “连读”。事实上，连读可能是所有自然语流特征中最不重要的一个，道理也很简单，熟练了自然就连起来了，不熟练的时候非要连起来就格外地生硬。
+Vì mỗi nguyên âm dài đều bị đọc thành ngắn, học sinh Trung Quốc khi nói dễ nhanh hơn người nước ngoài “nửa nhịp” ở vài chỗ. Hết một câu, bất giác đã nhanh hơn mấy nhịp… Vì vậy, lúc mới luyện đọc theo, cần tự đấu với mình: vừa khắc phục ham muốn “nhanh hơn”, vừa cố ngăn bản thân sơ ý tăng tốc. Nguyên âm cần dài thì phải dài, nguyên âm đôi cần thể hiện đầy đặn.
 
-英文与中文不一样的另外一个地方就是中文的基本单位是 “字”，一个声母加上一个韵母，即，每个字都有且只有一个音节；英文的基本单位是 “词”，可能是一个音节，也可能是多个音节。与中文的 “词” 对应的是英文的 “词组”。最长的英文单词据说由 189,819 个字符构成，是目前已知最大的蛋白质 “titin” 的化学名称，鬼知道那词究竟有多少个音节，不知道这辈子能否遇到哪一个人能读出那个单词？而英文字典里最长的词汇是 45 个字符构成的——pneumonoultramicroscopicsilicovolcanoconiosis——韦氏词典的电子版（ver 3.0）里也没有它的真人朗读发音文件，要听听这个单词究竟怎么读，只能将就着听一听微软语音引擎的朗读 —— 金山词霸里的《简明英汉词典》里就有。
+> **Ghi chú biên tập:** *Ài* là âm tiếng Trung có nghĩa là yêu, được dùng làm ví dụ, không phải cách đọc /aɪ/ cho người Việt. Độ dài nguyên âm thay đổi theo ngữ cảnh, trọng âm và giọng; không chỉ có một thang cố định trong đó /æ/ luôn nằm giữa “ngắn” và “dài”. Phân biệt “beach” với từ dễ nhầm còn dựa vào chất lượng nguyên âm, không chỉ kéo dài. Tốc độ đầu vào cũng có thể gây khó thật, nên không cần phủ nhận mọi trường hợp người nói quá nhanh. Khi luyện, hãy ưu tiên nhịp tự nhiên và âm dễ phân biệt, dùng bản thu cùng một giọng để đối chiếu, tránh chỉ kéo dài âm hoặc áp nhịp tiếng Trung sang tiếng Việt.
 
-由于英文中有很多词汇是多音节构成的（刚才那个 “pneu” 打头的词汇总计有 18 个音节！），所以，英文的音节就有重音和非重音之分。为了把一个落在重音上的音节读成重音，其实有个特别重要的细节需要注意，就是在重音音节之前要有一个停顿 —— 可能是很短促的，也可以是很夸张的。而这个停顿的存在，将使其后重音清楚地读出成为可能。
+## 8. Ngắt nghỉ quan trọng hơn nối âm
 
-比如 “especially” 这个单词，我们在练习的时候不妨夸张一点。从有重音音节的位置开始把这个单词分成两部分：“e”|“specially”。在读出 “e” 之后把嘴闭上（准备发 “spe” 这个音节）等上足足一秒钟，然后再用力发出刚刚准备好的 “spe” 以及紧跟着的 “cially”。是不是感觉 “spe” 这个音节更清楚了呢？可以多拿几个单词练练，比如：un|fortunately、im|portant、under|stand、edu|cation，par|ticular，fi|nancial……
+Có lẽ vì khi nói ngoại ngữ, người ta bất giác muốn nhanh hơn, nên lúc nghiên cứu lời nói tự nhiên cũng chú ý “nối âm” hơn. Thực ra, nối âm có thể là đặc điểm ít quan trọng nhất của lời nói tự nhiên. Lý do đơn giản: thành thạo thì tự nối; chưa quen mà cố nối sẽ rất cứng.
 
-由于我们自己的母语之中，一个词中的每个字都是匀速连贯读完的，期间没有停顿 —— 比如 “高低不平”，比如 “嚎啕大哭” —— 所以，我们很不习惯在说一个英文单词的时候期间竟然还有停顿。但事实上，在英语母语使用者脑子里，一个单词确实是可以分开说出来的。有很多例子可以很好地说明这一点，比如，好莱坞电影里，就经常有人把 “absolutely” 说成 “ab-fucking-solutely” 或者 “abso-fucking-lutely”。
+Một khác biệt nữa giữa tiếng Anh và tiếng Trung là đơn vị cơ bản tiếng Trung là “chữ”, một thanh mẫu cộng một vận mẫu, tức mỗi chữ có đúng một âm tiết. Đơn vị cơ bản tiếng Anh là “từ”, có thể một hoặc nhiều âm tiết. Tương ứng với “từ” tiếng Trung là “cụm từ” tiếng Anh. Từ tiếng Anh dài nhất được cho là gồm 189.819 ký tự, tên hóa học của protein lớn nhất được biết hiện nay, “titin”. Có trời mới biết bao nhiêu âm tiết, không biết đời này có gặp ai đọc nổi không? Còn từ dài nhất trong từ điển tiếng Anh gồm 45 ký tự: pneumonoultramicroscopicsilicovolcanoconiosis. Bản điện tử Merriam-Webster ver 3.0 cũng không có bản người thật đọc từ ấy; muốn nghe đành nghe máy tổng hợp giọng Microsoft đọc. Trong *Từ điển Anh - Trung giản minh* của Kingsoft PowerWord có.
 
-好玩的是，字典里的单词读音（真人发音朗读录音），尽管是单个词发音，重音音节之前却往往没有能够明显感觉到的停顿（也可能恰恰是因为只读一个单词）。这可能也是大多数初学者很少注意到这种停顿存在的原因。
+Vì nhiều từ tiếng Anh gồm nhiều âm tiết, từ vừa bắt đầu bằng “pneu” có tổng cộng 18 âm tiết, nên có âm tiết mang trọng âm và không mang trọng âm. Để đọc âm tiết nhấn thành trọng âm, có một chi tiết đặc biệt quan trọng: trước âm tiết ấy cần ngắt, có thể rất ngắn hoặc cố tình rõ. Khoảng ngắt tạo điều kiện đọc rõ trọng âm sau nó.
 
-在读一个单词的时候内部都可能出现停顿，那更不消说读整个句子的时候了。可是，一旦机理搞明白，并且通过反复练习不断进步之后，我们就会觉得语流之间的停顿越来越清楚。要知道，无论是讲哪一种语言的人说话的时候都会不由自主地根据句意使自己的声音不断地在轻重缓急之间变换。分不清楚停顿，就无法掌握节奏，而如果掌握不了节奏，一切都很难办。所以，最先需要养成的习惯是该停顿的地方就要停顿。跟读的时候，越是初学者就越觉得录音里的语速快，他们甚至体会不到人家在读长句子的时候也有换气的时候 —— 不换气怎么说话么！而最终，当我们真的能做到听懂一个人说话的时候，哪怕他说得再快，我们都能听得清清楚楚；就算某些地方不足够清楚，也都猜得出来。（还记得之前提到过的 “模块” 吗？）
+Chẳng hạn với “especially”, khi luyện hãy làm hơi quá. Chia từ ở chỗ bắt đầu âm tiết nhấn thành “e”|“specially”. Đọc “e” rồi khép miệng, chuẩn bị phát âm tiết “spe”, chờ đủ một giây, sau đó phát mạnh “spe” và tiếp ngay “cially”. Có cảm thấy “spe” rõ hơn không? Có thể lấy thêm từ luyện: un|fortunately, im|portant, under|stand, edu|cation, par|ticular, fi|nancial…
 
-## 9. 很多的时候，其实并不是 “不准”，而是干脆错了！
+Vì trong tiếng mẹ đẻ của chúng ta, từng chữ trong một từ được đọc liền đều tốc độ, không ngắt, chẳng hạn *gāo dī bù píng*, *háo táo dà kū*, nên ta rất không quen việc nói một từ tiếng Anh mà bên trong lại có khoảng dừng. Nhưng thực ra, trong đầu người bản ngữ, một từ có thể được tách ra khi nói. Có nhiều ví dụ minh họa, như trong phim Hollywood thường có người nói “absolutely” thành “ab-fucking-solutely” hoặc “abso-fucking-lutely”.
 
-当我们被嘲笑发音不好的时候，嘲笑者可没耐心告诉我们究竟是哪里错了，怎么错了，应该怎么纠正 —— 当然，首先是他们也可能不会，也从来没有认真思考过。几乎肯定的是我们很少见到一个英语母语使用者嘲笑我们这些第二语言习得者发音差。事实上，只要我们的发音没差到一定程度，母语使用者往往会 “惊讶” 地说，“哇，你的英语真好！” 尤其是那些在中国境内呆过一段时间的老外更是如此，因为将心比心，他们知道学外语有多难 —— 当然，他们可能不知道的是，他们正在学的中文，是地球上最难以学会的外语，没有 “之一”。我很少（我猜别人也一样）遇到那些做得很好的人嘲笑别人做得不好。因为那些真正做到极致的人都确实知道走到那一步究竟有多难。梅兰芳先生在教学生的时候惊人地耐心；当学生做错的时候，梅先生只是说，“做好很难的……”。大概也是这个原因吧。
+Thú vị là bản người thật đọc từng từ trong từ điển, dù đọc riêng lẻ, thường không có khoảng ngắt dễ cảm nhận trước âm tiết nhấn; cũng có thể chính vì chỉ đọc một từ. Có lẽ đó là lý do phần lớn người mới học ít chú ý khoảng ngắt này.
 
-其实，很多的时候（也应该是更多的时候），我们所谓的 “发音不好”，并非我们哪些英语音素发音不准确、不标准，而是干脆把单词整个都念错了。我自己印象中记忆特别深刻的是 “façade” 这个单词，最初见到它的时候，印刷体里写的不是 “façade”，而是 “facade”，英文里没有 “ç” 这个字母（带尾巴的 “c”）；于是我就想当然地把它读成/ ˈfækeɪd/——还觉得自己读得很标准！和大多数学生一样，我也曾经把 “specific” 读成/ ˈspesɪfɪk/而不是/ spɘˈsɪfɪk/。一般来说，国内的大学生大多可能会读错以下五个单词中的至少三个：“cellist”、 “facade”、“heir”、“niche”、“specific”。我自己当初就全部读错。
+Ngay trong một từ còn có thể dừng, huống hồ cả câu. Khi hiểu cơ chế và tiến bộ qua luyện tập, ta sẽ cảm nhận khoảng dừng trong luồng lời nói rõ hơn. Người nói bất cứ ngôn ngữ nào đều bất giác thay đổi giọng nhẹ, mạnh, nhanh, chậm theo nghĩa câu. Không nhận ra ngắt nghỉ thì không nắm được nhịp; không nắm nhịp thì mọi thứ đều khó. Vì vậy, thói quen đầu tiên là cần dừng ở đâu thì dừng ở đó. Khi đọc theo, càng mới học càng thấy bản thu nhanh, thậm chí không nhận ra người ta cũng lấy hơi khi đọc câu dài; không lấy hơi thì nói thế nào! Cuối cùng, khi thực sự nghe hiểu, người kia nhanh đến đâu ta cũng nghe rõ; chỗ chưa đủ rõ cũng đoán được. Còn nhớ các “khối” đã nhắc trước đó không?
 
-所以，1）一定要恶补音标；2）查单词一定要读音标，并且在自己的文本上做出相应的记号；3）不要想当然地读单词。最后一条格外重要。比如，很多人都是先学这个词 “penalty”，再学 “penalize” 的，于是，不认真的他们一不小心就会把 “penalize” 读成/ˈpenəˌlaɪz/而不是/ˈpɪnəˌlaɪz /。再比如 “economy”, “economics”, “economist” 这三个词，“economics” 中的第一个音节读/e/，而其它两个的第一个音节是/ɪ/，很多人都会搞错，更不用说这三个单词每个单词的重音音节究竟是哪一个了。
+> **Ghi chú biên tập về trọng âm:** *Gāo dī bù píng* nghĩa là cao thấp không bằng phẳng; *háo táo dà kū* nghĩa là khóc to nức nở. Đây là ví dụ nhịp tiếng Trung của nguồn. Việc dừng một giây trong “especially” là bài tập tác giả đề xuất, không phải quy tắc bắt buộc ngắt trước mọi trọng âm trong lời nói tự nhiên. [British Council mô tả trọng âm qua độ dài, cao độ và cường độ](https://www.teachingenglish.org.uk/professional-development/teachers/teaching-knowledge-database/q-s/stress); trọng âm không đồng nghĩa phải đóng miệng hay tạo một khoảng im lặng. Các dạng chèn từ tục là ví dụ có chủ ý của nguồn, không phải mẫu giao tiếp lịch sự. Quan hệ từ và chữ giữa hai ngôn ngữ cũng không phải một-một; tiếng Trung có từ nhiều chữ. Phiên âm [Merriam-Webster Medical của pneumonoultramicroscopicsilicovolcanoconiosis](https://www.merriam-webster.com/medical/pneumonoultramicroscopicsilicovolcanoconiosis) thể hiện 19 âm tiết, khác con số 18 của tác giả. Các nhận định về “từ dài nhất” và phần mềm thuộc bối cảnh nguồn, không phải bảng xếp hạng cập nhật.
 
-为了避免因想当然而自以为是带来的尴尬，最好每学一个单词都要查词典。这是个学习工具丰富而又先进的时代，过去的人（哪怕仅仅十年前）根本无法想象现在学习的方便。几乎每个辞典都有电子版，哪怕是几百元的电子辞典也都有真人发音系统。每学一个单词，都要多花一点点时间精力把这个单词的衍生词都读一遍 —— 当然是根据音标，或者词典里的真人发音。
+## 9. Nhiều khi không phải “chưa chuẩn”, mà là đọc sai hẳn!
 
-这一点上千万不要嫌麻烦，因为错误都是一点一点积累出来的，一旦错误积累到一定程度的时候，其可怕程度无法想象。经常有学生问我，“老师，背单词还要记发音么？” 遇到这样的提问，我非常堵得慌，因为我知道我自己一两句话根本说服不了他们；事实上，他们问我这个问题的时候，很可能要的并不是我的回答，只是我的认同而已。
+Khi cười nhạo phát âm kém, người chế giễu không kiên nhẫn nói cụ thể sai đâu, sai thế nào, nên sửa ra sao. Đương nhiên, trước hết có thể chính họ cũng không biết và chưa từng nghĩ kỹ. Gần như chắc chắn chúng ta ít thấy người bản ngữ tiếng Anh chế giễu người học ngôn ngữ thứ hai phát âm kém. Thực ra, chỉ cần chưa kém đến một mức nào đó, họ thường “ngạc nhiên” nói: “Ồ, tiếng Anh của bạn tốt thật!”. Đặc biệt người nước ngoài từng ở Trung Quốc một thời gian càng như vậy, vì đặt mình vào người khác, họ biết học ngoại ngữ khó thế nào. Tất nhiên có thể họ không biết tiếng Trung mình đang học là ngoại ngữ khó học nhất Trái Đất, không phải một trong số khó nhất. Tôi hiếm khi, và đoán người khác cũng vậy, gặp người làm rất tốt mà cười nhạo người làm chưa tốt. Người đạt mức xuất sắc thật sự biết đi đến đó khó thế nào. Mai Lan Phương kiên nhẫn đáng kinh ngạc khi dạy; học trò sai, ông chỉ nói: “Làm tốt khó lắm…”. Có lẽ cũng vì vậy.
 
-我自己走过这条路，真的知道个中的艰辛。当年我开始纠正自己发音的时候，GRE 都考完了，词汇量非常大 —— 但这就意味着说读错的单词量也很庞大。我自己有一个本子，满满记载着几十页的单词，都是曾经读错过的（从来没敢数过究竟有多少个）。并且其中最大比重的是那种重音位置错误。这种错误非常讨厌，因为它们平时不太明显，就算有人听到了也可能懒得帮你纠正，因为一两个重音读错了单词往往并不会彻头彻尾地扭曲句意。所以，即便到了今天，也常常 “又” 发现一个读错重音，非常痛苦。我真的无比地幸运：恰好在那样的时候找了一份教英语的工作得以既有时间又有动力还有实践机会。否则的话，我猜自己一辈子连改善的机会都不会有，因为错误已经积累成灾难，肯定是望洋兴叹、有心无力啊。
+Thực ra, nhiều khi, có lẽ thường xuyên hơn, điều gọi là “phát âm không tốt” không phải phát một âm tố chưa đúng, chưa chuẩn, mà là đọc sai cả từ. Tôi nhớ rất sâu từ “façade”. Lần đầu thấy, bản in viết “facade” thay vì “façade”; tiếng Anh không có chữ “ç”, tức c có đuôi. Thế là tôi tự cho rằng nó đọc / ˈfækeɪd/, còn tưởng rất chuẩn! Như phần lớn học sinh, tôi cũng từng đọc “specific” thành / ˈspesɪfɪk/ thay vì / spɘˈsɪfɪk/. Nhìn chung, đa số sinh viên trong nước có thể đọc sai ít nhất ba trong năm từ “cellist”, “facade”, “heir”, “niche”, “specific”. Khi ấy, tôi đọc sai cả năm.
 
-## 10. 一定要学会音标
+Vì thế, 1) nhất định phải bù kiến thức phiên âm; 2) tra từ phải đọc phiên âm và đánh dấu tương ứng trên văn bản; 3) đừng tự đoán cách đọc rồi coi là đúng. Điểm cuối đặc biệt quan trọng. Chẳng hạn, nhiều người học “penalty” trước “penalize”, rồi sơ ý đọc “penalize” thành /ˈpenəˌlaɪz/ thay vì /ˈpɪnəˌlaɪz /. Hoặc ba từ “economy”, “economics”, “economist”: âm tiết đầu “economics” đọc /e/, hai từ còn lại đọc /ɪ/. Nhiều người nhầm, chưa kể trọng âm từng từ ở âm tiết nào.
 
-音标很重要，这谁都知道。可是很多人都觉得学音标特别难。甚至因此失去继续深入学习英语的信心。他们这么想是有一定来由的。想想看，音标是什么东西？说穿了不就相当于中文的拼音么？怎么学个拼音都这么难呢？难道我真的没有天分？
+Để tránh ngượng vì tự suy ra rồi tự cho là đúng, tốt nhất học từ nào cũng tra từ điển. Đây là thời công cụ học phong phú, tiên tiến; người xưa, dù chỉ mười năm trước, không thể tưởng tượng học tiện thế nào. Gần như từ điển nào cũng có bản điện tử; ngay cả từ điển điện tử giá vài trăm nhân dân tệ cũng có giọng người thật. Mỗi từ mới nên dành thêm chút thời gian, công sức đọc cả các từ phái sinh, đương nhiên dựa vào phiên âm hoặc bản đọc của từ điển.
 
-然而，当初我们学拼音的时候，所面临的境遇确实与后来学音标的时候大不相同。很多人在幼儿园的时候已经被教授过拼音，只不过，那时候学不学得会不那么重要，幼儿园老师也知道她的目标不是一定要教会，而是反正一定要教。而后来小学低年级的时候，拼音要再学一遍。细细回想就知道，哪怕 “仅仅再学一遍” 本身也不够用。事实上，真正起决定性作用的是其后长达三五年时间里，我们一直在运用拼音去查字典（还记得小时候书包里背着《新华字典》上学么？——当然后来还有一阵子这本字典被换成了更大更厚的《现代汉语大词典》）—— 后来这种长期运用才使得我们如同本能一般熟练使用汉语拼音。也就是说，我们中的大多数人是在至少系统地学了两遍之后，又在其后长达几年的时间里不断运用，才习得这个今天我们回头再看觉得无比简单的东西的。
+Đừng ngại phiền, vì lỗi tích lũy từng chút; đến một mức nào đó, sự đáng sợ khó tưởng tượng. Sinh viên thường hỏi tôi: “Thầy ơi, học thuộc từ còn phải nhớ cách đọc sao?”. Gặp câu ấy tôi rất nghẹn, vì biết một, hai lời không thuyết phục được. Thực ra, khi hỏi, rất có thể điều các em muốn không phải câu trả lời mà chỉ là sự đồng tình của tôi.
 
-中文是我们的母语，我们在上学之前已经有过好几年的语言使用经验 —— 我们不是等到上学才会说话的。事实上，大多数人在幼儿园的时候（有些人更早）就已经开始识字了。也就是说，当我们学习拼音的时候，我们早就会说话、能听懂相当数量的语言、而识字量也早就超过一定的数量。而一旦习得拼音之后，我们识字的速度就会大大提高，最终，大多数人在小学的前三年已经习得三千常用汉字（至少其中的绝大多数）。换言之，我们在学英语的时候，首先音标学的太快了，其次也学得太早了。甚至，音标竟然不得不成了语音教学的起始课程 —— 而我们习得母语的时候可是在已经基本获得了基本完善的发音能力之后才开始（有能力）学拼音！
+Tôi đã đi qua con đường này, thực sự biết khó khăn trong đó. Khi bắt đầu sửa phát âm, tôi thi GRE xong, vốn từ rất lớn; cũng nghĩa là lượng từ đọc sai rất lớn. Tôi có cuốn sổ kín hàng chục trang từ từng đọc sai, chưa bao giờ dám đếm. Tỷ lệ lớn nhất là sai vị trí trọng âm. Lỗi ấy rất khó chịu vì bình thường không rõ; người nghe thấy cũng có thể ngại sửa, bởi sai một, hai trọng âm thường không bóp méo hoàn toàn nghĩa câu. Vì vậy ngay đến hôm nay, tôi vẫn thường “lại” phát hiện một từ đọc sai trọng âm, rất khổ sở. Tôi thật sự vô cùng may mắn: đúng lúc ấy có công việc dạy tiếng Anh, vừa có thời gian, động lực, vừa có dịp thực hành. Nếu không, tôi đoán cả đời chẳng có cơ hội cải thiện; lỗi đã tích thành thảm họa, chắc chỉ biết nhìn biển thở dài, muốn mà không đủ sức.
 
-所以说，某种意义上，音标学习确实是一个难关。但是，一旦把机理弄清楚，就可以想出正确的方式去 “轻松掌握” 音标。首先，不要急于求成；其次，要通过大量反复运用去掌握音标；再次，运用大量的朗读训练使自己不知不觉地跨过语音养成的最初障碍。我个人认为，只有当一个人的语音达到正常水准（或者接近正常）之后，才算是具备轻松掌握音标的基础能力。而一旦习得音标的基础之后，就要时时应用，直到像了解汉语拼音一样了解英语音标。
+> **Ghi chú biên tập về phiên âm mẫu:** Các chuỗi phiên âm trên giữ nguyên nguồn, không phải tất cả đều đúng hoặc là biến thể duy nhất. “Specific” thường được ghi /spəˈsɪfɪk/, nguyên tác dùng ký hiệu /ɘ/ không phải schwa /ə/. “Penalize” có cách đọc với /iː/ ở âm đầu, không phải /ɪ/ như câu được gọi là đúng phía trên, và còn có biến thể hợp lệ với /e/ trong [Cambridge, mục penalize](https://dictionary.cambridge.org/us/dictionary/english/penalize). [“Economics” cũng có biến thể nguyên âm đầu](https://dictionary.cambridge.org/us/pronunciation/english/economics), không nên tự động đánh dấu một giọng khác là sai. Người Việt nên đối chiếu phiên âm và âm thanh trong cùng mục từ, chú ý trọng âm, rồi chọn cách đọc nhất quán; không cần chấp nhận thứ hạng “tiếng Trung khó nhất” như một kết luận áp dụng cho mọi người học.
 
-中国学生学习音标还有另外一个苦恼。我们的课本里大多所使用的是 D.J.音标（英音），但这并不是唯一的音标体系。除了 D.J.之外，有些地方的教材使用的是 K.K.音标（美音）；牛津词典和剑桥词典尽管都声称自己使用的是 IPA 国际音标，但多多少少各不相同；而有些学生在准备 SAT 或者 GRE 的时候，根据学长的建议开始使用 Merriam-Webster 词典，结果发现里面是彻头彻尾另外一个体系的音标 —— 事实上，几乎市面上所有的词典都在使用各不相同的音标体系。原本就不太好学的东西却又有那么多的版本 —— 当然更加令人气馁。
+## 10. Nhất định phải học ký hiệu phiên âm
 
-还好，今天的学生早已有机会使用更好的学习工具 —— 词典早就变成了电子词典。目前大多数电子辞典或者计算机上的词典软件都是配有真人发音的。所以，查到一个单词的时候，就算不认识音标，也可以听得到那个单词的发音。不过，最好还是能够用手写音标，因为查过字典之后，最好在文本上做个标记，以便将来更容易记得住。到这里，学习音标的目标多少就有了些变化 —— 对大多数人来说，这些标记不是写给别人看的，是写给自己看的，所以，只要自己能认得就好。（尽管能做到任何一处都规规矩矩更好。）
+Ai cũng biết phiên âm quan trọng. Nhưng nhiều người thấy học rất khó, thậm chí mất tự tin tiếp tục đào sâu tiếng Anh. Nghĩ vậy có lý do. Phiên âm là gì? Nói cho cùng, chẳng phải tương đương pinyin tiếng Trung sao? Sao chỉ học pinyin mà khó thế? Chẳng lẽ tôi thật sự không có năng khiếu?
 
-事实上，我早就发现自己在给文本标注音标的时候所使用的是一种 “独创” 的 “杂种体系”。比如，不知道什么时候起，我开始用/ɛ/替代了/e/；而自从慢慢偏向美音之后，就会经常在/t/下面加上浊化符号/t̬/；即便偏向美音了之后，也还是不习惯使用/ɚ/，而是用/ər/；即便是在最初学 K.K 音标的时候，我也不喜欢用手写/a/，而是写/ɑ/……即便如此，我从未觉得这种 “乱七八糟” 的体系对我个人的进一步学习有什么影响，不仅能用，还用得挺好。
+Nhưng hoàn cảnh lúc chúng ta học pinyin rất khác lúc học phiên âm tiếng Anh sau này. Nhiều người được dạy pinyin từ mẫu giáo, chỉ là học được hay không khi ấy không quá quan trọng; cô cũng biết mục tiêu không phải nhất định dạy cho biết, mà dù sao nhất định phải dạy. Đến các lớp đầu tiểu học, lại học pinyin một lượt. Nhớ kỹ sẽ thấy chỉ “học lại một lượt” cũng chưa đủ. Thực ra, điều quyết định là trong ba, năm năm sau, chúng ta liên tục dùng pinyin tra từ điển. Còn nhớ hồi nhỏ mang *Từ điển Tân Hoa* trong cặp đến trường không? Sau đó có thời gian nó được thay bằng *Đại từ điển Hán ngữ hiện đại* lớn, dày hơn. Chính việc dùng lâu dài ấy giúp dùng pinyin thành thạo như bản năng. Tức là phần lớn chúng ta học có hệ thống ít nhất hai lượt, rồi dùng không ngừng nhiều năm, mới tiếp thu thứ mà giờ nhìn lại thấy vô cùng đơn giản.
 
-以下是一个总结性的音标学习策略
+Tiếng Trung là tiếng mẹ đẻ trong bối cảnh của chúng ta; trước khi đi học, đã có vài năm kinh nghiệm sử dụng, không phải đến trường mới biết nói. Thực ra, phần lớn từ mẫu giáo, một số sớm hơn, đã bắt đầu biết chữ. Nghĩa là khi học pinyin, ta đã biết nói, nghe hiểu lượng lời đáng kể và biết một lượng chữ nhất định. Khi nắm pinyin, tốc độ học chữ tăng mạnh; cuối cùng, phần lớn trong ba năm đầu tiểu học đã học 3.000 chữ Hán thông dụng, ít nhất tuyệt đại đa số trong đó. Nói cách khác, khi học tiếng Anh, trước hết ta học phiên âm quá nhanh, tiếp đó quá sớm. Thậm chí phiên âm buộc phải thành bài mở đầu dạy phát âm, trong khi với tiếng mẹ đẻ, ta chỉ bắt đầu và có khả năng học pinyin sau khi đã có năng lực phát âm cơ bản khá hoàn chỉnh!
 
-- 首先确定自己有足够的朗读经验。比如，每日晨读一小时（听录音读课本就好）坚持了至少三个月以上。在这样的过程中，大多数语言都已经把握得足够好（要很久以后才能做到接近 “标准” 呢），于是，学习音标就有了保障。
-- 只完整学习一个体系。如果还在初中，那么可以选择 D.J.音标，或者是 K.K 音标 —— 即，你的课本所使用的那种。如果已经是学英语多年了的人，那么就要选用自己正在使用、最常使用的词典的音标体系。
-- 最好使用计算机上的有声版词典，这样就可以把所有例词都查出来，并录制成 mp3。反复跟读。
-- 对照着音标表，抄写每一个例词的音标，反复若干遍（最好 7 遍以上）。
-- 抄下例词表，而后默写相应音标，而后检查（至少两遍）。
-- 以后每查一个单词，都要把音标标记在原文边上。
-- 有必要花时间学习英文的拼读规则。忽略拼读规则是绝大多数英语学习失败的人犯下的错误。他们宁可去学好像更有短效、或者感觉更加 “高级” 的 “词根词缀”，也不去学最基本的，并且一生都用得到的拼读规则。
+Vì vậy, theo một nghĩa nào đó, học phiên âm đúng là một cửa ải. Nhưng hiểu cơ chế thì có thể tìm cách đúng để “nắm dễ dàng”. Trước hết đừng nóng vội; thứ hai, nắm qua dùng lặp lại thật nhiều; thứ ba, dùng nhiều bài đọc thành tiếng để bất giác vượt trở ngại đầu tiên hình thành phát âm. Cá nhân tôi nghĩ chỉ khi phát âm đạt hoặc gần mức bình thường, một người mới có nền tảng để dễ học ký hiệu. Có nền tảng rồi thì phải dùng mọi lúc, đến khi hiểu phiên âm tiếng Anh như hiểu pinyin.
 
-实际上，很多的人只不过是因为嫌麻烦才不去抄写音标的。尽管他们会不停地遇到 “咦，这个单词我查过，可是怎么读来着？” 的尴尬 —— 然而显然，这些尴尬并不足以使他们下决心从此一丝不苟 —— 于是， “一丝不苟” 的成本越积越多，到最后高到绝大多数人不愿承受的地步。
+Học sinh Trung Quốc còn một nỗi băn khoăn khác. Phần lớn sách giáo khoa dùng hệ D.J., giọng Anh, nhưng đó không phải hệ duy nhất. Ngoài D.J., giáo trình một số nơi dùng K.K., giọng Mỹ. Oxford và Cambridge dù đều nói dùng IPA quốc tế vẫn ít nhiều khác nhau. Có học sinh chuẩn bị SAT hoặc GRE, nghe anh chị đi trước dùng Merriam-Webster, rồi thấy ký hiệu trong đó hoàn toàn thuộc hệ khác. Thực ra, gần như mọi từ điển trên thị trường dùng hệ phiên âm khác nhau. Thứ vốn đã khó lại có nhiều phiên bản, đương nhiên càng nản.
 
-而事实上，只要方法上稍加改造，就没那么麻烦了。比如，查到 “façade” 这个单词之后，不一定非要把音标完整地抄写为[fə'sɑːd] ，其实，只需要在 “ç” 这个字母上标记/s/，在第二个 “a” 字母上标记/ɑː/，而后再在/s/之前加上重音符号。反正，字母 “f” 只能读成/f/，字母 “d” 只能读成 /d/，最后一个字母 “e” 不发音，这是绝大多数英文单词的规则。再比如，查 “resumé” 之后，最重要的可能是在最后一个 “e” 字母上面标记带有重音符号的 /'ei/就行。而那些完全符合拼读规则的单词（其实 96%以上的英文单词基本上符合拼读规则）就基本上无需标注音标了，比如 “ichthyosaur” 这个单词，“ch” 的读音是/k/，“yo” 的读音是/ɪə/，“aur” 的读音是/ɔː/，重音在第一个音节 —— 其实，好像只需要标记一下重音所在音节就可以了。当然，有些人觉得应该在 “ch” 处标记上/k/也未尝不可，但总之，无需写下这么一长串：['ɪkθɪəsɔː]。少数情况下，遇到某个单词里的某个字母是不发音的 ——比如 “debt” 这个单词里的 “b” —— 那我就会直接用铅笔在那个字母上划一道，以便提醒自己，那个字母不发音。
+May mà học sinh ngày nay đã có công cụ tốt hơn: từ điển từ lâu trở thành điện tử. Hiện phần lớn từ điển điện tử hoặc phần mềm từ điển có giọng người thật. Tra được từ, dù không biết ký hiệu, cũng nghe được cách đọc. Nhưng tốt nhất vẫn nên viết tay được phiên âm, vì tra xong nên đánh dấu trên văn bản cho dễ nhớ về sau. Đến đây, mục tiêu học ký hiệu đã hơi thay đổi: với phần lớn mọi người, dấu ghi ấy không cho người khác đọc mà cho mình, nên chỉ cần bản thân nhận ra. Tất nhiên, làm đúng quy củ ở mọi chỗ vẫn tốt hơn.
 
-通常情况下，无论如何我都会在读音节单词上标注重音，而后把那些原本有多种发音可能的元音组合在当前这个单词中的读音标记出来，而少数情况下，有些特殊的辅音才需要标记，因为辅音大多跟字母读音一样。
+Thực ra, từ lâu tôi thấy hệ dùng để ghi lên văn bản của mình là một “hệ lai” do mình “tự tạo”. Chẳng hạn không biết từ bao giờ, tôi dùng /ɛ/ thay /e/. Khi dần nghiêng về giọng Mỹ, tôi thường thêm dấu hữu thanh dưới /t/ thành /t̬/. Dù thiên giọng Mỹ, tôi vẫn không quen /ɚ/, dùng /ər/ thay. Ngay từ lúc học K.K. ban đầu, tôi cũng không thích viết tay /a/, mà viết /ɑ/… Dù vậy, chưa bao giờ tôi thấy hệ “lộn xộn” này ảnh hưởng việc học tiếp của mình. Không chỉ dùng được mà còn dùng khá tốt.
 
-今天这世界，好的英语学习资源几乎随处可见，我经常推荐学生以下两个资源：
+Dưới đây là chiến lược học phiên âm được tổng hợp:
 
-- 学习英式发音及其音标，可以用牛津大学出版社香港中文站的 Flash 教程《Guide to English Phonetc Symbols》
-- 学习美式发音及其音标，可以使用爱荷华大学的美国音标在线学习程序《 Phonetics: The Sound of American English》
+- Trước hết bảo đảm có đủ kinh nghiệm đọc thành tiếng. Chẳng hạn, mỗi sáng đọc một giờ, nghe bản thu và đọc theo sách là được, duy trì ít nhất ba tháng. Trong quá trình ấy, phần lớn âm đã nắm đủ tốt; còn rất lâu mới gần “chuẩn”, nhưng đã có cơ sở để học ký hiệu.
+- Chỉ học đầy đủ một hệ. Nếu đang học trung học cơ sở, có thể chọn D.J. hoặc K.K., tức hệ sách giáo khoa đang dùng. Nếu đã học tiếng Anh nhiều năm, chọn hệ của từ điển đang dùng, dùng thường xuyên nhất.
+- Tốt nhất dùng từ điển có âm thanh trên máy tính, để tra mọi từ ví dụ và thu thành mp3, rồi liên tục đọc theo.
+- Đối chiếu bảng ký hiệu, chép phiên âm từng từ ví dụ nhiều lượt, tốt nhất từ bảy lượt trở lên.
+- Chép danh sách từ ví dụ, rồi tự viết phiên âm theo trí nhớ và kiểm tra, ít nhất hai lượt.
+- Sau này mỗi lần tra từ, đều ghi phiên âm bên cạnh văn bản gốc.
+- Cần dành thời gian học quy tắc liên hệ chữ viết với cách đọc tiếng Anh. Bỏ qua chúng là lỗi tuyệt đại đa số người học tiếng Anh thất bại mắc phải. Họ thà học “gốc từ, tiền tố, hậu tố” có vẻ hiệu quả ngắn hạn hoặc “cao cấp” hơn, mà không học những quy tắc cơ bản dùng cả đời.
 
-## 11. 音节的划分
+Thực ra, nhiều người chỉ vì ngại phiền mà không chép phiên âm. Dù liên tục gặp cảnh “Ơ, từ này mình tra rồi, nhưng đọc thế nào nhỉ?”, rõ ràng sự ngượng ấy chưa đủ khiến họ quyết tâm từ đó làm cẩn thận. Vì thế, chi phí của việc “không bỏ sót chút nào” tích lũy ngày một nhiều, cuối cùng cao đến mức tuyệt đại đa số không muốn chịu.
 
-大多单词的音节划分，基于单词拼写的和基于音标拼写的差不多，比如 “pri•ma•ry ”/ˈprai-mə-ri/，比如 “ich•thyo•saur”/ˈɪk-θɪə-sɔː/。但也有很多单词的音节划分，基于单词拼写的和基于音标拼写的很不相同，比如 “tax•i”/ˈtek-si/，比如 “cur•dling ”/ˈkər-də-liŋ/。
+Thực ra, chỉ cần điều chỉnh cách làm chút thôi là không phiền đến thế. Chẳng hạn, tra “façade” xong không nhất thiết chép đủ [fə'sɑːd]; chỉ cần ghi /s/ trên “ç”, /ɑː/ trên chữ “a” thứ hai, rồi thêm dấu trọng âm trước /s/. Dù sao “f” chỉ đọc /f/, “d” chỉ đọc /d/, “e” cuối không phát âm; đó là quy tắc của tuyệt đại đa số từ tiếng Anh. Hoặc tra “resumé” xong, quan trọng nhất có thể chỉ là ghi /'ei/ có dấu trọng âm trên chữ “e” cuối. Từ hoàn toàn theo quy tắc ghép chữ thành âm, thực ra hơn 96% từ tiếng Anh cơ bản theo quy tắc, thì về cơ bản không cần ghi phiên âm. Chẳng hạn “ichthyosaur”: “ch” đọc /k/, “yo” đọc /ɪə/, “aur” đọc /ɔː/, trọng âm ở âm tiết đầu. Thực ra dường như chỉ cần đánh dấu trọng âm là được. Tất nhiên, có người thấy nên ghi /k/ ở “ch” cũng không sao, nhưng nói chung không cần viết cả chuỗi ['ɪkθɪəsɔː]. Trong số ít trường hợp có chữ không phát âm, như “b” trong “debt”, tôi gạch một nét bút chì lên chữ ấy để nhắc rằng nó câm.
 
-我们的教科书上，对于音节的划分都是基于单词拼写的，而不是基于音标拼写的。划分音节的作用主要是为了能够把单词的发音正确地标记出来以便学习者正确地把它读出来。如果是这样，那么基于单词拼写的音节划分就不如基于音标拼写的划分有意义了。而如果说音节划分还有其它作用的话，那么可能可以是用来助记单词的拼写。可是，基于音标拼写的音节划分同样可以用来助记单词的拼写，而无论用哪一种音节划分方法，为了将其作为助记法，都要习得同样的拼读规则。（至于划分音节还有什么其它的作用，我还真的不知道。）
+Thông thường, dù thế nào tôi cũng đánh dấu trọng âm trên từ nhiều âm tiết, rồi ghi cách đọc trong từ hiện tại của những tổ hợp nguyên âm vốn có nhiều khả năng phát âm. Chỉ ít trường hợp mới cần đánh dấu phụ âm đặc biệt, vì phần lớn phụ âm giống cách đọc chữ cái.
 
-另外，如果学生只学习（假如真的学会了的话）基于单词拼写的划分，则很可能也很容易陷入想当然的陷阱之中。比如，“create” 这个单词，实际上是两个音节/kriː-ˈeɪt/，很多初学者（又因为他们刚刚学过一点拼读规则）一不小心就会把这个单词理解为单音节单词；我见过很多学生把这个单词读成/ kriːt /，大抵上就是这个原因了吧。
+Ngày nay, tài nguyên học tiếng Anh tốt gần như có khắp nơi. Tôi thường giới thiệu hai nguồn sau:
 
-所以说，作为英语学习者，对我们更有用的可能是基于音标拼写的音节划分方法。
+- Học phát âm Anh và ký hiệu tương ứng, có thể dùng bài Flash *Guide to English Phonetc Symbols* trên website tiếng Trung tại Hồng Kông của Oxford University Press.
+- Học phát âm Mỹ và ký hiệu tương ứng, có thể dùng chương trình trực tuyến của Đại học Iowa, *Phonetics: The Sound of American English*.
 
-基于单词拼写的音节划分非常麻烦而又罗嗦。我不记得那个老师为我讲解清楚过 “移行法则”，倒是在什么书里看过，反复看了几遍之后觉得对英语学习者来说格外不实用，甚至干脆没用。而基于音标拼写的音节划分很简单，只需要一个最重要的原则：一个音节必须有、且只有一个元音。
+> **Ghi chú biên tập cho người Việt:** Pinyin là hệ ghi âm tiếng Trung, không phải bảng chữ cái tiếng Việt. Các mốc ba tháng, bảy lượt chép và hai lượt kiểm tra là cách tác giả tổ chức luyện tập, không phải điều kiện bắt buộc trước khi được học IPA; con số 96% không có nguồn rõ trong đoạn này. Có thể học ký hiệu song song với nghe và tập phát từng âm, dùng bảng hướng dẫn của chính từ điển đang tra. “Hệ lai” là ghi chép cá nhân của tác giả, không có nghĩa các ký hiệu /a/, /ɑ/, /e/, /ɛ/, /ɚ/ và /ər/ được thay tùy ý trong IPA. Dấu /t̬/ cũng cần đọc theo quy ước của từ điển, không tự đồng nhất với mọi cách hiện thực âm /t/.
+>
+> [“Resumé” có những biến thể trọng âm được Merriam-Webster chấp nhận](https://www.merriam-webster.com/dictionary/resume); không nên dùng một cách ghi làm chuẩn duy nhất. [Merriam-Webster ghi *ichthyosaur* với bốn nhịp âm](https://www.merriam-webster.com/dictionary/ichthyosaur), khác cách gộp /ɪə/ của nguyên tác. Các nguồn Flash và chương trình Iowa phía trên là tài nguyên lịch sử; tên “Phonetc” được giữ theo nguồn, không phải chính tả chuẩn của “Phonetic”. Với công cụ hiện tại, ưu tiên mục từ có phiên âm và bản nghe truy cập được, rồi ghi những điểm thật sự cần nhắc mình.
 
-常见的音节结构有以下几种（以下单词都是单音节单词）：
+## 11. Phân chia âm tiết
 
-- 元音：a /eɪ/, eye /aɪ/
-- 辅音+元音：tea /tiː/, bay /beɪ/
-- 辅音+辅音+元音：fly /flaɪ/, sky /skaɪ/
-- 元音+辅音：ebb /eb/, odd /ɔd/
-- 辅音+元音+辅音：beep /biːp/, big /bɪg/
-- 元音+辅音+辅音：east /iːst/，axe /æks/
-- 辅音+辅音+元音+辅音：stop /stɔp/, bleed /bliːd/
-- 辅音+元音+辅音+辅音：last /læst/, lapse /læps/
-- 辅音+辅音+元音+辅音+辅音：blast /blæst/, frost /frɔːst/
+Ở phần lớn từ, chia âm tiết dựa vào chữ viết và dựa vào ký hiệu phiên âm khá giống nhau, như “pri•ma•ry ” /ˈprai-mə-ri/ hoặc “ich•thyo•saur” /ˈɪk-θɪə-sɔː/. Nhưng nhiều từ khác rất nhiều, như “tax•i” /ˈtek-si/ hoặc “cur•dling ” /ˈkər-də-liŋ/.
 
-而多音节单词，就用以上的模式去套，看看能够划分出多少个合乎以上模式的音节出来 —— 辅助原则很简单：多音节的单词，除了最后一个音节之外，基本上是以上 9 种之中的前 5 种居多。
+Trong sách giáo khoa của chúng ta, việc chia âm tiết dựa vào chữ viết, không phải phiên âm. Tác dụng chủ yếu là đánh dấu đúng cách phát âm để người học đọc đúng. Nếu vậy, chia theo chữ viết ít ý nghĩa hơn chia theo phiên âm. Nếu còn tác dụng khác, có lẽ là giúp nhớ chính tả. Nhưng chia theo phiên âm cũng giúp nhớ chính tả; bất kể dùng cách nào, muốn dùng để ghi nhớ đều cần học cùng những quy tắc ghép chữ thành âm. Còn việc chia âm tiết có tác dụng gì khác, tôi thực sự không biết.
 
-## 12. 自然语流中的强读与弱读现象
+Ngoài ra, nếu học sinh chỉ học cách chia theo chữ viết, giả sử thực sự học được, rất có thể dễ mắc bẫy tự suy rồi cho là đúng. Chẳng hạn “create” thực ra có hai âm tiết /kriː-ˈeɪt/. Nhiều người mới học, vừa biết chút quy tắc ghép âm, sơ ý tưởng nó là từ một âm tiết. Tôi thấy nhiều học sinh đọc thành / kriːt /, có lẽ chủ yếu vì thế.
 
-如前所述，很多英文单词是多音节的。一个英文单词如果由多个音节构成，那么其中至少有一个音节是重音；如果，音节足够多的话，那么可能还有次重音（比如 “archaeopteryx”），以及一个以上的重音（比如 “postmoernity”）。而同样的道理，一个句子里有多个单词，那么，其中将至少有一个单词被强读，而相对来看其它的单词会被弱读。（为了区分方便，单词内音节的强弱轻重用 “非重音”、“次重音”、“重音”，或者 “重读” 来表示；而句子内单词的强弱轻重用 “强读” 和 “弱读” 来表示。）
+Vì vậy, với người học tiếng Anh, cách chia theo phiên âm có lẽ hữu ích hơn.
 
-掌握强读弱读规律，是使自己的语流变得自然的关键。只要掌握了强读弱读的规律，哪怕某些音素的发音不够好，语流依然会显得很自然，也更容易被别人听懂。我们在美国惊悚电影里经常可以听到外国特工，比如俄国特工或者伊朗特工，所讲的英语。他们尽管讲话有着明显的口音，但不仅流利，并且沟通无障碍 —— 而对方讲一口 “地道标准” 的美式英语，却也并不因为这些外国特工有口音而听不懂他们在说什么。这样的情况能够说明的是，单独的音素发音尽管很重要，但显然有比这个更重要的东西需要关注，比如现在正在讲的强读弱读规律。
+Chia âm tiết theo chữ viết rất phiền và rườm rà. Tôi không nhớ giáo viên nào giải thích rõ “quy tắc ngắt từ khi xuống dòng”; có đọc ở sách nào đó, xem đi xem lại rồi thấy rất thiếu thực dụng, thậm chí vô dụng với người học. Còn chia theo phiên âm đơn giản, chỉ cần một nguyên tắc quan trọng nhất: một âm tiết phải có đúng một nguyên âm.
 
-> - 以下所使用的例子，音频文件位于 `files/TOELFL-PartC-93/audios/` 目录之下……
-> - [使用鼠标右键点击此链接将本节使用的音频文件 '另存为...' 至本地文件夹](https://raw.githubusercontent.com/zuodaotech/everyone-can-use-english/master/files/TOELFL-PartC-93/audios/1.mp3)
+Các cấu trúc âm tiết thường gặp gồm những loại sau; các từ ví dụ đều có một âm tiết:
 
-以下是 TOEFL 听力录音中第一篇中的前两个句子，请注意同一个单词 “community” 第一次出现和第二次出现时的具体不同：
+- Nguyên âm: a /eɪ/, eye /aɪ/
+- Phụ âm + nguyên âm: tea /tiː/, bay /beɪ/
+- Phụ âm + phụ âm + nguyên âm: fly /flaɪ/, sky /skaɪ/
+- Nguyên âm + phụ âm: ebb /eb/, odd /ɔd/
+- Phụ âm + nguyên âm + phụ âm: beep /biːp/, big /bɪg/
+- Nguyên âm + phụ âm + phụ âm: east /iːst/, axe /æks/
+- Phụ âm + phụ âm + nguyên âm + phụ âm: stop /stɔp/, bleed /bliːd/
+- Phụ âm + nguyên âm + phụ âm + phụ âm: last /læst/, lapse /læps/
+- Phụ âm + phụ âm + nguyên âm + phụ âm + phụ âm: blast /blæst/, frost /frɔːst/
+
+Với từ nhiều âm tiết, hãy áp những mẫu trên xem chia được bao nhiêu âm tiết phù hợp. Nguyên tắc hỗ trợ rất đơn giản: trong từ nhiều âm tiết, ngoài âm tiết cuối, phần lớn thuộc năm mẫu đầu trong chín loại ấy.
+
+> **Ghi chú biên tập:** Ví dụ *taxi* trong nguồn dùng /e/ sai; có thể đối chiếu [mẫu /ˈtæk.si/ của Cambridge](https://dictionary.cambridge.org/us/pronunciation/english/taxi). Các chuỗi phiên âm còn lại được giữ để đối chiếu với cách ghi của tác giả, không mặc định là một hệ IPA thống nhất. Âm tiết thường có nguyên âm làm hạt nhân, nhưng tiếng Anh còn có phụ âm âm tiết, nên quy tắc “bắt buộc đúng một nguyên âm” chưa đầy đủ. Xem [Essentials of Linguistics về âm tiết](https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/3-10-syllables/). Chín mẫu trên cũng không bao quát mọi cấu trúc, chẳng hạn cụm ba phụ âm đầu. Để luyện với tiếng Việt, hãy phân biệt cách tách chữ để xuống dòng với số nhịp âm thực sự nghe được trong từ; khi chưa chắc, đối chiếu cả phiên âm lẫn bản nghe.
+
+## 12. Nhấn mạnh và đọc nhẹ trong lời nói tự nhiên
+
+Như đã nói, nhiều từ tiếng Anh có nhiều âm tiết. Một từ có nhiều âm tiết thì ít nhất một âm tiết mang trọng âm; nếu đủ dài, từ còn có thể có trọng âm phụ, chẳng hạn “archaeopteryx”, hoặc hơn một trọng âm, chẳng hạn “postmoernity”. Tương tự, một câu có nhiều từ thì ít nhất một từ được nhấn mạnh, còn các từ khác được đọc nhẹ hơn khi so sánh với nó. Để tiện phân biệt, mức độ nặng nhẹ của âm tiết trong một từ được gọi là “không nhấn”, “trọng âm phụ”, “trọng âm chính” hoặc “nhấn trọng âm”; còn mức độ nổi bật của từ trong câu được gọi là “nhấn mạnh” và “đọc nhẹ”.
+
+Nắm được quy luật nhấn mạnh và đọc nhẹ là chìa khóa để lời nói tự nhiên. Chỉ cần nắm được các quy luật ấy, dù phát âm một số âm vị chưa tốt, lời nói vẫn có vẻ tự nhiên và người khác dễ hiểu hơn. Trong phim giật gân Mỹ, ta thường nghe nhân vật điệp viên nước ngoài, chẳng hạn người Nga hoặc Iran, nói tiếng Anh. Họ có giọng nước ngoài rõ rệt nhưng vẫn nói trôi chảy và giao tiếp không trở ngại. Người đối thoại nói tiếng Anh Mỹ “chuẩn bản xứ” cũng không vì giọng của các điệp viên ấy mà không hiểu họ. Điều này cho thấy phát âm từng âm vị tuy quan trọng, nhưng rõ ràng còn những điều đáng chú ý hơn, chẳng hạn quy luật nhấn mạnh và đọc nhẹ đang bàn ở đây.
+
+> **Ghi chú biên tập:** “postmoernity” là lỗi chính tả trong nguyên tác, từ dự định nêu là *postmodernity*. Cách biểu diễn trọng âm chính/phụ tùy từ điển; ví dụ trong phim minh họa quan điểm của tác giả, không phải nghiên cứu đo khả năng nghe hiểu. Nhấn từ trong câu không đồng nghĩa chuyển tùy ý vị trí trọng âm từ. Cần phân biệt mức độ nổi bật trong câu với vị trí âm tiết có trọng âm của chính từ đó.
+
+> - Các ví dụ dưới đây dùng tệp âm thanh trong thư mục `files/TOELFL-PartC-93/audios/`.
+> - [Bấm chuột phải vào liên kết này rồi chọn “Lưu liên kết thành...” để lưu tệp âm thanh dùng trong mục về máy](https://raw.githubusercontent.com/zuodaotech/everyone-can-use-english/master/files/TOELFL-PartC-93/audios/1.mp3)
+
+Dưới đây là hai câu đầu trong bài đầu tiên của bộ ghi âm nghe TOEFL. Hãy chú ý sự khác nhau cụ thể giữa lần xuất hiện thứ nhất và thứ hai của từ “community”:
 
 Community service is an important component of education here at our university. We encourage all students to volunteer for at least one community activity before they graduate. ...
 
-请仔细注意以上录音中的两处 “community”。第一处 “Community” 是被强读的，所以，其中的第二个音节/mju:/被读得非常饱满，且带着声调（tone）和更高的音高（pitch）。而第二处 “community” 没有被强读，于是，第二个音节/mju:/变得很短，并且没有明显的声调。
+Hãy nghe kỹ hai chỗ có “community” trong bản ghi âm. Lần thứ nhất, “Community” được nhấn mạnh, nên âm tiết thứ hai /mju:/ được đọc đầy đặn, có đường nét giọng (tone) và cao độ (pitch) cao hơn. Lần thứ hai, “community” không được nhấn mạnh, nên âm tiết /mju:/ ngắn đi nhiều và không có đường nét giọng rõ rệt.
 
-这段录音中所有被强读的词汇在以下的文本中被加重标记（而没有标记的，就是被弱读的）：
+Các từ được nhấn mạnh trong đoạn ghi âm được in đậm dưới đây; từ không đánh dấu là từ đọc nhẹ:
 
 **Community** **service** is an **important** **component** of **education** **here** at our **university**. We **encourage** **all** **students** to **volunteer** for at **least** **one** community **activity** **before** they **graduate**.
 
-某个单词被强读或者被弱读的时候，该单词的元音长短和重音所在（如果是多音节单词的话）都会相应发生变化，具体常见变化如下：
+Khi một từ được nhấn mạnh hoặc đọc nhẹ, theo cách mô tả của tác giả, độ dài nguyên âm và trọng âm của từ, nếu có nhiều âm tiết, đều biến đổi tương ứng. Những thay đổi thường gặp cụ thể như sau.
 
-如果一个单词被强读，那么这个单词中的：
+Nếu một từ được nhấn mạnh thì trong từ ấy:
 
-- 长元音会被读的很清楚，并且足够长，甚至显得更长一些；
-- 双元音会被读的很饱满，并且显得很有弹性；
-- 落在重音上的短元音都会显得更长一些；
-- 重音所在的音节可能带着不同的声调（平调、升调、降调）……
-- 重音所在的音节可能带着不同的音高（往往是 “高”、“中”、“低” 中的 “高”）……
+- Nguyên âm dài được phát rõ và đủ dài, thậm chí có vẻ dài hơn nữa.
+- Nguyên âm đôi được phát đầy đặn và có vẻ rất linh hoạt.
+- Nguyên âm ngắn ở âm tiết có trọng âm đều có vẻ dài hơn một chút.
+- Âm tiết có trọng âm có thể mang đường nét giọng khác nhau: ngang, lên, xuống...
+- Âm tiết có trọng âm có thể có cao độ khác nhau, thường là mức “cao” trong ba mức “cao”, “trung bình”, “thấp”...
 
-如果一个单词被弱读，那么这个单词中的：
+Nếu một từ được đọc nhẹ thì trong từ ấy:
 
-- 长元音会变得短一些（几乎与短元音的长度相当）；
-- 重音音节会变得与非重音音节一样轻；
-- 很多元音都会发生变化，向/ə/靠拢；
-- 轻辅音/s/、/t/、/k/、/f/之后的元音/ə/可能会直接被省略掉；
-- 整个单词所处的音高往往是 “高”、“中”、“低” 之中的 “低”，最多是 “中”……
+- Nguyên âm dài ngắn lại, gần bằng độ dài nguyên âm ngắn.
+- Âm tiết có trọng âm trở nên nhẹ như âm tiết không nhấn.
+- Nhiều nguyên âm thay đổi, tiến gần về /ə/.
+- Nguyên âm /ə/ sau các phụ âm vô thanh /s/, /t/, /k/, /f/ có thể bị lược hẳn.
+- Cao độ của cả từ thường ở mức “thấp” trong ba mức “cao”, “trung bình”, “thấp”, nhiều nhất là mức “trung bình”...
 
-其实，哪怕在单独读某一个单词的时候，其中元音的长短都会受到重音重读的影响。比如，“city” 这个单词，重音在第一个音节上，而两处的元音是一样的：/ˈsi-ti/；但是只要你把第一个音节读得足够重，自然而然就能感觉到第一个/i/要比第二个/i/长。
+Thực ra, ngay cả khi đọc một từ riêng lẻ, độ dài nguyên âm trong từ cũng chịu ảnh hưởng của trọng âm. Ví dụ “city” có trọng âm ở âm tiết đầu, còn hai nguyên âm được tác giả ghi giống nhau: /ˈsi-ti/. Chỉ cần nhấn âm tiết đầu đủ rõ, bạn sẽ tự cảm thấy /i/ thứ nhất dài hơn /i/ thứ hai.
 
-大多数助动词、系动词、介词、连词、冠词、代词，都有两种发音形式：强读式、弱读式。这些单词往往都是单音节单词。在自然语流中，它们更多的情况下是以弱读式读出的。以下是其中最常见最普及的强读式、弱读式对照列表。注意，以下的列表不能当作规则使用，不是所有的虚词在任何情况下都必须弱读；也不是所有的实词都必须被强读。下面的列表只是在描述现象。
+Phần lớn trợ động từ, động từ nối, giới từ, liên từ, mạo từ và đại từ có hai cách phát âm: dạng mạnh và dạng yếu. Những từ này thường chỉ có một âm tiết. Trong lời nói tự nhiên, chúng thường xuất hiện ở dạng yếu hơn. Dưới đây là danh sách đối chiếu những dạng mạnh và dạng yếu phổ biến nhất. Lưu ý không dùng bảng như một bộ quy tắc: không phải mọi hư từ đều bắt buộc đọc yếu trong mọi trường hợp, cũng không phải mọi thực từ đều phải được nhấn mạnh. Bảng chỉ mô tả hiện tượng.
 
 - a: /eɪ/→/ə/
 - am: /æm/→/əm, m/
@@ -342,227 +368,252 @@ Community service is an important component of education here at our university.
 - would: /wud/→/wəd, əd, d/
 - you: /juː/→/ju/
 
-这些词的弱读形式在托福听力中都特别常见，比如，“our” 这个单词，大多数情况下都被读成/ar/。比如在以下两句话中：
+Những dạng yếu này rất thường gặp trong các bài nghe TOEFL. Chẳng hạn, từ “our” trong phần lớn trường hợp được đọc thành /ar/, như trong hai câu sau:
 
-I hope you've all finished reading the assigned chapter on insurance -- so that you're prepared for our discussion today. （第 2 篇第 1 句）
+I hope you've all finished reading the assigned chapter on insurance -- so that you're prepared for our discussion today. (Bài 2, câu 1)
 
-One of our main jobs is to keep detailed records of the migration patterns of raptors. （第 90 篇第 3 句）
+One of our main jobs is to keep detailed records of the migration patterns of raptors. (Bài 90, câu 3)
 
-## 13. 精雕细琢/t/、/d/和/s/
+> **Ghi chú biên tập: cách dùng bảng dạng yếu.** Bảng giữ nguyên phiên âm và nhận xét tần suất của tác giả, không phải bảng IPA chuẩn thống nhất cho mọi giọng. Ví dụ, dạng mạnh của *of* có thể là /ɒv/ ở Anh Anh hoặc /ɑːv/ ở Anh Mỹ, còn /əv/ là dạng yếu; dạng mạnh của *as* là /æz/, không phải /æs/; *us* có dạng mạnh /ʌs/, không phải /us/. Trong *city*, Cambridge ghi /ˈsɪt.i/ ở Anh Anh và /ˈsɪt̬.i/ ở Anh Mỹ, nên không dùng cách ghi hai /i/ giống hệt nhau ở trên để kết luận chất âm phải đồng nhất. Xem [Cambridge: of](https://dictionary.cambridge.org/pronunciation/english/of), [us](https://dictionary.cambridge.org/pronunciation/english/us), [Oxford: as](https://www.oxfordlearnersdictionaries.com/definition/english/as_1) và [city](https://dictionary.cambridge.org/pronunciation/english/city). Một số dạng rút mạnh như *any* /ni/, *many* /mni/ hay *I* /ə/ ở bảng cần ngữ cảnh và bản ghi cụ thể, không dùng làm cách đọc mặc định của từ. Với người Việt, hãy nghe cả câu để nhận ra thông tin nổi bật, giữ đúng trọng âm từ, rồi đối chiếu dạng yếu trong từ điển và bản mẫu; đừng hạ mọi từ không nhấn thành /ə/.
 
-学习的过程中，越是容易的内容往往越容易被学生忽略，进而造成很多人为的困难。英文中的/t/、/d/以及/s/的发音就是这样的知识点。
+## 13. Luyện kỹ /t/, /d/ và /s/
 
-英文中的/t/与中文拼音中的[t]是不一样的，尽管它们听起来非常接近。而/d/与/s/也是如此。不过，由于中文中的[t]、[d]、[s]和英文中的/t/、/d/、/s/相当接近，所以，中国学生基本上全都是干脆直接用[t]、[d]、[s]替代/t/、/d/、/s/。刚开始的时候，很难发现这种 “替换” 有什么大不了的，也看不出什么致命的影响。然而，坏习惯一旦养成，就会很难纠正，成为很多人进步的玻璃顶。
+Trong quá trình học, nội dung càng dễ thường càng dễ bị học sinh bỏ qua, từ đó tạo ra nhiều khó khăn do chính mình gây nên. Phát âm /t/, /d/ và /s/ trong tiếng Anh là một điểm kiến thức như vậy.
 
-不妨先尝试着说说以下这句简单的中文：
+/t/ tiếng Anh khác [t] trong pinyin tiếng Trung, dù nghe rất gần nhau. /d/ và /s/ cũng vậy. Tuy nhiên, do [t], [d], [s] tiếng Trung khá gần /t/, /d/, /s/ tiếng Anh, theo tác giả, học sinh Trung Quốc gần như đều dùng thẳng [t], [d], [s] để thay cho /t/, /d/, /s/. Ban đầu khó thấy phép “thay thế” ấy có gì ghê gớm hoặc gây ảnh hưởng nghiêm trọng nào. Nhưng thói quen xấu một khi hình thành sẽ rất khó sửa, trở thành một trần giới hạn vô hình đối với tiến bộ của nhiều người.
 
-    我踢——死—你……
-    我打——死—你……
+Trước hết, hãy thử nói hai câu tiếng Trung đơn giản sau:
 
-再多说两遍。请故意把 “踢” 字拉长一些，这样容易体会到中文中的[t]在发音的时候舌尖起始位置在哪里 —— 舌尖是先贴到牙齿上，然后离开，同时口腔中的气流振动。另外，也可以同时体会[d]（说 “打” 的时候）和[s]（说 “死” 的时候）在中文发音中的舌尖起始位置。在 IPA 国际音标标注法中，像中文中这样舌尖抵住牙齿作为发音起点的[t]和[d]（dental t/d）有专门的标注方法：/t̪/、/d̪/（请注意 t/d 下小小的 “门” 字形符号）。
-【注】该系列文章中所使用的口腔侧剖面图片摘自爱荷华大学的图解在线教程，[Phonetics: The sounds of American English](http://www.uiowa.edu/~acadtech/phonetics/english/frameset.html)：
+    wǒ tī--sǐ-nǐ…
+    wǒ dǎ--sǐ-nǐ…
+
+> **Ghi chú biên tập: ví dụ tiếng Trung của nguyên tác.** Hai câu lần lượt là *wǒ tī sǐ nǐ* và *wǒ dǎ sǐ nǐ*, nghĩa đen “Tôi đá chết bạn” và “Tôi đánh chết bạn”. Dấu gạch biểu thị kéo dài âm trong bài đối chiếu, không phải nội dung giao tiếp nên dùng với người khác. Các âm được bàn bên dưới là *tī* (đá), *dǎ* (đánh) và *sǐ* (chết). Người Việt không cần học hay lặp lại hai câu này để luyện tiếng Anh; có thể dùng các từ *student*, *students*, *teacher* ở ngay phần sau để quan sát động tác lưỡi của mình. Bản dịch dùng pinyin thay cho chữ Hán vì tác giả đang phân tích âm tiếng Trung, không thay bằng câu tiếng Việt rồi coi đó là cùng dữ liệu ngữ âm.
+
+Hãy nói thêm hai lần. Cố ý kéo dài chữ “đá” (*tī*) để dễ cảm nhận vị trí xuất phát của đầu lưỡi khi phát [t] tiếng Trung. Theo tác giả, đầu lưỡi chạm răng trước, sau đó rời ra, đồng thời luồng khí trong miệng dao động. Bạn cũng có thể cảm nhận vị trí đầu lưỡi khi phát [d] trong *dǎ* và [s] trong *sǐ*. Trong hệ ký hiệu IPA, tác giả cho biết [t] và [d] có đầu lưỡi xuất phát ở răng như cách ông mô tả tiếng Trung, tức *dental t/d*, có cách ghi riêng: /t̪/, /d̪/. Hãy chú ý dấu nhỏ giống khung cửa phía dưới t/d.
+
+**Chú thích của nguyên tác:** Các hình mặt cắt khoang miệng dùng trong loạt bài được trích từ giáo trình trực tuyến có hình minh họa của University of Iowa, [Phonetics: The sounds of American English](http://www.uiowa.edu/~acadtech/phonetics/english/frameset.html).
 
 ![](images/figure08.png)
 
-如上图所示，而英文中的/t/，在发音的时候，舌尖起始位置并不是在牙齿上，而是在上牙龈上 —— 牙齿与牙龈交界处上方一点点。所以，英文中的/t/与中文中的 [t]音色是不同的 —— 中文中的[t]更多一些对气流的阻塞。而同样，英文中的/d/的舌尖起始位置也是在同样的位置上，如下图：
+Theo hình trên, vị trí xuất phát của đầu lưỡi khi phát /t/ tiếng Anh không ở răng mà ở gờ lợi phía trên, cao hơn một chút so với ranh giới giữa răng và lợi. Vì vậy, /t/ tiếng Anh và [t] tiếng Trung có âm sắc khác nhau; tác giả cho rằng [t] tiếng Trung chặn luồng khí nhiều hơn. Tương tự, vị trí xuất phát của đầu lưỡi khi phát /d/ tiếng Anh cũng ở đó, như hình dưới:
 
 ![](images/figure09.png)
 
-另外，而英文中的/s/舌尖起始位置不是贴着上牙齿。舌尖的起始位置与/t/、/d/大致相同，但是，并未顶到上牙龈上，而是略微留出一点空隙（如下图所示）。再次，因为舌尖起始位置的不同，英文的/s/与中文的[s]有很大的不同。
+Với /s/ tiếng Anh, đầu lưỡi cũng không áp vào răng trên. Vị trí xuất phát gần giống /t/, /d/, nhưng đầu lưỡi không chạm gờ lợi mà chừa một khe nhỏ, như hình sau. Một lần nữa, tác giả cho rằng khác biệt về vị trí đầu lưỡi khiến /s/ tiếng Anh khác nhiều với [s] tiếng Trung.
 
 ![](images/figure10.png)
 
-练习这几个辅音并不是很难，读者只需要反复练习一个词就够了，这个单词是：“student”。练习这个单词多遍之后，再练习 “students” —— 可想而知，英文中的/ts/，发音起始位置应该与/t/的发音起始位置相同，而/dz/也应该与/d/一样。
+Luyện những phụ âm này không quá khó. Bạn chỉ cần lặp lại một từ: “student”. Sau khi luyện từ ấy nhiều lần, hãy luyện “students”. Có thể hình dung vị trí bắt đầu của /ts/ tiếng Anh phải giống vị trí bắt đầu của /t/, còn /dz/ cũng phải giống /d/.
 
-> We encourage all **students** to volunteer for at least one community activity before they graduate. A new community program called "One On One" helps elementary **students** who've fallen behind.（第 1 篇第 2~3 句）
+> We encourage all **students** to volunteer for at least one community activity before they graduate. A new community program called "One On One" helps elementary **students** who've fallen behind. (Bài 1, câu 2-3)
 
-这里有两处 “students”，不妨反复模仿，反复体会。如果，已经熟悉这样的舌尖起始位置，那么以后读 “**teacher**”、“**particular**” 这样的单词的时候，都会感到其音色与过往未纠正时有很大的不同。
+Ở đây có hai chỗ dùng “students”; hãy bắt chước và cảm nhận nhiều lần. Khi đã quen vị trí xuất phát này của đầu lưỡi, lúc đọc những từ như “**teacher**”, “**particular**”, bạn sẽ thấy âm sắc khác nhiều so với trước khi sửa.
 
-由于舌尖起始位置不同，相对于英文中的/t/、/d/、/s/来看，中文中的[t]、[d]、[s]在发音的时候，阻塞更多的气流；[t]和[d] 几乎是完全阻塞气流的，而尽管[s]无论如何都必须有气流通过舌尖才能发出，但也比/s/发音的时候舌尖对气流的阻塞更多。我们很多人在与老外讲话的时候，总是感觉他们讲话的时候 “送气更多”，有更多气流振动的感觉，就是这个原因了。
+Do khác vị trí xuất phát của đầu lưỡi, theo tác giả, [t], [d], [s] tiếng Trung chặn nhiều luồng khí hơn /t/, /d/, /s/ tiếng Anh. [t] và [d] gần như chặn hoàn toàn, còn [s] dù bắt buộc phải để khí đi qua đầu lưỡi mới phát được, vẫn chặn nhiều hơn /s/. Nhiều người khi nói chuyện với người nước ngoài luôn có cảm giác họ “bật hơi nhiều hơn”, có nhiều dao động của luồng khí hơn; tác giả giải thích đó là do nguyên nhân này.
 
-还有一个挺好玩的反向练习方法。就是把 “我踢死你” 和 “我打死你” 这两个中文短句中的[t]、[d]、[s]全都换成以上讲解过的英文的/t/、/d/、/s/，反复练习，最后这两个短句说得听起来感觉像是老外说中文一样就对了。
+Còn một cách luyện ngược khá thú vị: thay toàn bộ [t], [d], [s] trong hai câu tiếng Trung “Tôi đá chết bạn” và “Tôi đánh chết bạn” ở trên bằng /t/, /d/, /s/ tiếng Anh vừa giải thích. Luyện nhiều lần cho tới khi hai câu nghe giống người nước ngoài nói tiếng Trung thì đạt yêu cầu của bài tập này.
 
-另外，这句话里面有一处非常清楚的连读，“helps_elementary...”，请反复体会，反复练习。回忆一下 “停顿” 那一节讲述的内容—— 练习这个连读的时候，关键在于先发出/hel/这个音节之后把嘴闭上（就等于已经把/p/这个音的口型做足了），然后停顿足够长的时间，而后再发出/s /的音的同时开始读后面的单词。并且要把 elementary 这个单词的重音音节重读（即，第一个音节），而后这个重读音节还带有升调。把这几个要点搞清楚之后，我们就会发现所谓的 “连读” 只不过是自然而然的事情而已。
+Ngoài ra, câu trên có một chỗ nối âm rất rõ: “helps_elementary...”. Hãy cảm nhận và luyện nhiều lần. Nhớ lại mục về ngắt nghỉ: khi luyện chỗ nối này, điều cốt yếu là đọc âm tiết /hel/ rồi khép môi, tức đã tạo đủ khẩu hình của /p/, sau đó ngừng đủ lâu, rồi vừa phát /s / vừa bắt đầu đọc từ tiếp theo. Đồng thời, tác giả yêu cầu nhấn âm tiết có trọng âm của “elementary”, tức âm tiết đầu theo cách ông ghi, và đọc âm tiết ấy với giọng đi lên. Khi hiểu rõ mấy điểm này, ta sẽ thấy cái gọi là “nối âm” chỉ là chuyện diễn ra tự nhiên.
 
-关于/t/和/d/，后面的内容中还有更深入的讲解。
+Các phần sau còn giải thích sâu hơn về /t/ và /d/.
 
-## 14. 攻克所谓连读，从辅音/l/做起
+> **Ghi chú biên tập: phân biệt mô tả của tác giả với cách luyện.** Không coi các chữ pinyin *t, d, s* là ký hiệu IPA tương đương. Với âm tắc /t, d/ tiếng Anh, luồng khí cũng bị chặn hoàn toàn trong giai đoạn đóng; mức bật hơi và rung dây thanh là những đặc điểm khác với vị trí đặt lưỡi. Do đó, không giải thích sự khác nhau chỉ bằng “tiếng Trung chặn khí nhiều hơn”. Xem [Essentials of Linguistics: Aspirated Stops in English](https://pressbooks.pub/essentialsoflinguistics/chapter/3-5-aspirated-stops-in-english/). Đừng mặc định người Việt có cùng vị trí lưỡi hoặc lỗi với nhóm học sinh Trung Quốc được tác giả mô tả. Với *elementary*, trọng âm chính nằm ở âm tiết /men/, còn âm tiết đầu có trọng âm phụ: [Cambridge: elementary](https://dictionary.cambridge.org/pronunciation/english/elementary). Khoảng ngừng phóng đại chỉ dùng để tách động tác lúc tập chậm, không chèn khoảng ngừng dài ấy vào mọi câu nói tự nhiên.
 
-先说说辅音/l/。这个音和中文中的[l] 没什么区别。只不过，英文中很多元音之后跟着/l/的音节，而中文中却只有[l]作为声母后面（必然）跟着一个韵母（即，相当于英文中的元音）。很可能是由于中文中不存在韵母之后跟着声母[l]的情况，所以，很多中国学生实际上说不好的只有/l/处于音节尾部的情况。（而有些南方同学分不清/l/和/n /，是他们使用母语时就存在的问题，跟英语无关。）
+## 14. Bắt đầu luyện nối âm từ phụ âm /l/
 
-大多数学生读/l/位于音节首部的单词都是完全没问题的，比如 law，value，fly 等等。说出这些单词中的/l/的时候，和说 “你吃了吗？” 这句中文的时候说出的[l]几乎是一样的，当然不费什么劲。然而他们一读/l/位于音节尾部的单词就不对了。比如，“lawful”, “valuable”, “financial”, “still” 等等。这几个单词大多数学生会把它们分别读为/ˈlɔːfəu/、/ˈvæljəbəu/、/faɪˈnænʃəu/，和/ˈstɪəu/，每个词的结尾都会被他们读成字母 “o” 的发音。
+Trước hết hãy nói về /l/. Theo tác giả, âm này không khác mấy so với [l] tiếng Trung. Chỉ có điều, tiếng Anh có nhiều âm tiết mà /l/ đứng sau nguyên âm, còn tiếng Trung chỉ có [l] làm thanh mẫu và phía sau tất yếu có một vận mẫu, mà tác giả coi tương ứng với nguyên âm tiếng Anh. Có lẽ vì tiếng Trung không có trường hợp vận mẫu rồi mới đến thanh mẫu [l], nhiều học sinh Trung Quốc thực ra chỉ phát chưa tốt /l/ ở cuối âm tiết. Còn việc một số học sinh miền nam Trung Quốc không phân biệt /l/ và /n /, theo ông, là vấn đề đã có trong tiếng mẹ đẻ của họ, không liên quan đến tiếng Anh.
 
-出这种错的重要的原因在于/l/这个音的准确发出是靠舌头在口腔内持续移动完成的。由于一切重要动作都是在口腔内完成，而舌头的运动方式从外部无法观察得到，所以，很多人学这个音的时候，其实基本上与 “盲人摸象” 的效果差不多。
+Phần lớn học sinh đọc các từ có /l/ ở đầu âm tiết hoàn toàn không khó, chẳng hạn law, value, fly. /l/ trong những từ này gần như giống [l] khi nói câu *nǐ chī le ma?* (nghĩa “Bạn ăn chưa?”), nên đương nhiên không tốn công. Nhưng khi đọc các từ có /l/ ở cuối âm tiết như “lawful”, “valuable”, “financial”, “still”, họ lại sai. Theo tác giả, đa số sẽ lần lượt đọc thành /ˈlɔːfəu/, /ˈvæljəbəu/, /faɪˈnænʃəu/ và /ˈstɪəu/, khiến cuối mỗi từ thành âm của chữ cái “o”.
+
+Một nguyên nhân quan trọng của lỗi này là, theo cách giải thích của tác giả, phát đúng /l/ dựa vào chuyển động liên tục của lưỡi trong miệng. Vì tất cả động tác quan trọng đều diễn ra bên trong và không thể quan sát chuyển động lưỡi từ ngoài, nhiều người học âm này chẳng khác nào “thầy bói xem voi”.
 
 ![](images/figure11.png)
 
-读这几个单词的时候，词尾基本上都是/əl/，而不是/əu/。读出/əu/的时候，舌头在口腔内是几乎没有任何动作的。然而，读/əl/的时候，舌头是有动作的。从发出/ə/这个音开始，舌尖就在往牙龈的方向移动，直至抵住牙龈才算是发音结束。这个舌位运动的不完整，或者干脆缺失，造成了大多数学生把/əl/读成/əu/。
+Theo tác giả, phần cuối những từ này về cơ bản là /əl/, không phải /əu/. Khi phát /əu/, lưỡi gần như không chuyển động trong miệng. Nhưng khi phát /əl/, lưỡi có chuyển động: ngay từ lúc phát /ə/, đầu lưỡi di chuyển về phía gờ lợi, đến khi chạm gờ lợi mới kết thúc. Chuyển động không đầy đủ hoặc hoàn toàn vắng mặt khiến phần lớn học sinh đọc /əl/ thành /əu/.
 
-把刚刚提到的那几个单词反复朗读即便，体会一下舌尖滑动直至抵住牙龈的位置带来的发音变化：“lawful”, “valuable”, “financial”, “still”。
+Hãy đọc lại vài lần các từ “lawful”, “valuable”, “financial”, “still”, cảm nhận thay đổi âm thanh khi đầu lưỡi trượt đến chạm gờ lợi.
 
-然后，请读者自己先尝试着朗读一下这句话，多读几遍，直至读熟为止：
+Sau đó, hãy tự thử đọc câu này nhiều lần cho tới khi quen:
 
 > I'm sure you'll enjoy this community service, and you'll gain valuable experience at the same time.
 
-现在然后再认真听这段文字的录音：第 1 篇倒数第 4 句。初学者马上就会发现自己读得与录音之中有明显的差别：录音中，有两个词末尾的/l/音与紧邻单词开头的元音连读了：
+Bây giờ hãy nghe kỹ bản ghi âm của đoạn ấy: bài 1, câu thứ tư tính từ cuối lên. Người mới học sẽ lập tức nhận ra cách mình đọc khác rõ rệt với bản ghi. Trong bản ghi, âm /l/ cuối hai từ nối với nguyên âm đầu từ liền sau:
 
 > I'm sure you'**ll_en**joy this community service, and you'll gain valuab**le_e**xperience at the same time.
 
-先看看怎样才能把 “valuable experience” 读成录音中的样子。如果，valuable 这个单词词尾的/əl/结束的时候，舌尖位置不在牙龈上的话，那么为了读出录音中的 “连读” 效果，就需要重新启动舌尖的运动，于是听起来就非常笨拙。所以，读/əl/的时候，舌尖运动完整非常重要。进而，在运用前面讲过的关于 “停顿” 的知识，为了能够把重音所在的音节/ˈpɪ/读清楚，之前故意夸张点加进停顿。这样读：/ˌvæ-ljə-bə-liks-...-ˈpɪ-rɪəns/，在/liks/发音之后马上把嘴唇合上，稍等一会儿，然后稍微用点劲把/ˈpɪ/读出来，感觉就对了。多试几遍就肯定能够掌握。其实，上面句子中的 “you'll enjoy” 也是一样的机理。
+Trước hết, hãy xem làm sao đọc “valuable experience” như trong bản ghi. Nếu lúc kết thúc /əl/ cuối “valuable”, đầu lưỡi chưa ở gờ lợi, thì để tạo hiệu ứng nối âm ấy, bạn phải khởi động lại chuyển động đầu lưỡi, khiến cách đọc nghe rất vụng về. Vì vậy, tác giả coi chuyển động đầu lưỡi đầy đủ khi phát /əl/ là rất quan trọng. Tiếp đó, áp dụng điều đã học về ngắt nghỉ: để đọc rõ âm tiết có trọng âm /ˈpɪ/, hãy cố ý thêm một khoảng ngừng phóng đại trước đó. Đọc như sau: /ˌvæ-ljə-bə-liks-...-ˈpɪ-rɪəns/. Ngay sau /liks/, khép môi lại, chờ một chút rồi dùng lực hơn một chút để đọc /ˈpɪ/, bạn sẽ có cảm giác đúng. Tác giả khẳng định thử vài lần là sẽ nắm được. “you'll enjoy” trong câu trên thực ra cũng cùng cơ chế.
 
-如果，自我感觉还是非常生硬的话，那就是还有一处需要改进。之所以在改进了/l/发音结束时的舌尖位置之后连读依然别扭、生硬，通常是因为后一个单词的重音没有被清楚地重读。不妨在练习的时候，有意夸张地重读第二个单词的重读音节：
+Nếu vẫn thấy cứng và gượng, còn một điểm cần sửa. Sau khi cải thiện vị trí đầu lưỡi ở cuối /l/ mà nối âm vẫn gượng, nguyên nhân thường là âm tiết có trọng âm của từ sau chưa được nhấn rõ. Khi luyện, hãy cố ý nhấn phóng đại âm tiết có trọng âm của từ thứ hai:
 
-> You'll_en**joy**，valuable_ex**pe**rience
+> You'll_en**joy**, valuable_ex**pe**rience
 
-如果，以/l/结束的单词后面跟着的单词，第一个音节是被重读的，那么，就整个/l+元音/都会被重读，比如 “real audio”，会被读成/ri-ˈlɔ:-diəʊ/
+Nếu từ theo sau một từ kết thúc bằng /l/ có trọng âm ở âm tiết đầu, theo tác giả, cả /l + nguyên âm/ sẽ được nhấn. Ví dụ “real audio” được ông ghi thành /ri-ˈlɔ:-diəʊ/.
 
-再仔细听听以下这句话：
+Hãy nghe kỹ thêm câu này:
 
-> Professor Dodge wi**ll_a**ct as a mentor to the tutors...（第 1 篇第 9 句）
+> Professor Dodge wi**ll_a**ct as a mentor to the tutors... (Bài 1, câu 9)
 
-如果说 “连读” 需要注意什么的话，就是相连的两个词汇中，第二个单词的重音音节一定要讲清楚（事实上，如果后面的单词不强读的话，也就自然不会产生连读效果，抑或即便产生了连读效果也没那么明显）。而为了把重音音节讲清楚，重音音节之前还可能要多少有点停顿才可以。
+Nếu có điều gì cần chú ý về nối âm, thì đó là âm tiết có trọng âm ở từ thứ hai phải được nói rõ. Tác giả cho rằng nếu từ sau không được nhấn mạnh, hiệu ứng nối âm sẽ không tự nhiên xuất hiện, hoặc có xuất hiện cũng không rõ bằng. Để nói rõ âm tiết có trọng âm, đôi khi còn phải ngừng ít nhiều trước âm tiết ấy.
 
-看到了吧？所谓连读，其实并不是故意连起来的，而是之前辅音的口腔运动完整的话，那么就会自然而然地得到 “连读” 的效果。甚至包括之后要讲解的所谓 “音变”，也都是同样的机理，不是故意而为之，而是自然而然才对。连读根本没有很多老师所声称的以及很多学生所以为地那么重要，而解决方法也不能是为了 “连” 而 “连”，那只不过是治标不治本。
+Bạn thấy rồi chứ? Cái gọi là nối âm thực ra không phải cố tình nối lại. Nếu động tác trong miệng để phát phụ âm trước được thực hiện đầy đủ thì hiệu ứng nối âm sẽ xuất hiện tự nhiên. Ngay cả “biến âm” sẽ được giải thích sau cũng cùng cơ chế: phải xảy ra tự nhiên, không phải cố ý tạo ra. Theo tác giả, nối âm không quan trọng đến mức nhiều giáo viên tuyên bố và nhiều học sinh vẫn nghĩ. Cách giải quyết cũng không thể là “nối” chỉ để “nối”, vì như thế chỉ xử lý phần ngọn.
 
-而其它的辅音，相对/l/来看，对于中国学生都要容易得多，甚至没必要专门练习（而最为重要的/t/、/d/和/s/，之前已经讲过了）。跟读多了，朗读多了，以后说话说多了，自然而然地就全都好了。
+So với /l/, tác giả cho rằng các phụ âm khác đều dễ hơn nhiều đối với học sinh Trung Quốc, thậm chí không cần luyện riêng. Những âm quan trọng nhất là /t/, /d/, /s/ đã được trình bày. Nghe và nói theo nhiều, đọc thành tiếng nhiều, rồi sau này nói nhiều, tự nhiên mọi thứ sẽ tốt lên.
 
-## 15. 掌握浊化，从/t/做起
+> **Ghi chú biên tập: âm l cuối và nối âm.** Với *dark l*, phần sau lưỡi nâng về phía ngạc mềm; mô tả chỉ dựa vào đầu lưỡi chưa đủ. Một số biến thể /l/ cuối còn không có tiếp xúc đầu lưỡi với gờ lợi, nên không coi “không chạm thì không thể nối” là quy tắc cho mọi giọng. Xem [University of Groningen: Approximants /l/](https://opentextbooks.rug.nl/americanenglishphonetics2/chapter/12-3-1-approximants-l/). *Still* kết thúc bằng /ɪl/, không phải /əl/; không tự chèn schwa hay thêm âm tiết. Nhận xét “đọc thành o” và phiên âm sai ở trên là dữ liệu lỗi theo tác giả, không phải mẫu để bắt chước. Nối âm cũng có thể xảy ra khi từ sau không được nhấn. Với người Việt, hãy luyện *feel*, *still*, *feel it*, *you'll enjoy* bằng bản mẫu và bản ghi của mình, đồng thời giữ số âm tiết; không lấy nhận xét của tác giả rằng các âm khác “không cần luyện riêng” làm tiêu chí bỏ qua lỗi của chính mình.
 
-/t/真的是个很值得为其花费时间精力的辅音，就算这节结束之后还要再次提起呢。
+## 15. Tìm hiểu hiện tượng tác giả gọi là hữu thanh hóa, bắt đầu từ /t/
 
-在已经知道了/t/这个音的舌尖起始位置与中文的[t]不同之后，还要知道/t/这个辅音的另外一个重要特征：当/t/夹在两个元音之间的时候，/t/就会被浊化。最明显的例子 city 这个单词，/t/前后都是元音，所以，读出来的时候，不再是/t/而是/t̬/（请注意 t 下小小的 “v” 字形符号 ）。再比如，meet 这个单词，读作/miːt/，而加上 ing 之后，就是/ˈmiːt̬ɪŋ/——/t/变成了/t̪/，听起来很接近/d/的一个音。/t/正是因为如此才被称为 “清辅音”，而/d/则是因为发音的时候有声带振动而被称为 “浊辅音”。
+/t/ thật sự là một phụ âm đáng để bỏ thời gian và công sức. Ngay cả sau mục này, chúng ta vẫn còn phải nhắc lại nó.
 
-而在自然语流中，/t/前后都是元音的情况就更多了，因为很多单词以/t/结尾，而另外还有很多单词以元音开头。请仔细听听下面的录音：
+Sau khi biết vị trí xuất phát của đầu lưỡi với /t/ tiếng Anh khác [t] tiếng Trung, cần biết thêm một đặc điểm quan trọng: theo cách mô tả của tác giả, khi /t/ nằm giữa hai nguyên âm, nó bị hữu thanh hóa. Ví dụ rõ nhất là “city”: trước và sau /t/ đều là nguyên âm, nên khi đọc không còn là /t/ mà là /t̬/, với dấu nhỏ hình “v” dưới t. Tương tự, “meet” đọc là /miːt/, nhưng khi thêm “ing” thì thành /ˈmiːt̬ɪŋ/. Tác giả viết rằng /t/ biến thành /t̪/, một âm nghe rất gần /d/. Ông giải thích /t/ được gọi là “phụ âm vô thanh”, còn /d/ được gọi là “phụ âm hữu thanh” vì khi phát âm có rung dây thanh.
 
-> You education majors might be especially interested in it because **it offers** the opportunity to do some teaching -- **that is**, tutoring in math and English.（第 1 篇第 4 句）
+Trong lời nói tự nhiên, trường hợp /t/ có nguyên âm ở cả hai bên càng nhiều, vì nhiều từ kết thúc bằng /t/ và nhiều từ khác bắt đầu bằng nguyên âm. Hãy nghe kỹ bản ghi sau:
 
-这其中，“it offers” 两个词之间发生了连读现象，于是，/t/被夹在两个元音之间；而 “that is” 中的/t/也是一样的道理；被浊化的/t̬/与/d/非常接近，因为舌尖起始位置是相同的，并且不再像/t/那样只有气流振动没有声带振动——/t̪/不仅有气流振动还有比/d/相对轻微一点的声带振动。只不过，/t̪/相对更加短促一些，感觉上更加具有弹性 —— 而事实上，直接把/t̪/读成/d/也是可以的，因为差别实在不大。
+> You education majors might be especially interested in it because **it offers** the opportunity to do some teaching -- **that is**, tutoring in math and English. (Bài 1, câu 4)
 
-严格意义上来讲，应该是这样的：当清辅音/t/夹在两个元音之间，前一个是重读元音，后一个是轻读元音时，/t/才会被浊化为/t̬/。比如，“writer” 和 “rider”、“latter” 和 “ladder”、“petal” 和 “pedal” 听起来都差不多。所以，前文中 “opportunity” 的 “第二个 t”，以及 “tutoring” 中的 “第二个 t”，都没有被浊化。
+Ở đây, “it offers” có nối âm giữa hai từ, nên /t/ nằm giữa hai nguyên âm; /t/ trong “that is” cũng vậy. Theo tác giả, /t̬/ đã hữu thanh hóa rất gần /d/ vì cùng vị trí xuất phát của đầu lưỡi, và không còn chỉ có luồng khí dao động mà không rung dây thanh như /t/. Ông tiếp tục dùng ký hiệu /t̪/ để mô tả âm có cả dao động của luồng khí lẫn rung dây thanh nhẹ hơn /d/. Âm này ngắn hơn, có cảm giác linh hoạt hơn; tác giả thậm chí cho rằng có thể đọc thẳng thành /d/ vì khác biệt thực sự không lớn.
 
-但平心而论，这确实很难分辨，尤其对把英语当作外语来学的中国学生来说，更是如此。所以，先去了解 “浊化” 现象，而后尽力模仿，但也没必要过分苛求。实际上，说多了之后，即便不刻意 “浊化”，也会自然而然地在该怎样就怎样。更何况，这只是发音中的小细节，在达成良好沟通的过程中，其作用仅占一个很小很小的比例。
+Nói chặt chẽ hơn, tác giả nêu điều kiện: khi /t/ vô thanh nằm giữa hai nguyên âm, nguyên âm trước có trọng âm và nguyên âm sau đọc nhẹ, /t/ mới hữu thanh hóa thành /t̬/. Chẳng hạn “writer” với “rider”, “latter” với “ladder”, “petal” với “pedal” nghe gần giống nhau. Vì thế, theo ông, chữ t thứ hai trong “opportunity” và chữ t thứ hai trong “tutoring” ở đoạn trước đều không hữu thanh hóa.
 
-另外，在自然语流中，落在重音上的音节中，位于/s/后面的清辅音/t/、/k/、/p/、/ʧ/往往被浊化。所以，“[study](http://cougar.eb.com/soundc11/s/study001.wav)” 读得像/sdʌdɪ/、“[school](http://cougar.eb.com/soundc11/s/school01.wav)” 读得像/sgu:l/、“[experience](http://cougar.eb.com/soundc11/e/experi01.wav)” 读得像/ɪksˈbɪərəns/、“[strive](http://cougar.eb.com/soundc11/s/strive01.wav)” 读得像/sʤaɪv/。
+Nhưng công bằng mà nói, điều này thực sự khó phân biệt, nhất là với học sinh Trung Quốc học tiếng Anh như ngoại ngữ. Vì vậy, hãy tìm hiểu hiện tượng “hữu thanh hóa” trước rồi cố gắng bắt chước, nhưng không cần quá khắt khe. Thực tế, khi đã nói nhiều, dù không cố ý làm như vậy, âm cũng sẽ tự nhiên thành dạng cần có ở chỗ cần có. Hơn nữa, đây chỉ là chi tiết nhỏ trong phát âm, đóng góp một tỷ lệ rất nhỏ vào việc giao tiếp tốt.
 
-然而，有时这些清辅音之前尽管有/s/但，这些辅音与后面的元音并未构成重音音节的时候，就不会被浊化。所以，“[distance](http://cougar.eb.com/soundc11/d/distan01.wav)”, “[costume](http://cougar.eb.com/soundc11/c/costum02.wav)”, “[biscuit](http://cougar.eb.com/soundc11/b/biscui01.wav)” 这些单词中/s/后面的辅音就不被浊化。当然，“coast” 这个单词中的/t/肯定不会被浊化。
+Ngoài ra, tác giả cho rằng trong lời nói tự nhiên, các phụ âm vô thanh /t/, /k/, /p/, /ʧ/ sau /s/ trong âm tiết có trọng âm thường bị hữu thanh hóa. Vì vậy, ông mô tả “[study](http://cougar.eb.com/soundc11/s/study001.wav)” nghe như /sdʌdɪ/, “[school](http://cougar.eb.com/soundc11/s/school01.wav)” nghe như /sgu:l/, “[experience](http://cougar.eb.com/soundc11/e/experi01.wav)” nghe như /ɪksˈbɪərəns/, “[strive](http://cougar.eb.com/soundc11/s/strive01.wav)” nghe như /sʤaɪv/.
 
-## 16. 掌握失爆，还是得从/t/做起
+Tuy nhiên, theo tác giả, có lúc dù trước phụ âm vô thanh là /s/, nhưng phụ âm ấy không cùng nguyên âm sau tạo thành âm tiết có trọng âm, thì không hữu thanh hóa. Vì thế, ông nói phụ âm sau /s/ trong “[distance](http://cougar.eb.com/soundc11/d/distan01.wav)”, “[costume](http://cougar.eb.com/soundc11/c/costum02.wav)”, “[biscuit](http://cougar.eb.com/soundc11/b/biscui01.wav)” không hữu thanh hóa. Đương nhiên, theo ông, /t/ trong “coast” chắc chắn cũng không hữu thanh hóa.
 
-/t/啊/t/，我踢死你算了。
+> **Ghi chú biên tập: âm vỗ khác âm răng, không bật hơi khác hữu thanh hóa.** Ký hiệu /t̪/ mà nguyên tác dùng lẫn ở trên chỉ âm răng, không phải âm vỗ. Âm vỗ thường ghi `[ɾ]`; `t̬` là cách thể hiện trong một số từ điển. Trong nhiều giọng Bắc Mỹ, /t/ và /d/ có thể thành âm vỗ trước âm tiết không nhấn, có xét ngữ cảnh; không biến mọi /t/ giữa nguyên âm thành /d/. Câu khẳng định t thứ hai của *opportunity* không thành âm vỗ cũng không đúng như một quy tắc chung. Xem [Essentials of Linguistics: Phonemes and Allophones](https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/4-1-phonemes-and-allophones/) và [Cambridge: opportunity](https://dictionary.cambridge.org/dictionary/english/opportunity).
+>
+> Trong cụm đầu âm tiết sau /s/, /p, t, k/ thường **không bật hơi** nhưng vẫn vô thanh, không vì thế đổi thành /b, d, g/. Điều kiện không bật hơi cũng không chỉ giới hạn ở các ví dụ có trọng âm. Đừng luyện *school* thành /sgu:l/ hay *strive* thành /sʤaɪv/ theo phiên âm mô tả của nguyên tác; với *strive*, vẫn phải giữ thành phần /r/. Xem [Essentials of Linguistics: Aspirated Stops in English](https://pressbooks.pub/essentialsoflinguistics/chapter/3-5-aspirated-stops-in-english/). Các liên kết âm thanh cũ được giữ để truy nguồn, không bảo đảm nhà cung cấp còn phục vụ tệp.
 
-请认真听以下录音：
+## 16. Tìm hiểu âm tắc không bật ra, vẫn bắt đầu từ /t/
 
-> I hope you’ve all finishe**_~~d~~_** reading the assigne**_~~d~~_** chapter on insurance — so tha**_~~t~~_** you’re prepare**_~~d~~_** for our discussion today. （第 2 篇第 1 句）
+Ôi /t/ ơi /t/, hay là tôi đá cho mi một trận cho rồi! Nguyên tác đùa bằng câu tiếng Trung “Tôi đá chết bạn” đã dùng ở mục 13.
 
-其中，“finished” 这个词末尾的 “ed” 由于跟在清辅音/sh/后面，所以原本应该读成/t/ ，但又由于后面紧跟着的单词是辅音开头的（“reading”），所以/t/就 “失爆” 了，于是听不到了；后面还有总计三处/t/或/d/产生失爆现象而听不到的情况。
+Hãy nghe kỹ bản ghi sau:
 
-需要着重解释的是，所谓的 “失爆”，并不是省略。实际上说话者的口腔内舌头的运动是完整的，/t/或者/d/结束的时候，舌尖还是要顶到牙龈的位置上（如下图所示），只不过，没有气流振动，于是听不到而已。
+> I hope you’ve all finishe<strong><em><del>d</del></em></strong> reading the assigne<strong><em><del>d</del></em></strong> chapter on insurance -- so tha<strong><em><del>t</del></em></strong> you’re prepare<strong><em><del>d</del></em></strong> for our discussion today. (Bài 2, câu 1)
+
+Đuôi “ed” trong “finished” đứng sau phụ âm vô thanh /sh/, nên vốn phải đọc thành /t/. Nhưng vì từ tiếp theo là “reading” bắt đầu bằng phụ âm, tác giả giải thích /t/ “mất tiếng bật” nên không nghe thấy. Phía sau còn tổng cộng ba chỗ /t/ hoặc /d/ mất tiếng bật như vậy.
+
+Điều cần nhấn mạnh là, theo tác giả, “mất tiếng bật” không phải lược bỏ. Thực ra chuyển động của lưỡi trong miệng người nói vẫn đầy đủ. Khi /t/ hoặc /d/ kết thúc, đầu lưỡi vẫn phải chạm gờ lợi như hình dưới, chỉ là không có dao động luồng khí nên không nghe thấy.
 
 ![](images/figure08.png)
 
-最为关键的是，这些因失爆而无法听到的/t/、/d/在语流中依然占据它们原本该拥有的长度。于是，“might be” 并不是读成/maibi:/而是/mai(-)bi:/，(-)的位置上，舌尖定在牙龈上，略作停顿，再发出/bi:/的声音。一定不要忘了停顿，那感觉就好像弹吉他的时候扫弦切音一样。仔细听下面的录音，注意 “might be” 和 “interested in it”。
+Điều quan trọng nhất, theo ông, là /t/, /d/ không nghe được vì mất tiếng bật vẫn chiếm độ dài vốn có trong dòng lời nói. Vì thế, “might be” không đọc thành /maibi:/ mà là /mai(-)bi:/. Ở vị trí (-), giữ đầu lưỡi ở gờ lợi, ngừng một chút rồi mới phát /bi:/. Nhất định đừng quên khoảng ngừng; cảm giác giống kỹ thuật quạt rồi chặn dây đàn guitar. Hãy nghe kỹ bản ghi sau, chú ý “might be” và “interested in it”.
 
-> You education majors **migh*~~t~~* be** especially **interested in _~~it~~_** because it offers the opportunity to do some teaching — that is, tutoring in math and English.（第 1 篇第 4 句）
+> You education majors <strong>migh<em><del>t</del></em> be</strong> especially <strong>interested in <em><del>it</del></em></strong> because it offers the opportunity to do some teaching -- that is, tutoring in math and English. (Bài 1, câu 4)
 
-可能产生失爆的辅音还有/p/、/b/、/k/、/g/。例如，下面的 “helps” 中的/p/，和 “looks” 中的/k/：
+Các phụ âm khác có thể mất tiếng bật là /p/, /b/, /k/, /g/. Chẳng hạn /p/ trong “helps” và /k/ trong “looks” dưới đây:
 
-> A new community program called “One On One” hel***~~p~~*s** elementary students who’ve fallen behind. （第 1 篇第 3 句）
+> A new community program called “One On One” hel<strong><em><del>p</del></em>s</strong> elementary students who’ve fallen behind. (Bài 1, câu 3)
 
-> It loo**_~~k~~_**s good on your resume, too…（第 1 篇第倒数第 3 句）
+> It loo<strong><em><del>k</del></em></strong>s good on your resume, too… (Bài 1, câu thứ ba tính từ cuối lên)
 
-通行的语音教程上还会更进一步讲解 “失去爆破” 与 “不完全爆破”，我个人认为，对大多数人来说，已经没必要再深究了、语言学习就是这样：先把握最基本的，而后通过大量的练习与应用就可自然学会很多自己都不知道怎么学会的东西。
+Các giáo trình ngữ âm thông dụng còn phân biệt sâu hơn “không bật ra” và “bật không hoàn toàn”. Cá nhân tôi cho rằng với đa số người học, không cần đi sâu thêm. Học ngôn ngữ là như vậy: nắm phần cơ bản nhất trước, sau đó qua rất nhiều luyện tập và sử dụng, bạn sẽ tự nhiên học được nhiều điều mà chính mình cũng không biết đã học bằng cách nào.
 
-一个旁通的例子是，在中文中，在某个层面上，“编” 这个字与 “织” 这个字是一样的意思 —— 乃至于 “编织” 还是同样的意思；然而，我们会说 “这个女孩织毛衣”，“那个男孩编故事”，但我们绝对不会说 “他们在织故事。” 最后一句话显然是错误的，至于为什么错误，而我们又是如何避免这个错误的 —— 我们不知道，也无需知道，反正我们就是不会犯那样的错误。哦，其实我们早就应该知道的，我们在第二章 “2.7 朗读训练可以提高语言文字模式识别能力” 中有清楚的解释。
+Một ví dụ liên hệ: trong tiếng Trung, ở một khía cạnh nào đó, chữ “biên” và chữ “chức” có cùng nghĩa, đến mức ghép thành “biên chức” vẫn có nghĩa ấy. Thế nhưng người ta nói “Cô gái này đan áo len”, “Cậu bé kia bịa chuyện”, chứ tuyệt nhiên không nói câu tương ứng “Họ đang đan chuyện”. Câu cuối rõ ràng sai theo tác giả. Vì sao sai, và chúng ta tránh lỗi ấy bằng cách nào? Chúng ta không biết, cũng chẳng cần biết, dù sao cũng không mắc lỗi đó. À, thực ra ta đáng lẽ đã biết: mục “2.7. Luyện đọc thành tiếng giúp nâng cao khả năng nhận diện mẫu ngôn ngữ và văn bản” ở chương 2 giải thích rõ.
 
-## 17. 攻克所谓的 “同化”
+> **Ghi chú biên tập: không nghe tiếng bật không có nghĩa âm biến mất.** Âm tắc có thể giữ giai đoạn đóng dù tiếng bật không rõ. Không mô tả mọi trường hợp ấy là hoàn toàn “không có dao động luồng khí”, và không chèn một khoảng im lặng cố định thay cho mỗi phụ âm. Xem [University of Groningen: Initial and final devoicing](https://opentextbooks.rug.nl/americanenglishphonetics2/chapter/10-1-1-initial-and-final-devoicing/). Ký hiệu gạch bỏ ở câu mẫu là cách đánh dấu của tác giả, không phải yêu cầu bỏ chữ hay toàn bộ từ *it*. /sh/ trong lời giải thích là cách ghi của nguồn cho /ʃ/. Các ví dụ âm thanh là tư liệu cần nghe riêng, không suy ra mọi /t, d/ trước mọi phụ âm đều bắt buộc được thực hiện giống nhau.
+>
+> Ví dụ cuối phân tích các từ tiếng Trung *biān* (đan/bện hoặc biên soạn, bịa ra tùy kết hợp), *zhī* (dệt/đan), *biānzhī* (đan dệt). Nguyên tác đối chiếu *zhī máoyī* (đan áo len), *biān gùshi* (bịa chuyện) với *zhī gùshi* (cách kết hợp tác giả cho là sai trong ngữ cảnh đó). Bản dịch tiếng Việt chỉ giải nghĩa, không phải bằng chứng về kết hợp từ tiếng Trung hay một lệnh cấm dùng hình ảnh “dệt nên câu chuyện” trong văn chương tiếng Việt. Tham chiếu “2.7” trong lời tác giả không khớp bố cục sách hiện tại; nội dung phân tích mẫu này nằm ở mục 7 của [chương 4: Đọc thành tiếng](./chapter4.md).
 
-/t + j/可能会变成/ʧ/。比如，下面例子中的 “want you...”
+## 17. Tìm hiểu hiện tượng đồng hóa
 
-> Then tonight I **want you** to go home and read a passage into a tape recorder and evaluate your own voice. （第 16 篇最后 1 句）
+/t + j/ có thể biến thành /ʧ/, chẳng hạn “want you...” trong ví dụ sau:
 
-但并非总是如此，有些时候，说话者会把/t/后面的/j/当作辅音处理，这样的话，前面的/t/就 “失爆” 了。定义上，/j/是 “半辅音”，或者 “半元音”。我猜是这样，当/j/所在的音节是重音音节的时候，/j/被当作 “半辅音” 处理；而当/j/所在的音节是非重音音节的时候，/j/则被当作 “半元音” 处理。比如，下面这个已经听过的句子中（之前已经听过），that 中的/t/，后面尽管跟着/j/，但是，/t/是失爆了，而不是与/j/结合产生了同化。
+> Then tonight I **want you** to go home and read a passage into a tape recorder and evaluate your own voice. (Bài 16, câu cuối)
 
-> I hope you've all finished reading the assigned chapter on insurance -- **so tha*~~t~~*** you're prepared for our discussion today. （第 2 篇第 1 句）
+Nhưng không phải lúc nào cũng vậy. Đôi khi người nói xử lý /j/ sau /t/ như phụ âm, khiến /t/ trước đó mất tiếng bật. Về định nghĩa, /j/ được gọi là “bán phụ âm” hoặc “bán nguyên âm”. Tôi đoán như sau: khi âm tiết chứa /j/ có trọng âm, /j/ được xử lý như “bán phụ âm”; khi âm tiết chứa /j/ không có trọng âm, nó được xử lý như “bán nguyên âm”. Chẳng hạn trong câu đã nghe sau đây, dù sau /t/ của “that” là /j/, /t/ mất tiếng bật chứ không kết hợp với /j/ để đồng hóa.
 
-/d + j/也一样。很多的时候，/d/与/j/结合，会变成/ʤ/。但另外一些时候，并不产生音变。比如下面这个句子：
+> I hope you've all finished reading the assigned chapter on insurance -- <strong>so tha<em><del>t</del></em></strong> you're prepared for our discussion today. (Bài 2, câu 1)
 
-> **What should you do, then**, on those sleepless nights?（第 20 篇第 10 句）
+/d + j/ cũng vậy. Nhiều lúc /d/ kết hợp /j/ thành /ʤ/, nhưng cũng có lúc không biến âm, như câu sau:
 
-这句话里面，“what” 末尾的/t/与 “should” 前面的/ʃ/结合，变成了/ʧ/，而 “should” 末尾的/d/与后面的/ju:/结合成/djə/（因为 “you” 被弱读，后面的 “do” 被强读）。这句话里的/d + j/组合，并没因产生音变而成为 “ʤ”
+> **What should you do, then**, on those sleepless nights? (Bài 20, câu 10)
 
-/s + j/可能会变成/ʃ/。注意，都是 “可能” 而非 “必须”。实际上，/s + j/的情况并不多，最常见的是这个短语 “this year”。其实，是否产生音变，实在是因人而异 —— 有些人在发/s/音的时候，舌面更靠上一些；而另外一些人在发/s/音的时候，舌面没有那么靠上。舌面更靠上的人（下面第一句话），读出来，感觉是变成/ðɪ-ˈʃɪə/了，而舌面没有那么靠上的人（下面第二句话），读出来就没有什么变化。（其实，即便是同一个人说话，也不一定总是一模一样的，比如，他也可能有时候舌面更靠上一点，而另外一些时候没那么靠上。）
+Theo phân tích của tác giả, trong câu này, /t/ cuối “what” kết hợp /ʃ/ đầu “should” thành /ʧ/, còn /d/ cuối “should” kết hợp /ju:/ theo sau thành /djə/, vì “you” đọc nhẹ còn “do” được nhấn mạnh. Tổ hợp /d + j/ ở đây không biến thành “ʤ”.
 
-> As the committee in charge of **this year's** tree-planting project, we have several items on our agenda. （第 9 篇第 2 句）
+/s + j/ có thể biến thành /ʃ/. Lưu ý tất cả đều là “có thể”, không phải “bắt buộc”. Tác giả cho rằng trường hợp /s + j/ thực ra không nhiều, phổ biến nhất là cụm “this year”. Có biến âm hay không còn tùy người: có người nâng mặt lưỡi cao hơn khi phát /s/, có người không nâng cao bằng. Với người nâng cao hơn, như câu thứ nhất dưới đây, cảm giác âm chuyển thành /ðɪ-ˈʃɪə/; với người không nâng cao bằng, như câu thứ hai, nghe không có thay đổi. Thực ra ngay cả cùng một người cũng không nhất thiết luôn nói giống hệt nhau: lúc này mặt lưỡi có thể cao hơn một chút, lúc khác lại thấp hơn.
 
-> When you entered as first-year students **this year**, the school assigned you to a dorm and a roommate... （第 40 篇第 2 句）
+> As the committee in charge of **this year's** tree-planting project, we have several items on our agenda. (Bài 9, câu 2)
 
-能够自然而然地发出这些因 “同化” 而产生的声音的关键在于/t/、/d/、/s/的舌尖起始位置必须是正确的。比较一下/t/和/ʧ/的舌尖起始位置，就知道这两个音的舌尖起始位置是大致相同的。而如果把/t/读成中文的[t]，那么舌尖起始位置就是在牙齿上而非牙龈上，那么，如论如何都发不出自然而然的 “同化” 了。
+> When you entered as first-year students **this year**, the school assigned you to a dorm and a roommate... (Bài 40, câu 2)
 
-唉，怎么又是/t/和/d/？——这其实并不奇怪，知识分布总是这样，大量的重点往往只集中在某几个甚至某一个部分之上。例如，英文语法书中，差不多有 2/3 的内容是关于动词的 —— 也是同样的道理。
+Theo tác giả, chìa khóa để phát tự nhiên những âm sinh ra do đồng hóa là vị trí xuất phát của đầu lưỡi với /t/, /d/, /s/ phải đúng. So sánh vị trí đầu lưỡi của /t/ và /ʧ/ sẽ thấy chúng gần giống nhau. Nếu đọc /t/ thành [t] tiếng Trung như ông mô tả, đầu lưỡi ở răng thay vì gờ lợi, thì dù thế nào cũng không tạo được đồng hóa tự nhiên.
 
-## 18. 总结一下/t/
+Ôi, sao lại là /t/ và /d/ nữa? Điều này thực ra chẳng lạ. Kiến thức thường phân bố như thế: rất nhiều điểm quan trọng tập trung vào một vài phần, thậm chí chỉ một phần. Ví dụ, gần hai phần ba nội dung sách ngữ pháp tiếng Anh nói về động từ, theo nhận xét của tác giả, cũng là cùng một lẽ ấy.
 
-/t/是所有英语音素当中学生最需要时间精力去学习、老师最应该耐心解释说明的一个。
+> **Ghi chú biên tập: giữ giả thuyết đúng vị trí của nó.** Câu “tôi đoán” là suy đoán của tác giả, không phải quy tắc xác định /j/ đổi loại theo trọng âm. /j/ là âm tiếp cận ngạc cứng; “bán nguyên âm” không có nghĩa nó tùy ý chuyển thành nguyên âm âm tiết. Các cách phát /t + j/, /d + j/, /s + j/ thay đổi theo ngữ cảnh, giọng và tốc độ. Đừng ép mọi *you* vào một dạng đồng hóa, cũng đừng coi vị trí răng/gờ lợi là điều kiện duy nhất quyết định mọi trường hợp. Xem [Essentials of Linguistics: The International Phonetic Alphabet](https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/3-6-the-international-phonetic-alphabet/). Con số gần hai phần ba về sách ngữ pháp là nhận xét không kèm thống kê của nguyên tác, không phải tỷ lệ đã xác minh.
 
-- 英文/t/的舌尖起始位置与中文[t]不同，英文/t/的舌尖起始位置在牙龈上；
-- /t/如果被夹在两个元音之间（且之前的元音所在的音节是重音音节的话），那么要轻微浊化；
-- /t/在后面接着一个辅音的情况下，往往会产生所谓的失爆现象；/d/也是如此；
-- 如果后面接的辅音是/s/，那么便要演化出/ts/的音；而/d/则演化出/dz/的音；
-- /d/在/p/和/sh/之后会被读成/t/；
-- /t + j/可能会变成/ʧ/；而/d + j/可能会变成/ʤ/（这就是所谓的同化现象）。
+## 18. Tổng kết về /t/
 
-## 19. 技巧加重点：“声调”
+Theo tác giả, trong tất cả âm vị tiếng Anh, /t/ là âm học sinh cần dành nhiều thời gian và công sức nhất, cũng là âm giáo viên nên kiên nhẫn giải thích nhất.
 
-下面这段话，读者应该已经听过很多遍了：
+- Vị trí xuất phát của đầu lưỡi với /t/ tiếng Anh khác [t] tiếng Trung; /t/ tiếng Anh bắt đầu ở gờ lợi.
+- Nếu /t/ nằm giữa hai nguyên âm, và âm tiết chứa nguyên âm trước có trọng âm, thì theo tác giả cần hữu thanh hóa nhẹ.
+- Khi sau /t/ là phụ âm, thường xuất hiện hiện tượng mất tiếng bật; /d/ cũng vậy.
+- Nếu phụ âm sau là /s/, thì theo tác giả cần tạo tổ hợp /ts/; còn /d/ tạo tổ hợp /dz/.
+- /d/ sau /p/ và /sh/ được tác giả nói là đọc thành /t/.
+- /t + j/ có thể thành /ʧ/, còn /d + j/ có thể thành /ʤ/; đó là hiện tượng đồng hóa.
 
-> Community service is an important **component** of education here at our university. We encourage all students to volunteer for at least one community activity before they graduate. A new community **program** called “One On One” helps elementary students who’ve fallen behind.（第 1 篇第 1~3 句）
+> **Ghi chú biên tập: đọc bảng tổng kết cùng các đính chính.** Đây là sáu ý của nguyên tác, không phải sáu quy tắc không có ngoại lệ. Phân biệt âm vỗ, không bật hơi và âm tắc không có tiếng bật rõ như các mục 15-17 đã nêu. Ý về /d/ sau /p, sh/ cần hiểu trong ngữ cảnh đuôi *-ed*: đuôi này đọc /t/ sau âm vô thanh, trừ /t/ thì có /ɪd/; không phải mọi âm vị /d/ sau /p/ hoặc /ʃ/ đều tùy ý đổi thành /t/. Cũng cần phân biệt đuôi số nhiều *-s* đọc /s/ sau /t/ và /z/ sau /d/ với một chuỗi /d + s/ bất kỳ. Xem [Iowa State: đuôi -ed và -s/-'s](https://iastate.pressbooks.pub/teachingpronunciation/chapter/chapter-5-ed-and-s-endings/). Với người Việt, hãy đối chiếu từng từ và cả câu, giữ âm cuối và số âm tiết, rồi mới luyện biến thể của giọng đang học.
 
-请仔细揣摩一下上文中加重的 “component” 和 “program” 两个单词的读法。多听几遍，多尝试几次。
+## 19. Một kỹ thuật và một điểm trọng tâm: đường nét giọng
 
-这两个词在句子里都被强读了，所以，每个音节都相当清楚，而重音音节的声调也很清楚。
+Đến đây, có lẽ bạn đã nghe đoạn sau rất nhiều lần:
 
-先回忆一下中文的 “声调”：轻声、一声、二声、三声，和四声。然后试试看
+> Community service is an important **component** of education here at our university. We encourage all students to volunteer for at least one community activity before they graduate. A new community **program** called “One On One” helps elementary students who’ve fallen behind. (Bài 1, câu 1-3)
 
-- “component” 这个词，这样读就像了：com（轻声），po（四声），nent（二声）；
-- 而 “program” 这个单词，这样读就像了：pro（四声），gram（一声）；另，要把/æ/这个元音读得比短元音稍微长一点。注意：/æ/虽然后面没有长元音符号 “:”，但它是 “半长元音”，比短元音长一点，比长元音短一点。
+Hãy nghe kỹ cách đọc hai từ in đậm “component” và “program”. Nghe thêm vài lần, thử thêm vài lần.
 
-——因为 “轻声”、“一声”、“二声”、“四声”，都是我们所熟悉的讲中文普通话的时候采用的声调，所以，一定会很容就搞定的。
+Cả hai từ đều được nhấn mạnh trong câu, nên từng âm tiết khá rõ, và đường nét giọng ở âm tiết có trọng âm cũng rõ.
 
-英语语音教学的书籍里，从来没有提到过 “声调”，讲的全都是 “语调” —— 也许教学内容的设计者觉得学 “外” 语就得用 “新” 的方式罢；又也许是我孤陋寡闻，看得不够多。然而，这是没办法的事儿：我们了解未知事物必须依赖对已知事物的了解，因为类比思考几乎是跨越已知与未知之间的鸿沟的唯一手段。而如果我们能够找得到可以用来探索未知的已知信息，却不加以运用，是相当不合理、不划算的。
+Trước hết, hãy nhớ lại các thanh điệu tiếng Trung: thanh nhẹ, thanh 1, thanh 2, thanh 3 và thanh 4. Sau đó thử như sau:
 
-> 类比思考几乎是跨越已知与未知之间的鸿沟的唯一手段。小学老师说“其实地球的构造跟煮熟的鸡蛋差不多”，就是用类比方式让学生从已知（煮熟的鸡蛋）跨越到未知（地球的构造）；中学老师说，“原子内部的构造其实与太阳系的构造差不多”，学生们瞬间理解也是同样的道理。所以，我经常鼓励学生只要有时间就要看杂书——越杂越好，多多益善。为什么呢？因为读杂书会大大提高一个人的接受新事物的能力（理解能力的一种）。阅历丰富、博览群书的人，肯定拥有更强的理解能力，因为他们在遇到未知的时候，更有可能迅速地在自己已有的知识中找到可以用来类比的信息。
+- Với “component”, đọc thế này sẽ nghe giống bản ghi: com ở thanh nhẹ, po ở thanh 4, nent ở thanh 2.
+- Với “program”, đọc pro ở thanh 4, gram ở thanh 1. Ngoài ra, đọc nguyên âm /æ/ dài hơn nguyên âm ngắn một chút. Tác giả lưu ý rằng dù /æ/ không có dấu dài “:” phía sau, ông xem nó là “nguyên âm nửa dài”, dài hơn nguyên âm ngắn và ngắn hơn nguyên âm dài.
 
-自然语流中被强读的单词，其中音节往往带着除了轻声之外的声调 —— 有 “一声”、“二声”、“四声”。对，“三声” 很少见。英文中的某个词如果让我们觉得出现了 “三声”，不是一个音节发出的，而是由两个音节拼起来的 —— 第一个音节 “四声”，第二个音节 “二声”。就好像前面我们练过的 “component” 一样。而有些组合，像刚才 “program” 那样的，在中文的声调里是不存在对应的。而弱读的单词，每个音节基本上都相当于 “轻声”。
+Vì thanh nhẹ, thanh 1, thanh 2, thanh 4 đều là những thanh mà người nói tiếng Trung phổ thông đã quen dùng, tác giả cho rằng chắc chắn sẽ rất dễ làm được.
 
-掌握声调有多么重要，用一个中文的例子就可以清楚地说明。老外讲中文的时候，我们作为（中文的）母语使用者，一下子就可以听得出来那是老外在讲中文（哪怕只是电话里看不见对方的情况下）。很多的时候，那并不是因为老外在讲中文时哪个声母或者哪个韵母发音不准确造成的，而是声调不准确造成的。
+> **Ghi chú biên tập: đây là phép liên hệ của tác giả cho người nói tiếng Trung.** Thanh 1 của tiếng Trung phổ thông thường được mô tả là cao ngang, thanh 2 đi lên, thanh 4 đi xuống; thanh nhẹ phụ thuộc ngữ cảnh. Những tên thanh ấy không phải tên dấu thanh tiếng Việt và cũng không phải các thanh cố định của từ tiếng Anh. Các ví dụ *component*, *program* ở đây là lời mô tả một bản ghi cụ thể. Người Việt có thể đánh dấu mũi tên lên/xuống hoặc đường cao độ để nghe và bắt chước cả câu, thay vì gán dấu sắc, huyền, hỏi, ngã cho từng âm tiết tiếng Anh. Độ dài nguyên âm và đường cao độ là hai đặc điểm khác nhau; đính chính về ba “quy luật” của tác giả nằm cuối mục. Xem [Essentials of Linguistics: Tone and intonation](https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/3-12-tone-and-intonation/).
 
-我们自己不妨试一试。洋话连篇，这四个字，拼音是 “yáng huà lián piān”（平仄平平），现在把这四个字读成 “yāng huà liǎn piàn”（平仄仄仄）试试看。每个声母每个韵母都对，但声调却不对，即便我们是母语使用者（所以，声母、韵母都不可能读错的），说出来的也是一股浓浓的 “老外腔调”。
+Theo tác giả, sách dạy ngữ âm tiếng Anh chưa bao giờ đề cập đến “thanh điệu”, mà đều nói về “ngữ điệu”. Có lẽ người thiết kế bài học cho rằng học ngoại ngữ phải dùng cách “mới”, hoặc cũng có thể tôi hiểu biết hạn hẹp, đọc chưa đủ nhiều. Nhưng có một điều không tránh được: để hiểu cái chưa biết, ta phải dựa vào hiểu biết về cái đã biết, bởi tư duy loại suy gần như là cách duy nhất vượt qua khoảng cách giữa hai phía ấy. Nếu tìm được thông tin quen thuộc để khám phá điều chưa biết mà lại không dùng, thì thật không hợp lý và không có lợi.
 
-反过来，就算我们讲英语的时候每个辅音每个元音都读得非常 “标准”，但是，如果声调不正确（或者说不是人家说熟悉的模式），那么就肯定听起来带着非常浓重的 “外国腔”。
+> Tư duy loại suy gần như là cách duy nhất vượt qua khoảng cách giữa điều đã biết và chưa biết. Giáo viên tiểu học nói “Cấu tạo Trái Đất thực ra gần giống một quả trứng luộc” là dùng phép so sánh để đưa học sinh từ điều đã biết, quả trứng luộc, tới điều chưa biết, cấu tạo Trái Đất. Giáo viên trung học nói “Cấu trúc bên trong nguyên tử thực ra gần giống cấu trúc Hệ Mặt Trời”, học sinh lập tức hiểu cũng theo cách ấy. Vì thế, tôi thường khuyến khích học sinh hễ có thời gian thì đọc sách nhiều lĩnh vực, càng đa dạng càng tốt, càng nhiều càng tốt. Tại sao? Vì đọc rộng làm tăng đáng kể khả năng tiếp nhận điều mới, một dạng của khả năng hiểu. Người nhiều trải nghiệm và đọc rộng chắc chắn có khả năng hiểu mạnh hơn, bởi khi gặp điều chưa biết, họ có nhiều khả năng nhanh chóng tìm được thông tin để so sánh trong vốn hiểu biết sẵn có.
 
-黄西的英文，最明显的 “中国腔” 基本上全都来自于声调的不协调（然而，请注意，黄西的 “外国腔” 完全没有影响听众对他的理解 —— 除了发音之外，还有很多其它更重要的因素决定沟通的成败）：
+Theo tác giả, trong lời nói tự nhiên, âm tiết của từ được nhấn mạnh thường có đường nét giống các thanh khác thanh nhẹ: thanh 1, thanh 2, thanh 4. Đúng vậy, thanh 3 rất ít gặp. Nếu cảm thấy một từ tiếng Anh có thanh 3, ông cho rằng đường nét ấy không do một âm tiết tạo ra mà do hai âm tiết ghép lại: âm tiết đầu ở thanh 4, âm tiết thứ hai ở thanh 2, như “component” vừa luyện. Có tổ hợp như “program” ở trên lại không có một thanh tương ứng trong tiếng Trung. Còn ở từ đọc nhẹ, về cơ bản mỗi âm tiết đều tương đương thanh nhẹ.
 
-比如 wife 这个词，他读成 “二声”，而他要是把双元音/aɪ/读成 “四声”，可能就没那么别扭了。（注意，这并不是在说所有的/aɪ/都要读成 “四声” 而不能读成 “二声”。）
+Có thể dùng một ví dụ tiếng Trung để thấy việc nắm đường nét giọng quan trọng đến mức nào. Khi người nước ngoài nói tiếng Trung, người bản ngữ lập tức nhận ra, ngay cả qua điện thoại mà không nhìn thấy họ. Nhiều lúc không phải do một thanh mẫu hay vận mẫu nào đó sai, mà do thanh điệu chưa đúng.
 
-我在教学生的时候，发现只需要让学生记住以下三个规律，就可以大大改善自然语流的质量：
+Chúng ta hãy thử. Cụm bốn chữ có pinyin *yáng huà lián piān*, nghĩa “nói toàn tiếng nước ngoài”, được nguyên tác ghi bằng-trắc-bằng-bằng. Bây giờ thử đọc thành *yāng huà liǎn piàn*, tức bằng-trắc-trắc-trắc theo cách phân loại của tác giả. Từng thanh mẫu, từng vận mẫu đều đúng, nhưng thanh điệu sai. Dù là người bản ngữ, nên theo tác giả không thể đọc sai thanh mẫu và vận mẫu, câu nói vẫn nghe rất rõ “giọng người nước ngoài”.
 
-- 长元音，大多是 “一声”（没办法读成 “三声”）；
-- 双元音，大多是 “四声” 或者 “二声”（很难读成 “一声”）；
-- 短元音，几乎不可能是 “一声”（因为发成 “一声” 就成了长元音了）。
+Ngược lại, dù khi nói tiếng Anh ta đọc từng phụ âm, từng nguyên âm rất “chuẩn”, nhưng đường nét giọng không đúng, hoặc không theo mẫu người nghe quen, thì chắc chắn vẫn có “giọng nước ngoài” rất đậm, theo lập luận của tác giả.
 
-以上只是基本规律，而非指导原则。所以，在跟读的时候，只能靠细心揣摩，认真记录，（记录倒也简单，在元音上方标记 “1”、“2”、“4”、“0” 即可，其中 “0” 代表 “轻声”）而后反复练习。其实很容易适应的，我差不多花十几分钟就能把这事儿说明白，而我很多的学生差不多花一下午的时间就能做到彻底熟练，而后就感觉一下子 “脱胎换骨”……
+Tác giả nhận xét phần “giọng Trung Quốc” rõ nhất trong tiếng Anh của Hoàng Tây gần như đều đến từ đường nét giọng chưa phù hợp. Tuy nhiên, hãy lưu ý rằng giọng nước ngoài của Hoàng Tây hoàn toàn không ảnh hưởng đến việc khán giả hiểu ông. Ngoài phát âm, còn nhiều yếu tố quan trọng hơn quyết định thành bại của giao tiếp.
 
-搞定了这件事儿之后，我甚至觉得不用再刻意花时间教学生关于 “语调” 的内容了，他们不用专门学也很快能够把握 “升调”、“降调”（英语语音教程中的语调部分的概念）。
+Chẳng hạn, ông đọc “wife” với đường nét giống thanh 2. Nếu đọc nguyên âm đôi /aɪ/ theo thanh 4 thì có thể bớt gượng hơn. Điều này không có nghĩa mọi /aɪ/ đều phải đọc theo thanh 4 và không được đọc theo thanh 2.
 
-## 20. 元音/ʌ/和/æ/
+Khi dạy học sinh, tôi thấy chỉ cần giúp họ nhớ ba quy luật sau là có thể cải thiện đáng kể chất lượng lời nói tự nhiên:
 
-/ʌ /的发音，在美式发音中与/ə/非常接近。相互之间甚至很难分辨。比如 encourage 这个单词，在国内常见的词典中音标都标注为/inˈkʌriʤ /，不过，在托福听力中，这个单词中的/ʌ/与/ə/非常接近。实际上，韦氏词典中干脆是这样标注的：/in-kər-ij/。下面这句话（当然）已经听过—— 以前曾听人说，练好一盘磁带就够；而事实上，我个人的经验是，练好那么几句话已经很是足够……
+- Nguyên âm dài phần lớn giống thanh 1, không có cách đọc thành thanh 3.
+- Nguyên âm đôi phần lớn giống thanh 4 hoặc thanh 2, khó đọc thành thanh 1.
+- Nguyên âm ngắn gần như không thể giống thanh 1, vì một khi đọc thành thanh 1 thì đã thành nguyên âm dài.
 
-这次可以多注意一下 “encourage” 这个单词：
+Trên đây chỉ là quy luật cơ bản, không phải nguyên tắc chỉ đạo. Vì vậy, khi nghe và nói theo, chỉ có thể nghe thật kỹ, ghi chép cẩn thận rồi luyện nhiều lần. Cách ghi cũng đơn giản: ghi “1”, “2”, “4”, “0” phía trên nguyên âm, trong đó “0” biểu thị thanh nhẹ. Thực ra rất dễ làm quen. Tôi chỉ mất khoảng hơn mười phút để giải thích rõ, còn nhiều học sinh của tôi chỉ mất chừng một buổi chiều để thực sự thành thạo, rồi cảm thấy như vừa “lột xác”.
+
+Sau khi làm được việc này, tôi thậm chí thấy không cần dành thời gian riêng dạy về ngữ điệu nữa. Không học riêng, học sinh vẫn nhanh chóng nắm được giọng lên và giọng xuống, những khái niệm trong phần ngữ điệu của giáo trình tiếng Anh.
+
+> **Ghi chú biên tập: không dùng ba mô tả trên làm quy tắc phát âm.** Nguyên âm dài không bắt buộc có cao độ ngang, nguyên âm đôi không bắt buộc có cao độ lên hoặc xuống, và giữ cao độ ngang không tự biến nguyên âm ngắn thành nguyên âm dài. Đường nét xuống rồi lên cũng có thể nằm trong một âm tiết, không bắt buộc ghép hai âm tiết; cao độ ngang cũng có thể xuất hiện trên âm tiết ngắn. Xem các bài B4.25 và B4.34 trong [bản xem trước Practical English Phonetics and Phonology](https://api.pageplace.de/preview/DT0400.9780429954771_A37550851/preview-9780429954771_A37550851.pdf). Đường nét cao độ trong tiếng Anh cần nghe theo cả cụm ý và ngữ cảnh; nó không được suy ra chỉ từ loại nguyên âm. Nhận xét về Hoàng Tây, thời gian một buổi chiều và việc không cần dạy ngữ điệu riêng là kinh nghiệm, đánh giá của tác giả, không phải kết quả bảo đảm cho người học Việt Nam. Cũng không coi ví dụ trứng luộc hay Hệ Mặt Trời là mô tả đầy đủ cấu trúc Trái Đất hoặc nguyên tử; chính phép loại suy luôn có giới hạn.
+
+## 20. Hai nguyên âm /ʌ/ và /æ/
+
+Theo tác giả, /ʌ / trong tiếng Anh Mỹ rất gần /ə/, thậm chí khó phân biệt. Chẳng hạn “encourage” thường được các từ điển phổ biến ở Trung Quốc khi ấy ghi là /inˈkʌriʤ /, nhưng trong bài nghe TOEFL, /ʌ/ của từ này rất gần /ə/. Thực tế, ông cho biết từ điển Merriam-Webster ghi thẳng là /in-kər-ij/. Câu dưới đây đương nhiên đã nghe rồi. Trước kia tôi từng nghe người ta nói chỉ cần luyện thật tốt một băng cassette là đủ. Theo kinh nghiệm cá nhân của tôi, luyện tốt vài câu như vậy thực ra đã rất đủ rồi.
+
+Lần này hãy chú ý hơn đến “encourage”:
 
 > We **encourage** all students to volunteer for at least one community activity before they graduate. A new community program called “One On One” helps elementary students who’ve fallen behind.
 
-不妨接着尝试练习一下以下单词的发音：
+Tiếp theo, hãy thử luyện phát âm những từ sau:
 
 - abduct
 - above
@@ -615,17 +666,17 @@ One of our main jobs is to keep detailed records of the migration patterns of ra
 - usher
 - wonder
 
-补充技巧：1) 可以使用读/ə/的方式读/ʌ/，只不过，/ʌ/要相对更加短促而已；2) 在读/ʌ/的时候，嘴唇张开的程度要比/ɑ/小很多。
+Kỹ thuật bổ sung: 1) Theo tác giả, có thể dùng cách phát /ə/ để phát /ʌ/, chỉ cần /ʌ/ ngắn và gọn hơn; 2) khi phát /ʌ/, độ mở môi cần nhỏ hơn nhiều so với /ɑ/.
 
-/æ/的发音，原本就比较特殊，除了英语之外，很少有其他语言使用这个元音。另外，在美式英语中（托福听力中就是如此），很多/ɑ/的音，被读成/æ/，比如：“after”, “ask”, “glass”, “master”, “pass” 等等。
+/æ/ vốn khá đặc biệt; tác giả cho rằng ngoài tiếng Anh, rất ít ngôn ngữ khác dùng nguyên âm này. Ngoài ra, trong tiếng Anh Mỹ, như các bài nghe TOEFL đang dùng, nhiều chỗ có /ɑ/ được đọc thành /æ/, chẳng hạn “after”, “ask”, “glass”, “master”, “pass”.
 
-注意：/æ/这个音在用音标标注的时候，尽管后面没有跟着长音符号/ː/，但是，它的长度接近长元音的长度。
+Lưu ý: dù /æ/ không có ký hiệu nguyên âm dài /ː/ phía sau, tác giả nhận xét độ dài của nó gần với nguyên âm dài.
 
-请仔细注意以下的 “ask” 和 “after”：
+Hãy nghe kỹ “ask” và “after” trong câu dưới:
 
-> My recommendation is that we **ask** the administration to keep the center open **after** midnight for studying.（第 86 篇倒数第 3 句）
+> My recommendation is that we **ask** the administration to keep the center open **after** midnight for studying. (Bài 86, câu thứ ba tính từ cuối lên)
 
-不妨接着尝试练习一下以下单词的发音：
+Tiếp theo, hãy thử luyện phát âm những từ sau:
 
 - absolute
 - add
@@ -681,262 +732,294 @@ One of our main jobs is to keep detailed records of the migration patterns of ra
 - trap
 - wax
 
-## 21. 双元音
+> **Ghi chú biên tập: chọn một mẫu phát âm và phân biệt chất âm với độ dài.** [Merriam-Webster dùng hệ phiên âm riêng](https://www.merriam-webster.com/assets/mw/static/pdf/help/guide-to-pronunciation.pdf); ký hiệu `ə` của hệ đó không tự chứng minh rằng /ʌ/ và schwa không nhấn trong IPA luôn giống nhau. /ʌ/ và /ə/ có thể gần nhau trong một số giọng, nhưng không dùng hướng dẫn “chỉ đọc ngắn hơn” như phép thay thế cho mọi từ. Hãy nghe nguyên âm trong âm tiết có trọng âm của *encourage*, *cut*, *love* và đối chiếu với âm không nhấn trong *above*.
+>
+> Các từ *after*, *ask*, *glass*, *master*, *pass* minh họa khác biệt từ vựng giữa các giọng, không phải quy tắc đổi mọi /ɑ/ tiếng Anh Mỹ thành /æ/. Xem [nhóm từ BATH và khác biệt giữa các giọng](https://ecampusontario.pressbooks.pub/lexicalsets/chapter/7-bath-lexical-set/). /æ/ cũng không có một độ dài “nửa dài” cố định: thời lượng thay đổi theo trọng âm và âm đứng cạnh, chẳng hạn [rút ngắn trước phụ âm fortis](https://opentextbooks.rug.nl/americanenglishphonetics2/chapter/6-6-pre-fortis-clipping/). Trong danh sách, [*bass*](https://dictionary.cambridge.org/pronunciation/english/bass) chỉ dùng /bæs/ khi nói về cá; với nghĩa giọng trầm hoặc nhạc cụ bass, từ này đọc /beɪs/. Danh sách giữ nguyên của tác giả, còn người học cần tra cả nghĩa lẫn giọng Anh/Mỹ trước khi bắt chước.
 
-双元音本质上是由两个短元音构成，两个短元音之间通过运用小舌滑动连接起来。一般来讲，第一个元音要比第二个元音长一点。另外，双元音的构成决定了词汇中含有双元音的音节通常是重音所在的位置。
+## 21. Nguyên âm đôi
 
-双元音中，/aɪ/、/eɪ/、/ɛɚ/、/ɪə/、/ɔɪ/在发音的时候，是没有嘴唇运动的，所有的动作只有小舌滑动。
+Theo tác giả, nguyên âm đôi về bản chất gồm hai nguyên âm ngắn, nối với nhau bằng chuyển động trượt của “lưỡi gà”. Thông thường, nguyên âm thứ nhất dài hơn nguyên âm thứ hai một chút. Ông còn cho rằng cấu tạo ấy khiến âm tiết chứa nguyên âm đôi thường là nơi mang trọng âm của từ.
 
-以/aɪ/为例。读者可以这样练习：
+Trong các nguyên âm đôi /aɪ/, /eɪ/, /ɛɚ/, /ɪə/, /ɔɪ/, tác giả nói môi không chuyển động, mọi động tác chỉ là sự trượt của “lưỡi gà”.
 
-- 张开嘴唇（可以夸张一点，把嘴张得更大一些），读三遍/a/的音，每一遍都读得稍微长一点，升调，每一遍之间略微停顿；
-- 读三遍/a/之后，第四遍在嘴唇没有任何运动的情况下（即，依然保持张开的状态），仅靠小舌滑动读出/aɪ/，并且读成降调。感觉上，/a/要长一点，然后降调滑向/ɪ/
+Lấy /aɪ/ làm ví dụ, bạn có thể luyện như sau:
 
-请反复跟读这段录音【这段录音摘自 DAVID ALAN STERN 的语音教程，《[The Sound and Style of American English](http://dii.nju.edu.cn/summer/sas/index.htm)》】，认真体会。
+- Mở môi, có thể phóng đại bằng cách há miệng rộng hơn; đọc /a/ ba lần, mỗi lần kéo dài hơn một chút và lên giọng, ngừng nhẹ giữa các lần.
+- Sau ba lần /a/, lần thứ tư giữ môi không chuyển động, tức vẫn mở, chỉ dựa vào chuyển động mà tác giả gọi là trượt “lưỡi gà” để phát /aɪ/, với giọng đi xuống. Cảm giác là /a/ dài hơn một chút, sau đó hạ giọng và trượt sang /ɪ/.
 
-/eɪ/、/ɛɚ/、/ɪə/、/ɔɪ/——这些双元音在发音的时候，其原理与/aɪ/是一模一样的，关键之处在于，他们在发音的时候，嘴唇是没有动作的。
+Hãy nghe và nói theo bản ghi nhiều lần để cảm nhận kỹ. Bản ghi được trích từ giáo trình phát âm *[The Sound and Style of American English](http://dii.nju.edu.cn/summer/sas/index.htm)* của DAVID ALAN STERN.
 
-而/aʊ/、/əʊ/、/ʊə/，由于元音构成中有/ʊ/存在，所以嘴唇将不得不产生运动（唇形从大到小：/aʊ/、/əʊ/；从小到大：/ʊə/）。
+Theo tác giả, /eɪ/, /ɛɚ/, /ɪə/, /ɔɪ/ có cơ chế phát âm giống hệt /aɪ/: điểm cốt yếu là môi không chuyển động khi phát âm.
 
-除了上面提到的这些需要注意的地方之外，在托福听力朗读录音中，某个单词只要被重读，其中的双元音都一定会读的非常饱满，充满弹性，并且也是声调变换的（“二声”、“四声”、不大可能有 “一声”）地方；而长元音诸如/a:/、/i:/、/ə:/、/u:/、/ɔ:/（，以及所谓的 “短” 元音/æ/，都往往只有一种声调（“一声”），并且往往显得比双元音短一些。
+Còn /aʊ/, /əʊ/, /ʊə/ có /ʊ/ trong cấu tạo, nên môi bắt buộc phải chuyển động: khẩu hình từ lớn đến nhỏ với /aʊ/, /əʊ/ và từ nhỏ đến lớn với /ʊə/.
 
-请注意一下录音中的双元音，及其这些双元音的声调，当然也要体会一下元音长短构成的节奏节拍（斜体标注的是长元音）：
+Ngoài những điểm cần chú ý trên, trong bản ghi đọc bài nghe TOEFL, tác giả nhận xét rằng hễ một từ được nhấn thì nguyên âm đôi của nó đều được đọc rất đầy đặn, linh hoạt, đồng thời là nơi đường nét giọng thay đổi, giống thanh 2 hoặc thanh 4 tiếng Trung, khó có thanh 1. Còn các nguyên âm dài như /a:/, /i:/, /ə:/, /u:/, /ɔ:/ cùng nguyên âm gọi là “ngắn” /æ/, theo ông, thường chỉ có một đường nét giọng giống thanh 1 và thường có vẻ ngắn hơn nguyên âm đôi.
 
-> Comm*u*nity s*er*vice is an imp*or*tant comp*o*nent of educ*a*tion h*ere* at _our_ univ*er*sity.（第 1 篇第 1 句）
+Hãy chú ý các nguyên âm đôi trong bản ghi cùng đường nét giọng của chúng; đồng thời cảm nhận nhịp điệu tạo nên bởi độ dài nguyên âm. Theo chú giải của nguyên tác, chữ in nghiêng đánh dấu nguyên âm dài:
 
-## 22. 其它辅音/θ/、/ð/、/v/、/ʒ/
+> Comm*u*nity s*er*vice is an imp*or*tant comp*o*nent of educ*a*tion h*ere* at _our_ univ*er*sity. (Bài 1, câu 1)
 
-/θ/、/ð/这两个辅音，是许多中国的英语老师反复强调的 —— 但通常强调得并不一定正确。
+> **Ghi chú biên tập: cơ quan phát âm và biến thể.** Nguyên tác dùng *xiǎoshé*, nghĩa là lưỡi gà. Đó không phải cơ quan chủ động “trượt” để tạo nguyên âm đôi như mô tả trên. Nguyên âm đôi là sự chuyển đổi chất âm trong cùng một âm tiết, liên quan thay đổi vị trí lưỡi và có thể cả hình dạng môi; không phải ghép hai nguyên âm thành hai âm tiết. Chẳng hạn /ɔɪ/ chuyển từ chất âm tròn môi sang không tròn môi. Những yêu cầu môi hoàn toàn bất động hay nguyên âm đôi phải có trọng âm không áp dụng cho mọi từ và mọi giọng. Xem [Essentials of Linguistics: Describing vowels](https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/3-5-describing-vowels/). Các cách ghi /ɛɚ/, /ɪə/, /ʊə/ cũng cần đối chiếu giọng và hệ phiên âm đang dùng, không gộp thành một bộ nguyên âm bắt buộc chung cho Anh Anh và Anh Mỹ. Các quy luật gán cao độ theo loại nguyên âm vẫn là mô tả của tác giả đã được đính chính ở mục 19. Bài mở miệng và kéo âm chỉ là bài tách động tác, không phải yêu cầu cố định khẩu hình khi nói tự nhiên.
 
-还是舌尖起始位置问题。这两个音根本不像很多老师说的那样，一定要夹着舌尖开始发音。实际上，读/θ/和/ð/这两个辅音的时候，舌尖起始位置应该是上排牙齿的内侧就可以了（当然，如果你非要夹着不可也没有人强迫你不许夹）。请参照以下两张图示：
+## 22. Các phụ âm khác: /θ/, /ð/, /v/, /ʒ/
+
+/θ/ và /ð/ là hai phụ âm được nhiều giáo viên tiếng Anh ở Trung Quốc nhấn mạnh nhiều lần, nhưng theo tác giả, cách nhấn mạnh ấy không nhất thiết đúng.
+
+Vấn đề vẫn là vị trí xuất phát của đầu lưỡi. Hai âm này không bắt buộc phải bắt đầu bằng việc kẹp đầu lưỡi giữa hai hàm răng như nhiều giáo viên nói. Thực ra, khi phát /θ/ và /ð/, đặt đầu lưỡi ở mặt trong răng trên là đủ, theo tác giả. Đương nhiên, nếu bạn nhất quyết muốn đặt lưỡi giữa răng thì cũng không ai ép bạn không được làm. Hãy xem hai hình sau:
 
 ![](images/figure12.png)
 
 ![](images/figure13.png)
 
-/v/对中国学生来讲，实际上并不难读，只是不习惯而已，平时多注意一下就好了。很多学生只不过是矫枉过正，读/v/的时候把下嘴唇回收的太多，以至于整个上排牙齿全都露出来，当然说话费劲了。其实，上排牙齿的齿尖只需要接触到下嘴唇内侧，只要比/w/多出一个气流阻塞的感觉就好了。
+/v/ thực ra không khó với học sinh Trung Quốc, chỉ là chưa quen, theo nhận xét của tác giả; thường ngày chú ý hơn một chút là được. Nhiều học sinh sửa quá mức: khi phát /v/, họ kéo môi dưới vào quá sâu đến mức lộ cả hàng răng trên, nên đương nhiên nói rất vất vả. Thực ra, đầu răng trên chỉ cần chạm mặt trong môi dưới; theo ông, chỉ cần cảm giác luồng khí bị chặn hơn /w/ một chút là đủ.
 
 ![](images/figure14.png)
 
-/ʒ/，被很多老师给讲复杂了。其实这个音与中文拼音中的[zh]非常接近，只不过最重要的差别在于，中文中的[zh]读的时候前舌面起始位置贴在上牙堂上，而英文中的/ʒ/读的时候舌面起始位置与上牙堂之间还有略微一点点的距离。另外，英文的/ʒ/相对来看，声带振动更加明显一些。
+Theo tác giả, nhiều giáo viên giải thích /ʒ/ quá phức tạp. Ông cho rằng âm này rất gần [zh] trong pinyin tiếng Trung. Khác biệt quan trọng nhất là khi phát [zh] tiếng Trung, phần trước mặt lưỡi xuất phát từ vị trí chạm vòm miệng trên; còn với /ʒ/ tiếng Anh, giữa mặt lưỡi và vòm miệng vẫn có một khe nhỏ. Ngoài ra, theo ông, rung dây thanh ở /ʒ/ tiếng Anh rõ hơn.
 
 ![](images/figure15.png)
 
-只要把 “vision” 这个词读对了，就说明/v/和/ʒ/都过关了 —— 大不了再多练习一个 “revision”。（同时请注意练习以下句子中/ð/的读音 —— 当然，/θ/的读音方法使用的是同样的方式。）
+Chỉ cần đọc đúng “vision” là chứng tỏ đã vượt qua /v/ và /ʒ/, theo tác giả; cùng lắm luyện thêm “revision”. Đồng thời, hãy chú ý luyện /ð/ trong các câu sau. Ông lưu ý /θ/ dùng cùng cách đặt bộ phận phát âm.
 
-> They have a wide field of **vision** and, like most grazing animals, they are especially good at detecting movement.（第 75 篇倒数第 5 句）
+> They have a wide field of **vision** and, like most grazing animals, they are especially good at detecting movement. (Bài 75, câu thứ năm tính từ cuối lên)
 
-> Then you can make the necessary **revisions** and hand in your final outline, which is due two weeks from today.（第 23 篇第 10 句）
+> Then you can make the necessary **revisions** and hand in your final outline, which is due two weeks from today. (Bài 23, câu 10)
 
-还有个小技巧，就是反过来用中文练（这个技巧之前就用过一次）。把下面这句话中的所有[zh]换成/ʒ/，反复练习。
+Còn một mẹo nhỏ là luyện ngược bằng tiếng Trung, như đã làm một lần trước đây. Thay toàn bộ [zh] trong câu sau bằng /ʒ/ rồi luyện nhiều lần:
 
-> 周志，你给我站直了！
+> Zhōu Zhì, nǐ gěi wǒ zhàn zhí le!
 
-什么时候把这句话说得听起来与老外讲中文一样，那/ʒ/就算是练对了。
+> **Ghi chú giải nghĩa câu gốc:** *Zhōu Zhì, nǐ gěi wǒ zhàn zhí le!*, nghĩa “Châu Chí, đứng thẳng lên cho tôi!”. Châu Chí là tên người trong câu mẫu. Câu được giữ để đối chiếu âm [zh] của tiếng Trung, không phải bài luyện giao tiếp tiếng Anh dành cho người Việt.
 
-## 23. 音调（Pitch）
+Khi nào câu ấy nghe giống người nước ngoài nói tiếng Trung thì tác giả coi như đã luyện đúng /ʒ/.
 
-注意，这一节要讲的，不是 “语调”，不是 “声调”，而是 “音调”（pitch）。
+> **Ghi chú biên tập dành cho người Việt:** Không mặc định người Việt có cùng thói quen phát âm với học sinh Trung Quốc được mô tả. /θ/ và /ð/ đều là âm xát răng, nhưng khác nhau về hữu thanh; /v/ là âm xát môi-răng hữu thanh, không chỉ là một /w/ bị chặn hơi thêm. /ʒ/ là âm xát hữu thanh sau lợi; pinyin *zh* thường chỉ âm tắc xát quặt lưỡi vô thanh /ʈʂ/, không phải IPA `[ʒ]`, và sự khác biệt không chỉ là mở một khe nhỏ. Xem [nghiên cứu mô tả các âm tiếng Quan thoại cùng pinyin](https://pmc.ncbi.nlm.nih.gov/articles/PMC10749258/) và [bảng IPA tiếng Anh](https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/3-6-the-international-phonetic-alphabet/). Có thể luyện trực tiếp *thin/then*, *vine/wine*, *vision/revision* bằng bản mẫu và ghi âm, không cần giả giọng nước ngoài trong câu tiếng Trung. Đọc đúng một từ là một bước luyện, chưa chứng minh phát đúng âm ấy ở mọi vị trí và trong lời nói liền mạch.
 
-按照 David Allen Stern 的理论，英语使用者最经常使用的自然语流模式是 “Step-up-and-step-down pattern”。简单点说，就是开头的那个被重读的音节音调会被提高，而随后音节的音调将逐步降低。而所谓的 “开头”，并不见得一定是句子的开头。当一个句子长到一定程度的时候，说话者会把这个句子按照意群划分为若干个单位，每个单位之间有或明显或不明显的停顿（起码要换换气才能接着说话吧？）—— 如果是这样的话，那每个意群都可能会有一个被提高音调的音节，而随后音节的音调将逐步降低。
+## 23. Cao độ (pitch)
 
-还是这句话：
+Lưu ý, mục này bàn về cao độ (*pitch*), được tác giả phân biệt với “ngữ điệu” và “thanh điệu” ở các mục trước.
+
+Theo lý thuyết của David Allen Stern mà nguyên tác dẫn ở đây, mẫu lời nói tự nhiên được người nói tiếng Anh dùng thường xuyên nhất là “Step-up-and-step-down pattern”. Nói đơn giản, âm tiết được nhấn ở đầu sẽ được nâng cao độ, rồi cao độ của các âm tiết sau hạ dần. “Ở đầu” không nhất thiết là đầu câu. Khi câu dài đến một mức nào đó, người nói chia câu thành các đơn vị theo cụm ý; giữa các đơn vị có khoảng ngừng rõ hoặc không rõ, ít nhất cũng phải lấy hơi để nói tiếp. Khi ấy, mỗi cụm ý đều có thể có một âm tiết được nâng cao độ, rồi cao độ ở các âm tiết sau hạ dần.
+
+Vẫn là đoạn này:
 
 > **Community** service is an important component of education here at our university. We encourage **all** students to volunteer for at least one community activity before they graduate. A **new** community program called “One On One” **helps** elementary students who’ve fallen behind.
 
-请细心分辨以上加重标记的词汇中的重音音节的音调（pitch）：“Community”, “all”, “new”, “helps”。
+Hãy phân biệt kỹ cao độ của âm tiết có trọng âm trong những từ in đậm: “Community”, “all”, “new”, “helps”.
 
-到此为止，已掌握的基本知识，已经可以使学生完整地把握英语的节奏节拍了。
+Đến đây, theo tác giả, kiến thức cơ bản đã học đủ để học sinh nắm trọn nhịp điệu tiếng Anh:
 
-- 每个元音长短都要恰当
-- 语流中的强读弱读词汇要分清
-- 在合适的位置要停顿
-- 声调模式恰当
-- 位于意群之首的重音音节带有相对更高的音调
+- Độ dài của từng nguyên âm phải phù hợp.
+- Phân biệt từ được nhấn mạnh và từ đọc nhẹ trong lời nói.
+- Ngừng ở vị trí thích hợp.
+- Dùng mẫu đường nét giọng thích hợp.
+- Âm tiết có trọng âm ở đầu cụm ý có cao độ tương đối cao hơn.
 
-有了这样的把握，再加上对这个系列文章中所详细讲解的各个重点音素（辅音/t/、/d/、/s/、/l/、/θ/、/ð/、/v/，以及/ʒ/；元音/ʌ/、/æ/，以及各个双元音）的深入理解，重塑自己的语音，已经具备足够条件。做自己的明师，也没那么难。
+Nắm được những điều này, cộng với hiểu sâu các âm vị trọng tâm đã giải thích trong loạt bài, gồm /t/, /d/, /s/, /l/, /θ/, /ð/, /v/, /ʒ/, các nguyên âm /ʌ/, /æ/ và nguyên âm đôi, bạn đã có đủ điều kiện xây dựng lại cách phát âm, theo tác giả. Làm một người thầy sáng suốt cho chính mình cũng không quá khó.
 
-## 24. 第一次全面练习
+> **Ghi chú biên tập:** Nguyên tác ghi “David Alan Stern” ở mục 21 và “David Allen Stern” ở mục này; giữ dấu vết cách ghi để truy nguồn, không coi đó là hai người khác nhau. Mẫu cao độ tăng rồi giảm là một mẫu được tác giả giới thiệu, không phải đường cao độ bắt buộc cho mọi cụm ý tiếng Anh. Trọng tâm thông tin và chức năng giao tiếp có thể làm điểm nhấn, hướng đi lên hoặc xuống thay đổi. Xem [Cambridge: Intonation](https://dictionary.cambridge.org/grammar/british-grammar/intonation). Với người Việt, hãy nghe cả câu và đánh dấu chỗ nổi bật tương đối, không luôn đẩy từ đầu câu lên cao hoặc cho rằng mỗi cụm chỉ có một kiểu đường cao độ.
 
-终于，我们可以运用刚刚学过的知识全面分析模仿了。分以下几个步骤一边反复听一边处理一下文本：
+## 24. Bài luyện tổng hợp đầu tiên
 
-- 一句话是不是一口气读完的，如果不是，在哪里有着明显或者不明显的停顿？
-- 分辨被强读的词都有那些？
-- 被强读的单词里，每个音节的声调分别是什么？
-- 哪一个被强读的单词带着明显相对更高的音调？
-- 被弱读的单词，其中的那些元音发生了明显的变化，向/ə/靠拢？
-- 那些地方被连读了，前后各个音节的重音在哪儿
-- 有没有/t/、/k/、/p/之类的辅音失爆？另外，还有那些词尾的辅音（比如/d/、/g/、/b/等等）因后面跟着辅音开头的单词而只有停顿听不到声音？
-  有没有被浊化的/t/存在？
+Cuối cùng, chúng ta có thể dùng kiến thức vừa học để phân tích và bắt chước toàn diện. Vừa nghe nhiều lần vừa xử lý văn bản theo các bước sau:
 
-拿来托福听力考试录音文件，借助软件反复听每一句话，尝试着回答以上的各个问题，而后在文本上作出相应的记号 —— 把手中的文本标记成乐谱一样的东西，而后就可以刻意地模仿。
+- Câu có được đọc hết trong một hơi không? Nếu không, những khoảng ngừng rõ hoặc không rõ nằm ở đâu?
+- Những từ nào được nhấn mạnh?
+- Trong từ được nhấn mạnh, từng âm tiết có đường nét giọng như thế nào?
+- Từ nào được nhấn mạnh với cao độ cao hơn tương đối rõ rệt?
+- Trong từ đọc nhẹ, nguyên âm nào thay đổi rõ, tiến gần về /ə/?
+- Những chỗ nào được nối âm, trọng âm của các âm tiết trước và sau nằm ở đâu?
+- Có /t/, /k/, /p/ hoặc phụ âm tương tự mất tiếng bật không? Còn phụ âm cuối nào như /d/, /g/, /b/ do theo sau là từ bắt đầu bằng phụ âm mà chỉ thấy khoảng ngừng, không nghe tiếng?
+  Có /t/ nào được hữu thanh hóa theo cách tác giả mô tả không?
 
-以下是对一篇完整的托福听力录音文本的分析记录：
+Lấy tệp ghi âm bài thi nghe TOEFL, dùng phần mềm nghe từng câu nhiều lần, thử trả lời các câu hỏi trên rồi đánh dấu tương ứng trên văn bản. Biến văn bản trong tay thành thứ giống một bản nhạc, sau đó bạn có thể chủ động bắt chước.
+
+Dưới đây là ghi chép phân tích của tác giả đối với toàn bộ một bài nghe TOEFL:
+
+> **Ghi chú biên tập trước khi luyện:** Phần sau giữ đầy đủ nhận xét và phiên âm của nguyên tác để đối chiếu với bản nghe, không phải bản chép âm đã được bản Việt hóa kiểm chứng từng chỗ. Các số thanh 1, 2, 4 là cách tác giả mượn thanh điệu tiếng Trung, không phải thanh cố định của tiếng Anh. Đọc cùng các đính chính ở mục 12-23 về trọng âm, âm vỗ, không bật hơi và âm tắc không có tiếng bật rõ. Một số lỗi phiên âm cụ thể trong bản ghi chép này được chỉ ra ở cuối mục; không lấy chúng làm mẫu chuẩn để học thuộc.
 
 > Community service is an important component of education here at our university.
 
-- “Community” 被强读，并且/mju:/这个音节伴随着相对更高的音调；
-- “service is” 被连起来，听起来与 “service” 这个单词的复数 “services” 一样；
-- “an important component of” 中，“important” 与 “component” 都被强读，“important” 中的/pɔ:/读 “一声”，词尾/t/失爆；“component” 中的/pəu/读 “四声”、/nənt/“二声”；“of” 与前面的 “component” 连读，并弱读为/əf/；
-- “here at our university” 中，原本的语流应为/ˈhɪə-æt-auə-juniˈvə:siti/；最终，“here” 被强读了，“四声”；“university” 被强读，其中/və:/为 “一声”；at 被弱读为/ət/；“our” 也被弱读，变得很短，/auə/；而 “at” 中的 /ə/，由于前面被强读的单词 “here” 就是以/ə/结尾的，所以被同化了（或理解为 “被省略了” 也未尝不可），而 “at” 中的/t/，前面是元音（/ə/），后面跟着的也是元音（/auə/），于是这个/t/被浊化了。最终，整个气群听起来是这样的：/ˈhɪə-dauə-juniˈvə:siti/。
+- “Community” được nhấn mạnh, và âm tiết /mju:/ có cao độ tương đối cao hơn.
+- “service is” nối với nhau, nghe giống “services”, dạng số nhiều của “service”.
+- Trong “an important component of”, “important” và “component” đều được nhấn mạnh. /pɔ:/ trong “important” giống thanh 1, /t/ cuối mất tiếng bật; /pəu/ trong “component” giống thanh 4, /nənt/ giống thanh 2. “of” nối với “component” trước đó và được đọc yếu thành /əf/.
+- Trong “here at our university”, dòng âm ban đầu theo tác giả là /ˈhɪə-æt-auə-juniˈvə:siti/. Cuối cùng, “here” được nhấn, giống thanh 4; “university” được nhấn, /və:/ giống thanh 1; “at” đọc yếu thành /ət/; “our” cũng đọc yếu và rất ngắn, /auə/. Vì “here” được nhấn ở trước kết thúc bằng /ə/, nên /ə/ của “at” được tác giả coi là đồng hóa, hoặc cũng có thể hiểu là lược bỏ. /t/ trong “at” có nguyên âm /ə/ trước và /auə/ sau nên hữu thanh hóa theo cách ông mô tả. Kết quả, cả cụm hơi nghe thành /ˈhɪə-dauə-juniˈvə:siti/.
 
 > We encourage all students to volunteer for at least one community activity before they graduate.
 
-- “encourage” 读成/inˌkəˌri:ʤ/；其中/ri:ʤ/“一声”；
-- “all” 被强读，“二声”；
-- “to” 被弱读，几乎成了/t/；
-- “volunteer”，词尾的重音/tɪə/被拉得很长；
-- “for at least” 中的两个/t/都失爆了；“for” 被弱读成/fɚ/；
-- “one” 被强读，“四声”；
-- “community activity” 被弱读，所有长元音都变短了，两处词尾的/iti/都读成相当于/ədɪ/（这里的/d/代表浊化了的/t/）
-- “before” 被强读，“四声”；
-- “they” 被弱读成/ðɪ/，甚至都接近于/ð/；
-- “graduate” 被强调，“四声”。
+- “encourage” đọc thành /inˌkəˌri:ʤ/, trong đó /ri:ʤ/ giống thanh 1.
+- “all” được nhấn mạnh, giống thanh 2.
+- “to” đọc yếu, gần như thành /t/.
+- Âm tiết có trọng âm /tɪə/ ở cuối “volunteer” được kéo rất dài.
+- Trong “for at least”, cả hai /t/ đều mất tiếng bật; “for” đọc yếu thành /fɚ/.
+- “one” được nhấn mạnh, giống thanh 4.
+- “community activity” được đọc nhẹ, mọi nguyên âm dài đều ngắn lại, hai chỗ /iti/ ở cuối từ đọc gần tương đương /ədɪ/. /d/ ở đây biểu thị /t/ được hữu thanh hóa theo cách ghi của tác giả.
+- “before” được nhấn mạnh, giống thanh 4.
+- “they” đọc yếu thành /ðɪ/, thậm chí gần như /ð/.
+- “graduate” được nhấn mạnh, giống thanh 4.
 
 > A new community program called “One On One” helps elementary students who’ve fallen behind.
 
-- “new” 被强读，“二声”，并伴着相对更高的音调；
-- “program” 中，/pəu/为 “四声”，而/græm/为 “一声”，略微拖长；
-- “called” 强读，拉长，“一声”；
-- “One on One”，第二个 “One” 被强读，“四声”；之前的 “One on” 两个词连读；
-- “helps elementary students” 中的 “helps elementary” 连读的非常明显 —— 因为 “elementary” 的重音在第一个音节；“help” 中的 “p” 失爆；读的技巧在于，读到/help /时，读完/hel/之后就把嘴唇闭上，稍微停顿（练习的时候可以夸张地停顿长达两三秒），而后直接张开嘴唇读/ˈselɪ-men-təri/（第一个音节读成 “二声”）；另外，help 这个词有相对更高的声调；
-- “who’ve fallen behind”，“who’ve” 中的/v/，由于后面跟着的是相同唇形的/f/，所以听不到发音，但只是没有气流振动而已，该音的长度依然保持，所以听起来 “who” 之后有点停顿，而后才读出出 “二声” 的 “fallen”；“behind” 强读，“四声”。
+- “new” được nhấn mạnh, giống thanh 2, đồng thời có cao độ tương đối cao hơn.
+- Trong “program”, /pəu/ giống thanh 4, /græm/ giống thanh 1 và được kéo dài nhẹ.
+- “called” được nhấn, kéo dài, giống thanh 1.
+- Trong “One on One”, “One” thứ hai được nhấn, giống thanh 4; hai từ “One on” trước đó nối với nhau.
+- Trong “helps elementary students”, “helps elementary” nối rất rõ vì theo tác giả, trọng âm của “elementary” ở âm tiết đầu. “p” trong “help” mất tiếng bật. Kỹ thuật đọc là khi đến /help /, đọc xong /hel/ thì khép môi, ngừng nhẹ, có thể phóng đại đến hai hoặc ba giây khi luyện, sau đó mở môi đọc thẳng /ˈselɪ-men-təri/, với âm tiết đầu giống thanh 2. Ngoài ra, tác giả ghi “help” có đường nét giọng tương đối cao hơn.
+- Trong “who’ve fallen behind”, /v/ của “who’ve” đứng trước /f/ có cùng hình dạng môi, nên không nghe được. Theo tác giả, chỉ không có dao động luồng khí, độ dài âm vẫn giữ nguyên, khiến sau “who” có một khoảng ngừng rồi mới đọc “fallen” với đường nét giống thanh 2. “behind” được nhấn mạnh, giống thanh 4.
 
-> You education majors might be especially interested in it because it offers the opportunity to do some teaching — that is, tutoring in math and English.
+> You education majors might be especially interested in it because it offers the opportunity to do some teaching -- that is, tutoring in math and English.
 
-- “You” 读成 “二声”；
-- “education” 中的重音音节/kei/伴随着更高的音调；
-- “might” 词尾的/t/失爆；
-- “especially” 强读，伴随着更高的音调；
-- “interested in it” 末尾的/t/，口腔动作完整，但没有气流振动，感觉像切音；
-- “it offers” 中的/t/夹在两个原因之间，所以，浊化；“offer”“二声”；
-- “teaching” 被强读，“一声”；
-- “that is” 中的/t/浊化；
-- “tutoring” 强读，“四声”；
-- “and English” 连读，“English” 被强读，“四声”；
+- “You” đọc giống thanh 2.
+- Âm tiết có trọng âm /kei/ trong “education” có cao độ cao hơn.
+- /t/ cuối “might” mất tiếng bật.
+- “especially” được nhấn mạnh và có cao độ cao hơn.
+- /t/ cuối “interested in it” có động tác trong miệng đầy đủ nhưng không có dao động luồng khí, tạo cảm giác như chặn tiếng.
+- /t/ trong “it offers” nằm giữa hai nguyên âm nên được tác giả coi là hữu thanh hóa; “offer” giống thanh 2.
+- “teaching” được nhấn mạnh, giống thanh 1.
+- /t/ trong “that is” được hữu thanh hóa theo cách gọi của tác giả.
+- “tutoring” được nhấn mạnh, giống thanh 4.
+- “and English” nối với nhau, “English” được nhấn mạnh, giống thanh 4.
 
 > You’d have to volunteer two hours a week for one semester.
 
-- “You’d have to” 读成/ju-dæf-tu/
-- “volunteer” 尾音拉长，“一声”；
-- “two” 强读、“四声”；
-- “for” 弱读为/fɚ/
-- “one” 强读，“四声”；
+- “You’d have to” đọc thành /ju-dæf-tu/.
+- Âm cuối “volunteer” kéo dài, giống thanh 1.
+- “two” được nhấn mạnh, giống thanh 4.
+- “for” đọc yếu thành /fɚ/.
+- “one” được nhấn mạnh, giống thanh 4.
 
 > You can choose to help a child with math, English, or both.
 
-- “can” 被弱读成/kən/
-- “choose”、“help”、“child”、“math”、“English”，全部为 “二声”；
-- “or” 与 “both” 都被强读、“or” 为 “二声”，“both” 为 “四声”；
+- “can” đọc yếu thành /kən/.
+- “choose”, “help”, “child”, “math”, “English” đều giống thanh 2.
+- “or” và “both” đều được nhấn mạnh; “or” giống thanh 2, “both” giống thanh 4.
 
 > Half-hour lessons are fine, so you could do a half hour of each subject two days a week.
 
-- “Half”，/hæf/，被强读，“二声”；
-- “fine”，被强读，“四声”
-- “half” 与 “each” 都被强读、“二声”
-- “two” 被强读、“一声”
-- “week” 被强读、“四声”
+- “Half”, /hæf/, được nhấn mạnh, giống thanh 2.
+- “fine” được nhấn mạnh, giống thanh 4.
+- “half” và “each” đều được nhấn mạnh, giống thanh 2.
+- “two” được nhấn mạnh, giống thanh 1.
+- “week” được nhấn mạnh, giống thanh 4.
 
 > Professor Dodge will act as a mentor to the tutors
 
-- “will act” 连读，“will” 弱读为/wəl/，“act” 强读,“一声”：/wə-ˈlæ(k)t/，其中的/k/失爆；
-- “mentor”，被强读
-- “tutors” 被强读、“四声”
+- “will act” nối với nhau; “will” đọc yếu thành /wəl/, “act” được nhấn mạnh, giống thanh 1: /wə-ˈlæ(k)t/, trong đó /k/ mất tiếng bật.
+- “mentor” được nhấn mạnh.
+- “tutors” được nhấn mạnh, giống thanh 4.
 
 > – he’ll be available to help you with lesson plans or to offer suggestions for activities.
 
-- “with lesson plans”，“with” 弱读为/wəð/，由于后面紧跟辅音/l/，所以，/ð/听不到，但停顿依然存在；
-- “or to offer”，“to” 中的/t/浊化，听起来与/d/接近；
+- Trong “with lesson plans”, “with” đọc yếu thành /wəð/. Vì ngay sau là /l/, tác giả nói không nghe /ð/ nhưng khoảng ngừng vẫn còn.
+- Trong “or to offer”, /t/ của “to” được hữu thanh hóa theo cách gọi của tác giả, nghe gần /d/.
 
 > He has office hours every Tuesday and Thursday afternoon.
 
-- 第一个意群到 “hours” 结束，“hours”，“二声”；
-- “Tuesday and Thursday afternoon”，除了 “and” 之外均被强读。
+- Cụm ý đầu kết thúc ở “hours”; “hours” giống thanh 2.
+- Trong “Tuesday and Thursday afternoon”, mọi từ trừ “and” đều được nhấn mạnh.
 
 > You can sign up for the program with him and begin the tutoring next week.
 
-- “can” 被弱读成/kən/；
-- “sign up” 中的/p/，口型做完之后（即，把嘴唇闭上之后）不再张嘴送气，而是停顿一下之后，直接开始说后面的 “for”；
-- “with him”，大概读成/wɪ-zɪm/，“him” 中的/h/不发音。语音教程中说这是 “击穿” 现象；因为我看到学生太容易把握这一点，所以也就没有单独讲解/h/的这个特征。
+- “can” đọc yếu thành /kən/.
+- Với /p/ trong “sign up”, sau khi tạo xong khẩu hình, tức khép môi, không mở miệng bật hơi nữa mà ngừng một chút rồi nói thẳng “for” phía sau.
+- “with him” đọc gần /wɪ-zɪm/, /h/ trong “him” không phát ra. Giáo trình ngữ âm gọi đây là hiện tượng “xuyên qua”, theo cách thuật lại của tác giả. Vì thấy học sinh nắm điểm này quá dễ, tôi không dành phần riêng giải thích đặc điểm ấy của /h/.
 
 > I’m sure you’ll enjoy this community service and you’ll gain valuable experience at the same time.
 
-- 这句话读得很有弹性，“I’m”、“sure”、“enjoy”、“valuable”、“same”、“time”，均被强读
-- “you’ll enjoy”、“valuable experience”，两处/l + e/的连读。
+- Câu này được đọc rất linh hoạt; “I’m”, “sure”, “enjoy”, “valuable”, “same”, “time” đều được nhấn mạnh.
+- “you’ll enjoy” và “valuable experience” có hai chỗ nối /l + e/.
 
-> It looks good on your resume, too — showing that you’ve had experience with children and that you care about your community.
+> It looks good on your resume, too -- showing that you’ve had experience with children and that you care about your community.
 
-- “looks good” 中的/k/只有细微停顿没有声音；
-- “resume”，“re” 为 “四声”，/meɪ/为 “二声”；
-- “too”“四声”。
-- “children” 之后有个明显的停顿；这个词与之前曾经讲过的 “program” 一样，是第一个音节 “四声”，第二个音节 “一声”；
-- “and” 被强读，“四声”；
-- “care about” 连读。
+- /k/ trong “looks good” chỉ có khoảng ngừng rất nhỏ, không có tiếng.
+- Trong “resume”, “re” giống thanh 4, /meɪ/ giống thanh 2.
+- “too” giống thanh 4.
+- Sau “children” có khoảng ngừng rõ. Từ này giống “program” đã nói trước đó: âm tiết đầu giống thanh 4, âm tiết thứ hai giống thanh 1.
+- “and” được nhấn mạnh, giống thanh 4.
+- “care about” nối với nhau.
 
 > If you’d like to sign up, or if you have any questions, stop by Professor Dodge’s office this week.
 
-- “you’d like to” 中的/d/没有声音、甚至连停顿都没有；
-- “sign up”，读完/saɪ-nʌ/之后闭上嘴唇，略作停顿，直接开口读 “or if you have any question”（读得很快）；
-- “Dodge” 加上所属格 “’s” 之后，整体读/dɔ-ʤɜs/
+- /d/ trong “you’d like to” không có tiếng, thậm chí không có khoảng ngừng.
+- Trong “sign up”, sau /saɪ-nʌ/ thì khép môi, ngừng nhẹ rồi mở miệng đọc thẳng “or if you have any question”, rất nhanh.
+- Khi thêm sở hữu cách “’s” vào “Dodge”, tác giả ghi cả cụm là /dɔ-ʤɜs/.
 
-## 25. 关于口音和外教
+> **Ghi chú biên tập: những chỗ không dùng làm phiên âm chuẩn.** Dạng yếu thông dụng của *of* là /əv/, không phải /əf/. Phiên âm *program* ở đây bỏ mất /r/ ở âm tiết đầu; không luyện theo lỗi ấy. Trọng âm chính của *elementary* ở âm tiết /men/, âm tiết đầu có trọng âm phụ như ghi chú mục 13, nên khoảng ngừng phóng đại hai hoặc ba giây chỉ là bài tập của tác giả, không phải cách nói tự nhiên. Cách ghi *encourage* /inˌkəˌri:ʤ/ cũng không phải phiên âm từ điển để thay cho mẫu phát âm đã nêu ở mục 20; [Cambridge ghi /ɪnˈkɝː.ɪdʒ/ cho giọng Mỹ và /ɪnˈkʌr.ɪdʒ/ cho giọng Anh](https://dictionary.cambridge.org/pronunciation/english/encourage).
+>
+> *Activity* được đánh dấu nhấn mạnh ở mục 12 nhưng được gộp vào nhóm đọc nhẹ ở đây; đó là khác biệt nội bộ trong ghi chép của nguồn, cần nghe bản ghi để đánh giá, không âm thầm hợp nhất. /ð/ và /v/ là âm xát, không phải âm tắc; đừng áp cơ chế “mất tiếng bật” của /t/ cho chúng hoặc chèn khoảng im lặng cố định. /h/ có thể được lược trong *him* đọc nhẹ, nhưng không vì vậy đổi mọi /ð/ thành /z/ như cách ghi *with him* của tác giả. Ký hiệu /l + e/ trên là cách ghi khái quát trong nguồn, không có nghĩa mọi nguyên âm sau /l/ đều là /e/.
+>
+> Trong câu gốc là *questions* số nhiều; phần phân tích của tác giả lại ghi *question*. Bản dịch giữ cả hai để thấy sai khác. Với sở hữu cách *Dodge’s*, đuôi sau /dʒ/ có thêm một âm tiết, thường ghi /ɪz/ hoặc /əz/, không dùng /ɜs/ làm mẫu. Xem [Iowa State: đuôi -ed và -s/-'s](https://iastate.pressbooks.pub/teachingpronunciation/chapter/chapter-5-ed-and-s-endings/). Hãy tra phát âm từ và đối chiếu toàn câu, thay vì ghi nhớ mọi chuỗi ký hiệu riêng trong bản phân tích này.
 
-在以上 “重塑自己的语音” 这个系列的文章中，我选择用托福听力考试的录音作为讲解材料。有些读者可能希望学的是 “标准的英音”，而非 “美音”，那就可以拿来雅思的官方教材（所谓的 “剑一” 到 “剑七”——_Cambridge IELTS 1-7_，各地新华书店大概都可以买得到，其中有很多带完整文本的录音）用作训练材料。
+## 25. Về giọng nói và giáo viên nước ngoài
 
-英音与美音的发声原理大致相同，细节差异实际上并不大 —— 英音和美音的差异多多少少被许多人夸大了，而英音美音之间差异对说话者的影响更是被夸大得过分玄乎。
+Trong loạt bài “Xây dựng lại cách phát âm” ở trên, tôi chọn bản ghi bài thi nghe TOEFL làm tư liệu giải thích. Một số bạn có thể muốn học “giọng Anh chuẩn” thay vì giọng Mỹ; khi đó có thể dùng tài liệu IELTS chính thức, tức các cuốn thường gọi ở Trung Quốc là “Cambridge 1” đến “Cambridge 7”, *Cambridge IELTS 1-7*. Theo nguyên tác, lúc ấy có lẽ có thể mua ở các nhà sách Tân Hoa tại nhiều nơi, và sách có nhiều bản ghi kèm toàn bộ lời đọc để luyện.
 
-首先，只要你不是从小就开始说英语的，那么十有八九最终你能说得必然不是标准美音，也不是标准英音，而是国际英音（international accent）。其次，究竟会有谁那么在乎你的口音呢？再说，沟通是否良好，语音的作用只占其中的很小一部分；而语音作用之中，口音作用所占的比例又是很小很小的一部分。于是，最终，仅仅口音本身几乎并不影响良好的沟通 —— 尽管谁也不否认口音越地道越好，起码自我感觉更加良好。
+Nguyên lý tạo âm của giọng Anh và giọng Mỹ nhìn chung giống nhau, khác biệt chi tiết thực ra không lớn, theo tác giả. Khác biệt giữa hai giọng đã ít nhiều bị nhiều người phóng đại, còn tác động của sự khác nhau ấy với người nói lại càng bị nói quá đến mức huyền bí.
 
-良好的沟通需要
+Trước hết, nếu không bắt đầu nói tiếng Anh từ nhỏ, thì theo tác giả, tám chín phần mười khả năng giọng cuối cùng của bạn sẽ không phải giọng Mỹ chuẩn hay giọng Anh chuẩn, mà là “giọng quốc tế” (*international accent*). Thứ hai, rốt cuộc ai sẽ quan tâm đến giọng của bạn đến vậy? Hơn nữa, trong giao tiếp tốt, phát âm chỉ đóng góp một phần nhỏ; trong phần đóng góp của phát âm, giọng địa phương lại chỉ chiếm một phần rất nhỏ nữa. Vì vậy, tác giả kết luận riêng giọng nói gần như không ảnh hưởng đến giao tiếp tốt, dù không ai phủ nhận rằng càng giống bản xứ càng tốt, ít nhất cũng giúp bản thân thấy dễ chịu hơn.
 
-- 思考能力 —— 你最好有能力从对方的角度考虑问题；
-- 组织能力 —— 先说什么后说什么效果可能全然不同；
-- 观察能力 —— 基本的情商总应该有吧？要看什么人说什么话，或者起码需要调整说话方式；
-- 文字理解能力 —— 不仅要听得清还要听得懂人家说的话究竟是什么意思，有没有什么言外之意；
+Giao tiếp tốt cần:
 
-最好还要有
+- Khả năng suy nghĩ: tốt nhất bạn có thể nhìn vấn đề từ góc độ người đối thoại.
+- Khả năng tổ chức: nói điều gì trước, điều gì sau có thể dẫn đến hiệu quả hoàn toàn khác.
+- Khả năng quan sát: ít nhất cũng cần mức trí tuệ cảm xúc cơ bản; nói với ai phải biết chọn điều phù hợp, hoặc tối thiểu điều chỉnh cách nói.
+- Khả năng hiểu ngôn ngữ: không chỉ nghe rõ mà còn hiểu người ta thực sự muốn nói gì, có hàm ý gì ngoài lời nói hay không.
 
-- 足够的知识储备 —— 就算你语音地道又怎么样？若是你缺乏基本常识，谁愿意跟你只是打打招呼聊聊天气，而后就不知所云？
+Tốt hơn nữa là có:
 
-英语只是表达媒介，很多人之所以练就一身 “哑巴英语”，其实并不像很多老师或者培训班说的那样缺乏英语训练（或者什么口语训练），而是缺乏刚刚提到的各种能力或者起码其中的一些能力。想想看吧，可怕的并不是 “不会说”，而是 “没什么可说”，发音再好，口音再地道，又怎么样呢？不一样没得说？不会说其实很好解决，查词典就完事儿了么（很奇怪为什么那么多人就是觉得查词典那么没用？——**随后我就会证明查词典究竟有多么不可或缺的有用。**）；说得不好没关系，人家听得懂就好（语法错误怎么可能一下子就消灭掉？但大多数错误总是可以有机会慢慢纠正的）。然而，没得说怎么解决？那可不是交点钱上个什么培训班就可以搞定的。
+- Vốn hiểu biết đủ rộng: dù phát âm bản xứ thì sao? Nếu thiếu hiểu biết thông thường, ai muốn chỉ chào hỏi, nói vài câu về thời tiết rồi chẳng biết bạn đang nói gì?
 
-很多人因为了解到 “英语重要”，而后就想 “只学英语”，这是学不好的最根本原因。因为英语很难独立存在，事实上，所有语言都没办法独立存在，因为任何语言都是用来表达思想传递信息的。单独的一个词放在那里（不成篇章），跟一块儿砖头（不是建筑）差不多 —— 某种意义上还不如砖头呢，因为砖头起码还可以用来打架；词呢？顶多可以用来骂人，弄不好还可能招来一顿暴打。很多人都不由自主地认为只学 “最重要的” 是合理的，这个想法本身没错，只不过他们把重要的和次要的搞混了，或者搞反了。想想看吧，之前提到的那些能力哪一个不比语音（哪怕语言）难学，哪一个不比语音难以积累？单单修炼自己的母语都不是很容易的事啊！
+Tiếng Anh chỉ là phương tiện biểu đạt. Theo tôi, nhiều người rèn thành thứ “tiếng Anh câm” không phải vì thiếu luyện tiếng Anh hay luyện nói như nhiều giáo viên và lớp học vẫn nói, mà do thiếu các năng lực vừa kể, hoặc ít nhất một vài năng lực trong số đó. Hãy nghĩ xem: đáng ngại không phải “không biết nói”, mà là “không có gì để nói”. Phát âm hay đến đâu, giọng bản xứ đến đâu thì sao? Chẳng phải vẫn không có điều gì để nói sao? Không biết nói thực ra rất dễ giải quyết, tra từ điển là xong. Thật lạ khi nhiều người cứ nghĩ tra từ điển vô dụng như vậy. **Sau đây tôi sẽ chứng minh tra từ điển hữu ích đến mức không thể thiếu như thế nào.** Nói chưa tốt không sao, miễn người khác hiểu. Làm sao có thể xóa sạch mọi lỗi ngữ pháp ngay lập tức? Nhưng phần lớn lỗi đều có cơ hội được sửa dần. Còn không có gì để nói thì giải quyết thế nào? Đó không phải việc chỉ nộp ít tiền vào một lớp học là xong.
 
-我一直觉得不一定非要有个老外陪练才行。很多人花了很多钱去上那种 “外教课堂”。去过的人都知道，作用并不像想象得那么大。道理也特别简单，外教也只能教最基本的。至于那些更为重要的、并且还要与语言文字综合运用的各项能力，他们也一样无能为力。外教只不过是外语的母语使用者而已，在他们那个群体里也有半数以上的人思考能力差、观察能力弱、组织能力困乏、文字理解能力欠佳、知识储备严重不足 —— 并不会因为他们来自西方国家，这方面就自动比我们强。
+Nhiều người biết “tiếng Anh quan trọng” rồi muốn “chỉ học tiếng Anh”. Theo tác giả, đây là nguyên nhân căn bản khiến họ học không tốt. Tiếng Anh khó tồn tại độc lập; thực ra mọi ngôn ngữ đều không thể tồn tại độc lập, vì chúng dùng để biểu đạt tư tưởng và truyền thông tin. Một từ đứng riêng không thành bài chẳng khác một viên gạch chưa thành công trình. Ở một nghĩa nào đó, nó còn không bằng viên gạch, vì gạch ít nhất còn dùng đánh nhau được; còn từ ngữ, cùng lắm dùng chửi người, không khéo lại chuốc một trận đòn. Nhiều người vô thức cho rằng chỉ học “điều quan trọng nhất” là hợp lý. Bản thân ý ấy không sai, chỉ là họ nhầm lẫn, thậm chí đảo ngược cái chính và cái phụ. Hãy nghĩ xem: trong những năng lực vừa nêu, năng lực nào không khó học và khó tích lũy hơn phát âm, thậm chí hơn ngôn ngữ? Chỉ riêng rèn tiếng mẹ đẻ cũng đâu dễ!
 
-有些时候，有机会和老外逛街、聊天，可能还会给自己带来害处。因为老外也是人（很智能的！），他们又很礼貌，所以，很多时候，即便你说得不好（比如发音错了、重音位置不对，主谓不一致了等等）他们还是可以听得懂；哪怕云里雾里，也可以借助当时的场景、所谈论的话题、以及对方的肢体语言来猜个八九不离十。所以，一不小心你就产生了错觉，觉得 “我口语不错么！沟通非常良好！” —— “沟通良好” 确实是事实，然而，其原因真的并不见得是因为你的口语足够好。尤其是漂亮女生遇到男性老外的时候，更是如此。我见过很多人，因为觉得 “我跟老外沟通没问题”，就觉得自己无需刻意准备考试，而拿到托福成绩之后才发现自己的口语成绩低得惊人，而后又 “百思不得其解”。
+Tôi luôn nghĩ không nhất thiết phải có người nước ngoài cùng luyện. Nhiều người bỏ rất nhiều tiền vào “lớp giáo viên nước ngoài”. Ai từng học đều biết tác dụng không lớn như tưởng tượng. Lý do cũng đơn giản: giáo viên nước ngoài chỉ có thể dạy những điều cơ bản nhất. Còn những năng lực quan trọng hơn, cần vận dụng tổng hợp với ngôn ngữ và văn bản, họ cũng bất lực. Giáo viên nước ngoài chỉ là người bản ngữ của ngoại ngữ ấy; theo tác giả, hơn một nửa trong nhóm họ cũng suy nghĩ kém, quan sát yếu, tổ chức hạn chế, hiểu ngôn ngữ chưa tốt và thiếu kiến thức trầm trọng. Họ không tự nhiên giỏi hơn chúng ta ở các mặt ấy chỉ vì đến từ phương Tây.
 
-重塑自己的语音完全可以靠自己，事实上，更多的人跟我一样最终发现靠也只能靠自己。甚至并不是不想靠。咱不是大多数人么？所以就和大多数人一样不是没条件么？所以是靠不上别人才只好靠自己的么！
+> **Ghi chú biên tập: đánh giá giáo viên bằng năng lực dạy học.** Những tỷ lệ và khái quát ở trên là quan điểm không kèm dữ liệu của tác giả, không phải kết luận đã kiểm chứng về giáo viên nước ngoài. Người Việt nên xem khả năng giải thích, nhận diện lỗi, phản hồi phù hợp mục tiêu, tổ chức bài học và kinh nghiệm của từng giáo viên, không suy năng lực từ quốc tịch hoặc việc có phải người bản ngữ. Xem [tuyên bố TESOL năm 2006 về phân biệt đối xử với người dạy tiếng Anh không phải người bản ngữ](https://www.tesol.org/media/cwnis4av/14171-tesol-position-statement-against-discrimination-of-nonnative-speakers-of-english.pdf). Ngược lại, phát âm dễ hiểu vẫn có vai trò trong giao tiếp; không dùng lập luận “giọng gần như không ảnh hưởng” để bỏ qua khó khăn mà người nghe thực sự gặp. “Giọng quốc tế” ở đây là cách gọi của tác giả, không phải một giọng chuẩn thống nhất. Hình ảnh đánh nhau bằng gạch hay chửi người ở đoạn trước là lối so sánh của nguyên tác, không phải cách dùng ngôn ngữ được khuyến nghị.
 
-## 26. 跟读训练具体步骤
+Đôi khi, có cơ hội đi dạo, trò chuyện với người nước ngoài còn có thể gây hại cho bản thân, theo tác giả. Vì họ cũng là con người, rất thông minh, và lịch sự, nên nhiều lúc dù bạn nói chưa tốt, chẳng hạn sai âm, sai vị trí trọng âm hoặc chủ-vị không hòa hợp, họ vẫn hiểu. Dù mơ hồ, họ vẫn có thể dựa vào cảnh huống, chủ đề đang nói và ngôn ngữ cơ thể để đoán khá đúng. Bất cẩn một chút là bạn có ảo tưởng: “Mình nói cũng tốt đấy chứ! Giao tiếp rất tốt!”. Giao tiếp tốt đúng là sự thật, nhưng nguyên nhân chưa chắc là vì khả năng nói của bạn đủ tốt. Tác giả còn cho rằng điều này đặc biệt đúng khi một phụ nữ xinh đẹp gặp một người đàn ông nước ngoài. Tôi đã thấy nhiều người vì nghĩ “mình giao tiếp với người nước ngoài không có vấn đề” nên cho rằng không cần chuẩn bị kỹ cho kỳ thi. Đến khi nhận điểm TOEFL, họ mới thấy điểm nói thấp đến ngạc nhiên, rồi “nghĩ mãi không hiểu”.
 
-拿来跟读材料之后，第一步是精读文本。不认识的词全部都要查过，然后确定该单词在当前句子中的确切含义，而后抄写在文本边上。当然，今天我们还有 MS Word，可以很方便地在文本上添加 “批注”。而在 Word 里，还有一个内建的词典，非常好用 …… 如果每个单词全都查过，却依然搞不懂句意，那么往往应该是有词组存在，再逐一查过。
+> **Ghi chú biên tập:** Nhận xét gắn ngoại hình và giới của hai người với chất lượng giao tiếp là suy diễn của tác giả, không phải tiêu chí đánh giá người học. Việc người nghe dùng ngữ cảnh để hiểu cũng không tự chứng minh cuộc trò chuyện có hại. Với người Việt, có thể vừa trò chuyện thật vừa chủ động xin phản hồi cụ thể; nếu chuẩn bị thi thì đối chiếu thêm yêu cầu và thang đánh giá của bài thi, thay vì dùng một cuộc nói chuyện thuận lợi làm bằng chứng đã sẵn sàng.
 
-查每一个生词的时候，都要记录重音和元音长度（必要时把整个音标写下来，也可以使用简化标记法）。我的做法是在重音音节前面添加重音标记（重音/ˈ/和次重音/ˌ/），而在构成长元音及双元音的字母之上划上一条横线 —— 没有画横线的就是短元音了。如果我们用的是 MS Word 之类的字处理器，那么就可以采用这样的标记：把重音音节用 “加重”（CTRL+B）标记，把构成长元音及双元音的字母 “下划线”（CTRL+U）标记。
+Xây dựng lại cách phát âm hoàn toàn có thể dựa vào bản thân. Thực ra, nhiều người giống tôi cuối cùng nhận ra chỉ có thể dựa vào chính mình. Thậm chí không phải không muốn nhờ người khác. Chúng ta chẳng phải số đông sao? Chẳng phải cũng thiếu điều kiện như phần đông sao? Chính vì không nhờ được ai nên mới đành dựa vào mình!
 
-第二步是反复听录音，做自然语流修正标记。刚刚查词典的时候，查出来的是单个单词的读音；它们在自然语流中的读音会发生这样那样的变化，根据之前讲过的机理，很容易识别这些变化。把强读的单词圈出来；在音调被提高的音节上划上标记（我一般用一个小三角）；有些音节带着明显不一样的声调，用 “1”、“2”、“4” 标记出来；在停顿之处划上一条竖线；再留意一下哪里有失爆、哪里有浊化、哪里有连读 …… 标记的时候，需要跟着模仿一下，有的时候，必须通过模仿才能发现刚刚其实听错了。
+> **Ghi chú biên tập về tài liệu và bối cảnh:** *Cambridge IELTS 1-7*, nhà sách Tân Hoa và nhận xét về lớp học thuộc thời điểm, thị trường của nguyên tác, không phải thông tin bán sách hoặc cấu trúc kỳ thi hiện hành ở Việt Nam. Người học có thể dùng đoạn nghe phù hợp mục tiêu phát âm, nhưng khi ôn thi cần kiểm tra tài liệu và yêu cầu đang áp dụng từ đơn vị tổ chức; không lấy danh mục lịch sử này làm danh mục hiện hành. IELTS không chỉ dùng giọng Anh: [hướng dẫn Listening chính thức](https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-listening) nêu cả giọng Anh, Australia, New Zealand và Bắc Mỹ.
 
-现在，我们有了一张 “乐谱”。我们知道哪个音有多长 —— 哪个原来是长的现在却短了，哪个原来并不长现在却长了一点；我们知道每个音的强弱轻重；我们知道哪些音和任何音一样动作完整却没有气流振动或声带振动，或者两者都没有；我们知道哪里有停顿，哪一处的声调比较特殊，哪一处有扬起来的音调……
+## 26. Các bước cụ thể để nghe và nói theo
 
-于是，我们可以开始第三步了。反复跟读。刚开始可以录音放一句，自己跟几遍，细心纠正自己的前提是大声朗读。熟悉了之后再录音放一句就跟一句，再熟悉一点之后就 “异步” 朗读。所谓的异步朗读，就是 “慢一拍跟读”。听到录音说了一个词之后我们再开始，嘴里重复的是录音里刚刚说完的那个词，而耳朵里同时听到的是自己的声音和录音里所说的下一个词，然后循环往复，在录音说完一句话的时候，我们再说一个词也就正好结束。这种训练可以很微妙地提高我们的英语瞬间记忆力。再熟悉到一定程度的时候，就可以 “同步” 朗读了。
+Sau khi có tài liệu luyện, bước đầu là đọc kỹ văn bản. Tra tất cả từ chưa biết, xác định chính xác nghĩa của từ trong câu hiện tại rồi ghi bên cạnh. Đương nhiên, ngày nay chúng ta còn có MS Word, có thể dễ dàng thêm “chú thích” vào văn bản. Theo nguyên tác, Word còn có từ điển tích hợp rất hữu ích. Nếu đã tra từng từ mà vẫn không hiểu câu, thường là có cụm từ cần tiếp tục tra lần lượt.
 
-第四步是录音矫正。每隔一段时间，可以把自己的朗读声音录下来存好，过上一个星期之后再翻出来听。很多人事倍功半的原因是录下来之后马上就去听，但这样的话，基本上没有什么矫正余地 —— 因为录音之后和录音之前的你还没有任何变化呢。当时你就觉得那么说是对的所以才那么说的，仅仅两三分钟之后，你不可能有什么巨大的或者哪怕是足够的进步；于是，没有变化的你，其实根本听不出自己哪儿不对了，也没有能力为自己进行矫正。但是，你一直在练，每天都在练，一个星期之后，你的进步就算不是巨大也是足够，于是你可能就会很容易地听出若干过去出过错的地方。
+Mỗi khi tra một từ mới, hãy ghi trọng âm và độ dài nguyên âm; nếu cần thì ghi toàn bộ phiên âm, hoặc dùng cách đánh dấu rút gọn. Cách của tôi là thêm ký hiệu trước âm tiết có trọng âm, /ˈ/ cho trọng âm chính và /ˌ/ cho trọng âm phụ, rồi kẻ một đường ngang phía trên các chữ tạo nguyên âm dài và nguyên âm đôi. Chữ không có đường ngang là nguyên âm ngắn. Nếu dùng phần mềm soạn thảo như MS Word, có thể in đậm âm tiết có trọng âm bằng CTRL+B và gạch dưới các chữ tạo nguyên âm dài, nguyên âm đôi bằng CTRL+U.
 
-这样的时候，你的脑子里时常闪过的念头是这样的：“天哪，我怎么会犯这种（低级）错误！” 印象深刻往往只来自两个方向，1) 大量重复；2) 意外发现。而刚刚那样的念头，会让你 “觉得” 意外，所以，一旦这个念头闪出来的时候，你就获得巨大进步了 —— 因为你将来很难再犯同样的错误，因为你印象深刻。当然，还是要记录下来的，因为我们的记忆力不可靠。小学老师的陈词滥调里也有这里深刻的，比如这个：好记性不如烂笔头。
+Bước thứ hai là nghe bản ghi nhiều lần, đánh dấu những điều chỉnh trong lời nói tự nhiên. Khi tra từ điển, bạn có cách đọc từng từ riêng lẻ; trong lời nói tự nhiên, chúng sẽ biến đổi theo nhiều cách. Dựa vào cơ chế đã trình bày, bạn dễ nhận ra các biến đổi ấy. Khoanh tròn từ được nhấn mạnh; đánh dấu âm tiết được nâng cao độ, tôi thường dùng một tam giác nhỏ; dùng “1”, “2”, “4” cho âm tiết có đường nét giọng khác biệt rõ; kẻ một vạch đứng ở chỗ ngừng. Tiếp tục chú ý nơi mất tiếng bật, nơi hữu thanh hóa theo cách gọi của tác giả, nơi nối âm. Khi đánh dấu, cần bắt chước theo; có lúc chỉ nhờ bắt chước mới nhận ra vừa rồi mình nghe sai.
 
-最后一步是背诵。经常有学生问我，一篇文章跟读多少遍才行？我的回答是至少 60 遍。一篇托福听力录音大约 90 秒左右，中等熟练程度的话，大约三五分钟连跟读带反复模仿地完成一遍。平均算作 5 分钟一遍的话，60 遍就是 5 个小时。每天 1 个小时，周一到周五就可以完事。很多学生听到这样的要求就直接放弃了，这样的人在这件事上不可能成功的，因为他们跟那些在此事上注定失败的人一样 “对短期收益要求太高，对长期收益要求太低。”
+Bây giờ ta có một “bản nhạc”. Ta biết mỗi âm dài bao nhiêu, âm vốn dài giờ ngắn lại, âm vốn không dài giờ dài hơn một chút. Ta biết mức độ nặng nhẹ của từng âm. Theo mô tả của tác giả, ta biết âm nào có động tác đầy đủ như các âm khác nhưng không có dao động luồng khí, hoặc không rung dây thanh, hoặc không có cả hai. Ta biết chỗ nào ngừng, chỗ nào đường nét giọng đặc biệt, chỗ nào cao độ vươn lên.
 
-读了一星期，朗读了几十遍（期间还有细微的模仿纠正，所以其实是百十来遍），只要再划上几分钟就可以做到把该文章一字不差地背下来。既然做了，就请按照我的说法做足功课。一定要背，至于为什么要背，以后会有详细的解释。其实并不费事的。这样大概练习 10 篇左右（周六日还可以休息！）已经足够。算算也不过是十周时间。十周之后，你的语音、节奏、记忆力、理解能力等等都不一样了，所谓 “脱胎换骨” 其实也不过如此。
+Thế là có thể bắt đầu bước thứ ba: nghe và nói theo nhiều lần. Ban đầu có thể phát một câu rồi tự nói theo vài lần. Tiền đề để sửa mình cẩn thận là đọc thành tiếng đủ lớn. Khi quen, nghe một câu rồi nói theo một câu; quen thêm nữa thì đọc “lệch nhịp”. Đọc lệch nhịp nghĩa là nói chậm hơn bản ghi một nhịp. Nghe bản ghi nói một từ rồi mới bắt đầu; miệng nhắc từ bản ghi vừa nói xong, tai đồng thời nghe giọng của mình và từ tiếp theo trong bản ghi. Cứ lặp lại như thế, khi bản ghi kết thúc câu thì ta nói thêm một từ cũng vừa hết. Theo tác giả, bài tập này có thể cải thiện một cách tinh tế khả năng ghi nhớ tức thời tiếng Anh. Quen đến mức nhất định thì có thể đọc “đồng bộ”.
 
-## 27. 浪费生命的重要原因 —— 要求过低
+Bước thứ tư là ghi âm để sửa. Sau mỗi khoảng thời gian, ghi lại và lưu giọng đọc của mình, một tuần sau mới mở nghe. Theo tôi, nhiều người tốn công mà hiệu quả thấp vì nghe ngay sau khi ghi âm, nhưng như vậy gần như không có cơ hội sửa: bạn ngay sau khi ghi chưa khác gì trước khi ghi. Lúc ấy bạn cho rằng nói như vậy là đúng nên mới nói; chỉ sau hai hoặc ba phút, bạn không thể có tiến bộ lớn, thậm chí đủ lớn. Vì vậy, bạn chưa thay đổi thì thực ra không nghe được mình sai ở đâu, cũng không có khả năng tự sửa. Nhưng nếu tiếp tục luyện mỗi ngày, sau một tuần, dù tiến bộ không lớn cũng đã đủ, nên bạn có thể dễ dàng nghe ra vài chỗ từng sai.
 
-学生都想学好，只不过大都基于种种原因—— 内在的、外在的 —— 最终没学好而已。如果学好了，终生受益。某种意义上甚至可能世世代代受益 —— 尽管知识无法通过基因遗传，但如果父母是某一领域的专家，那么子女会因为成长过程中的耳闻目染而自然而然获得哪个领域中更多、更深的知识。反过来，如果学了却没学好，那么损失也是巨大的。因为学习过程消耗的不仅仅是金钱、精力，更重要的是那无情流逝、一去不复返的时间。时间总体上来看是排它性资源，用来做一件事就很难同时做好另外一件事。耗费了时间却没有收获，那就等于浪费生命。而在十几年的学校生活里，不学倒也罢了，可竟然使劲学了却没学好英语，那即意味着说，相当一部分的青春被浪费掉了。浪费生命已经很可怕了，浪费青春不仅可怕而且可怜。
+> **Ghi chú biên tập: có thể phản hồi ngay và nghe lại sau.** Yêu cầu chờ một tuần cùng khẳng định không thể tự sửa ngay là cách giải thích của tác giả, không phải điều kiện bắt buộc. Người học có thể nghe lại ngay, đối chiếu bản mẫu và tập trung sửa một điểm cụ thể, rồi giữ bản ghi để so sánh sau một tuần. [British Council: Record yourself](https://africa.teachingenglish.org.uk/classroom/pronunciation/record-yourself) hướng dẫn ghi âm và đối chiếu với mẫu để nhận ra những điểm cần cải thiện. “Đọc đủ lớn” không có nghĩa gào hoặc cố vượt tiếng nền. Các ký hiệu riêng về thanh điệu và “hữu thanh hóa” vẫn cần đọc cùng đính chính ở mục 15-21. Tính năng từ điển và phím tắt Word phụ thuộc phiên bản, hệ điều hành; CTRL+B/CTRL+U ở trên là thao tác tác giả nêu, không phải mô tả đã kiểm thử trên mọi máy.
 
-大多数人学英语最终失败的重要原因之中最严重却又最隐蔽的可能是这个：大多数人对短期收益要求太高，对长期收益要求太低。
+Khi ấy, ý nghĩ thường lóe lên trong đầu là: “Trời ơi, sao mình lại mắc lỗi sơ đẳng như vậy!”. Theo tác giả, ấn tượng sâu thường chỉ đến từ hai hướng: 1) lặp lại rất nhiều; 2) phát hiện bất ngờ. Ý nghĩ ấy khiến bạn thấy bất ngờ, nên khi nó xuất hiện, bạn đã tiến bộ rất lớn: sau này khó mắc lại lỗi vì nhớ quá rõ. Đương nhiên vẫn phải ghi chép, vì trí nhớ không đáng tin. Những lời giáo viên tiểu học thường lặp cũng có câu sâu sắc như thế: trí nhớ tốt không bằng một cây bút chịu ghi.
 
-英语学习这件事上，速成是不可能的。然而速成是大多数人的目标 —— 当然，大多数人并没有清楚地意识到这是他们的 “短期” 目标，但是由于一个 “速” 字，已经使他们的目标自动成为 “短期目标” —— 对短期收益要求高到不可能得到的地步。总体上来看，大多数人在承认耐心是成功的必要素质的同时却暗暗希望自己是个例外 —— 别人不行他们却能够速成。他们通常也并不愿承认自己的急功近利。然而，事实却很明显。看看社会上的英语培训机构的课程构成就知道了，短期培训十有八九，而有些机构就算设置了长期培训也实际上门可罗雀。事实上，连那些短期培训班也开始变得越来越短。十年前，TOEFL／GRE 考试培训班设置大约 40 课时，每课时 2.5 个小时，几年前被缩短为 32 课时，之后再缩短为 24 课时，现在有些培训机构的设置是 24 课时，每课时 2 小时。尽管商业培训机构降低成本的动力非常高，但总体上来看它们迎合顾客的动力更高。所以，从某种意义上来看，连短期培训班都越来越短，这是顾客用钞票投票的结果。
+Bước cuối cùng là học thuộc. Học sinh thường hỏi tôi cần nghe và nói theo một bài bao nhiêu lần. Tôi trả lời: ít nhất 60 lần. Một bản ghi nghe TOEFL dài khoảng 90 giây; ở mức quen vừa phải, mỗi lượt vừa nói theo vừa lặp lại để bắt chước mất khoảng ba đến năm phút. Tính trung bình năm phút một lượt, 60 lượt là năm giờ. Mỗi ngày một giờ, từ thứ Hai đến thứ Sáu là xong. Nhiều học sinh nghe yêu cầu này liền bỏ cuộc. Theo tác giả, người như vậy không thể thành công ở việc này, vì giống những người được ông coi là chắc chắn thất bại, họ “đòi hỏi lợi ích ngắn hạn quá cao, nhưng đặt kỳ vọng lợi ích dài hạn quá thấp”.
 
-而从另外一个角度，好像又没有人认为自己可以通过长期积累把英语使用得像自己的母语一样熟练 —— 好像那是完全不可能的事情。其实，只要时机恰当，方法正确，积累到一定程度，同时熟练使用若干种语言都是有可能的。我自己是天生的双语使用者 —— 我是朝鲜族，韩语和汉语对我来讲都是母语 —— 所以我们从小就知道同等熟练地使用两种语言没什么值得大惊小怪的。事实上，地球上有很多地区（尤其是边境地区，比如卢森堡）的人都是天生的多语使用者，然而人们普遍认为必须从小生长在那样的环境才行。而事实上并非如此。最近的若干年里，我每年都要辅导很多高中生申请到美国名校。这些高中毕业生的 TOEFL／SAT 成绩可能让国内很多大学里的英语专业学生汗颜，动不动就能遇到某个高中生没有上过什么培训班、没有专门准备考试，满分 120 分的 TOEFL 考试随随便便就弄出个 110 分以上的成绩。然而，即便他们的英语标准化考试成绩再高，英语的熟练程度还是存在着很大的欠缺。不过，只要他们到美国读书一两年之后，英语就彻底 “ 母语化” 了。他们之中的大多数，在到美国读书的那一刻开始就开始学习另外一门外语，比如法语、德语或者西班牙语，一两年之内，他们就已经成为标准的 “Trilingual”（三语使用者）了。
+Đọc suốt một tuần, đọc thành tiếng vài chục lượt, trong đó còn có bắt chước và sửa nhỏ nên thực ra lên tới khoảng trăm lượt, thì chỉ cần thêm vài phút là có thể thuộc bài không sai một chữ. Đã làm thì xin hãy làm đủ theo lời tôi. Nhất định phải học thuộc; vì sao cần thuộc sẽ được giải thích kỹ sau. Thực ra không quá tốn công. Luyện khoảng mười bài như vậy, thứ Bảy và Chủ nhật còn được nghỉ, theo tôi đã đủ. Tính ra cũng chỉ mười tuần. Sau mười tuần, phát âm, nhịp điệu, trí nhớ, khả năng hiểu của bạn đều khác; cái gọi là “lột xác” cũng chỉ như vậy.
 
-| [< 第二章: 口语](./chapter2.md) | [第四章: 朗读 >](./chapter4.md) |
+> **Ghi chú biên tập về lịch luyện:** Phép tính 60 lượt × 5 phút = 5 giờ là đúng, nhưng 60 lượt, mười bài, mười tuần và kết quả “lột xác” là lịch cùng kỳ vọng của tác giả, không phải ngưỡng thành công được bảo đảm. Độ dài 90 giây mô tả tư liệu ông dùng, không đại diện mọi bài nghe TOEFL. Với người Việt, có thể chia lượt tập theo thời gian thực tế, ghi điểm cần sửa và theo dõi khả năng nghe, nói lại, hiểu nội dung; không đánh giá một người chắc chắn thất bại chỉ vì họ không theo đúng lịch này.
+
+## 27. Một nguyên nhân quan trọng khiến cuộc đời bị lãng phí: yêu cầu quá thấp
+
+Học sinh đều muốn học tốt, chỉ là phần lớn cuối cùng chưa học tốt vì đủ nguyên nhân bên trong và bên ngoài. Học tốt thì được lợi suốt đời; ở một nghĩa nào đó, thậm chí nhiều thế hệ có thể hưởng lợi. Kiến thức không di truyền qua gene, nhưng nếu cha mẹ là chuyên gia một lĩnh vực, con cái sẽ tự nhiên tiếp nhận kiến thức sâu và rộng hơn trong lĩnh vực ấy qua những điều nghe, thấy khi lớn lên. Ngược lại, học mà không học tốt cũng gây tổn thất lớn. Quá trình học không chỉ tiêu tốn tiền bạc, công sức, mà quan trọng hơn là thời gian trôi đi không quay lại. Nhìn tổng thể, thời gian là tài nguyên có tính loại trừ: dùng để làm một việc thì khó đồng thời làm tốt việc khác. Tốn thời gian mà không thu được gì chẳng khác lãng phí cuộc đời. Trong hơn mười năm đi học, không học thì đã đành, nhưng cố sức học tiếng Anh mà vẫn chưa tốt, theo tác giả, nghĩa là một phần đáng kể tuổi trẻ đã bị lãng phí. Lãng phí cuộc đời đã đáng sợ; lãng phí tuổi trẻ vừa đáng sợ vừa đáng tiếc.
+
+Trong những nguyên nhân quan trọng khiến phần lớn người học tiếng Anh cuối cùng thất bại, điều nghiêm trọng nhất nhưng kín đáo nhất có thể là: đa số đòi hỏi lợi ích ngắn hạn quá cao, nhưng đặt kỳ vọng lợi ích dài hạn quá thấp.
+
+Học tiếng Anh không thể thành công cấp tốc. Tuy vậy, cấp tốc lại là mục tiêu của đa số. Đương nhiên, phần lớn không ý thức rõ đó là mục tiêu “ngắn hạn”, nhưng chỉ một chữ “nhanh” đã tự biến nó thành mục tiêu ngắn hạn, với mức đòi hỏi cao đến mức không thể đạt. Nhìn chung, vừa thừa nhận kiên nhẫn là phẩm chất cần thiết để thành công, đa số vừa thầm mong mình là ngoại lệ: người khác không làm được, nhưng mình có thể học cấp tốc. Họ cũng thường không muốn thừa nhận sự nóng vội ấy. Tuy nhiên, theo tác giả, sự thật rất rõ: nhìn cơ cấu khóa học của các cơ sở đào tạo tiếng Anh ngoài xã hội là thấy tám chín phần mười là khóa ngắn hạn, còn một số nơi có khóa dài hạn cũng rất vắng người. Ngay cả khóa ngắn hạn còn ngày càng ngắn. Mười năm trước thời điểm tác giả viết, khóa luyện TOEFL/GRE khoảng 40 buổi, mỗi buổi 2,5 giờ; vài năm sau giảm xuống 32, rồi 24 buổi; lúc viết, một số nơi có 24 buổi, mỗi buổi hai giờ. Dù động lực giảm chi phí của cơ sở thương mại rất cao, nhìn chung động lực chiều khách hàng còn cao hơn. Vì vậy, theo một nghĩa nào đó, khóa ngắn hạn ngày càng ngắn là kết quả khách hàng bỏ phiếu bằng tiền.
+
+Ở góc khác, dường như cũng chẳng ai tin mình có thể nhờ tích lũy lâu dài mà dùng tiếng Anh thành thạo như tiếng mẹ đẻ, như thể đó là điều hoàn toàn bất khả thi. Thực ra, theo tác giả, chỉ cần thời điểm phù hợp, phương pháp đúng và tích lũy đủ, hoàn toàn có thể dùng nhiều ngôn ngữ thành thạo cùng lúc. Tôi là người song ngữ từ nhỏ: tôi thuộc dân tộc Triều Tiên, tiếng Hàn và tiếng Trung đều là tiếng mẹ đẻ. Vì thế, từ bé chúng tôi đã biết dùng hai ngôn ngữ thành thạo ngang nhau chẳng có gì đáng kinh ngạc. Nhiều nơi trên thế giới, nhất là vùng biên giới, chẳng hạn Luxembourg, có những người lớn lên với nhiều ngôn ngữ. Tuy nhiên, mọi người thường nghĩ phải lớn lên trong môi trường ấy mới làm được. Theo tôi, thực tế không phải vậy. Trong vài năm gần thời điểm viết, mỗi năm tôi hướng dẫn nhiều học sinh trung học nộp hồ sơ vào các trường đại học danh tiếng ở Mỹ. Điểm TOEFL/SAT của những học sinh tốt nghiệp trung học này có thể khiến nhiều sinh viên chuyên ngành tiếng Anh tại các đại học Trung Quốc phải ngượng. Không hiếm khi gặp một em chưa học lớp luyện thi nào, chưa chuẩn bị riêng, mà dễ dàng đạt từ 110 điểm trở lên trên thang TOEFL 120 điểm. Nhưng dù điểm thi chuẩn hóa cao đến đâu, độ thành thạo tiếng Anh của các em vẫn còn thiếu hụt lớn. Theo tác giả, chỉ cần sang Mỹ học một hoặc hai năm thì tiếng Anh của các em hoàn toàn “thành tiếng mẹ đẻ”. Phần lớn các em còn bắt đầu học một ngoại ngữ nữa ngay khi sang Mỹ, chẳng hạn tiếng Pháp, Đức hoặc Tây Ban Nha; trong một hoặc hai năm, các em đã trở thành người dùng ba ngôn ngữ, “Trilingual”, đúng nghĩa theo cách đánh giá của ông.
+
+> **Ghi chú biên tập về bối cảnh và kỳ vọng:** Các con số về lớp luyện thi Trung Quốc và thang TOEFL 120 điểm thuộc câu chuyện lịch sử của nguyên tác, không phải thống kê hoặc thông tin thi hiện hành cho người Việt. [ETS cho biết từ ngày 21/01/2026, TOEFL iBT dùng thang 1-6 và kèm điểm tổng tương đương 0-120 trong giai đoạn chuyển tiếp hai năm](https://www.ets.org/toefl/test-takers/ibt/scores/understand-scores.html); không đổi con số lịch sử 110/120 trong lời tác giả thành điểm mới. Song ngữ, đa ngữ và mức thành thạo cần được nhìn theo từng người, từng kỹ năng và cách sử dụng thực tế; một hoặc hai năm du học không bảo đảm mọi người “thành bản ngữ” hay thành thạo ba ngôn ngữ như nhau. Việc học chưa đạt mục tiêu cũng không có nghĩa toàn bộ thời gian trước đó vô ích. Bản Việt hóa giữ lập luận tạo động lực của tác giả, nhưng không dùng nó để quy kết người học thất bại hoặc đã lãng phí tuổi trẻ.
+
+| [< Chương 2: Nói](./chapter2.md) | [Chương 4: Đọc thành tiếng >](./chapter4.md) |
 | ------------------------------- | ------------------------------- |
