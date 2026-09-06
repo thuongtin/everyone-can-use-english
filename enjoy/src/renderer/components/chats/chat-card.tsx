@@ -47,7 +47,7 @@ export const ChatCard = (props: {
           <UsersRoundIcon className="w-4 h-4" />
         )}
         {chat.type === ChatTypeEnum.TTS && <SpeechIcon className="w-4 h-4" />}
-        <div className="flex-1 text-sm font-serif line-clamp-1">
+        <div className="flex-1 text-sm font-sans line-clamp-1">
           {chat.name}
         </div>
         {onDelete && (

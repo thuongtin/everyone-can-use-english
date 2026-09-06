@@ -85,7 +85,7 @@ export const AiLookupResult = (props: {
       {result ? (
         <>
           <div className="mb-4 select-text">
-            <div className="mb-2 font-semibord font-serif">{word}</div>
+            <div className="mb-2 font-semibold font-sans">{word}</div>
             <div className="mb-2">
               {result.meaning?.pos && (
                 <span className="italic text-sm text-muted-foreground mr-2">
@@ -102,8 +102,8 @@ export const AiLookupResult = (props: {
                   <span className="text-sm">({result.meaning.lemma})</span>
                 )}
             </div>
-            <div className="text-serif">{result.meaning.translation}</div>
-            <div className="text-serif">{result.meaning.definition}</div>
+            <div className="font-sans">{result.meaning.translation}</div>
+            <div className="font-sans">{result.meaning.definition}</div>
           </div>
           <div className="flex items-center">
             <Button

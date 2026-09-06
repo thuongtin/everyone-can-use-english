@@ -142,8 +142,8 @@ export const PronunciationAssessmentWordResult = (props: {
 
       <PopoverContent align="start" className="bg-muted">
         <div className="text-sm flex items-center space-x-2 mb-2">
-          <span className="font-serif">{t("score")}:</span>
-          <span className="font-serif">
+          <span className="font-sans">{t("score")}:</span>
+          <span className="font-sans">
             {result.pronunciationAssessment.accuracyScore}
           </span>
         </div>
@@ -169,43 +169,43 @@ export const PronunciationAssessmentWordResult = (props: {
 };
 
 const CorrectWordDisplay = (props: { word: string }) => (
-  <span className="mx-1 px-2 py-1 text-xl font-serif tracking-wide cursor-pointer">
+  <span className="mx-1 px-2 py-1 text-xl font-sans tracking-wide cursor-pointer">
     {props.word}
   </span>
 );
 
 const MispronunciationWordDisplay = (props: { word: string }) => (
-  <span className="mx-1 px-2 py-1 text-xl font-serif tracking-wide cursor-pointer bg-yellow-600">
+  <span className="mx-1 px-2 py-1 text-xl font-sans tracking-wide cursor-pointer bg-yellow-600">
     {props.word}
   </span>
 );
 
 const OmissionWordDisplay = (props: { word: string }) => (
-  <span className="mx-1 px-2 py-1 text-xl font-serif tracking-wide cursor-pointer bg-gray-600 text-white">
+  <span className="mx-1 px-2 py-1 text-xl font-sans tracking-wide cursor-pointer bg-gray-600 text-white">
     [{props.word}]
   </span>
 );
 
 const InsertionWordDisplay = (props: { word: string }) => (
-  <span className="mx-1 px-2 py-1 text-xl font-serif tracking-wide cursor-pointer bg-red-600 text-white line-through">
+  <span className="mx-1 px-2 py-1 text-xl font-sans tracking-wide cursor-pointer bg-red-600 text-white line-through">
     {props.word}
   </span>
 );
 
 const UnexpectedBreakWordDisplay = (props: { word: string }) => (
-  <span className="mx-1 px-2 py-1 text-xl font-serif tracking-wide bg-pink-600 line-through">
+  <span className="mx-1 px-2 py-1 text-xl font-sans tracking-wide bg-pink-600 line-through">
     [{props.word}]
   </span>
 );
 
 const MissingBreakWordDisplay = () => (
-  <span className="mx-1 px-2 py-1 text-xl font-serif tracking-wide bg-gray-200">
+  <span className="mx-1 px-2 py-1 text-xl font-sans tracking-wide bg-gray-200">
     [ ]
   </span>
 );
 
 const MonotoneWordDisplay = (props: { word: string }) => (
-  <span className="mx-1 px-2 py-1 text-xl font-serif tracking-wide cursor-pointer bg-purple-600 text-white">
+  <span className="mx-1 px-2 py-1 text-xl font-sans tracking-wide cursor-pointer bg-purple-600 text-white">
     {props.word}
   </span>
 );
@@ -230,7 +230,7 @@ export const PronunciationAssessmentPhonemeResult = memo(
             <div key={index} className="text-sm text-center">
               <div className="font-bold font-code">{phoneme.phoneme}</div>
               <div
-                className={`text-xs font-serif ${scoreColor(
+                className={`text-xs font-sans ${scoreColor(
                   phoneme.pronunciationAssessment.accuracyScore
                 )}`}
               >

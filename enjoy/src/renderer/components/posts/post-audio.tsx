@@ -85,7 +85,7 @@ export const PostAudio = (props: {
 
       {currentTranscription && (
         <div className="mt-2 bg-muted px-4 py-2 rounded">
-          <div className="text-muted-foreground text-center font-serif">
+          <div className="text-muted-foreground text-center font-sans">
             {currentTranscription.text}
           </div>
         </div>

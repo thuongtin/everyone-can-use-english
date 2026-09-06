@@ -66,7 +66,7 @@ export const StoryViewer = (props: {
             <ChevronLeftIcon className="w-6 h-6 text-muted-foreground" />
           </Button>
 
-          <div className="truncate flex-1 font-serif text-muted-foreground">
+          <div className="truncate flex-1 font-sans text-muted-foreground">
             {story.title}
           </div>
 
@@ -87,7 +87,7 @@ export const StoryViewer = (props: {
       <div className="bg-background py-6 px-8 max-w-2xl xl:max-w-3xl mx-auto relative shadow-lg">
         <article
           ref={ref}
-          className="relative select-text prose dark:prose-invert prose-lg xl:prose-xl font-serif text-lg"
+          className="relative select-text prose dark:prose-invert prose-lg xl:prose-xl font-sans text-lg"
           data-source-type="Story"
           data-source-id={story.id}
         >

@@ -53,7 +53,7 @@ export default () => {
   return (
     <div className="w-full h-full px-4 py-6 lg:px-8 flex flex-col gap-8">
       <div className="text-center">
-        <div className="text-lg font-mono py-4">{t("login")}</div>
+        <div className="text-lg font-sans py-4">{t("login")}</div>
         <div className="text-sm opacity-70">{t("loginBeforeYouStart")}</div>
         <Link to="/dictionary" className="block mt-4 underline text-sm">{t("bilingual.open")}</Link>
       </div>

@@ -63,7 +63,7 @@ export const PostRecording = (props: {
 
       {recording.referenceText && (
         <div className="my-2 bg-muted px-4 py-2 rounded">
-          <div className="text-muted-foreground text-center font-serif select-text">
+          <div className="text-muted-foreground text-center font-sans select-text">
             <Sentence sentence={recording.referenceText} />
           </div>
         </div>

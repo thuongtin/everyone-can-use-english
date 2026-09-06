@@ -26,7 +26,7 @@ export const ChapterCard = (props: {
       <div className="text-center text-sm font-bold font-mono mb-2">
         # {chapter.sequence}
       </div>
-      <div className="text-center font-mono line-clamp-1 mb-2">
+      <div className="text-center font-sans line-clamp-1 mb-2">
         {chapter.title}
       </div>
       {typeof chapter.finishesCount === "number" &&

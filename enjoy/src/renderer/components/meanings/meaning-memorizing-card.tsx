@@ -64,13 +64,13 @@ const FrontSide = (props: {
   return (
     <div className="flex flex-col h-full">
       <ScrollArea className="flex-1">
-        <h2 className="py-8 text-4xl font-bold font-serif text-center">
+        <h2 className="py-8 text-4xl font-bold font-sans text-center">
           {word}
         </h2>
         <div className="px-6">
           <div className="mb-4 italic text-sm">{t("context")}</div>
         </div>
-        <div className="px-6 text-lg font-serif">
+        <div className="px-6 text-lg font-sans">
           <div ref={ref} className="">
             {lookups.map((lookup) => (
               <p key={lookup.id} className="mb-8">
@@ -128,7 +128,7 @@ const BackSide = (props: { meaning: MeaningType; onFlip: () => void }) => {
   return (
     <div className="flex flex-col h-full overflow-hidden">
       <ScrollArea className="flex-1">
-        <h2 className="py-8 text-4xl font-bold font-serif text-center">
+        <h2 className="py-8 text-4xl font-bold font-sans text-center">
           {word}
         </h2>
         <div className="px-6">
@@ -156,7 +156,7 @@ const BackSide = (props: { meaning: MeaningType; onFlip: () => void }) => {
           <div className="mb-4 italic text-sm">{t("context")}</div>
         </div>
 
-        <div className="px-6 text-lg font-serif">
+        <div className="px-6 text-lg font-sans">
           <div ref={ref} className="">
             {lookups.map((lookup) => (
               <div key={lookup.id} className="mb-8">

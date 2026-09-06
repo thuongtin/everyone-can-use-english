@@ -32,10 +32,10 @@ export const NoteSegmentGroup = (props: {
     >
       <div className="flex items-center space-x-4">
         <div className="flex-1">
-          <div className="select-text line-clamp-3 text-muted-foreground font-serif pl-3 border-l-4 mb-4">
+          <div className="select-text line-clamp-3 text-muted-foreground font-sans pl-3 border-l-4 mb-4">
             {segment.caption.text}
           </div>
-          <div className="font-mono text-lg mb-4">
+          <div className="font-sans text-lg mb-4">
             {t("notesCount", { count })}
           </div>
           <div className="flex justify-start text-sm text-muted-foreground">
