@@ -1,5 +1,14 @@
 {
   "noMicrophoneAccess": "Microphone access is unavailable. Allow Enjoy in System Settings > Privacy & Security > Microphone, then restart Enjoy.",
+  "addYoutubeChannel": "Add YouTube channel",
+  "youtubeChannelDescription": "Paste a YouTube channel link or its @handle to show its latest videos on the home page.",
+  "youtubeChannelPlaceholder": "https://www.youtube.com/@channel",
+  "invalidYoutubeChannel": "Enter a valid YouTube channel link or @handle.",
+  "youtubeChannelAlreadyAdded": "This YouTube channel is already shown.",
+  "youtubeChannelAdded": "YouTube channel added.",
+  "yourYoutubeChannels": "Your YouTube channels",
+  "removeYoutubeChannel": "Remove YouTube channel",
+  "noYoutubeChannels": "No YouTube channels added yet.",
   "models": {
     "user": {
       "id": "ID",
