@@ -15,6 +15,9 @@ import {
 } from "@renderer/components/ui";
 import { LANGUAGES } from "@/constants";
 
+const FIELD =
+  "h-9 rounded-[10px] border-ej-line bg-ej-surface text-xs text-ej-ink focus-visible:ring-ej-accent";
+
 export const ConversationFormTTS = (props: {
   form: ReturnType<typeof useForm>;
   ttsProviders: any;
@@ -22,20 +25,41 @@ export const ConversationFormTTS = (props: {
   const { form, ttsProviders } = props;
 
   return (
-    <>
+    <div className="space-y-5 border-t border-ej-line pt-5">
+      <div className="ej-label text-ej-accent">{t("textToSpeech")}</div>
+
       <FormField
         control={form.control}
         name="configuration.tts.engine"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>{t("models.conversation.ttsEngine")}</FormLabel>
+            <FormLabel className="ej-label">{t("models.conversation.ttsEngine")}</FormLabel>
             <Select
-              onValueChange={field.onChange}
+              onValueChange={(engine) => {
+                field.onChange(engine);
+                const provider = ttsProviders[engine];
+                const model = provider?.models?.[0] || "";
+                const language = form.getValues("configuration.tts.language");
+                const voices = provider?.voices || [];
+                const voice = voices.find?.(
+                  (option: any) =>
+                    typeof option === "object" && option.language === language
+                ) || voices[0];
+                form.setValue("configuration.tts.model", model, {
+                  shouldDirty: true,
+                  shouldValidate: true,
+                });
+                form.setValue(
+                  "configuration.tts.voice",
+                  typeof voice === "string" ? voice : voice?.value || "",
+                  { shouldDirty: true, shouldValidate: true }
+                );
+              }}
               defaultValue={field.value}
               value={field.value}
             >
               <FormControl>
-                <SelectTrigger>
+                <SelectTrigger className={FIELD}>
                   <SelectValue placeholder={t("selectTtsEngine")} />
                 </SelectTrigger>
               </FormControl>
@@ -60,14 +84,14 @@ export const ConversationFormTTS = (props: {
           name="configuration.tts.model"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{t("models.conversation.ttsModel")}</FormLabel>
+              <FormLabel className="ej-label">{t("models.conversation.ttsModel")}</FormLabel>
               <Select
                 onValueChange={field.onChange}
                 defaultValue={field.value}
                 value={field.value}
               >
                 <FormControl>
-                  <SelectTrigger>
+                  <SelectTrigger className={FIELD}>
                     <SelectValue placeholder={t("selectTtsModel")} />
                   </SelectTrigger>
                 </FormControl>
@@ -96,14 +120,14 @@ export const ConversationFormTTS = (props: {
           name="configuration.tts.language"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{t("models.conversation.ttsLanguage")}</FormLabel>
+              <FormLabel className="ej-label">{t("models.conversation.ttsLanguage")}</FormLabel>
               <Select
                 onValueChange={field.onChange}
                 defaultValue={field.value}
                 value={field.value}
               >
                 <FormControl>
-                  <SelectTrigger>
+                  <SelectTrigger className={FIELD}>
                     <SelectValue placeholder={t("selectTtsLanguage")} />
                   </SelectTrigger>
                 </FormControl>
@@ -129,25 +153,21 @@ export const ConversationFormTTS = (props: {
           name="configuration.tts.voice"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{t("models.conversation.ttsVoice")}</FormLabel>
+              <FormLabel className="ej-label">{t("models.conversation.ttsVoice")}</FormLabel>
               <Select
                 onValueChange={field.onChange}
                 defaultValue={field.value}
                 value={field.value}
               >
                 <FormControl>
-                  <SelectTrigger>
+                  <SelectTrigger className={FIELD}>
                     <SelectValue placeholder={t("selectTtsVoice")} />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
                   {(
-                    (form.watch("configuration.tts.engine") === "enjoyai"
-                      ? ttsProviders.enjoyai.voices[
-                          form.watch("configuration.tts.model").split("/")[0]
-                        ]
-                      : ttsProviders[form.watch("configuration.tts.engine")]
-                          .voices) || []
+                    ttsProviders[form.watch("configuration.tts.engine")]
+                      ?.voices || []
                   ).map((voice: any) => {
                     if (typeof voice === "string") {
                       return (
@@ -182,9 +202,10 @@ export const ConversationFormTTS = (props: {
           name="configuration.tts.baseUrl"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{t("models.conversation.ttsBaseUrl")}</FormLabel>
+              <FormLabel className="ej-label">{t("models.conversation.ttsBaseUrl")}</FormLabel>
               <Input
                 {...field}
+                className={FIELD}
                 placeholder={t("models.conversation.ttsBaseUrlDescription")}
               />
               <FormMessage />
@@ -192,6 +213,6 @@ export const ConversationFormTTS = (props: {
           )}
         />
       )}
-    </>
+    </div>
   );
 };

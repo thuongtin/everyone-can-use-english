@@ -5,18 +5,18 @@ import {
   MediaTranscription,
   MediaInfo,
   MediaRecordings,
+  MediaVideoStage,
 } from "@renderer/components";
-import {
-  Button,
-  ScrollArea,
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@renderer/components/ui";
+import { EjIconButton, Segmented } from "@renderer/components/enjoy";
 import { t } from "i18next";
 import { cn } from "@renderer/lib/utils";
-import { ArrowLeftRightIcon } from "lucide-react";
+import {
+  ArrowLeftRightIcon,
+  LanguagesIcon,
+  MousePointerClickIcon,
+} from "lucide-react";
+
+type LeftTab = "transcription" | "recordings" | "info";
 
 export const MediaLeftPanel = (props: {
   className?: string;
@@ -24,7 +24,9 @@ export const MediaLeftPanel = (props: {
 }) => {
   const { className, setDisplayPanel } = props;
   const { media, decoded, layout } = useContext(MediaShadowProviderContext);
-  const [tab, setTab] = useState("provider");
+  const [tab, setTab] = useState<LeftTab>("transcription");
+  const [displayTranslation, setDisplayTranslation] = useState(false);
+  const [autoScroll, setAutoScroll] = useState(true);
 
   useEffect(() => {
     if (!decoded) return;
@@ -34,73 +36,75 @@ export const MediaLeftPanel = (props: {
 
   if (!media) return null;
 
+  const isVideo = media.mediaType === "Video";
+
+  const options: { value: LeftTab; label: string }[] = [
+    { value: "transcription", label: t("transcription") },
+    { value: "recordings", label: t("myRecordings") },
+    { value: "info", label: t("mediaInfo") },
+  ];
+
   return (
-    <Tabs
-      value={tab}
-      onValueChange={setTab}
-      className={cn("h-full flex flex-col", className)}
-    >
-      <div className="flex items-center bg-muted px-4">
+    <div className={cn("h-full min-h-0 flex flex-col", className)}>
+      {isVideo && <MediaVideoStage />}
+
+      <div
+        className="shrink-0 h-[46px] px-3 flex items-center gap-2 border-b border-ej-line"
+        data-testid="media-left-tabs"
+      >
         {layout === "compact" && (
-          <Button
-            variant="ghost"
-            size="icon"
-            className="mr-2"
+          <EjIconButton
+            title={t("switchPanel")}
             onClick={() => setDisplayPanel?.("right")}
           >
-            <ArrowLeftRightIcon className="w-4 h-4" />
-          </Button>
+            <ArrowLeftRightIcon className="size-4" />
+          </EjIconButton>
         )}
 
-        <TabsList
-          className={`grid gap-4 rounded-none w-full ${
-            media?.mediaType === "Video" ? "grid-cols-4" : "grid-cols-3"
-          }`}
-        >
-          {media?.mediaType === "Video" && (
-            <TabsTrigger
-              value="provider"
-              className="capitalize block truncate px-1"
-            >
-              {t("player")}
-            </TabsTrigger>
-          )}
-          <TabsTrigger
-            value="transcription"
-            className="capitalize block truncate px-1"
+        <Segmented
+          size="sm"
+          value={tab}
+          onChange={(value) => setTab(value as LeftTab)}
+          options={options}
+          className="min-w-0 overflow-x-auto"
+        />
+
+        <div className="ml-auto shrink-0 flex items-center gap-1">
+          <EjIconButton
+            title={t("autoScroll")}
+            active={autoScroll}
+            onClick={() => setAutoScroll(!autoScroll)}
           >
-            {t("transcription")}
-          </TabsTrigger>
-          <TabsTrigger
-            value="recordings"
-            className="capitalize block truncate px-1"
+            <MousePointerClickIcon className="size-4" />
+          </EjIconButton>
+
+          <EjIconButton
+            title={t("captionTabs.translation")}
+            active={displayTranslation}
+            onClick={() => setDisplayTranslation(!displayTranslation)}
           >
-            {t("myRecordings")}
-          </TabsTrigger>
-          <TabsTrigger value="info" className="capitalize block truncate px-1">
-            {t("mediaInfo")}
-          </TabsTrigger>
-        </TabsList>
+            <LanguagesIcon className="size-4" />
+          </EjIconButton>
+        </div>
       </div>
 
-      <ScrollArea className="flex-1 relative">
-        <TabsContent forceMount={true} value="provider">
-          <div className={`${tab === "provider" ? "block" : "hidden"}`}>
+      <div className="flex-1 min-h-0 overflow-y-auto scroll relative">
+        {!isVideo && (
+          <div className="hidden">
             <MediaProvider />
           </div>
-        </TabsContent>
-        <TabsContent forceMount={true} value="recordings">
-          <div className={`${tab === "recordings" ? "block" : "hidden"}`}>
-            <MediaRecordings />
-          </div>
-        </TabsContent>
-        <TabsContent value="transcription">
-          <MediaTranscription display={tab === "transcription"} />
-        </TabsContent>
-        <TabsContent value="info">
-          <MediaInfo />
-        </TabsContent>
-      </ScrollArea>
-    </Tabs>
+        )}
+        <div className={tab === "recordings" ? "block" : "hidden"}>
+          <MediaRecordings />
+        </div>
+        {tab === "transcription" && (
+          <MediaTranscription
+            display={autoScroll}
+            displayTranslation={displayTranslation}
+          />
+        )}
+        {tab === "info" && <MediaInfo />}
+      </div>
+    </div>
   );
 };

@@ -39,18 +39,18 @@ export const TtsSettings = () => {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)}>
-        <div className="flex items-start justify-between py-4">
+        <div className="ej-setting-row">
           <div className="">
             <div className="flex items-center mb-2">
               <span>{t("ttsService")}</span>
             </div>
-            <div className="text-sm text-muted-foreground mb-3">
+            <div className="text-sm text-ej-muted mb-3">
               {form.watch("config.tts.engine") === "openai"
                 ? t("openaiTtsServiceDescription")
                 : t("enjoyTtsServiceDescription")}
             </div>
             <div
-              className={`text-sm text-muted-foreground space-y-3 px-1 ${
+              className={`text-sm text-ej-muted space-y-3 px-1 ${
                 editing ? "" : "hidden"
               }`}
             >

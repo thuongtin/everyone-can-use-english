@@ -18,7 +18,6 @@ import {
   Recording,
   Speech,
   Transcription,
-  UserSetting,
 } from "@main/db/models";
 import settings from "@main/settings";
 import { AudioFormats, MIME_TYPES, VideoFormats } from "@/constants";
@@ -28,9 +27,6 @@ import fs from "fs-extra";
 import { t } from "i18next";
 import mainWindow from "@main/window";
 import log from "@main/logger";
-import storage from "@main/storage";
-import Ffmpeg from "@main/ffmpeg";
-import { Client } from "@/api";
 import startCase from "lodash/startCase";
 import { v5 as uuidv5 } from "uuid";
 import FfmpegWrapper from "@main/ffmpeg";
@@ -203,61 +199,6 @@ export class Video extends Model<Video> {
     }
   }
 
-  // generate cover and upload
-  async generateCover() {
-    if (this.coverUrl) return;
-
-    const ffmpeg = new Ffmpeg();
-    const coverFile = await ffmpeg.generateCover(
-      this.filePath,
-      path.join(settings.cachePath(), `${Date.now()}.png`)
-    );
-    const hash = await hashFile(coverFile, { algo: "md5" });
-    const finalFile = path.join(settings.cachePath(), `${hash}.png`);
-    fs.renameSync(coverFile, finalFile);
-
-    storage.put(hash, finalFile, "image/png").then((result) => {
-      logger.debug("cover upload result:", result.data);
-      if (result.data.success) {
-        this.update({ coverUrl: storage.getUrl(hash) });
-      }
-    });
-  }
-
-  async upload(force: boolean = false) {
-    if (this.isUploaded && !force) return;
-
-    return storage
-      .put(this.md5, this.filePath, this.mimeType)
-      .then((result) => {
-        logger.debug("upload result:", result.data);
-        if (result.data.success) {
-          this.update({ uploadedAt: new Date() });
-        } else {
-          throw new Error(result.data);
-        }
-      })
-      .catch((err) => {
-        logger.error("upload failed:", err.message);
-        throw err;
-      });
-  }
-
-  async sync() {
-    if (this.isSynced) return;
-
-    const webApi = new Client({
-      baseUrl: settings.apiUrl(),
-      accessToken: (await UserSetting.accessToken()) as string,
-      logger,
-    });
-
-    return webApi.syncVideo(this.toJSON()).then(() => {
-      const now = new Date();
-      this.update({ syncedAt: now, updatedAt: now });
-    });
-  }
-
   async crop(params: { startTime: number; endTime: number }) {
     const { startTime, endTime } = params;
 
@@ -276,16 +217,6 @@ export class Video extends Model<Video> {
   }
 
   @AfterCreate
-  static autoSync(video: Video) {
-    video.sync().catch((err) => {
-      logger.error("sync video error", video.id, err);
-    });
-    video.generateCover().catch((err) => {
-      logger.error("generate cover error", video.id, err);
-    });
-  }
-
-  @AfterCreate
   static notifyForCreate(video: Video) {
     this.notify(video, "create");
   }
@@ -293,9 +224,6 @@ export class Video extends Model<Video> {
   @AfterUpdate
   static notifyForUpdate(video: Video) {
     this.notify(video, "update");
-    video.sync().catch((err) => {
-      logger.error("sync video error", video.id, err);
-    });
   }
 
   @AfterDestroy
@@ -315,15 +243,6 @@ export class Video extends Model<Video> {
       },
     });
 
-    const webApi = new Client({
-      baseUrl: settings.apiUrl(),
-      accessToken: (await UserSetting.accessToken()) as string,
-      logger: log.scope("video/cleanupFile"),
-    });
-
-    webApi.deleteVideo(video.id).catch((err) => {
-      logger.error("deleteAudio failed:", err.message);
-    });
   }
 
   static async buildFromLocalFile(

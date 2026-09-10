@@ -1,3 +1,5 @@
+import { UserSettingKeyEnum } from "@/types/enums";
+
 const youtubeHosts = new Set([
   "youtube.com",
   "www.youtube.com",
@@ -8,6 +10,20 @@ const youtubeHosts = new Set([
 
 const validVideoId = /^[A-Za-z0-9_-]{11}$/;
 const validHandle = /^@[^/?#\s]+$/;
+
+export const CUSTOM_YOUTUBE_CHANNELS_SETTING_KEY =
+  UserSettingKeyEnum.YOUTUBE_CHANNELS;
+export const LEGACY_CUSTOM_YOUTUBE_CHANNELS_CACHE_KEY =
+  "home-custom-youtube-channels";
+
+type YoutubeChannelSettingsStore = {
+  get: (key: UserSettingKeyEnum) => Promise<unknown>;
+  set: (key: UserSettingKeyEnum, value: string[]) => Promise<unknown>;
+};
+
+type YoutubeChannelCacheStore = {
+  get: (key: string) => Promise<unknown>;
+};
 
 const getVideoId = (url: URL): string | undefined => {
   if (url.hostname === "youtu.be") return url.pathname.split("/")[1];
@@ -52,4 +68,45 @@ export const normalizeYoutubeChannel = (value?: string): string | undefined => {
   } catch {
     return;
   }
+};
+
+export const normalizeYoutubeChannels = (value: unknown): string[] => {
+  if (!Array.isArray(value)) return [];
+
+  return [
+    ...new Map(
+      value.flatMap((channel) =>
+        typeof channel === "string" ? [normalizeYoutubeChannel(channel)] : []
+      )
+        .filter((channel): channel is string => Boolean(channel))
+        .map((channel) => [channel.toLowerCase(), channel])
+    ).values(),
+  ];
+};
+
+export const saveCustomYoutubeChannels = async (
+  settings: YoutubeChannelSettingsStore,
+  channels: string[]
+) => {
+  await settings.set(
+    CUSTOM_YOUTUBE_CHANNELS_SETTING_KEY,
+    normalizeYoutubeChannels(channels)
+  );
+};
+
+export const loadCustomYoutubeChannels = async (
+  settings: YoutubeChannelSettingsStore,
+  legacyCache?: YoutubeChannelCacheStore
+) => {
+  const storedChannels = await settings.get(CUSTOM_YOUTUBE_CHANNELS_SETTING_KEY);
+  if (storedChannels !== null) return normalizeYoutubeChannels(storedChannels);
+  if (!legacyCache) return [];
+
+  const legacyChannels = normalizeYoutubeChannels(
+    await legacyCache.get(LEGACY_CUSTOM_YOUTUBE_CHANNELS_CACHE_KEY)
+  );
+  if (legacyChannels.length) {
+    await saveCustomYoutubeChannels(settings, legacyChannels);
+  }
+  return legacyChannels;
 };

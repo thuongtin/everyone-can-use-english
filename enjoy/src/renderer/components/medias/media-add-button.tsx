@@ -11,9 +11,9 @@ import {
   Progress,
   toast,
   Switch,
-  Label,
 } from "@renderer/components/ui";
-import { PlusCircleIcon, LoaderIcon } from "lucide-react";
+import { PlusCircleIcon, LoaderIcon, UploadCloudIcon } from "lucide-react";
+import { Segmented } from "@renderer/components/enjoy";
 import { t } from "i18next";
 import { useState, useContext, useEffect } from "react";
 import { AudioFormats, VideoFormats } from "@/constants";
@@ -30,6 +30,7 @@ export const MediaAddButton = (props: { type?: "Audio" | "Video" }) => {
   const [uri, setUri] = useState("");
   const [files, setFiles] = useState<string[]>([]);
   const [compressing, setCompressing] = useState(true);
+  const [source, setSource] = useState<"local" | "url">("local");
   const [open, setOpen] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [createdCount, setCreatedCount] = useState(0);
@@ -135,12 +136,12 @@ export const MediaAddButton = (props: { type?: "Audio" | "Video" }) => {
   return (
     <Dialog open={open} onOpenChange={handleOpen}>
       <DialogTrigger asChild>
-        <Button className="capitalize">
-          <PlusCircleIcon className="mr-2 h-4 w-4" />
+        <Button size="sm">
+          <PlusCircleIcon className="mr-2 size-4" />
           {t("addResource")}
         </Button>
       </DialogTrigger>
-      <DialogContent>
+      <DialogContent className="max-w-[560px]">
         <DialogHeader>
           <DialogTitle>{t("addResource")}</DialogTitle>
           <DialogDescription>
@@ -148,19 +149,19 @@ export const MediaAddButton = (props: { type?: "Audio" | "Video" }) => {
           </DialogDescription>
         </DialogHeader>
 
-        <div className="flex space-x-2 mb-2">
-          <Input
-            placeholder="https://"
-            value={uri}
-            disabled={submitting}
-            onChange={(element) => {
-              setUri(element.target.value);
-              setFiles([]);
-            }}
-          />
-          <Button
-            variant="secondary"
-            className="capitalize min-w-max"
+        <Segmented
+          value={source}
+          onChange={(value) => setSource(value as "local" | "url")}
+          className="self-start"
+          options={[
+            { value: "local", label: t("localFile") },
+            { value: "url", label: "URL" },
+          ]}
+        />
+
+        {source === "local" ? (
+          <button
+            type="button"
             disabled={submitting}
             onClick={async () => {
               const selected = await EnjoyApp.dialog.showOpenDialog({
@@ -177,27 +178,41 @@ export const MediaAddButton = (props: { type?: "Audio" | "Video" }) => {
                 setUri(selected[0]);
               }
             }}
+            className="w-full rounded-ej-lg border border-dashed border-ej-line2 bg-ej-surface2/40 hover:border-ej-accent hover:bg-ej-accent-soft/40 transition-colors duration-ej py-8 flex flex-col items-center gap-2"
           >
-            {t("localFile")}
-          </Button>
-        </div>
-        <div className="flex items-center space-x-2 mb-2">
+            <UploadCloudIcon className="size-7 text-ej-muted" />
+            <span className="text-[13px] font-semibold text-ej-ink">
+              {t("localFile")}
+            </span>
+            <span className="text-xs text-ej-muted px-6 text-center break-all">
+              {files.length > 1
+                ? `${t("selectedFiles")}: ${files.length}`
+                : uri || t("addResourceFromUrlOrLocal")}
+            </span>
+          </button>
+        ) : (
+          <Input
+            placeholder="https://"
+            value={uri}
+            disabled={submitting}
+            onChange={(element) => {
+              setUri(element.target.value);
+              setFiles([]);
+            }}
+          />
+        )}
+
+        <div className="flex items-center gap-2">
           <Switch
             checked={compressing}
             onCheckedChange={(value) => setCompressing(value)}
           />
-          <span className="text-sm text-muted-foreground">
+          <span className="text-xs text-ej-muted">
             {compressing
               ? t("compressMediaBeforeAdding")
               : t("keepOriginalMedia")}
           </span>
         </div>
-
-        {files.length > 0 && (
-          <div className="">
-            {t("selectedFiles")}: {files.length}
-          </div>
-        )}
 
         {files.length > 0 && submitting && (
           <div className="flex items-center gap-2">

@@ -17,7 +17,6 @@ try {
   createDefaultProviderConfigs,
   createGptProviders,
   discoverLocalModels,
-  getEnjoyAiRemoteConfig,
   isLegacyProviderModel,
   normalizeModelList,
   normalizeProviderConfig,
@@ -41,7 +40,6 @@ try {
     createDefaultProviderConfigs,
     createGptProviders,
     discoverLocalModels,
-    getEnjoyAiRemoteConfig,
     isLegacyProviderModel,
     normalizeModelList,
     normalizeProviderConfig,
@@ -55,6 +53,7 @@ try {
     "gpt-4o",
     "custom",
   ]);
+
   assert.deepEqual(normalizeModelList([" a ", "", "a", "b,c"]), [
     "a",
     "b",
@@ -63,15 +62,84 @@ try {
 
   const defaults = createDefaultProviderConfigs();
   assert.deepEqual(Object.keys(defaults), [
-    "enjoyai",
     "openai",
+    "azure-openai",
     "gemini",
+    "vertex-express",
     "deepseek",
     "openrouter",
     "ollama",
     "lmstudio",
+    "codex-acp",
+    "claude-acp",
   ]);
   assert.equal(defaults.lmstudio.baseUrl, "http://localhost:1234/v1");
+  assert.equal(defaults["azure-openai"].baseUrl, undefined);
+  assert.deepEqual(AI_PROVIDER_CATALOG.gemini, {
+    id: "gemini",
+    name: "Gemini",
+    descriptionKey: "aiProviders.gemini.description",
+    models: ["gemini-3.8-flash", "gemini-3.5-flash-lite"],
+    defaultBaseUrl: "https://generativelanguage.googleapis.com/v1beta/openai",
+    acceptsApiKey: true,
+    configurable: [
+      "model",
+      "baseUrl",
+      "roleDefinition",
+      "temperature",
+      "numberOfChoices",
+      "maxTokens",
+      "frequencyPenalty",
+      "presencePenalty",
+      "historyBufferSize",
+      "tts",
+    ],
+    modelCapabilities: {
+      "gemini-3.8-flash": {
+        numberOfChoices: false,
+        frequencyPenalty: false,
+        presencePenalty: false,
+      },
+      "gemini-3.5-flash-lite": {
+        numberOfChoices: false,
+        frequencyPenalty: false,
+        presencePenalty: false,
+      },
+    },
+  });
+  assert.deepEqual(AI_PROVIDER_CATALOG["vertex-express"], {
+    id: "vertex-express",
+    name: "Vertex AI Express",
+    descriptionKey: "aiProviders.vertexExpress.description",
+    models: [],
+    defaultBaseUrl: "https://aiplatform.googleapis.com/v1",
+    acceptsApiKey: true,
+    configurable: [
+      "model",
+      "roleDefinition",
+      "temperature",
+      "maxTokens",
+      "historyBufferSize",
+    ],
+  });
+  assert.deepEqual(defaults["vertex-express"], {
+    name: "vertex-express",
+    key: undefined,
+    baseUrl: "https://aiplatform.googleapis.com/v1",
+    models: "",
+  });
+  assert.equal(providerSupportsOption("vertex-express", "model"), true);
+  assert.equal(providerSupportsOption("vertex-express", "baseUrl"), false);
+  assert.equal(providerSupportsOption("vertex-express", "tts"), false);
+  assert.deepEqual(AI_PROVIDER_CATALOG["azure-openai"].models, []);
+  assert.equal(
+    providerSupportsOption("azure-openai", "temperature", "deployment-alias"),
+    false
+  );
+  assert.equal(
+    providerSupportsOption("azure-openai", "maxTokens", "deployment-alias"),
+    true
+  );
 
   const savedOpenAi = normalizeProviderConfig("openai", {
     key: "fake-key",
@@ -95,6 +163,19 @@ try {
     "fake-lmstudio-token"
   );
   assert.equal(normalizeProviderConfig("ollama", { key: "fake-other-key" }).key, undefined);
+  assert.deepEqual(
+    normalizeProviderConfig("vertex-express", {
+      key: "fake-vertex-key",
+      baseUrl: "https://generativelanguage.googleapis.com/v1beta/openai",
+      models: " explicit-model, explicit-model ",
+    }),
+    {
+      name: "vertex-express",
+      key: "fake-vertex-key",
+      baseUrl: "https://aiplatform.googleapis.com/v1",
+      models: "explicit-model",
+    }
+  );
 
   const storedEngine = resolveGptEngineBootstrap(
     { name: "gemini", models: { default: "gemini-3.8-flash" } },
@@ -110,8 +191,28 @@ try {
       models: "gpt-5.6-luna, gpt-4o",
     }),
     {
-      engine: { name: "openai", models: { default: "gpt-5.6-luna" } },
-      shouldPersist: true,
+      engine: { name: "needs-selection", models: { default: "" } },
+      shouldPersist: false,
+    }
+  );
+  assert.deepEqual(
+    resolveGptEngineBootstrap(
+      { name: "retired-provider", models: { default: "custom-model" } },
+      undefined
+    ),
+    {
+      engine: { name: "needs-selection", models: { default: "" } },
+      shouldPersist: false,
+    }
+  );
+  assert.deepEqual(
+    resolveGptEngineBootstrap(
+      { name: "openai", models: { default: "custom-model" } },
+      undefined
+    ),
+    {
+      engine: { name: "openai", models: { default: "custom-model" } },
+      shouldPersist: false,
     }
   );
   assert.deepEqual(
@@ -120,24 +221,10 @@ try {
       models: "gpt-5.6-luna",
     }),
     {
-      engine: { name: "enjoyai", models: { default: "gpt-4o" } },
+      engine: { name: "needs-selection", models: { default: "" } },
       shouldPersist: false,
     }
   );
-
-  const remote = getEnjoyAiRemoteConfig({
-    enjoyai: {
-      models: ["remote-model"],
-      configurable: ["model", "temperature", "baseUrl", "key"],
-      key: "must-be-ignored",
-    },
-    openai: { models: ["must-not-be-used"] },
-    baseUrl: "https://must-not-be-used.invalid",
-  });
-  assert.deepEqual(remote, {
-    models: ["remote-model"],
-    configurable: ["model", "temperature"],
-  });
 
   const providers = createGptProviders(
     {
@@ -158,6 +245,61 @@ try {
   assert.equal(providers.ollama.baseUrl, "http://ollama.invalid");
   assert.deepEqual(createGptProviders(defaults).ollama.models, []);
   assert.deepEqual(createGptProviders(defaults).lmstudio.models, []);
+  assert.deepEqual(createGptProviders(defaults)["vertex-express"].models, []);
+  assert.deepEqual(
+    createGptProviders({
+      ...defaults,
+      "vertex-express": normalizeProviderConfig("vertex-express", {
+        key: "fake-vertex-key",
+        models: "publisher-model",
+      }),
+    })["vertex-express"].models,
+    ["publisher-model"]
+  );
+  const separateGoogleProviders = createGptProviders({
+    ...defaults,
+    gemini: normalizeProviderConfig("gemini", {
+      key: "fake-gemini-key",
+      baseUrl: "https://gemini-gateway.invalid/v1",
+      models: "custom-gemini-model",
+    }),
+    "vertex-express": {
+      name: "vertex-express",
+      key: "fake-vertex-key",
+      baseUrl: "https://must-not-be-used.invalid/v1",
+      models: "custom-vertex-model",
+    },
+  });
+  assert.equal(
+    separateGoogleProviders.gemini.baseUrl,
+    "https://gemini-gateway.invalid/v1"
+  );
+  assert.equal(
+    separateGoogleProviders["vertex-express"].baseUrl,
+    "https://aiplatform.googleapis.com/v1"
+  );
+  assert.equal(
+    separateGoogleProviders.gemini.models.includes("custom-vertex-model"),
+    false
+  );
+  assert.equal(
+    separateGoogleProviders["vertex-express"].models.includes(
+      "custom-gemini-model"
+    ),
+    false
+  );
+  assert.deepEqual(createGptProviders(defaults)["codex-acp"].models, []);
+  assert.deepEqual(
+    createGptProviders(
+      {
+        ...defaults,
+        "codex-acp": { name: "codex-acp", models: "stale-model" },
+      },
+      undefined,
+      { "codex-acp": ["discovered-model"] }
+    )["codex-acp"].models,
+    ["discovered-model"]
+  );
   assert.equal(resolveProviderModel([], "gpt-4o"), undefined);
   assert.equal(resolveProviderModel(["local-model"], "gpt-4o"), "local-model");
   assert.equal(
@@ -189,9 +331,9 @@ try {
     undefined
   );
   assert.equal(providers.openrouter.models[0], "anthropic/claude-sonnet-5");
-  assert.equal(providers.enjoyai.models.includes("chatgpt-4o-latest"), false);
-  assert.equal(isLegacyProviderModel("enjoyai", "gpt-4o-mini"), false);
-  assert.equal(isLegacyProviderModel("enjoyai", "gpt-4o"), false);
+  assert.equal("enjoyai" in providers, false);
+  assert.equal(isLegacyProviderModel("enjoyai", "gpt-4o-mini"), true);
+  assert.equal(isLegacyProviderModel("enjoyai", "gpt-4o"), true);
   assert.equal(isLegacyProviderModel("enjoyai", "chatgpt-4o-latest"), true);
   assert.equal(isLegacyProviderModel("openai", "gpt-5.6-luna"), false);
 
@@ -216,27 +358,8 @@ try {
   const providersWithRemoteSubset = createGptProviders(defaults, {
     enjoyai: { models: ["remote-model"], configurable: ["model"] },
   });
-  const restrictedEnjoyAi = providersWithRemoteSubset.enjoyai;
-  assert.equal(restrictedEnjoyAi.models.includes("gpt-4o-mini"), true);
-  assert.equal(restrictedEnjoyAi.models.includes("remote-model"), true);
-  assert.equal(
-    providerSupportsOption(
-      "enjoyai",
-      "model",
-      "remote-model",
-      restrictedEnjoyAi
-    ),
-    true
-  );
-  assert.equal(
-    providerSupportsOption(
-      "enjoyai",
-      "temperature",
-      "remote-model",
-      restrictedEnjoyAi
-    ),
-    false
-  );
+  assert.equal("enjoyai" in providersWithRemoteSubset, false);
+  assert.equal(providerSupportsOption("enjoyai", "model"), false);
   assert.equal(
     providerSupportsOption(
       "openai",
@@ -246,10 +369,9 @@ try {
     ),
     true
   );
-  assert.deepEqual(
-    createGptProviders(defaults, { enjoyai: { configurable: [] } }).enjoyai
-      .configurable,
-    []
+  assert.equal(
+    "enjoyai" in createGptProviders(defaults, { enjoyai: { configurable: [] } }),
+    false
   );
 
   const ollamaRequests = [];

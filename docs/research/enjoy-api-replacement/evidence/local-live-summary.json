@@ -1,0 +1,172 @@
+{
+  "runtime": {
+    "node": "v24.18.1",
+    "arch": "arm64",
+    "platform": "darwin"
+  },
+  "networkPolicy": "sandbox-exec deny network*",
+  "summary": [
+    {
+      "id": "local-integrated-jfk-recognize",
+      "ok": true,
+      "elapsedMs": 985,
+      "transcript": "And so my fellow Americans ask not what your country can do for you ask what you can do for your country.",
+      "wer": {
+        "edits": 0,
+        "referenceWords": 22,
+        "hypothesisWords": 22,
+        "wer": 0
+      },
+      "timeline": {
+        "topLevel": 1,
+        "total": 46,
+        "byType": {
+          "segment": 1,
+          "sentence": 1,
+          "word": 22,
+          "token": 22
+        },
+        "invalidTimes": 0
+      },
+      "wordTimeline": {
+        "topLevel": 23,
+        "total": 46,
+        "byType": {
+          "word": 23,
+          "token": 23
+        },
+        "invalidTimes": 0
+      }
+    },
+    {
+      "id": "local-integrated-jfk-align-whisper",
+      "ok": true,
+      "elapsedMs": 610,
+      "transcript": "And so my fellow Americans ask not what your country can do for you ask what you can do for your country.",
+      "wer": {
+        "edits": 0,
+        "referenceWords": 22,
+        "hypothesisWords": 22,
+        "wer": 0
+      },
+      "timeline": {
+        "topLevel": 1,
+        "total": 46,
+        "byType": {
+          "segment": 1,
+          "sentence": 1,
+          "word": 22,
+          "token": 22
+        },
+        "invalidTimes": 0
+      },
+      "wordTimeline": {
+        "topLevel": 22,
+        "total": 44,
+        "byType": {
+          "word": 22,
+          "token": 22
+        },
+        "invalidTimes": 0
+      }
+    },
+    {
+      "id": "local-integrated-jfk-align-dtw",
+      "ok": true,
+      "elapsedMs": 250,
+      "transcript": "And so my fellow Americans ask not what your country can do for you ask what you can do for your country.",
+      "wer": {
+        "edits": 0,
+        "referenceWords": 22,
+        "hypothesisWords": 22,
+        "wer": 0
+      },
+      "timeline": {
+        "topLevel": 1,
+        "total": 115,
+        "byType": {
+          "segment": 1,
+          "sentence": 1,
+          "word": 22,
+          "token": 22,
+          "phone": 69
+        },
+        "invalidTimes": 0
+      },
+      "wordTimeline": {
+        "topLevel": 22,
+        "total": 113,
+        "byType": {
+          "word": 22,
+          "token": 22,
+          "phone": 69
+        },
+        "invalidTimes": 0
+      }
+    },
+    {
+      "id": "local-whispercpp-jfk",
+      "ok": true,
+      "elapsedMs": 299,
+      "transcript": "And so my fellow Americans ask not what your country can do for you ask what you can do for your country.",
+      "wer": {
+        "edits": 0,
+        "referenceWords": 22,
+        "hypothesisWords": 22,
+        "wer": 0
+      },
+      "timeline": {
+        "topLevel": 1,
+        "total": 46,
+        "byType": {
+          "segment": 1,
+          "sentence": 1,
+          "word": 22,
+          "token": 22
+        },
+        "invalidTimes": 0
+      },
+      "wordTimeline": {
+        "topLevel": 23,
+        "total": 46,
+        "byType": {
+          "word": 23,
+          "token": 23
+        },
+        "invalidTimes": 0
+      }
+    },
+    {
+      "id": "local-whispercpp-dialogue",
+      "ok": true,
+      "elapsedMs": 395,
+      "transcript": "Well, um, I booked the blue room for Thursday, the code is 742. Did you say Thursday, I thought our meeting was on Friday at half past 9. No, Thursday at 1015, please bring two notebooks and a green pen. Alright, I will arrive 15 minutes early, see you there.",
+      "wer": {
+        "edits": 9,
+        "referenceWords": 54,
+        "hypothesisWords": 50,
+        "wer": 0.16666666666666666
+      },
+      "timeline": {
+        "topLevel": 1,
+        "total": 107,
+        "byType": {
+          "segment": 1,
+          "sentence": 4,
+          "word": 50,
+          "token": 52
+        },
+        "invalidTimes": 0
+      },
+      "wordTimeline": {
+        "topLevel": 62,
+        "total": 126,
+        "byType": {
+          "word": 62,
+          "token": 64
+        },
+        "invalidTimes": 0
+      }
+    }
+  ]
+}

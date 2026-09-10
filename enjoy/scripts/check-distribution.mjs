@@ -52,6 +52,9 @@ try {
     "javascript:alert(1)",
     "file:///tmp/feed",
     "https://user:secret@updates.example.test/feed",
+    "https://ENJOY.BOT./feed",
+    "https://dl.enjoy.bot/feed",
+    "https://api.getenjoyapp.com/feed",
   ]) {
     assert.equal(
       resolveDistributionConfig({ ENJOY_UPDATE_FEED_URL: updateFeedUrl })
@@ -59,6 +62,11 @@ try {
       undefined,
       updateFeedUrl
     );
+  }
+
+  for (const retiredUrl of ["https://enjoy.bot", "https://api.enjoy.bot./api", "https://api.getenjoyapp.com"]) {
+    const result = resolveDistributionConfig({ ENJOY_REPO_URL: retiredUrl, ENJOY_DOCS_URL: retiredUrl, ENJOY_DOWNLOAD_URL: retiredUrl });
+    assert.deepEqual(result, defaults);
   }
 
   const invalidOverrides = resolveDistributionConfig({

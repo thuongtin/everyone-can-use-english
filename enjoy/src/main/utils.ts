@@ -2,6 +2,7 @@ import { createHash } from "crypto";
 import { createReadStream } from "fs";
 import settings from "./settings";
 import path from "path";
+import { isLearningAssetReference } from "./learning/active-runtime";
 
 export function hashFile(
   path: string,
@@ -46,6 +47,7 @@ export function hashBlob(
  * @returns {string} file path
  */
 export function enjoyUrlToPath(enjoyUrl: string): string {
+  if (isLearningAssetReference(enjoyUrl)) throw new Error("Learning assets require scoped media access");
   let filePath = enjoyUrl;
 
   if (

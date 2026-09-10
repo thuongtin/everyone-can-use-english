@@ -1,12 +1,9 @@
-import { cn } from "@renderer/lib/utils";
-import { Link } from "react-router-dom";
 import {
   AlertDialog,
   AlertDialogContent,
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogDescription,
-  Button,
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
@@ -16,10 +13,17 @@ import {
   AlertDialogAction,
   toast,
 } from "@renderer/components/ui";
-import { MoreVerticalIcon, TrashIcon } from "lucide-react";
+import { MediaCard } from "@renderer/components/enjoy";
+import {
+  BookOpenIcon,
+  CircleAlertIcon,
+  MoreVerticalIcon,
+  TrashIcon,
+} from "lucide-react";
 import { t } from "i18next";
 import { useContext, useState } from "react";
 import { AppSettingsProviderContext } from "@renderer/context";
+import { formatDate } from "@renderer/lib/utils";
 
 export const DocumentCard = (props: {
   document: DocumentEType;
@@ -29,102 +33,106 @@ export const DocumentCard = (props: {
   const { document, className, onDelete } = props;
   const [deleting, setDeleting] = useState(false);
   const { EnjoyApp } = useContext(AppSettingsProviderContext);
+  const metadata = [
+    formatDate(document.lastReadAt || document.createdAt),
+    !document.src ? t("cannotFindSourceFile") : null,
+  ]
+    .filter(Boolean)
+    .join(" · ");
+
   const handleDelete = (event: React.MouseEvent) => {
     event.stopPropagation();
     setDeleting(true);
   };
+
   return (
-    <div className={cn("w-full hover:scale-105 transition-all", className)}>
-      <Link to={`/documents/${document.id}`}>
-        <div className="aspect-[3/4] rounded overflow-hidden shadow-md relative flex flex-col">
-          {/* Book body */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background: `linear-gradient(to right, #${document.md5.slice(
-                0,
-                6
-              )}22, #${document.md5.slice(-6)}44)`,
-            }}
-          ></div>
-
-          {/* Book spine */}
-          <div
-            className="absolute left-0 top-0 bottom-0 w-4 shadow-inner"
-            style={{
-              backgroundColor: `#${document.md5.slice(0, 6)}`,
-            }}
-          ></div>
-
-          {/* Book title */}
-          <div className="relative flex-grow flex items-center justify-center py-4 pl-6 pr-4 z-10">
-            <h3 className="text-center font-bold text-gray-800 break-words overflow-hidden">
+    <>
+      <MediaCard
+        className={className}
+        to={`/documents/${document.id}`}
+        id={document.id}
+        title={document.title}
+        ratio="book"
+        coverFallback={
+          <div className="px-4 text-center">
+            <BookOpenIcon
+              className="size-7 mx-auto mb-2 opacity-80"
+              strokeWidth={1.4}
+            />
+            <div className="text-[12px] font-semibold leading-snug line-clamp-3 text-white">
               {document.title}
-            </h3>
+            </div>
           </div>
-          {/* drop menu */}
-          <div className="absolute right-1 top-1 z-10">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="hover:bg-transparent w-6 h-6"
-                >
-                  <MoreVerticalIcon className="w-4 h-4" />
-                </Button>
-              </DropdownMenuTrigger>
+        }
+        language={document.language}
+        spineLabel={document.metadata?.extension}
+        meta={
+          metadata ? (
+            <span className="inline-flex items-center gap-1">
+              {!document.src && (
+                <CircleAlertIcon className="size-3 shrink-0 text-ej-bad" />
+              )}
+              {metadata}
+            </span>
+          ) : undefined
+        }
+        actions={
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button
+                type="button"
+                className="size-6 rounded-lg bg-white/90 text-ej-ink flex items-center justify-center shadow-ej"
+              >
+                <MoreVerticalIcon className="size-3.5" />
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem
+                className="cursor-pointer gap-2 text-ej-bad focus:text-ej-bad"
+                onClick={handleDelete}
+              >
+                <TrashIcon className="size-4" />
+                {t("delete")}
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        }
+      />
 
-              <DropdownMenuContent>
-                <DropdownMenuItem onClick={handleDelete}>
-                  <TrashIcon className="w-4 h-4 text-destructive" />
-                  <span className="ml-2 text-destructive text-sm">
-                    {t("delete")}
-                  </span>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </div>
-
-          <div className="absolute right-1 bottom-1 z-10 bg-black/50 text-xs text-white px-1 rounded-sm">
-            {document.metadata?.extension}
-          </div>
-        </div>
-      </Link>
       <AlertDialog open={deleting} onOpenChange={setDeleting}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>{t("delete")}</AlertDialogTitle>
-            <AlertDialogDescription>
+            <AlertDialogTitle className="text-base font-bold text-ej-ink">
+              {t("delete")}
+            </AlertDialogTitle>
+            <AlertDialogDescription className="text-xs text-ej-muted">
               {t("deleteDocumentConfirm")}
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>{t("cancel")}</AlertDialogCancel>
-            <AlertDialogAction asChild>
-              <Button
-                variant="destructive"
-                onClick={() => {
-                  EnjoyApp.documents
-                    .destroy(document.id)
-                    .then(() => {
-                      toast.success(t("documentDeletedSuccessfully"));
-                      onDelete?.();
-                    })
-                    .catch((error) => {
-                      toast.error(error.message);
-                    })
-                    .finally(() => {
-                      setDeleting(false);
-                    });
-                }}
-              >
-                {t("delete")}
-              </Button>
+            <AlertDialogAction
+              className="bg-ej-bad hover:opacity-90"
+              onClick={() => {
+                EnjoyApp.documents
+                  .destroy(document.id)
+                  .then(() => {
+                    toast.success(t("documentDeletedSuccessfully"));
+                    onDelete?.();
+                  })
+                  .catch((error) => {
+                    toast.error(error.message);
+                  })
+                  .finally(() => {
+                    setDeleting(false);
+                  });
+              }}
+            >
+              {t("delete")}
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-    </div>
+    </>
   );
 };

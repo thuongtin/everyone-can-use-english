@@ -23,7 +23,6 @@ export const OPENAI_TRANSCRIPTION_MODELS = [
 export const OPENAI_TTS_RESPONSE_FORMAT = "mp3" as const;
 
 type OpenAiTtsModel = (typeof OPENAI_TTS_MODELS)[number];
-type EnjoyAiTtsModel = (typeof ENJOYAI_TTS_MODELS)[number];
 type OpenAiTtsVoice = (typeof OPENAI_TTS_VOICES)[number];
 export type OpenAiTranscriptionModel =
   (typeof OPENAI_TRANSCRIPTION_MODELS)[number];
@@ -31,26 +30,37 @@ export type OpenAiTranscriptionModel =
 export type TtsProvider = "openai" | "azure";
 
 export type ResolvedTtsModel = {
-  engine: "enjoyai" | "openai";
+  engine: "openai" | "azure";
   provider: TtsProvider;
   model: string;
-  apiModel?: OpenAiTtsModel | EnjoyAiTtsModel;
+  apiModel?: OpenAiTtsModel;
 };
 
 export type OpenAiSpeechRequest = {
   input: string;
-  model: OpenAiTtsModel | EnjoyAiTtsModel;
+  model: OpenAiTtsModel;
   voice: OpenAiTtsVoice;
   response_format: typeof OPENAI_TTS_RESPONSE_FORMAT;
 };
 
-export type OpenAiTranscriptionRequest<TFile = unknown> = {
+export type OpenAiWhisperTranscriptionRequest<TFile = unknown> = {
   file: TFile;
-  model: OpenAiTranscriptionModel;
+  model: "whisper-1";
   response_format: "verbose_json";
   timestamp_granularities: ["word", "segment"];
   language?: string;
 };
+
+export type OpenAiGptTranscriptionRequest<TFile = unknown> = {
+  file: TFile;
+  model: "gpt-transcribe";
+  response_format: "json";
+  language?: string;
+};
+
+export type OpenAiTranscriptionRequest<TFile = unknown> =
+  | OpenAiWhisperTranscriptionRequest<TFile>
+  | OpenAiGptTranscriptionRequest<TFile>;
 
 export type OpenAiWordTiming = {
   word: string;
@@ -116,35 +126,6 @@ export function resolveTtsModel(
     throw new Error("TTS model is required.");
   }
 
-  if (normalizedEngine === "enjoyai") {
-    const azureModel = normalizeAzureModel(rawModel);
-    if (azureModel === AZURE_MODEL) {
-      return {
-        engine: "enjoyai",
-        provider: "azure",
-        model: AZURE_MODEL,
-      };
-    }
-
-    const normalizedModel = normalizeSpeechModel(rawModel);
-    if (
-      !ENJOYAI_TTS_MODELS.includes(
-        normalizedModel as (typeof ENJOYAI_TTS_MODELS)[number]
-      )
-    ) {
-      throw new Error(
-        `TTS model "${rawModel}" is not supported by the EnjoyAI speech endpoint.`
-      );
-    }
-
-    return {
-      engine: "enjoyai",
-      provider: "openai",
-      model: `${OPENAI_MODEL_PREFIX}${normalizedModel}`,
-      apiModel: normalizedModel as EnjoyAiTtsModel,
-    };
-  }
-
   if (normalizedEngine === "openai") {
     const normalizedModel = normalizeSpeechModel(rawModel);
     if (
@@ -165,7 +146,24 @@ export function resolveTtsModel(
     };
   }
 
+  if (normalizedEngine === "azure" && normalizeAzureModel(rawModel) === AZURE_MODEL) {
+    return {
+      engine: "azure",
+      provider: "azure",
+      model: AZURE_MODEL,
+    };
+  }
+
   throw new Error(`TTS engine "${asTrimmedString(engine)}" is not supported.`);
+}
+
+/** Parse-only compatibility for historical speech metadata. Never returns an executable provider. */
+export function isLegacyEnjoyTtsBinding(engine: unknown, model: unknown): boolean {
+  if (normalizeSpeechEngine(engine) !== "enjoyai") return false;
+  const normalized = normalizeSpeechModel(model);
+  return normalizeAzureModel(model) === AZURE_MODEL || ENJOYAI_TTS_MODELS.includes(
+    normalized as (typeof ENJOYAI_TTS_MODELS)[number]
+  );
 }
 
 function validateText(
@@ -282,9 +280,18 @@ export function buildOpenAiTranscriptionRequest<TFile>(params: {
   language?: unknown;
 }): OpenAiTranscriptionRequest<TFile> {
   const language = asTrimmedString(params.language).split("-")[0];
+  const model = normalizeOpenAiTranscriptionModel(params.model);
+  if (model === "gpt-transcribe") {
+    return {
+      file: params.file,
+      model,
+      response_format: "json",
+      ...(language ? { language } : {}),
+    };
+  }
   return {
     file: params.file,
-    model: normalizeOpenAiTranscriptionModel(params.model),
+    model,
     response_format: "verbose_json",
     timestamp_granularities: ["word", "segment"],
     ...(language ? { language } : {}),

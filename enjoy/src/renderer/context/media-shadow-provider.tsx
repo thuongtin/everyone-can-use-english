@@ -1,4 +1,11 @@
-import { createContext, useEffect, useState, useContext, useMemo } from "react";
+import {
+  createContext,
+  useEffect,
+  useState,
+  useContext,
+  useMemo,
+  useRef,
+} from "react";
 import { convertIpaToNormal, extractFrequencies } from "@/utils";
 import { AppSettingsProviderContext } from "@renderer/context";
 import {
@@ -22,6 +29,13 @@ import { useAudioRecorder } from "react-audio-voice-recorder";
 import { t } from "i18next";
 import { SttEngineOptionEnum } from "@/types/enums";
 import { useNavigate } from "react-router-dom";
+import {
+  isValidMediaWaveformCache,
+  publishPreparedMediaWaveform,
+  resolveMediaWaveformCache,
+  resolveMediaWaveformDuration,
+  startMediaWaveformLifecycle,
+} from "@renderer/lib/media-waveform-lifecycle";
 
 const ONE_MINUTE = 60;
 const TEN_MINUTES = 10 * ONE_MINUTE;
@@ -74,13 +88,16 @@ type MediaShadowContextType = {
     isolate?: boolean;
   }) => Promise<void>;
   transcribing: boolean;
+  committing: boolean;
   transcribingProgress: number;
   transcribingOutput: string;
+  abortGenerateTranscription: () => void;
   transcriptionDraft: TranscriptionType["result"];
   setTranscriptionDraft: (result: TranscriptionType["result"]) => void;
   caption: TimelineEntry;
   // Recordings
   startRecording: () => void;
+  cancelPendingRecording: () => void;
   stopRecording: () => void;
   cancelRecording: () => void;
   togglePauseResume: () => void;
@@ -106,6 +123,75 @@ type MediaShadowContextType = {
   setCachedSegmentIndex: (index: number) => void;
 };
 
+export type MicrophoneRecordingIntentOptions = {
+  requestAccess: () => Promise<boolean>;
+  startRecording: () => void;
+  getScope: () => string | null;
+  onDenied: () => void;
+  onError: (error: unknown) => void;
+};
+
+export const createMicrophoneRecordingIntent = ({
+  requestAccess,
+  startRecording,
+  getScope,
+  onDenied,
+  onError,
+}: MicrophoneRecordingIntentOptions) => {
+  let generation = 0;
+  let activeGeneration = 0;
+  let phase: "idle" | "requesting" | "starting" | "recording" = "idle";
+
+  const requestStart = async () => {
+    if (phase !== "idle") return;
+
+    const scope = getScope();
+    if (!scope) return;
+
+    const requestGeneration = generation;
+    phase = "requesting";
+
+    try {
+      const access = await requestAccess();
+      if (requestGeneration !== generation || scope !== getScope()) return;
+
+      if (!access) {
+        phase = "idle";
+        onDenied();
+        return;
+      }
+
+      phase = "starting";
+      activeGeneration = requestGeneration;
+      startRecording();
+    } catch (error) {
+      if (requestGeneration !== generation || scope !== getScope()) return;
+      phase = "idle";
+      onError(error);
+    }
+  };
+
+  return {
+    requestStart,
+    invalidate: () => {
+      generation += 1;
+      phase = "idle";
+    },
+    recorderRejected: (error: unknown) => {
+      if (activeGeneration !== generation) return;
+      phase = "idle";
+      onError(error);
+    },
+    syncRecordingState: (isRecording: boolean) => {
+      if (isRecording) {
+        phase = "recording";
+      } else if (phase === "recording") {
+        phase = "idle";
+      }
+    },
+  };
+};
+
 export const MediaShadowProviderContext =
   createContext<MediaShadowContextType>(null);
 
@@ -129,6 +215,9 @@ export const MediaShadowProvider = ({
     null
   );
   const [waveform, setWaveForm] = useState<WaveFormDataType>(null);
+  const [waveformLoadedFor, setWaveformLoadedFor] = useState<string | null>(null);
+  const waveformLookupRevisionRef = useRef(0);
+  const wavesurferRevisionRef = useRef(0);
   const [wavesurfer, setWavesurfer] = useState(null);
 
   const [regions, setRegions] = useState<Regions | null>(null);
@@ -149,6 +238,29 @@ export const MediaShadowProvider = ({
   const [currentRecording, setCurrentRecording] = useState<RecordingType>(null);
   const [recordingType, setRecordingType] = useState<string>("segment");
   const [cancelingRecording, setCancelingRecording] = useState(false);
+  const mediaScopeRef = useRef<string | null>(null);
+  const recorderStartRef = useRef<() => void>(() => {});
+  const recordingIntentRef = useRef<
+    ReturnType<typeof createMicrophoneRecordingIntent>
+  >();
+
+  mediaScopeRef.current = media
+    ? `${media.mediaType}:${String(media.id)}`
+    : null;
+
+  if (!recordingIntentRef.current) {
+    recordingIntentRef.current = createMicrophoneRecordingIntent({
+      requestAccess: () =>
+        EnjoyApp.system.preferences.mediaAccess("microphone"),
+      startRecording: () => recorderStartRef.current(),
+      getScope: () => mediaScopeRef.current,
+      onDenied: () => toast.warning(t("noMicrophoneAccess")),
+      onError: (error) =>
+        toast.error(
+          error instanceof Error ? error.message : t("noMicrophoneAccess")
+        ),
+    });
+  }
 
   const [transcriptionDraft, setTranscriptionDraft] =
     useState<TranscriptionType["result"]>();
@@ -157,6 +269,7 @@ export const MediaShadowProvider = ({
     transcription,
     generateTranscription,
     transcribing,
+    committing,
     transcribingProgress,
     transcribingOutput,
     abortGenerateTranscription,
@@ -173,7 +286,7 @@ export const MediaShadowProvider = ({
   } = useRecordings(media, currentSegmentIndex);
 
   const {
-    startRecording,
+    startRecording: startAudioRecorder,
     stopRecording,
     togglePauseResume,
     recordingBlob,
@@ -182,8 +295,16 @@ export const MediaShadowProvider = ({
     recordingTime,
     mediaRecorder,
   } = useAudioRecorder(recorderConfig, (exception) => {
-    toast.error(exception.message);
+    recordingIntentRef.current?.recorderRejected(exception);
   });
+  recorderStartRef.current = startAudioRecorder;
+
+  const startRecording = () => {
+    void recordingIntentRef.current?.requestStart();
+  };
+  const cancelPendingRecording = () => {
+    recordingIntentRef.current?.invalidate();
+  };
 
   const caption = useMemo(() => {
     return (transcription?.result?.timeline as Timeline)?.[currentSegmentIndex];
@@ -219,47 +340,6 @@ export const MediaShadowProvider = ({
     targetId: segment?.id,
     targetType: "Segment",
   });
-
-  const initializeWavesurfer = async () => {
-    if (!media) return;
-    if (!mediaProvider) return;
-    if (!waveformContainerRef?.current) return;
-
-    const height =
-      waveformContainerRef.current.getBoundingClientRect().height - 10; // -10 to leave space for scrollbar
-    const container = waveformContainerRef.current.querySelector(
-      ".waveform-container"
-    );
-    if (!container) return;
-
-    const ws = WaveSurfer.create({
-      container: container as HTMLElement,
-      height,
-      waveColor: "#eaeaea",
-      progressColor: "#c0d6df",
-      cursorColor: "#ff0054",
-      barWidth: 2,
-      autoScroll: true,
-      minPxPerSec,
-      autoCenter: false,
-      dragToSeek: false,
-      fillParent: true,
-      media: mediaProvider,
-      peaks: waveform ? [waveform.peaks] : undefined,
-      duration: waveform ? waveform.duration : undefined,
-    });
-
-    const blob = await fetch(media.src).then((res) => res.blob());
-
-    if (waveform) {
-      ws.loadBlob(blob, [waveform.peaks], waveform.duration);
-      setDecoded(true);
-    } else {
-      ws.loadBlob(blob);
-    }
-
-    setWavesurfer(ws);
-  };
 
   const renderPitchContour = (
     region: RegionType,
@@ -537,57 +617,6 @@ export const MediaShadowProvider = ({
   };
 
   /*
-   * When wavesurfer is decoded,
-   * set up event listeners for wavesurfer
-   * and clean up when component is unmounted
-   */
-  useEffect(() => {
-    if (!wavesurfer) return;
-
-    setRegions(wavesurfer.registerPlugin(Regions.create()));
-
-    setCurrentTime(0);
-
-    const subscriptions = [
-      wavesurfer.on("timeupdate", (time: number) =>
-        setCurrentTime(Math.ceil(time * 100) / 100)
-      ),
-      wavesurfer.on("decode", () => {
-        const peaks: Float32Array = wavesurfer
-          .getDecodedData()
-          .getChannelData(0);
-        const duration: number = wavesurfer.getDuration();
-        const sampleRate = wavesurfer.options.sampleRate;
-        const _frequencies = extractFrequencies({ peaks, sampleRate });
-        const _waveform = {
-          peaks: Array.from(peaks),
-          duration,
-          sampleRate,
-          frequencies: _frequencies,
-        };
-        EnjoyApp.waveforms.save(media.md5, _waveform);
-        setWaveForm(_waveform);
-      }),
-      wavesurfer.on("ready", () => {
-        setDecoded(true);
-      }),
-      wavesurfer.on("error", (err: Error) => {
-        toast.error(err?.message || "Error occurred while decoding audio");
-        setDecodeError(err?.message || "Error occurred while decoding audio");
-        // Reload page when error occurred after decoding
-        if (decoded) {
-          window.location.reload();
-        }
-      }),
-    ];
-
-    return () => {
-      subscriptions.forEach((unsub) => unsub());
-      wavesurfer?.destroy();
-    };
-  }, [wavesurfer]);
-
-  /*
    * update fitZoomRatio when currentSegmentIndex is updated
    */
   useEffect(() => {
@@ -646,26 +675,176 @@ export const MediaShadowProvider = ({
   }, [decoded, wavesurfer]);
 
   useEffect(() => {
-    if (!media) return;
+    const md5 = media?.md5;
+    const source = media?.src;
+    const revision = waveformLookupRevisionRef.current + 1;
+    waveformLookupRevisionRef.current = revision;
+    setWaveForm(null);
+    setWaveformLoadedFor(null);
+    setDecoded(false);
+    setDecodeError(null);
+    if (!md5 || !source) return;
 
-    EnjoyApp.waveforms.find(media.md5).then((waveform) => {
-      setWaveForm(waveform);
+    const abortController = new AbortController();
+    const isCurrent = () =>
+      !abortController.signal.aborted &&
+      waveformLookupRevisionRef.current === revision;
+    const finish = (nextWaveform: WaveFormDataType) => {
+      if (!isCurrent()) return;
+      setWaveForm(nextWaveform);
+      setWaveformLoadedFor(md5);
+    };
+
+    const lookup = resolveMediaWaveformCache({
+      load: () => EnjoyApp.waveforms.find(md5),
+      isCurrent,
+      onResolved: (cachedWaveform) => {
+        if (isValidMediaWaveformCache(cachedWaveform)) {
+          finish(cachedWaveform);
+          return;
+        }
+
+        void (async () => {
+          let audioContext: AudioContext | undefined;
+          try {
+            const response = await fetch(source, {
+              signal: abortController.signal,
+            });
+            if (!response.ok) {
+              throw new Error(`Failed to fetch audio: ${response.status}`);
+            }
+            const bytes = await response.arrayBuffer();
+            if (!isCurrent()) return;
+            audioContext = new AudioContext({ sampleRate: 8_000 });
+            const decodedData = await audioContext.decodeAudioData(bytes);
+            if (!isCurrent()) return;
+            const peaks = decodedData.getChannelData(0);
+            const nextWaveform = {
+              peaks: Array.from(peaks),
+              duration: decodedData.duration,
+              sampleRate: decodedData.sampleRate,
+              frequencies: extractFrequencies({
+                peaks,
+                sampleRate: decodedData.sampleRate,
+              }),
+            };
+            void publishPreparedMediaWaveform({
+              value: nextWaveform,
+              isCurrent,
+              publish: finish,
+              save: value => EnjoyApp.waveforms.save(md5, value),
+            });
+          } catch (error) {
+            if (!isCurrent()) return;
+            const message =
+              error instanceof Error
+                ? error.message
+                : "Error occurred while decoding audio";
+            setDecodeError(message);
+          } finally {
+            void audioContext?.close().catch((): void => undefined);
+          }
+        })();
+      },
     });
-  }, [media?.md5]);
+
+    return () => {
+      abortController.abort();
+      lookup.dispose();
+      if (waveformLookupRevisionRef.current === revision) {
+        waveformLookupRevisionRef.current += 1;
+      }
+    };
+  }, [media?.md5, media?.src]);
 
   /*
    * Initialize wavesurfer when container ref is available
    * and mediaProvider is available
    */
   useEffect(() => {
-    initializeWavesurfer();
+    if (!media?.src || !media?.md5) return;
+    if (waveformLoadedFor !== media.md5) return;
+    if (!mediaProvider || !waveformContainerRef?.current) return;
+
+    const container = waveformContainerRef.current.querySelector(
+      ".waveform-container"
+    );
+    if (!container) return;
+
+    const revision = wavesurferRevisionRef.current + 1;
+    wavesurferRevisionRef.current = revision;
+    let ready = false;
+    setDecoded(false);
+    setDecodeError(null);
+    setCurrentTime(0);
+
+    const lifecycle = startMediaWaveformLifecycle({
+      create: () => WaveSurfer.create({
+        container: container as HTMLElement,
+        height:
+          waveformContainerRef.current.getBoundingClientRect().height - 10,
+        waveColor: "#eaeaea",
+        progressColor: "#c0d6df",
+        cursorColor: "#ff0054",
+        barWidth: 2,
+        autoScroll: true,
+        minPxPerSec,
+        autoCenter: false,
+        dragToSeek: false,
+        fillParent: true,
+        media: mediaProvider,
+        peaks: waveform ? [waveform.peaks] : undefined,
+        // The custom enjoy:// media element can report a non-finite duration
+        // after metadata has already fired. Supplying the DB metadata duration
+        // prevents WaveSurfer from waiting for that event a second time. It
+        // still emits ready only after the prepared peaks are rendered.
+        duration: resolveMediaWaveformDuration(
+          waveform?.duration,
+          media.duration
+        ),
+      }),
+      isCurrent: () => wavesurferRevisionRef.current === revision,
+      // The preparation effect owns the only fetch/decode pipeline. WaveSurfer
+      // receives prepared peaks, so its deferred constructor load only renders
+      // them. The lifecycle installs listeners before that microtask.
+      load: () => {},
+      onTimeUpdate: (time) =>
+        setCurrentTime(Math.ceil(time * 100) / 100),
+      onReady: () => {
+        ready = true;
+        setDecoded(true);
+      },
+      onError: (error) => {
+        const message = error?.message || "Error occurred while decoding audio";
+        toast.error(message);
+        setDecodeError(message);
+        if (ready) window.location.reload();
+      },
+    });
+
+    const instance = lifecycle.instance;
+    setWavesurfer(instance);
+    setRegions(instance.registerPlugin(Regions.create()));
 
     return () => {
-      if (wavesurfer) wavesurfer.destroy();
+      if (wavesurferRevisionRef.current === revision) {
+        wavesurferRevisionRef.current += 1;
+      }
+      lifecycle.dispose();
+      setWavesurfer((current: WaveSurfer | null) =>
+        current === instance ? null : current
+      );
+      setRegions(null);
       setDecoded(false);
       setDecodeError(null);
     };
-  }, [media?.src, waveformContainerRef?.current, mediaProvider]);
+  }, [
+    media?.src,
+    media?.md5,
+    mediaProvider,
+    waveformContainerRef,
+    waveformLoadedFor,
+  ]);
 
   /* cache last segment index */
   useEffect(() => {
@@ -696,6 +875,14 @@ export const MediaShadowProvider = ({
       stopRecording();
     }
   }, [cancelingRecording]);
+
+  useEffect(() => {
+    recordingIntentRef.current?.syncRecordingState(isRecording);
+  }, [isRecording]);
+
+  useEffect(() => {
+    return () => recordingIntentRef.current?.invalidate();
+  }, [media?.mediaType, media?.id]);
 
   /**
    * auto stop recording when recording time is over
@@ -743,12 +930,15 @@ export const MediaShadowProvider = ({
           setEditingRegion,
           generateTranscription,
           transcribing,
+          committing,
           transcribingProgress,
           transcribingOutput,
+          abortGenerateTranscription,
           transcriptionDraft,
           setTranscriptionDraft,
           caption,
           startRecording,
+          cancelPendingRecording,
           stopRecording,
           cancelRecording,
           togglePauseResume,

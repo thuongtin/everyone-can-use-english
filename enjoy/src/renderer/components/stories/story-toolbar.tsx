@@ -1,25 +1,23 @@
+import { EjIconButton } from "@renderer/components/enjoy";
 import {
   AlertDialog,
-  AlertDialogTrigger,
+  AlertDialogAction,
+  AlertDialogCancel,
   AlertDialogContent,
+  AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogCancel,
-  AlertDialogAction,
-  Button,
-  FloatingToolbar,
-  ToolbarButton,
+  AlertDialogTrigger,
 } from "@renderer/components/ui";
 import {
   HighlighterIcon,
   ScanTextIcon,
   LoaderIcon,
   StarIcon,
-  Share2Icon,
+  Trash2Icon,
 } from "lucide-react";
 import { t } from "i18next";
+import type { LocalMeaning } from "../../../types/local-study-api";
 
 export const StoryToolbar = (props: {
   extracted: boolean;
@@ -33,10 +31,11 @@ export const StoryToolbar = (props: {
   }[];
   scanning?: boolean;
   onScan?: () => void;
-  meanings?: MeaningType[];
+  meanings?: LocalMeaning[];
   marked?: boolean;
   toggleMarked?: () => void;
-  handleShare?: () => void;
+  deleteStory?: () => void;
+  storyTitle?: string;
   vocabularyVisible: boolean;
   setVocabularyVisible?: (value: boolean) => void;
 }) => {
@@ -47,54 +46,68 @@ export const StoryToolbar = (props: {
     onScan,
     marked,
     toggleMarked,
-    handleShare,
+    deleteStory,
+    storyTitle,
     vocabularyVisible,
     setVocabularyVisible,
   } = props;
 
   return (
-    <FloatingToolbar>
-      <ToolbarButton
+    <>
+      <EjIconButton
+        title={t("keyVocabulary")}
         disabled={scanning}
-        toggled={vocabularyVisible}
+        active={vocabularyVisible}
         onClick={() => {
-          onScan();
-          setVocabularyVisible(!vocabularyVisible);
+          onScan?.();
+          setVocabularyVisible?.(!vocabularyVisible);
         }}
       >
         {scanning ? (
-          <LoaderIcon className="w-6 h-6 animate-spin" />
+          <LoaderIcon className="size-4 animate-spin" />
         ) : (
-          <ScanTextIcon className="w-6 h-6" />
+          <ScanTextIcon className="size-4" />
         )}
-      </ToolbarButton>
-      <ToolbarButton toggled={marked} onClick={toggleMarked}>
-        <HighlighterIcon className="w-6 h-6" />
-      </ToolbarButton>
-      <ToolbarButton toggled={starred} onClick={toggleStarred}>
-        <StarIcon className="w-6 h-6" />
-      </ToolbarButton>
-      <AlertDialog>
-        <AlertDialogTrigger asChild>
-          <ToolbarButton toggled={false} onClick={toggleStarred}>
-            <Share2Icon className="w-6 h-6" />
-          </ToolbarButton>
-        </AlertDialogTrigger>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>{t("shareStory")}</AlertDialogTitle>
-            <AlertDialogDescription>
-              {t("areYouSureToShareThisStoryToCommunity")}
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>{t("cancel")}</AlertDialogCancel>
-            <AlertDialogAction>
-              <Button onClick={handleShare}>{t("share")}</Button>
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
-    </FloatingToolbar>
+      </EjIconButton>
+
+      <EjIconButton
+        title={t("highlightVocabulary")}
+        active={marked}
+        onClick={toggleMarked}
+      >
+        <HighlighterIcon className="size-4" />
+      </EjIconButton>
+
+      <EjIconButton
+        title={t("toggleStarred")}
+        active={starred}
+        onClick={toggleStarred}
+      >
+        <StarIcon className={starred ? "size-4 fill-current" : "size-4"} />
+      </EjIconButton>
+
+      {deleteStory && (
+        <AlertDialog>
+          <AlertDialogTrigger asChild>
+            <EjIconButton title={t("delete")}>
+              <Trash2Icon className="size-4" />
+            </EjIconButton>
+          </AlertDialogTrigger>
+          <AlertDialogContent aria-describedby={undefined}>
+            <AlertDialogHeader>
+              <AlertDialogTitle>
+                {t("delete")}: {storyTitle}
+              </AlertDialogTitle>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel>{t("cancel")}</AlertDialogCancel>
+              <AlertDialogAction onClick={deleteStory}>
+                {t("delete")}
+              </AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
+      )}
+    </>
   );
 };

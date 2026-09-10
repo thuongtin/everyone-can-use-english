@@ -1,0 +1,649 @@
+{
+  "overallPass": true,
+  "generatedAt": "2026-09-08T07:08:06.312807+00:00",
+  "runDirectory": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/local-verified",
+  "predicates": [
+    {
+      "name": "control probe blocked by sandbox with EPERM",
+      "passed": true,
+      "evidence": {
+        "blocked": true,
+        "errno": 1,
+        "error": "[Errno 1] Operation not permitted"
+      }
+    },
+    {
+      "name": "inference runner exited zero",
+      "passed": true,
+      "evidence": {
+        "exitCode": 0
+      }
+    },
+    {
+      "name": "local-integrated-jfk-recognize.json exists",
+      "passed": true,
+      "evidence": {
+        "path": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/local-verified/local-integrated-jfk-recognize.json"
+      }
+    },
+    {
+      "name": "local-integrated-jfk-recognize.json reports successful operation",
+      "passed": true,
+      "evidence": {
+        "ok": true
+      }
+    },
+    {
+      "name": "local-integrated-jfk-recognize.json has nonempty transcript",
+      "passed": true,
+      "evidence": {
+        "characters": 105
+      }
+    },
+    {
+      "name": "local-integrated-jfk-recognize.json elapsed time is finite and positive",
+      "passed": true,
+      "evidence": {
+        "elapsedMs": 994
+      }
+    },
+    {
+      "name": "local-integrated-jfk-recognize.json timeline numeric ranges, sibling order, and child bounds",
+      "passed": true,
+      "evidence": {
+        "entryCount": 46,
+        "types": {
+          "segment": 1,
+          "sentence": 1,
+          "word": 22,
+          "token": 22
+        },
+        "paths": {
+          "segment": 1,
+          "segment>sentence": 1,
+          "segment>sentence>word": 22,
+          "segment>sentence>word>token": 22
+        },
+        "failures": []
+      }
+    },
+    {
+      "name": "local-integrated-jfk-recognize.json timeline includes words and nested tokens",
+      "passed": true,
+      "evidence": {
+        "entryCount": 46,
+        "types": {
+          "segment": 1,
+          "sentence": 1,
+          "word": 22,
+          "token": 22
+        },
+        "paths": {
+          "segment": 1,
+          "segment>sentence": 1,
+          "segment>sentence>word": 22,
+          "segment>sentence>word>token": 22
+        },
+        "failures": []
+      }
+    },
+    {
+      "name": "local-integrated-jfk-recognize.json wordTimeline numeric ranges, sibling order, and child bounds",
+      "passed": true,
+      "evidence": {
+        "entryCount": 46,
+        "types": {
+          "word": 23,
+          "token": 23
+        },
+        "paths": {
+          "word": 23,
+          "word>token": 23
+        },
+        "failures": []
+      }
+    },
+    {
+      "name": "local-integrated-jfk-recognize.json wordTimeline includes words and nested tokens",
+      "passed": true,
+      "evidence": {
+        "entryCount": 46,
+        "types": {
+          "word": 23,
+          "token": 23
+        },
+        "paths": {
+          "word": 23,
+          "word>token": 23
+        },
+        "failures": []
+      }
+    },
+    {
+      "name": "local-integrated-jfk-align-whisper.json exists",
+      "passed": true,
+      "evidence": {
+        "path": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/local-verified/local-integrated-jfk-align-whisper.json"
+      }
+    },
+    {
+      "name": "local-integrated-jfk-align-whisper.json reports successful operation",
+      "passed": true,
+      "evidence": {
+        "ok": true
+      }
+    },
+    {
+      "name": "local-integrated-jfk-align-whisper.json has nonempty transcript",
+      "passed": true,
+      "evidence": {
+        "characters": 105
+      }
+    },
+    {
+      "name": "local-integrated-jfk-align-whisper.json elapsed time is finite and positive",
+      "passed": true,
+      "evidence": {
+        "elapsedMs": 593
+      }
+    },
+    {
+      "name": "local-integrated-jfk-align-whisper.json timeline numeric ranges, sibling order, and child bounds",
+      "passed": true,
+      "evidence": {
+        "entryCount": 46,
+        "types": {
+          "segment": 1,
+          "sentence": 1,
+          "word": 22,
+          "token": 22
+        },
+        "paths": {
+          "segment": 1,
+          "segment>sentence": 1,
+          "segment>sentence>word": 22,
+          "segment>sentence>word>token": 22
+        },
+        "failures": []
+      }
+    },
+    {
+      "name": "local-integrated-jfk-align-whisper.json timeline includes words and nested tokens",
+      "passed": true,
+      "evidence": {
+        "entryCount": 46,
+        "types": {
+          "segment": 1,
+          "sentence": 1,
+          "word": 22,
+          "token": 22
+        },
+        "paths": {
+          "segment": 1,
+          "segment>sentence": 1,
+          "segment>sentence>word": 22,
+          "segment>sentence>word>token": 22
+        },
+        "failures": []
+      }
+    },
+    {
+      "name": "local-integrated-jfk-align-whisper.json wordTimeline numeric ranges, sibling order, and child bounds",
+      "passed": true,
+      "evidence": {
+        "entryCount": 44,
+        "types": {
+          "word": 22,
+          "token": 22
+        },
+        "paths": {
+          "word": 22,
+          "word>token": 22
+        },
+        "failures": []
+      }
+    },
+    {
+      "name": "local-integrated-jfk-align-whisper.json wordTimeline includes words and nested tokens",
+      "passed": true,
+      "evidence": {
+        "entryCount": 44,
+        "types": {
+          "word": 22,
+          "token": 22
+        },
+        "paths": {
+          "word": 22,
+          "word>token": 22
+        },
+        "failures": []
+      }
+    },
+    {
+      "name": "local-integrated-jfk-align-dtw.json exists",
+      "passed": true,
+      "evidence": {
+        "path": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/local-verified/local-integrated-jfk-align-dtw.json"
+      }
+    },
+    {
+      "name": "local-integrated-jfk-align-dtw.json reports successful operation",
+      "passed": true,
+      "evidence": {
+        "ok": true
+      }
+    },
+    {
+      "name": "local-integrated-jfk-align-dtw.json has nonempty transcript",
+      "passed": true,
+      "evidence": {
+        "characters": 105
+      }
+    },
+    {
+      "name": "local-integrated-jfk-align-dtw.json elapsed time is finite and positive",
+      "passed": true,
+      "evidence": {
+        "elapsedMs": 245
+      }
+    },
+    {
+      "name": "local-integrated-jfk-align-dtw.json timeline numeric ranges, sibling order, and child bounds",
+      "passed": true,
+      "evidence": {
+        "entryCount": 115,
+        "types": {
+          "segment": 1,
+          "sentence": 1,
+          "word": 22,
+          "token": 22,
+          "phone": 69
+        },
+        "paths": {
+          "segment": 1,
+          "segment>sentence": 1,
+          "segment>sentence>word": 22,
+          "segment>sentence>word>token": 22,
+          "segment>sentence>word>token>phone": 69
+        },
+        "failures": []
+      }
+    },
+    {
+      "name": "local-integrated-jfk-align-dtw.json timeline includes words and nested tokens",
+      "passed": true,
+      "evidence": {
+        "entryCount": 115,
+        "types": {
+          "segment": 1,
+          "sentence": 1,
+          "word": 22,
+          "token": 22,
+          "phone": 69
+        },
+        "paths": {
+          "segment": 1,
+          "segment>sentence": 1,
+          "segment>sentence>word": 22,
+          "segment>sentence>word>token": 22,
+          "segment>sentence>word>token>phone": 69
+        },
+        "failures": []
+      }
+    },
+    {
+      "name": "local-integrated-jfk-align-dtw.json wordTimeline numeric ranges, sibling order, and child bounds",
+      "passed": true,
+      "evidence": {
+        "entryCount": 113,
+        "types": {
+          "word": 22,
+          "token": 22,
+          "phone": 69
+        },
+        "paths": {
+          "word": 22,
+          "word>token": 22,
+          "word>token>phone": 69
+        },
+        "failures": []
+      }
+    },
+    {
+      "name": "local-integrated-jfk-align-dtw.json wordTimeline includes words and nested tokens",
+      "passed": true,
+      "evidence": {
+        "entryCount": 113,
+        "types": {
+          "word": 22,
+          "token": 22,
+          "phone": 69
+        },
+        "paths": {
+          "word": 22,
+          "word>token": 22,
+          "word>token>phone": 69
+        },
+        "failures": []
+      }
+    },
+    {
+      "name": "local-whispercpp-jfk.json exists",
+      "passed": true,
+      "evidence": {
+        "path": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/local-verified/local-whispercpp-jfk.json"
+      }
+    },
+    {
+      "name": "local-whispercpp-jfk.json reports successful operation",
+      "passed": true,
+      "evidence": {
+        "ok": true
+      }
+    },
+    {
+      "name": "local-whispercpp-jfk.json has nonempty transcript",
+      "passed": true,
+      "evidence": {
+        "characters": 105
+      }
+    },
+    {
+      "name": "local-whispercpp-jfk.json elapsed time is finite and positive",
+      "passed": true,
+      "evidence": {
+        "elapsedMs": 328
+      }
+    },
+    {
+      "name": "local-whispercpp-jfk.json timeline numeric ranges, sibling order, and child bounds",
+      "passed": true,
+      "evidence": {
+        "entryCount": 46,
+        "types": {
+          "segment": 1,
+          "sentence": 1,
+          "word": 22,
+          "token": 22
+        },
+        "paths": {
+          "segment": 1,
+          "segment>sentence": 1,
+          "segment>sentence>word": 22,
+          "segment>sentence>word>token": 22
+        },
+        "failures": []
+      }
+    },
+    {
+      "name": "local-whispercpp-jfk.json timeline includes words and nested tokens",
+      "passed": true,
+      "evidence": {
+        "entryCount": 46,
+        "types": {
+          "segment": 1,
+          "sentence": 1,
+          "word": 22,
+          "token": 22
+        },
+        "paths": {
+          "segment": 1,
+          "segment>sentence": 1,
+          "segment>sentence>word": 22,
+          "segment>sentence>word>token": 22
+        },
+        "failures": []
+      }
+    },
+    {
+      "name": "local-whispercpp-jfk.json wordTimeline numeric ranges, sibling order, and child bounds",
+      "passed": true,
+      "evidence": {
+        "entryCount": 46,
+        "types": {
+          "word": 23,
+          "token": 23
+        },
+        "paths": {
+          "word": 23,
+          "word>token": 23
+        },
+        "failures": []
+      }
+    },
+    {
+      "name": "local-whispercpp-jfk.json wordTimeline includes words and nested tokens",
+      "passed": true,
+      "evidence": {
+        "entryCount": 46,
+        "types": {
+          "word": 23,
+          "token": 23
+        },
+        "paths": {
+          "word": 23,
+          "word>token": 23
+        },
+        "failures": []
+      }
+    },
+    {
+      "name": "local-whispercpp-dialogue.json exists",
+      "passed": true,
+      "evidence": {
+        "path": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/local-verified/local-whispercpp-dialogue.json"
+      }
+    },
+    {
+      "name": "local-whispercpp-dialogue.json reports successful operation",
+      "passed": true,
+      "evidence": {
+        "ok": true
+      }
+    },
+    {
+      "name": "local-whispercpp-dialogue.json has nonempty transcript",
+      "passed": true,
+      "evidence": {
+        "characters": 259
+      }
+    },
+    {
+      "name": "local-whispercpp-dialogue.json elapsed time is finite and positive",
+      "passed": true,
+      "evidence": {
+        "elapsedMs": 399
+      }
+    },
+    {
+      "name": "local-whispercpp-dialogue.json timeline numeric ranges, sibling order, and child bounds",
+      "passed": true,
+      "evidence": {
+        "entryCount": 107,
+        "types": {
+          "segment": 1,
+          "sentence": 4,
+          "word": 50,
+          "token": 52
+        },
+        "paths": {
+          "segment": 1,
+          "segment>sentence": 4,
+          "segment>sentence>word": 50,
+          "segment>sentence>word>token": 52
+        },
+        "failures": []
+      }
+    },
+    {
+      "name": "local-whispercpp-dialogue.json timeline includes words and nested tokens",
+      "passed": true,
+      "evidence": {
+        "entryCount": 107,
+        "types": {
+          "segment": 1,
+          "sentence": 4,
+          "word": 50,
+          "token": 52
+        },
+        "paths": {
+          "segment": 1,
+          "segment>sentence": 4,
+          "segment>sentence>word": 50,
+          "segment>sentence>word>token": 52
+        },
+        "failures": []
+      }
+    },
+    {
+      "name": "local-whispercpp-dialogue.json wordTimeline numeric ranges, sibling order, and child bounds",
+      "passed": true,
+      "evidence": {
+        "entryCount": 126,
+        "types": {
+          "word": 62,
+          "token": 64
+        },
+        "paths": {
+          "word": 62,
+          "word>token": 64
+        },
+        "failures": []
+      }
+    },
+    {
+      "name": "local-whispercpp-dialogue.json wordTimeline includes words and nested tokens",
+      "passed": true,
+      "evidence": {
+        "entryCount": 126,
+        "types": {
+          "word": 62,
+          "token": 64
+        },
+        "paths": {
+          "word": 62,
+          "word>token": 64
+        },
+        "failures": []
+      }
+    },
+    {
+      "name": "local-integrated-jfk-recognize.json independently recomputed JFK WER is zero",
+      "passed": true,
+      "evidence": {
+        "edits": 0,
+        "referenceWords": 22,
+        "hypothesisWords": 22,
+        "wer": 0.0
+      }
+    },
+    {
+      "name": "local-whispercpp-jfk.json independently recomputed JFK WER is zero",
+      "passed": true,
+      "evidence": {
+        "edits": 0,
+        "referenceWords": 22,
+        "hypothesisWords": 22,
+        "wer": 0.0
+      }
+    },
+    {
+      "name": "Whisper alignment has no phone requirement",
+      "passed": true,
+      "evidence": {
+        "entryCount": 46,
+        "types": {
+          "segment": 1,
+          "sentence": 1,
+          "word": 22,
+          "token": 22
+        },
+        "paths": {
+          "segment": 1,
+          "segment>sentence": 1,
+          "segment>sentence>word": 22,
+          "segment>sentence>word>token": 22
+        },
+        "failures": []
+      }
+    },
+    {
+      "name": "DTW alignment has nested phones",
+      "passed": true,
+      "evidence": {
+        "entryCount": 115,
+        "types": {
+          "segment": 1,
+          "sentence": 1,
+          "word": 22,
+          "token": 22,
+          "phone": 69
+        },
+        "paths": {
+          "segment": 1,
+          "segment>sentence": 1,
+          "segment>sentence>word": 22,
+          "segment>sentence>word>token": 22,
+          "segment>sentence>word>token>phone": 69
+        },
+        "failures": []
+      }
+    },
+    {
+      "name": "subphone entry type is optional for renderer contract",
+      "passed": true,
+      "evidence": {
+        "observedSubphoneCount": 0,
+        "rendererReads": "word.timeline token, then token.timeline phone",
+        "source": "enjoy/src/renderer/components/medias/media-right-panel/media-caption.tsx:45-51"
+      }
+    },
+    {
+      "name": "dialogue transcript preserves required semantics",
+      "passed": true,
+      "evidence": {
+        "blue room": true,
+        "Thursday": true,
+        "Friday": true,
+        "green pen": true,
+        "minutes early": true,
+        "seven four two or 742": true,
+        "ten fifteen or 1015": true,
+        "nine or 9": true,
+        "fifteen or 15": true
+      }
+    },
+    {
+      "name": "dialogue WER retained without relaxed acceptance threshold",
+      "passed": true,
+      "evidence": {
+        "edits": 9,
+        "referenceWords": 54,
+        "hypothesisWords": 50,
+        "wer": 0.16666666666666666
+      }
+    }
+  ],
+  "artifacts": {
+    "local-integrated-jfk-recognize.json": {
+      "sha256": "b7620eda70888f5f15f2448158bb6691587892d8275bdca1f518d1bbd461f5ce",
+      "bytes": 25357
+    },
+    "local-integrated-jfk-align-whisper.json": {
+      "sha256": "b1275cc65720430f9da95fa38fb8d184da254168bf7e42e89ce2e870858a36a2",
+      "bytes": 24711
+    },
+    "local-integrated-jfk-align-dtw.json": {
+      "sha256": "fa94255a169cfc1e3fc089a3df3fa8b803dad5f44628845e89e913b95c505523",
+      "bytes": 47209
+    },
+    "local-whispercpp-jfk.json": {
+      "sha256": "c693fbfcec22458bb6e155ea29a1b7650677ed18800117c13d98e9265f31dc7a",
+      "bytes": 25239
+    },
+    "local-whispercpp-dialogue.json": {
+      "sha256": "3061f2f51c7af7253b61fdf3af8df20d95b18591dee396140c5d8813fe5bb2c0",
+      "bytes": 63169
+    }
+  }
+}

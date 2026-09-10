@@ -44,25 +44,16 @@ class SegmentsHandler {
     return segment.toJSON();
   }
 
-  private async sync(_event: IpcMainEvent, id: string) {
-    const segment = await Segment.findByPk(id);
-    await segment.sync();
-    await segment.upload();
-    return segment.toJSON();
-  }
-
   register() {
     ipcMain.handle("segments-create", this.create);
     ipcMain.handle("segments-find", this.find);
     ipcMain.handle("segments-find-all", this.findAll);
-    ipcMain.handle("segments-sync", this.sync);
   }
 
   unregister() {
     ipcMain.removeHandler("segments-create");
     ipcMain.removeHandler("segments-find");
     ipcMain.removeHandler("segments-find-all");
-    ipcMain.removeHandler("segments-sync");
   }
 }
 

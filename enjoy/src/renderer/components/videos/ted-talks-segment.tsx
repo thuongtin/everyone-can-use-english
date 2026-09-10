@@ -182,7 +182,7 @@ export const TedTalksSegment = () => {
             <DialogTitle>{selectedTalk?.title}</DialogTitle>
           </DialogHeader>
 
-          <div className="flex items-center mb-4 bg-muted rounded-lg">
+          <div className="flex items-center mb-4 bg-ej-surface2 rounded-lg">
             <div className="aspect-square h-28 overflow-hidden rounded-l-lg">
               <img
                 src={selectedTalk?.primaryImageSet[0].url}
@@ -198,7 +198,7 @@ export const TedTalksSegment = () => {
               <div className="text-xs line-clamp-1 mb-2 text-right">
                 {secondsToTimestamp(parseInt(selectedTalk?.duration || "0"))}
               </div>
-              <div className="text-xs text-muted-foreground text-right">
+              <div className="text-xs text-ej-muted text-right">
                 {t("presenter")}: {selectedTalk?.presenterDisplayName}
               </div>
             </div>
@@ -252,7 +252,7 @@ export const TedTalksSegment = () => {
                 <span className="ml-2">{t("resolvingDownloadUrl")}</span>
               </div>
             ) : (
-              <div className="text-sm text-muted-foreground text-center">
+              <div className="text-sm text-ej-muted text-center">
                 {t("downloadUrlNotResolved")}
                 {". "}
                 <span
@@ -294,7 +294,7 @@ const TedTalkCard = (props: { talk: TedTalkType; onClick?: () => void }) => {
       <div className="text-sm font-semibold mt-2 max-w-full line-clamp-1 h-5">
         {talk.title}
       </div>
-      <div className="text-xs font-muted-foreground max-w-full line-clamp-1 h-4">
+      <div className="text-xs text-ej-muted max-w-full line-clamp-1 h-4">
         {talk.presenterDisplayName}
       </div>
     </div>

@@ -8,14 +8,11 @@ import {
   Model,
   DataType,
   AfterCreate,
-  AfterFind,
   Unique,
 } from "sequelize-typescript";
 import mainWindow from "@main/window";
 import log from "@main/logger";
-import { Client } from "@/api";
 import settings from "@main/settings";
-import { UserSetting } from "@main/db/models";
 import fs from "fs-extra";
 import { t } from "i18next";
 import path from "path";
@@ -24,7 +21,6 @@ import { enjoyUrlToPath, hashFile } from "@/main/utils";
 import { v5 as uuidv5 } from "uuid";
 import { fileTypeFromFile } from "file-type";
 import mime from "mime-types";
-import storage from "@/main/storage";
 
 const logger = log.scope("db/models/document");
 @Table({
@@ -127,63 +123,6 @@ export class Document extends Model<Document> {
     return Boolean(this.uploadedAt) && this.uploadedAt >= this.updatedAt;
   }
 
-  async sync(): Promise<void> {
-    if (this.isSynced) return;
-
-    const webApi = new Client({
-      baseUrl: settings.apiUrl(),
-      accessToken: (await UserSetting.accessToken()) as string,
-      logger,
-    });
-
-    return webApi.syncDocument(this.toJSON()).then(() => {
-      const now = new Date();
-      this.update({ syncedAt: now, updatedAt: now });
-    });
-  }
-
-  async upload(force: boolean = false): Promise<void> {
-    if (this.isUploaded && !force) return;
-
-    return storage
-      .put(this.md5, this.filePath, this.metadata.mimeType)
-      .then((result) => {
-        logger.debug("upload result:", result.data);
-        if (result.data.success) {
-          this.update({ uploadedAt: new Date() });
-        } else {
-          throw new Error(result.data);
-        }
-      })
-      .catch((err) => {
-        logger.error("upload failed:", err.message);
-        throw err;
-      });
-  }
-
-  @AfterFind
-  static async syncAfterFind(documents: Document[]) {
-    if (!documents?.length) return;
-
-    const unsyncedDocuments = documents.filter(
-      (document) => document.id && !document.isSynced
-    );
-    if (!unsyncedDocuments.length) return;
-
-    unsyncedDocuments.forEach((document) => {
-      document.sync().catch((err) => {
-        logger.error(err.message);
-      });
-    });
-  }
-
-  @AfterCreate
-  static syncAndUploadAfterCreate(document: Document) {
-    document.sync().catch((err) => {
-      logger.error(err.message);
-    });
-  }
-
   @AfterCreate
   static notifyForCreate(document: Document) {
     this.notify(document, "create");
@@ -196,31 +135,11 @@ export class Document extends Model<Document> {
     }
   }
 
-  @AfterUpdate
-  static syncAfterUpdate(document: Document) {
-    document.sync().catch((err) => {
-      logger.error(err.message);
-    });
-  }
-
   @AfterDestroy
   static removeLocalFile(document: Document) {
     if (document.filePath) {
       fs.removeSync(document.filePath);
     }
-  }
-
-  @AfterDestroy
-  static async destroyRemote(document: Document) {
-    const webApi = new Client({
-      baseUrl: settings.apiUrl(),
-      accessToken: (await UserSetting.accessToken()) as string,
-      logger,
-    });
-
-    webApi.deleteDocument(document.id).catch((err) => {
-      logger.error("delete remote document failed:", err.message);
-    });
   }
 
   @AfterDestroy
@@ -317,9 +236,7 @@ export class Document extends Model<Document> {
         autoNextSpeech: true,
         layout: "horizontal",
         tts: {
-          engine: "enjoyai",
-          model: "openai/tts-1",
-          voice: "alloy",
+          engine: "needs-selection",
         },
       },
       source,

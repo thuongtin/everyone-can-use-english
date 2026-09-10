@@ -1,6 +1,8 @@
 import {
   AppSettingsProviderContext,
   CopilotProviderContext,
+  LayoutProviderContext,
+  ThemeProviderContext,
 } from "@/renderer/context";
 import {
   AlertDialog,
@@ -12,7 +14,6 @@ import {
   AlertDialogFooter,
   AlertDialogCancel,
   AlertDialogAction,
-  Button,
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuItem,
@@ -21,21 +22,27 @@ import {
   DropdownMenuSeparator,
   toast,
 } from "@renderer/components/ui";
+import { EjIconButton } from "@renderer/components/enjoy";
+import { CommandPalette } from "./command-palette";
 import { IpcRendererEvent } from "electron/renderer";
 import { t } from "i18next";
 import {
   ExternalLinkIcon,
   HelpCircleIcon,
   LightbulbIcon,
-  LightbulbOffIcon,
   MaximizeIcon,
   MinimizeIcon,
   MinusIcon,
+  MoonIcon,
+  SearchIcon,
   SettingsIcon,
+  SunIcon,
   XIcon,
 } from "lucide-react";
 import { useContext, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import type { LayoutPref } from "@renderer/context";
+
+const LAYOUT_CYCLE: LayoutPref[] = ["auto", "fixed", "fluid"];
 
 export const TitleBar = () => {
   const [isMaximized, setIsMaximized] = useState(false);
@@ -45,6 +52,7 @@ export const TitleBar = () => {
     "checking-for-update" | "update-available" | "update-downloaded" | "error"
   >();
   const [quiting, setQuiting] = useState(false);
+  const [paletteOpen, setPaletteOpen] = useState(false);
   const {
     EnjoyApp,
     distribution,
@@ -53,7 +61,20 @@ export const TitleBar = () => {
     initialized,
   } = useContext(AppSettingsProviderContext);
   const { active, setActive } = useContext(CopilotProviderContext);
-  const navigate = useNavigate();
+  const { theme, colorScheme, setTheme } = useContext(ThemeProviderContext);
+  const { layoutPref, setLayoutPref, fluid, fluidPending } = useContext(
+    LayoutProviderContext
+  );
+
+  const layoutLabel = fluidPending
+    ? "Fluid (chờ)"
+    : layoutPref === "fixed"
+      ? "Cố định"
+      : layoutPref === "fluid"
+        ? "Fluid"
+        : fluid
+          ? "Fluid · auto"
+          : "Tự động";
 
   const checkUpdate = () => {
     if (!distribution.updateFeedUrl || platform === "linux") {
@@ -90,8 +111,7 @@ export const TitleBar = () => {
       | "checking-for-update"
       | "update-available"
       | "update-downloaded"
-      | "error",
-    args: any[]
+      | "error"
   ) => {
     setUpdaterState(eventType);
     if (eventType === "update-available") {
@@ -122,19 +142,43 @@ export const TitleBar = () => {
     }
   }, [quiting]);
 
+  // Global shell shortcuts: ⌘K opens the palette, ⌘J toggles the copilot aside.
+  useEffect(() => {
+    if (!initialized) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (!(event.metaKey || event.ctrlKey)) return;
+      if (event.key.toLowerCase() === "k") {
+        event.preventDefault();
+        setPaletteOpen((open) => !open);
+      } else if (event.key.toLowerCase() === "j") {
+        event.preventDefault();
+        setActive(!active);
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [initialized, active]);
+
+  useEffect(() => {
+    if (paletteOpen) {
+      EnjoyApp.view.hide();
+    } else {
+      EnjoyApp.view.show();
+    }
+  }, [paletteOpen]);
+
   return (
-    <div className="z-[100] h-8 w-full bg-muted draggable-region flex items-center justify-between border-b">
-      <div className="flex items-center px-2">
-        {platform === "darwin" && !isFullScreen && <div className="w-16"></div>}
+    <div className="z-[100] h-titlebar shrink-0 w-full bg-ej-side border-b border-ej-line draggable-region flex items-center gap-2 pl-2 pr-1">
+      <div className="flex items-center gap-1 shrink-0">
+        {platform === "darwin" && !isFullScreen && <div className="w-16" />}
+
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="size-8 rounded-none non-draggable-region hover:bg-primary/10"
-            >
-              <img src="./assets/icon.png" alt="Enjoy" className="size-5" />
-            </Button>
+            <button className="non-draggable-region rounded-[5px] size-[18px] overflow-hidden shrink-0">
+              <img src="./assets/icon.png" alt="Enjoy" className="size-full" />
+            </button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="start" side="bottom">
             <DropdownMenuItem
@@ -153,36 +197,33 @@ export const TitleBar = () => {
           </DropdownMenuContent>
         </DropdownMenu>
 
+        <span className="text-[11px] font-bold tracking-[0.14em] text-ej-ink2 select-none ml-1.5">
+          ENJOY
+        </span>
+
+        <span className="w-px h-4 bg-ej-line mx-1.5" />
+
         {initialized && (
-          <Button
-            variant="ghost"
-            size="icon"
-            className="size-8 rounded-none non-draggable-region hover:bg-primary/10"
+          <EjIconButton
+            className="non-draggable-region"
+            title={t("sidebar.preferences")}
             onClick={() => setDisplayPreferences(true)}
           >
             <SettingsIcon className="size-4" />
-          </Button>
+          </EjIconButton>
         )}
 
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="size-8 rounded-none non-draggable-region hover:bg-primary/10 relative"
-            >
+            <EjIconButton className="non-draggable-region relative">
               <HelpCircleIcon className="size-4" />
               {updaterState && (
-                <span className="absolute top-1 right-1 bg-red-500 rounded-full size-1.5"></span>
+                <span className="absolute top-1 right-1 bg-ej-bad rounded-full size-1.5" />
               )}
-            </Button>
+            </EjIconButton>
           </DropdownMenuTrigger>
 
-          <DropdownMenuContent
-            className="w-[--radix-dropdown-menu-trigger-width]"
-            align="start"
-            side="top"
-          >
+          <DropdownMenuContent align="start" side="bottom">
             <DropdownMenuGroup>
               <DropdownMenuItem
                 onClick={() =>
@@ -194,22 +235,16 @@ export const TitleBar = () => {
                 <ExternalLinkIcon className="size-4" />
               </DropdownMenuItem>
             </DropdownMenuGroup>
-            <DropdownMenuItem
-              onClick={() => navigate("/community")}
-              className="flex justify-between space-x-4"
-            >
-              <span>{t("feedback")}</span>
-            </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem disabled>
-              <span className="text-xs text-muted-foreground">v{version}</span>
+              <span className="text-xs text-ej-muted">v{version}</span>
             </DropdownMenuItem>
             <DropdownMenuItem
               onClick={checkUpdate}
               className="cursor-pointer relative"
             >
               {updaterState && (
-                <span className="absolute top-1 right-1 bg-red-500 rounded-full size-1.5"></span>
+                <span className="absolute top-1 right-1 bg-ej-bad rounded-full size-1.5" />
               )}
               <span className="capitalize flex items-center gap-2">
                 {!distribution.updateFeedUrl
@@ -227,82 +262,138 @@ export const TitleBar = () => {
         </DropdownMenu>
       </div>
 
-      <div className="flex items-center gap-4">
-        <div className="flex items-center gap-2">
-          {initialized && (
-            <Button
-              variant="ghost"
-              size="icon"
-              className={`size-8 rounded-none non-draggable-region hover:bg-primary/10 ${
-                active ? "bg-primary/10" : ""
+      {initialized && (
+        <button
+          type="button"
+          onClick={() => setPaletteOpen(true)}
+          className="non-draggable-region flex-[0_1_420px] mx-auto h-[26px] rounded-lg border border-ej-line bg-ej-surface hover:border-ej-line2 transition-colors duration-ej flex items-center gap-2 px-2.5 min-w-0"
+        >
+          <SearchIcon className="size-3.5 text-ej-muted shrink-0" />
+          <span className="text-xs text-ej-muted truncate">
+            Tìm kiếm hoặc nhảy tới…
+          </span>
+          <span className="flex-1" />
+          <kbd className="text-xxs text-ej-muted border border-ej-line rounded px-1 shrink-0">
+            ⌘K
+          </kbd>
+        </button>
+      )}
+
+      <div className="flex items-center gap-1 shrink-0 ml-auto">
+        {initialized && (
+          <>
+            <EjIconButton
+              className="non-draggable-region"
+              title={colorScheme === "dark" ? "Chế độ sáng" : "Chế độ tối"}
+              onClick={() =>
+                setTheme(
+                  theme === "dark"
+                    ? "light"
+                    : theme === "light"
+                      ? "dark"
+                      : colorScheme === "dark"
+                        ? "light"
+                        : "dark"
+                )
+              }
+            >
+              {colorScheme === "dark" ? (
+                <SunIcon className="size-4" />
+              ) : (
+                <MoonIcon className="size-4" />
+              )}
+            </EjIconButton>
+
+            <button
+              type="button"
+              title="Bố cục"
+              onClick={() =>
+                setLayoutPref(
+                  LAYOUT_CYCLE[
+                    (LAYOUT_CYCLE.indexOf(layoutPref) + 1) % LAYOUT_CYCLE.length
+                  ]
+                )
+              }
+              className={`non-draggable-region h-7 px-2 rounded-lg flex items-center gap-1.5 text-xs font-medium transition-colors duration-ej ${
+                fluid
+                  ? "bg-ej-accent-soft text-ej-accent-ink"
+                  : "text-ej-ink2 hover:bg-ej-surface2"
               }`}
+            >
+              {fluid ? (
+                <MaximizeIcon className="size-3.5" />
+              ) : (
+                <MinimizeIcon className="size-3.5" />
+              )}
+              <span className="whitespace-nowrap">{layoutLabel}</span>
+            </button>
+
+            <EjIconButton
+              className="non-draggable-region"
+              title="Trợ lý bên cạnh (⌘J)"
+              active={active}
               onClick={() => setActive(!active)}
             >
-              {active ? (
-                <LightbulbIcon className="size-4" />
-              ) : (
-                <LightbulbOffIcon className="size-4" />
-              )}
-            </Button>
-          )}
-        </div>
+              <LightbulbIcon className="size-4" />
+            </EjIconButton>
+          </>
+        )}
 
         {platform !== "darwin" && (
-          <div className="flex items-center">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="size-8 rounded-none non-draggable-region hover:bg-primary/10"
-              onClick={() => EnjoyApp.window.minimize()}
-            >
-              <MinusIcon className="size-4" />
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="size-8 rounded-none non-draggable-region hover:bg-primary/10"
-              onClick={() => EnjoyApp.window.toggleMaximized()}
-            >
-              {isMaximized ? (
-                <MinimizeIcon className="size-4" />
-              ) : (
-                <MaximizeIcon className="size-4" />
-              )}
-            </Button>
-            <AlertDialog open={quiting} onOpenChange={setQuiting}>
-              <AlertDialogTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="size-8 rounded-none non-draggable-region hover:bg-destructive"
-                >
-                  <XIcon className="size-4" />
-                </Button>
-              </AlertDialogTrigger>
-              <AlertDialogContent>
-                <AlertDialogHeader>
-                  <AlertDialogTitle>{t("quitApp")}</AlertDialogTitle>
-                  <AlertDialogDescription>
-                    {t("quitAppDescription")}
-                  </AlertDialogDescription>
-                </AlertDialogHeader>
-                <AlertDialogFooter>
-                  <AlertDialogCancel>{t("cancel")}</AlertDialogCancel>
-                  <AlertDialogAction
-                    className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
-                    onClick={() => {
-                      setQuiting(false);
-                      EnjoyApp.window.close();
-                    }}
-                  >
-                    {t("quit")}
-                  </AlertDialogAction>
-                </AlertDialogFooter>
-              </AlertDialogContent>
-            </AlertDialog>
-          </div>
+          <>
+            <span className="w-px h-4 bg-ej-line mx-1" />
+            <div className="flex items-center gap-0.5">
+              <EjIconButton
+                className="non-draggable-region"
+                onClick={() => EnjoyApp.window.minimize()}
+              >
+                <MinusIcon className="size-4" />
+              </EjIconButton>
+              <EjIconButton
+                className="non-draggable-region"
+                onClick={() => EnjoyApp.window.toggleMaximized()}
+              >
+                {isMaximized ? (
+                  <MinimizeIcon className="size-4" />
+                ) : (
+                  <MaximizeIcon className="size-4" />
+                )}
+              </EjIconButton>
+              <AlertDialog open={quiting} onOpenChange={setQuiting}>
+                <AlertDialogTrigger asChild>
+                  <EjIconButton className="non-draggable-region" danger>
+                    <XIcon className="size-4" />
+                  </EjIconButton>
+                </AlertDialogTrigger>
+                <AlertDialogContent>
+                  <AlertDialogHeader>
+                    <AlertDialogTitle>{t("quitApp")}</AlertDialogTitle>
+                    <AlertDialogDescription>
+                      {t("quitAppDescription")}
+                    </AlertDialogDescription>
+                  </AlertDialogHeader>
+                  <AlertDialogFooter>
+                    <AlertDialogCancel>{t("cancel")}</AlertDialogCancel>
+                    <AlertDialogAction
+                      className="bg-ej-bad text-white hover:opacity-90"
+                      onClick={() => {
+                        setQuiting(false);
+                        EnjoyApp.window.close();
+                      }}
+                    >
+                      {t("quit")}
+                    </AlertDialogAction>
+                  </AlertDialogFooter>
+                </AlertDialogContent>
+              </AlertDialog>
+            </div>
+          </>
         )}
       </div>
+
+      {initialized && (
+        <CommandPalette open={paletteOpen} onOpenChange={setPaletteOpen} />
+      )}
     </div>
   );
 };

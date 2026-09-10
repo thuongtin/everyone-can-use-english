@@ -2,17 +2,13 @@ import { useEffect, useState, useReducer, useContext } from "react";
 import {
   AudioCard,
   MediaAddButton,
-  AudiosTable,
+  MediaTable,
   AudioEditForm,
   LoaderSpin,
 } from "@renderer/components";
 import { t } from "i18next";
 import {
   Button,
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
   AlertDialog,
   AlertDialogFooter,
   AlertDialogHeader,
@@ -26,7 +22,6 @@ import {
   DialogHeader,
   DialogTitle,
   toast,
-  Input,
   Select,
   SelectTrigger,
   SelectValue,
@@ -41,6 +36,15 @@ import {
   AppSettingsProviderContext,
 } from "@renderer/context";
 import { LayoutGridIcon, LayoutListIcon } from "lucide-react";
+import {
+  EJ_CONTROL_CLASS,
+  EjEmptyState,
+  EjMediaGrid,
+  EjPageHeader,
+  EjSearchInput,
+  EjToolbar,
+  Segmented,
+} from "@renderer/components/enjoy";
 import { audiosReducer } from "@renderer/reducers";
 import { useDebounce } from "@uidotdev/usehooks";
 import { LANGUAGES } from "@/constants";
@@ -170,69 +174,16 @@ export const AudiosComponent = () => {
 
   return (
     <>
-      <div className="">
-        <Tabs value={tab} onValueChange={setTab}>
-          <div className="flex flex-wrap items-center gap-4 mb-4">
-            <TabsList>
-              <TabsTrigger value="grid">
-                <LayoutGridIcon className="h-4 w-4" />
-              </TabsTrigger>
-              <TabsTrigger value="list">
-                <LayoutListIcon className="h-4 w-4" />
-              </TabsTrigger>
-            </TabsList>
-
-            <Select value={orderBy} onValueChange={setOrderBy}>
-              <SelectTrigger className="max-w-36">
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
-                  <SelectItem value="updatedAtDesc">
-                    {t("updatedAtDesc")}
-                  </SelectItem>
-                  <SelectItem value="createdAtDesc">
-                    {t("createdAtDesc")}
-                  </SelectItem>
-                  <SelectItem value="createdAtAsc">
-                    {t("createdAtAsc")}
-                  </SelectItem>
-                  <SelectItem value="recordingsDurationDesc">
-                    {t("recordingsDurationDesc")}
-                  </SelectItem>
-                  <SelectItem value="recordingsCountDesc">
-                    {t("recordingsCountDesc")}
-                  </SelectItem>
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-
-            <Select value={language} onValueChange={setLanguage}>
-              <SelectTrigger className="max-w-36">
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
-                  <SelectItem value="all">{t("allLanguages")}</SelectItem>
-                  {LANGUAGES.map((lang) => (
-                    <SelectItem key={lang.code} value={lang.code}>
-                      {lang.code}
-                    </SelectItem>
-                  ))}
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-
-            <Input
-              className="max-w-48"
-              placeholder={t("search")}
-              onChange={(e) => setQuery(e.target.value)}
-            />
-
-            <MediaAddButton type="Audio" />
+      <EjPageHeader
+        title={t("library.audios")}
+        description={t("library.audiosDescription")}
+        actions={
+          <>
             <AlertDialog>
               <AlertDialogTrigger asChild>
-                <Button variant="secondary">{t("cleanUp")}</Button>
+                <Button variant="secondary" size="sm">
+                  {t("cleanUp")}
+                </Button>
               </AlertDialogTrigger>
               <AlertDialogContent>
                 <AlertDialogTitle>{t("cleanUp")}</AlertDialogTitle>
@@ -253,45 +204,108 @@ export const AudiosComponent = () => {
                 </AlertDialogFooter>
               </AlertDialogContent>
             </AlertDialog>
-          </div>
+            <MediaAddButton type="Audio" />
+          </>
+        }
+      />
 
-          {audios.length === 0 ? (
-            loading ? (
-              <LoaderSpin />
-            ) : (
-              <div className="flex items-center justify-center h-48 border border-dashed rounded-lg">
-                {t("noData")}
-              </div>
-            )
-          ) : (
-            <>
-              <TabsContent value="grid">
-                <div className="grid gap-4 grid-cols-5">
-                  {audios.map((audio) => (
-                    <AudioCard
-                      audio={audio}
-                      key={audio.id}
-                      onEdit={() => setEditing(audio)}
-                      onDelete={() => setDeleting(audio)}
-                    />
-                  ))}
-                </div>
-              </TabsContent>
+      <EjToolbar>
+        <EjSearchInput
+          value={query}
+          onChange={setQuery}
+          placeholder={t("library.searchPlaceholder")}
+        />
 
-              <TabsContent value="list">
-                <AudiosTable
-                  audios={audios}
-                  onEdit={(audio) => setEditing(audio)}
-                  onDelete={(audio) => setDeleting(audio)}
-                />
-              </TabsContent>
-            </>
-          )}
-        </Tabs>
-      </div>
+        <Select value={language} onValueChange={setLanguage}>
+          <SelectTrigger className={`${EJ_CONTROL_CLASS} w-[128px]`}>
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              <SelectItem value="all">{t("allLanguages")}</SelectItem>
+              {LANGUAGES.map((lang) => (
+                <SelectItem key={lang.code} value={lang.code}>
+                  {lang.code}
+                </SelectItem>
+              ))}
+            </SelectGroup>
+          </SelectContent>
+        </Select>
 
-      {!loading && hasMore && (
-        <div className="flex items-center justify-center my-4">
+        <Select value={orderBy} onValueChange={setOrderBy}>
+          <SelectTrigger className={`${EJ_CONTROL_CLASS} w-[176px]`}>
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              <SelectItem value="updatedAtDesc">{t("updatedAtDesc")}</SelectItem>
+              <SelectItem value="createdAtDesc">{t("createdAtDesc")}</SelectItem>
+              <SelectItem value="createdAtAsc">{t("createdAtAsc")}</SelectItem>
+              <SelectItem value="recordingsDurationDesc">
+                {t("recordingsDurationDesc")}
+              </SelectItem>
+              <SelectItem value="recordingsCountDesc">
+                {t("recordingsCountDesc")}
+              </SelectItem>
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+
+        <div className="ml-auto flex items-center gap-2">
+          <span className="text-xs text-ej-muted ej-tabular">
+            {t("library.itemsCount", { count: audios.length })}
+          </span>
+          <Segmented
+            value={tab}
+            onChange={setTab}
+            options={[
+              {
+                value: "grid",
+                title: t("library.gridView"),
+                label: <LayoutGridIcon className="size-3.5" />,
+              },
+              {
+                value: "list",
+                title: t("library.listView"),
+                label: <LayoutListIcon className="size-3.5" />,
+              },
+            ]}
+          />
+        </div>
+      </EjToolbar>
+
+      {audios.length === 0 ? (
+        loading ? (
+          <LoaderSpin />
+        ) : (
+          <EjEmptyState
+            title={t("library.empty")}
+            description={t("library.emptyDescription")}
+            actions={<MediaAddButton type="Audio" />}
+          />
+        )
+      ) : tab === "grid" ? (
+        <EjMediaGrid>
+          {audios.map((audio) => (
+            <AudioCard
+              audio={audio}
+              key={audio.id}
+              onEdit={() => setEditing(audio)}
+              onDelete={() => setDeleting(audio)}
+            />
+          ))}
+        </EjMediaGrid>
+      ) : (
+        <MediaTable
+          kind="audios"
+          items={audios}
+          onEdit={(audio) => setEditing(audio)}
+          onDelete={(audio) => setDeleting(audio)}
+        />
+      )}
+
+      {!loading && hasMore && audios.length > 0 && (
+        <div className="flex items-center justify-center mt-6">
           <Button variant="link" onClick={() => fetchAudios()}>
             {t("loadMore")}
           </Button>
@@ -328,7 +342,7 @@ export const AudiosComponent = () => {
           setDeleting(null);
         }}
       >
-        <AlertDialogContent>
+        <AlertDialogContent className="max-w-[420px]">
           <AlertDialogHeader>
             <AlertDialogTitle>{t("deleteResource")}</AlertDialogTitle>
             <AlertDialogDescription>
@@ -342,7 +356,7 @@ export const AudiosComponent = () => {
           <AlertDialogFooter>
             <AlertDialogCancel>{t("cancel")}</AlertDialogCancel>
             <AlertDialogAction
-              className="bg-destructive"
+              className="bg-ej-bad"
               onClick={() => {
                 if (!deleting) return;
                 EnjoyApp.audios

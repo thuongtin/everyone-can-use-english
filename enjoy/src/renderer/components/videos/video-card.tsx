@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-import { cn } from "@renderer/lib/utils";
 import {
   CircleAlertIcon,
   VideoIcon,
@@ -8,16 +6,29 @@ import {
   EditIcon,
 } from "lucide-react";
 import {
-  Badge,
-  Button,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@renderer/components/ui";
+import { MediaCard, MediaCardStatus } from "@renderer/components/enjoy";
+import { formatDuration } from "@renderer/lib/utils";
 import { t } from "i18next";
 import { useEffect, useState } from "react";
 import { getYoutubeThumbnailUrl } from "@/utils/youtube";
+import { resolveDisplayResource } from "@renderer/lib/retired-resource";
+
+const statusOf = (video: Partial<VideoType>): MediaCardStatus => {
+  if (video.transcribing) return "processing";
+  return video.transcribed ? "done" : "pending";
+};
+
+const statusLabel = (status: MediaCardStatus) =>
+  status === "processing"
+    ? t("media.transcribing")
+    : status === "done"
+      ? t("media.transcribed")
+      : t("media.notTranscribed");
 
 export const VideoCard = (props: {
   video: Partial<VideoType>;
@@ -26,88 +37,85 @@ export const VideoCard = (props: {
   onEdit?: () => void;
 }) => {
   const { video, className, onDelete, onEdit } = props;
-  const preferredCoverUrl = getYoutubeThumbnailUrl(video.source) || video.coverUrl;
+  const fallbackCover = resolveDisplayResource(video.coverUrl);
+  const preferredCoverUrl =
+    resolveDisplayResource(getYoutubeThumbnailUrl(video.source)).url ||
+    fallbackCover.url;
   const [coverUrl, setCoverUrl] = useState(preferredCoverUrl);
+  const status = statusOf(video);
 
   useEffect(() => {
     setCoverUrl(preferredCoverUrl);
   }, [preferredCoverUrl]);
 
+  const meta = [
+    video.recordingsCount
+      ? t("media.recordingsCount", { count: video.recordingsCount })
+      : null,
+    !video.src ? t("cannotFindSourceFile") : null,
+  ]
+    .filter(Boolean)
+    .join(" · ");
+
   return (
-    <div className={cn("w-full relative", className)}>
-      <Link to={`/videos/${video.id}`}>
-        <div
-          className="aspect-[4/3] border rounded-lg overflow-hidden relative"
-          style={{
-            borderBottomColor: `#${video.md5.substr(0, 6)}`,
-            borderBottomWidth: 3,
-          }}
-        >
-          <div className="relative w-full h-full flex items-center justify-center">
-            <VideoIcon className="w-12 h-12" />
-            {coverUrl && (
-              <img
-                src={coverUrl}
-                alt={video.name || t("models.video.name")}
-                crossOrigin="anonymous"
-                className="absolute top-0 left-0 hover:scale-105 object-cover w-full h-full bg-cover bg-center"
-                onError={() =>
-                  setCoverUrl(
-                    coverUrl === video.coverUrl ? undefined : video.coverUrl
-                  )
-                }
-              />
+    <MediaCard
+      className={className}
+      to={`/videos/${video.id}`}
+      id={video.id}
+      title={video.name}
+      ratio="video"
+      coverUrl={coverUrl}
+      onError={() =>
+        setCoverUrl(coverUrl === fallbackCover.url ? undefined : fallbackCover.url)
+      }
+      coverFallback={<VideoIcon className="size-8" strokeWidth={1.4} />}
+      language={video.language}
+      duration={video.duration ? formatDuration(video.duration) : undefined}
+      processing={video.transcribing}
+      processingLabel={t("media.transcribing")}
+      status={status}
+      statusLabel={statusLabel(status)}
+      meta={
+        meta ? (
+          <span className="inline-flex items-center gap-1">
+            {(!video.src || (!preferredCoverUrl && fallbackCover.retired)) && (
+              <CircleAlertIcon className="size-3 text-ej-bad shrink-0" />
             )}
-          </div>
-          {video.language && (
-            <Badge className="absolute left-2 top-2">{video.language}</Badge>
-          )}
-          {!video.src && (
-            <div
-              data-tooltip-content={t("cannotFindSourceFile")}
-              data-tooltip-id="global-tooltip"
-              className="absolute right-2 top-2"
-            >
-              <CircleAlertIcon className="text-destructive w-4 h-4" />
-            </div>
-          )}
-        </div>
-      </Link>
-      <div className="text-sm font-semibold mt-2 max-w-full truncate">
-        {video.name}
-      </div>
-      {(onDelete || onEdit) && (
-        <div className="absolute right-1 top-1 z-10">
+            {meta}
+          </span>
+        ) : undefined
+      }
+      actions={
+        onDelete || onEdit ? (
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="hover:bg-transparent w-6 h-6"
+              <button
+                type="button"
+                className="size-6 rounded-lg bg-white/90 text-ej-ink flex items-center justify-center shadow-ej"
               >
-                <MoreVerticalIcon className="size-4" />
-              </Button>
+                <MoreVerticalIcon className="size-3.5" />
+              </button>
             </DropdownMenuTrigger>
-
-            <DropdownMenuContent>
+            <DropdownMenuContent align="end">
               {onEdit && (
-                <DropdownMenuItem onClick={onEdit}>
+                <DropdownMenuItem className="cursor-pointer gap-2" onClick={onEdit}>
                   <EditIcon className="size-4" />
-                  <span className="ml-2 text-sm">{t("edit")}</span>
+                  {t("edit")}
                 </DropdownMenuItem>
               )}
               {onDelete && (
-                <DropdownMenuItem onClick={onDelete}>
-                  <TrashIcon className="size-4 text-destructive" />
-                  <span className="ml-2 text-destructive text-sm">
-                    {t("delete")}
-                  </span>
+                <DropdownMenuItem
+                  className="cursor-pointer gap-2 text-ej-bad focus:text-ej-bad"
+                  onClick={onDelete}
+                >
+                  <TrashIcon className="size-4" />
+                  {t("delete")}
                 </DropdownMenuItem>
               )}
             </DropdownMenuContent>
           </DropdownMenu>
-        </div>
-      )}
-    </div>
+        ) : undefined
+      }
+    />
   );
 };

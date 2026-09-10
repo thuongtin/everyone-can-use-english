@@ -3,7 +3,7 @@ import {
   PronunciationAssessmentScoreResult,
   WavesurferPlayer,
 } from "@renderer/components";
-import { Separator, ScrollArea, toast } from "@renderer/components/ui";
+import { toast } from "@renderer/components/ui";
 import { useState, useContext, useEffect } from "react";
 import { AppSettingsProviderContext } from "@renderer/context";
 import { Tooltip } from "react-tooltip";
@@ -61,8 +61,8 @@ export const RecordingDetail = (props: {
   }, [recording]);
 
   return (
-    <div className="">
-      <div className="flex justify-center mb-6">
+    <div className="space-y-4">
+      <div className="rounded-ej-lg border border-ej-line bg-ej-surface2/30 px-3 py-3">
         <WavesurferPlayer
           id={recording.id}
           src={recording.src}
@@ -70,37 +70,37 @@ export const RecordingDetail = (props: {
         />
       </div>
 
-      <Separator />
-
       {result ? (
         <PronunciationAssessmentFulltextResult
-          className="py-4"
           words={result.words}
           currentTime={currentTime}
           src={recording.src}
           onPlayOrigin={onPlayOrigin}
         />
       ) : (
-        <ScrollArea className="min-h-72 py-4 px-8 select-text">
+        <div className="min-h-72 rounded-ej-lg border border-ej-line bg-ej-surface2/30 px-5 py-4 select-text overflow-y-auto scroll">
           {(recording?.referenceText || "").split("\n").map((line, index) => (
-            <div key={index} className="text-xl font-sans tracking-wide mb-2">
+            <div
+              key={index}
+              className="font-literata text-[19px] leading-[1.6] text-ej-ink mb-2"
+            >
               {line}
             </div>
           ))}
-        </ScrollArea>
+        </div>
       )}
 
-      <Separator />
-
-      <PronunciationAssessmentScoreResult
-        pronunciationScore={pronunciationAssessment?.pronunciationScore}
-        accuracyScore={pronunciationAssessment?.accuracyScore}
-        fluencyScore={pronunciationAssessment?.fluencyScore}
-        completenessScore={pronunciationAssessment?.completenessScore}
-        prosodyScore={pronunciationAssessment?.prosodyScore}
-        assessing={assessing}
-        onAssess={assess}
-      />
+      <div className="rounded-ej-lg border border-ej-line bg-ej-surface flex">
+        <PronunciationAssessmentScoreResult
+          pronunciationScore={pronunciationAssessment?.pronunciationScore}
+          accuracyScore={pronunciationAssessment?.accuracyScore}
+          fluencyScore={pronunciationAssessment?.fluencyScore}
+          completenessScore={pronunciationAssessment?.completenessScore}
+          prosodyScore={pronunciationAssessment?.prosodyScore}
+          assessing={assessing}
+          onAssess={assess}
+        />
+      </div>
 
       <Tooltip id="recording-tooltip" />
     </div>

@@ -19,8 +19,8 @@ import mainWindow from "@main/window";
 import { t } from "i18next";
 import { ChatAgentTypeEnum, ChatTypeEnum } from "@/types/enums";
 import {
+  migrateConversationChatConfig,
   normalizeChatConfigForRead,
-  readChatSttEngine,
 } from "@/lib/conversation-migration";
 
 const logger = log.scope("db/models/chat");
@@ -91,7 +91,7 @@ export class Chat extends Model<Chat> {
 
   @Column(DataType.VIRTUAL)
   get sttEngine(): string {
-    return readChatSttEngine(this.config);
+    return migrateConversationChatConfig(this.config, "").sttEngine;
   }
 
   toJSON<T extends Chat>(): T {

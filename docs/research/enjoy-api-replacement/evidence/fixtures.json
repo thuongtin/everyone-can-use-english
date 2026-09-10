@@ -1,0 +1,38 @@
+[
+  {
+    "file": "jfk.wav",
+    "durationSeconds": 11.0,
+    "sha256": "59dfb9a4acb36fe2a2affc14bacbee2920ff435cb13cc314a08c13f66ba7860e",
+    "channels": 1,
+    "sampleRate": 16000,
+    "sampleWidth": 2,
+    "source": "public JFK speech via whisper.cpp sample"
+  },
+  {
+    "file": "dialogue.wav",
+    "durationSeconds": 19.4649375,
+    "sha256": "075e395342b41b222678088f6dbed2745a7346985c4b30e7d7b4b1fd9694380d",
+    "channels": 1,
+    "sampleRate": 16000,
+    "sampleWidth": 2,
+    "source": "macOS say synthetic speech"
+  },
+  {
+    "file": "vietnamese.wav",
+    "durationSeconds": 9.1668125,
+    "sha256": "dac4ad32149ee9ce887ae510ced2da8693242f49d5483310e0d20e057ebe2e6d",
+    "channels": 1,
+    "sampleRate": 16000,
+    "sampleWidth": 2,
+    "source": "macOS say synthetic speech"
+  },
+  {
+    "file": "silence.wav",
+    "durationSeconds": 3.0,
+    "sha256": "d303811b8c84619667cd0501342f84ec6cbe69f7aa3856dcf52fabda374c92b8",
+    "channels": 1,
+    "sampleRate": 16000,
+    "sampleWidth": 2,
+    "source": "PCM all zeros"
+  }
+]

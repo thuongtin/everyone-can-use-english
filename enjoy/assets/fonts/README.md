@@ -14,3 +14,14 @@ Source: https://github.com/google/fonts/tree/main/ofl/notosans
 
 The standalone HTML export templates use a system sans-serif stack because they
 must work outside the application without access to bundled assets.
+
+## Additional interface fonts
+
+The refreshed interface also bundles Be Vietnam Pro (Regular, Medium, SemiBold,
+and Bold) and Literata (regular and italic variable fonts). Their font files
+remain local for offline rendering.
+
+- Be Vietnam Pro source: https://github.com/google/fonts/tree/main/ofl/bevietnampro
+- Be Vietnam Pro license: `BeVietnamPro-OFL.txt` (SIL Open Font License 1.1)
+- Literata source: https://github.com/google/fonts/tree/main/ofl/literata
+- Literata license: `Literata-OFL.txt` (SIL Open Font License 1.1)

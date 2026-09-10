@@ -1,55 +1,102 @@
-import { useEffect, useState, useContext, useRef } from "react";
+import { useContext, useState } from "react";
+import { t } from "i18next";
+import {
+  BotIcon,
+  CheckIcon,
+  CopyIcon,
+  DownloadIcon,
+  MoreHorizontalIcon,
+  NotebookPenIcon,
+} from "lucide-react";
 import {
   AppSettingsProviderContext,
   MediaShadowProviderContext,
 } from "@renderer/context";
-import cloneDeep from "lodash/cloneDeep";
 import {
-  Button,
   Popover,
   PopoverContent,
   PopoverTrigger,
   toast,
 } from "@renderer/components/ui";
-import { ConversationShortcuts, MediaCaption } from "@renderer/components";
-import { t } from "i18next";
-import {
-  BotIcon,
-  CopyIcon,
-  CheckIcon,
-  SpeechIcon,
-  NotebookPenIcon,
-  DownloadIcon,
-  PlusIcon,
-  XIcon,
-} from "lucide-react";
-import {
-  Timeline,
-  TimelineEntry,
-} from "echogarden/dist/utilities/Timeline.d.js";
+import { ConversationShortcuts } from "@renderer/components";
+import { EjIconButton } from "@renderer/components/enjoy";
+import { TimelineEntry } from "echogarden/dist/utilities/Timeline.d.js";
 import { convertWordIpaToNormal } from "@/utils";
 import { useCopyToClipboard } from "@uidotdev/usehooks";
+import { cn } from "@renderer/lib/utils";
 
+const MenuItem = (props: {
+  icon: React.ReactNode;
+  label: string;
+  checked?: boolean;
+  onClick: () => void;
+}) => (
+  <button
+    type="button"
+    onClick={props.onClick}
+    className="flex w-full items-center gap-2.5 rounded-[7px] px-2.5 py-[7px] text-left text-[12.5px] text-ej-ink transition-colors duration-ej hover:bg-ej-surface2"
+  >
+    <span className="shrink-0 text-ej-ink2">{props.icon}</span>
+    <span className="min-w-0 flex-1 truncate">{props.label}</span>
+    {props.checked && <CheckIcon className="size-3.5 shrink-0 text-ej-accent" />}
+  </button>
+);
+
+/**
+ * Overflow menu of the sentence toolbar: copying, sending to the assistant,
+ * exporting the segment and the note markers.
+ */
 export const MediaCaptionActions = (props: {
   caption: TimelineEntry;
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
   displayIpa: boolean;
-  setDisplayIpa: (display: boolean) => void;
-  displayNotes: boolean;
-  setDisplayNotes: (display: boolean) => void;
+  markNotedWords: boolean;
+  setMarkNotedWords: (value: boolean) => void;
 }) => {
-  const { caption, displayIpa, setDisplayIpa, displayNotes, setDisplayNotes } =
-    props;
+  const {
+    caption,
+    open,
+    onOpenChange,
+    displayIpa,
+    markNotedWords,
+    setMarkNotedWords,
+  } = props;
   const { media, currentSegment, createSegment, transcription, activeRegion } =
     useContext(MediaShadowProviderContext);
   const { EnjoyApp, learningLanguage, ipaMappings } = useContext(
     AppSettingsProviderContext
   );
   const [_, copyToClipboard] = useCopyToClipboard();
-  const [copied, setCopied] = useState<boolean>(false);
+  const [sending, setSending] = useState<boolean>(false);
 
-  const [fbtOpen, setFbtOpen] = useState<boolean>(false);
+  const handleCopy = () => {
+    if (displayIpa) {
+      const text = caption.timeline
+        .map((word) => {
+          const ipas = word.timeline.map((entry) =>
+            entry.timeline.map((phoneme) => phoneme.text).join("")
+          );
+          return `${word.text}(${
+            (transcription.language || learningLanguage).startsWith("en")
+              ? convertWordIpaToNormal(ipas, { mappings: ipaMappings }).join("")
+              : ipas.join("")
+          })`;
+        })
+        .join(" ");
+
+      copyToClipboard(text);
+    } else {
+      copyToClipboard(caption.text);
+    }
+
+    toast.success(t("copied"));
+    onOpenChange(false);
+  };
 
   const handleDownload = async () => {
+    onOpenChange(false);
+
     if (activeRegion && !activeRegion.id.startsWith("segment-region")) {
       handleDownloadActiveRegion();
     } else {
@@ -77,15 +124,12 @@ export const MediaCaptionActions = (props: {
       .then((savePath) => {
         if (!savePath) return;
 
-        toast.promise(
-          EnjoyApp.download.start(segment.src, savePath as string),
-          {
-            loading: t("downloadingFile", { file: media.filename }),
-            success: () => t("downloadedSuccessfully"),
-            error: t("downloadFailed"),
-            position: "bottom-right",
-          }
-        );
+        toast.promise(EnjoyApp.download.start(segment.src, savePath as string), {
+          loading: t("downloadingFile", { file: media.filename }),
+          success: () => t("downloadedSuccessfully"),
+          error: t("downloadFailed"),
+          position: "bottom-right",
+        });
       })
       .catch((err) => {
         console.error(err);
@@ -148,126 +192,55 @@ export const MediaCaptionActions = (props: {
   if (!caption) return null;
 
   return (
-    <Popover open={fbtOpen} onOpenChange={setFbtOpen}>
-      <PopoverTrigger asChild>
-        <Button
-          size="icon"
-          variant={fbtOpen ? "secondary" : "outline"}
-          className="rounded-full w-8 h-8 p-0 shadow-lg z-30"
+    <>
+      <Popover open={open} onOpenChange={onOpenChange}>
+        <PopoverTrigger asChild>
+          <EjIconButton
+            aria-label={t("more")}
+            className={cn(open && "bg-ej-surface2 text-ej-ink")}
+          >
+            <MoreHorizontalIcon className="size-4" />
+          </EjIconButton>
+        </PopoverTrigger>
+        <PopoverContent
+          align="end"
+          sideOffset={6}
+          className="w-[216px] animate-rise rounded-[10px] border-ej-line bg-ej-surface p-[5px] shadow-ej"
         >
-          {fbtOpen ? (
-            <XIcon className="w-4 h-4" />
-          ) : (
-            <PlusIcon className="w-4 h-4" />
-          )}
-        </Button>
-      </PopoverTrigger>
-      <PopoverContent
-        side="top"
-        className="w-8 bg-transparent p-0 border-none shadow-none"
-      >
-        <div className="flex flex-col space-y-1">
-          <Button
-            variant={displayIpa ? "secondary" : "outline"}
-            size="icon"
-            className="rounded-full w-8 h-8 p-0"
-            data-tooltip-id="media-shadow-tooltip"
-            data-tooltip-content={t("displayIpa")}
-            data-tooltip-place="left"
-            onClick={() => setDisplayIpa(!displayIpa)}
-          >
-            <SpeechIcon className="w-4 h-4" />
-          </Button>
-
-          <Button
-            variant={displayNotes ? "secondary" : "outline"}
-            size="icon"
-            className="rounded-full w-8 h-8 p-0"
-            data-tooltip-id="media-shadow-tooltip"
-            data-tooltip-content={t("displayNotes")}
-            data-tooltip-place="left"
-            onClick={() => setDisplayNotes(!displayNotes)}
-          >
-            <NotebookPenIcon className="w-4 h-4" />
-          </Button>
-
-          <ConversationShortcuts
-            prompt={caption.text as string}
-            trigger={
-              <Button
-                data-tooltip-id="media-shadow-tooltip"
-                data-tooltip-content={t("sendToAIAssistant")}
-                data-tooltip-place="left"
-                variant="outline"
-                size="sm"
-                className="p-0 w-8 h-8 rounded-full"
-              >
-                <BotIcon className="w-5 h-5" />
-              </Button>
-            }
+          <MenuItem
+            icon={<CopyIcon className="size-[15px]" />}
+            label={t("segment.copySentence")}
+            onClick={handleCopy}
           />
-
-          <Button
-            variant="outline"
-            size="icon"
-            className="rounded-full w-8 h-8 p-0"
-            data-tooltip-id="media-shadow-tooltip"
-            data-tooltip-content={t("copyText")}
-            data-tooltip-place="left"
+          <MenuItem
+            icon={<BotIcon className="size-[15px]" />}
+            label={t("segment.sendToAssistant")}
             onClick={() => {
-              if (displayIpa) {
-                const text = caption.timeline
-                  .map((word) => {
-                    const ipas = word.timeline.map((t) =>
-                      t.timeline.map((s) => s.text).join("")
-                    );
-                    return `${word.text}(${
-                      (transcription.language || learningLanguage).startsWith(
-                        "en"
-                      )
-                        ? convertWordIpaToNormal(ipas, {
-                            mappings: ipaMappings,
-                          }).join("")
-                        : ipas.join("")
-                    })`;
-                  })
-                  .join(" ");
-
-                copyToClipboard(text);
-              } else {
-                copyToClipboard(caption.text);
-              }
-              setCopied(true);
-              setTimeout(() => {
-                setCopied(false);
-              }, 1500);
+              onOpenChange(false);
+              setSending(true);
             }}
-          >
-            {copied ? (
-              <CheckIcon className="w-4 h-4 text-green-500" />
-            ) : (
-              <CopyIcon
-                data-tooltip-id="media-shadow-tooltip"
-                data-tooltip-content={t("copyText")}
-                data-tooltip-place="left"
-                className="w-4 h-4"
-              />
-            )}
-          </Button>
-
-          <Button
-            variant="outline"
-            size="icon"
-            className="rounded-full w-8 h-8 p-0"
-            data-tooltip-id="media-shadow-tooltip"
-            data-tooltip-content={t("downloadSegment")}
-            data-tooltip-place="left"
+          />
+          <MenuItem
+            icon={<DownloadIcon className="size-[15px]" />}
+            label={t("segment.downloadSegment")}
             onClick={handleDownload}
-          >
-            <DownloadIcon className="w-4 h-4" />
-          </Button>
-        </div>
-      </PopoverContent>
-    </Popover>
+          />
+          <MenuItem
+            icon={<NotebookPenIcon className="size-[15px]" />}
+            label={t("segment.markNotedWords")}
+            checked={markNotedWords}
+            onClick={() => setMarkNotedWords(!markNotedWords)}
+          />
+        </PopoverContent>
+      </Popover>
+
+      <ConversationShortcuts
+        open={sending}
+        onOpenChange={setSending}
+        prompt={caption.text as string}
+        title={t("segment.sendToAssistant")}
+        trigger={<span className="hidden" />}
+      />
+    </>
   );
 };

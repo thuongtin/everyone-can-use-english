@@ -1,4 +1,5 @@
 export * from "./document-card";
+export * from "./document-toolbar";
 export * from "./document-html-renderer";
 export * from "./document-text-renderer";
 export * from "./document-epub-renderer";

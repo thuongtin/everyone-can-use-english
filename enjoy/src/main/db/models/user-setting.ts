@@ -12,6 +12,14 @@ import log from "@main/logger";
 import settings from "@main/settings";
 import * as i18n from "i18next";
 import { SttEngineOptionEnum, UserSettingKeyEnum } from "@/types/enums";
+import { LOCAL_PROFILE_MODE } from "@main/local-profile";
+import { encodeAzureProviderSecret, readAzureProviderConfig } from "@main/azure-provider-secret";
+import {
+  planProviderSelectionMigration,
+  readProviderSelectionMigrationRecord,
+  type ProviderSelectionMigrationInput,
+  type ProviderSelectionMigrationRecord,
+} from "@/lib/provider-selection-migration";
 
 const logger = log.scope("db/userSetting");
 
@@ -38,14 +46,21 @@ export class UserSetting extends Model<UserSetting> {
     const setting = await UserSetting.findOne({ where: { key } });
     if (!setting) return null;
 
+    let parsed: unknown;
     try {
-      return JSON.parse(setting.value);
+      parsed = JSON.parse(setting.value);
     } catch {
       return setting.value;
     }
+    return key === UserSettingKeyEnum.AZURE_OPENAI
+      ? readAzureProviderConfig(parsed)
+      : parsed;
   }
 
   static async set(key: UserSettingKeyEnum, value: any): Promise<void> {
+    if (key === UserSettingKeyEnum.AZURE_OPENAI) {
+      value = encodeAzureProviderSecret(value);
+    }
     const setting = await UserSetting.findOne({ where: { key } });
 
     if (typeof value === "object") {
@@ -69,6 +84,7 @@ export class UserSetting extends Model<UserSetting> {
   }
 
   static async accessToken(): Promise<string | null> {
+    if (LOCAL_PROFILE_MODE) return null;
     return (await UserSetting.get(UserSettingKeyEnum.PROFILE))?.accessToken;
   }
 
@@ -76,33 +92,94 @@ export class UserSetting extends Model<UserSetting> {
     await UserSetting.destroy({ where: {} });
   }
 
+  private static async applyProviderSelectionValues(
+    values: ProviderSelectionMigrationInput
+  ): Promise<void> {
+    const entries = [
+      ["gptEngine", UserSettingKeyEnum.GPT_ENGINE],
+      ["sttEngine", UserSettingKeyEnum.STT_ENGINE],
+      ["ttsConfig", UserSettingKeyEnum.TTS_CONFIG],
+    ] as const;
+    for (const [property, key] of entries) {
+      if (Object.prototype.hasOwnProperty.call(values, property)) {
+        await UserSetting.set(key, values[property]);
+      }
+    }
+  }
+
+  static async migrateProviderSelections(): Promise<void> {
+    const savedMarker = readProviderSelectionMigrationRecord(
+      await UserSetting.get(UserSettingKeyEnum.PROVIDER_SELECTION_MIGRATION)
+    );
+    if (savedMarker?.status === "completed" || savedMarker?.status === "restored") {
+      return;
+    }
+
+    let marker: ProviderSelectionMigrationRecord;
+    if (savedMarker?.status === "prepared") {
+      marker = savedMarker;
+    } else {
+      const plan = planProviderSelectionMigration({
+        gptEngine: await UserSetting.get(UserSettingKeyEnum.GPT_ENGINE),
+        sttEngine: await UserSetting.get(UserSettingKeyEnum.STT_ENGINE),
+        ttsConfig: await UserSetting.get(UserSettingKeyEnum.TTS_CONFIG),
+      });
+      marker = {
+        version: plan.version,
+        status: "prepared",
+        backup: plan.backup,
+        updates: plan.updates,
+      };
+      await UserSetting.set(UserSettingKeyEnum.PROVIDER_SELECTION_MIGRATION, marker);
+    }
+
+    await UserSetting.applyProviderSelectionValues(marker.updates);
+    await UserSetting.set(UserSettingKeyEnum.PROVIDER_SELECTION_MIGRATION, {
+      ...marker,
+      status: "completed",
+    });
+  }
+
+  static async restoreProviderSelectionBackup(): Promise<boolean> {
+    const marker = readProviderSelectionMigrationRecord(
+      await UserSetting.get(UserSettingKeyEnum.PROVIDER_SELECTION_MIGRATION)
+    );
+    if (!marker) return false;
+    await UserSetting.applyProviderSelectionValues(marker.backup);
+    await UserSetting.set(UserSettingKeyEnum.PROVIDER_SELECTION_MIGRATION, {
+      ...marker,
+      status: "restored",
+    });
+    return true;
+  }
+
   static async migrateFromSettings(): Promise<void> {
     // hotkeys
     const hotkeys = await UserSetting.get(UserSettingKeyEnum.HOTKEYS);
     const prevHotkeys = await settings.get("defaultHotkeys");
     if (prevHotkeys && !hotkeys) {
-      UserSetting.set(UserSettingKeyEnum.HOTKEYS, prevHotkeys as object);
+      await UserSetting.set(UserSettingKeyEnum.HOTKEYS, prevHotkeys as object);
     }
 
     // GPT Engine
     const gptEngine = await UserSetting.get(UserSettingKeyEnum.GPT_ENGINE);
     const prevGptEngine = await settings.get("engine.gpt");
     if (prevGptEngine && !gptEngine) {
-      UserSetting.set(UserSettingKeyEnum.GPT_ENGINE, prevGptEngine as object);
+      await UserSetting.set(UserSettingKeyEnum.GPT_ENGINE, prevGptEngine as object);
     }
 
     // OpenAI API Key
     const openai = await UserSetting.get(UserSettingKeyEnum.OPENAI);
     const prevOpenai = await settings.get("openai");
     if (prevOpenai && !openai) {
-      UserSetting.set(UserSettingKeyEnum.OPENAI, prevOpenai as object);
+      await UserSetting.set(UserSettingKeyEnum.OPENAI, prevOpenai as object);
     }
 
     // Language
     const language = await UserSetting.get(UserSettingKeyEnum.LANGUAGE);
     const prevLanguage = await settings.get("language");
     if (prevLanguage && !language) {
-      UserSetting.set(UserSettingKeyEnum.LANGUAGE, prevLanguage as string);
+      await UserSetting.set(UserSettingKeyEnum.LANGUAGE, prevLanguage as string);
     }
 
     // Native Language
@@ -111,7 +188,7 @@ export class UserSetting extends Model<UserSetting> {
     );
     const prevNativeLanguage = await settings.get("nativeLanguage");
     if (prevNativeLanguage && !nativeLanguage) {
-      UserSetting.set(
+      await UserSetting.set(
         UserSettingKeyEnum.NATIVE_LANGUAGE,
         prevNativeLanguage as string
       );
@@ -123,7 +200,7 @@ export class UserSetting extends Model<UserSetting> {
     );
     const prevLearningLanguage = await settings.get("learningLanguage");
     if (prevLearningLanguage && !learningLanguage) {
-      UserSetting.set(
+      await UserSetting.set(
         UserSettingKeyEnum.LEARNING_LANGUAGE,
         prevLearningLanguage as string
       );
@@ -135,19 +212,19 @@ export class UserSetting extends Model<UserSetting> {
     if (prevSttEngine && !sttEngine) {
       switch (prevSttEngine) {
         case "azure":
-          UserSetting.set(
+          await UserSetting.set(
             UserSettingKeyEnum.STT_ENGINE,
             SttEngineOptionEnum.ENJOY_AZURE
           );
           break;
         case "cloudflare":
-          UserSetting.set(
+          await UserSetting.set(
             UserSettingKeyEnum.STT_ENGINE,
             SttEngineOptionEnum.ENJOY_CLOUDFLARE
           );
           break;
         case "openai":
-          UserSetting.set(
+          await UserSetting.set(
             UserSettingKeyEnum.STT_ENGINE,
             SttEngineOptionEnum.OPENAI
           );
@@ -161,24 +238,26 @@ export class UserSetting extends Model<UserSetting> {
     const whisper = await UserSetting.get(UserSettingKeyEnum.WHISPER);
     const prevWhisper = await settings.get("whisper.model");
     if (prevWhisper && !whisper) {
-      UserSetting.set(UserSettingKeyEnum.WHISPER, prevWhisper as string);
+      await UserSetting.set(UserSettingKeyEnum.WHISPER, prevWhisper as string);
     }
 
     // Profile
     const profile = await UserSetting.get(UserSettingKeyEnum.PROFILE);
     const prevProfile = (await settings.get("user")) as UserType;
     if (prevProfile && !profile) {
-      UserSetting.set(UserSettingKeyEnum.PROFILE, prevProfile as UserType);
+      await UserSetting.set(UserSettingKeyEnum.PROFILE, prevProfile as UserType);
     }
 
     // Recorder Config
     const recorderConfig = await UserSetting.get(UserSettingKeyEnum.RECORDER);
     const prevRecorderConfig = await settings.get("recorderConfig");
     if (prevRecorderConfig && !recorderConfig) {
-      UserSetting.set(
+      await UserSetting.set(
         UserSettingKeyEnum.RECORDER,
         prevRecorderConfig as string
       );
     }
+
+    await UserSetting.migrateProviderSelections();
   }
 }

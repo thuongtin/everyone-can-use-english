@@ -53,14 +53,7 @@ export default {
 </script>
 
 <script lang="ts" setup>
-import { parseUserStats, request, type UserStats } from "@/utils/http";
-
-type UserStatsEntry = {
-  mixinId: number;
-  stats: UserStats;
-};
-
-const items = ref([
+const comments = [
   {
     width: 420,
     mixinId: 39491012,
@@ -177,57 +170,7 @@ const items = ref([
     hint: "-",
     text: "Tự động tạo phiên âm và luyện đọc từng câu khiến việc luyện tập rất thuận tiện. Phím tắt cũng dễ dùng, khả năng nói của tôi đã tiến bộ đáng kể.",
   },
-]);
-
-const infos = ref<UserStatsEntry[]>([]);
-
-const comments = computed(() => {
-  return items.value.map((item) => {
-    const stats = infos.value.find((info) => info.mixinId === item.mixinId)?.stats;
-
-    if (!stats) return item;
-
-    return {
-      ...item,
-      ...(stats.name ? { name: stats.name } : {}),
-      ...(stats.avatarUrl ? { avatar: stats.avatarUrl } : {}),
-      ...(stats.recordingsDuration !== undefined
-        ? {
-            hint: `Luyện tập tập trung ${(stats.recordingsDuration / 1000 / 60 / 60).toLocaleString("vi-VN", { maximumFractionDigits: 1 })} giờ`,
-          }
-        : {}),
-    };
-  });
-});
-
-onMounted(async () => {
-  await requestUserInfo();
-});
-
-async function requestUserInfo() {
-  const mixinIds = items.value
-    .map((item) => item.mixinId)
-    .filter((mixinId): mixinId is number => Number.isInteger(mixinId));
-
-  const results = await Promise.all(
-    mixinIds.map(async (mixinId) => {
-      try {
-        const stats = parseUserStats(
-          await request(`https://enjoy.bot/api/users/${mixinId}/stats`)
-        );
-
-        return stats ? { mixinId, stats } : null;
-      } catch (error) {
-        console.warn("comment stats request failed", error);
-        return null;
-      }
-    })
-  );
-
-  infos.value = results.filter(
-    (result): result is UserStatsEntry => result !== null
-  );
-}
+];
 </script>
 <style lang="scss" scoped>
 .comments {

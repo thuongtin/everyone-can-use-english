@@ -11,16 +11,12 @@ import {
   DataType,
   Unique,
 } from "sequelize-typescript";
-import { Audio, UserSetting, Video } from "@main/db/models";
+import { Audio, Video } from "@main/db/models";
 import mainWindow from "@main/window";
-import log from "@main/logger";
-import { Client } from "@/api";
 import { PROCESS_TIMEOUT } from "@/constants";
-import settings from "@main/settings";
 import { AlignmentResult } from "echogarden/dist/api/Alignment";
 import { createHash } from "crypto";
 
-const logger = log.scope("db/models/transcription");
 @Table({
   modelName: "Transcription",
   tableName: "transcriptions",
@@ -83,31 +79,9 @@ export class Transcription extends Model<Transcription> {
     return Boolean(this.syncedAt) && this.syncedAt >= this.updatedAt;
   }
 
-  async sync() {
-    if (this.isSynced) return;
-    if (this.getDataValue("state") !== "finished") return;
-
-    const webApi = new Client({
-      baseUrl: settings.apiUrl(),
-      accessToken: (await UserSetting.accessToken()) as string,
-      logger,
-    });
-    return webApi.syncTranscription(this.toJSON()).then(() => {
-      const now = new Date();
-      this.update({ syncedAt: now, updatedAt: now });
-    });
-  }
-
   @AfterUpdate
   static notifyForUpdate(transcription: Transcription) {
     this.notify(transcription, "update");
-  }
-
-  @AfterUpdate
-  static syncAfterUpdate(transcription: Transcription) {
-    transcription.sync().catch((err) => {
-      logger.error("sync transcription error", transcription.id, err);
-    });
   }
 
   @AfterDestroy

@@ -34,9 +34,8 @@ const PROVIDER_IDS = [...SUPPORTED_LLM_PROVIDER_IDS] as [
 ];
 
 export const DefaultEngineSettings = () => {
-  const { currentGptEngine, setGptEngine, gptProviders } = useContext(
-    AISettingsProviderContext
-  );
+  const { currentGptEngine, setGptEngine, gptProviders, acpStatuses } =
+    useContext(AISettingsProviderContext);
   const [editing, setEditing] = useState(false);
 
   const gptEngineSchema = z
@@ -62,13 +61,28 @@ export const DefaultEngineSettings = () => {
 
   const modelOptions = () => {
     const name = form.watch("name") as AiProviderId;
+    const isAcp = name === "codex-acp" || name === "claude-acp";
     const currentModels =
-      name === currentGptEngine.name
+      name === currentGptEngine.name && !isAcp
         ? Object.values(currentGptEngine.models || {})
         : [];
     return Array.from(
       new Set([...(gptProviders[name]?.models || []), ...currentModels])
-    );
+    ).filter((model): model is string => typeof model === "string" && model.trim().length > 0);
+  };
+
+  const acpUnavailableReason = (provider: AiProviderId) => {
+    const acpProvider =
+      provider === "codex-acp"
+        ? "codex"
+        : provider === "claude-acp"
+          ? "claude"
+          : undefined;
+    if (!acpProvider) return undefined;
+    const status = acpStatuses.find((item) => item.provider === acpProvider);
+    return status?.available
+      ? undefined
+      : status?.reason || "ACP runtime không khả dụng.";
   };
 
   const onSubmit = async (data: z.infer<typeof gptEngineSchema>) => {
@@ -115,12 +129,12 @@ export const DefaultEngineSettings = () => {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)}>
-        <div className="flex items-start justify-between py-4">
+        <div className="ej-setting-row">
           <div className="">
             <div className="flex items-center mb-2">
               <span>{t("defaultAiEngine")}</span>
             </div>
-            <div className="text-sm text-muted-foreground space-y-3">
+            <div className="text-sm text-ej-muted space-y-3">
               <FormField
                 control={form.control}
                 name="name"
@@ -152,7 +166,11 @@ export const DefaultEngineSettings = () => {
                         </SelectTrigger>
                         <SelectContent>
                           {SUPPORTED_LLM_PROVIDER_IDS.map((provider) => (
-                            <SelectItem key={provider} value={provider}>
+                            <SelectItem
+                              key={provider}
+                              value={provider}
+                              disabled={Boolean(acpUnavailableReason(provider))}
+                            >
                               {AI_PROVIDER_CATALOG[provider].name}
                             </SelectItem>
                           ))}
@@ -160,11 +178,18 @@ export const DefaultEngineSettings = () => {
                       </Select>
                     </div>
                     <FormMessage />
-                    <div className="text-xs text-muted-foreground">
+                    <div className="text-xs text-ej-muted">
                       {(() => {
                         const providerName = form.watch("name") as string;
                         return isSupportedProvider(providerName)
-                          ? t(AI_PROVIDER_CATALOG[providerName].descriptionKey)
+                          ? acpUnavailableReason(providerName) ||
+                              (providerName === "codex-acp" ||
+                              providerName === "claude-acp"
+                                ? "Dùng phiên đăng nhập CLI hiện có trên máy qua ACP."
+                                : t(
+                                    AI_PROVIDER_CATALOG[providerName]
+                                      .descriptionKey
+                                  ))
                           : t("aiEngineNotSupported");
                       })()}
                     </div>

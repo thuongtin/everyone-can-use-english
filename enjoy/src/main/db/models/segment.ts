@@ -9,16 +9,12 @@ import {
   Model,
   DataType,
   Unique,
-  AfterCreate,
   AllowNull,
   AfterFind,
 } from "sequelize-typescript";
-import { Audio, Transcription, UserSetting, Video } from "@main/db/models";
+import { Audio, Transcription, Video } from "@main/db/models";
 import mainWindow from "@main/window";
-import log from "@main/logger";
-import { Client } from "@/api";
 import settings from "@main/settings";
-import storage from "@/main/storage";
 import path from "path";
 import { TimelineEntry } from "echogarden/dist/utilities/Timeline.d.js";
 import FfmpegWrapper from "@/main/ffmpeg";
@@ -27,7 +23,6 @@ import fs from "fs-extra";
 import { v5 as uuidv5 } from "uuid";
 import { MIME_TYPES } from "@/constants";
 
-const logger = log.scope("db/models/segment");
 const OUTPUT_FORMAT = "mp3";
 @Table({
   modelName: "Segment",
@@ -91,6 +86,8 @@ export class Segment extends Model<Segment> {
 
   @Column(DataType.VIRTUAL)
   get src(): string {
+    if (!this.filePath) return null;
+
     return `enjoy://${path.posix.join(
       "library",
       "segments",
@@ -99,52 +96,21 @@ export class Segment extends Model<Segment> {
   }
 
   get filePath(): string {
-    return path.join(
+    const file = path.join(
       settings.userDataPath(),
       "segments",
       this.getDataValue("md5") + "." + OUTPUT_FORMAT
     );
+
+    return fs.existsSync(file) ? file : null;
   }
 
   get extname(): string {
-    return path.extname(this.filePath);
+    return path.extname(this.filePath || "");
   }
 
   get mimeType(): string {
     return MIME_TYPES[this.extname.toLowerCase()] || "audio/mpeg";
-  }
-
-  async sync() {
-    if (this.isSynced) return;
-
-    const webApi = new Client({
-      baseUrl: settings.apiUrl(),
-      accessToken: (await UserSetting.accessToken()) as string,
-      logger,
-    });
-    return webApi.syncSegment(this.toJSON()).then(() => {
-      const now = new Date();
-      this.update({ syncedAt: now, updatedAt: now });
-    });
-  }
-
-  async upload() {
-    if (this.isUploaded) return;
-
-    return storage
-      .put(this.md5, this.filePath, this.mimeType)
-      .then((result) => {
-        logger.debug("upload result:", result.data);
-        if (result.data.success) {
-          this.update({ uploadedAt: new Date() });
-        } else {
-          throw new Error(result.data);
-        }
-      })
-      .catch((err) => {
-        logger.error("upload failed:", err.message);
-        throw err;
-      });
   }
 
   static async generate(params: {
@@ -208,17 +174,8 @@ export class Segment extends Model<Segment> {
   }
 
   @AfterFind
-  static async syncAfterFind(segments: Segment[]) {
+  static async hydrateTargetAfterFind(segments: Segment[]) {
     if (!segments.length) return;
-
-    const unsyncedSegments = segments.filter((segment) => !segment.isSynced);
-    if (!unsyncedSegments.length) return;
-
-    unsyncedSegments.forEach((segment) => {
-      segment.sync().catch((err) => {
-        logger.error("sync segment error", segment.id, err);
-      });
-    });
 
     if (!Array.isArray(segments)) segments = [segments];
 
@@ -237,26 +194,9 @@ export class Segment extends Model<Segment> {
     }
   }
 
-  @AfterCreate
-  static syncAndUploadAfterCreate(segment: Segment) {
-    segment.sync().catch((err) => {
-      logger.error("sync segment error", segment.id, err);
-    });
-    segment.upload().catch((err) => {
-      logger.error("upload segment error", segment.id, err);
-    });
-  }
-
   @AfterUpdate
   static notifyForUpdate(segment: Segment) {
     this.notify(segment, "update");
-  }
-
-  @AfterUpdate
-  static syncAfterUpdate(segment: Segment) {
-    segment.sync().catch((err) => {
-      logger.error("sync segment error", segment.id, err);
-    });
   }
 
   @AfterDestroy

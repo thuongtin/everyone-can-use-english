@@ -59,7 +59,7 @@ const cards = ref([
   {
     label: "Sửa phát âm",
     title: "AI hỗ trợ sửa phát âm",
-    subtitle: "AI của Enjoy hỗ trợ bạn luyện phát âm Anh-Anh và Anh-Mỹ.",
+    subtitle: "Luyện phát âm với đánh giá từ Azure Speech khi bạn đã cấu hình dịch vụ.",
     bg: "/portal-static/images/bg-intro-1.png",
     colors: ["#384C6B", "#7B93AF"],
   },

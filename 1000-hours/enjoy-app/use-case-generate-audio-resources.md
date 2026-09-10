@@ -4,7 +4,7 @@ Một mục tiêu quan trọng khi học ngoại ngữ là diễn đạt đượ
 
 ## Kiểm tra dịch vụ AI {#check-ai-service}
 
-Trước khi bắt đầu, cần có dịch vụ AI hoạt động: cấu hình [OpenAI riêng](./settings.md#openai-settings), hoặc sử dụng dịch vụ AI của Enjoy với [số dư và hạn mức](./settings.md#deposit) phù hợp. Thao tác tạo văn bản và giọng đọc phụ thuộc kết nối, tài khoản và dịch vụ đã chọn.
+Trước khi bắt đầu, cần có dịch vụ AI hoạt động: cấu hình [nhà cung cấp văn bản](./settings.md#openai-settings) và chọn OpenAI hoặc Azure Speech cho TTS. Thao tác tạo văn bản và giọng đọc phụ thuộc kết nối, tài khoản và dịch vụ đã chọn.
 
 ## Tạo huấn luyện viên tiếng Anh {#create-english-coach}
 
@@ -15,7 +15,7 @@ Trong giao diện trò chuyện mới hơn, tạo tác nhân từ mẫu huấn l
 ![Chọn vai trò AI trong tài liệu gốc](/images/enjoy/select-ai-role.png)
 _* Chọn vai trò AI trong giao diện được tài liệu gốc mô tả._
 
-Chọn công cụ AI là OpenAI hoặc Enjoy AI theo tài khoản đang sử dụng. Với [OpenAI riêng](./settings.md#openai-settings), kiểm tra cả **Địa chỉ API** nếu dùng cấu hình tùy chỉnh.
+Chọn nhà cung cấp AI và model đã cấu hình theo tài khoản đang sử dụng. Với [OpenAI riêng](./settings.md#openai-settings), kiểm tra cả **Địa chỉ API** nếu dùng cấu hình tùy chỉnh.
 
 Cuộn xuống cuối phần cấu hình và chọn **Công cụ TTS** phù hợp để tạo giọng đọc.
 

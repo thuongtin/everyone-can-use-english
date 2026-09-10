@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import nlp from "compromise";
 import paragraphs from "compromise-paragraphs";
+import { displayableResourceUrl } from "@renderer/lib/retired-resource";
 nlp.plugin(paragraphs);
 
 export const StoryContent = (props: { content: string }) => {
@@ -26,7 +27,10 @@ export const StoryContent = (props: { content: string }) => {
           {sentences.map((sentence, i: number) => {
             if (sentence.text.match(/!\[\]\(\S+\)/g)) {
               const [img] = sentence.text.match(/!\[\]\(\S+\)/g);
-              const src = img.replace(/!\[\]\(/g, "").replace(/\)/g, "");
+              const src = displayableResourceUrl(
+                img.replace(/!\[\]\(/g, "").replace(/\)/g, "")
+              );
+              if (!src) return null;
               return (
                 <p key={`paragraph-${i}`}>
                   <img src={src} />

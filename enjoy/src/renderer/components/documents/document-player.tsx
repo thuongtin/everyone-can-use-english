@@ -131,9 +131,9 @@ export const DocumentPlayer = () => {
     return (
       <div className="flex flex-col justify-center items-center h-full">
         <div className="flex items-center justify-center mb-2">
-          <LoaderIcon className="animate-spin text-muted-foreground" />
+          <LoaderIcon className="animate-spin text-ej-muted" />
         </div>
-        <div className="text-muted-foreground text-sm">
+        <div className="text-ej-muted text-sm">
           {t("creatingSpeech")}
         </div>
       </div>
@@ -144,9 +144,9 @@ export const DocumentPlayer = () => {
     return (
       <div className="flex flex-col justify-center items-center h-full">
         <div className="flex items-center justify-center mb-2">
-          <LoaderIcon className="animate-spin text-muted-foreground" />
+          <LoaderIcon className="animate-spin text-ej-muted" />
         </div>
-        <div className="text-muted-foreground text-sm">
+        <div className="text-ej-muted text-sm">
           {t("preparingAudio")}
         </div>
       </div>

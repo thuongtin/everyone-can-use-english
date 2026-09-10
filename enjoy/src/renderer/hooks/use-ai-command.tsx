@@ -13,8 +13,12 @@ import {
   refineCommand,
   chatSuggestionCommand,
 } from "@commands";
-import { md5 as md5Hash } from "js-md5";
 import type { ChatModelOptions } from "@/lib/chat-model";
+import {
+  createLocalLookupRecord,
+  createLookupCacheKey,
+  createAICacheKey,
+} from "@/lib/local-ai-services";
 
 type RuntimeAISettings = {
   currentGptEngine?: GptEngineSettingType;
@@ -24,33 +28,41 @@ type RuntimeAISettings = {
 export const useAiCommand = () => {
   const {
     EnjoyApp,
-    webApi,
     nativeLanguage,
     learningLanguage,
-    apiUrl,
   } = useContext(AppSettingsProviderContext);
   const { currentGptEngine, getProviderConfig } = useContext(
     AISettingsProviderContext
   ) as RuntimeAISettings;
 
-  const providerName = currentGptEngine?.name || "enjoyai";
+  const providerName = currentGptEngine?.name || "needs-selection";
   const providerConfig = getProviderConfig?.(providerName);
   const engineModels: GptEngineSettingType["models"] =
-    currentGptEngine?.models || { default: "gpt-4o" };
+    currentGptEngine?.models || { default: "" };
   const providerOptions = (modelName?: string): ChatModelOptions => ({
     provider: providerName,
     key: providerConfig?.key ?? currentGptEngine?.key,
-    baseUrl:
-      providerName === "enjoyai"
-        ? apiUrl
-          ? `${apiUrl}/api/ai`
-          : undefined
-        : providerConfig?.baseUrl ?? currentGptEngine?.baseUrl,
+    baseUrl: providerConfig?.baseUrl ?? currentGptEngine?.baseUrl,
     modelName,
   });
   const modelFor = (
     task: "lookup" | "translate" | "analyze" | "extractStory" | "default"
   ) => engineModels[task] || engineModels.default;
+
+  const cacheScope = (model: string) => ({ nativeLanguage, learningLanguage, provider: providerName, model });
+  const lookupCacheKey = (word: string, context: string) =>
+    createLookupCacheKey(word, context, cacheScope(modelFor("lookup")));
+
+  const analysisCacheKey = (text: string) =>
+    createAICacheKey("analyze", text, cacheScope(modelFor("analyze")));
+  const suggestionCacheKey = (context: string, options?: {
+    learningLanguage?: string;
+    nativeLanguage?: string;
+  }) => createAICacheKey("chat-suggestion", context, {
+    ...cacheScope(modelFor("default")),
+    learningLanguage: options?.learningLanguage || learningLanguage,
+    nativeLanguage: options?.nativeLanguage || nativeLanguage,
+  });
 
   const lookupWord = async (params: {
     word: string;
@@ -60,22 +72,18 @@ export const useAiCommand = () => {
     cacheKey?: string;
     force?: boolean;
   }) => {
-    const { context, sourceId, sourceType, cacheKey, force = false } = params;
+    const { context, force = false } = params;
     let { word } = params;
     word = word.trim();
     if (!word) return;
+    const resolvedCacheKey = lookupCacheKey(word, context);
 
-    const lookup = await webApi.lookup({
-      word,
-      context,
-      sourceId,
-      sourceType,
-      nativeLanguage,
-    });
-
-    if (lookup.meaning && !force) {
-      return lookup;
+    if (!force) {
+      const cached = await EnjoyApp.cacheObjects.get(resolvedCacheKey);
+      if (cached?.meaning) return cached as LookupType;
     }
+
+    const lookup = createLocalLookupRecord({ word, context, nativeLanguage });
 
     const modelName = modelFor("lookup");
 
@@ -90,19 +98,11 @@ export const useAiCommand = () => {
       providerOptions(modelName)
     );
 
-    webApi.updateLookup(lookup.id, {
-      meaning: res,
-      sourceId,
-      sourceType,
-    });
-
     const result = Object.assign(lookup, {
       meaning: res,
     });
 
-    if (cacheKey) {
-      EnjoyApp.cacheObjects.set(cacheKey, result);
-    }
+    await EnjoyApp.cacheObjects.set(resolvedCacheKey, result);
 
     return result;
   };
@@ -115,59 +115,26 @@ export const useAiCommand = () => {
     );
     const { words = [], idioms = [] } = res;
 
-    return webApi.extractVocabularyFromStory(story.id, {
-      words,
-      idioms,
-    });
+    return { words, idioms };
   };
 
   const translate = async (
     text: string,
     cacheKey?: string
   ): Promise<string> => {
-    let translatedContent = "";
-    const md5 = md5Hash(text.trim());
+    void cacheKey;
     const modelName = modelFor("translate");
-
-    try {
-      const res = await webApi.translations({
-        md5,
-        translatedLanguage: nativeLanguage,
-        engine: modelName,
-      });
-
-      if (res.translations.length > 0) {
-        translatedContent = res.translations[0].translatedContent;
-      }
-    } catch (error) {
-      console.error(error);
-    }
-
-    if (!translatedContent) {
-      translatedContent = await translateCommand(
-        text,
-        nativeLanguage,
-        providerOptions(modelName)
-      );
-
-      webApi.createTranslation({
-        md5,
-        content: text,
-        translatedContent,
-        language: learningLanguage,
-        translatedLanguage: nativeLanguage,
-        engine: modelName,
-      });
-    }
-
-    if (cacheKey) {
-      EnjoyApp.cacheObjects.set(cacheKey, translatedContent);
-    }
+    const resolvedCacheKey = createAICacheKey("translate", text.trim(), cacheScope(modelName));
+    const cached = await EnjoyApp.cacheObjects.get(resolvedCacheKey);
+    if (typeof cached === "string" && cached) return cached;
+    const translatedContent = await translateCommand(text, nativeLanguage, providerOptions(modelName));
+    await EnjoyApp.cacheObjects.set(resolvedCacheKey, translatedContent);
 
     return translatedContent;
   };
 
   const analyzeText = async (text: string, cacheKey?: string) => {
+    void cacheKey;
     const res = await analyzeCommand(
       text,
       {
@@ -177,9 +144,7 @@ export const useAiCommand = () => {
       providerOptions(modelFor("analyze"))
     );
 
-    if (cacheKey) {
-      EnjoyApp.cacheObjects.set(cacheKey, res);
-    }
+    await EnjoyApp.cacheObjects.set(analysisCacheKey(text), res);
     return res;
   };
 
@@ -232,14 +197,15 @@ export const useAiCommand = () => {
       providerOptions(modelFor("default"))
     );
 
-    if (options?.cacheKey) {
-      EnjoyApp.cacheObjects.set(options.cacheKey, result);
-    }
+    await EnjoyApp.cacheObjects.set(suggestionCacheKey(context, options), result);
 
     return result;
   };
 
   return {
+    lookupCacheKey,
+    analysisCacheKey,
+    suggestionCacheKey,
     lookupWord,
     extractStory,
     translate,

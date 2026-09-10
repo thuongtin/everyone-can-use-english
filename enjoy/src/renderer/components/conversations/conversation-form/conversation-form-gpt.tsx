@@ -13,14 +13,19 @@ import {
   SelectValue,
   SelectContent,
   SelectItem,
+  Slider,
   Textarea,
 } from "@renderer/components/ui";
 import {
   isLegacyProviderModel,
+  isSupportedProvider,
   providerSupportsOption,
   resolveProviderSwitchBaseUrl,
   type AiProviderId,
 } from "@/lib/ai-providers";
+
+const FIELD =
+  "h-9 rounded-[10px] border-ej-line bg-ej-surface text-xs text-ej-ink focus-visible:ring-ej-accent";
 
 export const ConversationFormGPT = (props: {
   conversation: Partial<ConversationType>;
@@ -28,6 +33,9 @@ export const ConversationFormGPT = (props: {
   gptProviders: any;
 }) => {
   const { form, gptProviders, conversation } = props;
+  const canRebindLegacyConversation = Boolean(
+    conversation?.id && !isSupportedProvider(conversation.engine)
+  );
   const selectedEngine = form.watch("engine") as AiProviderId;
   const selectedModel = form.watch("configuration.model") as string | undefined;
   const provider = gptProviders[selectedEngine];
@@ -49,9 +57,9 @@ export const ConversationFormGPT = (props: {
         name="engine"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>{t("models.conversation.engine")}</FormLabel>
+            <FormLabel className="ej-label">{t("models.conversation.engine")}</FormLabel>
             <Select
-              disabled={Boolean(conversation?.id)}
+              disabled={Boolean(conversation?.id) && !canRebindLegacyConversation}
               onValueChange={(value) => {
                 const currentProvider = form.getValues("engine");
                 const currentBaseUrl = form.getValues(
@@ -80,7 +88,7 @@ export const ConversationFormGPT = (props: {
               value={field.value}
             >
               <FormControl>
-                <SelectTrigger>
+                <SelectTrigger className={FIELD}>
                   <SelectValue placeholder={t("selectAiEngine")} />
                 </SelectTrigger>
               </FormControl>
@@ -92,7 +100,7 @@ export const ConversationFormGPT = (props: {
                 ))}
               </SelectContent>
             </Select>
-            <FormDescription>
+            <FormDescription className="text-xxs leading-4 text-ej-muted">
               {provider?.descriptionKey
                 ? t(provider.descriptionKey)
                 : t("aiEngineNotSupported")}
@@ -107,10 +115,10 @@ export const ConversationFormGPT = (props: {
         name="configuration.model"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>{t("models.conversation.model")}</FormLabel>
+            <FormLabel className="ej-label">{t("models.conversation.model")}</FormLabel>
             <Select onValueChange={field.onChange} value={field.value}>
               <FormControl>
-                <SelectTrigger>
+                <SelectTrigger className={FIELD}>
                   <SelectValue placeholder={t("selectAiModel")} />
                 </SelectTrigger>
               </FormControl>
@@ -134,10 +142,10 @@ export const ConversationFormGPT = (props: {
         name="configuration.roleDefinition"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>{t("models.conversation.roleDefinition")}</FormLabel>
+            <FormLabel className="ej-label">{t("models.conversation.roleDefinition")}</FormLabel>
             <Textarea
               placeholder={t("models.conversation.roleDefinitionPlaceholder")}
-              className="h-64"
+              className="min-h-[180px] rounded-[10px] border-ej-line bg-ej-surface text-xs leading-6 text-ej-ink focus-visible:ring-ej-accent"
               {...field}
             />
             <FormMessage />
@@ -151,20 +159,25 @@ export const ConversationFormGPT = (props: {
           name="configuration.temperature"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{t("models.conversation.temperature")}</FormLabel>
-              <Input
-                type="number"
-                min="0"
-                max="1.0"
-                step="0.1"
-                value={field.value}
-                onChange={(event) => {
-                  field.onChange(
-                    event.target.value ? parseFloat(event.target.value) : 0.0
-                  );
-                }}
-              />
-              <FormDescription>
+              <div className="flex items-center justify-between">
+                <FormLabel className="ej-label">
+                  {t("models.conversation.temperature")}
+                </FormLabel>
+                <span className="ej-tabular text-xxs font-semibold text-ej-accent-ink">
+                  {Number(field.value ?? 0).toFixed(1)}
+                </span>
+              </div>
+              <FormControl>
+                <Slider
+                  min={0}
+                  max={1}
+                  step={0.1}
+                  value={[Number(field.value ?? 0)]}
+                  onValueChange={([value]) => field.onChange(value)}
+                  className="py-2"
+                />
+              </FormControl>
+              <FormDescription className="text-xxs leading-4 text-ej-muted">
                 {t("models.conversation.temperatureDescription")}
               </FormDescription>
               <FormMessage />
@@ -179,8 +192,9 @@ export const ConversationFormGPT = (props: {
           name="configuration.maxTokens"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{t("models.conversation.maxTokens")}</FormLabel>
+              <FormLabel className="ej-label">{t("models.conversation.maxTokens")}</FormLabel>
               <Input
+                className={FIELD}
                 type="number"
                 min="0"
                 value={field.value}
@@ -189,7 +203,7 @@ export const ConversationFormGPT = (props: {
                   field.onChange(parseInt(event.target.value));
                 }}
               />
-              <FormDescription>
+              <FormDescription className="text-xxs leading-4 text-ej-muted">
                 {t("models.conversation.maxTokensDescription")}
               </FormDescription>
               <FormMessage />
@@ -204,8 +218,9 @@ export const ConversationFormGPT = (props: {
           name="configuration.presencePenalty"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{t("models.conversation.presencePenalty")}</FormLabel>
+              <FormLabel className="ej-label">{t("models.conversation.presencePenalty")}</FormLabel>
               <Input
+                className={FIELD}
                 type="number"
                 min="-2"
                 step="0.1"
@@ -216,7 +231,7 @@ export const ConversationFormGPT = (props: {
                   field.onChange(parseInt(event.target.value));
                 }}
               />
-              <FormDescription>
+              <FormDescription className="text-xxs leading-4 text-ej-muted">
                 {t("models.conversation.presencePenaltyDescription")}
               </FormDescription>
               <FormMessage />
@@ -231,8 +246,9 @@ export const ConversationFormGPT = (props: {
           name="configuration.frequencyPenalty"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{t("models.conversation.frequencyPenalty")}</FormLabel>
+              <FormLabel className="ej-label">{t("models.conversation.frequencyPenalty")}</FormLabel>
               <Input
+                className={FIELD}
                 type="number"
                 min="-2"
                 step="0.1"
@@ -243,7 +259,7 @@ export const ConversationFormGPT = (props: {
                   field.onChange(parseInt(event.target.value));
                 }}
               />
-              <FormDescription>
+              <FormDescription className="text-xxs leading-4 text-ej-muted">
                 {t("models.conversation.frequencyPenaltyDescription")}
               </FormDescription>
               <FormMessage />
@@ -258,8 +274,9 @@ export const ConversationFormGPT = (props: {
           name="configuration.numberOfChoices"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{t("models.conversation.numberOfChoices")}</FormLabel>
+              <FormLabel className="ej-label">{t("models.conversation.numberOfChoices")}</FormLabel>
               <Input
+                className={FIELD}
                 type="number"
                 min="1"
                 step="1.0"
@@ -270,7 +287,7 @@ export const ConversationFormGPT = (props: {
                   );
                 }}
               />
-              <FormDescription>
+              <FormDescription className="text-xxs leading-4 text-ej-muted">
                 {t("models.conversation.numberOfChoicesDescription")}
               </FormDescription>
               <FormMessage />
@@ -284,8 +301,9 @@ export const ConversationFormGPT = (props: {
         name="configuration.historyBufferSize"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>{t("models.conversation.historyBufferSize")}</FormLabel>
+            <FormLabel className="ej-label">{t("models.conversation.historyBufferSize")}</FormLabel>
             <Input
+              className={FIELD}
               type="number"
               min="0"
               step="1"
@@ -297,7 +315,7 @@ export const ConversationFormGPT = (props: {
                 );
               }}
             />
-            <FormDescription>
+            <FormDescription className="text-xxs leading-4 text-ej-muted">
               {t("models.conversation.historyBufferSizeDescription")}
             </FormDescription>
             <FormMessage />
@@ -311,9 +329,10 @@ export const ConversationFormGPT = (props: {
           name="configuration.baseUrl"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{t("models.conversation.baseUrl")}</FormLabel>
+              <FormLabel className="ej-label">{t("models.conversation.baseUrl")}</FormLabel>
               <Input
                 {...field}
+                className={FIELD}
                 placeholder={t("models.conversation.baseUrlDescription")}
               />
               <FormMessage />

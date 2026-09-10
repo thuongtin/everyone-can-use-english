@@ -61,7 +61,7 @@ try {
     return headers?.[name] || headers?.[name.toLowerCase()] || null;
   };
 
-  await test("keeps legacy models and adds direct OpenAI TTS", () => {
+  await test("keeps legacy model metadata and exposes direct speech models", () => {
     assert.deepEqual([...ENJOYAI_TTS_MODELS], ["tts-1", "tts-1-hd"]);
     assert.deepEqual([...OPENAI_TTS_MODELS], [
       "tts-1",
@@ -78,22 +78,17 @@ try {
     ]);
   });
 
-  await test("normalizes prefixed models without changing endpoint ownership", () => {
+  await test("rejects legacy routing and resolves direct speech providers", () => {
     assert.equal(normalizeSpeechModel(" openai/tts-1-hd "), "tts-1-hd");
-    assert.deepEqual(resolveTtsModel("enjoyai", "openai/tts-1"), {
-      engine: "enjoyai",
-      provider: "openai",
-      model: "openai/tts-1",
-      apiModel: "tts-1",
-    });
+    assert.throws(() => resolveTtsModel("enjoyai", "openai/tts-1"), /not supported/);
     assert.deepEqual(resolveTtsModel("openai", "openai/gpt-4o-mini-tts"), {
       engine: "openai",
       provider: "openai",
       model: "gpt-4o-mini-tts",
       apiModel: "gpt-4o-mini-tts",
     });
-    assert.deepEqual(resolveTtsModel("enjoyai", "azure/speech"), {
-      engine: "enjoyai",
+    assert.deepEqual(resolveTtsModel("azure", "azure/speech"), {
+      engine: "azure",
       provider: "azure",
       model: "azure/speech",
     });
@@ -169,7 +164,7 @@ try {
     );
   });
 
-  await test("normalizes legacy STT and builds the verified file contract", () => {
+  await test("builds model-specific OpenAI transcription contracts", () => {
     assert.equal(normalizeOpenAiTranscriptionModel(undefined), "whisper-1");
     assert.equal(normalizeOpenAiTranscriptionModel(" gpt-transcribe "), "gpt-transcribe");
     const file = { name: "audio.mp3" };
@@ -180,10 +175,24 @@ try {
     }), {
       file,
       model: "gpt-transcribe",
+      response_format: "json",
+      language: "en",
+    });
+    assert.deepEqual(buildOpenAiTranscriptionRequest({
+      file,
+      model: "whisper-1",
+      language: "en-US",
+    }), {
+      file,
+      model: "whisper-1",
       response_format: "verbose_json",
       timestamp_granularities: ["word", "segment"],
       language: "en",
     });
+    assert.throws(
+      () => normalizeOpenAiTranscriptionModel("unknown-transcriber"),
+      /not supported/
+    );
   });
 
   await test("sends gpt-transcribe as multipart without realtime fields", async () => {
@@ -224,9 +233,8 @@ try {
       `Bearer ${fakeApiKey}`
     );
     assert.match(body, /name="model"\r\n\r\ngpt-transcribe/);
-    assert.match(body, /name="response_format"\r\n\r\nverbose_json/);
-    assert.match(body, /name="timestamp_granularities\[\]"\r\n\r\nword/);
-    assert.match(body, /name="timestamp_granularities\[\]"\r\n\r\nsegment/);
+    assert.match(body, /name="response_format"\r\n\r\njson/);
+    assert.equal(body.includes("timestamp_granularities"), false);
     assert.match(body, /name="language"\r\n\r\nen/);
     assert.equal(body.includes("gpt-live-transcribe"), false);
     assert.equal(body.includes("logprobs"), false);
@@ -286,13 +294,45 @@ try {
     path.join(root, "src/renderer/hooks/use-speech.tsx"),
     "utf8"
   );
-  assert.match(speechSource, /resolveTtsModel/);
-  assert.doesNotMatch(speechSource, /model\.match\(/);
+  assert.match(speechSource, /EnjoyApp\.speeches\.generate\(/);
+  assert.doesNotMatch(
+    speechSource,
+    /OpenAIClient|microsoft-cognitiveservices|fromAuthorizationToken|generateSpeechToken|consumeSpeechToken|revokeSpeechToken/,
+  );
+
+  const pronunciationHookSource = await readFile(
+    path.join(root, "src/renderer/hooks/use-pronunciation-assessments.tsx"),
+    "utf8",
+  );
+  assert.match(pronunciationHookSource, /pronunciationAssessments\.assess\(/);
+  assert.match(pronunciationHookSource, /getAzureConfig\(/);
+  assert.doesNotMatch(pronunciationHookSource, /Client|SpeechConfig|generateSpeechToken/);
+  const pronunciationFormSource = await readFile(
+    path.join(
+      root,
+      "src/renderer/components/pronunciation-assessments/pronunciation-assessment-form.tsx",
+    ),
+    "utf8",
+  );
+  assert.match(
+    pronunciationFormSource,
+    /recording = await createRecording\(data\)[\s\S]*if \(!\(await ensureAssessmentReady\(\)\)\)/,
+  );
+  assert.doesNotMatch(pronunciationFormSource, /onStart=\{async[\s\S]{0,160}ensureAssessmentReady/);
+  assert.doesNotMatch(
+    pronunciationFormSource,
+    /recordings\.destroy\(recording\.id\)/,
+  );
+
   const mainSpeechSource = await readFile(
     path.join(root, "src/main/db/models/speech.ts"),
     "utf8"
   );
   assert.match(mainSpeechSource, /selectCanonicalOpenAiConfig/);
+  assert.match(mainSpeechSource, /UserSettingKeyEnum\.TTS_CONFIG/);
+  assert.match(mainSpeechSource, /createAzureSpeechProvider/);
+  assert.match(mainSpeechSource, /createOpenAiSpeechProvider/);
+  assert.doesNotMatch(mainSpeechSource, /engine\s*=\s*"openai"|enjoyAiApiKey|api\/ai/);
 
   console.log(`PASS: ${tests.length} speech contract cases.`);
 } finally {

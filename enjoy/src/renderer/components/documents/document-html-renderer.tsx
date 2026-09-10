@@ -1,8 +1,7 @@
 import { Readability } from "@mozilla/readability";
 import { useContext, useEffect, useState } from "react";
 import {
-  DocumentActionsButton,
-  DocumentConfigButton,
+  DocumentToolbar,
   LoaderSpin,
   MarkdownWrapper,
 } from "@renderer/components";
@@ -11,8 +10,6 @@ import {
   AppSettingsProviderContext,
   DocumentProviderContext,
 } from "@/renderer/context";
-import { Button } from "../ui";
-import { LinkIcon } from "lucide-react";
 
 export const DocumentHtmlRenderer = () => {
   const { document, onSpeech, onSegmentVisible, content, setContent } =
@@ -49,29 +46,8 @@ export const DocumentHtmlRenderer = () => {
 
   return (
     <div className="select-text relative">
-      <div className="flex items-center justify-between space-x-2 sticky top-0 z-10 bg-background py-2">
-        <div className="flex items-center gap-2">
-          <DocumentConfigButton document={document} />
-          <DocumentActionsButton document={document} />
-        </div>
-        <div className="text-xs text-muted-foreground max-w-full truncate">
-          {title}
-        </div>
-        <div className="flex items-center gap-2">
-          {document.metadata?.source && (
-            <Button
-              variant="ghost"
-              size="icon"
-              className="w-6 h-6"
-              onClick={() => {
-                EnjoyApp.shell.openExternal(document.metadata.source);
-              }}
-            >
-              <LinkIcon className="w-4 h-4" />
-            </Button>
-          )}
-        </div>
-      </div>
+      <DocumentToolbar title={title} />
+
       <MarkdownWrapper
         className="mx-auto max-w-full document-renderer"
         autoTranslate={document.config.autoTranslate}

@@ -1,20 +1,14 @@
 import { t } from "i18next";
 import {
-  ENJOYAI_TTS_MODELS,
   OPENAI_TTS_MODELS,
   OPENAI_TTS_VOICES,
 } from "@/lib/speech-models";
 
 export const TTS_PROVIDERS: { [key: string]: any } = {
-  enjoyai: {
-    name: "EnjoyAI",
-    models: [
-      ...ENJOYAI_TTS_MODELS.map((model) => `openai/${model}`),
-      "azure/speech",
-    ],
-    voices: {
-      openai: [...OPENAI_TTS_VOICES],
-      azure: [
+  azure: {
+    name: "Azure Speech",
+    models: ["azure/speech"],
+    voices: [
         {
           label: "Katja (Female)",
           value: "de-DE-KatjaNeural",
@@ -738,7 +732,6 @@ export const TTS_PROVIDERS: { [key: string]: any } = {
           language: "vi-VN",
         },
       ],
-    },
     configurable: ["model", "language", "voice"],
   },
   openai: {

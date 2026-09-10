@@ -1,4 +1,6 @@
 type EnjoyAppType = {
+  localStudy: import("./local-study-api").LocalStudyBridge;
+  acp: import("./acp-api").AcpBridge;
   app: {
     getPlatformInfo: () => Promise<PlatformInfo>;
     reset: () => Promise<void>;
@@ -6,8 +8,7 @@ type EnjoyAppType = {
     relaunch: () => Promise<void>;
     reload: () => Promise<void>;
     isPackaged: () => Promise<boolean>;
-    apiUrl: () => Promise<string>;
-    wsUrl: () => Promise<string>;
+    networkPolicyDiagnostics: () => Promise<import("../lib/network-policy").NetworkPolicyDiagnostics>;
     quit: () => Promise<void>;
     openDevTools: () => Promise<void>;
     createIssue: (title: string, body: string) => Promise<void>;
@@ -24,6 +25,7 @@ type EnjoyAppType = {
     ) => void;
     removeUpdaterListeners: () => void;
     diskUsage: () => Promise<DiskUsageType>;
+    diskFree: () => Promise<number>;
     version: string;
   };
   window: {
@@ -71,7 +73,7 @@ type EnjoyAppType = {
       downloadTalk: (url: string) => Promise<{ audio: string; video: string }>;
     };
     youtube: {
-      videos: (channel: string) => Promise<YoutubeVideoType[]>;
+      videos: (channel: string) => Promise<YoutubeChannelType>;
     };
   };
   view: {
@@ -91,15 +93,6 @@ type EnjoyAppType = {
     hide: () => Promise<void>;
     remove: () => Promise<void>;
     scrape: (url: string) => Promise<void>;
-    loadCommunity: (
-      bounds: { x: number; y: number; width: number; height: number },
-      options?: {
-        navigatable?: boolean;
-        accessToken?: string;
-        url?: string;
-        ssoUrl?: string;
-      }
-    ) => Promise<void>;
     resize: (bounds: {
       x: number;
       y: number;
@@ -162,8 +155,6 @@ type EnjoyAppType = {
     getUser: () => Promise<UserType>;
     setUser: (user: UserType) => Promise<void>;
     getUserDataPath: () => Promise<string>;
-    getApiUrl: () => Promise<string>;
-    setApiUrl: (url: string) => Promise<void>;
     getSessions: () => Promise<{ id: string }[]>;
   };
   userSettings: {
@@ -176,9 +167,10 @@ type EnjoyAppType = {
   path: {
     join: (...paths: string[]) => Promise<string>;
   };
+  learning: import("./learning-api").LearningBridge;
   db: {
-    connect: () => Promise<DbState>;
-    disconnect: () => Promise<void>;
+    connect: () => Promise<import("../renderer/lib/db-lifecycle").DbConnectionState>;
+    disconnect: (connectionId?: string) => Promise<void>;
     onTransaction: (
       callback: (event, state: TransactionStateType) => void
     ) => Promise<void>;
@@ -206,7 +198,6 @@ type EnjoyAppType = {
     create: (uri: string, params?: any) => Promise<AudioType>;
     update: (id: string, params: any) => Promise<AudioType | undefined>;
     destroy: (id: string) => Promise<undefined>;
-    upload: (id: string) => Promise<void>;
     crop: (
       id: string,
       params: { startTime: number; endTime: number }
@@ -219,7 +210,6 @@ type EnjoyAppType = {
     create: (uri: string, params?: any) => Promise<VideoType>;
     update: (id: string, params: any) => Promise<VideoType | undefined>;
     destroy: (id: string) => Promise<undefined>;
-    upload: (id: string) => Promise<void>;
     crop: (
       id: string,
       params: { startTime: number; endTime: number }
@@ -229,8 +219,6 @@ type EnjoyAppType = {
   recordings: {
     findAll: (where: any) => Promise<RecordingType[]>;
     findOne: (where: any) => Promise<RecordingType>;
-    sync: (id: string) => Promise<void>;
-    syncAll: () => Promise<void>;
     create: (params: any) => Promise<RecordingType>;
     update: (id: string, params: any) => Promise<RecordingType | undefined>;
     destroy: (id: string) => Promise<void>;
@@ -241,7 +229,6 @@ type EnjoyAppType = {
       scoreLessThan80: string[];
       all: string[];
     }>;
-    upload: (id: string) => Promise<void>;
     stats: (params: { from: string; to: string }) => Promise<{
       count: number;
       duration: number;
@@ -270,6 +257,7 @@ type EnjoyAppType = {
     export: (targetId: string, targetType: string) => Promise<string>;
   };
   pronunciationAssessments: {
+    assess: (params: { recordingId: string; language?: string; reference?: string }) => Promise<PronunciationAssessmentType>;
     findAll: (params: any) => Promise<PronunciationAssessmentType[]>;
     findOne: (params: any) => Promise<PronunciationAssessmentType>;
     create: (params: any) => Promise<PronunciationAssessmentType>;
@@ -292,6 +280,9 @@ type EnjoyAppType = {
     createSpeech: (id: string, configuration?: any) => Promise<SpeechType>;
   };
   speeches: {
+    generate: (params: { sourceId: string; sourceType: string; text: string; section?: number; segment?: number; configuration?: { engine?: string; model?: string; voice?: string; baseUrl?: string } }) => Promise<SpeechType>;
+    getAzureConfig: () => Promise<{ region: string; endpoint: string; configured: boolean; transcriptionConfigured: boolean }>;
+    setAzureConfig: (update: { region?: string; endpoint?: string; key?: string; clearKey?: boolean }) => Promise<{ region: string; endpoint: string; configured: boolean; transcriptionConfigured: boolean }>;
     findOne: (where: any) => Promise<SpeechType>;
     create: (
       params: {
@@ -341,6 +332,8 @@ type EnjoyAppType = {
       log: string;
     }>;
   };
+  learningAsr: import("./learning-asr").LearningAsrBridge;
+  cloudflareTranscribe: import("./cloudflare-transcribe").CloudflareTranscribeBridge;
   ffmpeg: {
     check: () => Promise<boolean>;
     transcode: (
@@ -390,7 +383,6 @@ type EnjoyAppType = {
       targetType: string;
       segmentIndex: number;
     }) => Promise<SegmentType>;
-    sync: (id: string) => Promise<SegmentType>;
   };
   notes: {
     groupByTarget: (params: any) => Promise<any>;
@@ -411,7 +403,6 @@ type EnjoyAppType = {
       content: string;
       parameters?: any;
     }) => Promise<NoteType>;
-    sync: (id: string) => Promise<NoteType>;
   };
   chats: {
     findAll: (params: any) => Promise<ChatType[]>;
@@ -447,7 +438,6 @@ type EnjoyAppType = {
     create: (params: any) => Promise<DocumentEType>;
     update: (id: string, params: any) => Promise<DocumentEType>;
     destroy: (id: string) => Promise<void>;
-    upload: (id: string) => Promise<void>;
     cleanUp: () => Promise<void>;
   };
 };

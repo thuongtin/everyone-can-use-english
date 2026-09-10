@@ -4,17 +4,18 @@ import { t } from "i18next";
 import { Link } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
 import { AppSettingsProviderContext } from "@renderer/context";
+import type { LocalStory } from "../../../types/local-study-api";
 
 export const StoriesSegment = () => {
-  const [stories, setStorys] = useState<StoryType[]>([]);
-  const { webApi } = useContext(AppSettingsProviderContext);
+  const [stories, setStories] = useState<LocalStory[]>([]);
+  const { EnjoyApp } = useContext(AppSettingsProviderContext);
 
   const fetchStorys = async () => {
-    webApi
-      .mineStories()
+    EnjoyApp.localStudy.stories
+      .list({ page: 1, items: 10 })
       .then((response) => {
         if (response?.stories) {
-          setStorys(response.stories);
+          setStories(response.stories);
         }
       })
       .catch((err) => {
@@ -24,7 +25,7 @@ export const StoriesSegment = () => {
 
   useEffect(() => {
     fetchStorys();
-  }, []);
+  }, [EnjoyApp]);
 
   if (stories.length == 0) return null;
 

@@ -1,3 +1,5 @@
+import { isRetiredEnjoyHostname } from "../../enjoy/src/lib/network-policy";
+
 export type DistributionLinks = {
   docsUrl: string;
   downloadUrl: string;
@@ -27,6 +29,7 @@ export function isValidHttpUrl(value: unknown): value is string {
     return (
       (url.protocol === "http:" || url.protocol === "https:") &&
       url.hostname.length > 0 &&
+      !isRetiredEnjoyHostname(url.hostname) &&
       url.username.length === 0 &&
       url.password.length === 0
     );

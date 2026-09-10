@@ -3,7 +3,6 @@ import {
   useContext,
   useRef,
   useState,
-  useMemo,
   useCallback,
 } from "react";
 import {
@@ -12,19 +11,17 @@ import {
   MediaShadowProviderContext,
 } from "@renderer/context";
 import { RecordingDetail } from "@renderer/components";
-import { cn, renderPitchContour } from "@renderer/lib/utils";
+import {
+  cn,
+  formatDuration,
+  renderPitchContour,
+} from "@renderer/lib/utils";
+import { createLearningSegmentPlaybackController } from "@renderer/lib/learning-segment-playback";
+import { RecordingDot } from "@renderer/components/enjoy";
 import { extractFrequencies } from "@/utils";
 import WaveSurfer from "wavesurfer.js";
 import Regions from "wavesurfer.js/dist/plugins/regions";
 import {
-  AlertDialog,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogCancel,
-  AlertDialogAction,
   Button,
   DropdownMenu,
   DropdownMenuItem,
@@ -41,7 +38,6 @@ import {
   GitCompareIcon,
   PauseIcon,
   PlayIcon,
-  Share2Icon,
   GaugeCircleIcon,
   ChevronDownIcon,
   MoreHorizontalIcon,
@@ -53,7 +49,6 @@ import {
   CheckIcon,
 } from "lucide-react";
 import { t } from "i18next";
-import { formatDuration } from "@renderer/lib/utils";
 import { useHotkeys } from "react-hotkeys-hook";
 import { LiveAudioVisualizer } from "react-audio-visualize";
 import debounce from "lodash/debounce";
@@ -71,13 +66,11 @@ export const MediaCurrentRecording = () => {
     wavesurfer,
     zoomRatio,
     editingRegion,
-    currentSegment,
-    createSegment,
     currentTime: mediaCurrentTime,
     caption,
     toggleRegion,
   } = useContext(MediaShadowProviderContext);
-  const { webApi, EnjoyApp } = useContext(AppSettingsProviderContext);
+  const { EnjoyApp } = useContext(AppSettingsProviderContext);
   const { currentHotkeys } = useContext(HotKeysSettingsProviderContext);
   const [player, setPlayer] = useState(null);
   const [regions, setRegions] = useState<Regions | null>(null);
@@ -85,7 +78,6 @@ export const MediaCurrentRecording = () => {
 
   const [detailIsOpen, setDetailIsOpen] = useState(false);
   const [isComparing, setIsComparing] = useState(false);
-  const [isSharing, setIsSharing] = useState(false);
   const [isSelectingRegion, setIsSelectingRegion] = useState(false);
 
   const [frequencies, setFrequencies] = useState<number[]>([]);
@@ -94,6 +86,25 @@ export const MediaCurrentRecording = () => {
   const [actionButtonsCount, setActionButtonsCount] = useState(0);
 
   const ref = useRef(null);
+  const recordingPlaybackRef = useRef<
+    ReturnType<typeof createLearningSegmentPlaybackController> | null
+  >(null);
+
+  useEffect(() => {
+    if (!player) return;
+
+    const controller = createLearningSegmentPlaybackController({
+      player,
+    });
+    recordingPlaybackRef.current = controller;
+
+    return () => {
+      if (recordingPlaybackRef.current === controller) {
+        recordingPlaybackRef.current = null;
+      }
+      controller.destroy();
+    };
+  }, [player]);
 
   const removeComparingPitchContour = () => {
     if (!wavesurfer) return;
@@ -189,53 +200,6 @@ export const MediaCurrentRecording = () => {
       setIsComparing(true);
       renderComparingPitchContour();
     }
-  };
-
-  const handleShare = async () => {
-    if (!currentRecording) return;
-
-    if (!currentRecording.isSynced) {
-      try {
-        await EnjoyApp.recordings.sync(currentRecording.id);
-      } catch (error) {
-        toast.error(t("shareFailed"), { description: error.message });
-        return;
-      }
-    }
-    if (!currentRecording.uploadedAt) {
-      try {
-        await EnjoyApp.recordings.upload(currentRecording.id);
-      } catch (error) {
-        toast.error(t("shareFailed"), { description: error.message });
-        return;
-      }
-    }
-
-    try {
-      const segment = currentSegment || (await createSegment());
-      if (!segment) throw new Error("Failed to create segment");
-
-      await EnjoyApp.segments.sync(segment.id);
-    } catch (error) {
-      toast.error(t("shareFailed"), { description: error.message });
-      return;
-    }
-
-    webApi
-      .createPost({
-        targetId: currentRecording.id,
-        targetType: "Recording",
-      })
-      .then(() => {
-        toast.success(t("sharedSuccessfully"), {
-          description: t("sharedRecording"),
-        });
-      })
-      .catch((error) => {
-        toast.error(t("shareFailed"), {
-          description: error.message,
-        });
-      });
   };
 
   const handleDownload = () => {
@@ -399,16 +363,16 @@ export const MediaCurrentRecording = () => {
 
       regions.on("region-clicked", (region, e) => {
         e.stopPropagation();
-        region.play();
+        recordingPlaybackRef.current?.playRegion(region);
       }),
 
-      regions.on("region-out", () => {
-        player.pause();
+      regions.on("region-out", (region) => {
+        recordingPlaybackRef.current?.handleRegionOut(region);
       }),
     ];
 
     return () => {
-      disableSelectingRegion && disableSelectingRegion();
+      if (disableSelectingRegion) disableSelectingRegion();
       regions.clearRegions();
       subscriptions.forEach((unsub) => unsub());
     };
@@ -437,10 +401,12 @@ export const MediaCurrentRecording = () => {
     if (player?.isPlaying()) return;
     if (!mediaActiveRegion?.id?.startsWith("segment-region")) return;
 
-    regions
+    const voiceRegion = regions
       .getRegions()
-      .find((r) => r.id.startsWith("recording-voice-region"))
-      ?.play();
+      .find((r) => r.id.startsWith("recording-voice-region"));
+    if (voiceRegion) {
+      recordingPlaybackRef.current?.playRegion(voiceRegion);
+    }
   }, [
     wavesurfer,
     player,
@@ -520,7 +486,8 @@ export const MediaCurrentRecording = () => {
           ?.find((r) => r.id.startsWith("recording-voice-region"));
 
         if (region) {
-          region.play();
+          recordingPlaybackRef.current?.setActiveRegion(region);
+          recordingPlaybackRef.current?.toggle();
         } else {
           player?.playPause();
         }
@@ -562,15 +529,6 @@ export const MediaCurrentRecording = () => {
       asChild: false,
     },
     {
-      id: "media-share-button",
-      name: "share",
-      label: t("share"),
-      icon: Share2Icon,
-      active: isSharing,
-      onClick: () => setIsSharing(true),
-      asChild: false,
-    },
-    {
       id: "media-download-button",
       name: "download",
       label: t("download"),
@@ -587,29 +545,23 @@ export const MediaCurrentRecording = () => {
 
   if (!currentRecording?.src)
     return (
-      <div className="h-full w-full flex items-center justify-center border rounded-xl shadow">
-        <div className="m-auto">
-          <div className="flex justify-center items-center mb-2">
-            <div className="w-8 aspect-square rounded-full overflow-hidden">
-              <MediaRecordButton />
-            </div>
-          </div>
-          <div
-            className=""
-            dangerouslySetInnerHTML={{
-              __html: t("noRecordingForThisSegmentYet", {
-                key: currentHotkeys.StartOrStopRecording?.toUpperCase(),
-              }),
-            }}
-          ></div>
-        </div>
+      <div className="h-full w-full flex items-center justify-center gap-4 rounded-ej border border-dashed border-ej-line2 bg-ej-surface2/30">
+        <MediaRecordButton variant="pill" />
+        <div
+          className="text-xs text-ej-muted max-w-xs"
+          dangerouslySetInnerHTML={{
+            __html: t("noRecordingForThisSegmentYet", {
+              key: currentHotkeys.StartOrStopRecording?.toUpperCase(),
+            }),
+          }}
+        ></div>
       </div>
     );
 
   return (
     <div
       ref={ref}
-      className="h-full flex media-recording-wrapper border rounded-xl shadow overflow-hidden"
+      className="h-full flex media-recording-wrapper border border-ej-line rounded-ej bg-ej-surface2/30 overflow-hidden"
     >
       <div className="flex-1 relative media-recording-container">
         <div
@@ -620,10 +572,10 @@ export const MediaCurrentRecording = () => {
           className="waveform-container"
         ></div>
 
-        <div className="absolute right-2 top-1">
-          <span className="text-sm">{formatDuration(currentTime || 0)}</span>
+        <div className="absolute right-2 top-1 rounded-full bg-ej-surface/85 px-2 py-0.5 text-xxs ej-tabular text-ej-muted">
+          <span>{formatDuration(currentTime || 0)}</span>
           <span className="mx-1">/</span>
-          <span className="text-sm">
+          <span>
             {formatDuration(
               player?.getDuration() || currentRecording.duration / 1000.0 || 0
             )}
@@ -636,7 +588,7 @@ export const MediaCurrentRecording = () => {
           actionButtonsCount < Actions.length
             ? actionButtonsCount + 1
             : Actions.length
-        } w-10 border-l rounded-r-lg`}
+        } w-10 border-l border-ej-line`}
       >
         {Actions.slice(0, actionButtonsCount).map((action) => (
           <Button
@@ -673,7 +625,7 @@ export const MediaCurrentRecording = () => {
                   id={action.id}
                   key={action.name}
                   className={`cursor-pointer ${
-                    action.active ? "bg-muted" : ""
+                    action.active ? "bg-ej-surface2" : ""
                   }`}
                   onClick={action.onClick}
                 >
@@ -688,37 +640,20 @@ export const MediaCurrentRecording = () => {
         )}
       </div>
 
-      <AlertDialog open={isSharing} onOpenChange={setIsSharing}>
-        <AlertDialogContent aria-describedby={undefined}>
-          <AlertDialogHeader>
-            <AlertDialogTitle>{t("shareRecording")}</AlertDialogTitle>
-            <AlertDialogDescription>
-              {t("areYouSureToShareThisRecordingToCommunity")}
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>{t("cancel")}</AlertDialogCancel>
-            <AlertDialogAction asChild>
-              <Button onClick={handleShare}>{t("share")}</Button>
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
-
       <Sheet open={detailIsOpen} onOpenChange={(open) => setDetailIsOpen(open)}>
         <SheetContent
           container="main-panel-content"
           aria-describedby={undefined}
           side="bottom"
-          className="rounded-t-2xl shadow-lg max-h-content overflow-y-scroll"
+          className="rounded-t-ej-lg border-t border-ej-line bg-ej-bg shadow-ej max-h-content overflow-y-auto scroll"
           displayClose={false}
         >
-          <SheetHeader className="flex items-center justify-center -mt-4 mb-2">
-            <SheetTitle className="hidden">
+          <SheetHeader className="-mt-2 mb-3 flex flex-row items-center justify-between gap-2 space-y-0">
+            <SheetTitle className="ej-label">
               {t("pronunciationAssessment")}
             </SheetTitle>
-            <SheetClose>
-              <ChevronDownIcon />
+            <SheetClose className="inline-flex items-center justify-center size-7 rounded-lg text-ej-ink2 hover:bg-ej-surface2 transition-colors duration-ej">
+              <ChevronDownIcon className="size-4" />
             </SheetClose>
           </SheetHeader>
 
@@ -732,32 +667,15 @@ export const MediaCurrentRecording = () => {
   );
 };
 
-export const MediaRecordButton = () => {
-  const { media, isRecording, startRecording, stopRecording } = useContext(
+export const MediaRecordButton = (props: { variant?: "fill" | "pill" }) => {
+  const { variant = "fill" } = props;
+  const { isRecording, startRecording, stopRecording } = useContext(
     MediaShadowProviderContext
   );
-  const { EnjoyApp } = useContext(AppSettingsProviderContext);
-  const [access, setAccess] = useState(true);
-
-  const askForMediaAccess = () => {
-    EnjoyApp.system.preferences.mediaAccess("microphone").then((access) => {
-      if (access) {
-        setAccess(true);
-      } else {
-        setAccess(false);
-        toast.warning(t("noMicrophoneAccess"));
-      }
-    });
-  };
-
-  useEffect(() => {
-    askForMediaAccess();
-  }, [media]);
 
   return (
     <Button
       variant="ghost"
-      disabled={!access}
       onClick={() => {
         if (isRecording) {
           stopRecording();
@@ -770,12 +688,25 @@ export const MediaRecordButton = () => {
       data-tooltip-content={
         isRecording ? t("stopRecording") : t("startRecording")
       }
-      className="p-0 h-full w-full rounded-none bg-red-500 hover:bg-red-500/90"
+      className={cn(
+        "text-white",
+        variant === "pill"
+          ? "h-[44px] px-5 rounded-full gap-2 text-[13px] font-semibold shadow-ej"
+          : "p-0 h-full w-full rounded-none",
+        isRecording
+          ? "bg-ej-bad hover:bg-ej-bad/90"
+          : variant === "pill"
+          ? "bg-ej-accent hover:bg-ej-accent-ink"
+          : "bg-ej-bad hover:bg-ej-bad/90"
+      )}
     >
       {isRecording ? (
-        <SquareIcon fill="white" className="w-4 h-4 text-white" />
+        <SquareIcon fill="currentColor" className="size-4" />
       ) : (
-        <MicIcon className="w-4 h-4 text-white" />
+        <MicIcon className="size-4" />
+      )}
+      {variant === "pill" && (
+        <span>{isRecording ? t("stopRecording") : t("startRecording")}</span>
       )}
     </Button>
   );
@@ -824,7 +755,7 @@ const MediaRecorder = () => {
   return (
     <div
       ref={ref}
-      className="w-full h-full flex justify-center items-center gap-4 border rounded-xl shadow"
+      className="w-full h-full flex justify-center items-center gap-4 rounded-ej border border-ej-bad/40 bg-ej-bad-soft/50"
     >
       {size?.width && size?.width > 1024 && (
         <LiveAudioVisualizer
@@ -839,7 +770,8 @@ const MediaRecorder = () => {
           smoothingTimeConstant={0.4}
         />
       )}
-      <span className="font-sans text-muted-foreground text-sm">
+      <span className="flex items-center gap-2 text-[15px] font-bold ej-tabular text-ej-bad">
+        <RecordingDot />
         {Math.floor(recordingTime / 60)}:
         {String(recordingTime % 60).padStart(2, "0")}
       </span>
@@ -848,7 +780,7 @@ const MediaRecorder = () => {
           data-tooltip-id="media-shadow-tooltip"
           data-tooltip-content={t("cancel")}
           onClick={cancelRecording}
-          className="rounded-full shadow w-8 h-8 bg-red-500 hover:bg-red-600"
+          className="rounded-full shadow w-8 h-8 bg-ej-bad hover:bg-ej-bad/90"
           variant="secondary"
           size="icon"
         >
@@ -880,7 +812,7 @@ const MediaRecorder = () => {
           data-tooltip-id="media-shadow-tooltip"
           data-tooltip-content={t("finish")}
           onClick={stopRecording}
-          className="rounded-full bg-green-500 hover:bg-green-600 shadow w-8 h-8"
+          className="rounded-full bg-ej-ok hover:bg-ej-ok/90 shadow w-8 h-8"
           size="icon"
         >
           <CheckIcon className="w-4 h-4 text-white" />

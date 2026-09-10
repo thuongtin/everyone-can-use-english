@@ -24,7 +24,7 @@ export const textCommand = async (
     ? [new SystemMessage(options.systemPrompt), new HumanMessage(prompt)]
     : prompt;
 
-  const response = await chatModel.invoke(input);
+  const response = await chatModel.invoke(input, { signal: options.signal });
   assertChatModelResponseComplete(response);
   const text = getChatModelText(response).trim();
   if (!text) throw new Error("AI returned an empty response");

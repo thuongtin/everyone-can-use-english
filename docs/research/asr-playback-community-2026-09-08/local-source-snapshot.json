@@ -1,0 +1,13 @@
+{
+  "accessed": "2026-09-08",
+  "purpose": "Source mapping for research, not a new runtime acceptance run",
+  "files": {
+    "enjoy/src/main/cloudflare-transcribe/service.ts": "cfefd9dddaf4f36eb33d38d5accdac2cb1656fed69a926686e96dee2a2ebe5c0",
+    "services/enjoy-workers-ai/src/index.js": "2fb6a6889331c32972dc3971fa7f9c4ea7ffee0cbcb538f3184a0cece06cfd6d",
+    "enjoy/src/renderer/components/medias/media-bottom-panel/media-player-controls.tsx": "16c59a6267b6cdcfcff190b44a21ccb85e8e5b8e2b10450e7c807ec6100f84ee",
+    "enjoy/src/renderer/components/medias/media-left-panel/media-transcription.tsx": "a0ff705ff4ca1afd43d034f915f044545b4a4028a641f8e1318ae8ff8ff2d69c",
+    "enjoy/src/renderer/context/media-shadow-provider.tsx": "ac353eb01975d5e4e0fe6ea8b7b94d19c8d2faeda7c125156f30660fe822a391",
+    "enjoy/package.json": "36df810b3f32610fef3cf5f6466f1be57e10c2136beb850a1a3902874f289f91",
+    "yarn.lock": "a806c378b4d46c26c745731dcd924f05cfcf45a6d62a9ad1c37cd5a62ee301dd"
+  }
+}

@@ -1,3 +1,5 @@
+import { createMigrationBackup } from "./migration-backup";
+import { localStudyHandler } from "./handlers/local-study-handler";
 import { ipcMain } from "electron";
 import settings from "@main/settings";
 import { Sequelize } from "sequelize-typescript";
@@ -46,21 +48,35 @@ import { i18n } from "@main/i18n";
 import { UserSettingKeyEnum } from "@/types/enums";
 import log from "@main/logger";
 import fs from "fs-extra";
+import { LearningRuntime } from "../learning/runtime";
+import { createConfiguredLearningSpeechProvider } from "../learning/speech-configuration";
 
 const __dirname = import.meta.dirname;
 const logger = log.scope("DB");
 
 const db = {
   connection: null as Sequelize | null,
+  learning: null as LearningRuntime | null,
   connect: async () => {},
-  disconnect: async () => {},
+  disconnect: async (_connectionId?: string) => {},
+  shutdown: async () => {},
+  withDisconnected: async (_change: () => Promise<void> | void, _shouldDisconnect?: () => boolean) => {},
   registerIpcHandlers: () => {},
   isConnecting: false,
   backup: async (options?: { force: boolean }) => {},
   restore: async (backupFilePath: string) => {},
 };
 
+let lifecycleTail: Promise<void> = Promise.resolve();
+let shuttingDown = false;
+const serializeLifecycle = <T>(action: () => Promise<T>): Promise<T> => {
+  const operation = lifecycleTail.then(action);
+  lifecycleTail = operation.then((): void => undefined, (): void => undefined);
+  return operation;
+};
+
 const handlers = [
+  localStudyHandler,
   audiosHandler,
   cacheObjectsHandler,
   chatAgentsHandler,
@@ -80,13 +96,16 @@ const handlers = [
   videosHandler,
 ];
 
-db.connect = async () => {
+const connectInternal = async () => {
+  if (shuttingDown) throw new Error("Database is shutting down");
   // Use a lock to prevent concurrent connections
   if (db.isConnecting) {
     throw new Error("Database connection is already in progress");
   }
 
   db.isConnecting = true;
+  let opening: Sequelize | undefined;
+  let learning: LearningRuntime | undefined;
 
   try {
     if (db.connection) {
@@ -100,6 +119,7 @@ db.connect = async () => {
     const sequelize = new Sequelize({
       dialect: "sqlite",
       storage: dbPath,
+      logging: false,
       models: [
         Audio,
         CacheObject,
@@ -120,6 +140,7 @@ db.connect = async () => {
         Video,
       ],
     });
+    opening = sequelize;
 
     const migrationResolver: Resolver<unknown> = ({
       name,
@@ -172,9 +193,10 @@ db.connect = async () => {
     logger.info(pendingMigrations);
     if (pendingMigrations.length > 0) {
       try {
-        await db.backup({ force: true });
+        await createMigrationBackup({ sequelize, databasePath: dbPath, backupDirectory: path.join(settings.userDataPath(), "backup") });
       } catch (err) {
-        logger.error(err);
+        logger.error("Required pre-migration backup failed", err);
+        throw err;
       }
       try {
         // migrate up to the latest state
@@ -204,6 +226,7 @@ db.connect = async () => {
     await sequelize.query("PRAGMA foreign_keys = false;");
     await sequelize.sync();
     await sequelize.authenticate();
+    await UserSetting.migrateProviderSelections();
 
     // vacuum the database
     logger.info("Vacuuming the database");
@@ -215,6 +238,20 @@ db.connect = async () => {
     )) as string;
     i18n(language);
 
+    const userDataPath = settings.userDataPath();
+    const profileId = settings.getSync("user.id");
+    if (!userDataPath || !profileId) throw new Error("Database profile is not ready");
+    // Canonicalize the selected library parent; the owned asset subtree still rejects symlinks.
+    const canonicalUserDataPath = await fs.realpath(userDataPath);
+    learning = await LearningRuntime.open({
+      sequelize,
+      profileId: String(profileId),
+      assetRoot: path.join(canonicalUserDataPath, "learning-assets"),
+      speechProviderFactory: createConfiguredLearningSpeechProvider,
+    });
+
+    localStudyHandler.connect({ sequelize, profileId: String(profileId) });
+
     // register handlers
     logger.info(`Registering handlers`);
     for (const handler of handlers) {
@@ -222,8 +259,12 @@ db.connect = async () => {
     }
 
     db.connection = sequelize;
+    db.learning = learning;
     logger.info("Database connection established");
   } catch (err) {
+    for (const handler of handlers) handler.unregister();
+    await learning?.close();
+    if (opening && db.connection !== opening) await opening.close().catch((): void => undefined);
     logger.error(err);
     throw err;
   } finally {
@@ -231,7 +272,10 @@ db.connect = async () => {
   }
 };
 
-db.disconnect = async () => {
+const disconnectInternal = async (connectionId?: string) => {
+  if (connectionId && db.learning?.scope.context.connectionId !== connectionId) return;
+  // The connection remains available for draining writes until all owned work has stopped.
+  await db.learning?.close();
   // unregister handlers
   for (const handler of handlers) {
     handler.unregister();
@@ -239,7 +283,20 @@ db.disconnect = async () => {
 
   await db.connection?.close();
   db.connection = null;
+  db.learning = null;
 };
+
+db.connect = () => serializeLifecycle(connectInternal);
+db.disconnect = (connectionId) => serializeLifecycle(() => disconnectInternal(connectionId));
+db.shutdown = () => {
+  shuttingDown = true;
+  return serializeLifecycle(() => disconnectInternal());
+};
+db.withDisconnected = (change, shouldDisconnect = () => true) => serializeLifecycle(async () => {
+  if (shuttingDown) throw new Error("Database is shutting down");
+  if (shouldDisconnect()) await disconnectInternal();
+  await change();
+});
 
 db.backup = async (options?: { force: boolean }) => {
   const force = options?.force ?? false;
@@ -285,7 +342,8 @@ db.backup = async (options?: { force: boolean }) => {
   logger.info(`Backup created at ${backupFilePath}`);
 };
 
-db.restore = async (backupFilePath: string) => {
+db.restore = (backupFilePath: string) => serializeLifecycle(async () => {
+  if (shuttingDown) throw new Error("Database is shutting down");
   const dbPath = settings.dbPath();
   if (!dbPath) {
     logger.error("Db path is not ready");
@@ -298,7 +356,7 @@ db.restore = async (backupFilePath: string) => {
   }
 
   try {
-    await db.disconnect();
+    await disconnectInternal();
 
     fs.copySync(backupFilePath, dbPath);
     logger.info(`Database restored from ${backupFilePath}`);
@@ -306,9 +364,9 @@ db.restore = async (backupFilePath: string) => {
     logger.error(err);
     throw err;
   } finally {
-    db.connect();
+    await connectInternal();
   }
-};
+});
 
 db.registerIpcHandlers = () => {
   ipcMain.handle("db-connect", async () => {
@@ -316,16 +374,20 @@ db.registerIpcHandlers = () => {
       return {
         state: "connecting",
         path: settings.dbPath(),
-        error: null,
+        error: null as string | null,
       };
 
     try {
-      await db.connect();
-      return {
-        state: "connected",
-        path: settings.dbPath(),
-        error: null,
-      };
+      return await serializeLifecycle(async () => {
+        await connectInternal();
+        return {
+          state: "connected",
+          path: settings.dbPath(),
+          error: null as string | null,
+          connectionId: db.learning?.scope.context.connectionId,
+          profileId: db.learning?.scope.context.profileId,
+        };
+      });
     } catch (err) {
       return {
         state: "error",
@@ -335,16 +397,17 @@ db.registerIpcHandlers = () => {
     }
   });
 
-  ipcMain.handle("db-disconnect", async () => {
-    await db.disconnect();
+  ipcMain.handle("db-disconnect", async (_event, connectionId?: string) => {
+    if (typeof connectionId !== "string" || !connectionId) return;
+    await db.disconnect(connectionId);
   });
 
   ipcMain.handle("db-backup", async () => {
-    db.backup();
+    await serializeLifecycle(() => db.backup());
   });
 
   ipcMain.handle("db-restore", async (_, backupFilePath: string) => {
-    db.restore(backupFilePath);
+    await db.restore(backupFilePath);
   });
 };
 

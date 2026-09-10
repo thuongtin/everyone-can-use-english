@@ -7,7 +7,9 @@ import { extractFrequencies } from "@/utils";
 import { useIntersectionObserver } from "@uidotdev/usehooks";
 import { useCallback, useEffect, useRef, useState } from "react";
 import WaveSurfer from "wavesurfer.js";
-import { Button, Skeleton } from "@renderer/components/ui";
+import { Skeleton } from "@renderer/components/ui";
+import { EjButton } from "@renderer/components/enjoy";
+import { useEjColor } from "@renderer/hooks";
 import { PauseIcon, PlayIcon, XCircleIcon } from "lucide-react";
 import { v4 as uuidv4 } from "uuid";
 import { t } from "i18next";
@@ -31,7 +33,7 @@ export const WavesurferPlayer = (props: {
   const {
     id,
     src,
-    height = 80,
+    height = 56,
     onError,
     setCurrentTime: onSetCurrentTime,
     wavesurferOptions,
@@ -48,6 +50,8 @@ export const WavesurferPlayer = (props: {
   const [ref, entry] = useIntersectionObserver({
     threshold: 0,
   });
+  const waveColor = useEjColor("--ej-wave", "#cfcabf");
+  const waveOnColor = useEjColor("--ej-wave-on", "#2d6be0");
   const containerRef = useRef<HTMLDivElement>(null);
   const wavesurferRef = useRef<WaveSurfer | null>(null);
   const lifecycleRef = useRef<WavesurferLifecycle<WaveSurfer> | null>(null);
@@ -128,8 +132,8 @@ export const WavesurferPlayer = (props: {
           dragToSeek: true,
           hideScrollbar: true,
           minPxPerSec: 100,
-          waveColor: "#ddd",
-          progressColor: "rgba(0, 0, 0, 0.25)",
+          waveColor,
+          progressColor: waveOnColor,
           ...playerPropsRef.current.wavesurferOptions,
         };
         delete options.url;
@@ -202,12 +206,12 @@ export const WavesurferPlayer = (props: {
       }
       lifecycle.destroy();
     };
-  }, [autoplay, height, isIntersecting, src]);
+  }, [autoplay, height, isIntersecting, src, waveColor, waveOnColor]);
 
   return (
     <div className="w-full max-w-screen-lg">
-      <div className="flex justify-end">
-        <span className="text-xs text-muted-foreground">
+      <div className="mb-1 flex justify-end">
+        <span className="ej-tabular text-xxs text-ej-muted">
           {secondsToTimestamp(currentTime)} / {secondsToTimestamp(duration)}
         </span>
       </div>
@@ -215,34 +219,37 @@ export const WavesurferPlayer = (props: {
       <div
         ref={ref}
         className={cn(
-          "bg-background rounded-lg grid grid-cols-9 items-center relative h-[80px]",
+          "relative flex items-center gap-3 rounded-ej bg-ej-surface px-3",
           className
         )}
+        style={{ minHeight: height }}
       >
-        {initialized ? (
-          <div className="col-span-1 flex justify-center">
-            <Button
-              onClick={onPlayClick}
-              className="aspect-square rounded-full p-2 w-full max-w-[50%] h-auto bg-blue-600 hover:bg-blue-500"
-            >
-              {isPlaying ? (
-                <PauseIcon className="w-6 h-6 text-white" />
-              ) : (
-                <PlayIcon className="w-6 h-6 text-white" />
-              )}
-            </Button>
-          </div>
-        ) : (
-          <div className="col-span-1 h-[80px]" aria-hidden="true" />
+        {initialized && (
+          <button
+            type="button"
+            onClick={onPlayClick}
+            aria-label={isPlaying ? t("pause") : t("play")}
+            className="flex size-11 shrink-0 items-center justify-center rounded-full bg-ej-accent text-white shadow-ej transition-opacity duration-ej hover:opacity-90"
+          >
+            {isPlaying ? (
+              <PauseIcon className="size-5" />
+            ) : (
+              <PlayIcon className="size-5" />
+            )}
+          </button>
         )}
 
         <div
-          className="col-span-8 min-w-0 h-[80px]"
+          className="min-w-0 flex-1"
+          style={{ height }}
           ref={containerRef}
         />
 
         {!initialized && !error && (
-          <div className="absolute inset-0 z-10 flex flex-col justify-around h-[80px] px-2 pointer-events-none">
+          <div
+            className="pointer-events-none absolute inset-0 z-10 flex flex-col justify-around px-3"
+            style={{ height }}
+          >
             <Skeleton className="h-3 w-full rounded-full" />
             <Skeleton className="h-3 w-full rounded-full" />
             <Skeleton className="h-3 w-full rounded-full" />
@@ -250,12 +257,14 @@ export const WavesurferPlayer = (props: {
         )}
 
         {error && (
-          <div className="absolute inset-0 z-20 flex items-center justify-center gap-3 rounded-lg bg-background/95 px-4">
-            <XCircleIcon className="w-4 h-4 shrink-0 text-destructive" />
-            <div className="select-text break-all text-center text-sm text-muted-foreground">
+          <div className="absolute inset-0 z-20 flex items-center justify-center gap-3 rounded-ej bg-ej-surface px-4">
+            <XCircleIcon className="size-4 shrink-0 text-ej-bad" />
+            <div className="select-text break-all text-center text-xxs text-ej-muted">
               {error}
             </div>
-            <Button onClick={onRetry}>{t("retry")}</Button>
+            <EjButton size="sm" onClick={onRetry}>
+              {t("retry")}
+            </EjButton>
           </div>
         )}
       </div>

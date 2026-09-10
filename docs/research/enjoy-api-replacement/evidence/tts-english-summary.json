@@ -1,0 +1,699 @@
+[
+  {
+    "model": "deepgram/flux-tts:free",
+    "inputLanguage": "en",
+    "sampleKind": "synthetic",
+    "voice": "flux-alexis-en",
+    "status": 200,
+    "ok": true,
+    "startedAt": "2026-09-08T06:47:48.382Z",
+    "latencyMs": 3558,
+    "contentType": "audio/mpeg",
+    "bytes": 21456,
+    "generationId": "gen-tts-1788850069-CQAX4KxeSss5xQY9QC2q",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/deepgram__flux-tts_free/en.mp3",
+    "ffprobe": {
+      "ok": true,
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio",
+          "sample_rate": "24000",
+          "channels": 1
+        }
+      ],
+      "format": {
+        "format_name": "mp3",
+        "duration": "3.576000",
+        "size": "21456"
+      }
+    },
+    "error": null,
+    "cost": {
+      "totalCost": 0,
+      "providerName": "Deepgram",
+      "nativeTokensPrompt": 17,
+      "nativeTokensCompletion": null,
+      "usage": 0
+    }
+  },
+  {
+    "model": "fish-audio/s1",
+    "inputLanguage": "en",
+    "sampleKind": "synthetic",
+    "voice": null,
+    "status": 200,
+    "ok": true,
+    "startedAt": "2026-09-08T06:47:48.414Z",
+    "latencyMs": 1583,
+    "contentType": "audio/mpeg",
+    "bytes": 59767,
+    "generationId": "gen-tts-1788850069-jEIxNWt46mj5NemGMYwq",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/fish-audio__s1/en.mp3",
+    "ffprobe": {
+      "ok": true,
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 1
+        }
+      ],
+      "format": {
+        "format_name": "mp3",
+        "duration": "3.735438",
+        "size": "59767"
+      }
+    },
+    "error": null,
+    "cost": {
+      "totalCost": 0.00099,
+      "providerName": "Fish Audio",
+      "nativeTokensPrompt": 17,
+      "nativeTokensCompletion": null,
+      "usage": 0.00099
+    }
+  },
+  {
+    "model": "fish-audio/s2-pro",
+    "inputLanguage": "en",
+    "sampleKind": "synthetic",
+    "voice": null,
+    "status": 200,
+    "ok": true,
+    "startedAt": "2026-09-08T06:47:57.532Z",
+    "latencyMs": 1259,
+    "contentType": "audio/mpeg",
+    "bytes": 64782,
+    "generationId": "gen-tts-1788850077-cjGUSei1cd6vlKIZoLYM",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/fish-audio__s2-pro/en.mp3",
+    "ffprobe": {
+      "ok": true,
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 1
+        }
+      ],
+      "format": {
+        "format_name": "mp3",
+        "duration": "4.048875",
+        "size": "64782"
+      }
+    },
+    "error": null,
+    "cost": {
+      "totalCost": 0.00099,
+      "providerName": "Fish Audio",
+      "nativeTokensPrompt": 17,
+      "nativeTokensCompletion": null,
+      "usage": 0.00099
+    }
+  },
+  {
+    "model": "fish-audio/s2.1-pro-free:free",
+    "inputLanguage": "en",
+    "sampleKind": "synthetic",
+    "voice": null,
+    "status": 200,
+    "ok": true,
+    "startedAt": "2026-09-08T06:48:01.874Z",
+    "latencyMs": 2296,
+    "contentType": "audio/mpeg",
+    "bytes": 76903,
+    "generationId": "gen-tts-1788850082-l9QaUhas37i9k4YSpk5f",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/fish-audio__s2.1-pro-free_free/en.mp3",
+    "ffprobe": {
+      "ok": true,
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 1
+        }
+      ],
+      "format": {
+        "format_name": "mp3",
+        "duration": "4.806438",
+        "size": "76903"
+      }
+    },
+    "error": null,
+    "cost": {
+      "totalCost": 0,
+      "providerName": "Fish Audio",
+      "nativeTokensPrompt": 17,
+      "nativeTokensCompletion": null,
+      "usage": 0
+    }
+  },
+  {
+    "model": "fish-audio/s2.1-pro",
+    "inputLanguage": "en",
+    "sampleKind": "synthetic",
+    "voice": null,
+    "status": 200,
+    "ok": true,
+    "startedAt": "2026-09-08T06:48:08.999Z",
+    "latencyMs": 1417,
+    "contentType": "audio/mpeg",
+    "bytes": 73141,
+    "generationId": "gen-tts-1788850089-igFZEZYCMnky61r1EqgL",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/fish-audio__s2.1-pro/en.mp3",
+    "ffprobe": {
+      "ok": true,
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 1
+        }
+      ],
+      "format": {
+        "format_name": "mp3",
+        "duration": "4.571313",
+        "size": "73141"
+      }
+    },
+    "error": null,
+    "cost": {
+      "totalCost": 0.00099,
+      "providerName": "Fish Audio",
+      "nativeTokensPrompt": 17,
+      "nativeTokensCompletion": null,
+      "usage": 0.00099
+    }
+  },
+  {
+    "model": "microsoft/mai-voice-2-flash",
+    "inputLanguage": "en",
+    "sampleKind": "synthetic",
+    "voice": "en-US-Harper:MAI-Voice-2",
+    "status": 200,
+    "ok": true,
+    "startedAt": "2026-09-08T06:48:14.496Z",
+    "latencyMs": 2852,
+    "contentType": "audio/mpeg",
+    "bytes": 80640,
+    "generationId": "gen-tts-1788850094-MPZ8TnEdj1aQVKDw7T4X",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/microsoft__mai-voice-2-flash/en.mp3",
+    "ffprobe": {
+      "ok": true,
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio",
+          "sample_rate": "24000",
+          "channels": 1
+        }
+      ],
+      "format": {
+        "format_name": "mp3",
+        "duration": "4.032000",
+        "size": "80640"
+      }
+    },
+    "error": null,
+    "cost": {
+      "totalCost": 0.00099,
+      "providerName": "Azure",
+      "nativeTokensPrompt": 17,
+      "nativeTokensCompletion": null,
+      "usage": 0.00099
+    }
+  },
+  {
+    "model": "qwen/qwen-audio-3.0-tts-flash",
+    "inputLanguage": "en",
+    "sampleKind": "synthetic",
+    "voice": "loongjohn",
+    "status": 200,
+    "ok": true,
+    "startedAt": "2026-09-08T06:48:20.637Z",
+    "latencyMs": 973,
+    "contentType": "audio/mpeg",
+    "bytes": 92251,
+    "generationId": "gen-tts-1788850101-1ylCajojFQA6HxMFHDmv",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/qwen__qwen-audio-3.0-tts-flash/en.mp3",
+    "ffprobe": {
+      "ok": true,
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio",
+          "sample_rate": "24000",
+          "channels": 1
+        }
+      ],
+      "format": {
+        "format_name": "mp3",
+        "duration": "4.608000",
+        "size": "92251"
+      }
+    },
+    "error": null,
+    "cost": {
+      "totalCost": 0.00099,
+      "providerName": "Alibaba",
+      "nativeTokensPrompt": 17,
+      "nativeTokensCompletion": null,
+      "usage": 0.00099
+    }
+  },
+  {
+    "model": "qwen/qwen-audio-3.0-tts-plus",
+    "inputLanguage": "en",
+    "sampleKind": "synthetic",
+    "voice": "longanlingxin",
+    "status": 200,
+    "ok": true,
+    "startedAt": "2026-09-08T06:48:27.594Z",
+    "latencyMs": 1363,
+    "contentType": "audio/mpeg",
+    "bytes": 77851,
+    "generationId": "gen-tts-1788850108-qSE3DfyNosvf5QuRQ2B3",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/qwen__qwen-audio-3.0-tts-plus/en.mp3",
+    "ffprobe": {
+      "ok": true,
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio",
+          "sample_rate": "24000",
+          "channels": 1
+        }
+      ],
+      "format": {
+        "format_name": "mp3",
+        "duration": "3.888000",
+        "size": "77851"
+      }
+    },
+    "error": null,
+    "cost": {
+      "totalCost": 0.00132,
+      "providerName": "Alibaba",
+      "nativeTokensPrompt": 17,
+      "nativeTokensCompletion": null,
+      "usage": 0.00132
+    }
+  },
+  {
+    "model": "deepgram/aura-2",
+    "inputLanguage": "en",
+    "sampleKind": "synthetic",
+    "voice": "aura-2-thalia-en",
+    "status": 200,
+    "ok": true,
+    "startedAt": "2026-09-08T06:48:31.935Z",
+    "latencyMs": 2392,
+    "contentType": "audio/mpeg",
+    "bytes": 21168,
+    "generationId": "gen-tts-1788850112-PQZt7LZ9iMoc85rj7c0w",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/deepgram__aura-2/en.mp3",
+    "ffprobe": {
+      "ok": true,
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio",
+          "sample_rate": "24000",
+          "channels": 1
+        }
+      ],
+      "format": {
+        "format_name": "mp3",
+        "duration": "3.528000",
+        "size": "21168"
+      }
+    },
+    "error": null,
+    "cost": {
+      "totalCost": 0.00198,
+      "providerName": "Deepgram",
+      "nativeTokensPrompt": 17,
+      "nativeTokensCompletion": null,
+      "usage": 0.00198
+    }
+  },
+  {
+    "model": "minimax/speech-2.8-hd",
+    "inputLanguage": "en",
+    "sampleKind": "synthetic",
+    "voice": "English_expressive_narrator",
+    "status": 200,
+    "ok": true,
+    "startedAt": "2026-09-08T06:48:39.188Z",
+    "latencyMs": 1639,
+    "contentType": "audio/mpeg",
+    "bytes": 61677,
+    "generationId": "gen-tts-1788850119-CDbwSvjI22H7TPQ9eR5q",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/minimax__speech-2.8-hd/en.mp3",
+    "ffprobe": {
+      "ok": true,
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio",
+          "sample_rate": "32000",
+          "channels": 1
+        }
+      ],
+      "format": {
+        "format_name": "mp3",
+        "duration": "3.816000",
+        "size": "61677"
+      }
+    },
+    "error": null,
+    "cost": {
+      "totalCost": 0.0066,
+      "providerName": "Minimax",
+      "nativeTokensPrompt": 17,
+      "nativeTokensCompletion": null,
+      "usage": 0.0066
+    }
+  },
+  {
+    "model": "minimax/speech-2.8-turbo",
+    "inputLanguage": "en",
+    "sampleKind": "synthetic",
+    "voice": "English_expressive_narrator",
+    "status": 200,
+    "ok": true,
+    "startedAt": "2026-09-08T06:48:44.593Z",
+    "latencyMs": 2361,
+    "contentType": "audio/mpeg",
+    "bytes": 74349,
+    "generationId": "gen-tts-1788850125-eu7hWg4wvr2fScXDZQ0p",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/minimax__speech-2.8-turbo/en.mp3",
+    "ffprobe": {
+      "ok": true,
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio",
+          "sample_rate": "32000",
+          "channels": 1
+        }
+      ],
+      "format": {
+        "format_name": "mp3",
+        "duration": "4.608000",
+        "size": "74349"
+      }
+    },
+    "error": null,
+    "cost": {
+      "totalCost": 0.00396,
+      "providerName": "Minimax",
+      "nativeTokensPrompt": 17,
+      "nativeTokensCompletion": null,
+      "usage": 0.00396
+    }
+  },
+  {
+    "model": "microsoft/mai-voice-2",
+    "inputLanguage": "en",
+    "sampleKind": "synthetic",
+    "voice": "en-US-Harper:MAI-Voice-2",
+    "status": 200,
+    "ok": true,
+    "startedAt": "2026-09-08T06:48:51.127Z",
+    "latencyMs": 2932,
+    "contentType": "audio/mpeg",
+    "bytes": 84000,
+    "generationId": "gen-tts-1788850131-tMdzhJohu8i9ldoZhnN7",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/microsoft__mai-voice-2/en.mp3",
+    "ffprobe": {
+      "ok": true,
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio",
+          "sample_rate": "24000",
+          "channels": 1
+        }
+      ],
+      "format": {
+        "format_name": "mp3",
+        "duration": "4.200000",
+        "size": "84000"
+      }
+    },
+    "error": null,
+    "cost": {
+      "totalCost": 0.001452,
+      "providerName": "Azure",
+      "nativeTokensPrompt": 17,
+      "nativeTokensCompletion": null,
+      "usage": 0.001452
+    }
+  },
+  {
+    "model": "x-ai/grok-voice-tts-1.0",
+    "inputLanguage": "en",
+    "sampleKind": "synthetic",
+    "voice": "eve",
+    "status": 200,
+    "ok": true,
+    "startedAt": "2026-09-08T06:48:57.175Z",
+    "latencyMs": 1161,
+    "contentType": "audio/mpeg",
+    "bytes": 68736,
+    "generationId": "gen-tts-1788850137-OaQ6L1VkyQHFaCsKyhTJ",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/x-ai__grok-voice-tts-1.0/en.mp3",
+    "ffprobe": {
+      "ok": true,
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio",
+          "sample_rate": "24000",
+          "channels": 1
+        }
+      ],
+      "format": {
+        "format_name": "mp3",
+        "duration": "4.296000",
+        "size": "68736"
+      }
+    },
+    "error": null,
+    "cost": {
+      "totalCost": 0.00099,
+      "providerName": "xAI",
+      "nativeTokensPrompt": 17,
+      "nativeTokensCompletion": null,
+      "usage": 0.00099
+    }
+  },
+  {
+    "model": "google/gemini-3.1-flash-tts-preview",
+    "inputLanguage": "en",
+    "sampleKind": "synthetic",
+    "voice": "Zephyr",
+    "status": 400,
+    "ok": false,
+    "startedAt": "2026-09-08T06:49:04.287Z",
+    "latencyMs": 153,
+    "contentType": "application/json",
+    "bytes": 97,
+    "generationId": null,
+    "audioPath": null,
+    "ffprobe": null,
+    "error": "{\"error\":{\"message\":\"Gemini TTS only supports response_format=\\\"pcm\\\". Got \\\"mp3\\\".\",\"code\":400}}",
+    "cost": null
+  },
+  {
+    "model": "canopylabs/orpheus-3b-0.1-ft",
+    "inputLanguage": "en",
+    "sampleKind": "synthetic",
+    "voice": "tara",
+    "status": 200,
+    "ok": true,
+    "startedAt": "2026-09-08T06:49:04.441Z",
+    "latencyMs": 3980,
+    "contentType": "audio/mpeg",
+    "bytes": 17517,
+    "generationId": "gen-tts-1788850144-zot98WubeUBuq2yLP1q1",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/canopylabs__orpheus-3b-0.1-ft/en.mp3",
+    "ffprobe": {
+      "ok": true,
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio",
+          "sample_rate": "24000",
+          "channels": 1
+        }
+      ],
+      "format": {
+        "format_name": "mp3",
+        "duration": "4.266667",
+        "size": "17517"
+      }
+    },
+    "error": null,
+    "cost": {
+      "totalCost": 0.000462,
+      "providerName": "DeepInfra",
+      "nativeTokensPrompt": 17,
+      "nativeTokensCompletion": null,
+      "usage": 0.000462
+    }
+  },
+  {
+    "model": "sesame/csm-1b",
+    "inputLanguage": "en",
+    "sampleKind": "synthetic",
+    "voice": "conversational_a",
+    "status": 200,
+    "ok": true,
+    "startedAt": "2026-09-08T06:49:08.626Z",
+    "latencyMs": 8716,
+    "contentType": "audio/mpeg",
+    "bytes": 22944,
+    "generationId": "gen-tts-1788850149-XdDwDMtJPWJqaON7VSZf",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/sesame__csm-1b/en.mp3",
+    "ffprobe": {
+      "ok": true,
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio",
+          "sample_rate": "24000",
+          "channels": 1
+        }
+      ],
+      "format": {
+        "format_name": "mp3",
+        "duration": "2.870000",
+        "size": "22944"
+      }
+    },
+    "error": null,
+    "cost": {
+      "totalCost": 0.000462,
+      "providerName": "DeepInfra",
+      "nativeTokensPrompt": 17,
+      "nativeTokensCompletion": null,
+      "usage": 0.000462
+    }
+  },
+  {
+    "model": "hexgrad/kokoro-82m",
+    "inputLanguage": "en",
+    "sampleKind": "synthetic",
+    "voice": "af_alloy",
+    "status": 200,
+    "ok": true,
+    "startedAt": "2026-09-08T06:49:18.691Z",
+    "latencyMs": 4779,
+    "contentType": "audio/mpeg",
+    "bytes": 33888,
+    "generationId": "gen-tts-1788850159-bjm8APNoNJ2JRXOSXLXl",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/hexgrad__kokoro-82m/en.mp3",
+    "ffprobe": {
+      "ok": true,
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio",
+          "sample_rate": "24000",
+          "channels": 1
+        }
+      ],
+      "format": {
+        "format_name": "mp3",
+        "duration": "5.079671",
+        "size": "33888"
+      }
+    },
+    "error": null,
+    "cost": {
+      "totalCost": 0.00004092,
+      "providerName": "DeepInfra",
+      "nativeTokensPrompt": 17,
+      "nativeTokensCompletion": null,
+      "usage": 0.00004092
+    }
+  },
+  {
+    "model": "mistralai/voxtral-mini-tts-2603",
+    "inputLanguage": "en",
+    "sampleKind": "synthetic",
+    "voice": "en_paul_sad",
+    "status": 200,
+    "ok": true,
+    "startedAt": "2026-09-08T06:49:27.564Z",
+    "latencyMs": 2048,
+    "contentType": "audio/mpeg",
+    "bytes": 30719,
+    "generationId": "gen-tts-1788850168-OKKmf3SjpdqKn39U3Pd3",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/mistralai__voxtral-mini-tts-2603/en.mp3",
+    "ffprobe": {
+      "ok": true,
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio",
+          "sample_rate": "22050",
+          "channels": 1
+        }
+      ],
+      "format": {
+        "format_name": "mp3",
+        "duration": "4.151160",
+        "size": "30719"
+      }
+    },
+    "error": null,
+    "cost": {
+      "totalCost": 0,
+      "providerName": "Mistral",
+      "nativeTokensPrompt": 17,
+      "nativeTokensCompletion": null,
+      "usage": 0
+    }
+  }
+]

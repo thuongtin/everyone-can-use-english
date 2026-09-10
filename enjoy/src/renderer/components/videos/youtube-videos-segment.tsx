@@ -3,8 +3,6 @@ import { useState, useEffect, useContext } from "react";
 import { AppSettingsProviderContext } from "@renderer/context";
 import {
   Button,
-  ScrollArea,
-  ScrollBar,
   Dialog,
   DialogHeader,
   DialogTitle,
@@ -15,12 +13,13 @@ import {
 } from "@renderer/components/ui";
 import { useNavigate } from "react-router-dom";
 import { LoaderIcon } from "lucide-react";
+import { EjSectionHeader } from "@renderer/components/enjoy";
 
 export const YoutubeVideosSegment = (props: { channel: string }) => {
   const { channel } = props;
   const navigate = useNavigate();
   const { EnjoyApp } = useContext(AppSettingsProviderContext);
-  const [videos, setvideos] = useState<YoutubeVideoType[]>([]);
+  const [youtubeChannel, setYoutubeChannel] = useState<YoutubeChannelType>();
   const [selectedVideo, setSelectedVideo] = useState<YoutubeVideoType | null>(
     null
   );
@@ -30,7 +29,7 @@ export const YoutubeVideosSegment = (props: { channel: string }) => {
 
   const addToLibrary = () => {
     if (!selectedVideo || submitting) return;
-    let url = `https://www.youtube.com/watch?v=${selectedVideo?.videoId}`;
+    const url = `https://www.youtube.com/watch?v=${selectedVideo?.videoId}`;
     setSubmitting(true);
     setProgress(0);
 
@@ -49,31 +48,45 @@ export const YoutubeVideosSegment = (props: { channel: string }) => {
       });
   };
 
-  const fetchYoutubeVideos = async () => {
-    const cachedVideos = await EnjoyApp.cacheObjects.get(
-      `youtube-videos-${channel}`
-    );
-    if (cachedVideos) {
-      setvideos(cachedVideos);
-      return;
-    }
-
-    EnjoyApp.providers.youtube
-      .videos(channel)
-      .then((videos) => {
-        if (!videos) return;
-
-        EnjoyApp.cacheObjects.set(`youtube-videos-${channel}`, videos, 60 * 10);
-        setvideos(videos);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  };
-
   useEffect(() => {
-    fetchYoutubeVideos();
-  }, []);
+    let active = true;
+    let requestInFlight = false;
+    const cacheKey = `youtube-channel-${channel}-v2`;
+
+    const fetchYoutubeVideos = async () => {
+      if (requestInFlight) return;
+      requestInFlight = true;
+      try {
+        const cachedChannel = await EnjoyApp.cacheObjects.get(cacheKey);
+        if (!active) return;
+        if (cachedChannel) {
+          setYoutubeChannel(cachedChannel);
+          return;
+        }
+        if (!navigator.onLine) return;
+
+        const nextChannel = await EnjoyApp.providers.youtube.videos(channel);
+        if (!active || !nextChannel) return;
+        await EnjoyApp.cacheObjects.set(cacheKey, nextChannel, 60 * 10);
+        if (active) setYoutubeChannel(nextChannel);
+      } catch (error) {
+        if (active) console.error(error);
+      } finally {
+        requestInFlight = false;
+      }
+    };
+
+    const handleOnline = () => {
+      void fetchYoutubeVideos();
+    };
+
+    window.addEventListener("online", handleOnline);
+    void fetchYoutubeVideos();
+    return () => {
+      active = false;
+      window.removeEventListener("online", handleOnline);
+    };
+  }, [EnjoyApp, channel]);
 
   useEffect(() => {
     EnjoyApp.download.onState((_, downloadState) => {
@@ -89,32 +102,22 @@ export const YoutubeVideosSegment = (props: { channel: string }) => {
     };
   }, [submitting]);
 
-  if (!videos?.length) return null;
+  if (!youtubeChannel?.videos.length) return null;
 
   return (
     <>
-      <div className="flex items-start justify-between mb-4">
-        <div className="space-y-1">
-          <h2 className="text-2xl font-semibold tracking-tight capitalize">
-            {t("from")} Youtube {channel}
-          </h2>
-        </div>
-        <div className="ml-auto mr-4"></div>
+      <EjSectionHeader
+        title={`${t("from")} YouTube ${youtubeChannel.name || channel}`}
+      />
+      <div className="ej-row ej-row-wide pb-1">
+        {youtubeChannel.videos.map((video) => (
+          <YoutubeVideoCard
+            key={video.videoId}
+            video={video}
+            onClick={() => setSelectedVideo(video)}
+          />
+        ))}
       </div>
-      <ScrollArea>
-        <div className="flex w-max items-center space-x-4 pb-4">
-          {videos.map((video) => {
-            return (
-              <YoutubeVideoCard
-                key={video.videoId}
-                video={video}
-                onClick={() => setSelectedVideo(video)}
-              />
-            );
-          })}
-        </div>
-        <ScrollBar orientation="horizontal" />
-      </ScrollArea>
 
       <Dialog
         open={Boolean(selectedVideo)}
@@ -126,7 +129,7 @@ export const YoutubeVideosSegment = (props: { channel: string }) => {
           <DialogHeader>
             <DialogTitle>{t("downloadVideo")}</DialogTitle>
           </DialogHeader>
-          <div className="flex items-center mb-4 bg-muted rounded-lg">
+          <div className="flex items-center mb-4 bg-ej-surface2 rounded-lg">
             <div className="aspect-square h-28 overflow-hidden rounded-l-lg">
               <img
                 src={selectedVideo?.thumbnail}
@@ -192,19 +195,24 @@ const YoutubeVideoCard = (props: {
   const { video, onClick } = props;
 
   return (
-    <div onClick={onClick} className="w-64 cursor-pointer">
-      <div className="aspect-[16/9] border rounded-lg overflow-hidden relative mb-4">
+    <div onClick={onClick} className="group cursor-pointer min-w-0">
+      <div className="aspect-video rounded-xl overflow-hidden border border-ej-line bg-ej-surface2 relative transition-transform duration-ej group-hover:-translate-y-[3px] group-hover:shadow-ej">
         <img
           src={video.thumbnail}
           alt={video.title}
-          className="hover:scale-105 object-cover w-full h-full"
+          loading="lazy"
+          className="object-cover w-full h-full"
         />
-
-        <div className="absolute bottom-0 left-0 right-0 p-2 bg-black bg-opacity-50">
-          <div className="text-xs text-white text-right">{video.duration}</div>
-        </div>
+        <span className="absolute left-2 top-2 h-[18px] px-1.5 rounded-md bg-[#ff0000] text-[10px] font-bold uppercase text-white flex items-center">
+          YouTube
+        </span>
+        {video.duration && (
+          <span className="absolute right-2 bottom-2 h-[18px] px-1.5 rounded-md bg-black/55 text-[10px] font-semibold text-white flex items-center ej-tabular">
+            {video.duration}
+          </span>
+        )}
       </div>
-      <div className="text-sm font-semibold h-10 max-w-full line-clamp-2">
+      <div className="mt-2 text-[13px] font-semibold text-ej-ink leading-snug line-clamp-2">
         {video.title}
       </div>
     </div>

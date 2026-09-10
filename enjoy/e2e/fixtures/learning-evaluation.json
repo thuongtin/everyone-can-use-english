@@ -1,0 +1,41 @@
+{
+  "fixtureType": "deterministic-handmade-not-real-generated-corpus",
+  "description": "Handmade validator fixtures covering six CEFR labels and five everyday topics. These cases are deterministic contract probes, not a generated quality corpus.",
+  "cases": [
+    { "id": "a1-coffee", "level": "A1", "length": "short", "topic": "coffee-shop", "keywords": ["coffee", "order"], "targets": [{ "term": "coffee", "sense": "a hot drink" }], "expectedOk": true },
+    { "id": "a1-travel", "level": "A1", "length": "short", "topic": "travel-plan", "keywords": ["ticket", "train"], "targets": [{ "term": "ticket", "sense": "a pass for travel" }], "expectedOk": true },
+    { "id": "a1-work", "level": "A1", "length": "short", "topic": "work-meeting", "keywords": ["colleague", "work"], "targets": [{ "term": "colleague", "sense": "a person you work with" }], "expectedOk": true },
+    { "id": "a1-market", "level": "A1", "length": "short", "topic": "weekend-market", "keywords": ["market", "fruit"], "targets": [{ "term": "market", "sense": "a place where people buy and sell" }], "expectedOk": true },
+    { "id": "a1-health", "level": "A1", "length": "short", "topic": "health-routine", "keywords": ["sleep", "rest"], "targets": [{ "term": "sleep", "sense": "rest at night" }], "adversarial": "wrong-language", "expectedOk": false, "expectedIssueCodes": ["story_language_mismatch"] },
+
+    { "id": "a2-coffee-phrase", "level": "A2", "length": "medium", "topic": "coffee-shop", "keywords": ["coffee shop", "order"], "targets": [{ "term": "coffee shop", "sense": "a place that serves coffee" }], "adversarial": "multiword", "expectedOk": true },
+    { "id": "a2-travel", "level": "A2", "length": "medium", "topic": "travel-plan", "keywords": ["check-in", "ticket"], "targets": [{ "term": "check-in", "sense": "the act of registering for a trip" }], "expectedOk": true },
+    { "id": "a2-work", "level": "A2", "length": "medium", "topic": "work-meeting", "keywords": ["prefer", "plan"], "targets": [{ "term": "prefer", "sense": "like one thing more than another" }], "expectedOk": true },
+    { "id": "a2-market-art-prefix", "level": "A2", "length": "medium", "topic": "weekend-market", "keywords": ["art", "artist"], "targets": [{ "term": "art", "sense": "creative work" }], "adversarial": "art-prefix", "expectedOk": false, "expectedIssueCodes": ["target_story_missing", "section_target_missing"] },
+    { "id": "a2-health-apostrophe", "level": "A2", "length": "medium", "topic": "health-routine", "keywords": ["don't", "sleep"], "targets": [{ "term": "don't", "sense": "do not" }], "adversarial": "apostrophe", "expectedOk": true },
+
+    { "id": "b1-coffee", "level": "B1", "length": "medium", "topic": "coffee-shop", "keywords": ["order", "menu"], "targets": [{ "term": "order", "sense": "request food or drink" }], "expectedOk": true },
+    { "id": "b1-travel", "level": "B1", "length": "medium", "topic": "travel-plan", "keywords": ["journey", "route"], "targets": [{ "term": "journey", "sense": "travel from one place to another" }], "expectedOk": true },
+    { "id": "b1-work", "level": "B1", "length": "medium", "topic": "work-meeting", "keywords": ["deadline", "project"], "targets": [{ "term": "deadline", "sense": "the latest time something is due" }], "expectedOk": true },
+    { "id": "b1-market-polysemy", "level": "B1", "length": "medium", "topic": "weekend-market", "keywords": ["bank", "river"], "targets": [{ "term": "bank", "sense": "a financial institution" }], "adversarial": "polysemy", "expectedOk": true },
+    { "id": "b1-health", "level": "B1", "length": "medium", "topic": "health-routine", "keywords": ["exercise", "energy"], "targets": [{ "term": "exercise", "sense": "physical activity" }], "expectedOk": true },
+
+    { "id": "b2-coffee", "level": "B2", "length": "long", "topic": "coffee-shop", "keywords": ["conversation", "friendly"], "targets": [{ "term": "conversation", "sense": "an informal talk" }], "expectedOk": true },
+    { "id": "b2-travel", "level": "B2", "length": "long", "topic": "travel-plan", "keywords": ["reservation", "hotel"], "targets": [{ "term": "reservation", "sense": "an arrangement to keep a place" }], "expectedOk": true },
+    { "id": "b2-work", "level": "B2", "length": "long", "topic": "work-meeting", "keywords": ["negotiate", "agreement"], "targets": [{ "term": "negotiate", "sense": "try to reach an agreement" }], "expectedOk": true },
+    { "id": "b2-market-missing", "level": "B2", "length": "long", "topic": "weekend-market", "keywords": ["play", "music"], "targets": [{ "term": "play", "sense": "take part in an activity" }], "adversarial": "missing-coverage", "expectedOk": false, "expectedIssueCodes": ["target_story_missing", "section_target_missing"] },
+    { "id": "b2-health", "level": "B2", "length": "long", "topic": "health-routine", "keywords": ["nutrition", "balanced"], "targets": [{ "term": "nutrition", "sense": "the process of getting food needed for health" }], "expectedOk": true },
+
+    { "id": "c1-coffee", "level": "C1", "length": "long", "topic": "coffee-shop", "keywords": ["nevertheless", "conversation"], "targets": [{ "term": "nevertheless", "sense": "despite that" }], "expectedOk": true },
+    { "id": "c1-travel", "level": "C1", "length": "long", "topic": "travel-plan", "keywords": ["sustainable", "journey"], "targets": [{ "term": "sustainable", "sense": "able to continue without exhausting resources" }], "expectedOk": true },
+    { "id": "c1-work", "level": "C1", "length": "long", "topic": "work-meeting", "keywords": ["ambiguous", "proposal"], "targets": [{ "term": "ambiguous", "sense": "open to more than one interpretation" }], "expectedOk": true },
+    { "id": "c1-market", "level": "C1", "length": "long", "topic": "weekend-market", "keywords": ["artisan", "craft"], "targets": [{ "term": "artisan", "sense": "a skilled craft worker" }], "expectedOk": true },
+    { "id": "c1-health", "level": "C1", "length": "long", "topic": "health-routine", "keywords": ["meticulous", "routine"], "targets": [{ "term": "meticulous", "sense": "very careful about details" }], "expectedOk": true },
+
+    { "id": "c2-coffee", "level": "C2", "length": "long", "topic": "coffee-shop", "keywords": ["consequently", "choice"], "targets": [{ "term": "consequently", "sense": "as a result" }], "expectedOk": true },
+    { "id": "c2-travel", "level": "C2", "length": "long", "topic": "travel-plan", "keywords": ["entrepreneurship", "business"], "targets": [{ "term": "entrepreneurship", "sense": "the activity of starting and running a business" }], "expectedOk": true },
+    { "id": "c2-work", "level": "C2", "length": "long", "topic": "work-meeting", "keywords": ["interdisciplinary", "research"], "targets": [{ "term": "interdisciplinary", "sense": "involving more than one area of study" }], "expectedOk": true },
+    { "id": "c2-market", "level": "C2", "length": "long", "topic": "weekend-market", "keywords": ["polysemy", "language"], "targets": [{ "term": "polysemy", "sense": "having several related meanings" }], "adversarial": "polysemy", "expectedOk": true },
+    { "id": "c2-health", "level": "C2", "length": "long", "topic": "health-routine", "keywords": ["circadian", "rhythm"], "targets": [{ "term": "circadian", "sense": "related to a roughly twenty-four-hour cycle" }], "expectedOk": true }
+  ]
+}

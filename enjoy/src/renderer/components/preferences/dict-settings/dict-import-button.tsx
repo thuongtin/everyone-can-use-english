@@ -4,7 +4,6 @@ import {
   DictProviderContext,
 } from "@/renderer/context";
 import {
-  Button,
   Dialog,
   DialogTrigger,
   DialogContent,
@@ -12,8 +11,9 @@ import {
   DialogTitle,
   toast,
 } from "@/renderer/components/ui";
+import { EjButton } from "@renderer/components/enjoy";
 import { t } from "i18next";
-import { LoaderIcon } from "lucide-react";
+import { LoaderIcon, PlusIcon } from "lucide-react";
 
 export const DictImportButton = () => {
   const { reload, importMDict } = useContext(DictProviderContext);
@@ -69,19 +69,27 @@ export const DictImportButton = () => {
   return (
     <Dialog open={open} onOpenChange={handleOpen}>
       <DialogTrigger asChild>
-        <Button size="sm">{t("import")}</Button>
+        <button
+          type="button"
+          className="flex h-[42px] w-full items-center justify-center gap-1.5 border-t border-dashed border-ej-line2 text-xs font-semibold text-ej-accent-ink transition-colors duration-ej hover:bg-ej-surface2"
+        >
+          <PlusIcon className="size-3.5" />
+          {t("settings.addMdx")}
+        </button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>{t("importDict")}</DialogTitle>
+          <DialogTitle className="text-base font-bold text-ej-ink">
+            {t("importDict")}
+          </DialogTitle>
         </DialogHeader>
 
         {loading ? (
           <div>
-            <div className="px-4 py-4 flex justify-center items-center">
-              <LoaderIcon className="text-muted-foreground animate-spin" />
+            <div className="flex items-center justify-center px-4 py-4">
+              <LoaderIcon className="size-5 animate-spin text-ej-muted" />
             </div>
-            <div className="text-xs text-center text-muted-foreground mb-8">
+            <div className="mb-8 text-center text-xs text-ej-muted">
               {t("dictImportSlowTip")}
             </div>
           </div>
@@ -89,29 +97,33 @@ export const DictImportButton = () => {
           <div>
             <div className="flex items-center justify-between py-4">
               <div className="mr-4">
-                <div className="mb-2">{t("importAdaptionDict")}</div>
-                <div className="text-xs text-muted-foreground mb-2">
+                <div className="mb-2 text-xs font-semibold text-ej-ink">
+                  {t("importAdaptionDict")}
+                </div>
+                <div className="mb-2 text-xxs leading-relaxed text-ej-muted">
                   {t("adaptionDictTip")}
                   <p>{t("bilingual.legacyImport")}</p>
                 </div>
               </div>
 
-              <Button size="sm" onClick={handleAdaptationDictImport}>
+              <EjButton size="sm" onClick={handleAdaptationDictImport}>
                 {t("selectFile")}
-              </Button>
+              </EjButton>
             </div>
 
             <div className="flex items-center justify-between py-4">
               <div className="mr-4">
-                <div className="mb-2">{t("importMdictFile")}</div>
-                <div className="text-xs text-muted-foreground mb-2">
+                <div className="mb-2 text-xs font-semibold text-ej-ink">
+                  {t("importMdictFile")}
+                </div>
+                <div className="mb-2 text-xxs leading-relaxed text-ej-muted">
                   {t("mdictFileTip")}
                 </div>
               </div>
 
-              <Button size="sm" onClick={handleOriginDictImport}>
+              <EjButton size="sm" onClick={handleOriginDictImport}>
                 {t("selectFile")}
-              </Button>
+              </EjButton>
             </div>
           </div>
         )}

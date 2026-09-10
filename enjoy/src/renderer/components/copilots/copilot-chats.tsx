@@ -67,7 +67,7 @@ export const CopilotChats = (props: { onSelect: (chat: ChatType) => void }) => {
         </div>
         {chats.length === 0 && (
           <div className="text-center my-4">
-            <span className="text-sm text-muted-foreground">{t("noData")}</span>
+            <span className="text-sm text-ej-muted">{t("noData")}</span>
           </div>
         )}
         {chats.map((chat, index) => (
@@ -99,7 +99,7 @@ export const CopilotChats = (props: { onSelect: (chat: ChatType) => void }) => {
               {t("cancel")}
             </AlertDialogCancel>
             <AlertDialogAction
-              className="bg-destructive hover:bg-destructive-hover"
+              className="bg-ej-bad hover:opacity-90"
               onClick={handleDeleteChat}
             >
               {t("delete")}

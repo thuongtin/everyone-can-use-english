@@ -1,3 +1,5 @@
+import { isRetiredEnjoyHostname } from "../lib/network-policy";
+
 export type DistributionConfig = {
   updateFeedUrl?: string;
   repositoryUrl: string;
@@ -26,6 +28,7 @@ const isSafeHttpUrl = (value: unknown, protocol?: "http:" | "https:") => {
     if (url.protocol !== "http:" && url.protocol !== "https:") return false;
     if (protocol && url.protocol !== protocol) return false;
     if (!url.hostname || url.username || url.password) return false;
+    if (isRetiredEnjoyHostname(url.hostname)) return false;
     return true;
   } catch {
     return false;

@@ -1,4 +1,5 @@
-import { Input, Button, ScrollArea, toast } from "@renderer/components/ui";
+import { Button, toast } from "@renderer/components/ui";
+import { EjIconButton } from "@renderer/components/enjoy";
 import {
   LoaderSpin,
   StoryViewer,
@@ -14,22 +15,27 @@ import { t } from "i18next";
 import nlp from "compromise";
 import paragraphs from "compromise-paragraphs";
 import { useDebounce } from "@uidotdev/usehooks";
-import { type IpcRendererEvent } from "electron/renderer";
+import { type IpcRendererEvent } from "electron";
+import type {
+  LocalMeaning,
+  LocalStoryCreateInput,
+} from "../../types/local-study-api";
+import { isRetiredEnjoyUrl } from "../../lib/network-policy";
 nlp.plugin(paragraphs);
 
 export default () => {
   const navigate = useNavigate();
   const { uri } = useParams<{ uri: string }>();
   const containerRef = useRef<HTMLDivElement>();
-  const [url, setUrl] = useState(decodeURIComponent(uri));
+  const [url] = useState(decodeURIComponent(uri));
   const [error, setError] = useState<string>();
-  const [story, setStory] = useState<Partial<CreateStoryParamsType>>({
+  const [story, setStory] = useState<Partial<LocalStoryCreateInput>>({
     url,
   });
   const [loading, setLoading] = useState(true);
   const [readable, setReadable] = useState(true);
-  const { EnjoyApp, webApi } = useContext(AppSettingsProviderContext);
-  const [meanings, setMeanings] = useState<MeaningType[]>([]);
+  const { EnjoyApp } = useContext(AppSettingsProviderContext);
+  const [meanings, setMeanings] = useState<LocalMeaning[]>([]);
   const [marked, setMarked] = useState<boolean>(false);
   const [doc, setDoc] = useState<any>(null);
 
@@ -41,6 +47,12 @@ export default () => {
     setLoading(true);
     setStory({ url });
 
+    if (isRetiredEnjoyUrl(url)) {
+      setError(t("notFound"));
+      setLoading(false);
+      return;
+    }
+
     const { x, y, width, height } = debouncedWebviewRect;
     EnjoyApp.view.load(url, {
       x,
@@ -51,16 +63,21 @@ export default () => {
   };
 
   const createStory = async () => {
-    if (!story) return;
+    if (!story?.title || !story.content) return;
 
-    webApi
-      .createStory({
+    EnjoyApp.localStudy.stories
+      .create({
         ...story,
-        url: story.metadata?.url || story.url,
-      } as CreateStoryParamsType)
+        url: story.metadata?.url || story.url || "",
+        provenance: {
+          source: story.url?.startsWith("file:") ? "file" : "website",
+          sourceUrl: story.url,
+        },
+      } as LocalStoryCreateInput)
       .then((story) => {
         navigate(`/stories/${story.id}`);
-      });
+      })
+      .catch((error) => toast.error(error.message));
   };
 
   const onViewState = async (event: {
@@ -85,7 +102,16 @@ export default () => {
 
     const doc = new DOMParser().parseFromString(html, "text/html");
     const reader = new Readability(doc);
-    const article = reader.parse();
+    const parsed = reader.parse();
+    const fallbackContent = doc.body?.textContent?.trim() || "";
+    const article = parsed || (fallbackContent
+      ? {
+          title: doc.title || decodeURIComponent(url.split("/").pop() || "Document"),
+          content: doc.body?.innerHTML || fallbackContent,
+          excerpt: fallbackContent.slice(0, 240),
+          byline: "",
+        }
+      : null);
 
     if (!article) {
       setLoading(false);
@@ -124,12 +150,12 @@ export default () => {
 
     const metadata = {
       url: ogUrl || url,
-      title: article.title,
+      title: article.title || "Document",
       description:
         doc
           .querySelector('meta[name="description"]')
-          ?.getAttribute("content") || article.excerpt,
-      byline: article.byline,
+          ?.getAttribute("content") || article.excerpt || "",
+      byline: article.byline || "",
       image:
         doc
           .querySelector('meta[property="og:image"]')
@@ -142,10 +168,11 @@ export default () => {
     });
 
     setStory({
-      title: article.title,
+      title: article.title || "Document",
       content,
+      html,
       metadata,
-      ...story,
+      url,
     });
 
     const _doc = nlp(content);
@@ -206,43 +233,39 @@ export default () => {
   }, [readable, loading]);
 
   return (
-    <div className="h-content w-full flex flex-col bg-muted">
+    <div className="h-content w-full flex flex-col bg-ej-bg">
       {(loading || !readable) && (
-        <div className="h-12 flex items-center space-x-2 px-4 border-b shadow">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="rounded-full"
-            onClick={() => navigate(-1)}
-          >
-            <ChevronLeftIcon className="w-6 h-6" />
-          </Button>
-          <Input
-            disabled
-            value={url}
-            onChange={(e) => setUrl(e.target.value)}
-            className="rounded-full h-8 bg-muted focus-visible:ring-0 px-4"
-          />
-          <Button
-            variant={readable ? "secondary" : "ghost"}
-            size="icon"
-            className="rounded-full p-1"
+        <div className="shrink-0 h-12 flex items-center gap-2 px-4 border-b border-ej-line bg-ej-surface">
+          <EjIconButton title={t("back")} onClick={() => navigate(-1)}>
+            <ChevronLeftIcon className="size-4" />
+          </EjIconButton>
+
+          <div className="flex-1 min-w-0 h-8 px-3 flex items-center rounded-full border border-ej-line bg-ej-surface2 text-xs text-ej-muted truncate">
+            {url}
+          </div>
+
+          <EjIconButton
+            title={t("toggleReadable")}
+            active={readable}
             onClick={() => setReadable(!readable)}
           >
-            <BookOpenTextIcon className="w-5 h-5" />
-          </Button>
+            <BookOpenTextIcon className="size-4" />
+          </EjIconButton>
         </div>
       )}
 
-      <ScrollArea ref={containerRef} className="flex-1 relative">
+      <div
+        ref={containerRef}
+        className="flex-1 min-h-0 relative overflow-y-auto scroll"
+      >
         {loading ? (
           <div className="h-96 w-full">
             <LoaderSpin />
           </div>
         ) : error ? (
           <div className="w-full min-h-[50vh] flex items-center justify-center">
-            <div className="m-auto">
-              <div className="mb-6">{error}</div>
+            <div className="m-auto text-center">
+              <div className="mb-6 text-sm text-ej-muted">{error}</div>
               <div className="flex justify-center">
                 <Button onClick={loadURL}>{t("retry")}</Button>
               </div>
@@ -251,26 +274,25 @@ export default () => {
         ) : (
           story?.content &&
           readable && (
-            <>
-              <StoryPreviewToolbar
-                marked={marked}
-                toggleMarked={() => setMarked(!marked)}
-                onCreateStory={createStory}
-                readable={readable}
-                onToggleReadable={() => setReadable(!readable)}
-              />
-
-              <StoryViewer
-                story={story}
-                meanings={meanings}
-                setMeanings={setMeanings}
-                marked={marked}
-                doc={doc}
-              />
-            </>
+            <StoryViewer
+              story={story}
+              meanings={meanings}
+              setMeanings={setMeanings}
+              marked={marked}
+              doc={doc}
+              actions={
+                <StoryPreviewToolbar
+                  marked={marked}
+                  toggleMarked={() => setMarked(!marked)}
+                  onCreateStory={createStory}
+                  readable={readable}
+                  onToggleReadable={() => setReadable(!readable)}
+                />
+              }
+            />
           )
         )}
-      </ScrollArea>
+      </div>
     </div>
   );
 };

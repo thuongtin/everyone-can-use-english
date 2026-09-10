@@ -1,8 +1,4 @@
 import {
-  Avatar,
-  AvatarImage,
-  AvatarFallback,
-  Button,
   Dialog,
   DialogContent,
   DialogDescription,
@@ -16,11 +12,10 @@ import {
 } from "@renderer/components/ui";
 import {
   ChevronDownIcon,
-  ChevronsRightIcon,
+  LightbulbIcon,
   PlusIcon,
   SettingsIcon,
-  SpeechIcon,
-  UsersRoundIcon,
+  XIcon,
 } from "lucide-react";
 import { useContext, useState } from "react";
 import {
@@ -28,13 +23,12 @@ import {
   CopilotChatAgents,
   CopilotChats,
 } from "@renderer/components";
+import { EjIconButton } from "@renderer/components/enjoy";
 import { t } from "i18next";
 import {
   AppSettingsProviderContext,
   CopilotProviderContext,
 } from "@renderer/context";
-import { ChatBubbleIcon } from "@radix-ui/react-icons";
-import { ChatTypeEnum } from "@/types/enums";
 
 export const CopilotHeader = () => {
   const [displayChatForm, setDisplayChatForm] = useState(false);
@@ -50,45 +44,54 @@ export const CopilotHeader = () => {
   } = useContext(CopilotProviderContext);
   const { EnjoyApp } = useContext(AppSettingsProviderContext);
 
+  const member = currentChat?.members?.[0];
+  const model = member?.config?.gpt?.model;
+  const subtitle = [member?.name ?? currentChat?.name, model]
+    .filter(Boolean)
+    .join(" · ");
+
   return (
-    <div className="h-10 border-b px-3 shadow flex items-center justify-between space-x-2 sticky top-0 z-10 bg-background mb-4">
-      <div className="flex items-center space-x-1 line-clamp-1">
-        <Popover open={displayChats} onOpenChange={setDisplayChats}>
-          <PopoverTrigger asChild>
-            <Button variant="ghost" size="icon" className="w-6 h-6">
-              <ChevronDownIcon className="w-4 h-4" />
-            </Button>
-          </PopoverTrigger>
-          <PopoverContent className="overflow-y-auto max-h-96">
-            <CopilotChats
-              onSelect={(chat) => {
-                if (occupiedChat?.id !== chat.id) {
-                  setCurrentChat(chat);
-                }
-                setDisplayChats(false);
-              }}
-            />
-          </PopoverContent>
-        </Popover>
-        {currentChat?.type === ChatTypeEnum.CONVERSATION && (
-          <ChatBubbleIcon className="w-4 h-4" />
-        )}
-        {currentChat?.type === ChatTypeEnum.GROUP && (
-          <UsersRoundIcon className="w-4 h-4" />
-        )}
-        {currentChat?.type === ChatTypeEnum.TTS && (
-          <SpeechIcon className="w-4 h-4" />
-        )}
-        <span className="text-sm line-clamp-1">{currentChat?.name}</span>
-      </div>
-      <div className="flex items-center space-x-2">
+    <div className="h-[46px] shrink-0 border-b border-ej-line px-2.5 flex items-center gap-2 sticky top-0 z-10 bg-ej-surface">
+      <Popover open={displayChats} onOpenChange={setDisplayChats}>
+        <PopoverTrigger asChild>
+          <button
+            type="button"
+            className="flex items-center gap-2 min-w-0 flex-1 rounded-lg px-1 py-1 hover:bg-ej-surface2 transition-colors duration-ej"
+          >
+            <span className="size-7 rounded-lg bg-ej-accent-soft flex items-center justify-center shrink-0">
+              <LightbulbIcon className="size-4 text-ej-accent-ink" />
+            </span>
+            <span className="min-w-0 flex-1 text-left leading-tight">
+              <span className="block text-[13px] font-semibold text-ej-ink truncate">
+                {t("copilot.title")}
+              </span>
+              <span className="block text-[11px] text-ej-muted truncate">
+                {subtitle || t("copilot.noChat")}
+              </span>
+            </span>
+            <ChevronDownIcon className="size-3.5 text-ej-muted shrink-0" />
+          </button>
+        </PopoverTrigger>
+        <PopoverContent align="start" className="overflow-y-auto max-h-96">
+          <CopilotChats
+            onSelect={(chat) => {
+              if (occupiedChat?.id !== chat.id) {
+                setCurrentChat(chat);
+              }
+              setDisplayChats(false);
+            }}
+          />
+        </PopoverContent>
+      </Popover>
+
+      <div className="flex items-center gap-0.5 shrink-0">
         <Popover open={displayChatAgents} onOpenChange={setDisplayChatAgents}>
           <PopoverTrigger asChild>
-            <Button variant="ghost" size="icon" className="w-6 h-6">
-              <PlusIcon className="w-5 h-5" />
-            </Button>
+            <EjIconButton title={t("newChat")}>
+              <PlusIcon className="size-4" />
+            </EjIconButton>
           </PopoverTrigger>
-          <PopoverContent className="overflow-y-auto max-h-96">
+          <PopoverContent align="end" className="overflow-y-auto max-h-96">
             <CopilotChatAgents
               onSelect={(agent) => {
                 EnjoyApp.chats
@@ -112,12 +115,13 @@ export const CopilotHeader = () => {
             />
           </PopoverContent>
         </Popover>
+
         {currentChat && (
           <Dialog open={displayChatForm} onOpenChange={setDisplayChatForm}>
             <DialogTrigger asChild>
-              <Button variant="ghost" size="icon" className="w-6 h-6">
-                <SettingsIcon className="w-5 h-5" />
-              </Button>
+              <EjIconButton title={t("editChat")}>
+                <SettingsIcon className="size-4" />
+              </EjIconButton>
             </DialogTrigger>
             <DialogContent className="max-w-screen-sm max-h-[70%] overflow-y-auto">
               <DialogTitle>{t("editChat")}</DialogTitle>
@@ -130,14 +134,10 @@ export const CopilotHeader = () => {
             </DialogContent>
           </Dialog>
         )}
-        <Button
-          variant="ghost"
-          size="icon"
-          className="w-6 h-6"
-          onClick={() => setActive(!active)}
-        >
-          <ChevronsRightIcon className="w-5 h-5" />
-        </Button>
+
+        <EjIconButton title={t("close")} onClick={() => setActive(!active)}>
+          <XIcon className="size-4" />
+        </EjIconButton>
       </div>
     </div>
   );

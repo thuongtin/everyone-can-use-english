@@ -10,15 +10,10 @@ import {
   DataType,
   AfterCreate,
   AllowNull,
-  AfterFind,
 } from "sequelize-typescript";
 import mainWindow from "@main/window";
-import log from "@main/logger";
-import { Client } from "@/api";
-import settings from "@main/settings";
-import { Segment, UserSetting } from "@main/db/models";
+import { Segment } from "@main/db/models";
 
-const logger = log.scope("db/models/note");
 @Table({
   modelName: "Note",
   tableName: "notes",
@@ -56,52 +51,6 @@ export class Note extends Model<Note> {
     return Boolean(this.syncedAt) && this.syncedAt >= this.updatedAt;
   }
 
-  async sync(): Promise<void> {
-    if (this.isSynced) return;
-
-    const webApi = new Client({
-      baseUrl: settings.apiUrl(),
-      accessToken: (await UserSetting.accessToken()) as string,
-      logger,
-    });
-
-    // Sync the segment if the note is related to a segment
-    if (this.targetType === "Segment") {
-      const segment = await Segment.findByPk(this.targetId);
-      if (!segment) {
-        throw new Error("Segment not found");
-      }
-
-      await segment.sync();
-    }
-
-    return webApi.syncNote(this.toJSON()).then(() => {
-      const now = new Date();
-      this.update({ syncedAt: now, updatedAt: now });
-    });
-  }
-
-  @AfterFind
-  static async syncAfterFind(notes: Note[]) {
-    if (!notes.length) return;
-
-    const unsyncedNotes = notes.filter((note) => note.id && !note.isSynced);
-    if (!unsyncedNotes.length) return;
-
-    unsyncedNotes.forEach((note) => {
-      note.sync().catch((err) => {
-        logger.error("sync note error", note.id, err);
-      });
-    });
-  }
-
-  @AfterCreate
-  static syncAndUploadAfterCreate(note: Note) {
-    note.sync().catch((err) => {
-      logger.error("sync note error", note.id, err);
-    });
-  }
-
   @AfterCreate
   static notifyForCreate(note: Note) {
     this.notify(note, "create");
@@ -110,26 +59,6 @@ export class Note extends Model<Note> {
   @AfterUpdate
   static notifyForUpdate(note: Note) {
     this.notify(note, "update");
-  }
-
-  @AfterUpdate
-  static syncAfterUpdate(note: Note) {
-    note.sync().catch((err) => {
-      logger.error("sync note error", note.id, err);
-    });
-  }
-
-  @AfterDestroy
-  static async destroyRemote(note: Note) {
-    const webApi = new Client({
-      baseUrl: settings.apiUrl(),
-      accessToken: (await UserSetting.accessToken()) as string,
-      logger,
-    });
-
-    webApi.deleteNote(note.id).catch((err) => {
-      logger.error("delete remote note failed:", err.message);
-    });
   }
 
   @AfterDestroy

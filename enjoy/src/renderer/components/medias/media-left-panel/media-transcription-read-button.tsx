@@ -2,7 +2,7 @@ import {
   AppSettingsProviderContext,
   MediaShadowProviderContext,
 } from "@renderer/context";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -12,7 +12,6 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  Button,
   Dialog,
   DialogContent,
   DialogTitle,
@@ -35,7 +34,6 @@ import {
   ChevronDownIcon,
   DownloadIcon,
   GaugeCircleIcon,
-  LoaderIcon,
   MicIcon,
   MoreHorizontalIcon,
   PauseIcon,
@@ -43,13 +41,16 @@ import {
   Trash2Icon,
 } from "lucide-react";
 import { useRecordings } from "@renderer/hooks";
-import { formatDateTime } from "@renderer/lib/utils";
+import { EjButton, EjIconButton } from "@renderer/components/enjoy";
+import { formatDateTime, cn } from "@renderer/lib/utils";
+import { scoreColor } from "@renderer/lib/design";
 import {
   LoaderSpin,
   MediaCaption,
   RecordingDetail,
   WavesurferPlayer,
 } from "@renderer/components";
+import { splitCaptionWords } from "@renderer/components/medias/media-right-panel/caption-words";
 import { LiveAudioVisualizer } from "react-audio-visualize";
 
 export const MediaTranscriptionReadButton = (props: {
@@ -75,31 +76,33 @@ export const MediaTranscriptionReadButton = (props: {
           {props.children ? (
             props.children
           ) : (
-            <Button variant="outline" size="sm" className="hidden lg:block">
+            <EjButton variant="secondary" size="sm" className="hidden lg:inline-flex">
               {t("readThrough")}
-            </Button>
+            </EjButton>
           )}
         </DialogTrigger>
         <DialogContent
           onPointerDownOutside={(event) => event.preventDefault()}
-          className="max-w-screen-md xl:max-w-screen-lg h-5/6 flex flex-col p-0"
+          className="flex h-5/6 max-w-screen-md flex-col border-ej-line bg-ej-bg p-0 shadow-ej xl:max-w-screen-lg"
         >
           <DialogTitle className="hidden">{t("readThrough")}</DialogTitle>
           <ScrollArea className="flex-1 px-6 pt-4">
             <div className="select-text mx-auto w-full max-w-prose">
-              <h3 className="font-bold text-xl my-4">{media.name}</h3>
+              <h3 className="my-4 text-xl font-bold tracking-[-0.02em] text-ej-ink">
+                {media.name}
+              </h3>
               {open &&
                 transcription.result.timeline.map(
                   (sentence: TimelineEntry, index: number) => (
                     <div key={index} className="flex flex-start space-x-2 mb-4">
-                      <span className="text-sm text-muted-foreground min-w-max leading-8">
+                      <span className="min-w-max text-xs leading-8 text-ej-muted">
                         #{index + 1}
                       </span>
                       <MediaCaption
                         caption={sentence}
+                        words={splitCaptionWords(sentence)}
                         currentSegmentIndex={index}
                         displayIpa={true}
-                        displayNotes={false}
                       />
                     </div>
                   )
@@ -109,7 +112,9 @@ export const MediaTranscriptionReadButton = (props: {
               {open && <TranscriptionRecordingsList />}
             </div>
           </ScrollArea>
-          <div className="h-16 border-t">{open && <RecorderButton />}</div>
+          <div className="h-16 border-t border-ej-line bg-ej-surface">
+            {open && <RecorderButton />}
+          </div>
         </DialogContent>
       </Dialog>
     </>
@@ -173,12 +178,14 @@ const TranscriptionRecordingsList = () => {
           id={recording.id}
         >
           <div className="flex items-center justify-end space-x-2 mb-2">
-            <span className="text-sm text-muted-foreground">
+            <span className="text-xxs text-ej-muted">
               {formatDateTime(recording.createdAt)}
             </span>
             <DropdownMenu>
-              <DropdownMenuTrigger>
-                <MoreHorizontalIcon className="w-4 h-4" />
+              <DropdownMenuTrigger asChild>
+                <EjIconButton size={24} aria-label={t("more")}>
+                  <MoreHorizontalIcon className="size-3.5" />
+                </EjIconButton>
               </DropdownMenuTrigger>
 
               <DropdownMenuContent>
@@ -186,7 +193,7 @@ const TranscriptionRecordingsList = () => {
                   className="cursor-pointer"
                   onClick={() => handleDownload(recording)}
                 >
-                  <DownloadIcon className="w-4 h-4 mr-2" />
+                  <DownloadIcon className="mr-2 size-3.5" />
                   <span>{t("download")}</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem
@@ -194,27 +201,23 @@ const TranscriptionRecordingsList = () => {
                   onClick={() => setAssessing(recording)}
                 >
                   <GaugeCircleIcon
-                    className={`w-4 h-4 mr-2
-                    ${
-                      recording.pronunciationAssessment
-                        ? recording.pronunciationAssessment
-                            .pronunciationScore >= 80
-                          ? "text-green-500"
-                          : recording.pronunciationAssessment
-                              .pronunciationScore >= 60
-                          ? "text-yellow-600"
-                          : "text-red-500"
-                        : ""
-                    }
-                    `}
+                    className="mr-2 size-3.5"
+                    style={{
+                      color: recording.pronunciationAssessment
+                        ? scoreColor(
+                            recording.pronunciationAssessment
+                              .pronunciationScore
+                          )
+                        : undefined,
+                    }}
                   />
                   <span>{t("pronunciationAssessment")}</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem
-                  className="text-destructive cursor-pointer"
+                  className="cursor-pointer text-ej-bad"
                   onClick={() => setDeleting(recording)}
                 >
-                  <Trash2Icon className="w-4 h-4 mr-2" />
+                  <Trash2Icon className="mr-2 size-3.5" />
                   <span>{t("delete")}</span>
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -233,12 +236,14 @@ const TranscriptionRecordingsList = () => {
         <SheetContent
           aria-describedby={undefined}
           side="bottom"
-          className="rounded-t-2xl shadow-lg max-h-content overflow-y-scroll"
+          className="max-h-content overflow-y-scroll rounded-t-[18px] border-ej-line bg-ej-bg shadow-ej"
           displayClose={false}
         >
-          <SheetHeader className="flex items-center justify-center -mt-4 mb-2">
-            <SheetClose>
-              <ChevronDownIcon />
+          <SheetHeader className="-mt-4 mb-2 flex items-center justify-center">
+            <SheetClose asChild>
+              <EjIconButton aria-label={t("close")}>
+                <ChevronDownIcon className="size-4" />
+              </EjIconButton>
             </SheetClose>
           </SheetHeader>
 
@@ -253,17 +258,22 @@ const TranscriptionRecordingsList = () => {
           setDeleting(null);
         }}
       >
-        <AlertDialogContent>
+        <AlertDialogContent aria-describedby={undefined}>
           <AlertDialogHeader>
-            <AlertDialogTitle>{t("deleteRecording")}</AlertDialogTitle>
-            <AlertDialogDescription>
+            <AlertDialogTitle className="text-base font-bold text-ej-ink">
+              {t("deleteRecording")}
+            </AlertDialogTitle>
+            <AlertDialogDescription className="text-xs text-ej-muted">
               {t("deleteRecordingConfirmation")}
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>{t("cancel")}</AlertDialogCancel>
-            <AlertDialogAction asChild>
-              <Button onClick={handleDelete}>{t("delete")}</Button>
+            <AlertDialogAction
+              className="bg-ej-bad hover:opacity-90"
+              onClick={handleDelete}
+            >
+              {t("delete")}
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
@@ -278,32 +288,24 @@ const RecorderButton = () => {
     isPaused,
     togglePauseResume,
     startRecording,
+    cancelPendingRecording,
     stopRecording,
     mediaRecorder,
     recordingTime,
   } = useContext(MediaShadowProviderContext);
-  const { EnjoyApp } = useContext(AppSettingsProviderContext);
-  const [access, setAccess] = useState<boolean>(false);
-
-  const askForMediaAccess = () => {
-    EnjoyApp.system.preferences.mediaAccess("microphone").then((access) => {
-      if (access) {
-        setAccess(true);
-      } else {
-        setAccess(false);
-        toast.warning(t("noMicrophoneAccess"));
-      }
-    });
-  };
+  const recordingRef = useRef(isRecording);
+  recordingRef.current = isRecording;
 
   useEffect(() => {
-    askForMediaAccess();
+    return () => {
+      if (!recordingRef.current) cancelPendingRecording();
+    };
   }, []);
 
   if (isRecording) {
     return (
-      <div className="h-16 flex items-center justify-center px-6">
-        <div className="flex items-center space-x-2">
+      <div className="flex h-16 items-center justify-center px-6">
+        <div className="flex items-center gap-2">
           <LiveAudioVisualizer
             mediaRecorder={mediaRecorder}
             barWidth={2}
@@ -315,55 +317,59 @@ const RecorderButton = () => {
             minDecibels={-80}
             smoothingTimeConstant={0.4}
           />
-          <span className="text-sm text-muted-foreground">
+          <span className="font-code text-xs tabular-nums text-ej-muted">
             {Math.floor(recordingTime / 60)}:
             {String(recordingTime % 60).padStart(2, "0")}
           </span>
-          <Button
+          <button
+            type="button"
             onClick={togglePauseResume}
-            className="rounded-full shadow w-8 h-8"
-            size="icon"
+            className="inline-flex size-8 items-center justify-center rounded-full bg-ej-ink text-ej-bg shadow-ej transition-opacity duration-ej hover:opacity-90"
           >
             {isPaused ? (
               <PlayIcon
                 data-tooltip-id="media-shadow-tooltip"
                 data-tooltip-content={t("continue")}
-                fill="white"
-                className="w-4 h-4"
+                fill="currentColor"
+                className="size-4"
               />
             ) : (
               <PauseIcon
                 data-tooltip-id="media-shadow-tooltip"
                 data-tooltip-content={t("pause")}
-                fill="white"
-                className="w-4 h-4"
+                fill="currentColor"
+                className="size-4"
               />
             )}
-          </Button>
-          <Button
+          </button>
+          <button
+            type="button"
             data-tooltip-id="media-shadow-tooltip"
             data-tooltip-content={t("finish")}
             onClick={stopRecording}
-            className="rounded-full bg-green-500 hover:bg-green-600 shadow w-8 h-8"
-            size="icon"
+            className="inline-flex size-8 items-center justify-center rounded-full bg-ej-ok text-white shadow-ej transition-opacity duration-ej hover:opacity-90"
           >
-            <CheckIcon className="w-4 h-4 text-white" />
-          </Button>
+            <CheckIcon className="size-4" />
+          </button>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="h-16 flex items-center justify-center px-6">
-      <Button
-        disabled={!access}
-        variant="ghost"
-        className="aspect-square p-0 h-12 rounded-full bg-red-500 hover:bg-red-500/90"
+    <div className="flex h-16 items-center justify-center px-6">
+      <button
+        type="button"
+        data-testid="media-transcription-record-button"
+        className={cn(
+          "inline-flex size-12 items-center justify-center rounded-full",
+          "bg-ej-bad text-white shadow-ej transition-opacity duration-ej",
+          "hover:opacity-90"
+        )}
         onClick={() => startRecording()}
       >
-        <MicIcon className="w-6 h-6 text-white" />
-      </Button>
+        <MicIcon className="size-6" />
+      </button>
     </div>
   );
 };

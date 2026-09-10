@@ -1,11 +1,11 @@
 import {
-  Button,
   DropdownMenu,
   DropdownMenuItem,
   DropdownMenuContent,
   DropdownMenuTrigger,
   toast,
 } from "@renderer/components/ui";
+import { EjIconButton } from "@renderer/components/enjoy";
 import { MoreVerticalIcon } from "lucide-react";
 import { t } from "i18next";
 import { useContext } from "react";
@@ -57,11 +57,15 @@ export const DocumentActionsButton = (props: { document: DocumentEType }) => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon" className="w-6 h-6">
+        <EjIconButton title={t("more")}>
           <MoreVerticalIcon className="size-4" />
-        </Button>
+        </EjIconButton>
       </DropdownMenuTrigger>
-      <DropdownMenuContent side="bottom" align="start">
+      <DropdownMenuContent
+        side="bottom"
+        align="start"
+        className="rounded-ej-lg border-ej-line bg-ej-surface shadow-ej"
+      >
         <DropdownMenuItem onClick={handlePrint}>{t("print")}</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

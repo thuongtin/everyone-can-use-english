@@ -1,13 +1,19 @@
-import { Input } from "@renderer/components/ui";
 import {
   DocumentAddButton,
   DocumentCard,
   LoaderSpin,
 } from "@renderer/components";
+import {
+  EjEmptyState,
+  EjMediaGrid,
+  EjPage,
+  EjPageHeader,
+  EjSearchInput,
+  EjToolbar,
+} from "@renderer/components/enjoy";
 import { useState, useContext, useEffect } from "react";
 import { AppSettingsProviderContext } from "@renderer/context";
 import { t } from "i18next";
-import { useNavigate } from "react-router-dom";
 import { useDebounce } from "@uidotdev/usehooks";
 
 export default () => {
@@ -34,20 +40,34 @@ export default () => {
   }, [debouncedQuery]);
 
   return (
-    <div className="min-h-full max-w-5xl mx-auto px-4 py-6">
-      <div className="flex flex-wrap items-center gap-4 mb-4">
-        <Input
-          className="max-w-48"
-          placeholder={t("search")}
-          onChange={(e) => setQuery(e.target.value)}
+    <EjPage>
+      <EjPageHeader
+        title={t("library.documents")}
+        description={t("library.documentsDescription")}
+        actions={<DocumentAddButton />}
+      />
+
+      <EjToolbar>
+        <EjSearchInput
+          value={query}
+          onChange={setQuery}
+          placeholder={t("library.searchPlaceholder")}
         />
-        <DocumentAddButton />
-      </div>
+        <span className="ml-auto text-xs text-ej-muted ej-tabular">
+          {t("library.itemsCount", { count: documents.length })}
+        </span>
+      </EjToolbar>
 
       {loading ? (
         <LoaderSpin />
+      ) : documents.length === 0 ? (
+        <EjEmptyState
+          title={t("library.empty")}
+          description={t("library.emptyDescription")}
+          actions={<DocumentAddButton />}
+        />
       ) : (
-        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        <EjMediaGrid>
           {documents.map((document) => (
             <DocumentCard
               key={document.id}
@@ -57,8 +77,8 @@ export default () => {
               }
             />
           ))}
-        </div>
+        </EjMediaGrid>
       )}
-    </div>
+    </EjPage>
   );
 };

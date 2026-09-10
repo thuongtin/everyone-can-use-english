@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-import { cn } from "@renderer/lib/utils";
 import {
   AudioLinesIcon,
   CircleAlertIcon,
@@ -8,14 +6,27 @@ import {
   TrashIcon,
 } from "lucide-react";
 import {
-  Badge,
-  Button,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@renderer/components/ui";
+import { MediaCard, MediaCardStatus } from "@renderer/components/enjoy";
+import { formatDuration } from "@renderer/lib/utils";
+import { resolveDisplayResource } from "@renderer/lib/retired-resource";
 import { t } from "i18next";
+
+const statusOf = (audio: Partial<AudioType>): MediaCardStatus => {
+  if (audio.transcribing) return "processing";
+  return audio.transcribed ? "done" : "pending";
+};
+
+const statusLabel = (status: MediaCardStatus) =>
+  status === "processing"
+    ? t("media.transcribing")
+    : status === "done"
+      ? t("media.transcribed")
+      : t("media.notTranscribed");
 
 export const AudioCard = (props: {
   audio: Partial<AudioType>;
@@ -24,76 +35,74 @@ export const AudioCard = (props: {
   onEdit?: () => void;
 }) => {
   const { audio, className, onDelete, onEdit } = props;
+  const status = statusOf(audio);
+  const coverResource = resolveDisplayResource(audio.coverUrl);
+
+  const meta = [
+    audio.recordingsCount
+      ? t("media.recordingsCount", { count: audio.recordingsCount })
+      : null,
+    !audio.src ? t("cannotFindSourceFile") : null,
+  ]
+    .filter(Boolean)
+    .join(" · ");
 
   return (
-    <div className={cn("w-full relative", className)}>
-      <Link to={`/audios/${audio.id}`}>
-        <div
-          className="aspect-square border rounded-lg overflow-hidden flex relative"
-          style={{
-            borderBottomColor: `#${audio.md5.slice(0, 6)}`,
-            borderBottomWidth: 3,
-          }}
-        >
-          {audio.coverUrl ? (
-            <img
-              src={audio.coverUrl}
-              crossOrigin="anonymous"
-              className="hover:scale-105 object-cover w-full h-full"
-            />
-          ) : (
-            <AudioLinesIcon className="hover:scale-105 object-cover w-1/2 h-1/2 m-auto" />
-          )}
-
-          {audio.language && (
-            <Badge className="absolute left-2 top-2">{audio.language}</Badge>
-          )}
-          {!audio.src && (
-            <div
-              data-tooltip-content={t("cannotFindSourceFile")}
-              data-tooltip-id="global-tooltip"
-              className="absolute right-2 top-2"
-            >
-              <CircleAlertIcon className="text-destructive w-4 h-4" />
-            </div>
-          )}
-        </div>
-      </Link>
-      <div className="text-sm font-semibold mt-2 max-w-full line-clamp-2 h-10">
-        {audio.name}
-      </div>
-      {(onDelete || onEdit) && (
-        <div className="absolute right-1 top-1 z-10">
+    <MediaCard
+      className={className}
+      to={`/audios/${audio.id}`}
+      id={audio.id}
+      title={audio.name}
+      ratio="square"
+      coverUrl={coverResource.url}
+      coverFallback={<AudioLinesIcon className="size-8" strokeWidth={1.4} />}
+      language={audio.language}
+      duration={audio.duration ? formatDuration(audio.duration) : undefined}
+      processing={audio.transcribing}
+      processingLabel={t("media.transcribing")}
+      status={status}
+      statusLabel={statusLabel(status)}
+      meta={
+        meta ? (
+          <span className="inline-flex items-center gap-1">
+            {!audio.src && (
+              <CircleAlertIcon className="size-3 text-ej-bad shrink-0" />
+            )}
+            {meta}
+          </span>
+        ) : undefined
+      }
+      actions={
+        onDelete || onEdit ? (
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="hover:bg-transparent w-6 h-6"
+              <button
+                type="button"
+                className="size-6 rounded-lg bg-white/90 text-ej-ink flex items-center justify-center shadow-ej"
               >
-                <MoreVerticalIcon className="size-4" />
-              </Button>
+                <MoreVerticalIcon className="size-3.5" />
+              </button>
             </DropdownMenuTrigger>
-
-            <DropdownMenuContent>
+            <DropdownMenuContent align="end">
               {onEdit && (
-                <DropdownMenuItem onClick={onEdit}>
+                <DropdownMenuItem className="cursor-pointer gap-2" onClick={onEdit}>
                   <EditIcon className="size-4" />
-                  <span className="ml-2 text-sm">{t("edit")}</span>
+                  {t("edit")}
                 </DropdownMenuItem>
               )}
               {onDelete && (
-                <DropdownMenuItem onClick={onDelete}>
-                  <TrashIcon className="size-4 text-destructive" />
-                  <span className="ml-2 text-destructive text-sm">
-                    {t("delete")}
-                  </span>
+                <DropdownMenuItem
+                  className="cursor-pointer gap-2 text-ej-bad focus:text-ej-bad"
+                  onClick={onDelete}
+                >
+                  <TrashIcon className="size-4" />
+                  {t("delete")}
                 </DropdownMenuItem>
               )}
             </DropdownMenuContent>
           </DropdownMenu>
-        </div>
-      )}
-    </div>
+        ) : undefined
+      }
+    />
   );
 };

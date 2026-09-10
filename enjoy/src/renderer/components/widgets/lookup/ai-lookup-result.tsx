@@ -4,7 +4,7 @@ import { Button, toast } from "@renderer/components/ui";
 import { useAiCommand } from "@renderer/hooks";
 import { LoaderIcon } from "lucide-react";
 import { t } from "i18next";
-import { md5 } from "js-md5";
+
 
 export const AiLookupResult = (props: {
   word: string;
@@ -13,11 +13,13 @@ export const AiLookupResult = (props: {
   sourceId?: string;
 }) => {
   const { word, context = "", sourceType, sourceId } = props;
-  const { webApi, EnjoyApp } = useContext(AppSettingsProviderContext);
+  const { EnjoyApp, nativeLanguage, learningLanguage } = useContext(
+    AppSettingsProviderContext
+  );
 
   const [lookingUp, setLookingUp] = useState<boolean>(false);
   const [result, setResult] = useState<LookupType>();
-  const { lookupWord } = useAiCommand();
+  const { lookupWord, lookupCacheKey } = useAiCommand();
 
   const handleLookup = async (options?: { force: boolean }) => {
     if (lookingUp) return;
@@ -30,7 +32,7 @@ export const AiLookupResult = (props: {
       context,
       sourceId,
       sourceType,
-      cacheKey: `lookup-${md5(`${word}-${context}`)}`,
+      cacheKey: lookupCacheKey(word, context),
       force,
     })
       .then((lookup) => {
@@ -47,19 +49,9 @@ export const AiLookupResult = (props: {
   };
 
   const fetchCachedLookup = async () => {
-    const remoteLookup = await webApi.lookup({
-      word,
-      context,
-      sourceId,
-      sourceType,
-    });
-    if (remoteLookup?.meaning) {
-      setResult(remoteLookup);
-      return;
-    }
-
+    const cacheKey = lookupCacheKey(word, context);
     const cached = await EnjoyApp.cacheObjects.get(
-      `lookup-${md5(`${word}-${context}`)}`
+      cacheKey
     );
     if (cached?.meaning) {
       setResult(cached);
@@ -75,8 +67,10 @@ export const AiLookupResult = (props: {
   useEffect(() => {
     if (!word || !context) return;
 
-    fetchCachedLookup();
-  }, [word, context]);
+    void fetchCachedLookup().catch(() => {
+      setResult(undefined);
+    });
+  }, [word, context, nativeLanguage, learningLanguage, lookupCacheKey(word, context)]);
 
   if (!word) return null;
 
@@ -88,7 +82,7 @@ export const AiLookupResult = (props: {
             <div className="mb-2 font-semibold font-sans">{word}</div>
             <div className="mb-2">
               {result.meaning?.pos && (
-                <span className="italic text-sm text-muted-foreground mr-2">
+                <span className="mr-2 text-xs text-ej-muted">
                   {result.meaning.pos}
                 </span>
               )}

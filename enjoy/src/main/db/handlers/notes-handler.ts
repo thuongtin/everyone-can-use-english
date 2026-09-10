@@ -145,16 +145,6 @@ class NotesHandler {
     });
   }
 
-  private async sync(_event: IpcMainEvent, id: string) {
-    const note = await Note.findByPk(id);
-    if (!note) {
-      throw new Error("Note not found");
-    }
-
-    await note.sync();
-    return note.toJSON();
-  }
-
   register() {
     ipcMain.handle("notes-group-by-target", this.groupByTarget);
     ipcMain.handle("notes-group-by-segment", this.groupBySegment);
@@ -163,7 +153,6 @@ class NotesHandler {
     ipcMain.handle("notes-update", this.update);
     ipcMain.handle("notes-delete", this.delete);
     ipcMain.handle("notes-create", this.create);
-    ipcMain.handle("notes-sync", this.sync);
   }
 
   unregister() {
@@ -174,7 +163,6 @@ class NotesHandler {
     ipcMain.removeHandler("notes-update");
     ipcMain.removeHandler("notes-delete");
     ipcMain.removeHandler("notes-create");
-    ipcMain.removeHandler("notes-sync");
   }
 }
 

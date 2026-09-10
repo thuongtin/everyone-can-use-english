@@ -1,6 +1,6 @@
+/* global globalThis */
 import assert from "node:assert/strict";
 import { mkdir, mkdtemp, rm } from "node:fs/promises";
-import os from "node:os";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { build } from "esbuild";
@@ -277,6 +277,10 @@ export { textCommand } from "./src/commands/text.command.ts";`,
     tests.push(name);
   };
   const schema = z.object({ value: z.string() });
+  const optionalSchema = z.object({
+    word: z.string(),
+    phonetic: z.string().optional(),
+  });
 
   const invokeConversationText = async (nextMode) => {
     mode = nextMode;
@@ -337,32 +341,16 @@ export { textCommand } from "./src/commands/text.command.ts";`,
     );
   });
 
-  await test("EnjoyAI requires a resolved endpoint before fetch", () => {
-    mode = "text";
+  await test("retired and unselected providers fail before fetch regardless of endpoint", () => {
     captures.length = 0;
-    assert.throws(
-      () =>
-        createChatModel({
-          provider: "enjoyai",
-          key: "fake-enjoy-token",
-          modelName: "gpt-4o",
-        }),
-      /EnjoyAI endpoint is required/
-    );
+    for (const provider of [undefined, "enjoyai", "needs-selection"]) {
+      assert.throws(() => createChatModel({ provider, key: "fake-key", modelName: "gpt-4o", baseUrl: "https://alias.example/api/ai" }), /Chưa chọn provider/);
+    }
+    for (const baseUrl of ["https://enjoy.bot/api/ai", "https://API.ENJOY.BOT./api", "https://api.getenjoyapp.com"]) {
+      assert.throws(() => createChatModel({ provider: "openai", key: "fake-key", modelName: "gpt-4o", baseUrl }), { code: "retired_enjoy_host" });
+    }
+    assert.throws(() => createChatModel({ provider: "openai", modelName: "gpt-4o" }), /Chưa cấu hình API key/);
     assert.equal(captures.length, 0);
-  });
-
-  await test("EnjoyAI uses the resolved canonical endpoint", async () => {
-    mode = "text";
-    captures.length = 0;
-    await createChatModel({
-      provider: "enjoyai",
-      key: "fake-enjoy-token",
-      baseUrl: "https://enjoy.example/api/ai",
-      modelName: "gpt-4o",
-    }).invoke("hello");
-    assert.equal(captures[0].url, "https://enjoy.example/api/ai/chat/completions");
-    assert.equal(captures[0].headers.authorization, "Bearer fake-enjoy-token");
   });
 
   await test("explicit Ollama requires a selected model before fetch", () => {
@@ -374,7 +362,7 @@ export { textCommand } from "./src/commands/text.command.ts";`,
           provider: "ollama",
           baseUrl: "http://127.0.0.1:11434",
         }),
-      /ollama model is required/
+      /Chưa chọn model cho ollama/
     );
     assert.equal(captures.length, 0);
   });
@@ -389,7 +377,7 @@ export { textCommand } from "./src/commands/text.command.ts";`,
           baseUrl: "http://127.0.0.1:1234/v1",
           modelName: " ",
         }),
-      /lmstudio model is required/
+      /Chưa chọn model cho lmstudio/
     );
     assert.equal(captures.length, 0);
   });
@@ -637,6 +625,78 @@ export { textCommand } from "./src/commands/text.command.ts";`,
     });
     assert.deepEqual(result, { value: "fixture" });
     assert.equal(captures[0].body.temperature, 0);
+    assert.deepEqual(captures[0].body.response_format, { type: "json_object" });
+  });
+
+  await test("LM Studio JSON command sends its documented JSON Schema request", async () => {
+    mode = "json";
+    captures.length = 0;
+    const result = await jsonCommand("Return the fixture object", {
+      provider: "lmstudio",
+      baseUrl: "http://127.0.0.1:1234/v1",
+      modelName: "local-model",
+      schema,
+    });
+    assert.deepEqual(result, { value: "fixture" });
+    assert.equal(captures[0].url, "http://127.0.0.1:1234/v1/chat/completions");
+    assert.equal(captures[0].body.response_format.type, "json_schema");
+    assert.equal(
+      captures[0].body.response_format.json_schema.name,
+      "enjoy_json_response"
+    );
+    assert.deepEqual(captures[0].body.response_format.json_schema.schema, {
+      type: "object",
+      properties: { value: { type: "string" } },
+      required: ["value"],
+      additionalProperties: false,
+    });
+    assert.equal(
+      "strict" in captures[0].body.response_format.json_schema,
+      false
+    );
+  });
+
+  await test("LM Studio JSON Schema preserves optional properties", async () => {
+    mode = "lookup";
+    captures.length = 0;
+    const result = await jsonCommand("Return the fixture word", {
+      provider: "lmstudio",
+      baseUrl: "http://127.0.0.1:1234/v1",
+      modelName: "local-model",
+      schema: optionalSchema,
+    });
+    assert.deepEqual(result, { word: "fixture" });
+    const requestSchema = captures[0].body.response_format.json_schema.schema;
+    assert.deepEqual(requestSchema.required, ["word"]);
+    assert.deepEqual(requestSchema.properties.phonetic, { type: "string" });
+    assert.equal(
+      "strict" in captures[0].body.response_format.json_schema,
+      false
+    );
+  });
+
+  await test("LM Studio JSON command rejects malformed and missing required output", async () => {
+    mode = "malformed";
+    await assert.rejects(
+      () => jsonCommand("Return JSON", {
+        provider: "lmstudio",
+        baseUrl: "http://127.0.0.1:1234/v1",
+        modelName: "local-model",
+        schema,
+      }),
+      /Unexpected token|malformed JSON/
+    );
+
+    mode = "invalid-schema";
+    await assert.rejects(
+      () => jsonCommand("Return JSON", {
+        provider: "lmstudio",
+        baseUrl: "http://127.0.0.1:1234/v1",
+        modelName: "local-model",
+        schema,
+      }),
+      /Required|value/
+    );
   });
 
   await test("lookup optional schema uses JSON mode and keeps partial data", async () => {

@@ -15,7 +15,6 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-  Button,
   Form,
   FormDescription,
   FormField,
@@ -31,6 +30,7 @@ import { useContext } from "react";
 import { AppSettingsProviderContext } from "@renderer/context";
 import Mustache from "mustache";
 import { GPTForm, TTSForm } from "@renderer/components";
+import { EjButton } from "@renderer/components/enjoy";
 
 export const ChatMemberForm = (props: {
   chat: ChatType;
@@ -160,7 +160,7 @@ export const ChatMemberForm = (props: {
           className="mb-6"
         >
           <AccordionItem value="gpt">
-            <AccordionTrigger className="text-muted-foreground">
+            <AccordionTrigger className="text-xs font-semibold text-ej-ink2">
               {t("models.chatMember.gptSettings")}
             </AccordionTrigger>
             <AccordionContent className="space-y-4 px-2">
@@ -169,7 +169,7 @@ export const ChatMemberForm = (props: {
           </AccordionItem>
 
           <AccordionItem value="tts">
-            <AccordionTrigger className="text-muted-foreground">
+            <AccordionTrigger className="text-xs font-semibold text-ej-ink2">
               {t("models.chatMember.ttsSettings")}
             </AccordionTrigger>
             <AccordionContent className="space-y-4 px-2">
@@ -178,7 +178,7 @@ export const ChatMemberForm = (props: {
           </AccordionItem>
 
           <AccordionItem value="more">
-            <AccordionTrigger className="text-muted-foreground">
+            <AccordionTrigger className="text-xs font-semibold text-ej-ink2">
               {t("models.chatMember.moreSettings")}
             </AccordionTrigger>
             <AccordionContent className="space-y-4 px-2">
@@ -197,11 +197,11 @@ export const ChatMemberForm = (props: {
                       {t("models.chatMember.promptDescription")}
                     </FormDescription>
                     <FormMessage />
-                    <div className="text-sm text-muted-foreground mb-2">
-                      {t("promptPreview")}:
+                    <div className="mb-2 ej-label">
+                      {t("promptPreview")}
                     </div>
-                    <div className="text-muted-foreground bg-muted px-4 py-2 rounded-md">
-                      <div className="font-sans select-text text-sm whitespace-pre-line">
+                    <div className="rounded-ej border border-ej-line bg-ej-surface2 px-3.5 py-2.5 text-ej-ink2">
+                      <div className="select-text whitespace-pre-line font-sans text-xs leading-relaxed">
                         {buildFullPrompt(form.watch("config.prompt"))}
                       </div>
                     </div>
@@ -216,21 +216,21 @@ export const ChatMemberForm = (props: {
           {member?.id && (
             <AlertDialog>
               <AlertDialogTrigger asChild>
-                <Button className="text-destructive" variant="secondary">
-                  {t("remove")}
-                </Button>
+                <EjButton variant="danger">{t("remove")}</EjButton>
               </AlertDialogTrigger>
               <AlertDialogContent>
                 <AlertDialogHeader>
-                  <AlertDialogTitle>{t("removeChatMember")}</AlertDialogTitle>
+                  <AlertDialogTitle className="text-base font-bold text-ej-ink">
+                    {t("removeChatMember")}
+                  </AlertDialogTitle>
                 </AlertDialogHeader>
-                <AlertDialogDescription>
+                <AlertDialogDescription className="text-xs text-ej-muted">
                   {t("removeChatMemberConfirmation")}
                 </AlertDialogDescription>
                 <AlertDialogFooter>
                   <AlertDialogCancel>{t("cancel")}</AlertDialogCancel>
                   <AlertDialogAction
-                    className="bg-destructive hover:bg-destructive-hover"
+                    className="bg-ej-bad hover:opacity-90"
                     onClick={handleRemove}
                   >
                     {t("remove")}
@@ -239,14 +239,16 @@ export const ChatMemberForm = (props: {
               </AlertDialogContent>
             </AlertDialog>
           )}
-          <Button
+          <EjButton
             type="button"
             variant="secondary"
             onClick={() => onFinish?.()}
           >
             {t("cancel")}
-          </Button>
-          <Button type="submit">{t("save")}</Button>
+          </EjButton>
+          <EjButton type="submit" variant="primary">
+            {t("save")}
+          </EjButton>
         </div>
       </form>
     </Form>

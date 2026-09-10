@@ -1,0 +1,109 @@
+[
+  {
+    "arxiv": "2303.00747",
+    "queryTitle": "WhisperX: Time-Accurate Speech Transcription of Long-Form Audio",
+    "crossrefCandidates": [
+      {
+        "title": [
+          "WhisperX: Time-Accurate Speech Transcription of Long-Form Audio"
+        ],
+        "doi": "10.21437/interspeech.2023-78",
+        "type": "proceedings-article",
+        "updates": [],
+        "titleMatches": true,
+        "authors": [
+          "Max Bain",
+          "Jaesung Huh",
+          "Tengda Han",
+          "Andrew Zisserman"
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              8,
+              20
+            ]
+          ]
+        },
+        "metadataUrl": "https://api.crossref.org/works/10.21437/interspeech.2023-78"
+      },
+      {
+        "title": [
+          "Lightweight Audio Segmentation for Long-form Speech Translation"
+        ],
+        "doi": "10.21437/interspeech.2024-790",
+        "type": "proceedings-article",
+        "updates": [],
+        "titleMatches": false
+      }
+    ],
+    "crossrefMatchFound": true,
+    "caution": "No update-to entry is not exhaustive evidence of no retraction. Unmatched search candidates are excluded."
+  },
+  {
+    "arxiv": "2307.14743",
+    "queryTitle": "Turning Whisper into Real-Time Transcription System",
+    "crossrefCandidates": [
+      {
+        "title": [
+          "Turning Whisper into Real-Time Transcription System"
+        ],
+        "doi": "10.18653/v1/2023.ijcnlp-demo.3",
+        "type": "proceedings-article",
+        "updates": [],
+        "titleMatches": true,
+        "authors": [
+          "Dominik Macháček",
+          "Raj Dabre",
+          "Ondřej Bojar"
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2023
+            ]
+          ]
+        },
+        "metadataUrl": "https://api.crossref.org/works/10.18653/v1/2023.ijcnlp-demo.3"
+      },
+      {
+        "title": [
+          "Real-time transcription correction system"
+        ],
+        "doi": "10.1121/1.1634110",
+        "type": "journal-article",
+        "updates": [],
+        "titleMatches": false
+      }
+    ],
+    "crossrefMatchFound": true,
+    "caution": "No update-to entry is not exhaustive evidence of no retraction. Unmatched search candidates are excluded."
+  },
+  {
+    "arxiv": "2608.31170",
+    "queryTitle": "Context-Aware Interleaved Batching for WhisperX",
+    "crossrefCandidates": [
+      {
+        "title": [
+          "GCIT: A Global Context-Aware Interleaved Transformer for Medical Image Segmentation"
+        ],
+        "doi": "10.1145/3727648.3727750",
+        "type": "proceedings-article",
+        "updates": [],
+        "titleMatches": false
+      },
+      {
+        "title": [
+          "Lazy Batching: An SLA-aware Batching System for Cloud Machine Learning Inference"
+        ],
+        "doi": "10.1109/hpca51647.2021.00049",
+        "type": "proceedings-article",
+        "updates": [],
+        "titleMatches": false
+      }
+    ],
+    "crossrefMatchFound": false,
+    "caution": "No update-to entry is not exhaustive evidence of no retraction. Unmatched search candidates are excluded."
+  }
+]

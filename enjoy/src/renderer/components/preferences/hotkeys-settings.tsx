@@ -99,7 +99,7 @@ export const HotkeysSettings = ({
                   )}
                 </Button>
               </div>
-              <div className="py-2 text-center text-sm text-muted-foreground">
+              <div className="py-2 text-center text-sm text-ej-muted">
                 {t("customizeShortcutsRecordingTip")}
               </div>
             </div>
@@ -116,7 +116,7 @@ export const HotkeysSettings = ({
                   {currentHotkeys[keyName]}
                 </Button>
               </div>
-              <div className="py-2 text-center text-sm text-muted-foreground">
+              <div className="py-2 text-center text-sm text-ej-muted">
                 {t("customizeShortcutsTip")}
               </div>
             </div>

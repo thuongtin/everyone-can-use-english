@@ -19,24 +19,18 @@ import mainWindow from "@main/window";
 import {
   Audio,
   PronunciationAssessment,
-  UserSetting,
   Video,
 } from "@main/db/models";
 import fs from "fs-extra";
 import path from "path";
 import settings from "@main/settings";
 import { hashFile } from "@main/utils";
-import log from "@main/logger";
-import storage from "@main/storage";
-import { Client } from "@/api";
 import echogarden from "@main/echogarden";
 import { t } from "i18next";
 import { Attributes, Op, Transaction } from "sequelize";
 import { v5 as uuidv5 } from "uuid";
 import FfmpegWrapper from "@main/ffmpeg";
 import { MIME_TYPES } from "@/constants";
-
-const logger = log.scope("db/models/recording");
 
 @Table({
   modelName: "Recording",
@@ -173,41 +167,6 @@ export class Recording extends Model<Recording> {
     }
   }
 
-  async upload(force: boolean = false) {
-    if (this.isUploaded && !force) {
-      return;
-    }
-
-    return storage
-      .put(this.md5, this.filePath, this.mimeType)
-      .then((result) => {
-        logger.debug("upload result:", result.data);
-        if (result.data.success) {
-          this.update({ uploadedAt: new Date() }, { hooks: false });
-        } else {
-          throw new Error(result.data);
-        }
-      })
-      .catch((err) => {
-        logger.error("upload failed:", err.message);
-        throw err;
-      });
-  }
-
-  async sync() {
-    if (this.isSynced) return;
-
-    const webApi = new Client({
-      baseUrl: settings.apiUrl(),
-      accessToken: (await UserSetting.accessToken()) as string,
-      logger,
-    });
-
-    return webApi.syncRecording(this.toJSON()).then(() => {
-      this.update({ syncedAt: new Date() }, { hooks: false });
-    });
-  }
-
   @AfterFind
   static async findTarget(findResult: Recording | Recording[]) {
     if (!findResult) return;
@@ -227,12 +186,6 @@ export class Recording extends Model<Recording> {
       delete instance.video;
       delete instance.dataValues.video;
     }
-  }
-
-  @AfterCreate
-  static autoSync(recording: Recording) {
-    // auto sync should not block the main thread
-    recording.sync().catch(() => {});
   }
 
   @AfterCreate
@@ -291,12 +244,6 @@ export class Recording extends Model<Recording> {
   @AfterDestroy
   static async cleanupFile(recording: Recording) {
     fs.remove(recording.filePath);
-    const webApi = new Client({
-      baseUrl: settings.apiUrl(),
-      accessToken: (await UserSetting.accessToken()) as string,
-      logger: log.scope("recording/cleanupFile"),
-    });
-    webApi.deleteRecording(recording.id);
   }
 
   static async createFromBlob(

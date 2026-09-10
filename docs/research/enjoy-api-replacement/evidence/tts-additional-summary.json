@@ -1,0 +1,156 @@
+{
+  "viResults": [
+    {
+      "model": "fish-audio/s2.1-pro",
+      "inputLanguage": "vi",
+      "sampleKind": "synthetic",
+      "voice": null,
+      "responseFormat": "mp3",
+      "status": 200,
+      "ok": true,
+      "latencyMs": 1507,
+      "contentType": "audio/mpeg",
+      "bytes": 53915,
+      "generationId": "gen-tts-1788850313-zn3AliOss7aEncpLfCwL",
+      "sourcePath": null,
+      "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/fish-audio__s2.1-pro/vi.mp3",
+      "ffprobe": {
+        "ok": true,
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "codec_type": "audio",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "format_name": "mp3",
+          "duration": "3.369688",
+          "size": "53915"
+        }
+      },
+      "error": null,
+      "cost": {
+        "totalCost": 0.00078,
+        "providerName": "Fish Audio"
+      }
+    },
+    {
+      "model": "x-ai/grok-voice-tts-1.0",
+      "inputLanguage": "vi",
+      "sampleKind": "synthetic",
+      "voice": "eve",
+      "responseFormat": "mp3",
+      "status": 200,
+      "ok": true,
+      "latencyMs": 1481,
+      "contentType": "audio/mpeg",
+      "bytes": 35328,
+      "generationId": "gen-tts-1788850313-fNqwUu3P8pKxb2e5nJwU",
+      "sourcePath": null,
+      "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/x-ai__grok-voice-tts-1.0/vi.mp3",
+      "ffprobe": {
+        "ok": true,
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "codec_type": "audio",
+            "sample_rate": "24000",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "format_name": "mp3",
+          "duration": "2.208000",
+          "size": "35328"
+        }
+      },
+      "error": null,
+      "cost": {
+        "totalCost": 0.00063,
+        "providerName": "xAI"
+      }
+    },
+    {
+      "model": "mistralai/voxtral-mini-tts-2603",
+      "inputLanguage": "vi",
+      "sampleKind": "synthetic",
+      "voice": "en_paul_neutral",
+      "responseFormat": "mp3",
+      "status": 200,
+      "ok": true,
+      "latencyMs": 3003,
+      "contentType": "audio/mpeg",
+      "bytes": 24658,
+      "generationId": "gen-tts-1788850326-RQRjT1RPrEu0EpCC2eeN",
+      "sourcePath": null,
+      "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/mistralai__voxtral-mini-tts-2603/vi.mp3",
+      "ffprobe": {
+        "ok": true,
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "codec_type": "audio",
+            "sample_rate": "22050",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "format_name": "mp3",
+          "duration": "3.356207",
+          "size": "24658"
+        }
+      },
+      "error": null,
+      "cost": {
+        "totalCost": 0,
+        "providerName": "Mistral"
+      }
+    }
+  ],
+  "geminiPcm": {
+    "model": "google/gemini-3.1-flash-tts-preview",
+    "inputLanguage": "en",
+    "sampleKind": "synthetic",
+    "voice": "Zephyr",
+    "responseFormat": "pcm",
+    "status": 200,
+    "ok": true,
+    "latencyMs": 3130,
+    "contentType": "audio/pcm;rate=24000;channels=1",
+    "bytes": 224640,
+    "generationId": "gen-tts-1788850338-ilzAVaJTvGthEzjtHYva",
+    "sourcePath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/google__gemini-3.1-flash-tts-preview/en-pcm.pcm",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/google__gemini-3.1-flash-tts-preview/en-pcm-transcoded.mp3",
+    "ffprobe": {
+      "ok": true,
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio",
+          "sample_rate": "24000",
+          "channels": 1
+        }
+      ],
+      "format": {
+        "format_name": "mp3",
+        "duration": "4.680000",
+        "size": "19149"
+      }
+    },
+    "error": null,
+    "cost": {
+      "totalCost": 0.004793,
+      "providerName": "Google"
+    }
+  }
+}

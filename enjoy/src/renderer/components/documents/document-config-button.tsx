@@ -1,10 +1,10 @@
 import {
-  Button,
   Popover,
   PopoverContent,
   PopoverTrigger,
   toast,
 } from "@renderer/components/ui";
+import { EjIconButton } from "@renderer/components/enjoy";
 import { SettingsIcon } from "lucide-react";
 import { useContext, useState } from "react";
 import { DocumentConfigForm } from "@renderer/components";
@@ -19,11 +19,15 @@ export const DocumentConfigButton = (props: { document: DocumentEType }) => {
   return (
     <Popover open={configOpen} onOpenChange={setConfigOpen}>
       <PopoverTrigger asChild>
-        <Button variant="ghost" size="icon" className="w-6 h-6">
+        <EjIconButton title={t("settings.title")}>
           <SettingsIcon className="size-4" />
-        </Button>
+        </EjIconButton>
       </PopoverTrigger>
-      <PopoverContent side="bottom" align="start">
+      <PopoverContent
+        side="bottom"
+        align="start"
+        className="rounded-ej-lg border-ej-line bg-ej-surface shadow-ej"
+      >
         <DocumentConfigForm
           config={document.config}
           onSubmit={(data: any) => {

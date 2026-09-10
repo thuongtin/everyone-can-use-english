@@ -4,7 +4,6 @@ type Dict = {
   title: string;
   pronunciation: boolean;
   lang: string;
-  downloadUrl: string;
   size: string;
   addition: string;
   hash: string;

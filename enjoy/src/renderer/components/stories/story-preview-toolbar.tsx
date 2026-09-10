@@ -7,9 +7,8 @@ import {
   AlertDialogFooter,
   AlertDialogCancel,
   AlertDialogAction,
-  FloatingToolbar,
-  ToolbarButton,
 } from "@renderer/components/ui";
+import { EjIconButton } from "@renderer/components/enjoy";
 import { BookOpenTextIcon, ScanTextIcon, HighlighterIcon } from "lucide-react";
 import { t } from "i18next";
 
@@ -24,16 +23,12 @@ export const StoryPreviewToolbar = (props: {
     props;
 
   return (
-    <FloatingToolbar>
+    <>
       <AlertDialog>
         <AlertDialogTrigger asChild>
-          <ToolbarButton
-            toggled={false}
-            tooltip={t("aiExtractVocabulary")}
-            onClick={() => {}}
-          >
-            <ScanTextIcon className="w-6 h-6" />
-          </ToolbarButton>
+          <EjIconButton title={t("aiExtractVocabulary")}>
+            <ScanTextIcon className="size-4" />
+          </EjIconButton>
         </AlertDialogTrigger>
         <AlertDialogContent aria-describedby={undefined}>
           <AlertDialogHeader>
@@ -48,16 +43,22 @@ export const StoryPreviewToolbar = (props: {
           </AlertDialogHeader>
         </AlertDialogContent>
       </AlertDialog>
-      <ToolbarButton
-        toggled={readable}
-        tooltip={t("toggleReadable")}
+
+      <EjIconButton
+        title={t("toggleReadable")}
+        active={readable}
         onClick={onToggleReadable}
       >
-        <BookOpenTextIcon className="w-6 h-6" />
-      </ToolbarButton>
-      <ToolbarButton toggled={marked} onClick={toggleMarked}>
-        <HighlighterIcon className="w-6 h-6" />
-      </ToolbarButton>
-    </FloatingToolbar>
+        <BookOpenTextIcon className="size-4" />
+      </EjIconButton>
+
+      <EjIconButton
+        title={t("highlightVocabulary")}
+        active={marked}
+        onClick={toggleMarked}
+      >
+        <HighlighterIcon className="size-4" />
+      </EjIconButton>
+    </>
   );
 };

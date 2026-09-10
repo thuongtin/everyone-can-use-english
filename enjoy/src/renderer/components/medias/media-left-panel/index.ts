@@ -1,6 +1,7 @@
 export * from "./media-left-panel";
 
 export * from "./media-provider";
+export * from "./media-video-stage";
 export * from "./media-info";
 export * from "./media-transcription";
 export * from "./media-transcription-read-button";

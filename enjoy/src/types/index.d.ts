@@ -3,6 +3,8 @@
 // whether you're running in development or production).
 declare const MAIN_WINDOW_VITE_DEV_SERVER_URL: string;
 declare const MAIN_WINDOW_VITE_NAME: string;
+declare const ASR_CLASSIFIER_VITE_DEV_SERVER_URL: string;
+declare const ASR_CLASSIFIER_VITE_NAME: string;
 declare module "foliate-js/view.js";
 declare module "foliate-js/epub.js";
 declare module "compromise-paragraphs";
@@ -23,12 +25,14 @@ type SupportedLlmProviderType =
   | "enjoyai"
   | "openai"
   | "gemini"
+  | "vertex-express"
   | "deepseek"
   | "openrouter"
   | "ollama"
   | "lmstudio";
 
 type LlmProviderType = {
+  credentialError?: "azure_key_unavailable";
   name: string;
   key?: string;
   model?: string;
@@ -202,6 +206,11 @@ type YoutubeVideoType = {
   duration: string;
 };
 
+type YoutubeChannelType = {
+  name?: string;
+  videos: YoutubeVideoType[];
+};
+
 type GptEngineSettingType = {
   name: string;
   models: {
@@ -237,6 +246,8 @@ type DiskUsageType = {
 }[];
 
 type RecorderConfigType = {
+  /** Empty means the system default input, the way the browser picks it. */
+  deviceId?: string;
   autoGainControl: boolean;
   echoCancellation: boolean;
   noiseSuppression: boolean;

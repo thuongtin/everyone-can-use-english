@@ -29,15 +29,19 @@ import {
   ChatTypeEnum,
   ChatMessageRoleEnum,
   ChatMessageStateEnum,
-  SttEngineOptionEnum,
   UserSettingKeyEnum,
 } from "@/types/enums";
 import { DEFAULT_GPT_CONFIG } from "@/constants";
 import {
   migrateConversationChatConfig,
   migrateConversationGptConfig,
+  migrateConversationTtsConfig,
   nonEmptyPersistedString,
 } from "@/lib/conversation-migration";
+import {
+  resolveSynthesisProviderSelection,
+  resolveTextProviderSelection,
+} from "@/lib/provider-selection-migration";
 
 const logger = log.scope("db/models/conversation");
 @Table({
@@ -106,6 +110,7 @@ export class Conversation extends Model<Conversation> {
     const gptSource = {
       engine: this.engine,
       model: this.configuration.model,
+      baseUrl: this.configuration.baseUrl,
       temperature: this.configuration.temperature,
       maxCompletionTokens: this.configuration.maxTokens,
       presencePenalty: this.configuration.presencePenalty,
@@ -133,12 +138,7 @@ export class Conversation extends Model<Conversation> {
 
     const gpt = migrateConversationGptConfig(gptSource, gptDefaults);
 
-    const tts = {
-      engine: this.configuration.tts?.engine || "enjoyai",
-      model: this.configuration.tts?.model || "openai/tts-1",
-      language: this.language,
-      voice: this.configuration.tts?.voice || "alloy",
-    };
+    const tts = migrateConversationTtsConfig(this.configuration.tts);
 
     agent = await ChatAgent.create({
       name:
@@ -161,6 +161,7 @@ export class Conversation extends Model<Conversation> {
     const transaction = await Conversation.sequelize.transaction();
 
     try {
+      const selectedSttEngine = await UserSetting.get(UserSettingKeyEnum.STT_ENGINE);
       const chat = await Chat.create(
         {
           name: t("newChat"),
@@ -172,7 +173,7 @@ export class Conversation extends Model<Conversation> {
               sttEngine: this.configuration.sttEngine,
               stt: this.configuration.stt,
             },
-            SttEngineOptionEnum.ENJOY_AZURE
+            selectedSttEngine
           ),
         },
         {
@@ -267,12 +268,28 @@ export class Conversation extends Model<Conversation> {
         throw new Error("models.conversation.ttsModelIsRequired");
       }
 
+      if (
+        resolveSynthesisProviderSelection(conversation.configuration.tts).status !==
+        "configured"
+      ) {
+        throw new Error("provider_selection_required");
+      }
+
       conversation.engine = conversation.configuration.tts.engine;
-      conversation.configuration.model = conversation.configuration.tts.engine;
+      conversation.configuration.model = conversation.configuration.tts.model;
     }
 
-    if (!conversation.configuration.model)
+    if (conversation.type === "gpt" && !conversation.configuration.model)
       throw new Error(t("models.conversation.modelIsRequired"));
+    if (
+      conversation.type === "gpt" &&
+      resolveTextProviderSelection({
+        name: conversation.engine,
+        models: { default: conversation.configuration.model },
+      }).status !== "configured"
+    ) {
+      throw new Error("provider_selection_required");
+    }
   }
 
   @AfterCreate

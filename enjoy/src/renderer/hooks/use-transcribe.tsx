@@ -1,31 +1,24 @@
 import {
   AppSettingsProviderContext,
   AISettingsProviderContext,
+  DbProviderContext,
 } from "@renderer/context";
-import OpenAI from "openai";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { t } from "i18next";
-import { AI_WORKER_ENDPOINT } from "@/constants";
-import * as sdk from "microsoft-cognitiveservices-speech-sdk";
-import axios from "axios";
 import { useAiCommand } from "./use-ai-command";
 import { toast } from "@renderer/components/ui";
-import {
-  TimelineEntry,
-  type TimelineEntryType,
-} from "echogarden/dist/utilities/Timeline";
+import { TimelineEntry } from "echogarden/dist/utilities/Timeline";
 import { type ParsedCaptionsResult, parseText } from "media-captions";
 import { SttEngineOptionEnum } from "@/types/enums";
 import { RecognitionResult } from "echogarden/dist/api/API.js";
-import take from "lodash/take";
-import sortedUniqBy from "lodash/sortedUniqBy";
 import log from "electron-log/renderer";
-import {
-  buildOpenAiTranscriptionRequest,
-  normalizeOpenAiTranscriptionModel,
-  normalizeOpenAiTranscriptionResponse,
-  sanitizeSpeechError,
-} from "@/lib/speech-models";
+import type {
+  LearningAsrEngine,
+  LearningAsrErrorCode,
+  LearningAsrValidation,
+} from "@/types/learning-asr";
+import { isLearningAsrEngine } from "@/lib/learning-asr-models";
+import { resolveTranscriptionProviderSelection } from "@/lib/provider-selection-migration";
 
 const logger = log.scope("use-transcribe.tsx");
 
@@ -34,16 +27,43 @@ const logger = log.scope("use-transcribe.tsx");
 const punctuationsPattern = /\w[.,!?](\s|$)/g;
 
 export const useTranscribe = () => {
-  const { EnjoyApp, user, webApi } = useContext(AppSettingsProviderContext);
-  const { openai, echogardenSttConfig } = useContext(AISettingsProviderContext);
+  const { EnjoyApp } = useContext(AppSettingsProviderContext);
+  const { connection } = useContext(DbProviderContext);
+  const { echogardenSttConfig } = useContext(AISettingsProviderContext);
   const { punctuateText } = useAiCommand();
   const [output, setOutput] = useState<string>("");
+  const [progress, setProgress] = useState(0);
+  const activeLearningJob = useRef<{
+    jobId: string;
+    runVersion: number;
+  } | null>(null);
+  const cancelled = useRef(false);
+  const activeRunVersion = useRef(0);
+
+  useEffect(() => {
+    return () => {
+      cancelled.current = true;
+      activeRunVersion.current += 1;
+      const learningJobId = activeLearningJob.current?.jobId;
+      activeLearningJob.current = null;
+      if (learningJobId) void EnjoyApp.learningAsr.cancel(learningJobId);
+    };
+  }, [EnjoyApp, connection?.connectionId, connection?.profileId]);
+
+  const assertNotCancelled = (runVersion?: number) => {
+    if (
+      cancelled.current ||
+      (runVersion !== undefined && runVersion !== activeRunVersion.current)
+    ) {
+      throw new Error(t("learningAsrCancelled"));
+    }
+  };
 
   const transcode = async (src: string | Blob): Promise<string> => {
     if (src instanceof Blob) {
       src = await EnjoyApp.cacheObjects.writeFile(
         `${Date.now()}.${src.type.split("/")[1].split(";")[0]}`,
-        await src.arrayBuffer()
+        await src.arrayBuffer(),
       );
     }
 
@@ -61,29 +81,75 @@ export const useTranscribe = () => {
       service: SttEngineOptionEnum | "upload";
       isolate?: boolean;
       align?: boolean;
-    }
+    },
   ): Promise<{
     engine: string;
     model: string;
     transcript: string;
     timeline: TimelineEntry[];
+    validation?: LearningAsrValidation;
     originalText?: string;
     tokenId?: number;
     url: string;
+    runVersion: number;
   }> => {
+    const runVersion = activeRunVersion.current + 1;
+    activeRunVersion.current = runVersion;
+    cancelled.current = false;
+    setProgress(0);
+    const previousLearningJob = activeLearningJob.current;
+    activeLearningJob.current = null;
+    if (previousLearningJob) {
+      await EnjoyApp.learningAsr
+        .cancel(previousLearningJob.jobId)
+        .catch((err) => {
+          logger.warn("Failed to cancel previous learning ASR job", err);
+        });
+      assertNotCancelled(runVersion);
+    }
     const url = await transcode(mediaSrc);
+    assertNotCancelled(runVersion);
     const {
-      targetId,
-      targetType,
       originalText,
       language,
       service,
       isolate = false,
       align = true,
     } = params || {};
-    const blob = await (await fetch(url)).blob();
-
+    let audioBlob: Blob | undefined;
+    const getAudioBlob = async (): Promise<Blob> => {
+      if (!audioBlob) {
+        audioBlob = await (await fetch(url)).blob();
+        assertNotCancelled(runVersion);
+      }
+      return audioBlob;
+    };
     let result: any;
+
+    if (service !== "upload") {
+      const selection = resolveTranscriptionProviderSelection(service);
+      if (selection.status !== "configured") {
+        throw new Error(t("models.chat.sttAiServicePlaceholder"));
+      }
+    }
+
+    if (isLearningAsrEngine(service)) {
+      const learningResult = await transcribeByLearningAsr(
+        url,
+        service,
+        language,
+        runVersion,
+      );
+      return {
+        ...learningResult,
+        url,
+        runVersion,
+      };
+    }
+
+    if (align && service !== "upload") {
+      throw new Error(t("learningAsrModelUnsupported"));
+    }
 
     if (service === "upload" && originalText) {
       result = await alignText(originalText);
@@ -91,69 +157,60 @@ export const useTranscribe = () => {
       result = await transcribeByLocal(url, {
         language,
       });
-    } else if (service === SttEngineOptionEnum.ENJOY_CLOUDFLARE) {
-      result = await transcribeByCloudflareAi(blob);
-    } else if (service === SttEngineOptionEnum.OPENAI) {
-      result = await transcribeByOpenAi(
-        new File([blob], "audio.mp3", { type: "audio/mp3" }),
-        language
-      );
     } else {
-      // Azure AI is the default service
-      result = await transcribeByAzureAi(
-        new File([blob], "audio.wav", { type: "audio/wav" }),
-        language,
-        {
-          targetId,
-          targetType,
-        }
-      );
+      throw new Error(t("models.chat.sttAiServicePlaceholder"));
     }
 
     const { segmentTimeline, transcript } = result;
+    assertNotCancelled(runVersion);
 
     if (!align && transcript) {
       return {
         ...result,
         timeline: [],
         url,
+        runVersion,
       };
     }
 
     if (segmentTimeline && segmentTimeline.length > 0) {
       const wordTimeline = await EnjoyApp.echogarden.alignSegments(
-        new Uint8Array(await blob.arrayBuffer()),
+        new Uint8Array(await (await getAudioBlob()).arrayBuffer()),
         segmentTimeline,
         {
           engine: "dtw",
           language: language.split("-")[0],
           isolate,
-        }
+        },
       );
+      assertNotCancelled(runVersion);
 
       const timeline = await EnjoyApp.echogarden.wordToSentenceTimeline(
         wordTimeline,
         transcript,
-        language.split("-")[0]
+        language.split("-")[0],
       );
+      assertNotCancelled(runVersion);
 
       return {
         ...result,
         timeline,
         url,
+        runVersion,
       };
     } else if (transcript) {
       setOutput("Aligning the transcript...");
       logger.info("Aligning the transcript...");
       const alignmentResult = await EnjoyApp.echogarden.align(
-        new Uint8Array(await blob.arrayBuffer()),
+        new Uint8Array(await (await getAudioBlob()).arrayBuffer()),
         transcript,
         {
           engine: "dtw",
           language: language.split("-")[0],
           isolate,
-        }
+        },
       );
+      assertNotCancelled(runVersion);
 
       const timeline: TimelineEntry[] = [];
       alignmentResult.timeline.forEach((t: TimelineEntry) => {
@@ -170,14 +227,151 @@ export const useTranscribe = () => {
         ...result,
         timeline,
         url,
+        runVersion,
       };
     } else {
       throw new Error(t("transcribeFailed"));
     }
   };
 
+  const transcribeByLearningAsr = async (
+    audioUrl: string,
+    service: LearningAsrEngine,
+    language: string,
+    runVersion: number,
+  ): Promise<{
+    engine: string;
+    model: string;
+    transcript: string;
+    timeline: TimelineEntry[];
+    validation: LearningAsrValidation;
+  }> => {
+    assertNotCancelled(runVersion);
+    const profileId = connection?.profileId;
+    const connectionId = connection?.connectionId;
+    if (!profileId || !connectionId) {
+      throw new Error(t("learningAsrCancelled"));
+    }
+    const jobId = crypto.randomUUID();
+    activeLearningJob.current = { jobId, runVersion };
+    setOutput(t("learningAsrStarting"));
+
+    const stageKeys = {
+      preparing: "learningAsrStagePreparing",
+      recognizing: "learningAsrStageRecognizing",
+      aligning: "learningAsrStageAligning",
+      repairing: "learningAsrStageRepairing",
+      validating: "learningAsrStageValidating",
+    } as const;
+    const removeProgressListener = EnjoyApp.learningAsr.onProgress(
+      (_event, event) => {
+        const active = activeLearningJob.current;
+        if (
+          event.jobId !== jobId ||
+          active?.jobId !== jobId ||
+          active.runVersion !== runVersion ||
+          cancelled.current
+        ) {
+          return;
+        }
+        setProgress(event.percent);
+        setOutput(
+          t(
+            event.resumed > 0
+              ? "learningAsrProgressResumed"
+              : "learningAsrProgress",
+            {
+              stage: t(stageKeys[event.stage]),
+              completed: event.completed,
+              total: event.total,
+              resumed: event.resumed,
+            },
+          ),
+        );
+      },
+    );
+
+    try {
+      const response = await EnjoyApp.learningAsr.start({
+        jobId,
+        profileId,
+        connectionId,
+        audioUrl,
+        service,
+        language,
+      });
+      assertNotCancelled(runVersion);
+      if (response.ok === false) {
+        if (response.error.code === "asr_review_required") {
+          throw new Error(
+            t("learningAsrReviewRequired", {
+              start: formatLearningAsrTime(response.error.startTime),
+              end: formatLearningAsrTime(response.error.endTime),
+            }),
+          );
+        }
+        const errorKeys: Record<LearningAsrErrorCode, string> = {
+          asr_auth: "learningAsrAuthError",
+          asr_quota: "learningAsrQuotaError",
+          asr_rate_limit: "learningAsrRateLimitError",
+          asr_timeout: "learningAsrTimeoutError",
+          asr_cancelled: "learningAsrCancelled",
+          asr_network: "learningAsrNetworkError",
+          asr_invalid_audio: "learningAsrInvalidAudio",
+          asr_invalid_response: "learningAsrInvalidResponse",
+          asr_no_speech: "learningAsrNoSpeech",
+          asr_model_unsupported: "learningAsrModelUnsupported",
+          asr_review_required: "learningAsrReviewRequired",
+          asr_failed: "learningAsrFailed",
+        };
+        throw new Error(t(errorKeys[response.error.code]));
+      }
+      if (
+        !response.result.validation ||
+        !Array.isArray(response.result.timeline)
+      ) {
+        throw new Error(t("learningAsrInvalidResponse"));
+      }
+      setProgress(100);
+      setOutput(t("learningAsrDone"));
+      return {
+        engine: response.result.engine,
+        model: response.result.model,
+        transcript: response.result.transcript,
+        timeline: response.result.timeline as TimelineEntry[],
+        validation: response.result.validation,
+      };
+    } finally {
+      removeProgressListener();
+      if (activeLearningJob.current?.jobId === jobId) {
+        activeLearningJob.current = null;
+      }
+    }
+  };
+
+  const formatLearningAsrTime = (seconds?: number) => {
+    if (!Number.isFinite(seconds)) return t("learningAsrUnknownTime");
+    const value = Math.max(0, seconds as number);
+    const minutes = Math.floor(value / 60);
+    const remainder = (value % 60).toFixed(1).padStart(4, "0");
+    return `${minutes}:${remainder}`;
+  };
+
+  const cancel = async () => {
+    cancelled.current = true;
+    activeRunVersion.current += 1;
+    const cancellations: Promise<unknown>[] = [];
+    const learningJobId = activeLearningJob.current?.jobId;
+    activeLearningJob.current = null;
+    if (learningJobId) {
+      cancellations.push(EnjoyApp.learningAsr.cancel(learningJobId));
+    }
+    await Promise.allSettled(cancellations);
+    setOutput(t("learningAsrCancelled"));
+  };
+
   const alignText = async (
-    originalText: string
+    originalText: string,
   ): Promise<{
     engine: string;
     model: string;
@@ -244,7 +438,7 @@ export const useTranscribe = () => {
 
   const transcribeByLocal = async (
     url: string,
-    options: { language: string }
+    options: { language: string },
   ): Promise<{
     engine: string;
     model: string;
@@ -261,8 +455,7 @@ export const useTranscribe = () => {
       model =
         echogardenSttConfig[
           echogardenSttConfig.engine.replace(".cpp", "Cpp") as
-            | "whisper"
-            | "whisperCpp"
+            "whisper" | "whisperCpp"
         ].model;
       res = await EnjoyApp.echogarden.recognize(url, {
         language: languageCode,
@@ -283,239 +476,12 @@ export const useTranscribe = () => {
     };
   };
 
-  const transcribeByOpenAi = async (
-    file: File,
-    language?: string
-  ): Promise<{
-    engine: string;
-    model: string;
-    transcript: string;
-    segmentTimeline: TimelineEntry[];
-    words?: { word: string; start: number; end: number }[];
-  }> => {
-    const apiKey = typeof openai?.key === "string" ? openai.key.trim() : "";
-    if (!apiKey) {
-      throw new Error(t("openaiKeyRequired"));
-    }
-
-    const transcriptionModel = normalizeOpenAiTranscriptionModel(
-      (openai as (LlmProviderType & { transcriptionModel?: string }) | null)
-        ?.transcriptionModel
-    );
-
-    const client = new OpenAI({
-      apiKey,
-      baseURL: openai.baseUrl,
-      dangerouslyAllowBrowser: true,
-      maxRetries: 0,
-    });
-
-    setOutput("Transcribing from OpenAI...");
-    logger.info("Start transcribing from OpenAI...");
-    try {
-      const request = buildOpenAiTranscriptionRequest({
-        file,
-        model: transcriptionModel,
-        language,
-      });
-      const res = normalizeOpenAiTranscriptionResponse(
-        await client.audio.transcriptions.create(request as any)
-      );
-
-      setOutput("OpenAI transcribe done");
-      const segmentTimeline = res.segments.map((segment) => {
-        return {
-          type: "segment" as TimelineEntryType,
-          text: segment.text,
-          startTime: segment.start,
-          endTime: segment.end,
-          timeline: [] as TimelineEntry[],
-        };
-      });
-
-      return {
-        engine: "openai",
-        model: transcriptionModel,
-        transcript: res.transcript,
-        segmentTimeline,
-        words: res.words,
-      };
-    } catch (err) {
-      throw new Error(
-        t("openaiTranscribeFailed", {
-          error: sanitizeSpeechError(err, apiKey),
-        })
-      );
-    }
-  };
-
-  const transcribeByCloudflareAi = async (
-    blob: Blob
-  ): Promise<{
-    engine: string;
-    model: string;
-    transcript: string;
-    segmentTimeline: TimelineEntry[];
-  }> => {
-    setOutput("Transcribing from Cloudflare...");
-    logger.info("Start transcribing from Cloudflare...");
-    try {
-      const res: CfWhipserOutputType = (
-        await axios.postForm(
-          `${AI_WORKER_ENDPOINT}/audio/transcriptions`,
-          blob,
-          {
-            headers: {
-              Authorization: `Bearer ${user.accessToken}`,
-            },
-            timeout: 1000 * 60 * 5,
-          }
-        )
-      ).data;
-
-      setOutput("Cloudflare transcribe done");
-      const segmentTimeline: TimelineEntry[] = [];
-      if (res.vtt) {
-        const caption = await parseText(res.vtt, { type: "vtt" });
-        for (const cue of caption.cues) {
-          segmentTimeline.push({
-            type: "segment",
-            text: cue.text,
-            startTime: cue.startTime,
-            endTime: cue.endTime,
-            timeline: [],
-          });
-        }
-      }
-
-      return {
-        engine: "cloudflare",
-        model: "@cf/openai/whisper",
-        transcript: res.text,
-        segmentTimeline,
-      };
-    } catch (err) {
-      throw new Error(t("cloudflareTranscribeFailed", { error: err.message }));
-    }
-  };
-
-  const transcribeByAzureAi = async (
-    file: File,
-    language: string,
-    params?: {
-      targetId?: string;
-      targetType?: string;
-    }
-  ): Promise<{
-    engine: string;
-    model: string;
-    transcript: string;
-    segmentTimeline: TimelineEntry[];
-    tokenId: number;
-  }> => {
-    const { id, token, region } = await webApi.generateSpeechToken({
-      ...params,
-      purpose: "transcribe",
-    });
-    const config = sdk.SpeechConfig.fromAuthorizationToken(token, region);
-    const audioConfig = sdk.AudioConfig.fromWavFileInput(file);
-    // setting the recognition language to learning language, such as 'en-US'.
-    config.speechRecognitionLanguage = language;
-    config.requestWordLevelTimestamps();
-    config.outputFormat = sdk.OutputFormat.Detailed;
-    config.setProfanity(sdk.ProfanityOption.Raw);
-
-    // create the speech recognizer.
-    const reco = new sdk.SpeechRecognizer(config, audioConfig);
-
-    setOutput("Transcribing from Azure...");
-    logger.info("Start transcribing from Azure...");
-    let results: SpeechRecognitionResultType[] = [];
-
-    const { transcript, segmentTimeline }: any = await new Promise(
-      (resolve, reject) => {
-        reco.recognizing = (_s, e) => {
-          setOutput((prev) => prev + e.result.text);
-        };
-
-        reco.recognized = (_s, e) => {
-          const json = e.result.properties.getProperty(
-            sdk.PropertyId.SpeechServiceResponse_JsonResult
-          );
-          const result = JSON.parse(json);
-          results = results.concat(result);
-        };
-
-        reco.canceled = (_s, e) => {
-          if (e.reason === sdk.CancellationReason.Error) {
-            logger.error("Azure transcribe canceled: Reason=" + e.reason);
-            return reject(new Error(e.errorDetails));
-          }
-
-          reco.stopContinuousRecognitionAsync();
-          logger.info("Azure transcribe canceled: Reason=" + e.reason);
-        };
-
-        reco.sessionStopped = async (_s, e) => {
-          logger.info(
-            "Azure transcribe session stopped. Stop continuous recognition.",
-            e.sessionId
-          );
-          reco.stopContinuousRecognitionAsync();
-
-          if (results.length === 0) {
-            return reject(t("azureTranscribeFailed", { error: "" }));
-          }
-
-          try {
-            const transcript = results
-              .map((result) => result.DisplayText)
-              .join(" ");
-            const segmentTimeline: TimelineEntry[] = [];
-            results.forEach((result) => {
-              if (!result.DisplayText) return;
-
-              const best = take(sortedUniqBy(result.NBest, "Confidence"), 1)[0];
-              if (!best.Words) return;
-              if (!best.Confidence || best.Confidence < 0.5) return;
-
-              const firstWord = best.Words[0];
-              const lastWord = best.Words[best.Words.length - 1];
-
-              segmentTimeline.push({
-                type: "segment",
-                text: best.Display,
-                startTime: firstWord.Offset / 10000000.0,
-                endTime: (lastWord.Offset + lastWord.Duration) / 10000000.0,
-                timeline: [],
-              });
-            });
-
-            resolve({
-              transcript,
-              segmentTimeline,
-            });
-          } catch (err) {
-            logger.error("azureTranscribeFailed", { error: err.message });
-            reject(t("azureTranscribeFailed", { error: err.message }));
-          }
-        };
-        reco.startContinuousRecognitionAsync();
-      }
-    );
-
-    return {
-      engine: "azure",
-      model: "whisper",
-      transcript,
-      segmentTimeline,
-      tokenId: id,
-    };
-  };
-
   return {
     transcode,
     transcribe,
+    cancel,
+    ensureActive: assertNotCancelled,
     output,
+    progress,
   };
 };

@@ -3,10 +3,9 @@
     <div class="container m-auto">
       <div class="gap-[48px] grid grid-cols-1 md:grid-cols-2">
         <div class="intro">
-          <div class="title text-[20px] md:text-[32px]">Dịch vụ bổ sung</div>
+          <div class="title text-[20px] md:text-[32px]">Chọn dịch vụ AI của bạn</div>
           <div class="subtitle text-[14px] md:text-[16px]">
-            Enjoy App
-            tính phí theo mức sử dụng của từng tính năng. Khi dùng hết số dư ban đầu, bạn có thể nạp thêm để tiếp tục dùng dịch vụ trả phí.
+            Thư viện và tiến độ học được lưu trên máy. Bạn tự chọn provider cho từng tác vụ; chi phí và hạn mức do provider đó quản lý.
           </div>
 
           <div class="items">
@@ -19,16 +18,10 @@
           </div>
         </div>
 
-        <div class="self-center">
-          <img
-            class="md:h-[356px] lg:hidden"
-            src="/portal-static/images/payment.png"
-          />
-
-          <img
-            class="hidden lg:block"
-            src="/portal-static/images/payment-2.png"
-          />
+        <div class="self-center rounded-2xl border border-gray-200 p-8">
+          <h3 class="text-xl font-semibold">Cấu hình một lần, chọn theo nhu cầu</h3>
+          <p class="mt-4">Dùng API key riêng, provider local hoặc tài khoản ACP đã cấu hình. Tính năng cần dịch vụ ngoài sẽ hướng dẫn cấu hình trước khi chạy.</p>
+          <p class="mt-4">Bạn quản lý thanh toán trực tiếp với provider. Ứng dụng không có ví hay nạp tiền Enjoy.</p>
         </div>
       </div>
     </div>
@@ -43,11 +36,10 @@ export default {
 
 <script lang="ts" setup>
 const items = ref([
-  "Luyện nhại với nhiều âm thanh hơn",
-  "Luyện nhại với nhiều video hơn",
-  "Luyện đọc thêm bài viết",
-  "Tăng số lượt trò chuyện với trợ lý AI",
-  "Các dịch vụ bổ sung khác đang được phát triển",
+  "Chat và xử lý văn bản với provider đã chọn",
+  "Chuyển giọng nói thành văn bản bằng dịch vụ phù hợp",
+  "TTS và đánh giá phát âm với cấu hình riêng",
+  "Bài đọc, từ vựng và lịch ôn được lưu local",
 ]);
 </script>
 

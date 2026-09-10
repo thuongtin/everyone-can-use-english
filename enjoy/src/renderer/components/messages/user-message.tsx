@@ -1,23 +1,12 @@
 import {
-  AlertDialog,
-  AlertDialogTrigger,
-  AlertDialogHeader,
-  AlertDialogDescription,
-  AlertDialogTitle,
-  AlertDialogContent,
-  AlertDialogFooter,
-  AlertDialogCancel,
-  AlertDialogAction,
   Avatar,
   AvatarImage,
   AvatarFallback,
-  Button,
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
-  toast,
 } from "@renderer/components/ui";
 import {
   SpeechPlayer,
@@ -32,15 +21,14 @@ import {
   AlertCircleIcon,
   CopyIcon,
   CheckIcon,
-  Share2Icon,
   ForwardIcon,
   MoreVerticalIcon,
 } from "lucide-react";
 import { useCopyToClipboard } from "@uidotdev/usehooks";
 import { t } from "i18next";
-import { useNavigate } from "react-router-dom";
-import Markdown from "react-markdown";
+import { EjIconButton } from "@renderer/components/enjoy";
 import { formatDateTime } from "@renderer/lib/utils";
+import { displayableResourceUrl } from "@renderer/lib/retired-resource";
 
 export const UserMessageComponent = (props: {
   message: MessageType;
@@ -50,87 +38,55 @@ export const UserMessageComponent = (props: {
 }) => {
   const { message, onResend, onRemove } = props;
   const speech = message.speeches?.[0];
-  const { user, webApi } = useContext(AppSettingsProviderContext);
+  const { user } = useContext(AppSettingsProviderContext);
   const [_, copyToClipboard] = useCopyToClipboard();
   const [copied, setCopied] = useState<boolean>(false);
-  const navigate = useNavigate();
-
-  const handleShare = async () => {
-    if (message.role === "user") {
-      const content = message.content;
-      webApi
-        .createPost({
-          metadata: {
-            type: "prompt",
-            content,
-          },
-        })
-        .then(() => {
-          toast.success(t("sharedSuccessfully"), {
-            description: t("sharedPrompt"),
-            action: {
-              label: t("view"),
-              onClick: () => {
-                navigate("/community");
-              },
-            },
-            actionButtonStyle: {
-              backgroundColor: "var(--primary)",
-            },
-          });
-        })
-        .catch((err) => {
-          toast.error(t("shareFailed"), { description: err.message });
-        });
-    }
-  };
-
   return (
     <div id={`message-${message.id}`} className="">
-      <div className="flex items-center justify-end space-x-2 mb-2">
-        <div className="text-sm text-muted-foreground">{user.name}</div>
-        <Avatar className="w-8 h-8 bg-background">
-          <AvatarImage src={user.avatarUrl} />
-          <AvatarFallback className="bg-primary text-white capitalize">
+      <div className="mb-2 flex items-center justify-end gap-2">
+        <div className="text-xxs font-semibold text-ej-muted">{user.name}</div>
+        <Avatar className="size-8">
+          <AvatarImage src={displayableResourceUrl(user.avatarUrl)} />
+          <AvatarFallback className="bg-ej-accent capitalize text-white">
             {user.name?.[0] ?? "U"}
           </AvatarFallback>
         </Avatar>
       </div>
-      <div className="flex flex-col gap-2 px-4 py-2 bg-sky-500/30 border-sky-500 rounded-lg shadow-sm w-full mb-2">
-        <MarkdownWrapper className="message-content select-text prose dark:prose-invert max-w-full">
+      <div className="mb-2 flex w-full flex-col gap-2 rounded-[16px_16px_4px_16px] border border-ej-accent-soft2 bg-ej-accent-soft px-3.5 py-2.5">
+        <MarkdownWrapper className="message-content prose max-w-full select-text text-ej-ink dark:prose-invert">
           {message.content}
         </MarkdownWrapper>
 
         {Boolean(speech) && <SpeechPlayer speech={speech} />}
 
         <DropdownMenu>
-          <div className="flex items-center justify-end space-x-4">
+          <div className="flex items-center justify-end gap-3 text-ej-muted">
             {message.createdAt ? (
               <CheckCircleIcon
                 data-tooltip-id="global-tooltip"
                 data-tooltip-content={t("sent")}
-                className="w-4 h-4"
+                className="size-3.5"
               />
             ) : message.status === "pending" ? (
               <LoaderIcon
                 data-tooltip-id="global-tooltip"
                 data-tooltip-content={t("sending")}
-                className="w-4 h-4 animate-spin"
+                className="size-3.5 animate-spin"
               />
             ) : (
               message.status === "error" && (
                 <DropdownMenuTrigger>
-                  <AlertCircleIcon className="w-4 h-4 text-destructive" />
+                  <AlertCircleIcon className="size-3.5 text-ej-bad" />
                 </DropdownMenuTrigger>
               )
             )}
             {copied ? (
-              <CheckIcon className="w-4 h-4 text-green-500" />
+              <CheckIcon className="size-3.5 text-ej-ok" />
             ) : (
               <CopyIcon
                 data-tooltip-id="global-tooltip"
                 data-tooltip-content={t("copy")}
-                className="w-4 h-4 cursor-pointer"
+                className="size-3.5 cursor-pointer transition-colors duration-ej hover:text-ej-ink"
                 onClick={() => {
                   copyToClipboard(message.content);
                   setCopied(true);
@@ -148,58 +104,32 @@ export const UserMessageComponent = (props: {
                 <ForwardIcon
                   data-tooltip-id="global-tooltip"
                   data-tooltip-content={t("forward")}
-                  className="w-4 h-4 cursor-pointer"
+                  className="size-3.5 cursor-pointer transition-colors duration-ej hover:text-ej-ink"
                 />
               }
             />
 
-            {message.createdAt && (
-              <AlertDialog>
-                <AlertDialogTrigger asChild>
-                  <Share2Icon
-                    data-tooltip-id="global-tooltip"
-                    data-tooltip-content={t("share")}
-                    className="w-4 h-4 cursor-pointer"
-                  />
-                </AlertDialogTrigger>
-                <AlertDialogContent>
-                  <AlertDialogHeader>
-                    <AlertDialogTitle>{t("sharePrompt")}</AlertDialogTitle>
-                    <AlertDialogDescription>
-                      {t("areYouSureToShareThisPromptToCommunity")}
-                    </AlertDialogDescription>
-                  </AlertDialogHeader>
-                  <AlertDialogFooter>
-                    <AlertDialogCancel>{t("cancel")}</AlertDialogCancel>
-                    <AlertDialogAction asChild>
-                      <Button variant="default" onClick={handleShare}>
-                        {t("share")}
-                      </Button>
-                    </AlertDialogAction>
-                  </AlertDialogFooter>
-                </AlertDialogContent>
-              </AlertDialog>
-            )}
-
-            <DropdownMenuTrigger>
-              <MoreVerticalIcon className="w-4 h-4" />
+            <DropdownMenuTrigger asChild>
+              <EjIconButton size={22} aria-label={t("more")}>
+                <MoreVerticalIcon className="size-3.5" />
+              </EjIconButton>
             </DropdownMenuTrigger>
           </div>
 
-          <DropdownMenuContent>
+          <DropdownMenuContent align="end">
             <DropdownMenuItem className="cursor-pointer" onClick={onResend}>
               <span className="mr-auto capitalize">{t("resend")}</span>
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem className="cursor-pointer" onClick={onRemove}>
-              <span className="mr-auto text-destructive capitalize">
+              <span className="mr-auto capitalize text-ej-bad">
                 {t("remove")}
               </span>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-      <div className="flex justify-end text-xs text-muted-foreground timestamp">
+      <div className="timestamp flex justify-end text-xxs text-ej-muted">
         {formatDateTime(message.createdAt)}
       </div>
     </div>

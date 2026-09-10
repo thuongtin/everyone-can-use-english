@@ -6,20 +6,19 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogTitle,
-  Button,
   Dialog,
   DialogContent,
   DialogDescription,
   DialogTitle,
-  Input,
   toast,
 } from "@renderer/components/ui";
 import { ChatAgentCard, ChatAgentForm } from "@renderer/components";
-import { PlusIcon } from "lucide-react";
+import { PlusIcon, SearchIcon } from "lucide-react";
 import { useContext, useEffect, useState } from "react";
 import { t } from "i18next";
 import { useDebounce } from "@uidotdev/usehooks";
 import { AppSettingsProviderContext } from "@/renderer/context";
+import { EjIconButton } from "@renderer/components/enjoy";
 
 export const ChatAgents = (props: {
   chatAgents: ChatAgentType[];
@@ -67,41 +66,52 @@ export const ChatAgents = (props: {
 
   return (
     <>
-      <div className="overflow-y-auto h-full relative py-2 px-1">
-        <div className="sticky flex items-center space-x-2 py-2 px-1">
-          <Input
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            className="rounded h-8 text-xs"
-            placeholder={t("search")}
-          />
-          <Button
-            className="w-8 h-8 p-0"
-            variant="ghost"
-            size="icon"
-            onClick={() => setCreatingChatAgent(true)}
-          >
-            <PlusIcon className="w-4 h-4" />
-          </Button>
-        </div>
-        {chatAgents.length === 0 && (
-          <div className="text-center my-4">
-            <span className="text-sm text-muted-foreground">{t("noData")}</span>
-          </div>
-        )}
-        <div className="grid gap-1">
-          {chatAgents.map((chatAgent) => (
-            <ChatAgentCard
-              key={chatAgent.id}
-              chatAgent={chatAgent}
-              selected={currentChatAgent?.id === chatAgent.id}
-              onSelect={setCurrentChatAgent}
-              onEdit={setEditingChatAgent}
-              onDelete={setDeletingChatAgent}
+      <div className="h-full flex flex-col min-h-0">
+        <div className="shrink-0 px-3 pt-3 pb-2 flex items-center gap-2">
+          <div className="flex-1 min-w-0 relative">
+            <SearchIcon className="absolute left-2.5 top-1/2 -translate-y-1/2 size-3.5 text-ej-muted pointer-events-none" />
+            <input
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              placeholder={t("search")}
+              className="w-full h-8 pl-8 pr-3 rounded-full border border-ej-line bg-ej-surface text-xs text-ej-ink placeholder:text-ej-muted outline-none focus:border-ej-accent transition-colors duration-ej"
             />
-          ))}
+          </div>
+          <EjIconButton
+            title={t("newAgent")}
+            onClick={() => setCreatingChatAgent(true)}
+            className="border border-ej-line bg-ej-surface"
+          >
+            <PlusIcon className="size-4" />
+          </EjIconButton>
+        </div>
+
+        <div className="shrink-0 px-4 pb-1.5">
+          <div className="ej-label">{t("chatAgents")}</div>
+        </div>
+
+        <div className="flex-1 min-h-0 overflow-y-auto scroll px-2 pb-3">
+          {chatAgents.length === 0 ? (
+            <div className="py-8 text-center text-xxs text-ej-muted">
+              {t("noData")}
+            </div>
+          ) : (
+            <div className="grid gap-0.5">
+              {chatAgents.map((chatAgent) => (
+                <ChatAgentCard
+                  key={chatAgent.id}
+                  chatAgent={chatAgent}
+                  selected={currentChatAgent?.id === chatAgent.id}
+                  onSelect={setCurrentChatAgent}
+                  onEdit={setEditingChatAgent}
+                  onDelete={setDeletingChatAgent}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </div>
+
       <AlertDialog
         open={!!deletingChatAgent}
         onOpenChange={() => setDeletingChatAgent(null)}
@@ -116,7 +126,7 @@ export const ChatAgents = (props: {
               {t("cancel")}
             </AlertDialogCancel>
             <AlertDialogAction
-              className="bg-destructive hover:bg-destructive-hover"
+              className="bg-ej-bad hover:opacity-90"
               onClick={handleDeleteChatAgent}
             >
               {t("delete")}
@@ -124,6 +134,7 @@ export const ChatAgents = (props: {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+
       <Dialog
         open={!!editingChatAgent}
         onOpenChange={() => setEditingChatAgent(null)}
@@ -139,6 +150,7 @@ export const ChatAgents = (props: {
           />
         </DialogContent>
       </Dialog>
+
       <Dialog open={creatingChatAgent} onOpenChange={setCreatingChatAgent}>
         <DialogContent className="max-w-screen-md max-h-full overflow-auto">
           <DialogTitle className="sr-only">Create Chat Agent</DialogTitle>

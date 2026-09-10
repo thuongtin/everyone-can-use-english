@@ -18,20 +18,21 @@ import mainWindow from "@main/window";
 import fs from "fs-extra";
 import path from "path";
 import settings from "@main/settings";
-import OpenAI, { type ClientOptions } from "openai";
-import { t } from "i18next";
 import { hashFile } from "@main/utils";
 import { Audio, Document, Message, UserSetting } from "@main/db/models";
 import log from "@main/logger";
 import proxyAgent from "@main/proxy-agent";
 import { UserSettingKeyEnum } from "@/types/enums";
 import {
-  buildOpenAiSpeechRequest,
-  ensureAudioArrayBuffer,
   resolveTtsModel,
-  sanitizeSpeechError,
   selectCanonicalOpenAiConfig,
 } from "@/lib/speech-models";
+import {
+  createAzureSpeechProvider,
+  createOpenAiSpeechProvider,
+  type SpeechProvider,
+} from "@main/speech/provider";
+import { getAzureSpeechCredentials } from "@main/speech/azure-config";
 
 const logger = log.scope("db/models/speech");
 @Table({
@@ -186,48 +187,47 @@ export class Speech extends Model<Speech> {
     sourceId: string;
     sourceType: string;
     text: string;
+    section?: number;
+    segment?: number;
     configuration?: any;
+    signal?: AbortSignal;
   }): Promise<Speech> {
-    const { sourceId, sourceType, text, configuration } = params;
     const {
-      engine = "openai",
-      model = "tts-1",
-      voice = "alloy",
-      baseUrl,
-    } = configuration || {};
-    const resolved = resolveTtsModel(engine, model);
-    if (resolved.provider !== "openai" || !resolved.apiModel) {
-      throw new Error(
-        `TTS model "${String(model).trim()}" must use the renderer speech path.`
-      );
-    }
-    const request = buildOpenAiSpeechRequest({
-      engine: resolved.engine,
-      model: resolved.model,
-      voice,
+      sourceId,
+      sourceType,
       text,
-    });
-
+      section,
+      segment,
+      configuration,
+      signal,
+    } = params;
+    const database = Speech.sequelize;
+    if (!database) throw new Error("The active profile database is unavailable.");
+    const requestedConfiguration =
+      configuration && typeof configuration === "object" && configuration.engine
+        ? configuration
+        : await UserSetting.get(UserSettingKeyEnum.TTS_CONFIG);
+    if (!requestedConfiguration || typeof requestedConfiguration !== "object") {
+      throw new Error("Speech synthesis provider selection is required.");
+    }
+    const { engine, model, voice, baseUrl } = requestedConfiguration;
+    const resolved = resolveTtsModel(engine, model);
     logger.debug("Generating speech", {
       engine: resolved.engine,
       model: resolved.model,
-      voice: request.voice,
+      voice,
     });
 
-    const extname = ".mp3";
-    const filename = `${Date.now()}${extname}`;
-    const filePath = path.join(settings.userDataPath(), "speeches", filename);
-
-    let openaiConfig: ClientOptions;
-    if (resolved.engine === "enjoyai") {
-      const accessToken = await UserSetting.accessToken();
-      if (!accessToken) {
-        throw new Error(t("openaiKeyRequired"));
-      }
-      openaiConfig = {
-        apiKey: accessToken,
-        baseURL: `${settings.apiUrl()}/api/ai`,
-      };
+    let provider: SpeechProvider;
+    if (resolved.provider === "azure") {
+      provider = createAzureSpeechProvider({
+        configuration: {
+          engine: "azure",
+          model: resolved.model,
+          voice,
+        },
+        credentials: await getAzureSpeechCredentials(),
+      });
     } else {
       const canonicalConfig = await UserSetting.get(UserSettingKeyEnum.OPENAI);
       const savedConfig = selectCanonicalOpenAiConfig(
@@ -239,7 +239,7 @@ export class Speech extends Model<Speech> {
           ? savedConfig.key.trim()
           : "";
       if (!apiKey) {
-        throw new Error(t("openaiKeyRequired"));
+        throw new Error("OpenAI speech is not configured.");
       }
       const configuredBaseUrl =
         typeof baseUrl === "string" ? baseUrl.trim() : "";
@@ -247,28 +247,31 @@ export class Speech extends Model<Speech> {
         savedConfig && typeof savedConfig.baseUrl === "string"
           ? savedConfig.baseUrl.trim()
           : "";
-      openaiConfig = {
-        apiKey,
-        baseURL: configuredBaseUrl || savedBaseUrl || undefined,
-      };
+      const { httpAgent, fetch } = proxyAgent();
+      provider = createOpenAiSpeechProvider({
+        configuration: {
+          engine: "openai",
+          model: resolved.model,
+          voice,
+        },
+        clientOptions: {
+          apiKey,
+          baseURL: configuredBaseUrl || savedBaseUrl || undefined,
+          httpAgent,
+          // @ts-expect-error node-fetch and OpenAI use different RequestInfo types.
+          fetch,
+        },
+      });
     }
 
-    const { httpAgent, fetch } = proxyAgent();
-    const openai = new OpenAI({
-      ...openaiConfig,
-      httpAgent,
-      // @ts-expect-error node-fetch and OpenAI use different RequestInfo types.
-      fetch,
-    });
-
-    let buffer: ArrayBuffer;
-    try {
-      const file = await openai.audio.speech.create(request);
-      buffer = ensureAudioArrayBuffer(await file.arrayBuffer());
-    } catch (error) {
-      throw new Error(sanitizeSpeechError(error, openaiConfig.apiKey));
+    const result = await provider.synthesize(text, { signal });
+    if (signal?.aborted || Speech.sequelize !== database) {
+      throw new Error("The active profile changed during speech synthesis.");
     }
-    const audioBuffer = Buffer.from(buffer);
+    const extname = result.mimeType === "audio/wav" ? ".wav" : ".mp3";
+    const filename = `${Date.now()}${extname}`;
+    const filePath = path.join(settings.userDataPath(), "speeches", filename);
+    const audioBuffer = result.bytes;
     await fs.outputFile(filePath, audioBuffer);
 
     const md5 = await hashFile(filePath, { algo: "md5" });
@@ -277,17 +280,32 @@ export class Speech extends Model<Speech> {
       path.join(path.dirname(filePath), `${md5}${extname}`)
     );
 
-    return Speech.create({
-      sourceId,
-      sourceType,
-      text,
-      extname,
-      md5,
-      configuration: {
-        engine: resolved.engine,
-        model: resolved.model,
-        voice: request.voice,
-      },
-    });
+    try {
+      return await database.transaction(async (transaction) => {
+        if (signal?.aborted || Speech.sequelize !== database) {
+          throw new Error("The active profile changed during speech synthesis.");
+        }
+        return Speech.create(
+          {
+            sourceId,
+            sourceType,
+            text,
+            section,
+            segment,
+            extname,
+            md5,
+            configuration: {
+              engine: resolved.engine,
+              model: resolved.model,
+              voice: result.voice,
+            },
+          },
+          { transaction }
+        );
+      });
+    } catch (error) {
+      await fs.remove(path.join(path.dirname(filePath), `${md5}${extname}`));
+      throw error;
+    }
   }
 }

@@ -1,9 +1,19 @@
 import settings from "electron-settings";
-import { LIBRARY_PATH_SUFFIX, DATABASE_NAME, WEB_API_URL } from "@/constants";
+import { LIBRARY_PATH_SUFFIX, DATABASE_NAME } from "@/constants";
 import { ipcMain, app } from "electron";
 import path from "path";
 import fs from "fs-extra";
 import { AppSettingsKeyEnum } from "@/types/enums";
+import {
+  backupDisconnectedProfile,
+  backupSettingsFile,
+  DEFAULT_LOCAL_PROFILE_ID,
+  discoverLocalProfiles,
+  LOCAL_PROFILE_MODE,
+  normalizeLocalProfile,
+  resolveProfileForLibrary,
+  type LocalProfile,
+} from "@main/local-profile";
 
 if (process.env.SETTINGS_PATH) {
   settings.configure({
@@ -50,6 +60,11 @@ const dbPath = () => {
   return path.join(userDataPath(), dbName);
 };
 
+const databaseNames = () => [
+  `${DATABASE_NAME}.sqlite`,
+  `${DATABASE_NAME}_dev.sqlite`,
+];
+
 const userDataPath = () => {
   const userId = settings.getSync("user.id");
   if (!userId) return null;
@@ -60,59 +75,131 @@ const userDataPath = () => {
   return userData;
 };
 
-const apiUrl = () => {
-  const url: string = settings.getSync(AppSettingsKeyEnum.API_URL) as string;
-  return process.env.WEB_API_URL || url || WEB_API_URL;
+// Scan the library for profile directories that contain an Enjoy database.
+const sessions = (): LocalProfile[] =>
+  discoverLocalProfiles(libraryPath(), databaseNames());
+
+const persistLocalProfilePointer = (
+  profile: LocalProfile,
+  profileIdsToBackup: readonly string[] = [],
+) => {
+  backupSettingsFile(settings.file());
+  for (const profileId of new Set(profileIdsToBackup)) {
+    backupDisconnectedProfile(libraryPath(), profileId, databaseNames());
+  }
+  settings.setSync(AppSettingsKeyEnum.USER, profile);
 };
 
-// scan library directory and get all user data directories
-// the name of user data directory is the user id, and they are all numbers and 8 digits
-const sessions = () => {
-  const library = libraryPath();
-  const sessions = fs.readdirSync(library).filter((dir) => {
-    return dir.match(/^\d{8}$/);
-  });
-  return sessions.map((id) => ({ id: parseInt(id), name: id }));
+const localProfile = (): LocalProfile | null => {
+  const stored = settings.getSync(AppSettingsKeyEnum.USER);
+  const current = normalizeLocalProfile(stored);
+  const profiles = sessions();
+  if (
+    current &&
+    (profiles.some((profile) => profile.id === current.id) ||
+      (profiles.length === 0 && current.id === DEFAULT_LOCAL_PROFILE_ID))
+  ) {
+    return current;
+  }
+  const profile = resolveProfileForLibrary(stored, profiles);
+  if (!profile) return null;
+  persistLocalProfilePointer(profile, profiles.length === 1 ? [profile.id] : []);
+  return profile;
 };
 
 export default {
   registerIpcHandlers: () => {
-    ipcMain.handle("app-settings-get-library", (_event) => {
+    ipcMain.handle("app-settings-get-library", () => {
       libraryPath();
       return settings.getSync(AppSettingsKeyEnum.LIBRARY);
     });
 
-    ipcMain.handle("app-settings-set-library", (_event, library) => {
-      if (path.parse(library).base === LIBRARY_PATH_SUFFIX) {
-        settings.setSync(AppSettingsKeyEnum.LIBRARY, library);
-      } else {
-        const dir = path.join(library, LIBRARY_PATH_SUFFIX);
-        fs.ensureDirSync(dir);
-        settings.setSync(AppSettingsKeyEnum.LIBRARY, dir);
+    ipcMain.handle("app-settings-set-library", async (_event, library) => {
+      if (typeof library !== "string" || !path.isAbsolute(library)) throw new Error("Invalid library path");
+      const dir = path.parse(library).base === LIBRARY_PATH_SUFFIX ? library : path.join(library, LIBRARY_PATH_SUFFIX);
+      const { default: db } = await import("@main/db");
+      const previousLibrary = libraryPath();
+      if (path.resolve(previousLibrary) === path.resolve(dir)) return;
+      const previousSettings = settings.getSync();
+      const previousUser = previousSettings[AppSettingsKeyEnum.USER];
+      const current = normalizeLocalProfile(previousUser);
+      let next: LocalProfile | null = null;
+
+      try {
+        await db.withDisconnected(() => {
+          fs.ensureDirSync(dir);
+          backupSettingsFile(settings.file());
+          if (current) {
+            backupDisconnectedProfile(previousLibrary, current.id, databaseNames());
+          }
+          const targetProfiles = discoverLocalProfiles(dir, databaseNames());
+          next = resolveProfileForLibrary(current, targetProfiles);
+          if (next) {
+            backupDisconnectedProfile(dir, next.id, databaseNames());
+          }
+
+          const nextSettings = { ...previousSettings, [AppSettingsKeyEnum.LIBRARY]: dir };
+          if (next) {
+            settings.setSync({
+              ...nextSettings,
+              [AppSettingsKeyEnum.USER]: {
+                id: next.id,
+                name: next.name,
+                ...(next.nameSource ? { nameSource: next.nameSource } : {}),
+              },
+            });
+          } else {
+            Reflect.deleteProperty(nextSettings, AppSettingsKeyEnum.USER);
+            settings.setSync(nextSettings);
+          }
+        });
+
+        if (next) await db.connect();
+      } catch (error) {
+        try {
+          await db.withDisconnected(() => settings.setSync(previousSettings));
+        } catch {
+          // Preserve the original mutation failure for the caller.
+        }
+        try {
+          if (previousUser) await db.connect();
+        } catch {
+          // Preserve the original mutation failure for the caller.
+        }
+        throw error;
       }
     });
 
-    ipcMain.handle("app-settings-get-user", (_event) => {
-      return settings.getSync(AppSettingsKeyEnum.USER);
+    ipcMain.handle("app-settings-get-user", () => {
+      return localProfile();
     });
 
-    ipcMain.handle("app-settings-set-user", (_event, user) => {
-      settings.setSync(AppSettingsKeyEnum.USER, user);
+    ipcMain.handle("app-settings-set-user", async (_event, user) => {
+      const normalized = normalizeLocalProfile(user);
+      const next = normalized && {
+        ...normalized,
+        nameSource: normalized.nameSource || "explicit" as const,
+      };
+      if (!next) {
+        throw new Error("Invalid profile identity");
+      }
+      const { default: db } = await import("@main/db");
+      const current = normalizeLocalProfile(settings.getSync(AppSettingsKeyEnum.USER));
+      const switchingProfile = String(current?.id) !== String(next.id);
+      await db.withDisconnected(
+        () => persistLocalProfilePointer(
+          next,
+          switchingProfile ? [current?.id, next.id].filter((id): id is string => Boolean(id)) : [],
+        ),
+        () => switchingProfile,
+      );
     });
 
-    ipcMain.handle("app-settings-get-user-data-path", (_event) => {
+    ipcMain.handle("app-settings-get-user-data-path", () => {
       return userDataPath();
     });
 
-    ipcMain.handle("app-settings-get-api-url", (_event) => {
-      return settings.getSync(AppSettingsKeyEnum.API_URL);
-    });
-
-    ipcMain.handle("app-settings-set-api-url", (_event, url) => {
-      settings.setSync(AppSettingsKeyEnum.API_URL, url);
-    });
-
-    ipcMain.handle("app-settings-get-sessions", (_event) => {
+    ipcMain.handle("app-settings-get-sessions", () => {
       return sessions();
     });
   },
@@ -120,6 +207,7 @@ export default {
   libraryPath,
   userDataPath,
   dbPath,
-  apiUrl,
+  localProfile,
+  localMode: LOCAL_PROFILE_MODE,
   ...settings,
 };

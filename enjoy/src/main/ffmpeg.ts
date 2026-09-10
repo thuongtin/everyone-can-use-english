@@ -6,9 +6,9 @@ import log from "@main/logger";
 import path from "path";
 import fs from "fs-extra";
 import settings from "@main/settings";
-import url from "url";
 import { FFMPEG_CONVERT_WAV_OPTIONS } from "@/constants";
 import { enjoyUrlToPath, pathToEnjoyUrl } from "@main/utils";
+import { assertLocalSubprocessMediaPath } from "@/lib/network-policy";
 
 /*
  * ffmpeg and ffprobe bin file will be in /app.asar.unpacked instead of /app.asar
@@ -19,12 +19,27 @@ Ffmpeg.setFfprobePath(ffprobePath.replace("app.asar", "app.asar.unpacked"));
 const __dirname = import.meta.dirname.replace("app.asar", "app.asar.unpacked");
 
 const logger = log.scope("ffmpeg");
+const FFMPEG_LOCAL_PROTOCOL_OPTIONS = ["-protocol_whitelist", "file,pipe"];
+
+function localMediaPath(value: string, operation: string): string {
+  return assertLocalSubprocessMediaPath(enjoyUrlToPath(value), {
+    transport: "ffmpeg",
+    operation,
+  });
+}
+
 export default class FfmpegWrapper {
   checkCommand(): Promise<boolean> {
     const ffmpeg = Ffmpeg();
-    const sampleFile = path.join(__dirname, "samples", "jfk.wav");
-    return new Promise((resolve, _reject) => {
-      ffmpeg.input(sampleFile).getAvailableFormats((err, _formats) => {
+    const sampleFile = localMediaPath(
+      path.join(__dirname, "samples", "jfk.wav"),
+      "check-command",
+    );
+    return new Promise((resolve) => {
+      ffmpeg
+        .input(sampleFile)
+        .inputOptions(...FFMPEG_LOCAL_PROTOCOL_OPTIONS)
+        .getAvailableFormats((err) => {
         if (err) {
           logger.error("Command not valid:", err);
           resolve(false);
@@ -37,10 +52,12 @@ export default class FfmpegWrapper {
   }
 
   generateMetadata(input: string): Promise<Ffmpeg.FfprobeData> {
+    input = localMediaPath(input, "generate-metadata.input");
     const ffmpeg = Ffmpeg();
     return new Promise((resolve, reject) => {
       ffmpeg
         .input(input)
+        .inputOptions(...FFMPEG_LOCAL_PROTOCOL_OPTIONS)
         .on("start", (commandLine) => {
           logger.info("Spawned FFmpeg with command: " + commandLine);
         })
@@ -48,7 +65,7 @@ export default class FfmpegWrapper {
           logger.error(err);
           reject(err);
         })
-        .ffprobe((err, metadata) => {
+        .ffprobe(FFMPEG_LOCAL_PROTOCOL_OPTIONS, (err, metadata) => {
           if (err) {
             logger.error(err);
             reject(err);
@@ -60,10 +77,13 @@ export default class FfmpegWrapper {
   }
 
   generateCover(input: string, output: string): Promise<string> {
+    input = localMediaPath(input, "generate-cover.input");
+    output = localMediaPath(output, "generate-cover.output");
     const ffmpeg = Ffmpeg();
     return new Promise((resolve, reject) => {
       ffmpeg
         .input(input)
+        .inputOptions(...FFMPEG_LOCAL_PROTOCOL_OPTIONS)
         .thumbnail({
           count: 1,
           filename: path.basename(output),
@@ -89,6 +109,8 @@ export default class FfmpegWrapper {
     output: string,
     sampleRate = 16000
   ): Promise<string> {
+    input = localMediaPath(input, "ensure-sample-rate.input");
+    output = localMediaPath(output, "ensure-sample-rate.output");
     logger.info(`Trying to convert ${input} to 16-bit file ${output}`);
     if (fs.pathExistsSync(output)) {
       logger.warn(`File ${output} already exists, deleting.`);
@@ -99,6 +121,7 @@ export default class FfmpegWrapper {
     return new Promise((resolve, reject) => {
       ffmpeg
         .input(input)
+        .inputOptions(...FFMPEG_LOCAL_PROTOCOL_OPTIONS)
         .outputOptions("-ar", `${sampleRate}`)
         .on("error", (err) => {
           logger.error(err);
@@ -117,10 +140,13 @@ export default class FfmpegWrapper {
     output: string,
     options: string[] = []
   ): Promise<string> {
+    input = localMediaPath(input, "convert-to-wav.input");
+    output = localMediaPath(output, "convert-to-wav.output");
     const ffmpeg = Ffmpeg();
     return new Promise((resolve, reject) => {
       ffmpeg
         .input(input)
+        .inputOptions(...FFMPEG_LOCAL_PROTOCOL_OPTIONS)
         .outputOptions(
           "-ar",
           "16000",
@@ -159,6 +185,8 @@ export default class FfmpegWrapper {
   }
 
   async prepareForWhisper(input: string, output: string): Promise<string> {
+    input = localMediaPath(input, "prepare-for-whisper.input");
+    output = localMediaPath(output, "prepare-for-whisper.output");
     const metadata = await this.generateMetadata(input);
 
     if (metadata.format.format_name === "wav") {
@@ -187,13 +215,14 @@ export default class FfmpegWrapper {
     output?: string,
     options?: string[]
   ): Promise<string> {
-    input = enjoyUrlToPath(input);
+    input = localMediaPath(input, "transcode.input");
 
     if (!output) {
       output = path.join(settings.cachePath(), `${path.basename(input)}.wav`);
     } else {
-      output = enjoyUrlToPath(output);
+      output = localMediaPath(output, "transcode.output");
     }
+    output = localMediaPath(output, "transcode.output");
 
     options = options || FFMPEG_CONVERT_WAV_OPTIONS;
 
@@ -201,6 +230,7 @@ export default class FfmpegWrapper {
     return new Promise((resolve, reject) => {
       ffmpeg
         .input(input)
+        .inputOptions(...FFMPEG_LOCAL_PROTOCOL_OPTIONS)
         .outputOptions(...options)
         .on("start", (commandLine) => {
           logger.debug(`Trying to convert ${input} to ${output}`);
@@ -240,12 +270,16 @@ export default class FfmpegWrapper {
       output: string;
     }
   ) {
-    const { startTime, endTime, output } = options;
+    input = localMediaPath(input, "crop.input");
+    const startTime = options.startTime;
+    const endTime = options.endTime;
+    const output = localMediaPath(options.output, "crop.output");
     const ffmpeg = Ffmpeg();
 
     return new Promise((resolve, reject) => {
       ffmpeg
         .input(input)
+        .inputOptions(...FFMPEG_LOCAL_PROTOCOL_OPTIONS)
         .outputOptions("-ss", startTime.toString(), "-to", endTime.toString())
         .on("start", (commandLine) => {
           logger.info("Spawned FFmpeg with command: " + commandLine);
@@ -265,9 +299,13 @@ export default class FfmpegWrapper {
 
   // Concatenate videos or audios into a single file
   concat(inputs: string[], output: string) {
+    inputs = inputs.map((input) => localMediaPath(input, "concat.input"));
+    output = localMediaPath(output, "concat.output");
     let command = Ffmpeg();
     inputs.forEach((input) => {
-      command = command.input(input);
+      command = command
+        .input(input)
+        .inputOptions(...FFMPEG_LOCAL_PROTOCOL_OPTIONS);
     });
     return new Promise((resolve, reject) => {
       command
@@ -288,10 +326,13 @@ export default class FfmpegWrapper {
   }
 
   compressVideo(input: string, output: string) {
+    input = localMediaPath(input, "compress-video.input");
+    output = localMediaPath(output, "compress-video.output");
     const ffmpeg = Ffmpeg();
     return new Promise((resolve, reject) => {
       ffmpeg
         .input(input)
+        .inputOptions(...FFMPEG_LOCAL_PROTOCOL_OPTIONS)
         .outputOptions(
           "-c:v",
           "libx264",
@@ -325,10 +366,13 @@ export default class FfmpegWrapper {
   }
 
   compressAudio(input: string, output: string) {
+    input = localMediaPath(input, "compress-audio.input");
+    output = localMediaPath(output, "compress-audio.output");
     const ffmpeg = Ffmpeg();
     return new Promise((resolve, reject) => {
       ffmpeg
         .input(input)
+        .inputOptions(...FFMPEG_LOCAL_PROTOCOL_OPTIONS)
         .outputOptions(
           "-ar",
           "16000",
@@ -356,7 +400,7 @@ export default class FfmpegWrapper {
   }
 
   registerIpcHandlers() {
-    ipcMain.handle("ffmpeg-check-command", async (_event) => {
+    ipcMain.handle("ffmpeg-check-command", async () => {
       return await this.checkCommand();
     });
 

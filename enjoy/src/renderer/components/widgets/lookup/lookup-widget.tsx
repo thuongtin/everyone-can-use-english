@@ -2,6 +2,7 @@ import { isBilingualDirection } from "@/constants/bilingual-dictionaries";
 import { useEffect, useContext, useState, useRef } from "react";
 import {
   AppSettingsProviderContext,
+  createMicrophoneRecordingIntent,
   DictProviderContext,
 } from "@renderer/context";
 import {
@@ -199,45 +200,63 @@ export const VocabularyPronunciationAssessment = (props: { word: string }) => {
   const { EnjoyApp, recorderConfig, learningLanguage } = useContext(
     AppSettingsProviderContext
   );
+  const wordScopeRef = useRef(word || null);
+  const recorderStartRef = useRef<() => void>(() => {});
+  const recordingIntentRef = useRef<
+    ReturnType<typeof createMicrophoneRecordingIntent>
+  >();
+  wordScopeRef.current = word || null;
+
   const {
-    startRecording,
+    startRecording: startAudioRecorder,
     stopRecording,
     recordingBlob,
     isRecording,
     recordingTime,
   } = useAudioRecorder(recorderConfig, (exception) => {
-    toast.error(exception.message);
+    recordingIntentRef.current?.recorderRejected(exception);
   });
+  recorderStartRef.current = startAudioRecorder;
+
+  if (!recordingIntentRef.current) {
+    recordingIntentRef.current = createMicrophoneRecordingIntent({
+      requestAccess: () =>
+        EnjoyApp.system.preferences.mediaAccess("microphone"),
+      startRecording: () => recorderStartRef.current(),
+      getScope: () => wordScopeRef.current,
+      onDenied: () => toast.warning(t("noMicrophoneAccess")),
+      onError: (error) =>
+        toast.error(
+          error instanceof Error ? error.message : t("noMicrophoneAccess")
+        ),
+    });
+  }
+
+  const startRecording = () => {
+    void recordingIntentRef.current?.requestStart();
+  };
   const { createAssessment } = usePronunciationAssessments();
-  const [access, setAccess] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [recording, setRecording] = useState<RecordingType>();
   const [assessment, setAssessment] = useState<PronunciationAssessmentType>();
   const [open, setOpen] = useState(false);
   const audio = useRef<HTMLAudioElement>(null);
 
-  const askForMediaAccess = () => {
-    EnjoyApp.system.preferences.mediaAccess("microphone").then((access) => {
-      if (access) {
-        setAccess(true);
-      } else {
-        setAccess(false);
-        toast.warning(t("noMicrophoneAccess"));
-      }
-    });
-  };
-
   const findRecording = () => {
     EnjoyApp.recordings
-      .findOne({
-        referenceText: word,
+      .findAll({
+        where: { referenceText: word },
+        limit: 1,
       })
-      .then((recording) => {
+      .then((recordings) => {
+        const recording = recordings?.[0];
+        if (!recording) return;
         if (recording?.pronunciationAssessment) {
           setRecording(recording);
           setAssessment(recording.pronunciationAssessment);
         }
-      });
+      })
+      .catch((error) => console.warn("Failed to find lookup recording", error));
   };
 
   const onRecorded = async (blob: Blob) => {
@@ -277,8 +296,15 @@ export const VocabularyPronunciationAssessment = (props: { word: string }) => {
   };
 
   useEffect(() => {
-    askForMediaAccess();
     findRecording();
+  }, [word]);
+
+  useEffect(() => {
+    recordingIntentRef.current?.syncRecordingState(isRecording);
+  }, [isRecording]);
+
+  useEffect(() => {
+    return () => recordingIntentRef.current?.invalidate();
   }, [word]);
 
   useEffect(() => {
@@ -312,7 +338,6 @@ export const VocabularyPronunciationAssessment = (props: { word: string }) => {
   }, [recordingTime]);
 
   if (!word) return null;
-  if (!access) return null;
 
   if (submitting) {
     return (

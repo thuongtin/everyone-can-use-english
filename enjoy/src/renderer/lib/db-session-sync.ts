@@ -1,12 +1,10 @@
 import type { DbLifecycleConnectResult } from "./db-lifecycle";
 
-export type DbSessionProfile = Pick<UserType, "id" | "name">;
+export type DbSessionProfile = Pick<UserType, "id" | "name" | "nameSource">;
 
 export type DbSessionSyncDependencies = {
   connect: () => Promise<DbLifecycleConnectResult | undefined>;
   isActive: () => boolean;
-  persistAuthenticatedProfile: () => Promise<void>;
-  createCable: () => Promise<void>;
   getLocalProfile: () => Promise<DbSessionProfile | null | undefined>;
   applyLocalProfile: (profile: DbSessionProfile) => Promise<void> | void;
 };
@@ -17,10 +15,12 @@ export type DbSessionSyncResult =
   | { kind: "not-connected" };
 
 export const syncDbSession = async (
-  sessionUserId: string,
-  accessToken: string | null | undefined,
+  sessionProfile: string | DbSessionProfile,
   dependencies: DbSessionSyncDependencies
 ): Promise<DbSessionSyncResult> => {
+  const sessionUserId = String(
+    typeof sessionProfile === "string" ? sessionProfile : sessionProfile.id
+  );
   const connectResult = await dependencies.connect();
   if (!dependencies.isActive()) return { kind: "stale" };
   if (
@@ -30,23 +30,28 @@ export const syncDbSession = async (
     return { kind: "not-connected" };
   }
 
-  if (accessToken) {
-    await dependencies.persistAuthenticatedProfile();
-    if (!dependencies.isActive()) return { kind: "stale" };
-    await dependencies.createCable();
-    if (!dependencies.isActive()) return { kind: "stale" };
-    return { kind: "synced" };
-  }
-
   const profile = await dependencies.getLocalProfile();
   if (
     !dependencies.isActive() ||
     !profile?.id ||
-    profile.id !== sessionUserId
+    String(profile.id) !== String(sessionUserId)
   ) {
     return { kind: "stale" };
   }
-  await dependencies.applyLocalProfile(profile);
+  const currentProfile =
+    typeof sessionProfile === "string"
+      ? profile
+      : !sessionProfile.nameSource || sessionProfile.nameSource === "explicit"
+        ? {
+          ...profile,
+          name: sessionProfile.name?.trim() || profile.name,
+          ...(sessionProfile.nameSource ? { nameSource: "explicit" as const } : {}),
+        }
+        : {
+          ...profile,
+          nameSource: "database" as const,
+        };
+  await dependencies.applyLocalProfile(currentProfile);
   if (!dependencies.isActive()) return { kind: "stale" };
   return { kind: "synced" };
 };

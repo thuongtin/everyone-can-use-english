@@ -60,24 +60,33 @@ export const MediaProvider = (props: { className?: string }) => {
     return () => {
       setMediaProvider(null);
     };
-  }, [media?.src]);
+  }, [setMediaProvider]);
+
+  useEffect(() => {
+    if (!media?.src) setMediaProvider(null);
+  }, [media?.src, setMediaProvider]);
 
   if (!media?.src) return null;
 
   return (
     <div className={cn("px-2 py-4", className)}>
       <VidstackMediaPlayer
+        key={`${media.mediaType}:${media.id}:${media.src}`}
         ref={player}
         className="my-auto"
         src={media.src}
-        onCanPlayThrough={(detail, nativeEvent) => {
-          mediaRemote.setTarget(nativeEvent.target);
-          const { provider } = detail;
+        viewType={media.mediaType === "Video" ? "video" : "audio"}
+        onProviderChange={(provider) => {
           if (isAudioProvider(provider)) {
             setMediaProvider(provider.audio);
           } else if (isVideoProvider(provider)) {
             setMediaProvider(provider.video);
+          } else {
+            setMediaProvider(null);
           }
+        }}
+        onCanPlayThrough={(_detail, nativeEvent) => {
+          mediaRemote.setTarget(nativeEvent.target);
         }}
         onError={(err) => {
           toast.error(err.message);

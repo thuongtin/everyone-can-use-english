@@ -1,9 +1,8 @@
 import { AudiosComponent } from "@renderer/components";
+import { EjPage } from "@renderer/components/enjoy";
 
-export default () => {
-  return (
-    <div className="min-h-full max-w-5xl mx-auto px-4 py-6">
-      <AudiosComponent />
-    </div>
-  );
-};
+export default () => (
+  <EjPage>
+    <AudiosComponent />
+  </EjPage>
+);

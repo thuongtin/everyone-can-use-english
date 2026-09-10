@@ -1,7 +1,12 @@
 import { t } from "i18next";
-import { Switch } from "@renderer/components/ui";
 import { useContext } from "react";
 import { AppSettingsProviderContext } from "@renderer/context";
+import {
+  SettingCard,
+  SettingGroup,
+  SettingRow,
+  SettingSwitch,
+} from "./settings-primitives";
 
 export const VocabularySettings = () => {
   const { vocabularyConfig, setVocabularyConfig } = useContext(
@@ -9,22 +14,23 @@ export const VocabularySettings = () => {
   );
 
   return (
-    <div className="flex items-start justify-between py-4">
-      <div className="">
-        <div className="mb-2">{t("lookupOnMouseOver")}</div>
-      </div>
-
-      <div className="">
-        <Switch
-          checked={vocabularyConfig.lookupOnMouseOver}
-          onCheckedChange={() => {
-            setVocabularyConfig({
-              ...vocabularyConfig,
-              lookupOnMouseOver: !vocabularyConfig.lookupOnMouseOver,
-            });
-          }}
-        />
-      </div>
-    </div>
+    <SettingGroup title={t("settings.lookup")}>
+      <SettingCard>
+        <SettingRow
+          label={t("settings.lookupOnMouseOver")}
+          description={t("settings.lookupOnMouseOverHint")}
+        >
+          <SettingSwitch
+            checked={vocabularyConfig.lookupOnMouseOver}
+            onCheckedChange={(checked) =>
+              setVocabularyConfig({
+                ...vocabularyConfig,
+                lookupOnMouseOver: checked,
+              })
+            }
+          />
+        </SettingRow>
+      </SettingCard>
+    </SettingGroup>
   );
 };

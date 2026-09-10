@@ -16,6 +16,7 @@ const requiredModules = [
   "sqlite3",
   "sequelize",
   "onnxruntime-node",
+  "microsoft-cognitiveservices-speech-sdk",
 ];
 const dictionaryCases = [
   { direction: "en-vi", word: "learn", expected: "Học" },
@@ -151,6 +152,13 @@ if (typeof sequelize !== "function") {
   throw new Error("sequelize did not load as a constructor");
 }
 
+const speechSdk = require(path.join(moduleRoot, "microsoft-cognitiveservices-speech-sdk"));
+if (typeof speechSdk.SpeechSynthesizer !== "function" ||
+    typeof speechSdk.SpeechRecognizer !== "function" ||
+    typeof speechSdk.PronunciationAssessmentConfig !== "function") {
+  throw new Error("Azure Speech SDK did not expose its runtime constructors");
+}
+
 const ort = require(path.join(moduleRoot, "onnxruntime-node"));
 const backends = ort.listSupportedBackends();
 if (!Array.isArray(backends) || backends.length === 0) {
@@ -271,6 +279,10 @@ assert.equal(
 );
 
 const packageJson = JSON.parse(extractFile(asarPath, "package.json").toString("utf8"));
+assert.ok(
+  packageJson.dependencies?.["microsoft-cognitiveservices-speech-sdk"],
+  "Azure Speech SDK must remain a runtime dependency so Vite loads its original Node modules"
+);
 const missingModules = requiredModules.filter(
   (name) => !asarEntries.includes(`/node_modules/${name}/package.json`)
 );

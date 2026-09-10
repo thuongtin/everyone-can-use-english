@@ -45,6 +45,7 @@ import {
 import { ChevronDownIcon, ChevronUpIcon, RefreshCwIcon } from "lucide-react";
 import { useAiCommand } from "@renderer/hooks";
 import { cn } from "@renderer/lib/utils";
+import { resolveTranscriptionProviderSelection } from "@/lib/provider-selection-migration";
 
 export const ChatForm = (props: { chat: ChatType; onFinish?: () => void }) => {
   const { chat, onFinish } = props;
@@ -53,10 +54,21 @@ export const ChatForm = (props: { chat: ChatType; onFinish?: () => void }) => {
   const { summarizeTopic } = useAiCommand();
   const [isMoreSettingsOpen, setIsMoreSettingsOpen] = useState(false);
   const [isGeneratingTopic, setIsGeneratingTopic] = useState(false);
+  const resolveConfiguredSttEngine = (value: unknown): string => {
+    const selection = resolveTranscriptionProviderSelection(value);
+    return selection.status === "configured" ? selection.value : "";
+  };
   const chatFormSchema = z.object({
     name: z.string().min(1),
     config: z.object({
-      sttEngine: z.string().default(sttEngine),
+      sttEngine: z
+        .string()
+        .refine(
+          (value) =>
+            resolveTranscriptionProviderSelection(value).status === "configured",
+          t("models.chat.sttAiServicePlaceholder"),
+        )
+        .default(resolveConfiguredSttEngine(sttEngine)),
       prompt: z.string().optional(),
       enableChatAssistant: z.boolean().default(false),
       enableAutoTts: z.boolean().default(false),
@@ -68,12 +80,15 @@ export const ChatForm = (props: { chat: ChatType; onFinish?: () => void }) => {
     values: chat?.id
       ? {
           name: chat.name,
-          config: chat.config,
+          config: {
+            ...chat.config,
+            sttEngine: resolveConfiguredSttEngine(chat.config?.sttEngine),
+          },
         }
       : {
           name: t("newChat"),
           config: {
-            sttEngine,
+            sttEngine: resolveConfiguredSttEngine(sttEngine),
             prompt: "",
             enableChatAssistant: true,
             enableAutoTts: true,
@@ -238,7 +253,7 @@ export const ChatForm = (props: { chat: ChatType; onFinish?: () => void }) => {
                 <Button
                   type="button"
                   variant="link"
-                  className="w-full justify-center text-muted-foreground"
+                  className="w-full justify-center text-ej-muted"
                   size="sm"
                   onClick={() => setIsMoreSettingsOpen(!isMoreSettingsOpen)}
                 >
@@ -272,15 +287,21 @@ export const ChatForm = (props: { chat: ChatType; onFinish?: () => void }) => {
                           <SelectItem value={SttEngineOptionEnum.LOCAL}>
                             {t("local")}
                           </SelectItem>
-                          <SelectItem value={SttEngineOptionEnum.ENJOY_AZURE}>
-                            {t("enjoyAzure")}
-                          </SelectItem>
                           <SelectItem
-                            value={SttEngineOptionEnum.ENJOY_CLOUDFLARE}
+                            value={SttEngineOptionEnum.CLOUDFLARE_WORKERS_AI}
                           >
-                            {t("enjoyCloudflare")}
+                            {t("cloudflareWorkerTranscribeName")}
                           </SelectItem>
-                          <SelectItem value={SttEngineOptionEnum.OPENAI}>
+                          <SelectItem value={SttEngineOptionEnum.MAI_TRANSCRIBE}>
+                            {t("maiTranscribeName")}
+                          </SelectItem>
+                          <SelectItem value={SttEngineOptionEnum.AZURE_MAI} data-testid="stt-engine-azure-mai">
+                    {t("azureMaiTranscribeName")}
+                  </SelectItem>
+                  <SelectItem value={SttEngineOptionEnum.AZURE_SPEECH} data-testid="stt-engine-azure-speech">
+                    {t("azureFastTranscribeName")}
+                  </SelectItem>
+                  <SelectItem value={SttEngineOptionEnum.OPENAI}>
                             {t("openai")}
                           </SelectItem>
                         </SelectContent>
@@ -293,11 +314,13 @@ export const ChatForm = (props: { chat: ChatType; onFinish?: () => void }) => {
                           SttEngineOptionEnum.LOCAL &&
                           t("localSpeechToTextDescription")}
                         {form.watch("config.sttEngine") ===
-                          SttEngineOptionEnum.ENJOY_AZURE &&
-                          t("enjoyAzureSpeechToTextDescription")}
+                          SttEngineOptionEnum.CLOUDFLARE_WORKERS_AI &&
+                          t("cloudflareWorkerTranscribeDescription")}
                         {form.watch("config.sttEngine") ===
-                          SttEngineOptionEnum.ENJOY_CLOUDFLARE &&
-                          t("enjoyCloudflareSpeechToTextDescription")}
+                          SttEngineOptionEnum.MAI_TRANSCRIBE &&
+                          t("maiTranscribeDescription")}
+                        {(form.watch("config.sttEngine") === SttEngineOptionEnum.AZURE_MAI ||
+                          form.watch("config.sttEngine") === SttEngineOptionEnum.AZURE_SPEECH) && t("azureTranscribeDescription")}
                         {form.watch("config.sttEngine") ===
                           SttEngineOptionEnum.OPENAI &&
                           t("openaiSpeechToTextDescription")}
@@ -331,7 +354,7 @@ export const ChatForm = (props: { chat: ChatType; onFinish?: () => void }) => {
           {chat?.id && (
             <AlertDialog>
               <AlertDialogTrigger asChild>
-                <Button className="text-destructive" variant="secondary">
+                <Button className="text-ej-bad" variant="secondary">
                   {t("delete")}
                 </Button>
               </AlertDialogTrigger>
@@ -345,7 +368,7 @@ export const ChatForm = (props: { chat: ChatType; onFinish?: () => void }) => {
                 <AlertDialogFooter>
                   <AlertDialogCancel>{t("cancel")}</AlertDialogCancel>
                   <AlertDialogAction
-                    className="bg-destructive hover:bg-destructive-hover"
+                    className="bg-ej-bad hover:opacity-90"
                     onClick={handleDeleteChat}
                   >
                     {t("delete")}

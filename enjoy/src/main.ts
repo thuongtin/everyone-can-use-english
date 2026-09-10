@@ -1,34 +1,25 @@
-import { app, BrowserWindow, protocol, net } from "electron";
+import { app, BrowserWindow, protocol, dialog, session } from "electron";
+import db from "@main/db";
+import { isLearningAssetReference } from "@main/learning/active-runtime";
 import path from "path";
+import { serveLibraryFile } from "@main/library-file-response";
 import fs from "fs-extra";
 import settings from "@main/settings";
-import log from "@main/logger";
 import mainWindow from "@main/window";
 import ElectronSquirrelStartup from "electron-squirrel-startup";
 import contextMenu from "electron-context-menu";
-import Bugsnag from "@bugsnag/electron";
 import { t } from "i18next";
-import { Client } from "./api";
+import { installChromiumNetworkPolicy } from "@main/network-policy";
 import { i18n } from "@main/i18n";
+import { prepareLocalBrowserStorage } from "@main/local-browser-storage";
+import { installNodeNetworkObserver } from "@main/node-network-observer";
 
-const logger = log.scope("main");
+installNodeNetworkObserver();
+
+// Use a fresh Chromium store; the old encrypted cookies and app data stay intact.
+app.setPath("sessionData", prepareLocalBrowserStorage(app.getPath("userData")));
+
 i18n();
-
-const initBugsnag = async () => {
-  if (!app.isPackaged) return;
-  const webApi = new Client({
-    baseUrl: settings.apiUrl(),
-    logger,
-  });
-  try {
-    const apiKey = await webApi.config("bugsnag_api_key");
-    if (!apiKey) return;
-
-    Bugsnag.start({ apiKey: apiKey.bugsnagApiKey });
-  } catch (err) {
-    logger.error(err);
-  }
-};
 
 app.commandLine.appendSwitch("enable-features", "SharedArrayBuffer");
 
@@ -36,8 +27,6 @@ if (!app.isPackaged) {
   app.disableHardwareAcceleration();
   app.commandLine.appendSwitch("disable-software-rasterizer");
 }
-
-initBugsnag();
 
 // Add context menu
 contextMenu({
@@ -58,8 +47,7 @@ contextMenu({
   prepend: (
     _defaultActions,
     parameters,
-    browserWindow: BrowserWindow,
-    _event
+    browserWindow: BrowserWindow
   ) => [
     {
       label: t("lookup"),
@@ -110,6 +98,7 @@ protocol.registerSchemesAsPrivileged([
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on("ready", async () => {
+  installChromiumNetworkPolicy(app, session.defaultSession);
   if (!app.isPackaged) {
     import("electron-devtools-installer")
       .then((mymodule: any) => {
@@ -124,6 +113,9 @@ app.on("ready", async () => {
   }
 
   protocol.handle("enjoy", (request) => {
+    if (isLearningAssetReference(request.url)) {
+      return db.learning?.protocol.handle(request) ?? new Response("Learning asset unavailable", { status: 403, headers: { "Cache-Control": "no-store" } });
+    }
     let url = request.url.replace("enjoy://", "");
     if (
       url.match(
@@ -137,7 +129,7 @@ app.on("ready", async () => {
       url = path.join(settings.libraryPath(), url);
     }
 
-    return net.fetch(`file:///${url}`);
+    return serveLibraryFile(request, url);
   });
 
   mainWindow.init();
@@ -159,8 +151,19 @@ app.on("activate", () => {
 });
 
 // Clean up cache folder before quit
-app.on("before-quit", () => {
-  try {
-    fs.emptyDirSync(settings.cachePath());
-  } catch (err) {}
+let quitReady = false;
+let quitPending = false;
+app.on("before-quit", (event) => {
+  if (quitReady) return;
+  event.preventDefault();
+  if (quitPending) return;
+  quitPending = true;
+  void db.shutdown().then(() => {
+    try { fs.emptyDirSync(settings.cachePath()); } catch { /* Cache cleanup does not own running work. */ }
+    quitReady = true;
+    app.quit();
+  }).catch(() => {
+    quitPending = false;
+    dialog.showErrorBox("Chưa thể đóng Enjoy", "Xưởng bài học chưa dừng xong tác vụ đang chạy. Hãy thử đóng ứng dụng lại sau ít giây.");
+  });
 });

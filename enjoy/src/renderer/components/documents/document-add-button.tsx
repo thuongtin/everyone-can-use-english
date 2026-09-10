@@ -14,13 +14,14 @@ import { PlusCircleIcon, LoaderIcon } from "lucide-react";
 import { t } from "i18next";
 import { useState, useContext, useEffect } from "react";
 import { DocumentFormats } from "@/constants";
-import { AppSettingsProviderContext } from "@renderer/context";
+import { AppSettingsProviderContext, AISettingsProviderContext } from "@renderer/context";
 import { useNavigate } from "react-router-dom";
 import { Readability } from "@mozilla/readability";
 import { Buffer } from "buffer";
 
 export const DocumentAddButton = () => {
   const { EnjoyApp, learningLanguage } = useContext(AppSettingsProviderContext);
+  const { ttsConfig } = useContext(AISettingsProviderContext);
   const navigate = useNavigate();
   const [uri, setUri] = useState("");
   const [open, setOpen] = useState(false);
@@ -39,7 +40,10 @@ export const DocumentAddButton = () => {
 
     setSubmitting(true);
     if (uri.startsWith("http")) {
-      EnjoyApp.view.scrape(uri);
+      EnjoyApp.view.scrape(uri).catch((error) => {
+        toast.error(error.message);
+        setSubmitting(false);
+      });
     } else {
       createFromLocalFile(uri, uri);
     }
@@ -54,10 +58,11 @@ export const DocumentAddButton = () => {
           autoNextSpeech: true,
           layout: "horizontal",
           tts: {
-            engine: "enjoyai",
-            model: "openai/tts-1",
+            engine: "needs-selection",
+            model: "",
             language: learningLanguage,
             voice: "alloy",
+            ...(ttsConfig || {}),
           },
         },
         source,
