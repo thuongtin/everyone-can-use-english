@@ -1,34 +1,25 @@
 import { t } from "i18next";
 import { Link } from "react-router-dom";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@renderer/components/ui";
+import { ChevronLeftIcon } from "lucide-react";
+import { EjPage, EjPageHeader } from "@renderer/components/enjoy";
 import { PronunciationAssessmentForm } from "@renderer/components";
 
 export default () => {
   return (
-    <div className="min-h-full px-4 py-6 lg:px-8 max-w-5xl mx-auto">
-      <Breadcrumb className="mb-4">
-        <BreadcrumbList>
-          <BreadcrumbItem>
-            <BreadcrumbLink asChild>
-              <Link to={`/pronunciation_assessments`}>
-                {t("sidebar.pronunciationAssessment")}
-              </Link>
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbPage>{t("newAssessment")}</BreadcrumbPage>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
+    <EjPage className="max-w-[800px]">
+      <Link
+        to="/pronunciation_assessments"
+        className="mb-4 inline-flex items-center gap-1 text-xxs font-semibold text-ej-accent-ink hover:underline"
+      >
+        <ChevronLeftIcon className="size-3.5" />
+        {t("sidebar.pronunciationAssessment")}
+      </Link>
+      <EjPageHeader
+        kicker={t("sidebar.pronunciationAssessment")}
+        title={t("newAssessment")}
+        description={t("newAssessmentDescription")}
+      />
       <PronunciationAssessmentForm />
-    </div>
+    </EjPage>
   );
 };

@@ -1,0 +1,256 @@
+{
+  "runAt": "2026-09-08T07:00:41.867Z",
+  "provider": "openrouter",
+  "factory": "createChatModel",
+  "results": [
+    {
+      "model": "openai/gpt-5.6-luna",
+      "task": "translation",
+      "status": "pass",
+      "semanticOk": true,
+      "latencyMs": 1864,
+      "output": "Trước đây, tôi thường trì hoãn việc nói tiếng Anh vì sợ mắc lỗi."
+    },
+    {
+      "model": "openai/gpt-5.6-luna",
+      "task": "lookup",
+      "status": "pass",
+      "semanticOk": true,
+      "latencyMs": 2532,
+      "output": {
+        "word": "bank",
+        "context_translation": "Sau cơn bão, chúng tôi ngồi bên bờ sông và nhìn mực nước dâng lên.",
+        "pos": "noun",
+        "pronunciation": "/bæŋk/",
+        "definition": "The sloping land beside a river, lake, or other body of water.",
+        "translation": "bờ (sông, hồ)",
+        "lemma": "bank"
+      }
+    },
+    {
+      "model": "openai/gpt-5.6-luna",
+      "task": "ipa",
+      "status": "pass",
+      "semanticOk": true,
+      "latencyMs": 6223,
+      "output": {
+        "words": [
+          {
+            "word": "thought",
+            "ipa": "/θɔːt/"
+          },
+          {
+            "word": "through",
+            "ipa": "/θruː/"
+          },
+          {
+            "word": "the",
+            "ipa": "/ðə/"
+          },
+          {
+            "word": "problem",
+            "ipa": "/ˈprɒbləm/"
+          },
+          {
+            "word": "carefully",
+            "ipa": "/ˈkeəfəli/"
+          }
+        ]
+      }
+    },
+    {
+      "model": "google/gemini-3.5-flash-lite",
+      "task": "translation",
+      "status": "pass",
+      "semanticOk": true,
+      "latencyMs": 816,
+      "output": "Tôi từng trì hoãn việc nói tiếng Anh vì sợ mắc lỗi."
+    },
+    {
+      "model": "google/gemini-3.5-flash-lite",
+      "task": "lookup",
+      "status": "pass",
+      "semanticOk": true,
+      "latencyMs": 1402,
+      "output": {
+        "word": "bank",
+        "context_translation": "Sau cơn bão, chúng tôi ngồi trên bờ sông và ngắm nhìn mực nước dâng lên.",
+        "pos": "noun",
+        "pronunciation": "/bæŋk/",
+        "definition": "The land alongside or sloping down to a river or lake.",
+        "translation": "bờ sông, bờ hồ",
+        "lemma": "bank"
+      }
+    },
+    {
+      "model": "google/gemini-3.5-flash-lite",
+      "task": "ipa",
+      "status": "pass",
+      "semanticOk": true,
+      "latencyMs": 1083,
+      "output": {
+        "words": [
+          {
+            "word": "thought",
+            "ipa": "/θɔːt/"
+          },
+          {
+            "word": "through",
+            "ipa": "/θruː/"
+          },
+          {
+            "word": "the",
+            "ipa": "/ðə/"
+          },
+          {
+            "word": "problem",
+            "ipa": "/ˈprɒbləm/"
+          },
+          {
+            "word": "carefully",
+            "ipa": "/ˈkeəfəli/"
+          }
+        ]
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "task": "translation",
+      "status": "pass",
+      "semanticOk": true,
+      "latencyMs": 4251,
+      "output": "Trước đây tôi thường trì hoãn việc nói tiếng Anh vì sợ mắc lỗi."
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "task": "lookup",
+      "status": "pass",
+      "semanticOk": true,
+      "latencyMs": 4011,
+      "output": {
+        "word": "bank",
+        "context_translation": "Sau cơn bão, chúng tôi ngồi trên bờ sông và nhìn nước dâng lên.",
+        "pos": "noun",
+        "pronunciation": "/bæŋk/",
+        "definition": "the land alongside or sloping down to a river or lake",
+        "translation": "bờ sông, bờ hồ",
+        "lemma": "bank"
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "task": "ipa",
+      "status": "pass",
+      "semanticOk": true,
+      "latencyMs": 5501,
+      "output": {
+        "words": [
+          {
+            "word": "thought",
+            "ipa": "/θɔːt/"
+          },
+          {
+            "word": "through",
+            "ipa": "/θruː/"
+          },
+          {
+            "word": "the",
+            "ipa": "/ðə/"
+          },
+          {
+            "word": "problem",
+            "ipa": "/ˈprɒbləm/"
+          },
+          {
+            "word": "carefully",
+            "ipa": "/ˈkɛrfəli/"
+          }
+        ]
+      }
+    }
+  ],
+  "receipts": [
+    {
+      "model": "openai/gpt-5.6-luna",
+      "task": "translation",
+      "generationId": "gen-1788850815-Wyk0l6o5PG5kxfxGj8BV",
+      "promptTokens": 55,
+      "completionTokens": 23,
+      "totalTokens": 78,
+      "costUsd": 0.0000386
+    },
+    {
+      "model": "openai/gpt-5.6-luna",
+      "task": "lookup",
+      "generationId": "gen-1788850816-QnabOdWKpbypaREggIMI",
+      "promptTokens": 222,
+      "completionTokens": 138,
+      "totalTokens": 360,
+      "costUsd": 0.00021
+    },
+    {
+      "model": "openai/gpt-5.6-luna",
+      "task": "ipa",
+      "generationId": "gen-1788850820-LQI7XakphHtYa8t831TU",
+      "promptTokens": 103,
+      "completionTokens": 256,
+      "totalTokens": 359,
+      "costUsd": 0.0003278
+    },
+    {
+      "model": "google/gemini-3.5-flash-lite",
+      "task": "translation",
+      "generationId": "gen-1788850825-W1Kc9wCvDxo0hpJKMEIP",
+      "promptTokens": 51,
+      "completionTokens": 14,
+      "totalTokens": 65,
+      "costUsd": 0.0000503
+    },
+    {
+      "model": "google/gemini-3.5-flash-lite",
+      "task": "lookup",
+      "generationId": "gen-1788850825-TDweHwLQcaAMYOeLWnqD",
+      "promptTokens": 235,
+      "completionTokens": 99,
+      "totalTokens": 334,
+      "costUsd": 0.000318
+    },
+    {
+      "model": "google/gemini-3.5-flash-lite",
+      "task": "ipa",
+      "generationId": "gen-1788850827-L3PehVGUcvYC7yFn4UIR",
+      "promptTokens": 105,
+      "completionTokens": 138,
+      "totalTokens": 243,
+      "costUsd": 0.0003765
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "task": "translation",
+      "generationId": "gen-1788850828-nGiX3KHL6Uk3tNb5pcCp",
+      "promptTokens": 82,
+      "completionTokens": 42,
+      "totalTokens": 124,
+      "costUsd": 0.000584
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "task": "lookup",
+      "generationId": "gen-1788850832-BbJ38RyIpODsGYOXlzuU",
+      "promptTokens": 325,
+      "completionTokens": 150,
+      "totalTokens": 475,
+      "costUsd": 0.00215
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "task": "ipa",
+      "generationId": "gen-1788850836-NIDAJqvrWqO56pov4TQP",
+      "promptTokens": 149,
+      "completionTokens": 210,
+      "totalTokens": 359,
+      "costUsd": 0.002398
+    }
+  ],
+  "totalCostUsd": 0.0064532
+}

@@ -26,12 +26,21 @@
  * ```
  */
 
+import { getNetworkPolicyDiagnostics, type NetworkPolicyDiagnostics } from "./lib/network-policy";
 import "./index.css";
 import "./renderer/index";
+
+// Read-only diagnostics keep renderer counters distinct from main-process receipts.
+Object.defineProperty(window, "__ENJOY_RENDERER_NETWORK_POLICY__", {
+  value: getNetworkPolicyDiagnostics,
+  configurable: true,
+  writable: false,
+});
 
 declare global {
   interface Window {
     __ENJOY_APP__: EnjoyAppType;
+    __ENJOY_RENDERER_NETWORK_POLICY__: () => NetworkPolicyDiagnostics;
   }
 
   namespace JSX {

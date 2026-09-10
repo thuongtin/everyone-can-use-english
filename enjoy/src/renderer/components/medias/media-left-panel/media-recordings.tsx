@@ -9,7 +9,6 @@ import {
   AlertDialogCancel,
   AlertDialogAction,
   AlertDialogTrigger,
-  Button,
   DropdownMenu,
   DropdownMenuItem,
   DropdownMenuTrigger,
@@ -19,21 +18,21 @@ import {
   RadioGroupItem,
   Label,
 } from "@renderer/components/ui";
+import { EjButton, EjIconButton } from "@renderer/components/enjoy";
 import {
   AppSettingsProviderContext,
   HotKeysSettingsProviderContext,
   MediaShadowProviderContext,
 } from "@renderer/context";
 import {
-  GaugeCircleIcon,
-  LoaderIcon,
   MicIcon,
   MoreHorizontalIcon,
   SquareMenuIcon,
   Trash2Icon,
 } from "lucide-react";
 import { t } from "i18next";
-import { formatDateTime, formatDuration } from "@renderer/lib/utils";
+import { formatDateTime, formatDuration, cn } from "@renderer/lib/utils";
+import { scoreChipClass } from "@renderer/lib/design";
 
 export const MediaRecordings = () => {
   const { currentHotkeys } = useContext(HotKeysSettingsProviderContext);
@@ -144,35 +143,41 @@ export const MediaRecordings = () => {
 
   return (
     <div ref={containerRef} data-testid="media-recordings-result">
-      <div className="flex items-center justify-between mb-2 px-4">
-        <div className="text-sm text-muted-foreground">
+      <div className="mb-1.5 flex items-center justify-between gap-2 px-4">
+        <span className="ej-label">
           #{currentSegmentIndex + 1}/{transcription?.result?.timeline?.length}
-        </div>
+        </span>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" size="sm">
-              <SquareMenuIcon className="w-5 h-5 text-muted-foreground" />
-            </Button>
+            <EjIconButton aria-label={t("more")}>
+              <SquareMenuIcon className="size-4" />
+            </EjIconButton>
           </DropdownMenuTrigger>
-          <DropdownMenuContent>
+          <DropdownMenuContent align="end">
             <DropdownMenuItem asChild>
               <AlertDialog>
                 <AlertDialogTrigger asChild>
-                  <Button variant="ghost" className="block w-full">
+                  <EjButton
+                    variant="ghost"
+                    size="sm"
+                    className="w-full justify-start"
+                  >
                     {t("export")}
-                  </Button>
+                  </EjButton>
                 </AlertDialogTrigger>
-                <AlertDialogContent>
+                <AlertDialogContent aria-describedby={undefined}>
                   <AlertDialogHeader>
-                    <AlertDialogTitle>{t("exportRecordings")}</AlertDialogTitle>
-                    <AlertDialogDescription>
+                    <AlertDialogTitle className="text-base font-bold text-ej-ink">
+                      {t("exportRecordings")}
+                    </AlertDialogTitle>
+                    <AlertDialogDescription className="text-xs text-ej-muted">
                       {t("exportRecordingsConfirmation")}
                     </AlertDialogDescription>
                   </AlertDialogHeader>
                   <AlertDialogFooter>
                     <AlertDialogCancel>{t("cancel")}</AlertDialogCancel>
-                    <AlertDialogAction asChild>
-                      <Button onClick={handleExport}>{t("export")}</Button>
+                    <AlertDialogAction onClick={handleExport}>
+                      {t("export")}
                     </AlertDialogAction>
                   </AlertDialogFooter>
                 </AlertDialogContent>
@@ -181,53 +186,72 @@ export const MediaRecordings = () => {
             <DropdownMenuItem asChild>
               <AlertDialog>
                 <AlertDialogTrigger asChild>
-                  <Button variant="ghost" className="block w-full">
+                  <EjButton
+                    variant="ghost"
+                    size="sm"
+                    className="w-full justify-start"
+                  >
                     {t("bulkDelete")}
-                  </Button>
+                  </EjButton>
                 </AlertDialogTrigger>
-                <AlertDialogContent>
+                <AlertDialogContent aria-describedby={undefined}>
                   <AlertDialogHeader>
-                    <AlertDialogTitle>{t("bulkDelete")}</AlertDialogTitle>
-                    <AlertDialogDescription className="mb-4">
+                    <AlertDialogTitle className="text-base font-bold text-ej-ink">
+                      {t("bulkDelete")}
+                    </AlertDialogTitle>
+                    <AlertDialogDescription className="mb-3 text-xs text-ej-muted">
                       {t("bulkDeleteRecordingsConfirmation")}
                     </AlertDialogDescription>
                     <RadioGroup
                       value={deleteBulkType}
                       onValueChange={(value) => setDeleteBulkType(value)}
+                      className="gap-2"
                     >
-                      <div className="flex items-center space-x-2">
+                      <div className="flex items-center gap-2">
                         <RadioGroupItem
                           value="noAssessments"
                           id="noAssessments"
                         />
-                        <Label htmlFor="noAssessments">
+                        <Label
+                          htmlFor="noAssessments"
+                          className="text-xs font-normal text-ej-ink"
+                        >
                           {t("deleteRecordingsWithoutAssessment")}(
                           {recordingsWithoutAssessment.length})
                         </Label>
                       </div>
-                      <div className="flex items-center space-x-2">
+                      <div className="flex items-center gap-2">
                         <RadioGroupItem
                           value="scoreLessThan90"
                           id="scoreLessThan90"
                         />
-                        <Label htmlFor="scoreLessThan90">
+                        <Label
+                          htmlFor="scoreLessThan90"
+                          className="text-xs font-normal text-ej-ink"
+                        >
                           {t("deleteRecordingsWithScoreLessThan90")}(
                           {recordingsWithScoreLessThan90.length})
                         </Label>
                       </div>
-                      <div className="flex items-center space-x-2">
+                      <div className="flex items-center gap-2">
                         <RadioGroupItem
                           value="scoreLessThan80"
                           id="scoreLessThan80"
                         />
-                        <Label htmlFor="scoreLessThan80">
+                        <Label
+                          htmlFor="scoreLessThan80"
+                          className="text-xs font-normal text-ej-ink"
+                        >
                           {t("deleteRecordingsWithScoreLessThan80")}(
                           {recordingsWithScoreLessThan80.length})
                         </Label>
                       </div>
-                      <div className="flex items-center space-x-2">
+                      <div className="flex items-center gap-2">
                         <RadioGroupItem value="all" id="all" />
-                        <Label htmlFor="all" className="text-destructive">
+                        <Label
+                          htmlFor="all"
+                          className="text-xs font-normal text-ej-bad"
+                        >
                           {t("deleteAllRecordings")}({recordings.length})
                         </Label>
                       </div>
@@ -235,8 +259,11 @@ export const MediaRecordings = () => {
                   </AlertDialogHeader>
                   <AlertDialogFooter>
                     <AlertDialogCancel>{t("cancel")}</AlertDialogCancel>
-                    <AlertDialogAction asChild>
-                      <Button onClick={handleDestroyBulk}>{t("delete")}</Button>
+                    <AlertDialogAction
+                      className="bg-ej-bad hover:opacity-90"
+                      onClick={handleDestroyBulk}
+                    >
+                      {t("delete")}
                     </AlertDialogAction>
                   </AlertDialogFooter>
                 </AlertDialogContent>
@@ -245,9 +272,10 @@ export const MediaRecordings = () => {
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
+
       {recordings.length == 0 && (
         <div
-          className="text-center px-6 py-8 text-sm text-muted-foreground"
+          className="px-6 py-8 text-center text-xs leading-relaxed text-ej-muted"
           dangerouslySetInnerHTML={{
             __html: t("noRecordingForThisSegmentYet", {
               key: currentHotkeys.StartOrStopRecording?.toUpperCase(),
@@ -256,88 +284,113 @@ export const MediaRecordings = () => {
         ></div>
       )}
 
-      {recordings.map((recording) => (
-        <div
-          key={recording.id}
-          className={`flex items-center justify-between px-4 py-2 cursor-pointer ${
-            recording.id === currentRecording?.id ? "bg-muted" : ""
-          }`}
-          style={{
-            borderLeftColor: `#${recording.md5.substr(0, 6)}`,
-            borderLeftWidth: 3,
-          }}
-          onClick={() => {
-            setCurrentRecording(recording);
-          }}
-        >
-          <div className="flex items-center space-x-2">
-            <MicIcon className="w-4 h-4" />
-            <span>{formatDuration(recording.duration, "ms")}</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            {recording.pronunciationAssessment?.result && (
-              <div
-                className={`flex items-center space-x-1
-                    ${
-                      recording.pronunciationAssessment
-                        ? recording.pronunciationAssessment
-                            .pronunciationScore >= 80
-                          ? "text-green-500"
-                          : recording.pronunciationAssessment
-                              .pronunciationScore >= 60
-                          ? "text-yellow-600"
-                          : "text-red-500"
-                        : ""
-                    }
-                    `}
-              >
-                <GaugeCircleIcon className="w-4 h-4" />
-                <span className="text-xs font-mono">
-                  {recording.pronunciationAssessment.pronunciationScore}
+      <div className="flex flex-col gap-1 px-2">
+        {recordings.map((recording) => {
+          const score =
+            recording.pronunciationAssessment?.result &&
+            recording.pronunciationAssessment.pronunciationScore;
+
+          return (
+            <div
+              key={recording.id}
+              role="button"
+              tabIndex={0}
+              className={cn(
+                "flex cursor-pointer items-center justify-between gap-2 rounded-ej border px-2.5 py-2",
+                "transition-colors duration-ej",
+                recording.id === currentRecording?.id
+                  ? "border-ej-accent bg-ej-accent-soft"
+                  : "border-transparent hover:bg-ej-surface2"
+              )}
+              style={{
+                // The md5 stripe keeps each take visually identifiable.
+                borderLeftColor: `#${recording.md5.substr(0, 6)}`,
+                borderLeftWidth: 3,
+              }}
+              onClick={() => {
+                setCurrentRecording(recording);
+              }}
+              onKeyDown={(event) => {
+                if (event.key !== "Enter" && event.key !== " ") return;
+                event.preventDefault();
+                setCurrentRecording(recording);
+              }}
+            >
+              <div className="flex min-w-0 items-center gap-1.5">
+                <MicIcon
+                  className={cn(
+                    "size-3.5 shrink-0",
+                    recording.id === currentRecording?.id
+                      ? "text-ej-accent-ink"
+                      : "text-ej-muted"
+                  )}
+                />
+                <span className="truncate text-xs font-semibold text-ej-ink">
+                  {formatDuration(recording.duration, "ms")}
                 </span>
               </div>
-            )}
-            <span className="text-sm text-muted-foreground">
-              {formatDateTime(recording.createdAt)}
-            </span>
 
-            <DropdownMenu>
-              <DropdownMenuTrigger>
-                <MoreHorizontalIcon className="w-4 h-4" />
-              </DropdownMenuTrigger>
+              <div className="flex shrink-0 items-center gap-1.5">
+                {typeof score === "number" && (
+                  <span
+                    className={cn(
+                      "rounded-md px-1.5 py-0.5 text-xxs font-bold tabular-nums",
+                      scoreChipClass(score)
+                    )}
+                  >
+                    {score}
+                  </span>
+                )}
+                <span className="text-xxs text-ej-muted">
+                  {formatDateTime(recording.createdAt)}
+                </span>
 
-              <DropdownMenuContent>
-                <DropdownMenuItem
-                  className="text-destructive cursor-pointer"
-                  onClick={() => setSelectedRecording(recording)}
-                >
-                  <Trash2Icon className="w-4 h-4 mr-2" />
-                  <span>{t("delete")}</span>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </div>
-        </div>
-      ))}
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <EjIconButton size={22} aria-label={t("more")}>
+                      <MoreHorizontalIcon className="size-3.5" />
+                    </EjIconButton>
+                  </DropdownMenuTrigger>
+
+                  <DropdownMenuContent align="end">
+                    <DropdownMenuItem
+                      className="cursor-pointer text-ej-bad"
+                      onClick={() => setSelectedRecording(recording)}
+                    >
+                      <Trash2Icon className="mr-2 size-3.5" />
+                      <span>{t("delete")}</span>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
+            </div>
+          );
+        })}
+      </div>
 
       <AlertDialog
-        open={selectedRecording}
+        open={Boolean(selectedRecording)}
         onOpenChange={(value) => {
           if (value) return;
           setSelectedRecording(null);
         }}
       >
-        <AlertDialogContent>
+        <AlertDialogContent aria-describedby={undefined}>
           <AlertDialogHeader>
-            <AlertDialogTitle>{t("deleteRecording")}</AlertDialogTitle>
-            <AlertDialogDescription>
+            <AlertDialogTitle className="text-base font-bold text-ej-ink">
+              {t("deleteRecording")}
+            </AlertDialogTitle>
+            <AlertDialogDescription className="text-xs text-ej-muted">
               {t("deleteRecordingConfirmation")}
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>{t("cancel")}</AlertDialogCancel>
-            <AlertDialogAction asChild>
-              <Button onClick={handleDelete}>{t("delete")}</Button>
+            <AlertDialogAction
+              className="bg-ej-bad hover:opacity-90"
+              onClick={handleDelete}
+            >
+              {t("delete")}
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>

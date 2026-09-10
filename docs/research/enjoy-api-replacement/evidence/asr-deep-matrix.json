@@ -1,0 +1,3524 @@
+[
+  {
+    "model": "microsoft/mai-transcribe-2",
+    "fixture": "dialogue.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 4.136,
+    "generationId": "gen-stt-1788850153-VnZOiQaW0lsJTykCgX7U",
+    "response": {
+      "text": "Well, um, I booked the blue room for Thursday. The code is 742. Did you say Thursday? I thought our meeting was on Friday at half past 9. No, Thursday at 10:15. Please bring two notebooks and a green pen. All right. I will arrive 15 minutes early. See you there.",
+      "usage": {
+        "seconds": 20,
+        "cost": 0.0005555555555555556
+      },
+      "language": "en",
+      "duration": 19.46,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0.12,
+          "end": 4.52,
+          "text": "Well, um, I booked the blue room for Thursday. The code is 742.",
+          "speaker": 0
+        },
+        {
+          "id": 1,
+          "start": 5.12,
+          "end": 9.599,
+          "text": "Did you say Thursday? I thought our meeting was on Friday at half past 9.",
+          "speaker": 1
+        },
+        {
+          "id": 2,
+          "start": 10.24,
+          "end": 14.64,
+          "text": "No, Thursday at 10:15. Please bring two notebooks and a green pen.",
+          "speaker": 0
+        },
+        {
+          "id": 3,
+          "start": 15.24,
+          "end": 18.96,
+          "text": "All right. I will arrive 15 minutes early. See you there.",
+          "speaker": 1
+        }
+      ],
+      "words": [
+        {
+          "word": "Well,",
+          "start": 0.12,
+          "end": 0.36,
+          "speaker": 0
+        },
+        {
+          "word": "um,",
+          "start": 0.56,
+          "end": 0.879,
+          "speaker": 0
+        },
+        {
+          "word": "I",
+          "start": 1.08,
+          "end": 1.159,
+          "speaker": 0
+        },
+        {
+          "word": "booked",
+          "start": 1.28,
+          "end": 1.459,
+          "speaker": 0
+        },
+        {
+          "word": "the",
+          "start": 1.48,
+          "end": 1.56,
+          "speaker": 0
+        },
+        {
+          "word": "blue",
+          "start": 1.64,
+          "end": 1.799,
+          "speaker": 0
+        },
+        {
+          "word": "room",
+          "start": 1.88,
+          "end": 2.039,
+          "speaker": 0
+        },
+        {
+          "word": "for",
+          "start": 2.08,
+          "end": 2.2,
+          "speaker": 0
+        },
+        {
+          "word": "Thursday.",
+          "start": 2.32,
+          "end": 2.76,
+          "speaker": 0
+        },
+        {
+          "word": "The",
+          "start": 3.04,
+          "end": 3.12,
+          "speaker": 0
+        },
+        {
+          "word": "code",
+          "start": 3.2,
+          "end": 3.379,
+          "speaker": 0
+        },
+        {
+          "word": "is",
+          "start": 3.42,
+          "end": 3.5,
+          "speaker": 0
+        },
+        {
+          "word": "742.",
+          "start": 3.64,
+          "end": 4.52,
+          "speaker": 0
+        },
+        {
+          "word": "Did",
+          "start": 5.12,
+          "end": 5.259,
+          "speaker": 1
+        },
+        {
+          "word": "you",
+          "start": 5.28,
+          "end": 5.4,
+          "speaker": 1
+        },
+        {
+          "word": "say",
+          "start": 5.44,
+          "end": 5.6,
+          "speaker": 1
+        },
+        {
+          "word": "Thursday?",
+          "start": 5.76,
+          "end": 6.24,
+          "speaker": 1
+        },
+        {
+          "word": "I",
+          "start": 6.52,
+          "end": 6.6,
+          "speaker": 1
+        },
+        {
+          "word": "thought",
+          "start": 6.72,
+          "end": 6.9,
+          "speaker": 1
+        },
+        {
+          "word": "our",
+          "start": 6.96,
+          "end": 7.12,
+          "speaker": 1
+        },
+        {
+          "word": "meeting",
+          "start": 7.24,
+          "end": 7.48,
+          "speaker": 1
+        },
+        {
+          "word": "was",
+          "start": 7.56,
+          "end": 7.659,
+          "speaker": 1
+        },
+        {
+          "word": "on",
+          "start": 7.72,
+          "end": 7.82,
+          "speaker": 1
+        },
+        {
+          "word": "Friday",
+          "start": 7.96,
+          "end": 8.24,
+          "speaker": 1
+        },
+        {
+          "word": "at",
+          "start": 8.32,
+          "end": 8.4,
+          "speaker": 1
+        },
+        {
+          "word": "half",
+          "start": 8.56,
+          "end": 8.759,
+          "speaker": 1
+        },
+        {
+          "word": "past",
+          "start": 8.88,
+          "end": 9.12,
+          "speaker": 1
+        },
+        {
+          "word": "9.",
+          "start": 9.24,
+          "end": 9.599,
+          "speaker": 1
+        },
+        {
+          "word": "No,",
+          "start": 10.24,
+          "end": 10.519,
+          "speaker": 0
+        },
+        {
+          "word": "Thursday",
+          "start": 10.88,
+          "end": 11.2,
+          "speaker": 0
+        },
+        {
+          "word": "at",
+          "start": 11.24,
+          "end": 11.32,
+          "speaker": 0
+        },
+        {
+          "word": "10:15.",
+          "start": 11.44,
+          "end": 12.2,
+          "speaker": 0
+        },
+        {
+          "word": "Please",
+          "start": 12.52,
+          "end": 12.72,
+          "speaker": 0
+        },
+        {
+          "word": "bring",
+          "start": 12.84,
+          "end": 12.98,
+          "speaker": 0
+        },
+        {
+          "word": "two",
+          "start": 13.08,
+          "end": 13.2,
+          "speaker": 0
+        },
+        {
+          "word": "notebooks",
+          "start": 13.32,
+          "end": 13.7,
+          "speaker": 0
+        },
+        {
+          "word": "and",
+          "start": 13.76,
+          "end": 13.859,
+          "speaker": 0
+        },
+        {
+          "word": "a",
+          "start": 13.9,
+          "end": 13.939,
+          "speaker": 0
+        },
+        {
+          "word": "green",
+          "start": 14.04,
+          "end": 14.239,
+          "speaker": 0
+        },
+        {
+          "word": "pen.",
+          "start": 14.4,
+          "end": 14.64,
+          "speaker": 0
+        },
+        {
+          "word": "All",
+          "start": 15.24,
+          "end": 15.359,
+          "speaker": 1
+        },
+        {
+          "word": "right.",
+          "start": 15.44,
+          "end": 15.76,
+          "speaker": 1
+        },
+        {
+          "word": "I",
+          "start": 16.04,
+          "end": 16.12,
+          "speaker": 1
+        },
+        {
+          "word": "will",
+          "start": 16.16,
+          "end": 16.32,
+          "speaker": 1
+        },
+        {
+          "word": "arrive",
+          "start": 16.4,
+          "end": 16.66,
+          "speaker": 1
+        },
+        {
+          "word": "15",
+          "start": 16.8,
+          "end": 16.92,
+          "speaker": 1
+        },
+        {
+          "word": "minutes",
+          "start": 17.24,
+          "end": 17.479,
+          "speaker": 1
+        },
+        {
+          "word": "early.",
+          "start": 17.56,
+          "end": 17.92,
+          "speaker": 1
+        },
+        {
+          "word": "See",
+          "start": 18.28,
+          "end": 18.4,
+          "speaker": 1
+        },
+        {
+          "word": "you",
+          "start": 18.44,
+          "end": 18.559,
+          "speaker": 1
+        },
+        {
+          "word": "there.",
+          "start": 18.64,
+          "end": 18.96,
+          "speaker": 1
+        }
+      ]
+    },
+    "wer": 0.12962962962962962,
+    "emptyText": false,
+    "wordCount": 51,
+    "speakers": [
+      "0",
+      "1"
+    ],
+    "invalidWordRanges": 0
+  },
+  {
+    "model": "microsoft/mai-transcribe-2",
+    "fixture": "vietnamese.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 3.539,
+    "generationId": "gen-stt-1788850153-PnlHrZEddZKBsgZHCbEv",
+    "response": {
+      "text": "Hôm nay là thứ Năm, tôi đặt một phòng màu xanh cho cuộc họp lúc 9 giờ 30, xin hãy mang theo hai quyển vở và một chiếc bút.",
+      "usage": {
+        "seconds": 10,
+        "cost": 0.0002777777777777778
+      },
+      "language": "vi",
+      "duration": 9.17,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 9.166,
+          "text": "Hôm nay là thứ Năm, tôi đặt một phòng màu xanh cho cuộc họp lúc 9 giờ 30, xin hãy mang theo hai quyển vở và một chiếc bút."
+        }
+      ],
+      "words": [
+        {
+          "word": "Hôm",
+          "start": 0.16,
+          "end": 0.299
+        },
+        {
+          "word": "nay",
+          "start": 0.4,
+          "end": 0.56
+        },
+        {
+          "word": "là",
+          "start": 0.68,
+          "end": 0.8
+        },
+        {
+          "word": "thứ",
+          "start": 0.92,
+          "end": 1.04
+        },
+        {
+          "word": "Năm,",
+          "start": 1.2,
+          "end": 1.44
+        },
+        {
+          "word": "tôi",
+          "start": 1.76,
+          "end": 1.919
+        },
+        {
+          "word": "đặt",
+          "start": 2,
+          "end": 2.16
+        },
+        {
+          "word": "một",
+          "start": 2.28,
+          "end": 2.399
+        },
+        {
+          "word": "phòng",
+          "start": 2.52,
+          "end": 2.7
+        },
+        {
+          "word": "màu",
+          "start": 2.8,
+          "end": 2.959
+        },
+        {
+          "word": "xanh",
+          "start": 3.04,
+          "end": 3.26
+        },
+        {
+          "word": "cho",
+          "start": 3.36,
+          "end": 3.48
+        },
+        {
+          "word": "cuộc",
+          "start": 3.64,
+          "end": 3.8
+        },
+        {
+          "word": "họp",
+          "start": 3.88,
+          "end": 4.08
+        },
+        {
+          "word": "lúc",
+          "start": 4.2,
+          "end": 4.32
+        },
+        {
+          "word": "9",
+          "start": 4.48,
+          "end": 4.56
+        },
+        {
+          "word": "giờ",
+          "start": 4.72,
+          "end": 4.84
+        },
+        {
+          "word": "30,",
+          "start": 5.04,
+          "end": 5.56
+        },
+        {
+          "word": "xin",
+          "start": 5.92,
+          "end": 6.1
+        },
+        {
+          "word": "hãy",
+          "start": 6.24,
+          "end": 6.379
+        },
+        {
+          "word": "mang",
+          "start": 6.52,
+          "end": 6.659
+        },
+        {
+          "word": "theo",
+          "start": 6.76,
+          "end": 6.92
+        },
+        {
+          "word": "hai",
+          "start": 7.08,
+          "end": 7.24
+        },
+        {
+          "word": "quyển",
+          "start": 7.36,
+          "end": 7.56
+        },
+        {
+          "word": "vở",
+          "start": 7.64,
+          "end": 7.759
+        },
+        {
+          "word": "và",
+          "start": 7.92,
+          "end": 8.04
+        },
+        {
+          "word": "một",
+          "start": 8.2,
+          "end": 8.32
+        },
+        {
+          "word": "chiếc",
+          "start": 8.4,
+          "end": 8.599
+        },
+        {
+          "word": "bút.",
+          "start": 8.72,
+          "end": 9.159
+        }
+      ]
+    },
+    "wer": 0.1,
+    "emptyText": false,
+    "wordCount": 29,
+    "speakers": [],
+    "invalidWordRanges": 0
+  },
+  {
+    "model": "microsoft/mai-transcribe-2",
+    "fixture": "silence.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 2.512,
+    "generationId": "gen-stt-1788850157-sMzpT8IHQlR9nEcZEJp7",
+    "response": {
+      "text": "",
+      "usage": {
+        "seconds": 3,
+        "cost": 8.333333333333333e-05
+      },
+      "language": "en",
+      "duration": 3,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 3,
+          "text": ""
+        }
+      ]
+    },
+    "wer": null,
+    "emptyText": true,
+    "wordCount": 0,
+    "speakers": [],
+    "invalidWordRanges": 0
+  },
+  {
+    "model": "deepgram/nova-3",
+    "fixture": "dialogue.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 2.553,
+    "generationId": "gen-stt-1788850158-Xt5bFhqRr6DS78Yyu3dw",
+    "response": {
+      "text": "Well, I booked the blue room for Thursday. The code is seven four two. Did you say Thursday? I thought our meeting was on Friday at half past nine. No. Thursday at ten fifteen. Please bring two notebooks and a green pen. Alright. I will arrive fifteen minutes early. See you there.",
+      "usage": {
+        "seconds": 19.464937,
+        "cost": 0.0013949871516666667
+      },
+      "language": "en",
+      "duration": 19.464937,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 0.56,
+          "text": "Well,",
+          "speaker": 0
+        },
+        {
+          "id": 1,
+          "start": 0.96,
+          "end": 4.8,
+          "text": "I booked the blue room for Thursday. The code is seven four two.",
+          "speaker": 0
+        },
+        {
+          "id": 2,
+          "start": 5.04,
+          "end": 6.4,
+          "text": "Did you say Thursday?",
+          "speaker": 1
+        },
+        {
+          "id": 3,
+          "start": 6.48,
+          "end": 9.5199995,
+          "text": "I thought our meeting was on Friday at half past nine.",
+          "speaker": 1
+        },
+        {
+          "id": 4,
+          "start": 10.059875,
+          "end": 14.939875,
+          "text": "No. Thursday at ten fifteen. Please bring two notebooks and a green pen.",
+          "speaker": 0
+        },
+        {
+          "id": 5,
+          "start": 15.179874,
+          "end": 18.859875,
+          "text": "Alright. I will arrive fifteen minutes early. See you there.",
+          "speaker": 1
+        }
+      ],
+      "words": [
+        {
+          "word": "Well,",
+          "start": 0,
+          "end": 0.56,
+          "speaker": 0
+        },
+        {
+          "word": "I",
+          "start": 0.96,
+          "end": 1.1999999,
+          "speaker": 0
+        },
+        {
+          "word": "booked",
+          "start": 1.1999999,
+          "end": 1.4399999,
+          "speaker": 0
+        },
+        {
+          "word": "the",
+          "start": 1.4399999,
+          "end": 1.5999999,
+          "speaker": 0
+        },
+        {
+          "word": "blue",
+          "start": 1.5999999,
+          "end": 1.8399999,
+          "speaker": 0
+        },
+        {
+          "word": "room",
+          "start": 1.8399999,
+          "end": 2.08,
+          "speaker": 0
+        },
+        {
+          "word": "for",
+          "start": 2.08,
+          "end": 2.32,
+          "speaker": 0
+        },
+        {
+          "word": "Thursday.",
+          "start": 2.32,
+          "end": 2.9599998,
+          "speaker": 0
+        },
+        {
+          "word": "The",
+          "start": 2.96,
+          "end": 3.1999998,
+          "speaker": 0
+        },
+        {
+          "word": "code",
+          "start": 3.1999998,
+          "end": 3.4399998,
+          "speaker": 0
+        },
+        {
+          "word": "is",
+          "start": 3.4399998,
+          "end": 3.6799998,
+          "speaker": 0
+        },
+        {
+          "word": "seven",
+          "start": 3.6799998,
+          "end": 3.9199998,
+          "speaker": 0
+        },
+        {
+          "word": "four",
+          "start": 3.9199998,
+          "end": 4.16,
+          "speaker": 0
+        },
+        {
+          "word": "two.",
+          "start": 4.16,
+          "end": 4.8,
+          "speaker": 0
+        },
+        {
+          "word": "Did",
+          "start": 5.04,
+          "end": 5.2799997,
+          "speaker": 1
+        },
+        {
+          "word": "you",
+          "start": 5.2799997,
+          "end": 5.44,
+          "speaker": 1
+        },
+        {
+          "word": "say",
+          "start": 5.44,
+          "end": 5.68,
+          "speaker": 1
+        },
+        {
+          "word": "Thursday?",
+          "start": 5.68,
+          "end": 6.4,
+          "speaker": 1
+        },
+        {
+          "word": "I",
+          "start": 6.48,
+          "end": 6.64,
+          "speaker": 1
+        },
+        {
+          "word": "thought",
+          "start": 6.64,
+          "end": 6.8799996,
+          "speaker": 1
+        },
+        {
+          "word": "our",
+          "start": 6.8799996,
+          "end": 7.2,
+          "speaker": 1
+        },
+        {
+          "word": "meeting",
+          "start": 7.2,
+          "end": 7.52,
+          "speaker": 1
+        },
+        {
+          "word": "was",
+          "start": 7.52,
+          "end": 7.68,
+          "speaker": 1
+        },
+        {
+          "word": "on",
+          "start": 7.68,
+          "end": 7.9199996,
+          "speaker": 1
+        },
+        {
+          "word": "Friday",
+          "start": 7.9199996,
+          "end": 8.24,
+          "speaker": 1
+        },
+        {
+          "word": "at",
+          "start": 8.24,
+          "end": 8.48,
+          "speaker": 1
+        },
+        {
+          "word": "half",
+          "start": 8.48,
+          "end": 8.8,
+          "speaker": 1
+        },
+        {
+          "word": "past",
+          "start": 8.8,
+          "end": 9.12,
+          "speaker": 1
+        },
+        {
+          "word": "nine.",
+          "start": 9.12,
+          "end": 9.5199995,
+          "speaker": 1
+        },
+        {
+          "word": "No.",
+          "start": 10.059875,
+          "end": 10.699875,
+          "speaker": 0
+        },
+        {
+          "word": "Thursday",
+          "start": 10.699875,
+          "end": 11.179874,
+          "speaker": 0
+        },
+        {
+          "word": "at",
+          "start": 11.179874,
+          "end": 11.419874,
+          "speaker": 0
+        },
+        {
+          "word": "ten",
+          "start": 11.419874,
+          "end": 11.659875,
+          "speaker": 0
+        },
+        {
+          "word": "fifteen.",
+          "start": 11.659875,
+          "end": 12.299875,
+          "speaker": 0
+        },
+        {
+          "word": "Please",
+          "start": 12.299875,
+          "end": 12.779875,
+          "speaker": 0
+        },
+        {
+          "word": "bring",
+          "start": 12.779875,
+          "end": 13.019875,
+          "speaker": 0
+        },
+        {
+          "word": "two",
+          "start": 13.019875,
+          "end": 13.259874,
+          "speaker": 0
+        },
+        {
+          "word": "notebooks",
+          "start": 13.259874,
+          "end": 13.739875,
+          "speaker": 0
+        },
+        {
+          "word": "and",
+          "start": 13.739875,
+          "end": 13.899875,
+          "speaker": 0
+        },
+        {
+          "word": "a",
+          "start": 13.899875,
+          "end": 14.059875,
+          "speaker": 0
+        },
+        {
+          "word": "green",
+          "start": 14.059875,
+          "end": 14.299875,
+          "speaker": 0
+        },
+        {
+          "word": "pen.",
+          "start": 14.299875,
+          "end": 14.939875,
+          "speaker": 0
+        },
+        {
+          "word": "Alright.",
+          "start": 15.179874,
+          "end": 15.899875,
+          "speaker": 1
+        },
+        {
+          "word": "I",
+          "start": 15.899875,
+          "end": 16.139874,
+          "speaker": 1
+        },
+        {
+          "word": "will",
+          "start": 16.139874,
+          "end": 16.379875,
+          "speaker": 1
+        },
+        {
+          "word": "arrive",
+          "start": 16.379875,
+          "end": 16.699875,
+          "speaker": 1
+        },
+        {
+          "word": "fifteen",
+          "start": 16.699875,
+          "end": 17.179874,
+          "speaker": 1
+        },
+        {
+          "word": "minutes",
+          "start": 17.179874,
+          "end": 17.499874,
+          "speaker": 1
+        },
+        {
+          "word": "early.",
+          "start": 17.499874,
+          "end": 18.139874,
+          "speaker": 1
+        },
+        {
+          "word": "See",
+          "start": 18.139874,
+          "end": 18.459873,
+          "speaker": 1
+        },
+        {
+          "word": "you",
+          "start": 18.459873,
+          "end": 18.619875,
+          "speaker": 1
+        },
+        {
+          "word": "there.",
+          "start": 18.619875,
+          "end": 18.859875,
+          "speaker": 1
+        }
+      ]
+    },
+    "wer": 0.05555555555555555,
+    "emptyText": false,
+    "wordCount": 52,
+    "speakers": [
+      "0",
+      "1"
+    ],
+    "invalidWordRanges": 0
+  },
+  {
+    "model": "deepgram/nova-3",
+    "fixture": "vietnamese.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 1.864,
+    "generationId": "gen-stt-1788850159-vUxozK3EpeDfS29nbM6E",
+    "response": {
+      "text": "",
+      "usage": {
+        "seconds": 9.166813,
+        "cost": 0.0006569549316666666
+      },
+      "language": "vi",
+      "duration": 9.166813,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 9.166813,
+          "text": ""
+        }
+      ],
+      "words": []
+    },
+    "wer": 1.0,
+    "emptyText": true,
+    "wordCount": 0,
+    "speakers": [],
+    "invalidWordRanges": 0
+  },
+  {
+    "model": "deepgram/nova-3",
+    "fixture": "silence.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 2.441,
+    "generationId": "gen-stt-1788850161-LziT89abGYiR8SesokU2",
+    "response": {
+      "text": "",
+      "usage": {
+        "seconds": 3,
+        "cost": 0.000215
+      },
+      "language": "en",
+      "duration": 3,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 3,
+          "text": ""
+        }
+      ],
+      "words": []
+    },
+    "wer": null,
+    "emptyText": true,
+    "wordCount": 0,
+    "speakers": [],
+    "invalidWordRanges": 0
+  },
+  {
+    "model": "x-ai/grok-stt-1.0",
+    "fixture": "dialogue.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 2.106,
+    "generationId": "gen-stt-1788850161-z0PbEz31lx3dwz7O3Pih",
+    "response": {
+      "text": "Well I booked the blue room for Thursday, the code is seven four two. Did you say Thursday? I thought our meeting was on Friday at half past nine. No, Thursday at ten fifteen. Please bring two notebooks and a green pen. All right, I will arrive fifteen minutes early. See you there.",
+      "usage": {
+        "seconds": 19.465,
+        "cost": 0.0005406944444444444
+      },
+      "language": "en",
+      "duration": 19.465,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 19.465,
+          "text": "Well I booked the blue room for Thursday, the code is seven four two. Did you say Thursday? I thought our meeting was on Friday at half past nine. No, Thursday at ten fifteen. Please bring two notebooks and a green pen. All right, I will arrive fifteen minutes early. See you there."
+        }
+      ],
+      "words": [
+        {
+          "word": "Well,",
+          "start": 0.04,
+          "end": 0.28
+        },
+        {
+          "word": "I",
+          "start": 1.161,
+          "end": 1.182
+        },
+        {
+          "word": "booked",
+          "start": 1.222,
+          "end": 1.442
+        },
+        {
+          "word": "the",
+          "start": 1.442,
+          "end": 1.522
+        },
+        {
+          "word": "blue",
+          "start": 1.582,
+          "end": 1.762
+        },
+        {
+          "word": "room",
+          "start": 1.802,
+          "end": 2.003
+        },
+        {
+          "word": "for",
+          "start": 2.063,
+          "end": 2.183
+        },
+        {
+          "word": "Thursday,",
+          "start": 2.223,
+          "end": 2.703
+        },
+        {
+          "word": "the",
+          "start": 3.024,
+          "end": 3.104
+        },
+        {
+          "word": "code",
+          "start": 3.164,
+          "end": 3.424
+        },
+        {
+          "word": "is",
+          "start": 3.444,
+          "end": 3.525
+        },
+        {
+          "word": "seven",
+          "start": 3.565,
+          "end": 3.845
+        },
+        {
+          "word": "four",
+          "start": 3.925,
+          "end": 4.105
+        },
+        {
+          "word": "two.",
+          "start": 4.185,
+          "end": 4.406
+        },
+        {
+          "word": "Did",
+          "start": 5.107,
+          "end": 5.267
+        },
+        {
+          "word": "you",
+          "start": 5.287,
+          "end": 5.367
+        },
+        {
+          "word": "say",
+          "start": 5.447,
+          "end": 5.607
+        },
+        {
+          "word": "Thursday?",
+          "start": 5.687,
+          "end": 6.168
+        },
+        {
+          "word": "I",
+          "start": 6.568,
+          "end": 6.588
+        },
+        {
+          "word": "thought",
+          "start": 6.669,
+          "end": 6.889
+        },
+        {
+          "word": "our",
+          "start": 6.989,
+          "end": 7.129
+        },
+        {
+          "word": "meeting",
+          "start": 7.189,
+          "end": 7.51
+        },
+        {
+          "word": "was",
+          "start": 7.53,
+          "end": 7.65
+        },
+        {
+          "word": "on",
+          "start": 7.71,
+          "end": 7.81
+        },
+        {
+          "word": "Friday",
+          "start": 7.89,
+          "end": 8.251
+        },
+        {
+          "word": "at",
+          "start": 8.311,
+          "end": 8.411
+        },
+        {
+          "word": "half",
+          "start": 8.471,
+          "end": 8.691
+        },
+        {
+          "word": "past",
+          "start": 8.791,
+          "end": 9.112
+        },
+        {
+          "word": "nine.",
+          "start": 9.192,
+          "end": 9.532
+        },
+        {
+          "word": "No,",
+          "start": 10.193,
+          "end": 10.293
+        },
+        {
+          "word": "Thursday",
+          "start": 10.794,
+          "end": 11.214
+        },
+        {
+          "word": "at",
+          "start": 11.254,
+          "end": 11.314
+        },
+        {
+          "word": "ten",
+          "start": 11.375,
+          "end": 11.555
+        },
+        {
+          "word": "fifteen.",
+          "start": 11.635,
+          "end": 12.136
+        },
+        {
+          "word": "Please",
+          "start": 12.456,
+          "end": 12.756
+        },
+        {
+          "word": "bring",
+          "start": 12.796,
+          "end": 13.017
+        },
+        {
+          "word": "two",
+          "start": 13.057,
+          "end": 13.197
+        },
+        {
+          "word": "notebooks",
+          "start": 13.257,
+          "end": 13.718
+        },
+        {
+          "word": "and",
+          "start": 13.778,
+          "end": 13.878
+        },
+        {
+          "word": "a",
+          "start": 13.918,
+          "end": 13.938
+        },
+        {
+          "word": "green",
+          "start": 13.978,
+          "end": 14.218
+        },
+        {
+          "word": "pen.",
+          "start": 14.278,
+          "end": 14.579
+        },
+        {
+          "word": "All",
+          "start": 15.24,
+          "end": 15.34
+        },
+        {
+          "word": "right,",
+          "start": 15.42,
+          "end": 15.74
+        },
+        {
+          "word": "I",
+          "start": 16.141,
+          "end": 16.161
+        },
+        {
+          "word": "will",
+          "start": 16.181,
+          "end": 16.321
+        },
+        {
+          "word": "arrive",
+          "start": 16.341,
+          "end": 16.681
+        },
+        {
+          "word": "fifteen",
+          "start": 16.741,
+          "end": 17.142
+        },
+        {
+          "word": "minutes",
+          "start": 17.202,
+          "end": 17.502
+        },
+        {
+          "word": "early.",
+          "start": 17.583,
+          "end": 17.783
+        },
+        {
+          "word": "See",
+          "start": 18.243,
+          "end": 18.424
+        },
+        {
+          "word": "you",
+          "start": 18.464,
+          "end": 18.564
+        },
+        {
+          "word": "there.",
+          "start": 18.604,
+          "end": 18.884
+        }
+      ]
+    },
+    "wer": 0.018518518518518517,
+    "emptyText": false,
+    "wordCount": 53,
+    "speakers": [],
+    "invalidWordRanges": 0
+  },
+  {
+    "model": "x-ai/grok-stt-1.0",
+    "fixture": "vietnamese.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 1.879,
+    "generationId": "gen-stt-1788850162-UqDhI2ESpmiQHSH4MSLG",
+    "response": {
+      "text": "Hôm nay là thứ năm, tôi đặt một phòng màu xanh cho cuộc họp lúc chín giờ ba mươi, xin hãy mang theo hai quyển vở và một chiếc bút.",
+      "usage": {
+        "seconds": 9.167,
+        "cost": 0.0002546388888888889
+      },
+      "language": "vi",
+      "duration": 9.167,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 9.167,
+          "text": "Hôm nay là thứ năm, tôi đặt một phòng màu xanh cho cuộc họp lúc chín giờ ba mươi, xin hãy mang theo hai quyển vở và một chiếc bút."
+        }
+      ],
+      "words": [
+        {
+          "word": "Hôm",
+          "start": 0.04,
+          "end": 0.26
+        },
+        {
+          "word": "nay",
+          "start": 0.36,
+          "end": 0.54
+        },
+        {
+          "word": "là",
+          "start": 0.62,
+          "end": 0.721
+        },
+        {
+          "word": "thứ",
+          "start": 0.861,
+          "end": 0.981
+        },
+        {
+          "word": "năm,",
+          "start": 1.121,
+          "end": 1.321
+        },
+        {
+          "word": "tôi",
+          "start": 1.701,
+          "end": 1.901
+        },
+        {
+          "word": "đặt",
+          "start": 1.961,
+          "end": 2.122
+        },
+        {
+          "word": "một",
+          "start": 2.202,
+          "end": 2.382
+        },
+        {
+          "word": "phòng",
+          "start": 2.462,
+          "end": 2.682
+        },
+        {
+          "word": "màu",
+          "start": 2.742,
+          "end": 2.902
+        },
+        {
+          "word": "xanh",
+          "start": 3.002,
+          "end": 3.222
+        },
+        {
+          "word": "cho",
+          "start": 3.322,
+          "end": 3.443
+        },
+        {
+          "word": "cuộc",
+          "start": 3.583,
+          "end": 3.783
+        },
+        {
+          "word": "họp",
+          "start": 3.863,
+          "end": 4.063
+        },
+        {
+          "word": "lúc",
+          "start": 4.163,
+          "end": 4.303
+        },
+        {
+          "word": "chín",
+          "start": 4.383,
+          "end": 4.603
+        },
+        {
+          "word": "giờ",
+          "start": 4.703,
+          "end": 4.804
+        },
+        {
+          "word": "ba",
+          "start": 4.964,
+          "end": 5.064
+        },
+        {
+          "word": "mươi,",
+          "start": 5.244,
+          "end": 5.504
+        },
+        {
+          "word": "xin",
+          "start": 5.884,
+          "end": 6.085
+        },
+        {
+          "word": "hãy",
+          "start": 6.165,
+          "end": 6.345
+        },
+        {
+          "word": "mang",
+          "start": 6.445,
+          "end": 6.665
+        },
+        {
+          "word": "theo",
+          "start": 6.725,
+          "end": 6.925
+        },
+        {
+          "word": "hai",
+          "start": 7.005,
+          "end": 7.205
+        },
+        {
+          "word": "quyển",
+          "start": 7.305,
+          "end": 7.526
+        },
+        {
+          "word": "vở",
+          "start": 7.606,
+          "end": 7.706
+        },
+        {
+          "word": "và",
+          "start": 7.866,
+          "end": 7.966
+        },
+        {
+          "word": "một",
+          "start": 8.146,
+          "end": 8.306
+        },
+        {
+          "word": "chiếc",
+          "start": 8.386,
+          "end": 8.606
+        },
+        {
+          "word": "bút.",
+          "start": 8.706,
+          "end": 8.947
+        }
+      ]
+    },
+    "wer": 0.0,
+    "emptyText": false,
+    "wordCount": 30,
+    "speakers": [],
+    "invalidWordRanges": 0
+  },
+  {
+    "model": "x-ai/grok-stt-1.0",
+    "fixture": "silence.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 0.82,
+    "generationId": "gen-stt-1788850163-fLf9lC4ikrRRmoW3CDv3",
+    "response": {
+      "text": "",
+      "usage": {
+        "seconds": 3,
+        "cost": 8.333333333333333e-05
+      },
+      "duration": 3,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 3,
+          "text": ""
+        }
+      ]
+    },
+    "wer": null,
+    "emptyText": true,
+    "wordCount": 0,
+    "speakers": [],
+    "invalidWordRanges": 0
+  },
+  {
+    "model": "openai/whisper-large-v3-turbo",
+    "fixture": "dialogue.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 2.616,
+    "generationId": "gen-stt-1788850165-W3E20Y4Y33SMYEJbO4YS",
+    "response": {
+      "text": " Well, um, I booked the blue room for Thursday. The code is 742.  Did you say Thursday? I thought our meeting was on Friday at half past nine.  No. Thursday at 10.15. Please bring two notebooks and a green pen.  Alright, I will arrive 15 minutes early. See you there.",
+      "usage": {
+        "seconds": 19.464,
+        "cost": 6.481512e-05
+      },
+      "task": "transcribe",
+      "language": "en",
+      "duration": 19.464,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0,
+          "end": 4.2,
+          "text": " Well, um, I booked the blue room for Thursday. The code is 742.",
+          "tokens": [
+            1042,
+            11,
+            1105,
+            11,
+            286,
+            26735,
+            264,
+            3344,
+            1808,
+            337,
+            10383,
+            13,
+            440,
+            3089,
+            307,
+            1614,
+            15628,
+            13
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.14650421693004317,
+          "compression_ratio": 0.9142857142857143,
+          "no_speech_prob": 0
+        },
+        {
+          "id": 0,
+          "seek": 4,
+          "start": 4.95,
+          "end": 9.47,
+          "text": " Did you say Thursday? I thought our meeting was on Friday at half past nine.",
+          "tokens": [
+            2589,
+            291,
+            584,
+            10383,
+            30,
+            286,
+            1194,
+            527,
+            3440,
+            390,
+            322,
+            6984,
+            412,
+            1922,
+            1791,
+            4949,
+            13
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.18841704282002816,
+          "compression_ratio": 0.9871794871794872,
+          "no_speech_prob": 0
+        },
+        {
+          "id": 0,
+          "seek": 10,
+          "start": 10.05,
+          "end": 14.55,
+          "text": " No. Thursday at 10.15. Please bring two notebooks and a green pen.",
+          "tokens": [
+            883,
+            13,
+            10383,
+            412,
+            1266,
+            13,
+            5211,
+            13,
+            2555,
+            1565,
+            732,
+            43782,
+            293,
+            257,
+            3092,
+            3435,
+            13
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.10550895300892942,
+          "compression_ratio": 0.9305555555555556,
+          "no_speech_prob": 0
+        },
+        {
+          "id": 0,
+          "seek": 15,
+          "start": 15.09,
+          "end": 18.85,
+          "text": " Alright, I will arrive 15 minutes early. See you there.",
+          "tokens": [
+            2798,
+            11,
+            286,
+            486,
+            8881,
+            2119,
+            2077,
+            2440,
+            13,
+            3008,
+            291,
+            456,
+            13
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.17290341278615717,
+          "compression_ratio": 0.875,
+          "no_speech_prob": 0
+        }
+      ],
+      "words": [
+        {
+          "word": " Well,",
+          "start": 0,
+          "end": 0.47999998927116394
+        },
+        {
+          "word": " um,",
+          "start": 0.47999998927116394,
+          "end": 0.9800000190734863
+        },
+        {
+          "word": " I",
+          "start": 0.9800000190734863,
+          "end": 1.1799999475479126
+        },
+        {
+          "word": " booked",
+          "start": 1.1799999475479126,
+          "end": 1.4199999570846558
+        },
+        {
+          "word": " the",
+          "start": 1.4199999570846558,
+          "end": 1.5399999618530273
+        },
+        {
+          "word": " blue",
+          "start": 1.5399999618530273,
+          "end": 1.7200000286102295
+        },
+        {
+          "word": " room",
+          "start": 1.7200000286102295,
+          "end": 2
+        },
+        {
+          "word": " for",
+          "start": 2,
+          "end": 2.180000066757202
+        },
+        {
+          "word": " Thursday.",
+          "start": 2.180000066757202,
+          "end": 2.6600000858306885
+        },
+        {
+          "word": " The",
+          "start": 2.9000000953674316,
+          "end": 3.119999885559082
+        },
+        {
+          "word": " code",
+          "start": 3.119999885559082,
+          "end": 3.4000000953674316
+        },
+        {
+          "word": " is",
+          "start": 3.4000000953674316,
+          "end": 3.559999942779541
+        },
+        {
+          "word": " 742.",
+          "start": 3.559999942779541,
+          "end": 4.039999961853027
+        },
+        {
+          "word": " Did",
+          "start": 5.009999998658896,
+          "end": 5.230000001192093
+        },
+        {
+          "word": " you",
+          "start": 5.230000001192093,
+          "end": 5.369999986886978
+        },
+        {
+          "word": " say",
+          "start": 5.369999986886978,
+          "end": 5.589999985694885
+        },
+        {
+          "word": " Thursday?",
+          "start": 5.589999985694885,
+          "end": 6.109999966621399
+        },
+        {
+          "word": " I",
+          "start": 6.329999995231629,
+          "end": 6.589999985694885
+        },
+        {
+          "word": " thought",
+          "start": 6.589999985694885,
+          "end": 6.829999995231629
+        },
+        {
+          "word": " our",
+          "start": 6.829999995231629,
+          "end": 7.069999885559082
+        },
+        {
+          "word": " meeting",
+          "start": 7.069999885559082,
+          "end": 7.390000057220459
+        },
+        {
+          "word": " was",
+          "start": 7.390000057220459,
+          "end": 7.650000047683716
+        },
+        {
+          "word": " on",
+          "start": 7.650000047683716,
+          "end": 7.809999895095825
+        },
+        {
+          "word": " Friday",
+          "start": 7.809999895095825,
+          "end": 8.130000066757201
+        },
+        {
+          "word": " at",
+          "start": 8.130000066757201,
+          "end": 8.430000019073486
+        },
+        {
+          "word": " half",
+          "start": 8.430000019073486,
+          "end": 8.670000028610229
+        },
+        {
+          "word": " past",
+          "start": 8.670000028610229,
+          "end": 9.069999885559081
+        },
+        {
+          "word": " nine.",
+          "start": 9.069999885559081,
+          "end": 9.589999866485595
+        },
+        {
+          "word": " No.",
+          "start": 10.05,
+          "end": 10.650000023841859
+        },
+        {
+          "word": " Thursday",
+          "start": 10.650000023841859,
+          "end": 11.089999961853028
+        },
+        {
+          "word": " at",
+          "start": 11.089999961853028,
+          "end": 11.370000052452088
+        },
+        {
+          "word": " 10",
+          "start": 11.370000052452088,
+          "end": 11.530000019073487
+        },
+        {
+          "word": ".15.",
+          "start": 11.530000019073487,
+          "end": 12.090000200271607
+        },
+        {
+          "word": " Please",
+          "start": 12.309999990463258,
+          "end": 12.690000104904176
+        },
+        {
+          "word": " bring",
+          "start": 12.690000104904176,
+          "end": 12.930000114440919
+        },
+        {
+          "word": " two",
+          "start": 12.930000114440919,
+          "end": 13.169999885559083
+        },
+        {
+          "word": " notebooks",
+          "start": 13.169999885559083,
+          "end": 13.569999980926514
+        },
+        {
+          "word": " and",
+          "start": 13.569999980926514,
+          "end": 13.849999952316285
+        },
+        {
+          "word": " a",
+          "start": 13.849999952316285,
+          "end": 13.950000095367432
+        },
+        {
+          "word": " green",
+          "start": 13.950000095367432,
+          "end": 14.169999885559083
+        },
+        {
+          "word": " pen.",
+          "start": 14.169999885559083,
+          "end": 14.730000066757203
+        },
+        {
+          "word": " Alright,",
+          "start": 15.12999999910593,
+          "end": 15.909999992847442
+        },
+        {
+          "word": " I",
+          "start": 15.909999992847442,
+          "end": 16.109999980926514
+        },
+        {
+          "word": " will",
+          "start": 16.109999980926514,
+          "end": 16.290000047683716
+        },
+        {
+          "word": " arrive",
+          "start": 16.290000047683716,
+          "end": 16.629999961853027
+        },
+        {
+          "word": " 15",
+          "start": 16.629999961853027,
+          "end": 17.050000038146973
+        },
+        {
+          "word": " minutes",
+          "start": 17.050000038146973,
+          "end": 17.409999933242798
+        },
+        {
+          "word": " early.",
+          "start": 17.409999933242798,
+          "end": 18.070000019073486
+        },
+        {
+          "word": " See",
+          "start": 18.070000019073486,
+          "end": 18.36999997138977
+        },
+        {
+          "word": " you",
+          "start": 18.36999997138977,
+          "end": 18.53000005722046
+        },
+        {
+          "word": " there.",
+          "start": 18.53000005722046,
+          "end": 19.109999980926514
+        }
+      ]
+    },
+    "wer": 0.14814814814814814,
+    "emptyText": false,
+    "wordCount": 51,
+    "speakers": [],
+    "invalidWordRanges": 0
+  },
+  {
+    "model": "openai/whisper-large-v3-turbo",
+    "fixture": "vietnamese.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 1.607,
+    "generationId": "gen-stt-1788850164-yxXbzEyDP44m8NQm5rCV",
+    "response": {
+      "text": " Hôm nay là thứ năm, tôi đặt một phòng màu xanh cho cuộc họp lúc 9h30, xin hãy mang theo hai quyển vở và một chiếc bút.",
+      "usage": {
+        "seconds": 9.166,
+        "cost": 3.052278e-05
+      },
+      "task": "transcribe",
+      "language": "vi",
+      "duration": 9.166,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0,
+          "end": 9,
+          "text": " Hôm nay là thứ năm, tôi đặt một phòng màu xanh cho cuộc họp lúc 9h30, xin hãy mang theo hai quyển vở và một chiếc bút.",
+          "tokens": [
+            389,
+            25670,
+            34227,
+            3684,
+            47269,
+            38098,
+            11,
+            22336,
+            2934,
+            38248,
+            15486,
+            903,
+            36782,
+            13901,
+            84,
+            2031,
+            50214,
+            1586,
+            50138,
+            27700,
+            79,
+            287,
+            31585,
+            1722,
+            71,
+            3446,
+            11,
+            2031,
+            259,
+            276,
+            49205,
+            32432,
+            40594,
+            21822,
+            44088,
+            38197,
+            371,
+            13755,
+            10274,
+            15486,
+            13228,
+            6115,
+            66,
+            272,
+            32852,
+            13
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.07148293348313928,
+          "compression_ratio": 1.0422535211267605,
+          "no_speech_prob": 0
+        }
+      ],
+      "words": [
+        {
+          "word": " Hôm",
+          "start": 0,
+          "end": 0.30000001192092896
+        },
+        {
+          "word": " nay",
+          "start": 0.30000001192092896,
+          "end": 0.5400000214576721
+        },
+        {
+          "word": " là",
+          "start": 0.5400000214576721,
+          "end": 0.7799999713897705
+        },
+        {
+          "word": " thứ",
+          "start": 0.7799999713897705,
+          "end": 1.0199999809265137
+        },
+        {
+          "word": " năm,",
+          "start": 1.0199999809265137,
+          "end": 1.5800000429153442
+        },
+        {
+          "word": " tôi",
+          "start": 1.5800000429153442,
+          "end": 1.8799999952316284
+        },
+        {
+          "word": " đặt",
+          "start": 1.8799999952316284,
+          "end": 2.140000104904175
+        },
+        {
+          "word": " một",
+          "start": 2.140000104904175,
+          "end": 2.359999895095825
+        },
+        {
+          "word": " phòng",
+          "start": 2.359999895095825,
+          "end": 2.6600000858306885
+        },
+        {
+          "word": " màu",
+          "start": 2.6600000858306885,
+          "end": 2.9200000762939453
+        },
+        {
+          "word": " xanh",
+          "start": 2.9200000762939453,
+          "end": 3.200000047683716
+        },
+        {
+          "word": " cho",
+          "start": 3.200000047683716,
+          "end": 3.4800000190734863
+        },
+        {
+          "word": " cuộc",
+          "start": 3.4800000190734863,
+          "end": 3.740000009536743
+        },
+        {
+          "word": " họp",
+          "start": 3.740000009536743,
+          "end": 4.079999923706055
+        },
+        {
+          "word": " lúc",
+          "start": 4.079999923706055,
+          "end": 4.320000171661377
+        },
+        {
+          "word": " 9h30,",
+          "start": 4.320000171661377,
+          "end": 5.739999771118164
+        },
+        {
+          "word": " xin",
+          "start": 5.739999771118164,
+          "end": 6.079999923706055
+        },
+        {
+          "word": " hãy",
+          "start": 6.079999923706055,
+          "end": 6.360000133514404
+        },
+        {
+          "word": " mang",
+          "start": 6.360000133514404,
+          "end": 6.599999904632568
+        },
+        {
+          "word": " theo",
+          "start": 6.599999904632568,
+          "end": 6.900000095367432
+        },
+        {
+          "word": " hai",
+          "start": 6.900000095367432,
+          "end": 7.21999979019165
+        },
+        {
+          "word": " quyển",
+          "start": 7.21999979019165,
+          "end": 7.519999980926514
+        },
+        {
+          "word": " vở",
+          "start": 7.519999980926514,
+          "end": 7.78000020980835
+        },
+        {
+          "word": " và",
+          "start": 7.78000020980835,
+          "end": 8.020000457763672
+        },
+        {
+          "word": " một",
+          "start": 8.020000457763672,
+          "end": 8.300000190734863
+        },
+        {
+          "word": " chiếc",
+          "start": 8.300000190734863,
+          "end": 8.619999885559082
+        },
+        {
+          "word": " bút.",
+          "start": 8.619999885559082,
+          "end": 9.119999885559082
+        }
+      ]
+    },
+    "wer": 0.13333333333333333,
+    "emptyText": false,
+    "wordCount": 27,
+    "speakers": [],
+    "invalidWordRanges": 0
+  },
+  {
+    "model": "openai/whisper-large-v3-turbo",
+    "fixture": "silence.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 1.076,
+    "generationId": "gen-stt-1788850166-aWufaKBlIXS6v16iS3wz",
+    "response": {
+      "text": "",
+      "usage": {
+        "seconds": 3,
+        "cost": 9.99e-06
+      },
+      "task": "transcribe",
+      "language": "en",
+      "duration": 3,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0,
+          "end": 3,
+          "text": "",
+          "tokens": [],
+          "temperature": 0,
+          "avg_logprob": 0,
+          "compression_ratio": 0,
+          "no_speech_prob": 1
+        }
+      ]
+    },
+    "wer": null,
+    "emptyText": true,
+    "wordCount": 0,
+    "speakers": [],
+    "invalidWordRanges": 0
+  },
+  {
+    "model": "qwen/qwen3-asr-0.6b",
+    "fixture": "dialogue.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 1.745,
+    "generationId": "gen-stt-1788850167-3BxoOCzGvuKbIJZRBnCp",
+    "response": {
+      "text": "Well, um, I booked the blue room for Thursday. The code is seven four two. Did you say Thursday? I thought our meeting was on Friday at half past nine. No, Thursday at ten fifteen. Please bring two notebooks and a green pen. All right, I will arrive fifteen minutes early. See you there.",
+      "usage": {
+        "seconds": 19.465,
+        "cost": 6.481845e-05
+      },
+      "task": "transcribe",
+      "language": "english",
+      "duration": 19.465,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.5600000023841858,
+          "end": 18.959999084472656,
+          "text": "Well, um, I booked the blue room for Thursday. The code is seven four two. Did you say Thursday? I thought our meeting was on Friday at half past nine. No, Thursday at ten fifteen. Please bring two notebooks and a green pen. All right, I will arrive fifteen minutes early. See you there.",
+          "tokens": [
+            11528,
+            6364,
+            151704,
+            11395,
+            11,
+            4443,
+            11,
+            358,
+            32970,
+            279,
+            6303,
+            3054,
+            369,
+            7794,
+            13,
+            576,
+            2038,
+            374,
+            8094,
+            3040,
+            1378,
+            13,
+            14568,
+            498,
+            1977,
+            7794,
+            30,
+            358,
+            3381,
+            1039,
+            6438,
+            572,
+            389,
+            6602,
+            518,
+            4279,
+            3267,
+            11627,
+            13,
+            2308,
+            11,
+            7794,
+            518,
+            5779,
+            36655,
+            13,
+            5209,
+            4446,
+            1378,
+            78531,
+            323,
+            264,
+            6176,
+            5750,
+            13,
+            2009,
+            1290,
+            11,
+            358,
+            686,
+            17331,
+            36655,
+            4420,
+            4124,
+            13,
+            3496,
+            498,
+            1052,
+            13,
+            151645
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.012000000104308128,
+          "compression_ratio": 1.4717999696731567,
+          "no_speech_prob": 0
+        }
+      ],
+      "words": [
+        {
+          "word": "Well,",
+          "start": 0.5600000023841858,
+          "end": 0.5600000023841858
+        },
+        {
+          "word": "um,",
+          "start": 0.800000011920929,
+          "end": 0.8799999952316284
+        },
+        {
+          "word": "I",
+          "start": 1.0399999618530273,
+          "end": 1.2000000476837158
+        },
+        {
+          "word": "booked",
+          "start": 1.2000000476837158,
+          "end": 1.440000057220459
+        },
+        {
+          "word": "the",
+          "start": 1.440000057220459,
+          "end": 1.5199999809265137
+        },
+        {
+          "word": "blue",
+          "start": 1.5199999809265137,
+          "end": 1.7599999904632568
+        },
+        {
+          "word": "room",
+          "start": 1.7599999904632568,
+          "end": 2
+        },
+        {
+          "word": "for",
+          "start": 2,
+          "end": 2.1600000858306885
+        },
+        {
+          "word": "Thursday.",
+          "start": 3.0399999618530273,
+          "end": 3.0399999618530273
+        },
+        {
+          "word": "The",
+          "start": 3.0399999618530273,
+          "end": 3.119999885559082
+        },
+        {
+          "word": "code",
+          "start": 3.119999885559082,
+          "end": 3.440000057220459
+        },
+        {
+          "word": "is",
+          "start": 3.440000057220459,
+          "end": 3.5199999809265137
+        },
+        {
+          "word": "seven",
+          "start": 3.5199999809265137,
+          "end": 3.8399999141693115
+        },
+        {
+          "word": "four",
+          "start": 3.8399999141693115,
+          "end": 4.159999847412109
+        },
+        {
+          "word": "two.",
+          "start": 4.320000171661377,
+          "end": 4.480000019073486
+        },
+        {
+          "word": "Did",
+          "start": 5.039999961853027,
+          "end": 5.28000020980835
+        },
+        {
+          "word": "you",
+          "start": 5.28000020980835,
+          "end": 5.360000133514404
+        },
+        {
+          "word": "say",
+          "start": 5.360000133514404,
+          "end": 5.599999904632568
+        },
+        {
+          "word": "Thursday?",
+          "start": 6,
+          "end": 6.239999771118164
+        },
+        {
+          "word": "I",
+          "start": 6.480000019073486,
+          "end": 6.559999942779541
+        },
+        {
+          "word": "thought",
+          "start": 6.559999942779541,
+          "end": 6.880000114440918
+        },
+        {
+          "word": "our",
+          "start": 6.880000114440918,
+          "end": 7.119999885559082
+        },
+        {
+          "word": "meeting",
+          "start": 7.119999885559082,
+          "end": 7.519999980926514
+        },
+        {
+          "word": "was",
+          "start": 7.519999980926514,
+          "end": 7.679999828338623
+        },
+        {
+          "word": "on",
+          "start": 7.679999828338623,
+          "end": 7.840000152587891
+        },
+        {
+          "word": "Friday",
+          "start": 7.840000152587891,
+          "end": 8.239999771118164
+        },
+        {
+          "word": "at",
+          "start": 8.239999771118164,
+          "end": 8.399999618530273
+        },
+        {
+          "word": "half",
+          "start": 8.399999618530273,
+          "end": 8.720000267028809
+        },
+        {
+          "word": "past",
+          "start": 8.800000190734863,
+          "end": 9.119999885559082
+        },
+        {
+          "word": "nine.",
+          "start": 9.600000381469727,
+          "end": 9.600000381469727
+        },
+        {
+          "word": "No,",
+          "start": 10.5600004196167,
+          "end": 10.5600004196167
+        },
+        {
+          "word": "Thursday",
+          "start": 10.720000267028809,
+          "end": 11.199999809265137
+        },
+        {
+          "word": "at",
+          "start": 11.199999809265137,
+          "end": 11.359999656677246
+        },
+        {
+          "word": "ten",
+          "start": 11.359999656677246,
+          "end": 11.600000381469727
+        },
+        {
+          "word": "fifteen.",
+          "start": 12.15999984741211,
+          "end": 12.239999771118164
+        },
+        {
+          "word": "Please",
+          "start": 12.479999542236328,
+          "end": 12.720000267028809
+        },
+        {
+          "word": "bring",
+          "start": 12.720000267028809,
+          "end": 12.960000038146973
+        },
+        {
+          "word": "two",
+          "start": 12.960000038146973,
+          "end": 13.199999809265137
+        },
+        {
+          "word": "notebooks",
+          "start": 13.199999809265137,
+          "end": 13.760000228881836
+        },
+        {
+          "word": "and",
+          "start": 13.760000228881836,
+          "end": 13.84000015258789
+        },
+        {
+          "word": "a",
+          "start": 13.84000015258789,
+          "end": 13.920000076293945
+        },
+        {
+          "word": "green",
+          "start": 13.920000076293945,
+          "end": 14.239999771118164
+        },
+        {
+          "word": "pen.",
+          "start": 14.5600004196167,
+          "end": 14.640000343322754
+        },
+        {
+          "word": "All",
+          "start": 15.199999809265137,
+          "end": 15.359999656677246
+        },
+        {
+          "word": "right,",
+          "start": 15.680000305175781,
+          "end": 15.680000305175781
+        },
+        {
+          "word": "I",
+          "start": 16,
+          "end": 16.15999984741211
+        },
+        {
+          "word": "will",
+          "start": 16.15999984741211,
+          "end": 16.31999969482422
+        },
+        {
+          "word": "arrive",
+          "start": 16.31999969482422,
+          "end": 16.639999389648438
+        },
+        {
+          "word": "fifteen",
+          "start": 16.639999389648438,
+          "end": 17.1200008392334
+        },
+        {
+          "word": "minutes",
+          "start": 17.1200008392334,
+          "end": 17.520000457763672
+        },
+        {
+          "word": "early.",
+          "start": 17.84000015258789,
+          "end": 17.920000076293945
+        },
+        {
+          "word": "See",
+          "start": 18.079999923706055,
+          "end": 18.399999618530273
+        },
+        {
+          "word": "you",
+          "start": 18.399999618530273,
+          "end": 18.559999465942383
+        },
+        {
+          "word": "there.",
+          "start": 18.959999084472656,
+          "end": 18.959999084472656
+        }
+      ]
+    },
+    "wer": 0.0,
+    "emptyText": false,
+    "wordCount": 54,
+    "speakers": [],
+    "invalidWordRanges": 0
+  },
+  {
+    "model": "qwen/qwen3-asr-0.6b",
+    "fixture": "vietnamese.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 1.781,
+    "generationId": "gen-stt-1788850167-tXpwKG4r5qAdimwiYhS8",
+    "response": {
+      "text": "hôm nay là thứ năm tôi đặt một phòng màu xanh cho cuộc họp lúc chín giờ ba mươi xin hãy mang theo hai quyển vở và một chiếc boots",
+      "usage": {
+        "seconds": 9.167,
+        "cost": 3.052611e-05
+      },
+      "task": "transcribe",
+      "language": "vietnamese",
+      "duration": 9.167,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0,
+          "end": 9.119999885559082,
+          "text": "hôm nay là thứ năm tôi đặt một phòng màu xanh cho cuộc họp lúc chín giờ ba mươi xin hãy mang theo hai quyển vở và một chiếc boots",
+          "tokens": [
+            11528,
+            48477,
+            151704,
+            71,
+            94365,
+            308,
+            352,
+            37915,
+            128720,
+            128290,
+            128296,
+            128845,
+            128249,
+            128441,
+            128865,
+            856,
+            27924,
+            2600,
+            128564,
+            136856,
+            128730,
+            521,
+            24217,
+            128626,
+            12789,
+            296,
+            127437,
+            856,
+            258,
+            129805,
+            50196,
+            279,
+            78,
+            46051,
+            126370,
+            86882,
+            348,
+            78820,
+            47742,
+            128249,
+            129141,
+            25236,
+            151645
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.021700000390410423,
+          "compression_ratio": 1.094599962234497,
+          "no_speech_prob": 0
+        }
+      ],
+      "words": [
+        {
+          "word": "hôm",
+          "start": 0,
+          "end": 0.3199999928474426
+        },
+        {
+          "word": "nay",
+          "start": 0.3199999928474426,
+          "end": 0.5600000023841858
+        },
+        {
+          "word": "là",
+          "start": 0.5600000023841858,
+          "end": 0.800000011920929
+        },
+        {
+          "word": "thứ",
+          "start": 0.800000011920929,
+          "end": 1.1200000047683716
+        },
+        {
+          "word": "năm",
+          "start": 1.1200000047683716,
+          "end": 1.440000057220459
+        },
+        {
+          "word": "tôi",
+          "start": 1.6799999475479126,
+          "end": 1.9199999570846558
+        },
+        {
+          "word": "đặt",
+          "start": 1.9199999570846558,
+          "end": 2.1600000858306885
+        },
+        {
+          "word": "một",
+          "start": 2.1600000858306885,
+          "end": 2.4000000953674316
+        },
+        {
+          "word": "phòng",
+          "start": 2.4000000953674316,
+          "end": 2.7200000286102295
+        },
+        {
+          "word": "màu",
+          "start": 2.7200000286102295,
+          "end": 2.880000114440918
+        },
+        {
+          "word": "xanh",
+          "start": 2.880000114440918,
+          "end": 3.2799999713897705
+        },
+        {
+          "word": "cho",
+          "start": 3.2799999713897705,
+          "end": 3.5199999809265137
+        },
+        {
+          "word": "cuộc",
+          "start": 3.5199999809265137,
+          "end": 3.8399999141693115
+        },
+        {
+          "word": "họp",
+          "start": 3.8399999141693115,
+          "end": 4.079999923706055
+        },
+        {
+          "word": "lúc",
+          "start": 4.079999923706055,
+          "end": 4.320000171661377
+        },
+        {
+          "word": "chín",
+          "start": 4.400000095367432,
+          "end": 4.639999866485596
+        },
+        {
+          "word": "giờ",
+          "start": 4.639999866485596,
+          "end": 4.960000038146973
+        },
+        {
+          "word": "ba",
+          "start": 4.960000038146973,
+          "end": 5.199999809265137
+        },
+        {
+          "word": "mươi",
+          "start": 5.199999809265137,
+          "end": 5.599999904632568
+        },
+        {
+          "word": "xin",
+          "start": 5.760000228881836,
+          "end": 6.400000095367432
+        },
+        {
+          "word": "hãy",
+          "start": 6.400000095367432,
+          "end": 6.400000095367432
+        },
+        {
+          "word": "mang",
+          "start": 6.400000095367432,
+          "end": 6.71999979019165
+        },
+        {
+          "word": "theo",
+          "start": 6.71999979019165,
+          "end": 6.960000038146973
+        },
+        {
+          "word": "hai",
+          "start": 6.960000038146973,
+          "end": 7.28000020980835
+        },
+        {
+          "word": "quyển",
+          "start": 7.28000020980835,
+          "end": 7.599999904632568
+        },
+        {
+          "word": "vở",
+          "start": 7.599999904632568,
+          "end": 7.840000152587891
+        },
+        {
+          "word": "và",
+          "start": 7.840000152587891,
+          "end": 8.079999923706055
+        },
+        {
+          "word": "một",
+          "start": 8.079999923706055,
+          "end": 8.319999694824219
+        },
+        {
+          "word": "chiếc",
+          "start": 8.399999618530273,
+          "end": 8.640000343322754
+        },
+        {
+          "word": "boots",
+          "start": 8.640000343322754,
+          "end": 9.119999885559082
+        }
+      ]
+    },
+    "wer": 0.03333333333333333,
+    "emptyText": false,
+    "wordCount": 30,
+    "speakers": [],
+    "invalidWordRanges": 0
+  },
+  {
+    "model": "qwen/qwen3-asr-0.6b",
+    "fixture": "silence.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 1.04,
+    "generationId": "gen-stt-1788850168-jN12tRabxtJ7vMI1XCUc",
+    "response": {
+      "text": "Ahora.",
+      "usage": {
+        "seconds": 3,
+        "cost": 9.99e-06
+      },
+      "task": "transcribe",
+      "language": "spanish",
+      "duration": 3,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.3199999928474426,
+          "end": 0.3199999928474426,
+          "text": "Ahora.",
+          "tokens": [
+            11528,
+            15154,
+            151704,
+            24765,
+            6215,
+            13,
+            151645
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.8644000291824341,
+          "compression_ratio": 0.428600013256073,
+          "no_speech_prob": 0
+        }
+      ],
+      "words": [
+        {
+          "word": "Ahora.",
+          "start": 0.3199999928474426,
+          "end": 0.3199999928474426
+        }
+      ]
+    },
+    "wer": null,
+    "emptyText": false,
+    "wordCount": 1,
+    "speakers": [],
+    "invalidWordRanges": 0
+  },
+  {
+    "model": "openai/whisper-1",
+    "fixture": "dialogue.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 3.444,
+    "generationId": "gen-stt-1788850169-VCanhcUWMhaZLAFLcjcy",
+    "response": {
+      "text": "Well, um, I booked the blue room for Thursday. The code is 742. Did you say Thursday? I thought our meeting was on Friday at half past nine. No. Thursday at 10.15. Please bring two notebooks and a green pen. Alright. I will arrive 15 minutes early. See you there.",
+      "usage": {
+        "seconds": 20,
+        "cost": 0.002
+      },
+      "task": "transcribe",
+      "language": "english",
+      "duration": 19.459999084472656,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0,
+          "end": 4.440000057220459,
+          "text": " Well, um, I booked the blue room for Thursday. The code is 742.",
+          "tokens": [
+            50364,
+            1042,
+            11,
+            1105,
+            11,
+            286,
+            26735,
+            264,
+            3344,
+            1808,
+            337,
+            10383,
+            13,
+            440,
+            3089,
+            307,
+            1614,
+            15628,
+            13,
+            50614
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.2632705569267273,
+          "compression_ratio": 1.362694263458252,
+          "no_speech_prob": 0.003882461925968528
+        },
+        {
+          "id": 1,
+          "seek": 0,
+          "start": 5.199999809265137,
+          "end": 9.579999923706055,
+          "text": " Did you say Thursday? I thought our meeting was on Friday at half past nine.",
+          "tokens": [
+            50614,
+            2589,
+            291,
+            584,
+            10383,
+            30,
+            286,
+            1194,
+            527,
+            3440,
+            390,
+            322,
+            6984,
+            412,
+            1922,
+            1791,
+            4949,
+            13,
+            50864
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.2632705569267273,
+          "compression_ratio": 1.362694263458252,
+          "no_speech_prob": 0.003882461925968528
+        },
+        {
+          "id": 2,
+          "seek": 0,
+          "start": 10.199999809265137,
+          "end": 14.600000381469727,
+          "text": " No. Thursday at 10.15. Please bring two notebooks and a green pen.",
+          "tokens": [
+            50864,
+            883,
+            13,
+            10383,
+            412,
+            1266,
+            13,
+            5211,
+            13,
+            2555,
+            1565,
+            732,
+            43782,
+            293,
+            257,
+            3092,
+            3435,
+            13,
+            51114
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.2632705569267273,
+          "compression_ratio": 1.362694263458252,
+          "no_speech_prob": 0.003882461925968528
+        },
+        {
+          "id": 3,
+          "seek": 0,
+          "start": 15.199999809265137,
+          "end": 18.899999618530273,
+          "text": " Alright. I will arrive 15 minutes early. See you there.",
+          "tokens": [
+            51114,
+            2798,
+            13,
+            286,
+            486,
+            8881,
+            2119,
+            2077,
+            2440,
+            13,
+            3008,
+            291,
+            456,
+            13,
+            51314
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.2632705569267273,
+          "compression_ratio": 1.362694263458252,
+          "no_speech_prob": 0.003882461925968528
+        }
+      ],
+      "words": [
+        {
+          "word": "Well",
+          "start": 0,
+          "end": 0.4000000059604645
+        },
+        {
+          "word": "um",
+          "start": 0.6000000238418579,
+          "end": 0.8999999761581421
+        },
+        {
+          "word": "I",
+          "start": 1.0199999809265137,
+          "end": 1.3799999952316284
+        },
+        {
+          "word": "booked",
+          "start": 1.3799999952316284,
+          "end": 1.440000057220459
+        },
+        {
+          "word": "the",
+          "start": 1.440000057220459,
+          "end": 1.6200000047683716
+        },
+        {
+          "word": "blue",
+          "start": 1.6200000047683716,
+          "end": 1.840000033378601
+        },
+        {
+          "word": "room",
+          "start": 1.840000033378601,
+          "end": 2.0199999809265137
+        },
+        {
+          "word": "for",
+          "start": 2.0199999809265137,
+          "end": 2.680000066757202
+        },
+        {
+          "word": "Thursday",
+          "start": 2.680000066757202,
+          "end": 2.680000066757202
+        },
+        {
+          "word": "The",
+          "start": 3.0999999046325684,
+          "end": 3.180000066757202
+        },
+        {
+          "word": "code",
+          "start": 3.180000066757202,
+          "end": 3.4200000762939453
+        },
+        {
+          "word": "is",
+          "start": 3.4200000762939453,
+          "end": 3.5799999237060547
+        },
+        {
+          "word": "742",
+          "start": 3.5799999237060547,
+          "end": 4.440000057220459
+        },
+        {
+          "word": "Did",
+          "start": 5.199999809265137,
+          "end": 5.28000020980835
+        },
+        {
+          "word": "you",
+          "start": 5.28000020980835,
+          "end": 5.460000038146973
+        },
+        {
+          "word": "say",
+          "start": 5.460000038146973,
+          "end": 5.699999809265137
+        },
+        {
+          "word": "Thursday",
+          "start": 5.699999809265137,
+          "end": 6.139999866485596
+        },
+        {
+          "word": "I",
+          "start": 6.400000095367432,
+          "end": 6.679999828338623
+        },
+        {
+          "word": "thought",
+          "start": 6.679999828338623,
+          "end": 6.900000095367432
+        },
+        {
+          "word": "our",
+          "start": 6.900000095367432,
+          "end": 7.199999809265137
+        },
+        {
+          "word": "meeting",
+          "start": 7.199999809265137,
+          "end": 7.420000076293945
+        },
+        {
+          "word": "was",
+          "start": 7.420000076293945,
+          "end": 7.679999828338623
+        },
+        {
+          "word": "on",
+          "start": 7.679999828338623,
+          "end": 7.980000019073486
+        },
+        {
+          "word": "Friday",
+          "start": 7.980000019073486,
+          "end": 8.180000305175781
+        },
+        {
+          "word": "at",
+          "start": 8.180000305175781,
+          "end": 8.5
+        },
+        {
+          "word": "half",
+          "start": 8.5,
+          "end": 8.760000228881836
+        },
+        {
+          "word": "past",
+          "start": 8.760000228881836,
+          "end": 9.140000343322754
+        },
+        {
+          "word": "nine",
+          "start": 9.140000343322754,
+          "end": 9.579999923706055
+        },
+        {
+          "word": "No",
+          "start": 10.199999809265137,
+          "end": 10.520000457763672
+        },
+        {
+          "word": "Thursday",
+          "start": 11.039999961853027,
+          "end": 11.15999984741211
+        },
+        {
+          "word": "at",
+          "start": 11.15999984741211,
+          "end": 11.399999618530273
+        },
+        {
+          "word": "10",
+          "start": 11.399999618530273,
+          "end": 11.640000343322754
+        },
+        {
+          "word": "15",
+          "start": 11.640000343322754,
+          "end": 12.140000343322754
+        },
+        {
+          "word": "Please",
+          "start": 12.5,
+          "end": 12.739999771118164
+        },
+        {
+          "word": "bring",
+          "start": 12.739999771118164,
+          "end": 13
+        },
+        {
+          "word": "two",
+          "start": 13,
+          "end": 13.260000228881836
+        },
+        {
+          "word": "notebooks",
+          "start": 13.260000228881836,
+          "end": 13.640000343322754
+        },
+        {
+          "word": "and",
+          "start": 13.640000343322754,
+          "end": 13.880000114440918
+        },
+        {
+          "word": "a",
+          "start": 13.880000114440918,
+          "end": 14.119999885559082
+        },
+        {
+          "word": "green",
+          "start": 14.119999885559082,
+          "end": 14.260000228881836
+        },
+        {
+          "word": "pen",
+          "start": 14.260000228881836,
+          "end": 14.600000381469727
+        },
+        {
+          "word": "Alright",
+          "start": 15.199999809265137,
+          "end": 15.720000267028809
+        },
+        {
+          "word": "I",
+          "start": 15.920000076293945,
+          "end": 16.200000762939453
+        },
+        {
+          "word": "will",
+          "start": 16.200000762939453,
+          "end": 16.3799991607666
+        },
+        {
+          "word": "arrive",
+          "start": 16.3799991607666,
+          "end": 16.65999984741211
+        },
+        {
+          "word": "15",
+          "start": 16.65999984741211,
+          "end": 17.15999984741211
+        },
+        {
+          "word": "minutes",
+          "start": 17.15999984741211,
+          "end": 17.479999542236328
+        },
+        {
+          "word": "early",
+          "start": 17.479999542236328,
+          "end": 17.84000015258789
+        },
+        {
+          "word": "See",
+          "start": 18.219999313354492,
+          "end": 18.459999084472656
+        },
+        {
+          "word": "you",
+          "start": 18.459999084472656,
+          "end": 18.579999923706055
+        },
+        {
+          "word": "there",
+          "start": 18.579999923706055,
+          "end": 18.899999618530273
+        }
+      ]
+    },
+    "wer": 0.14814814814814814,
+    "emptyText": false,
+    "wordCount": 51,
+    "speakers": [],
+    "invalidWordRanges": 0
+  },
+  {
+    "model": "openai/whisper-1",
+    "fixture": "vietnamese.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 1.711,
+    "generationId": "gen-stt-1788850170-N9cEF0G45wRVBVGYV8ZA",
+    "response": {
+      "text": "Hôm nay là thứ năm, tôi đặt một phòng màu xanh cho cuộc họp lúc 9h30, xin hãy mang theo 2 quyển vở và 1 chiếc boots.",
+      "usage": {
+        "seconds": 10,
+        "cost": 0.001
+      },
+      "task": "transcribe",
+      "language": "vietnamese",
+      "duration": 9.15999984741211,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0,
+          "end": 9.039999961853027,
+          "text": " Hôm nay là thứ năm, tôi đặt một phòng màu xanh cho cuộc họp lúc 9h30, xin hãy mang theo 2 quyển vở và 1 chiếc boots.",
+          "tokens": [
+            50364,
+            389,
+            25670,
+            34227,
+            3684,
+            47269,
+            38098,
+            11,
+            22336,
+            2934,
+            38248,
+            15486,
+            903,
+            36782,
+            13901,
+            84,
+            2031,
+            50214,
+            1586,
+            50138,
+            27700,
+            79,
+            287,
+            31585,
+            1722,
+            71,
+            3446,
+            11,
+            2031,
+            259,
+            276,
+            49205,
+            32432,
+            40594,
+            568,
+            44088,
+            38197,
+            371,
+            13755,
+            10274,
+            502,
+            13228,
+            6115,
+            66,
+            15194,
+            13,
+            50864
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.2574719488620758,
+          "compression_ratio": 1.0070922374725342,
+          "no_speech_prob": 0.029612792655825615
+        }
+      ],
+      "words": [
+        {
+          "word": "Hôm",
+          "start": 0,
+          "end": 0.30000001192092896
+        },
+        {
+          "word": "nay",
+          "start": 0.30000001192092896,
+          "end": 0.6000000238418579
+        },
+        {
+          "word": "là",
+          "start": 0.6000000238418579,
+          "end": 0.8600000143051147
+        },
+        {
+          "word": "thứ",
+          "start": 0.8600000143051147,
+          "end": 1.100000023841858
+        },
+        {
+          "word": "năm",
+          "start": 1.100000023841858,
+          "end": 1.4199999570846558
+        },
+        {
+          "word": "tôi",
+          "start": 1.8799999952316284,
+          "end": 1.9199999570846558
+        },
+        {
+          "word": "đặt",
+          "start": 1.9199999570846558,
+          "end": 2.1600000858306885
+        },
+        {
+          "word": "một",
+          "start": 2.1600000858306885,
+          "end": 2.5
+        },
+        {
+          "word": "phòng",
+          "start": 2.5,
+          "end": 2.6600000858306885
+        },
+        {
+          "word": "màu",
+          "start": 2.6600000858306885,
+          "end": 3.0199999809265137
+        },
+        {
+          "word": "xanh",
+          "start": 3.0199999809265137,
+          "end": 3.2200000286102295
+        },
+        {
+          "word": "cho",
+          "start": 3.2200000286102295,
+          "end": 3.5799999237060547
+        },
+        {
+          "word": "cuộc",
+          "start": 3.5799999237060547,
+          "end": 3.859999895095825
+        },
+        {
+          "word": "họp",
+          "start": 3.859999895095825,
+          "end": 4.119999885559082
+        },
+        {
+          "word": "lúc",
+          "start": 4.119999885559082,
+          "end": 4.340000152587891
+        },
+        {
+          "word": "9h30",
+          "start": 4.340000152587891,
+          "end": 5.519999980926514
+        },
+        {
+          "word": "xin",
+          "start": 6.159999847412109,
+          "end": 6.159999847412109
+        },
+        {
+          "word": "hãy",
+          "start": 6.159999847412109,
+          "end": 6.420000076293945
+        },
+        {
+          "word": "mang",
+          "start": 6.420000076293945,
+          "end": 6.679999828338623
+        },
+        {
+          "word": "theo",
+          "start": 6.679999828338623,
+          "end": 6.960000038146973
+        },
+        {
+          "word": "2",
+          "start": 6.960000038146973,
+          "end": 7.28000020980835
+        },
+        {
+          "word": "quyển",
+          "start": 7.28000020980835,
+          "end": 7.579999923706055
+        },
+        {
+          "word": "vở",
+          "start": 7.579999923706055,
+          "end": 7.820000171661377
+        },
+        {
+          "word": "và",
+          "start": 7.820000171661377,
+          "end": 8.140000343322754
+        },
+        {
+          "word": "1",
+          "start": 8.140000343322754,
+          "end": 8.460000038146973
+        },
+        {
+          "word": "chiếc",
+          "start": 8.460000038146973,
+          "end": 8.65999984741211
+        },
+        {
+          "word": "boots",
+          "start": 8.65999984741211,
+          "end": 9.039999961853027
+        }
+      ]
+    },
+    "wer": 0.23333333333333334,
+    "emptyText": false,
+    "wordCount": 27,
+    "speakers": [],
+    "invalidWordRanges": 0
+  },
+  {
+    "model": "openai/whisper-1",
+    "fixture": "silence.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 2.132,
+    "generationId": "gen-stt-1788850171-EPHG3kCIvdFThZno5NNa",
+    "response": {
+      "text": "you",
+      "usage": {
+        "seconds": 3,
+        "cost": 0.0003
+      },
+      "task": "transcribe",
+      "language": "english",
+      "duration": 3,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0,
+          "end": 1.2999999523162842,
+          "text": " you",
+          "tokens": [
+            50364,
+            291,
+            50467
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.5146503448486328,
+          "compression_ratio": 0.27272728085517883,
+          "no_speech_prob": 0.9425907731056213
+        }
+      ],
+      "words": [
+        {
+          "word": "you",
+          "start": 0,
+          "end": 1.2999999523162842
+        }
+      ]
+    },
+    "wer": null,
+    "emptyText": false,
+    "wordCount": 1,
+    "speakers": [],
+    "invalidWordRanges": 0
+  }
+]

@@ -3,10 +3,12 @@ import {
   Popover,
   PopoverTrigger,
   PopoverContent,
-  Button,
   ScrollArea,
   ScrollBar,
 } from "@renderer/components/ui";
+import { EjIconButton } from "@renderer/components/enjoy";
+import { scoreChipClass } from "@renderer/lib/design";
+import { cn } from "@renderer/lib/utils";
 import { Volume2Icon } from "lucide-react";
 import { memo, useEffect, useRef } from "react";
 
@@ -114,24 +116,24 @@ export const PronunciationAssessmentWordResult = (props: {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <div className="text-center mb-3 cursor-pointer">
+        <div className="flex flex-col items-center cursor-pointer">
           <div
-            className={`${
+            className={cn(
+              "underline-offset-4",
               currentTime * 1e7 >= result.offset &&
-              currentTime * 1e7 < result.offset + result.duration
-                ? "underline"
-                : ""
-            } underline-offset-4`}
+                currentTime * 1e7 < result.offset + result.duration &&
+                "underline decoration-ej-accent decoration-2"
+            )}
           >
             {WordDisplay}
           </div>
-          <div className="mb-1">
+          <div className="font-ipa text-[11px] leading-[1.3]">
             {result.phonemes.map((phoneme, index) => (
               <span
                 key={index}
-                className={`italic font-code ${scoreColor(
+                className={scoreColor(
                   phoneme.pronunciationAssessment.accuracyScore
-                )}`}
+                )}
               >
                 {phoneme.phoneme}
               </span>
@@ -140,83 +142,108 @@ export const PronunciationAssessmentWordResult = (props: {
         </div>
       </PopoverTrigger>
 
-      <PopoverContent align="start" className="bg-muted">
-        <div className="text-sm flex items-center space-x-2 mb-2">
-          <span className="font-sans">{t("score")}:</span>
-          <span className="font-sans">
-            {result.pronunciationAssessment.accuracyScore}
+      <PopoverContent
+        align="start"
+        className="w-auto max-w-[320px] rounded-ej-lg border-ej-line bg-ej-surface shadow-ej p-3"
+      >
+        <div className="flex items-center justify-between gap-3 mb-3">
+          <span className="font-literata text-[17px] text-ej-ink">
+            {result.word}
+          </span>
+          <span
+            className={cn(
+              "px-2 h-5 rounded-full text-xxs font-bold ej-tabular inline-flex items-center",
+              scoreChipClass(result.pronunciationAssessment?.accuracyScore)
+            )}
+          >
+            {result.pronunciationAssessment?.accuracyScore ?? "--"}
           </span>
         </div>
-        <PronunciationAssessmentPhonemeResult result={result} />
 
-        <div className="flex items-center space-x-2">
-          <span className="text-sm">{t("myPronunciation")}:</span>
-          <Button onClick={play} variant="ghost" size="icon">
-            <Volume2Icon className="w-5 h-5" />
-          </Button>
+        <div className="rounded-ej border border-ej-line bg-ej-surface2/40 px-2 py-2 mb-3">
+          <PronunciationAssessmentPhonemeResult result={result} />
         </div>
-        {onPlayOrigin && (
-          <div className="flex items-center space-x-2">
-            <span className="text-sm">{t("originalPronunciation")}:</span>
-            <Button onClick={onPlayOrigin} variant="ghost" size="icon">
-              <Volume2Icon className="w-5 h-5" />
-            </Button>
+
+        <div className="space-y-1">
+          <div className="flex items-center justify-between gap-2">
+            <span className="text-xs text-ej-muted">{t("myPronunciation")}</span>
+            <EjIconButton onClick={play} title={t("myPronunciation")}>
+              <Volume2Icon className="size-4" />
+            </EjIconButton>
           </div>
-        )}
+          {onPlayOrigin && (
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-xs text-ej-muted">
+                {t("originalPronunciation")}
+              </span>
+              <EjIconButton
+                onClick={onPlayOrigin}
+                title={t("originalPronunciation")}
+              >
+                <Volume2Icon className="size-4" />
+              </EjIconButton>
+            </div>
+          )}
+        </div>
       </PopoverContent>
     </Popover>
   );
 };
 
+/** Shared shape for every word chip in the assessment cloud. */
+const WORD_BASE =
+  "px-1.5 py-0.5 rounded-md font-literata text-[19px] leading-[1.35] tracking-[0.01em] cursor-pointer transition-colors duration-ej";
+
 const CorrectWordDisplay = (props: { word: string }) => (
-  <span className="mx-1 px-2 py-1 text-xl font-sans tracking-wide cursor-pointer">
+  <span className={cn(WORD_BASE, "text-ej-ink hover:bg-ej-surface2")}>
     {props.word}
   </span>
 );
 
 const MispronunciationWordDisplay = (props: { word: string }) => (
-  <span className="mx-1 px-2 py-1 text-xl font-sans tracking-wide cursor-pointer bg-yellow-600">
+  <span className={cn(WORD_BASE, "bg-ej-warn-soft text-ej-warn")}>
     {props.word}
   </span>
 );
 
 const OmissionWordDisplay = (props: { word: string }) => (
-  <span className="mx-1 px-2 py-1 text-xl font-sans tracking-wide cursor-pointer bg-gray-600 text-white">
+  <span className={cn(WORD_BASE, "bg-ej-surface2 text-ej-muted")}>
     [{props.word}]
   </span>
 );
 
 const InsertionWordDisplay = (props: { word: string }) => (
-  <span className="mx-1 px-2 py-1 text-xl font-sans tracking-wide cursor-pointer bg-red-600 text-white line-through">
+  <span className={cn(WORD_BASE, "bg-ej-bad-soft text-ej-bad line-through")}>
     {props.word}
   </span>
 );
 
 const UnexpectedBreakWordDisplay = (props: { word: string }) => (
-  <span className="mx-1 px-2 py-1 text-xl font-sans tracking-wide bg-pink-600 line-through">
+  <span
+    className={cn(WORD_BASE, "bg-ej-pitch/15 text-ej-pitch line-through")}
+    style={{ color: "var(--ej-pitch)" }}
+  >
     [{props.word}]
   </span>
 );
 
 const MissingBreakWordDisplay = () => (
-  <span className="mx-1 px-2 py-1 text-xl font-sans tracking-wide bg-gray-200">
-    [ ]
-  </span>
+  <span className={cn(WORD_BASE, "bg-ej-surface2 text-ej-muted")}>[ ]</span>
 );
 
 const MonotoneWordDisplay = (props: { word: string }) => (
-  <span className="mx-1 px-2 py-1 text-xl font-sans tracking-wide cursor-pointer bg-purple-600 text-white">
+  <span className={cn(WORD_BASE, "bg-ej-accent-soft text-ej-accent-ink")}>
     {props.word}
   </span>
 );
 
 const scoreColor = (score: number) => {
-  if (!score) return "gray";
+  if (!score) return "text-ej-muted";
 
-  if (score >= 80) return "text-foreground/70";
-  if (score >= 60) return "font-bold text-yellow-600";
+  if (score >= 80) return "text-ej-muted";
+  if (score >= 60) return "font-semibold text-ej-warn";
 
-  return "font-bold text-red-600";
+  return "font-semibold text-ej-bad";
 };
 
 export const PronunciationAssessmentPhonemeResult = memo(
@@ -225,14 +252,17 @@ export const PronunciationAssessmentPhonemeResult = memo(
 
     return (
       <ScrollArea className="w-full">
-        <div className="w-full flex items-center gap-2">
+        <div className="w-full flex items-center gap-2.5">
           {result.phonemes.map((phoneme, index) => (
-            <div key={index} className="text-sm text-center">
-              <div className="font-bold font-code">{phoneme.phoneme}</div>
+            <div key={index} className="text-center shrink-0">
+              <div className="font-ipa text-[14px] font-semibold text-ej-ink">
+                {phoneme.phoneme}
+              </div>
               <div
-                className={`text-xs font-sans ${scoreColor(
-                  phoneme.pronunciationAssessment.accuracyScore
-                )}`}
+                className={cn(
+                  "text-xxs ej-tabular",
+                  scoreColor(phoneme.pronunciationAssessment.accuracyScore)
+                )}
               >
                 {phoneme.pronunciationAssessment.accuracyScore}
               </div>

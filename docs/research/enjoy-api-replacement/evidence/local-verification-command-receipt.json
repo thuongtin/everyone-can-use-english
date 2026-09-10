@@ -1,0 +1,42 @@
+{
+  "policy": "(version 1) (allow default) (deny network*)",
+  "policySha256": "0a5222386587bf836d30a070bd759c0194f999bf5503ba76c6c0f8cb84b19db2",
+  "control": {
+    "argv": [
+      "/usr/bin/sandbox-exec",
+      "-p",
+      "(version 1) (allow default) (deny network*)",
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-c",
+      "import errno,json,socket,sys; s=socket.socket(); \ntry: s.connect(('127.0.0.1',9)); result={'blocked':False,'errno':None}; code=2\nexcept OSError as e: result={'blocked':e.errno==errno.EPERM,'errno':e.errno,'error':str(e)}; code=0 if e.errno==errno.EPERM else 3\nfinally: s.close()\nprint(json.dumps(result)); sys.exit(code)"
+    ],
+    "startedAt": "2026-09-08T07:08:03.420886+00:00",
+    "endedAt": "2026-09-08T07:08:03.445551+00:00",
+    "exitCode": 0,
+    "stdoutSha256": "d51b56efaed07caef9729bc2b8b98c372df3b79ee48d5dcdce86cc7e8dc101d5",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "result": {
+      "blocked": true,
+      "errno": 1,
+      "error": "[Errno 1] Operation not permitted"
+    }
+  },
+  "run": {
+    "argv": [
+      "/usr/bin/sandbox-exec",
+      "-p",
+      "(version 1) (allow default) (deny network*)",
+      "/opt/homebrew/opt/node@24/bin/node",
+      "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/local-live-runner.mjs",
+      "/Users/ethan/VibeCoding/everyone-can-use-english",
+      "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/local-verified"
+    ],
+    "startedAt": "2026-09-08T07:08:03.445624+00:00",
+    "endedAt": "2026-09-08T07:08:06.310018+00:00",
+    "exitCode": 0,
+    "stdoutSha256": "9e117723b17f419b05ff4d2124f12af93260eda7d6f260f5acada069f717e3e7",
+    "stderrSha256": "5b285e6c87b592e4b3cb28673a65e1450e0b6e46e3b7b162cb8f6f4154779d1b",
+    "stdoutBytes": 3655,
+    "stderrBytes": 3667
+  }
+}

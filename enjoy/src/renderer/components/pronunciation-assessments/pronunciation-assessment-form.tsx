@@ -1,5 +1,4 @@
 import {
-  Button,
   Input,
   SelectContent,
   SelectTrigger,
@@ -13,11 +12,14 @@ import {
   FormMessage,
   Textarea,
   toast,
-  Tabs,
-  TabsList,
-  TabsTrigger,
-  TabsContent,
 } from "@renderer/components/ui";
+import {
+  EjButton,
+  EjIconButton,
+  Pill,
+  RecordingDot,
+  Segmented,
+} from "@renderer/components/enjoy";
 import { t } from "i18next";
 import { useNavigate } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
@@ -32,10 +34,9 @@ import {
   MicIcon,
   PauseIcon,
   PlayIcon,
-  SquareIcon,
-  XIcon,
+  UploadIcon,
 } from "lucide-react";
-import { usePronunciationAssessments } from "@/renderer/hooks";
+import { useEjColor, usePronunciationAssessments } from "@/renderer/hooks";
 import { useAudioRecorder } from "react-audio-voice-recorder";
 import { LiveAudioVisualizer } from "react-audio-visualize";
 
@@ -46,11 +47,22 @@ const pronunciationAssessmentSchema = z.object({
   referenceText: z.string().optional(),
 });
 
+/** Accents offered as a segmented shortcut above the full language list. */
+const ACCENTS = [
+  { value: "en-US", label: "US" },
+  { value: "en-GB", label: "UK" },
+];
+
+const FIELD =
+  "h-9 rounded-[10px] border-ej-line bg-ej-surface text-xs text-ej-ink focus-visible:ring-ej-accent";
+
 export const PronunciationAssessmentForm = () => {
   const navigate = useNavigate();
   const { EnjoyApp, learningLanguage } = useContext(AppSettingsProviderContext);
   const [submitting, setSubmitting] = useState(false);
-  const { createAssessment } = usePronunciationAssessments();
+  const [source, setSource] = useState<"record" | "upload">("record");
+  const { createAssessment, ensureEnjoyAiConfigured } =
+    usePronunciationAssessments();
 
   const form = useForm<z.infer<typeof pronunciationAssessmentSchema>>({
     resolver: zodResolver(pronunciationAssessmentSchema),
@@ -61,6 +73,22 @@ export const PronunciationAssessmentForm = () => {
   });
 
   const fileField = form.register("file");
+
+  const ensureAssessmentReady = async (): Promise<boolean> => {
+    try {
+      await ensureEnjoyAiConfigured();
+      return true;
+    } catch (error) {
+      toast.error(
+        `Bản ghi đã được lưu. ${
+          error instanceof Error
+            ? error.message
+            : "Hãy cấu hình Azure Speech trước khi tạo đánh giá phát âm."
+        }`
+      );
+      return false;
+    }
+  };
 
   const onSubmit = async (
     data: z.infer<typeof pronunciationAssessmentSchema>
@@ -81,6 +109,10 @@ export const PronunciationAssessmentForm = () => {
     if (!recording) return;
 
     setSubmitting(true);
+    if (!(await ensureAssessmentReady())) {
+      setSubmitting(false);
+      return;
+    }
     createAssessment({
       language,
       reference: referenceText,
@@ -91,7 +123,6 @@ export const PronunciationAssessmentForm = () => {
       })
       .catch((err) => {
         toast.error(err.message);
-        EnjoyApp.recordings.destroy(recording.id);
       })
       .finally(() => setSubmitting(false));
   };
@@ -117,90 +148,102 @@ export const PronunciationAssessmentForm = () => {
     });
   };
 
+  const uploadedFile = form.watch("file")?.[0];
+  const recordedBlob = form.watch("recordingFile");
+
   return (
-    <div className="max-w-screen-md mx-auto">
-      <Form {...form}>
-        <form
-          onSubmit={form.handleSubmit(onSubmit)}
-          className="h-full flex flex-col"
-        >
-          <Tabs className="mb-6" defaultValue="record">
-            <TabsList className="mb-2">
-              <TabsTrigger value="record">{t("record")}</TabsTrigger>
-              <TabsTrigger value="upload">{t("upload")}</TabsTrigger>
-            </TabsList>
-            <TabsContent value="upload">
-              <div className="grid gap-4">
-                <FormField
-                  control={form.control}
-                  name="file"
-                  render={() => (
-                    <FormItem className="grid w-full items-center gap-1.5">
-                      <Input
-                        disabled={submitting}
-                        placeholder={t("upload")}
-                        type="file"
-                        className="cursor-pointer"
-                        accept="audio/*"
-                        {...fileField}
-                      />
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-            </TabsContent>
-            <TabsContent value="record">
-              <div className="grid gap-4 border p-4 rounded-lg">
-                <FormField
-                  control={form.control}
-                  name="recordingFile"
-                  render={({ field }) => (
-                    <FormItem className="grid w-full items-center gap-1.5">
-                      <Input
-                        disabled={submitting}
-                        placeholder={t("recording")}
-                        type="file"
-                        className="hidden"
-                        accept="audio/*"
-                        {...fileField}
-                      />
-                      <RecorderButton
-                        onStart={() => {
-                          form.resetField("recordingFile");
-                        }}
-                        onFinish={(blob) => {
-                          field.onChange(blob);
-                        }}
-                      />
-                    </FormItem>
-                  )}
-                />
-                {form.watch("recordingFile") && (
-                  <div className="">
-                    <audio controls className="w-full">
-                      <source
-                        src={URL.createObjectURL(form.watch("recordingFile"))}
-                      />
-                    </audio>
-                  </div>
-                )}
-              </div>
-            </TabsContent>
-          </Tabs>
-          <div className="mb-6">
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
+        <section className="rounded-ej-lg border border-ej-line bg-ej-surface p-6 shadow-ej">
+          <div className="mb-5 flex items-center justify-between gap-3">
+            <span className="ej-label">{t("audioSource")}</span>
+            <Segmented<"record" | "upload">
+              value={source}
+              onChange={setSource}
+              options={[
+                { value: "record", label: t("record") },
+                { value: "upload", label: t("upload") },
+              ]}
+            />
+          </div>
+
+          {source === "record" ? (
             <FormField
               control={form.control}
-              name="language"
+              name="recordingFile"
               render={({ field }) => (
-                <FormItem className="grid w-full items-center gap-1.5">
-                  <FormLabel>{t("language")}</FormLabel>
+                <FormItem>
+                  <RecorderButton
+                    submitting={submitting}
+                    onStart={() => {
+                      form.resetField("recordingFile");
+                      return true;
+                    }}
+                    onFinish={(blob) => {
+                      field.onChange(blob);
+                    }}
+                  />
+                  <FormMessage className="text-center text-xxs text-ej-bad" />
+                </FormItem>
+              )}
+            />
+          ) : (
+            <FormField
+              control={form.control}
+              name="file"
+              render={() => (
+                <FormItem>
+                  <label className="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-ej border border-dashed border-ej-line2 bg-ej-surface2 px-6 py-9 text-center transition-colors duration-ej hover:border-ej-accent hover:bg-ej-accent-soft">
+                    <UploadIcon className="size-5 text-ej-muted" />
+                    <span className="text-xs font-semibold text-ej-ink">
+                      {uploadedFile ? uploadedFile.name : t("chooseAudioFile")}
+                    </span>
+                    <span className="text-xxs text-ej-muted">
+                      {t("audioFileHint")}
+                    </span>
+                    <Input
+                      disabled={submitting}
+                      type="file"
+                      className="hidden"
+                      accept="audio/*"
+                      {...fileField}
+                    />
+                  </label>
+                  <FormMessage className="text-xxs text-ej-bad" />
+                </FormItem>
+              )}
+            />
+          )}
+
+          {source === "record" && recordedBlob && (
+            <div className="mt-5 rounded-ej border border-ej-line bg-ej-surface2 p-3.5">
+              <div className="ej-label mb-2">{t("recording")}</div>
+              <audio controls className="w-full">
+                <source src={URL.createObjectURL(recordedBlob)} />
+              </audio>
+            </div>
+          )}
+        </section>
+
+        <section className="space-y-5 rounded-ej-lg border border-ej-line bg-ej-surface p-6 shadow-ej">
+          <FormField
+            control={form.control}
+            name="language"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="ej-label">{t("language")}</FormLabel>
+                <div className="flex flex-wrap items-center gap-3">
+                  <Segmented
+                    value={field.value}
+                    onChange={field.onChange}
+                    options={ACCENTS}
+                  />
                   <Select
                     disabled={submitting}
                     value={field.value}
                     onValueChange={field.onChange}
                   >
-                    <SelectTrigger>
+                    <SelectTrigger className={`${FIELD} w-[220px]`}>
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
@@ -211,55 +254,64 @@ export const PronunciationAssessmentForm = () => {
                       ))}
                     </SelectContent>
                   </Select>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-          <div className="mb-6">
-            <FormField
-              control={form.control}
-              name="referenceText"
-              render={({ field }) => (
-                <FormItem className="grid w-full items-center gap-1.5">
-                  <FormLabel>{t("referenceText")}</FormLabel>
-                  <Textarea
-                    disabled={submitting}
-                    placeholder={t("inputReferenceTextOrLeaveItBlank")}
-                    className="h-64"
-                    {...field}
-                  />
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-          <div className="mt-6">
-            <Button
-              disabled={submitting || !form.formState.isDirty}
-              className="w-full h-12"
-              data-testid="conversation-form-submit"
-              size="lg"
-              type="submit"
-            >
-              {submitting && <LoaderIcon className="mr-2 animate-spin" />}
-              {t("confirm")}
-            </Button>
-          </div>
-        </form>
-      </Form>
-    </div>
+                </div>
+                <FormMessage className="text-xxs text-ej-bad" />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="referenceText"
+            render={({ field }) => (
+              <FormItem>
+                <div className="flex items-center justify-between">
+                  <FormLabel className="ej-label">
+                    {t("referenceText")}
+                  </FormLabel>
+                  <Pill tone="muted">{t("optional")}</Pill>
+                </div>
+                <Textarea
+                  disabled={submitting}
+                  placeholder={t("inputReferenceTextOrLeaveItBlank")}
+                  className="min-h-[200px] rounded-[10px] border-ej-line bg-ej-surface font-literata text-[15px] leading-7 text-ej-ink focus-visible:ring-ej-accent"
+                  {...field}
+                />
+                <FormMessage className="text-xxs text-ej-bad" />
+              </FormItem>
+            )}
+          />
+        </section>
+
+        <EjButton
+          variant="primary"
+          size="lg"
+          type="submit"
+          disabled={submitting || !form.formState.isDirty}
+          className="w-full"
+          data-testid="conversation-form-submit"
+        >
+          {submitting ? (
+            <LoaderIcon className="size-4 animate-spin" />
+          ) : (
+            <MicIcon className="size-4" />
+          )}
+          {t("assessWithAzureSpeech")}
+        </EjButton>
+      </form>
+    </Form>
   );
 };
 
 const RecorderButton = (props: {
   submitting?: boolean;
-  onStart?: () => void;
+  onStart?: () => boolean | Promise<boolean>;
   onFinish: (blob: Blob) => void;
 }) => {
   const { submitting, onStart, onFinish } = props;
   const { EnjoyApp } = useContext(AppSettingsProviderContext);
   const [access, setAccess] = useState<boolean>(false);
+  const barColor = useEjColor("--ej-accent", "#2d6be0");
   const {
     startRecording,
     stopRecording,
@@ -302,82 +354,87 @@ const RecorderButton = (props: {
 
   if (isRecording) {
     return (
-      <div className="w-full flex justify-center">
-        <div className="flex items-center space-x-2">
-          <LiveAudioVisualizer
-            mediaRecorder={mediaRecorder}
-            barWidth={2}
-            gap={2}
-            width={140}
-            height={30}
-            fftSize={512}
-            maxDecibels={-10}
-            minDecibels={-80}
-            smoothingTimeConstant={0.4}
-          />
-          <span className="text-sm text-muted-foreground">
+      <div className="flex flex-col items-center gap-4 py-4">
+        <div className="flex items-center gap-2">
+          <RecordingDot />
+          <span className="ej-tabular text-sm font-bold text-ej-ink">
             {Math.floor(recordingTime / 60)}:
             {String(recordingTime % 60).padStart(2, "0")}
           </span>
-          <Button
-            onClick={togglePauseResume}
-            className="rounded-full shadow w-8 h-8"
-            size="icon"
+        </div>
+
+        {/* 280px / (4px bar + 6px gap) renders 28 bars. */}
+        <LiveAudioVisualizer
+          mediaRecorder={mediaRecorder}
+          barWidth={4}
+          gap={6}
+          width={280}
+          height={64}
+          barColor={barColor}
+          fftSize={512}
+          maxDecibels={-10}
+          minDecibels={-80}
+          smoothingTimeConstant={0.4}
+        />
+
+        <div className="flex items-center gap-3">
+          <EjIconButton
+            size={40}
+            onClick={(event) => {
+              event.preventDefault();
+              togglePauseResume();
+            }}
+            data-tooltip-id="global-tooltip"
+            data-tooltip-content={isPaused ? t("continue") : t("pause")}
           >
             {isPaused ? (
-              <PlayIcon
-                data-tooltip-id="global-tooltip"
-                data-tooltip-content={t("continue")}
-                fill="white"
-                className="w-4 h-4"
-              />
+              <PlayIcon className="size-4" />
             ) : (
-              <PauseIcon
-                data-tooltip-id="global-tooltip"
-                data-tooltip-content={t("pause")}
-                fill="white"
-                className="w-4 h-4"
-              />
+              <PauseIcon className="size-4" />
             )}
-          </Button>
-          <Button
+          </EjIconButton>
+          <button
+            type="button"
             data-tooltip-id="global-tooltip"
             data-tooltip-content={t("finish")}
-            onClick={stopRecording}
-            className="rounded-full bg-green-500 hover:bg-green-600 shadow w-8 h-8"
-            size="icon"
+            onClick={(event) => {
+              event.preventDefault();
+              stopRecording();
+            }}
+            className="flex size-11 items-center justify-center rounded-full bg-ej-ok text-white shadow-ej transition-opacity duration-ej hover:opacity-90"
           >
-            <CheckIcon className="w-4 h-4 text-white" />
-          </Button>
+            <CheckIcon className="size-5" />
+          </button>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="w-full flex items-center gap-4 justify-center">
-      <Button
+    <div className="flex flex-col items-center gap-3 py-6">
+      <button
+        type="button"
         data-tooltip-id="global-tooltip"
         data-tooltip-content={t("record")}
         disabled={submitting}
-        onClick={(event) => {
+        onClick={async (event) => {
           event.preventDefault();
-          onStart && onStart();
+          if (onStart && !(await onStart())) return;
           if (access) {
             startRecording();
           } else {
             askForMediaAccess();
           }
         }}
-        className="rounded-full shadow w-10 h-10"
-        size="icon"
+        className="flex size-16 items-center justify-center rounded-full bg-ej-accent text-white shadow-ej transition-transform duration-ej hover:scale-105 disabled:opacity-50"
       >
         {submitting ? (
-          <LoaderIcon className="w-6 h-6 animate-spin" />
+          <LoaderIcon className="size-6 animate-spin" />
         ) : (
-          <MicIcon className="w-6 h-6" />
+          <MicIcon className="size-6" />
         )}
-      </Button>
+      </button>
+      <p className="text-xxs text-ej-muted">{t("tapToStartRecording")}</p>
     </div>
   );
 };

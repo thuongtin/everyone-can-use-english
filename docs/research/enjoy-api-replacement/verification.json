@@ -1,0 +1,112 @@
+{
+  "reviewedAt": "2026-09-08",
+  "scope": "Source and official documentation research plus live OpenRouter ASR/TTS/LLM/image probes and verified offline local runtime. No speech-provider implementation or full app E2E.",
+  "sourceHashes": {
+    "enjoy/src/api/client.ts": "5c4f4c453fd2a24539617dbcbee971acb8fbd86ea5fde52fd0fcac4d99310878",
+    "enjoy/src/renderer/hooks/use-transcribe.tsx": "025139087dc5171606cb1e9e6b4301c84c9a7034eaeb54e0e47aa3efc2353ae9",
+    "enjoy/src/renderer/hooks/use-transcriptions.tsx": "139ef33801ff0470697fcc868968574bb9563ec3398570634468043a615fbee9",
+    "enjoy/src/renderer/hooks/use-speech.tsx": "f5c58ac5884c1e4ba6f460373c824554cf9f413ec4b9461aafccc9d1191396d3",
+    "enjoy/src/renderer/hooks/use-pronunciation-assessments.tsx": "b633551c6e6007b797c1045f3ca0373dbe4af86e28c8755509e5c6d47eb04fae",
+    "enjoy/src/renderer/context/ai-settings-provider.tsx": "3e53b4bda77932ab1fc48f6dcfa13d7ee835fe7c2a76315d81ff167cc0633e87",
+    "enjoy/src/main/learning/speech-configuration.ts": "bb92c182e8de195356a77c53ee6d2a70150c1776183572bf9ccb0fca90f48f87",
+    "enjoy/src/constants/runtime.ts": "2e898c8e20a3cb7df06c687c7b03379a41a8943e02079bbd4cb55c2757e26dd0"
+  },
+  "documentationLinkValidation": {
+    "missing": [],
+    "invalid": []
+  },
+  "documents": {
+    "2026-09-08-asr-live.md": "ce2900c3981a0e1378d42a4b77eeebe17751473046bd42a8750828965cf5ab36",
+    "2026-09-08-endpoint-inventory.md": "d5dd2507c1f2f06766dffe35e961b1198f78d88a89c5a848c796660b8998ade4",
+    "2026-09-08-live-tests.md": "132765b36551c6959222757f91aba86dca0524d2a70debfa4f2a8755db2a8650",
+    "2026-09-08-llm-live.md": "b11771dc3b87f5b88fb4699b0ac5aa59a78f279697a13ac78b0e1d5b865c6d2a",
+    "2026-09-08-local-live.md": "e8cd1a4a227672c40b1a69e01c9b90c87fccc70a4683899cf416ba88f9f3dbf2",
+    "2026-09-08-report.md": "04eb89924d6ff145aa1f2034633ac38d25a119017aae1c0230a53991668135b8",
+    "2026-09-08-sources.md": "e335ce09cccede9de3bb8d672af46ae01dd3ad8bc0e8737fb84ba5da8e5a4eef",
+    "2026-09-08-speech-contracts.md": "89a6cd0c3d779874f8719c6a6583366bf3c33e4d4e22ca9429418a1f9838479f",
+    "2026-09-08-tts-live.md": "09e6d43b281b9dce3d071379f6aa4e93a56fc0c5f84a7d8eede4db06e030f2ad",
+    "README.md": "af06b041eba39b10523488c1b328d095565397916164701898b190071b2e7be1"
+  },
+  "inventoryCounts": {
+    "clientHttpInvocations": 70,
+    "appendixRows": 70,
+    "uniqueHttpMethodRouteTemplates": 69,
+    "uniqueCountMethod": "Manual route-template normalization; consume/revoke share PUT speech token route"
+  },
+  "checks": {
+    "noU2014InNewReports": true,
+    "noTrailingWhitespaceInNewReports": true,
+    "modelInferenceExecuted": true,
+    "applicationCodeChangedByThisResearch": false,
+    "enjoyOrInferenceApiCallsExecuted": true,
+    "publicDocumentationRead": true,
+    "enjoyApiCalled": false,
+    "liveSourcesStillMatchAuditHashes": true,
+    "temporaryKeyFileRemoved": true,
+    "secretPatternFiles": [],
+    "localRun2RawHashesMatch": true,
+    "localNetworkControlErrno": 1,
+    "localDynamicPredicatesPassed": 47,
+    "localInformationalPredicates": 2
+  },
+  "independentReview": {
+    "model": "gpt-5.6-sol",
+    "scope": "Bounded targeted source and report consistency review",
+    "p0p1Findings": 0,
+    "p2Findings": 1,
+    "resolved": "Unified raw artifact policy with provider schema version, revision retention and conditional reprocessing; parent verified both report contracts after edit",
+    "remainingFindings": 0
+  },
+  "liveAcceptance": {
+    "asrModels": 20,
+    "asrJfkSuccessful": 20,
+    "asrJfkWithWordTimestamps": 8,
+    "asrDeepProbes": 18,
+    "asrKnownSilenceFailures": [
+      "qwen/qwen3-asr-0.6b",
+      "openai/whisper-1"
+    ],
+    "ttsModels": 18,
+    "ttsDirectMp3Successful": 17,
+    "ttsPcmTranscodeSuccessful": 1,
+    "ttsEnglishRoundtripSuccessful": 18,
+    "ttsVietnameseRoundtripSuccessful": 1,
+    "ttsVietnameseRoundtripTested": 3,
+    "llmModels": 3,
+    "directLlmCasesPassed": 18,
+    "actualEnjoyFactoryCasesPassed": 9,
+    "imageSuccessful": 1,
+    "localOperationsPassed": 5,
+    "appEndToEndTested": false
+  },
+  "liveBilling": {
+    "currency": "USD",
+    "keyUsageBefore": 0,
+    "keyUsageAfter": 0.083797509,
+    "keyUsageDelta": 0.083797509,
+    "checkedAt": "2026-09-08T07:06:17.766362+00:00",
+    "receiptCosts": {
+      "asrBaselineDeepStyles": 0.020192550465555556,
+      "asrTtsRoundtrip": 0.002904861111111111,
+      "ttsSynthesis": 0.02841992,
+      "llmDirect": 0.0172452,
+      "llmFactoryCaptured": 0.0064532,
+      "image": 0.002291
+    },
+    "receiptTotal": 0.07750673157666667,
+    "unallocatedDelta": 0.006290777423333338,
+    "unallocatedExplanation": "An earlier nine-command factory run completed before receipt interception; its per-request usage was not retained. Any failed or timed-out request without a receipt cannot be allocated precisely. Key delta covers the full shared test interval, not only one modality."
+  },
+  "liveIndependentReview": {
+    "model": "gpt-5.6-sol",
+    "p0p1Findings": 0,
+    "p2Findings": 2,
+    "p2Resolved": [
+      "Added independent output predicates and verified local rerun",
+      "Added sandbox command receipt and EPERM network control"
+    ],
+    "p3Reassessed": "Caption fallback is not sufficient for Copy IPA; raw Whisper lacks token.timeline. Report now distinguishes consumers and retains DTW requirement.",
+    "remainingFindings": 0,
+    "parentVerifiedRun2Hashes": true
+  }
+}

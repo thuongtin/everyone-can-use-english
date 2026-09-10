@@ -35,10 +35,14 @@ import { ChevronDownIcon, ChevronUpIcon, LoaderIcon } from "lucide-react";
 import { parseText } from "media-captions";
 import { milisecondsToTimestamp } from "@/utils";
 import { SttEngineOptionEnum } from "@/types/enums";
+import {
+  LEARNING_ASR_ENGINES,
+  resolveLearningAsrEngine,
+} from "@/lib/learning-asr-models";
 
 const transcriptionSchema = z.object({
   language: z.string(),
-  service: z.union([z.nativeEnum(SttEngineOptionEnum), z.literal("upload")]),
+  service: z.union([z.enum(LEARNING_ASR_ENGINES), z.literal("upload")]),
   text: z.string().optional(),
   isolate: z.boolean().optional(),
 });
@@ -48,11 +52,13 @@ export const TranscriptionCreateForm = (props: {
   originalText?: string;
   onCancel?: () => void;
   transcribing: boolean;
+  committing?: boolean;
   transcribingProgress: number;
   transcribingOutput: string;
 }) => {
   const {
     transcribing = false,
+    committing = false,
     transcribingProgress = 0,
     transcribingOutput,
     onSubmit,
@@ -60,15 +66,17 @@ export const TranscriptionCreateForm = (props: {
     originalText,
   } = props;
   const { learningLanguage } = useContext(AppSettingsProviderContext);
-  const { sttEngine, echogardenSttConfig } = useContext(
-    AISettingsProviderContext
-  );
+  const { sttEngine } = useContext(AISettingsProviderContext);
 
   const form = useForm<z.infer<typeof transcriptionSchema>>({
     resolver: zodResolver(transcriptionSchema),
     values: {
       language: learningLanguage,
-      service: originalText ? "upload" : sttEngine,
+      service: (originalText
+        ? "upload"
+        : resolveLearningAsrEngine(sttEngine) || "") as z.infer<
+        typeof transcriptionSchema
+      >["service"],
       text: originalText,
       isolate: false,
     },
@@ -105,7 +113,7 @@ export const TranscriptionCreateForm = (props: {
         } else {
           // Write cues to text in SRT format
           text = caption.cues
-            .map((cue, _) => {
+            .map((cue) => {
               return `${milisecondsToTimestamp(
                 cue.startTime * 1000
               )} --> ${milisecondsToTimestamp(cue.endTime * 1000)}\n${
@@ -139,7 +147,7 @@ export const TranscriptionCreateForm = (props: {
     // Remove all lines with only spaces
     return text
       .replace(
-        /(\d{2}:\d{2}:\d{2}[,\.]\d{3}(\s+-->\s+\d{2}:\d{2}:\d{2}[,\.]\d{3})?)\s+/g,
+        /(\d{2}:\d{2}:\d{2}[,.]\d{3}(\s+-->\s+\d{2}:\d{2}:\d{2}[,.]\d{3})?)\s+/g,
         ""
       )
       .replace(/#.*\n/g, "")
@@ -164,18 +172,27 @@ export const TranscriptionCreateForm = (props: {
                 value={field.value}
                 onValueChange={field.onChange}
               >
-                <SelectTrigger>
+                <SelectTrigger data-testid="transcription-service-select">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value={SttEngineOptionEnum.LOCAL}>
-                    {t("local")}
+                  <SelectItem
+                    value={SttEngineOptionEnum.CLOUDFLARE_WORKERS_AI}
+                    data-testid="transcription-service-cloudflare-worker"
+                  >
+                    {t("cloudflareWorkerTranscribeName")}
                   </SelectItem>
-                  <SelectItem value={SttEngineOptionEnum.ENJOY_AZURE}>
-                    {t("enjoyAzure")}
+                  <SelectItem
+                    value={SttEngineOptionEnum.MAI_TRANSCRIBE}
+                    data-testid="transcription-service-mai"
+                  >
+                    {t("maiTranscribeName")}
                   </SelectItem>
-                  <SelectItem value={SttEngineOptionEnum.ENJOY_CLOUDFLARE}>
-                    {t("enjoyCloudflare")}
+                  <SelectItem value={SttEngineOptionEnum.AZURE_MAI} data-testid="stt-engine-azure-mai">
+                    {t("azureMaiTranscribeName")}
+                  </SelectItem>
+                  <SelectItem value={SttEngineOptionEnum.AZURE_SPEECH} data-testid="stt-engine-azure-speech">
+                    {t("azureFastTranscribeName")}
                   </SelectItem>
                   <SelectItem value={SttEngineOptionEnum.OPENAI}>
                     OpenAI
@@ -184,31 +201,29 @@ export const TranscriptionCreateForm = (props: {
                 </SelectContent>
               </Select>
               <FormDescription>
-                {form.watch("service") === SttEngineOptionEnum.LOCAL &&
-                  echogardenSttConfig && (
+                {(form.watch("service") === SttEngineOptionEnum.AZURE_MAI ||
+                  form.watch("service") === SttEngineOptionEnum.AZURE_SPEECH) && t("azureTranscribeDescription")}
+                {form.watch("service") === SttEngineOptionEnum.OPENAI &&
+                  t("openaiSpeechToTextDescription")}
+                {form.watch("service") ===
+                  SttEngineOptionEnum.MAI_TRANSCRIBE &&
+                  (
                     <>
-                      <div>{t("localSpeechToTextDescription")}</div>
-                      <div>
-                        * {t("model")}: {echogardenSttConfig.engine} /{" "}
-                        {
-                          echogardenSttConfig[
-                            echogardenSttConfig.engine?.replace(
-                              ".cpp",
-                              "Cpp"
-                            ) as "whisper" | "whisperCpp"
-                          ]?.model
-                        }
+                      <div>{t("maiTranscribeDescription")}</div>
+                      <div data-testid="mai-transcribe-model">
+                        * {t("model")}: microsoft/mai-transcribe-2
                       </div>
                     </>
                   )}
-
-                {form.watch("service") === SttEngineOptionEnum.ENJOY_AZURE &&
-                  t("enjoyAzureSpeechToTextDescription")}
                 {form.watch("service") ===
-                  SttEngineOptionEnum.ENJOY_CLOUDFLARE &&
-                  t("enjoyCloudflareSpeechToTextDescription")}
-                {form.watch("service") === SttEngineOptionEnum.OPENAI &&
-                  t("openaiSpeechToTextDescription")}
+                  SttEngineOptionEnum.CLOUDFLARE_WORKERS_AI && (
+                  <>
+                    <div>{t("cloudflareWorkerTranscribeDescription")}</div>
+                    <div data-testid="cloudflare-worker-transcription-model">
+                      * {t("model")}: @cf/openai/whisper-large-v3-turbo
+                    </div>
+                  </>
+                )}
                 {form.watch("service") === "upload" &&
                   t("uploadSpeechToTextDescription")}
               </FormDescription>
@@ -341,19 +356,29 @@ export const TranscriptionCreateForm = (props: {
         <TranscribeProgress
           service={form.watch("service")}
           transcribing={transcribing}
+          committing={committing}
           transcribingProgress={transcribingProgress}
           transcribingOutput={transcribingOutput}
         />
 
         <div className="flex justify-end space-x-4">
-          {onCancel && !transcribing && (
-            <Button type="reset" variant="outline" onClick={onCancel}>
-              {t("cancel")}
+          {onCancel && (
+            <Button
+              type="reset"
+              variant="outline"
+              onClick={onCancel}
+              disabled={committing}
+            >
+              {committing
+                ? t("saving")
+                : transcribing
+                  ? t("cancelTranscription")
+                  : t("cancel")}
             </Button>
           )}
           <Button
             data-testid="transcribe-continue-button"
-            disabled={transcribing}
+            disabled={transcribing || !form.watch("service")}
             type="submit"
             variant="default"
           >
@@ -369,25 +394,39 @@ export const TranscriptionCreateForm = (props: {
 const TranscribeProgress = (props: {
   service: string;
   transcribing: boolean;
+  committing?: boolean;
   transcribingProgress: number;
   transcribingOutput?: string;
 }) => {
-  const { service, transcribing, transcribingProgress, transcribingOutput } =
-    props;
+  const {
+    service,
+    transcribing,
+    committing = false,
+    transcribingProgress,
+    transcribingOutput,
+  } = props;
   if (!transcribing) return null;
 
   return (
-    <div className="mb-4 space-y-2">
+    <div className="mb-4 space-y-2" data-testid="transcription-progress">
       <div className="flex items-center space-x-4 mb-2">
         <PingPoint colorClassName="bg-yellow-500" />
-        <span>{t("transcribing")}</span>
+        <span>{committing ? t("saving") : t("transcribing")}</span>
       </div>
-      {service === "local" && transcribingProgress > 0 && (
-        <Progress value={transcribingProgress} />
+      {(service === "local" ||
+        service === SttEngineOptionEnum.AZURE_MAI ||
+        service === SttEngineOptionEnum.AZURE_SPEECH ||
+        service === SttEngineOptionEnum.MAI_TRANSCRIBE ||
+        service === SttEngineOptionEnum.CLOUDFLARE_WORKERS_AI) &&
+        transcribingProgress > 0 && (
+        <Progress
+          value={transcribingProgress}
+          data-testid="mai-transcribe-progress"
+        />
       )}
       {transcribingOutput && (
         <div className="max-w-full rounded-lg border bg-zinc-950 p-3 dark:bg-zinc-900 h-20 overflow-y-auto">
-          <code className="px-[0.3rem] py-[0.2rem] rounded text-muted-foreground font-mono text-xs break-words">
+          <code className="px-[0.3rem] py-[0.2rem] rounded text-ej-muted font-mono text-xs break-words">
             {transcribingOutput}
           </code>
         </div>

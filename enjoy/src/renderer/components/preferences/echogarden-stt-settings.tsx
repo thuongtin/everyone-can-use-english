@@ -101,7 +101,7 @@ export const EchogardenSttSettings = (props: {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)}>
-        <div className="text-sm text-muted-foreground space-y-3 mb-4">
+        <div className="text-sm text-ej-muted space-y-3 mb-4">
           <FormField
             control={form.control}
             name="engine"

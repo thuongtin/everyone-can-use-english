@@ -24,5 +24,5 @@ hero:
       link: /self-training/00-intro
     - theme: alt
       text: Enjoy App
-      link: https://enjoy.bot
+      link: /enjoy-app/install
 ---

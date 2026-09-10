@@ -14,10 +14,7 @@ import {
   AfterFind,
 } from "sequelize-typescript";
 import mainWindow from "@main/window";
-import { Recording, UserSetting } from "@main/db/models";
-import { Client } from "@/api";
-import settings from "@main/settings";
-import log from "@main/logger";
+import { Recording } from "@main/db/models";
 
 @Table({
   modelName: "PronunciationAssessment",
@@ -99,18 +96,6 @@ export class PronunciationAssessment extends Model<PronunciationAssessment> {
     return Boolean(this.syncedAt) && this.syncedAt >= this.updatedAt;
   }
 
-  async sync() {
-    const webApi = new Client({
-      baseUrl: settings.apiUrl(),
-      accessToken: (await UserSetting.accessToken()) as string,
-      logger: log.scope("api/client"),
-    });
-
-    return webApi.syncPronunciationAssessment(this.toJSON()).then(() => {
-      this.update({ syncedAt: new Date() });
-    });
-  }
-
   @AfterFind
   static async findTarget(
     findResult: PronunciationAssessment | PronunciationAssessment[]
@@ -126,11 +111,6 @@ export class PronunciationAssessment extends Model<PronunciationAssessment> {
       delete instance.recording;
       delete instance.dataValues.recording;
     }
-  }
-
-  @AfterCreate
-  static autoSync(pronunciationAssessment: PronunciationAssessment) {
-    pronunciationAssessment.sync().catch(() => {});
   }
 
   @AfterCreate

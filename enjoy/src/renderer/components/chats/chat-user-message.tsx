@@ -14,9 +14,9 @@ import {
   CopilotForwarder,
   MarkdownWrapper,
   PronunciationAssessmentScoreDetail,
-  WavesurferPlayer,
 } from "@renderer/components";
-import { formatDateTime } from "@renderer/lib/utils";
+import { cn, formatDateTime } from "@renderer/lib/utils";
+import { scoreChipClass } from "@renderer/lib/design";
 import { t } from "i18next";
 import {
   CheckIcon,
@@ -32,7 +32,6 @@ import {
   MicIcon,
   MoreHorizontalIcon,
   SparklesIcon,
-  Volume2Icon,
 } from "lucide-react";
 import { useContext, useEffect, useRef, useState } from "react";
 import {
@@ -43,20 +42,20 @@ import { useAiCommand } from "@renderer/hooks";
 import { md5 } from "js-md5";
 import { useCopyToClipboard } from "@uidotdev/usehooks";
 import { ChatMessageRoleEnum, ChatMessageStateEnum } from "@/types/enums";
+import { EjAudioBubble, EjIconButton } from "@renderer/components/enjoy";
 
 export const ChatUserMessage = (props: {
   chatMessage: ChatMessageType;
   isLastMessage: boolean;
 }) => {
   const { chatMessage, isLastMessage } = props;
-  const { recording } = chatMessage;
   const ref = useRef<HTMLDivElement>(null);
   const [editing, setEditing] = useState<boolean>(false);
   const [content, setContent] = useState<string>(chatMessage.content);
   const { updateMessage, askAgent, submitting, asking } = useContext(
     ChatSessionProviderContext
   );
-  const [displayPlayer, setDisplayPlayer] = useState(false);
+  const pending = chatMessage.state === ChatMessageStateEnum.PENDING;
 
   useEffect(() => {
     if (ref.current) {
@@ -75,127 +74,128 @@ export const ChatUserMessage = (props: {
   }, [chatMessage]);
 
   return (
-    <div ref={ref}>
-      <div className="flex justify-end">
-        <div className="w-full max-w-prose">
-          <div
-            className={`flex flex-col gap-2 px-3 py-2 mb-2 rounded-lg shadow-sm w-full ${
-              chatMessage.state === ChatMessageStateEnum.PENDING
-                ? "bg-sky-500/30 border-sky-500"
-                : "bg-muted"
-            }`}
-          >
-            <ChatUserMessageRecording
-              chatMessage={chatMessage}
-              displayPlayer={displayPlayer}
-              setDisplayPlayer={setDisplayPlayer}
-            />
-            {editing ? (
-              <div className="">
-                <Textarea
-                  className="bg-background mb-2"
-                  value={content}
-                  onChange={(event) => setContent(event.target.value)}
-                />
-                <div className="flex justify-end space-x-4">
-                  <Button
-                    onClick={() => setEditing(false)}
-                    variant="secondary"
-                    size="sm"
-                  >
-                    {t("cancel")}
-                  </Button>
-                  <Button
-                    onClick={() =>
-                      updateMessage(chatMessage.id, { content }).finally(() =>
-                        setEditing(false)
-                      )
-                    }
-                    variant="default"
-                    size="sm"
-                  >
-                    {t("save")}
-                  </Button>
-                </div>
+    <div ref={ref} className="flex justify-end mb-6">
+      <div className="w-full max-w-[85%] flex flex-col items-end">
+        <div
+          className={cn(
+            "w-fit max-w-full px-3.5 py-2.5 rounded-[16px_16px_4px_16px] border",
+            pending
+              ? "bg-ej-hl border-ej-hl-ink/20"
+              : "bg-ej-accent-soft border-ej-accent-soft2"
+          )}
+        >
+          <ChatUserMessageRecording chatMessage={chatMessage} />
+
+          {editing ? (
+            <div>
+              <Textarea
+                className="bg-ej-surface mb-2 text-[15px]"
+                value={content}
+                onChange={(event) => setContent(event.target.value)}
+              />
+              <div className="flex justify-end gap-2">
+                <Button
+                  onClick={() => setEditing(false)}
+                  variant="secondary"
+                  size="sm"
+                  className="rounded-full h-7 px-3 text-xs"
+                >
+                  {t("cancel")}
+                </Button>
+                <Button
+                  onClick={() =>
+                    updateMessage(chatMessage.id, { content }).finally(() =>
+                      setEditing(false)
+                    )
+                  }
+                  variant="default"
+                  size="sm"
+                  className="rounded-full h-7 px-3 text-xs"
+                >
+                  {t("save")}
+                </Button>
               </div>
-            ) : (
-              <MarkdownWrapper className="select-text prose dark:prose-invert">
+            </div>
+          ) : (
+            Boolean(chatMessage.content) && (
+              <MarkdownWrapper className="select-text prose ej-prose max-w-full text-[15px] leading-[1.65] text-ej-ink">
                 {chatMessage.content}
               </MarkdownWrapper>
-            )}
+            )
+          )}
+        </div>
 
-            <ChatUserMessageActions
-              chatMessage={chatMessage}
-              setContent={setContent}
-              setEditing={setEditing}
+        <ChatUserMessageActions
+          chatMessage={chatMessage}
+          setContent={setContent}
+          setEditing={setEditing}
+        />
+
+        {pending && !submitting && !asking && (
+          <div className="mt-1.5 flex items-center gap-2">
+            <InfoIcon
+              data-tooltip-id={`${chatMessage.chatId}-tooltip`}
+              data-tooltip-content={t("confirmBeforeSending")}
+              className="size-3.5 text-ej-warn"
             />
-            {chatMessage.state === ChatMessageStateEnum.PENDING &&
-              !submitting &&
-              !asking && (
-                <div className="flex justify-end items-center space-x-2">
-                  <InfoIcon
-                    data-tooltip-id={`${chatMessage.chatId}-tooltip`}
-                    data-tooltip-content={t("confirmBeforeSending")}
-                    className="w-4 h-4 text-yellow-600"
-                  />
-                  <Button
-                    disabled={submitting || Boolean(asking)}
-                    onClick={() => askAgent()}
-                    variant="default"
-                    size="sm"
-                  >
-                    {t("send")}
-                  </Button>
-                </div>
-              )}
+            <button
+              type="button"
+              disabled={submitting || Boolean(asking)}
+              onClick={() => askAgent()}
+              className="h-7 px-4 rounded-full bg-ej-ink text-ej-bg text-xs font-semibold transition-opacity duration-ej hover:opacity-90 disabled:opacity-40 disabled:pointer-events-none"
+            >
+              {t("send")}
+            </button>
           </div>
-          <div className="flex justify-end text-xs text-muted-foreground timestamp">
-            {formatDateTime(chatMessage.createdAt)}
-          </div>
+        )}
+
+        <div className="mt-1 text-xxxs text-ej-muted timestamp">
+          {formatDateTime(chatMessage.createdAt)}
         </div>
       </div>
     </div>
   );
 };
 
-const ChatUserMessageRecording = (props: {
-  chatMessage: ChatMessageType;
-  displayPlayer: boolean;
-  setDisplayPlayer: (value: boolean) => void;
-}) => {
-  const { chatMessage, displayPlayer, setDisplayPlayer } = props;
+const ChatUserMessageRecording = (props: { chatMessage: ChatMessageType }) => {
+  const { chatMessage } = props;
   const { recording } = chatMessage;
+  const [displayScoreDetail, setDisplayScoreDetail] = useState(false);
+  const assessment = recording?.pronunciationAssessment;
+  const score = assessment?.pronunciationScore;
 
   if (!recording?.src) return null;
 
-  if (displayPlayer) {
-    return (
-      <>
-        <WavesurferPlayer
-          id={recording.id}
-          src={recording.src}
-          autoplay={true}
-        />
-        {recording?.pronunciationAssessment && (
-          <div className="flex justify-end">
-            <PronunciationAssessmentScoreDetail
-              assessment={recording.pronunciationAssessment}
-            />
-          </div>
-        )}
-      </>
-    );
-  }
-
   return (
-    <Button
-      onClick={() => setDisplayPlayer(true)}
-      className="w-8 h-8"
-      variant="ghost"
-      size="icon"
-    >
-      <Volume2Icon className="w-5 h-5" />
-    </Button>
+    <div className={cn("min-w-0", Boolean(chatMessage.content) && "mb-2")}>
+      <EjAudioBubble
+        id={recording.id}
+        src={recording.src}
+        waveWidth={180}
+        className="bg-ej-surface border-ej-accent-soft2"
+        trailing={
+          typeof score === "number" ? (
+            <button
+              type="button"
+              title={t("pronunciationAssessment")}
+              onClick={() => setDisplayScoreDetail(!displayScoreDetail)}
+              className={cn(
+                "shrink-0 h-6 px-2 rounded-full text-xs font-semibold ej-tabular",
+                scoreChipClass(score)
+              )}
+            >
+              {Math.round(score)}
+            </button>
+          ) : null
+        }
+      />
+
+      {displayScoreDetail && assessment && (
+        <div className="mt-2 rounded-ej border border-ej-line bg-ej-surface p-3">
+          <PronunciationAssessmentScoreDetail assessment={assessment} />
+        </div>
+      )}
+    </div>
   );
 };
 
@@ -307,140 +307,152 @@ const ChatUserMessageActions = (props: {
         if (err) toast.error(err.message);
       });
   };
+
   return (
     <>
       <DropdownMenu>
-        <div className="flex items-center justify-end space-x-4">
+        <div className="mt-1 flex items-center justify-end gap-0.5 -mr-1.5">
           {chatMessage.state === ChatMessageStateEnum.PENDING && (
             <>
-              <EditIcon
+              <EjIconButton
                 data-tooltip-id="global-tooltip"
                 data-tooltip-content={t("edit")}
-                className={`w-4 h-4 ${
-                  submitting ? "cursor-not-allowed" : "cursor-pointer"
-                }`}
+                disabled={submitting}
                 onClick={() => {
                   if (submitting) return;
                   setContent(chatMessage.content);
                   setEditing(true);
                 }}
-              />
-              <MicIcon
+              >
+                <EditIcon className="size-4" />
+              </EjIconButton>
+              <EjIconButton
                 data-tooltip-id="global-tooltip"
                 data-tooltip-content={t("reRecord")}
-                className={`w-4 h-4 ${
-                  submitting || isPaused || isRecording
-                    ? "cursor-not-allowed"
-                    : "cursor-pointer"
-                }`}
+                disabled={submitting || isPaused || isRecording}
                 onClick={startRecording}
-              />
+              >
+                <MicIcon className="size-4" />
+              </EjIconButton>
             </>
           )}
+
           {chatMessage.recording &&
             (assessing ? (
-              <LoaderIcon className="w-4 h-4 animate-spin" />
+              <EjIconButton disabled>
+                <LoaderIcon className="size-4 animate-spin" />
+              </EjIconButton>
             ) : (
-              <GaugeCircleIcon
+              <EjIconButton
                 data-tooltip-id="global-tooltip"
                 data-tooltip-content={t("pronunciationAssessment")}
                 onClick={() => setAssessing(recording)}
-                className="w-4 h-4 cursor-pointer"
-              />
+              >
+                <GaugeCircleIcon className="size-4" />
+              </EjIconButton>
             ))}
+
           {refining ? (
-            <LoaderIcon className="w-4 h-4 animate-spin" />
+            <EjIconButton disabled>
+              <LoaderIcon className="size-4 animate-spin" />
+            </EjIconButton>
           ) : (
-            <SparklesIcon
+            <EjIconButton
               data-tooltip-id="global-tooltip"
               data-tooltip-content={t("refine")}
-              className="w-4 h-4 cursor-pointer"
+              active={Boolean(refinement)}
               onClick={() => handleRefine()}
-            />
+            >
+              <SparklesIcon className="size-4" />
+            </EjIconButton>
           )}
+
           {chatMessage.state === ChatMessageStateEnum.COMPLETED && (
             <>
-              {copied ? (
-                <CheckIcon className="w-4 h-4 text-green-500" />
-              ) : (
-                <CopyIcon
-                  data-tooltip-id="global-tooltip"
-                  data-tooltip-content={t("copyText")}
-                  className="w-4 h-4 cursor-pointer"
-                  onClick={() => {
-                    copyToClipboard(chatMessage.content);
-                    setCopied(true);
-                    setTimeout(() => {
-                      setCopied(false);
-                    }, 3000);
-                  }}
-                />
-              )}
+              <EjIconButton
+                data-tooltip-id="global-tooltip"
+                data-tooltip-content={t("copyText")}
+                onClick={() => {
+                  copyToClipboard(chatMessage.content);
+                  setCopied(true);
+                  setTimeout(() => {
+                    setCopied(false);
+                  }, 3000);
+                }}
+              >
+                {copied ? (
+                  <CheckIcon className="size-4 text-ej-ok" />
+                ) : (
+                  <CopyIcon className="size-4" />
+                )}
+              </EjIconButton>
+
               <CopilotForwarder
                 prompt={chatMessage.content}
                 trigger={
-                  <ForwardIcon
+                  <EjIconButton
                     data-tooltip-id="global-tooltip"
                     data-tooltip-content={t("forward")}
-                    className="w-4 h-4 cursor-pointer"
-                  />
+                  >
+                    <ForwardIcon className="size-4" />
+                  </EjIconButton>
                 }
               />
+
               {Boolean(chatMessage.recording) && (
-                <DownloadIcon
+                <EjIconButton
                   data-tooltip-id="global-tooltip"
                   data-tooltip-content={t("download")}
                   data-testid="chat-message-download-recording"
                   onClick={handleDownload}
-                  className="w-4 h-4 cursor-pointer"
-                />
+                >
+                  <DownloadIcon className="size-4" />
+                </EjIconButton>
               )}
             </>
           )}
-          <DropdownMenuTrigger>
-            <MoreHorizontalIcon className="w-4 h-4" />
+
+          <DropdownMenuTrigger asChild>
+            <EjIconButton>
+              <MoreHorizontalIcon className="size-4" />
+            </EjIconButton>
           </DropdownMenuTrigger>
         </div>
-        <DropdownMenuContent>
+
+        <DropdownMenuContent align="end">
           <DropdownMenuItem
-            className="cursor-pointer"
+            className="cursor-pointer text-xs"
             onClick={() => deleteMessage(chatMessage.id)}
           >
-            <span className="mr-auto text-destructive capitalize">
-              {t("delete")}
-            </span>
+            <span className="mr-auto text-ej-bad">{t("delete")}</span>
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
+
       {refinement && (
-        <div className="w-full bg-background rounded mt-4">
+        <div className="mt-2 w-full rounded-ej border border-ej-line bg-ej-surface overflow-hidden">
           <Collapsible
             open={refinementVisible}
             onOpenChange={(value) => setRefinementVisible(value)}
           >
             <CollapsibleTrigger asChild>
-              <div className="flex items-center justify-between px-4 py-2 cursor-pointer">
-                <div className="flex items-center space-x-2">
-                  <SparklesIcon className="w-4 h-4" />
-                  <span className="text-sm">{t("refine")}</span>
+              <div className="flex items-center justify-between px-3.5 py-2.5 cursor-pointer">
+                <div className="flex items-center gap-2">
+                  <SparklesIcon className="size-3.5 text-ej-accent" />
+                  <span className="text-xs font-semibold text-ej-ink">
+                    {t("refine")}
+                  </span>
                 </div>
-                <Button
-                  onClick={() => setRefinementVisible(!refinementVisible)}
-                  variant="ghost"
-                  size="icon"
-                  className="w-6 h-6"
-                >
-                  {refinementVisible ? (
-                    <ChevronDownIcon className="w-4 h-4" />
-                  ) : (
-                    <ChevronRightIcon className="w-4 h-4" />
-                  )}
-                </Button>
+                {refinementVisible ? (
+                  <ChevronDownIcon className="size-4 text-ej-muted" />
+                ) : (
+                  <ChevronRightIcon className="size-4 text-ej-muted" />
+                )}
               </div>
             </CollapsibleTrigger>
             <CollapsibleContent>
-              <div className="p-4 font-sans border-t max-h-96 overflow-y-auto">
-                <MarkdownWrapper className="select-text prose dark:prose-invert">
+              <div className="px-3.5 py-3 border-t border-ej-line max-h-96 overflow-y-auto scroll">
+                <MarkdownWrapper className="select-text prose ej-prose max-w-full text-[13px] leading-[1.6] text-ej-ink2">
                   {refinement}
                 </MarkdownWrapper>
               </div>

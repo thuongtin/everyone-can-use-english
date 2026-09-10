@@ -1,3 +1,4 @@
+import { assertAllowedNetworkUrl, getNetworkPolicyDiagnostics } from "@/lib/network-policy";
 import {
   app,
   BrowserWindow,
@@ -11,16 +12,18 @@ import {
   autoUpdater,
 } from "electron";
 import path from "path";
+import { pathToFileURL } from "node:url";
+import { registerLearningIpc } from "./learning/ipc";
+import { registerAcpIpc } from "./agents/acp-ipc";
+import { registerLearningAsrIpc } from "./learning-asr/ipc";
+import { registerCloudflareTranscribeIpc } from "./cloudflare-transcribe";
 import db from "@main/db";
 import settings from "@main/settings";
 import downloader from "@main/downloader";
 import fs from "fs-extra";
 import log from "@main/logger";
 import {
-  DISCUSS_URL,
   DISTRIBUTION_CONFIG,
-  WEB_API_URL,
-  WS_URL,
 } from "@/constants";
 import { AudibleProvider, TedProvider, YoutubeProvider } from "@main/providers";
 import Ffmpeg from "@main/ffmpeg";
@@ -240,7 +243,8 @@ main.init = async () => {
       } = bounds;
       const { navigatable = false } = options || {};
 
-      logger.debug("view-load", url);
+      assertAllowedNetworkUrl(url, { transport: "webview", operation: "load" });
+      logger.debug("view-load", new URL(url).hostname);
       const view = new WebContentsView();
       mainWindow.contentView.addChildView(view);
 
@@ -305,95 +309,6 @@ main.init = async () => {
     }
   );
   
-  ipcMain.handle(
-    "view-load-community",
-    (
-      event,
-      bounds: { x: number; y: number; width: number; height: number },
-      options?: {
-        navigatable?: boolean;
-        accessToken?: string;
-        url?: string;
-        ssoUrl?: string;
-      }
-    ) => {
-      const {
-        x = 0,
-        y = 0,
-        width = mainWindow.getBounds().width,
-        height = mainWindow.getBounds().height,
-      } = bounds;
-      const { navigatable = false, accessToken, url = `${DISCUSS_URL}/login`, ssoUrl = `${WEB_API_URL}/discourse/sso` } = options || {};
-
-      logger.debug("view-load-community", url);
-      const view = new WebContentsView();
-      mainWindow.contentView.addChildView(view);
-
-      view.setBounds({
-        x: Math.round(x),
-        y: Math.round(y),
-        width: Math.round(width),
-        height: Math.round(height),
-      });
-
-      view.webContents.on("did-navigate", (_event, url) => {
-        event.sender.send("view-on-state", {
-          state: "did-navigate",
-          url,
-        });
-      });
-      view.webContents.on(
-        "did-fail-load",
-        (_event, _errorCode, errrorDescription, validatedURL) => {
-          event.sender.send("view-on-state", {
-            state: "did-fail-load",
-            error: errrorDescription,
-            url: validatedURL,
-          });
-          (view.webContents as any).destroy();
-          mainWindow.contentView.removeChildView(view);
-        }
-      );
-
-      view.webContents.on("will-redirect", (details) => {
-        const { url } = details;
-        event.sender.send("view-on-state", {
-          state: "will-redirect",
-          url,
-        });
-        // Login via SSO
-        if (url.includes(ssoUrl)) {
-          details.preventDefault();
-          // Auto login using access token
-          view.webContents.loadURL(url, {
-            extraHeaders: `Authorization: Bearer ${accessToken}\n`,
-          });
-          logger.debug("loading", url, "accessToken:", accessToken);
-        } else {
-          logger.debug("will-redirect", url);
-        }
-      });
-
-      view.webContents.on("will-navigate", (details) => {
-        const { url } = details;
-        event.sender.send("view-on-state", {
-          state: "will-navigate",
-          url,
-        });
-
-        logger.debug("will-navigate", url);
-
-        // Open in browser if not navigatable
-        if (!navigatable) {
-          logger.debug("prevent navigation", url);
-          details.preventDefault();
-          shell.openExternal(url);
-        }
-      });
-      view.webContents.loadURL(url);
-    }
-  );
-
   ipcMain.handle("view-resize", (_event, bounds: { x: number; y: number; width: number; height: number }) => {
     logger.debug("view-resize", bounds);
     const view = mainWindow.contentView.children[0];
@@ -445,7 +360,8 @@ main.init = async () => {
   );
 
   ipcMain.handle("view-scrape", (event, url) => {
-    logger.debug("view-scrape", url);
+    assertAllowedNetworkUrl(url, { transport: "webview", operation: "scrape" });
+    logger.debug("view-scrape", new URL(url).hostname);
     const view = new WebContentsView();
     view.setVisible(false);
     mainWindow.contentView.addChildView(view);
@@ -534,7 +450,7 @@ main.init = async () => {
   ipcMain.handle("app-reset", async () => {
     const userDataPath = settings.userDataPath();
 
-    await db.disconnect();
+    await db.shutdown();
 
     fs.removeSync(userDataPath);
     fs.removeSync(settings.file());
@@ -547,7 +463,8 @@ main.init = async () => {
     UserSetting.clear();
   });
 
-  ipcMain.handle("app-relaunch", () => {
+  ipcMain.handle("app-relaunch", async () => {
+    await db.shutdown();
     app.relaunch();
     app.exit();
   });
@@ -566,14 +483,7 @@ main.init = async () => {
     return app.isPackaged;
   });
 
-  ipcMain.handle("app-api-url", () => {
-    return settings.apiUrl();
-  });
-
-  ipcMain.handle("app-ws-url", () => {
-    const wsUrl = settings.getSync("wsUrl");
-    return process.env.WS_URL || wsUrl || WS_URL;
-  });
+  ipcMain.handle("app-network-policy-diagnostics", () => getNetworkPolicyDiagnostics());
 
   ipcMain.handle("app-quit", () => {
     app.quit();
@@ -716,9 +626,19 @@ ${log}
     });
   });
 
+  ipcMain.handle("app-disk-free", () => {
+    try {
+      const stat = fs.statfsSync(settings.libraryPath());
+      return stat.bsize * stat.bavail;
+    } catch (error) {
+      return 0;
+    }
+  });
+
   // Shell
   ipcMain.handle("shell-open-external", (_event, url) => {
-    shell.openExternal(url);
+    assertAllowedNetworkUrl(url, { transport: "external-browser", operation: "open" });
+    return shell.openExternal(url);
   });
 
   ipcMain.handle("shell-open-path", (_event, path) => {
@@ -868,6 +788,13 @@ ${log}
   };
 
   // and load the index.html of the app.
+  const mainFrameUrl = MAIN_WINDOW_VITE_DEV_SERVER_URL
+      ? new URL(MAIN_WINDOW_VITE_DEV_SERVER_URL).href
+      : pathToFileURL(path.join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}/index.html`)).href;
+  registerLearningAsrIpc(mainWindow, mainFrameUrl, () => db.learning);
+  registerCloudflareTranscribeIpc(mainWindow, mainFrameUrl);
+  registerLearningIpc(mainWindow, mainFrameUrl, () => db.learning);
+  registerAcpIpc(mainWindow, mainFrameUrl, () => db.learning);
   if (MAIN_WINDOW_VITE_DEV_SERVER_URL) {
     mainWindow.loadURL(MAIN_WINDOW_VITE_DEV_SERVER_URL);
 

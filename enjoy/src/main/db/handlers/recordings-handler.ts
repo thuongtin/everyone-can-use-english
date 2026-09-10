@@ -14,14 +14,11 @@ import {
 } from "sequelize";
 import dayjs from "dayjs";
 import { t } from "i18next";
-import log from "@main/logger";
 import { NIL as NIL_UUID } from "uuid";
 import FfmpegWrapper from "@main/ffmpeg";
 import path from "path";
 import settings from "@main/settings";
 import { enjoyUrlToPath, pathToEnjoyUrl } from "@main/utils";
-
-const logger = log.scope("db/handlers/recordings-handler");
 
 class RecordingsHandler {
   private async findAll(
@@ -59,48 +56,7 @@ class RecordingsHandler {
     if (!recording) {
       throw new Error(t("models.recording.notFound"));
     }
-    if (!recording.isSynced) {
-      recording.sync().catch(() => {});
-    }
-
     return recording.toJSON();
-  }
-
-  private async sync(_event: IpcMainEvent, id: string) {
-    const recording = await Recording.findOne({
-      where: {
-        id,
-      },
-    });
-
-    if (!recording) {
-      throw new Error(t("models.recording.notFound"));
-    }
-
-    return await recording.sync();
-  }
-
-  private async syncAll(event: IpcMainEvent) {
-    const recordings = await Recording.findAll({
-      where: { syncedAt: null },
-    });
-    if (recordings.length == 0) return;
-
-    event.sender.send("on-notification", {
-      type: "warning",
-      message: t("syncingRecordings", { count: recordings.length }),
-    });
-
-    try {
-      await Promise.all(recordings.map((recording) => recording.sync()));
-    } catch (err) {
-      logger.error("failed to sync recordings", err.message);
-
-      event.sender.send("on-notification", {
-        type: "error",
-        message: t("failedToSyncRecordings"),
-      });
-    }
   }
 
   private async create(
@@ -169,20 +125,6 @@ class RecordingsHandler {
     for (const recording of recordings) {
       await recording.softDelete();
     }
-  }
-
-  private async upload(_event: IpcMainEvent, id: string) {
-    const recording = await Recording.scope("withoutDeleted").findOne({
-      where: {
-        id,
-      },
-    });
-
-    if (!recording) {
-      throw new Error(t("models.recording.notFound"));
-    }
-
-    return await recording.upload();
   }
 
   private async stats(
@@ -445,12 +387,9 @@ class RecordingsHandler {
   register() {
     ipcMain.handle("recordings-find-all", this.findAll);
     ipcMain.handle("recordings-find-one", this.findOne);
-    ipcMain.handle("recordings-sync", this.sync);
-    ipcMain.handle("recordings-sync-all", this.syncAll);
     ipcMain.handle("recordings-create", this.create);
     ipcMain.handle("recordings-destroy", this.destroy);
     ipcMain.handle("recordings-destroy-bulk", this.destroyBulk);
-    ipcMain.handle("recordings-upload", this.upload);
     ipcMain.handle("recordings-stats", this.stats);
     ipcMain.handle("recordings-group-by-date", this.groupByDate);
     ipcMain.handle("recordings-group-by-target", this.groupByTarget);
@@ -462,12 +401,9 @@ class RecordingsHandler {
   unregister() {
     ipcMain.removeHandler("recordings-find-all");
     ipcMain.removeHandler("recordings-find-one");
-    ipcMain.removeHandler("recordings-sync");
-    ipcMain.removeHandler("recordings-sync-all");
     ipcMain.removeHandler("recordings-create");
     ipcMain.removeHandler("recordings-destroy");
     ipcMain.removeHandler("recordings-destroy-bulk");
-    ipcMain.removeHandler("recordings-upload");
     ipcMain.removeHandler("recordings-stats");
     ipcMain.removeHandler("recordings-group-by-date");
     ipcMain.removeHandler("recordings-group-by-target");

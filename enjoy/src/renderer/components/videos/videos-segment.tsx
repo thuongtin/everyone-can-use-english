@@ -3,10 +3,9 @@ import {
   DbProviderContext,
   AppSettingsProviderContext,
 } from "@renderer/context";
-import { Button, ScrollArea, ScrollBar } from "@renderer/components/ui";
 import { VideoCard, MediaAddButton } from "@renderer/components";
+import { EjSectionHeader, EjSeeAllLink } from "@renderer/components/enjoy";
 import { t } from "i18next";
-import { Link } from "react-router-dom";
 
 export const VideosSegment = (props: { limit?: number }) => {
   const { limit = 10 } = props;
@@ -43,39 +42,26 @@ export const VideosSegment = (props: { limit?: number }) => {
       setVideos(videos.filter((r) => r.id !== record.id));
     }
   };
+
   return (
-    <div>
-      <div className="flex items-start justify-between mb-4">
-        <div className="space-y-1">
-          <h2 className="text-2xl font-semibold tracking-tight capitalize">
-            {t("addedVideos")}
-          </h2>
-        </div>
-        <div className="ml-auto mr-4">
-          <Link to="/videos">
-            <Button variant="link" className="capitalize">
-              {t("seeMore")}
-            </Button>
-          </Link>
-        </div>
-      </div>
+    <section>
+      <EjSectionHeader
+        title={t("home.videos")}
+        count={t("home.videosCount", { count: videos.length })}
+        action={<EjSeeAllLink to="/videos" label={t("home.seeAll")} />}
+      />
 
       {videos.length === 0 ? (
-        <div className="flex items-center justify-center h-48 border border-dashed rounded-lg">
+        <div className="flex items-center justify-center h-40 rounded-ej-lg border border-dashed border-ej-line2 bg-ej-surface/40">
           <MediaAddButton type="Video" />
         </div>
       ) : (
-        <ScrollArea>
-          <div className="flex w-max items-center space-x-4 pb-4">
-            {videos.map((video) => {
-              return (
-                <VideoCard className="w-56" key={video.id} video={video} />
-              );
-            })}
-          </div>
-          <ScrollBar orientation="horizontal" />
-        </ScrollArea>
+        <div className="ej-row ej-row-wide pb-1">
+          {videos.map((video) => (
+            <VideoCard key={video.id} video={video} />
+          ))}
+        </div>
       )}
-    </div>
+    </section>
   );
 };

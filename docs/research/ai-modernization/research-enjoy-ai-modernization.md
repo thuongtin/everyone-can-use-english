@@ -19,6 +19,8 @@ pending_inputs: "paid provider/account checks and EN-VI quality benchmark are op
 
 # Nghiên cứu: hiện đại hóa AI cho Enjoy
 
+> Cập nhật 08/09/2026: yêu cầu hiện tại không còn sử dụng tài khoản Enjoy. [Báo cáo thay Enjoy API](../enjoy-api-replacement/2026-09-08-report.md) là cơ sở lựa chọn mới, gồm inventory endpoint và đối chiếu speech contracts. Tài liệu này được giữ làm hồ sơ đợt 06/09; các kết quả kiểm thử cũ không chứng minh việc thay Enjoy đã hoàn thành. Word timestamp của `gpt-transcribe` chưa được xem là tương đương `whisper-1` nếu thiếu kiểm thử model cụ thể.
+
 Đây là bản thảo hợp nhất ở ngày 2026-09-06 cho Enjoy Electron, tập trung vào người Việt học tiếng Anh. Phạm vi hiện tại đã có tài liệu API/model của OpenAI, Anthropic, Google Gemini, OpenRouter, DeepSeek, Groq, Ollama, LM Studio, whisper.cpp, faster-whisper, Apple Speech, Vercel AI SDK, LangChain và speech provider. Local research và architecture audit đã được merge. Không có paid API call, không đọc credential thật và không sửa repository trong quá trình research.
 
 ## Metadata nghiên cứu
@@ -172,7 +174,7 @@ Architecture audit là baseline trước source factory change: snapshot đó ch
 
 ## Audit code baseline trước thay đổi
 
-Audit source ngày 2026-09-06 được lưu tại [`architecture-baseline.md`](/Users/ethan/VibeCoding/everyone-can-use-english/docs/research/ai-modernization/architecture-baseline.md). Đây là baseline workspace trước source factory change, không phải URL vendor và không chứa credential value.
+Audit source ngày 2026-09-06 được lưu tại [`architecture-baseline.md`](architecture-baseline.md). Đây là baseline workspace trước source factory change, không phải URL vendor và không chứa credential value.
 
 ### Các mặt phẳng chat
 
@@ -452,7 +454,7 @@ Phạm vi bounded:
 
 Mock contract PASS không phải paid-provider PASS. Runtime smoke test chỉ được gọi PASS sau khi có key/quyền phù hợp và đọc lại response thực tế.
 
-Nghiệm thu implementation cuối: TypeScript, provider helper và localization 991 key PASS; runtime 21 trường hợp, migration 12 trường hợp và speech 9 trường hợp PASS. Review độc lập Task1, Task2, Task2b và Task3 đều PASS. Build/package và packaged verifier PASS. Packaged smoke E2E đạt 6 PASS với 3 native opt-in bị skip; AI settings E2E đạt 2 PASS, gồm bootstrap cấu hình cũ, key isolation, GPT/TTS/STT và khởi động lại. Các kiểm thử dùng transport giả và profile cô lập, chưa xác nhận quyền tài khoản provider, phản hồi model trả phí hoặc chất lượng học Anh-Việt. Đã thay bundle Enjoy và mở lại profile QA hiện có, native UI hiển thị Ethan, đủ 7 provider và giữ cấu hình cũ. Bản trước được giữ làm backup. Xem [nghiệm thu cuối](/Users/ethan/VibeCoding/everyone-can-use-english/.superpowers/sdd/2026-09-06-enjoy-ai-modernization/final-verification.md).
+Nghiệm thu implementation cuối: TypeScript, provider helper và localization 991 key PASS; runtime 21 trường hợp, migration 12 trường hợp và speech 9 trường hợp PASS. Review độc lập Task1, Task2, Task2b và Task3 đều PASS. Build/package và packaged verifier PASS. Packaged smoke E2E đạt 6 PASS với 3 native opt-in bị skip; AI settings E2E đạt 2 PASS, gồm bootstrap cấu hình cũ, key isolation, GPT/TTS/STT và khởi động lại. Các kiểm thử dùng transport giả và profile cô lập, chưa xác nhận quyền tài khoản provider, phản hồi model trả phí hoặc chất lượng học Anh-Việt. Đã thay bundle Enjoy và mở lại profile QA hiện có, native UI hiển thị Ethan, đủ 7 provider và giữ cấu hình cũ. Bản trước được giữ làm backup. Xem [nghiệm thu cuối](../../../.superpowers/sdd/2026-09-06-enjoy-ai-modernization/final-verification.md).
 
 ### Phase 2 sau khi có account evidence
 
@@ -762,7 +764,7 @@ Danh sách dưới đây gồm toàn bộ 93 canonical URL thành công sau exac
 
 Bản này đã merge đầy đủ source work trong các ledger OpenAI, chat provider, crosscheck, local/adapter và speech, cùng architecture baseline. Initial source count là 93 canonical URL references có initial ledger access, không phải 93 final content-verified references. Có 94 successful URL records và fetch events, 12 failed URL records tương ứng 13 failed fetch events. Reverification đã merge 56 unique URL groups và 59 per-ledger records; 55 canonical URLs sau khi loại redirect alias. Random round xử lý 36/36 URL, trong đó 35/36 content-verified và Apple canonical not-evaluable; fallback DocC JSON có một failed event. Research đã complete.
 
-Nghiệm thu implementation cuối: TypeScript, provider helper và localization 991 key PASS; runtime 21 trường hợp, migration 12 trường hợp và speech 9 trường hợp PASS. Review độc lập Task1, Task2, Task2b và Task3 đều PASS. Build/package và packaged verifier PASS. Packaged smoke E2E đạt 6 PASS với 3 native opt-in bị skip; AI settings E2E đạt 2 PASS, gồm bootstrap cấu hình cũ, key isolation, GPT/TTS/STT và khởi động lại. Các kiểm thử dùng transport giả và profile cô lập, chưa xác nhận quyền tài khoản provider, phản hồi model trả phí hoặc chất lượng học Anh-Việt. Đã thay bundle Enjoy và mở lại profile QA hiện có, native UI hiển thị Ethan, đủ 7 provider và giữ cấu hình cũ. Bản trước được giữ làm backup. Xem [nghiệm thu cuối](/Users/ethan/VibeCoding/everyone-can-use-english/.superpowers/sdd/2026-09-06-enjoy-ai-modernization/final-verification.md).
+Nghiệm thu implementation cuối: TypeScript, provider helper và localization 991 key PASS; runtime 21 trường hợp, migration 12 trường hợp và speech 9 trường hợp PASS. Review độc lập Task1, Task2, Task2b và Task3 đều PASS. Build/package và packaged verifier PASS. Packaged smoke E2E đạt 6 PASS với 3 native opt-in bị skip; AI settings E2E đạt 2 PASS, gồm bootstrap cấu hình cũ, key isolation, GPT/TTS/STT và khởi động lại. Các kiểm thử dùng transport giả và profile cô lập, chưa xác nhận quyền tài khoản provider, phản hồi model trả phí hoặc chất lượng học Anh-Việt. Đã thay bundle Enjoy và mở lại profile QA hiện có, native UI hiển thị Ethan, đủ 7 provider và giữ cấu hình cũ. Bản trước được giữ làm backup. Xem [nghiệm thu cuối](../../../.superpowers/sdd/2026-09-06-enjoy-ai-modernization/final-verification.md).
 
 Paid provider request, account/quota evidence, fixture model-specific cho `gpt-transcribe`, benchmark EN-VI và quality comparison là follow-up chưa có. Một giới hạn baseline còn lại là historical conversation TTS record malformed có thể thiếu `tts.model` và gây lỗi ở `conversation-form-tts`; đây là dữ liệu cũ cần xử lý riêng, không được ghi thành mọi historical data đã migrate.
 

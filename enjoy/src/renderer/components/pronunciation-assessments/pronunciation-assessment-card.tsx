@@ -1,106 +1,137 @@
 import {
-  Button,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuTrigger,
   DropdownMenuItem,
-  RadialProgress,
-  Badge,
 } from "@renderer/components/ui";
+import {
+  EjButton,
+  EjIconButton,
+  Pill,
+  ScoreRing,
+} from "@renderer/components/enjoy";
 import { scoreColor } from "@renderer/components";
 import { t } from "i18next";
 import { formatDateTime } from "@renderer/lib/utils";
 import { MoreHorizontalIcon, Trash2Icon } from "lucide-react";
 import { Link } from "react-router-dom";
+import { cn } from "@renderer/lib/utils";
 
 export const PronunciationAssessmentCard = (props: {
   pronunciationAssessment: PronunciationAssessmentType;
   onSelect: (assessment: PronunciationAssessmentType) => void;
   onDelete: (assessment: PronunciationAssessmentType) => void;
-  onSharing: (recording: RecordingType) => void;
+  /** Denser row used by the fluid 400px sidebar. */
+  compact?: boolean;
+  /** Highlights the row shown in the detail pane. */
+  active?: boolean;
 }) => {
   const {
     pronunciationAssessment: assessment,
     onSelect,
     onDelete,
-    onSharing,
+    compact,
+    active,
   } = props;
+  const sourceType = assessment.target?.targetType;
 
   return (
     <div
-      key={assessment.id}
-      className="bg-background p-4 rounded-lg border hover:shadow"
+      data-testid={`pronunciation-assessment-card-${assessment.id}`}
+      onClick={compact ? () => onSelect(assessment) : undefined}
+      className={cn(
+        "flex transition-all duration-ej hover:shadow-ej",
+        compact
+          ? "cursor-pointer gap-3 rounded-ej border p-3.5"
+          : "gap-5 rounded-ej-lg border border-ej-line bg-ej-surface p-5 hover:-translate-y-0.5 hover:border-ej-line2",
+        compact && active
+          ? "border-ej-accent bg-ej-accent-soft"
+          : compact && "border-ej-line bg-ej-surface hover:border-ej-line2"
+      )}
     >
-      <div className="flex items-start space-x-4">
-        <div className="flex-1 flex flex-col min-h-32">
-          <div className="select-text line-clamp-2 text-muted-foreground font-sans pl-3 border-l-4 mb-4">
-            {assessment.referenceText ||
-              assessment.target?.referenceText ||
-              "-"}
-          </div>
-          <div className="mb-4">
-            <PronunciationAssessmentScoreDetail assessment={assessment} />
-          </div>
-          {["Audio", "Video"].includes(assessment.target?.targetType) && (
-            <div className="flex items-center gap-2 mb-4">
-              <span className="text-sm">{t("source")}:</span>
-              <Link
-                to={`/${assessment.target.targetType.toLowerCase()}s/${
-                  assessment.target.targetId
-                }?segmentIndex=${assessment.target.referenceId}`}
-                className="text-sm"
-              >
-                {t(assessment.target?.targetType?.toLowerCase())}
-              </Link>
-            </div>
+      <div className="flex min-w-0 flex-1 flex-col">
+        <blockquote
+          className={cn(
+            "select-text border-l-2 border-ej-accent-soft2 pl-3 font-literata text-ej-ink",
+            compact
+              ? "mb-2.5 text-[13px] leading-5 line-clamp-2"
+              : "mb-4 text-[15px] leading-6 line-clamp-2"
           )}
-          <div className="mt-auto flex items-center gap-4">
-            {assessment.language && (
-              <Badge variant="secondary">{assessment.language}</Badge>
-            )}
-            <div className="text-xs text-muted-foreground">
-              {formatDateTime(assessment.createdAt)}
-            </div>
-            <DropdownMenu>
-              <DropdownMenuTrigger>
-                <MoreHorizontalIcon className="w-4 h-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuItem
-                  className="text-destructive cursor-pointer"
-                  onClick={() => onDelete(assessment)}
-                >
-                  <Trash2Icon className="w-4 h-4 mr-2" />
-                  <span>{t("delete")}</span>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </div>
-        </div>
-        <div className="h-32">
-          <RadialProgress
-            className="w-20 h-20 mx-auto mb-2"
-            ringClassName={`${scoreColor(assessment.pronunciationScore || 0)}`}
-            progress={assessment.pronunciationScore || 0}
-            fontSize={24}
-          />
-          <div className="flex items-center justify-center gap-2">
-            <Button
-              onClick={() => onSelect(assessment)}
-              variant="outline"
-              size="sm"
+        >
+          {assessment.referenceText ||
+            assessment.target?.referenceText ||
+            "-"}
+        </blockquote>
+
+        <PronunciationAssessmentScoreDetail
+          assessment={assessment}
+          accuracyScore={!compact}
+          fluencyScore={!compact}
+          completenessScore={!compact}
+          prosodyScore={!compact}
+          grammarScore={!compact}
+          vocabularyScore={!compact}
+          topicScore={!compact}
+        />
+
+        {!compact && ["Audio", "Video"].includes(sourceType) && (
+          <div className="mt-3 flex items-center gap-2">
+            <span className="ej-label">{t("source")}</span>
+            <Link
+              to={`/${sourceType.toLowerCase()}s/${
+                assessment.target.targetId
+              }?segmentIndex=${assessment.target.referenceId}`}
+              className="text-xxs font-semibold text-ej-accent-ink hover:underline"
             >
-              {t("detail")}
-            </Button>
-            <Button
-              onClick={() => onSharing(assessment.target)}
-              variant="outline"
-              size="sm"
-            >
-              {t("share")}
-            </Button>
+              {t(sourceType.toLowerCase())}
+            </Link>
           </div>
+        )}
+
+        <div
+          className={cn(
+            "mt-auto flex items-center gap-2",
+            compact ? "pt-2.5" : "pt-4"
+          )}
+        >
+          {!compact && assessment.language && (
+            <Pill tone="muted">{assessment.language}</Pill>
+          )}
+          <span className="ej-tabular text-xxs text-ej-muted">
+            {formatDateTime(assessment.createdAt)}
+          </span>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <EjIconButton
+                aria-label={t("more")}
+                onClick={(event) => event.stopPropagation()}
+              >
+                <MoreHorizontalIcon className="size-3.5" />
+              </EjIconButton>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem
+                className="cursor-pointer"
+                onClick={() => onDelete(assessment)}
+              >
+                <Trash2Icon className="mr-2 size-3.5 text-ej-bad" />
+                <span className="text-ej-bad">{t("delete")}</span>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
+      </div>
+
+      <div className="flex shrink-0 flex-col items-center justify-between gap-3">
+        <ScoreRing
+          size={compact ? 46 : 76}
+          score={assessment.pronunciationScore}
+        />
+        {!compact && (
+          <EjButton size="sm" onClick={() => onSelect(assessment)}>
+            {t("detail")}
+          </EjButton>
+        )}
       </div>
     </div>
   );
@@ -130,7 +161,7 @@ export const PronunciationAssessmentScoreDetail = (props: {
   } = props;
 
   return (
-    <div className="flex items-center gap-2 flex-wrap">
+    <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5">
       {[
         {
           label: t("models.pronunciationAssessment.pronunciationScore"),
@@ -175,9 +206,13 @@ export const PronunciationAssessmentScoreDetail = (props: {
       ].map(({ label, value, show }) => {
         if (show && typeof value === "number") {
           return (
-            <div key={label} className="flex items-center gap-2">
-              <span className="text-muted-foreground text-sm">{label}:</span>
-              <span className={`text-sm font-bold ${scoreColor(value || 0)}`}>
+            <div key={label} className="flex items-baseline gap-1.5">
+              <span className="ej-label">{label}</span>
+              <span
+                className={`ej-tabular text-xs font-bold ${scoreColor(
+                  value || 0
+                )}`}
+              >
                 {value}
               </span>
             </div>

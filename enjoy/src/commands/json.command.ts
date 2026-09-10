@@ -48,22 +48,36 @@ export const jsonCommand = async (
     zodToJsonSchema(schema) as Record<string, unknown>
   );
 
-  // Keep OpenAI-compatible requests in JSON mode. Responses strict schemas
-  // require every optional property to be required or nullable, which would
-  // make the existing lookup contract reject valid partial dictionary data.
-  // Zod remains the application boundary for the final shape check.
+  // LM Studio requires its documented json_schema envelope. Keep strict mode
+  // unset so existing optional fields remain optional. Other OpenAI-compatible
+  // providers stay in JSON mode, and Zod remains the final shape boundary.
   const requestModel =
     policy.protocol === "ollama"
       ? chatModel.bind({ format: jsonSchema })
-      : chatModel.bind({
-          response_format: {
-            type: "json_object",
-          },
-        });
+      : policy.protocol === "vertex-express"
+        ? chatModel.bind({
+            responseMimeType: "application/json",
+            responseJsonSchema: jsonSchema,
+          })
+      : policy.provider === "lmstudio"
+        ? chatModel.bind({
+            response_format: {
+              type: "json_schema",
+              json_schema: {
+                name: "enjoy_json_response",
+                schema: jsonSchema,
+              },
+            },
+          })
+        : chatModel.bind({
+            response_format: {
+              type: "json_object",
+            },
+          });
 
   let response: unknown;
   try {
-    response = await requestModel.invoke(prompt);
+    response = await requestModel.invoke(prompt, { signal: options.signal });
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
     if (/incomplete|refus|empty|finish_reason/i.test(message)) {

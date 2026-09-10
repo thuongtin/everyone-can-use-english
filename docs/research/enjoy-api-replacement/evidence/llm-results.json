@@ -1,0 +1,334 @@
+{
+  "runAt": "2026-09-08T06:53:45.572Z",
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "models": [
+    "openai/gpt-5.6-luna",
+    "google/gemini-3.5-flash-lite",
+    "anthropic/claude-sonnet-5"
+  ],
+  "concurrency": 2,
+  "maxTokens": {
+    "text": 800,
+    "stream": 500,
+    "tool": 500
+  },
+  "results": [
+    {
+      "model": "openai/gpt-5.6-luna",
+      "task": "translation",
+      "status": "pass",
+      "latencyMs": 1661,
+      "finishReason": "stop",
+      "usage": {
+        "promptTokens": 53,
+        "completionTokens": 20,
+        "totalTokens": 73,
+        "reasoningTokens": 0,
+        "costUsd": 0.0000346
+      },
+      "schemaOk": true,
+      "semanticOk": true,
+      "output": "Tôi từng trì hoãn việc nói tiếng Anh vì sợ mắc lỗi."
+    },
+    {
+      "model": "openai/gpt-5.6-luna",
+      "task": "lookup",
+      "status": "pass",
+      "latencyMs": 2263,
+      "finishReason": "stop",
+      "usage": {
+        "promptTokens": 143,
+        "completionTokens": 87,
+        "totalTokens": 230,
+        "reasoningTokens": 0,
+        "costUsd": 0.000133
+      },
+      "schemaOk": true,
+      "semanticOk": true,
+      "output": "{\"word\":\"bank\",\"lemma\":\"bank\",\"pronunciation\":\"/bæŋk/\",\"pos\":\"noun\",\"definition\":\"the land alongside or sloping down to a river or other body of water\",\"translation\":\"bờ (sông, hồ)\",\"context_translation\":\"Sau cơn bão, chúng tôi ngồi trên bờ sông và nhìn nước dâng lên.\"}"
+    },
+    {
+      "model": "openai/gpt-5.6-luna",
+      "task": "ipa",
+      "status": "pass",
+      "latencyMs": 5181,
+      "finishReason": "stop",
+      "usage": {
+        "promptTokens": 91,
+        "completionTokens": 202,
+        "totalTokens": 293,
+        "reasoningTokens": 115,
+        "costUsd": 0.0002606
+      },
+      "schemaOk": true,
+      "semanticOk": true,
+      "output": "{\"words\":[{\"word\":\"thought\",\"ipa\":\"/θɔːt/\"},{\"word\":\"through\",\"ipa\":\"/θruː/\"},{\"word\":\"the\",\"ipa\":\"/ðə/\"},{\"word\":\"problem\",\"ipa\":\"/ˈprɒbləm/\"},{\"word\":\"carefully\",\"ipa\":\"/ˈkeəfəli/\"}]}"
+    },
+    {
+      "model": "openai/gpt-5.6-luna",
+      "task": "lesson",
+      "status": "pass",
+      "latencyMs": 9470,
+      "finishReason": "stop",
+      "usage": {
+        "promptTokens": 222,
+        "completionTokens": 410,
+        "totalTokens": 632,
+        "reasoningTokens": 37,
+        "costUsd": 0.0005364
+      },
+      "schemaOk": true,
+      "semanticOk": true,
+      "output": "{\"title\":\"Ordering Breakfast at a Cafe\",\"level\":\"A2\",\"objectives\":[\"Gọi món ăn sáng đơn giản tại quán cà phê.\",\"Sử dụng ba từ vựng hữu ích khi gọi món.\",\"Hiểu và trả lời một câu hỏi đơn giản về món ăn sáng.\"],\"vocabulary\":[{\"word\":\"menu\",\"meaning_vi\":\"thực đơn\",\"example_en\":\"Can I see the menu, please?\"},{\"word\":\"toast\",\"meaning_vi\":\"bánh mì nướng\",\"example_en\":\"I would like some toast, please.\"},{\"word\":\"bill\",\"meaning_vi\":\"hóa đơn\",\"example_en\":\"Can I have the bill, please?\"}],\"steps\":[{\"instruction_vi\":\"Phút 1–3: Đọc to ba từ mới và câu ví dụ. Chú ý cách phát âm của từ “toast”.\",\"learner_prompt_en\":\"Please read the three words and example sentences aloud.\"},{\"instruction_vi\":\"Phút 4–6: Luyện gọi món. Dùng mẫu câu “I would like…” để nói món bạn muốn ăn.\",\"learner_prompt_en\":\"You are at a cafe. Say: “I would like toast and coffee, please.”\"},{\"instruction_vi\":\"Phút 7–8: Luyện yêu cầu thực đơn và hóa đơn một cách lịch sự.\",\"learner_prompt_en\":\"Ask for the menu, then ask for the bill.\"},{\"instruction_vi\":\"Phút 9–10: Đóng vai khách hàng. Gọi một món ăn sáng và một đồ uống.\",\"learner_prompt_en\":\"Order one breakfast food and one drink politely.\"}],\"check\":{\"question_en\":\"What do you say when you want to pay at the cafe?\",\"answer_en\":\"Can I have the bill, please?\"}}"
+    },
+    {
+      "model": "google/gemini-3.5-flash-lite",
+      "task": "translation",
+      "status": "pass",
+      "latencyMs": 5717,
+      "finishReason": "stop",
+      "usage": {
+        "promptTokens": 44,
+        "completionTokens": 14,
+        "totalTokens": 58,
+        "reasoningTokens": 0,
+        "costUsd": 0.0000482
+      },
+      "schemaOk": true,
+      "semanticOk": true,
+      "output": "Tôi từng trì hoãn việc nói tiếng Anh vì sợ mắc lỗi."
+    },
+    {
+      "model": "google/gemini-3.5-flash-lite",
+      "task": "lookup",
+      "status": "pass",
+      "latencyMs": 2166,
+      "finishReason": "stop",
+      "usage": {
+        "promptTokens": 239,
+        "completionTokens": 94,
+        "totalTokens": 333,
+        "reasoningTokens": 0,
+        "costUsd": 0.0003067
+      },
+      "schemaOk": true,
+      "semanticOk": true,
+      "output": "{\n  \"word\": \"bank\",\n  \"lemma\": \"bank\",\n  \"pronunciation\": \"/bæŋk/\",\n  \"pos\": \"noun\",\n  \"definition\": \"the land alongside or sloping down to a river or lake\",\n  \"translation\": \"bờ sông\",\n  \"context_translation\": \"Sau cơn bão, chúng tôi ngồi trên bờ sông và nhìn mực nước dâng lên.\"\n}"
+    },
+    {
+      "model": "google/gemini-3.5-flash-lite",
+      "task": "ipa",
+      "status": "pass",
+      "latencyMs": 2501,
+      "finishReason": "stop",
+      "usage": {
+        "promptTokens": 171,
+        "completionTokens": 138,
+        "totalTokens": 309,
+        "reasoningTokens": 0,
+        "costUsd": 0.0003963
+      },
+      "schemaOk": true,
+      "semanticOk": true,
+      "output": "{\n  \"words\": [\n    {\n      \"word\": \"thought\",\n      \"ipa\": \"/θɔːt/\"\n    },\n    {\n      \"word\": \"through\",\n      \"ipa\": \"/θruː/\"\n    },\n    {\n      \"word\": \"the\",\n      \"ipa\": \"/ðə/\"\n    },\n    {\n      \"word\": \"problem\",\n      \"ipa\": \"/ˈprɒbləm/\"\n    },\n    {\n      \"word\": \"carefully\",\n      \"ipa\": \"/ˈkeəfəli/\"\n    }\n  ]\n}"
+    },
+    {
+      "model": "google/gemini-3.5-flash-lite",
+      "task": "lesson",
+      "status": "pass",
+      "latencyMs": 3131,
+      "finishReason": "stop",
+      "usage": {
+        "promptTokens": 545,
+        "completionTokens": 390,
+        "totalTokens": 935,
+        "reasoningTokens": 0,
+        "costUsd": 0.0011385
+      },
+      "schemaOk": true,
+      "semanticOk": true,
+      "output": "{\n  \"title\": \"Ordering Breakfast at a Cafe\",\n  \"level\": \"A2\",\n  \"objectives\": [\n    \"Learn three useful words for ordering breakfast.\",\n    \"Practice how to ask for food and drinks politely.\"\n  ],\n  \"vocabulary\": [\n    {\n      \"word\": \"menu\",\n      \"meaning_vi\": \"thực đơn\",\n      \"example_en\": \"Can I see the menu, please?\"\n    },\n    {\n      \"word\": \"coffee\",\n      \"meaning_vi\": \"cà phê\",\n      \"example_en\": \"I would like a hot coffee.\"\n    },\n    {\n      \"word\": \"bill\",\n      \"meaning_vi\": \"hóa đơn\",\n      \"example_en\": \"Can I have the bill, please?\"\n    }\n  ],\n  \"steps\": [\n    {\n      \"instruction_vi\": \"Đọc các từ vựng mới và ghi nhớ ý nghĩa của chúng.\",\n      \"learner_prompt_en\": \"Read the three new words and try to remember them.\"\n    },\n    {\n      \"instruction_vi\": \"Luyện tập hỏi thực đơn bằng tiếng Anh.\",\n      \"learner_prompt_en\": \"Say this sentence out loud: Can I see the menu, please?\"\n    },\n    {\n      \"instruction_vi\": \"Luyện tập gọi món đồ uống buổi sáng.\",\n      \"learner_prompt_en\": \"Say this sentence out loud: I would like a hot coffee.\"\n    }\n  ],\n  \"check\": {\n    \"question_en\": \"What do you ask for when you want to pay the money at the cafe?\",\n    \"answer_en\": \"the bill\"\n  }\n}"
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "task": "translation",
+      "status": "pass",
+      "latencyMs": 5697,
+      "finishReason": "stop",
+      "usage": {
+        "promptTokens": 75,
+        "completionTokens": 45,
+        "totalTokens": 120,
+        "reasoningTokens": 0,
+        "costUsd": 0.0006
+      },
+      "schemaOk": true,
+      "semanticOk": true,
+      "output": "Trước đây tôi thường trì hoãn việc nói tiếng Anh vì tôi sợ mắc lỗi."
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "task": "lookup",
+      "status": "pass",
+      "latencyMs": 8653,
+      "finishReason": "stop",
+      "usage": {
+        "promptTokens": 462,
+        "completionTokens": 90,
+        "totalTokens": 552,
+        "reasoningTokens": 0,
+        "costUsd": 0.001824
+      },
+      "schemaOk": true,
+      "semanticOk": true,
+      "output": "{\"word\":\"bank\",\"lemma\":\"bank\",\"pronunciation\":\"/bæŋk/\",\"pos\":\"noun\",\"definition\":\"the land alongside or sloping down to a river or lake\",\"translation\":\"bờ (sông, hồ)\",\"context_translation\":\"bờ sông\"}"
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "task": "ipa",
+      "status": "pass",
+      "latencyMs": 9121,
+      "finishReason": "stop",
+      "usage": {
+        "promptTokens": 339,
+        "completionTokens": 122,
+        "totalTokens": 461,
+        "reasoningTokens": 0,
+        "costUsd": 0.001898
+      },
+      "schemaOk": true,
+      "semanticOk": true,
+      "output": "{\"words\":[{\"word\":\"thought\",\"ipa\":\"/θɔːt/\"},{\"word\":\"through\",\"ipa\":\"/θruː/\"},{\"word\":\"the\",\"ipa\":\"/ðə/\"},{\"word\":\"problem\",\"ipa\":\"/ˈprɒbləm/\"},{\"word\":\"carefully\",\"ipa\":\"/ˈkeəfəli/\"}]}"
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "task": "lesson",
+      "status": "pass",
+      "latencyMs": 16141,
+      "finishReason": "stop",
+      "usage": {
+        "promptTokens": 794,
+        "completionTokens": 562,
+        "totalTokens": 1356,
+        "reasoningTokens": 0,
+        "costUsd": 0.007208
+      },
+      "schemaOk": true,
+      "semanticOk": true,
+      "output": "{\"title\":\"Ordering Breakfast at a Cafe\",\"level\":\"A2\",\"objectives\":[\"Học 3 từ vựng liên quan đến bữa sáng ở quán cà phê\",\"Thực hành cách gọi món ăn sáng đơn giản\",\"Trả lời câu hỏi kiểm tra hiểu bài\"],\"vocabulary\":[{\"word\":\"menu\",\"meaning_vi\":\"thực đơn\",\"example_en\":\"Can I see the menu, please?\"},{\"word\":\"order\",\"meaning_vi\":\"gọi món\",\"example_en\":\"I would like to order some toast and coffee.\"},{\"word\":\"bill\",\"meaning_vi\":\"hóa đơn\",\"example_en\":\"Can we have the bill, please?\"}],\"steps\":[{\"instruction_vi\":\"Đọc và lặp lại 3 từ vựng mới cùng ví dụ của chúng.\",\"learner_prompt_en\":\"Read aloud: menu, order, bill. Try to use each word in a sentence.\"},{\"instruction_vi\":\"Hãy tưởng tượng bạn đang ở quán cà phê. Viết một đoạn hội thoại ngắn để gọi món bữa sáng.\",\"learner_prompt_en\":\"Write a short dialogue: 'Can I see the menu, please? I would like to order eggs and coffee.'\"},{\"instruction_vi\":\"Luyện nói đoạn hội thoại đó với giọng tự nhiên.\",\"learner_prompt_en\":\"Practice saying your dialogue out loud, imagining you are at a cafe.\"}],\"check\":{\"question_en\":\"What do you ask for when you want to pay at the end of breakfast?\",\"answer_en\":\"You ask for the bill.\"}}"
+    },
+    {
+      "model": "openai/gpt-5.6-luna",
+      "task": "streaming_chat",
+      "status": "pass",
+      "latencyMs": 1655,
+      "ttftMs": 1204,
+      "eventCount": 34,
+      "contentChunks": 32,
+      "semanticOk": true,
+      "usage": {
+        "promptTokens": 55,
+        "completionTokens": 36,
+        "totalTokens": 91,
+        "reasoningTokens": 0,
+        "costUsd": 0.0000542
+      },
+      "output": "Yesterday I went to the market.  \nDùng thì quá khứ đơn “went” vì hành động đã xảy ra và kết thúc trong quá khứ."
+    },
+    {
+      "model": "google/gemini-3.5-flash-lite",
+      "task": "streaming_chat",
+      "status": "pass",
+      "latencyMs": 2751,
+      "ttftMs": 2453,
+      "eventCount": 7,
+      "contentChunks": 4,
+      "semanticOk": true,
+      "usage": {
+        "promptTokens": 45,
+        "completionTokens": 53,
+        "totalTokens": 98,
+        "reasoningTokens": 0,
+        "costUsd": 0.000146
+      },
+      "output": "Yesterday, you should say \"went\" instead of \"go\". \nTrong câu này, vì hành động đã xảy ra trong quá khứ, bạn cần dùng thì quá khứ đơn (Simple Past) với động từ \"go\" chuyển thành \"went\"."
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "task": "streaming_chat",
+      "status": "pass",
+      "latencyMs": 4581,
+      "ttftMs": 3273,
+      "eventCount": 6,
+      "contentChunks": 4,
+      "semanticOk": true,
+      "usage": {
+        "promptTokens": 84,
+        "completionTokens": 75,
+        "totalTokens": 159,
+        "reasoningTokens": 0,
+        "costUsd": 0.000918
+      },
+      "output": "You should say: \"Yesterday I went to the market.\"\n\n\"Yesterday\" chỉ hành động đã xảy ra trong quá khứ, nên động từ \"go\" phải chuyển thành dạng quá khứ \"went\"."
+    },
+    {
+      "model": "openai/gpt-5.6-luna",
+      "task": "tool_call",
+      "status": "pass",
+      "latencyMs": 1383,
+      "usage": {
+        "promptTokens": 72,
+        "completionTokens": 25,
+        "totalTokens": 97,
+        "reasoningTokens": 0,
+        "costUsd": 0.0000444
+      },
+      "semanticOk": true,
+      "toolName": "get_learner_profile",
+      "arguments": {
+        "learner_id": "demo-a2"
+      }
+    },
+    {
+      "model": "google/gemini-3.5-flash-lite",
+      "task": "tool_call",
+      "status": "pass",
+      "latencyMs": 2464,
+      "usage": {
+        "promptTokens": 56,
+        "completionTokens": 23,
+        "totalTokens": 79,
+        "reasoningTokens": 0,
+        "costUsd": 0.0000743
+      },
+      "semanticOk": true,
+      "toolName": "get_learner_profile",
+      "arguments": {
+        "learner_id": "demo-a2"
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "task": "tool_call",
+      "status": "pass",
+      "latencyMs": 3864,
+      "usage": {
+        "promptTokens": 617,
+        "completionTokens": 39,
+        "totalTokens": 656,
+        "reasoningTokens": 0,
+        "costUsd": 0.001624
+      },
+      "semanticOk": true,
+      "toolName": "get_learner_profile",
+      "arguments": {
+        "learner_id": "demo-a2"
+      }
+    }
+  ],
+  "image": {
+    "task": "image_generation",
+    "status": "fail",
+    "error": "HTTP 400: bytedance-seed/seedream-4.5 requires at least 3,686,400 output pixels; size \"512x512\" is 262,144. Use a larger size such as \"2048x2048\", or omit size to use the default."
+  }
+}

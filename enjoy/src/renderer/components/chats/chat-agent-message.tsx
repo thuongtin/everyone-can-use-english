@@ -1,21 +1,12 @@
 import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-  Button,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
   toast,
 } from "@renderer/components/ui";
-import {
-  LoaderSpin,
-  MarkdownWrapper,
-  WavesurferPlayer,
-  CopilotForwarder,
-} from "@renderer/components";
-import { formatDateTime } from "@renderer/lib/utils";
+import { MarkdownWrapper, CopilotForwarder } from "@renderer/components";
+import { cn, formatDateTime } from "@renderer/lib/utils";
 import { t } from "i18next";
 import {
   CheckIcon,
@@ -29,7 +20,6 @@ import {
   MicIcon,
   MoreHorizontalIcon,
   SpeechIcon,
-  Volume2Icon,
 } from "lucide-react";
 import { useContext, useEffect, useRef, useState } from "react";
 import {
@@ -40,6 +30,13 @@ import { useAiCommand, useSpeech } from "@renderer/hooks";
 import { useCopyToClipboard } from "@uidotdev/usehooks";
 import { md5 } from "js-md5";
 import { ChatAgentTypeEnum, ChatTypeEnum } from "@/types/enums";
+import {
+  EjAudioBubble,
+  EjIconButton,
+  GradientAvatar,
+  TypingDots,
+} from "@renderer/components/enjoy";
+import { displayableResourceUrl } from "@renderer/lib/retired-resource";
 
 export const ChatAgentMessage = (props: {
   chatMessage: ChatMessageType;
@@ -74,65 +71,98 @@ export const ChatAgentMessage = (props: {
   const chatMember = chatMembers.find((m) => m?.id === chatMessage.member?.id);
   if (!chatMember?.agent) return;
 
+  const model =
+    chatMember.agent.type === ChatAgentTypeEnum.TTS
+      ? chatMember.agent.config.tts?.voice
+      : chatMember.config.gpt?.model;
+
   return (
-    <div ref={ref}>
-      <div className="mb-2 flex">
+    <div ref={ref} className="flex items-start gap-2.5 mb-6">
+      <button
+        type="button"
+        title={t("editAgent")}
+        className="shrink-0 mt-0.5"
+        onClick={() => onEditChatMember(chatMember)}
+      >
+        {displayableResourceUrl(chatMember.agent.avatarUrl) ? (
+          <img
+            src={displayableResourceUrl(chatMember.agent.avatarUrl)}
+            alt={chatMember.agent.name}
+            className="size-[34px] rounded-full object-cover"
+          />
+        ) : (
+          <GradientAvatar
+            name={chatMember.agent.name}
+            id={chatMember.agent.id}
+            size={34}
+          />
+        )}
+      </button>
+
+      <div className="flex-1 min-w-0">
         <div
-          className="flex items-center space-x-1 cursor-pointer"
+          className="flex items-baseline gap-2 mb-1.5 cursor-pointer"
           onClick={() => onEditChatMember(chatMember)}
         >
-          <Avatar className="w-8 h-8 bg-background avatar">
-            <AvatarImage src={chatMember.agent.avatarUrl}></AvatarImage>
-            <AvatarFallback className="bg-background">
-              {chatMember.agent.name}
-            </AvatarFallback>
-          </Avatar>
-          <div>
-            <div className="text-xs">{chatMember.agent.name}</div>
-            <div className="italic text-xs text-muted-foreground/50">
-              {chatMember.agent.type === ChatAgentTypeEnum.TTS &&
-                chatMember.agent.config.tts?.voice}
-              {chatMember.agent.type === ChatAgentTypeEnum.GPT &&
-                chatMember.config.gpt.model}
-            </div>
-          </div>
+          <span className="text-xs font-semibold text-ej-ink shrink-0">
+            {chatMember.agent.name}
+          </span>
+          {model && (
+            <span className="text-xxs text-ej-muted truncate">{model}</span>
+          )}
         </div>
-      </div>
-      <div className="flex flex-col gap-2 py-2 mb-2 rounded-lg w-full">
-        {Boolean(chatMessage.speech?.id) ? (
-          <>
+
+        {chatMessage.speech?.id ? (
+          <div className="mb-2">
             {displayPlayer ? (
-              <WavesurferPlayer
+              <EjAudioBubble
                 id={chatMessage.speech.id}
                 src={chatMessage.speech.src}
                 autoplay={true}
+                className="w-full max-w-[420px]"
               />
             ) : (
-              <Button
+              <button
+                type="button"
                 onClick={() => setDisplayPlayer(true)}
-                className="w-8 h-8"
-                variant="ghost"
-                size="icon"
+                className="inline-flex items-center gap-2.5 rounded-ej border border-ej-line bg-ej-surface2 px-2.5 py-2 transition-colors duration-ej hover:border-ej-line2"
               >
-                <Volume2Icon className="w-5 h-5" />
-              </Button>
+                <span className="size-[34px] rounded-full bg-ej-accent text-white inline-flex items-center justify-center">
+                  <SpeechIcon className="size-4" />
+                </span>
+                <span className="text-xxs text-ej-muted">{t("play")}</span>
+              </button>
             )}
-          </>
+          </div>
         ) : (
-          speeching && <LoaderSpin />
+          speeching && (
+            <div className="mb-2 inline-flex items-center gap-2 rounded-ej border border-ej-line bg-ej-surface2 px-3 py-2.5">
+              <TypingDots />
+              <span className="text-xxs text-ej-muted">
+                {t("textToSpeech")}
+              </span>
+            </div>
+          )
         )}
-        {displayContent && (
-          <>
-            <MarkdownWrapper className="select-text prose dark:prose-invert max-w-full">
-              {chatMessage.content}
+
+        <MarkdownWrapper
+          className={cn(
+            "select-text prose ej-prose max-w-full text-[15px] leading-[1.65] text-ej-ink",
+            !displayContent && "blur-[6px] select-none pointer-events-none"
+          )}
+        >
+          {chatMessage.content}
+        </MarkdownWrapper>
+
+        {displayContent && translation && (
+          <div className="mt-2 rounded-ej border border-ej-line bg-ej-surface2 px-3 py-2.5">
+            <div className="ej-label mb-1">{t("translation")}</div>
+            <MarkdownWrapper className="select-text prose ej-prose max-w-full text-[13px] leading-[1.6] text-ej-ink2">
+              {translation}
             </MarkdownWrapper>
-            {translation && (
-              <MarkdownWrapper className="select-text prose dark:prose-invert max-w-full">
-                {translation}
-              </MarkdownWrapper>
-            )}
-          </>
+          </div>
         )}
+
         <ChatAgentMessageActions
           chatMessage={chatMessage}
           speeching={speeching}
@@ -146,9 +176,10 @@ export const ChatAgentMessage = (props: {
             (chat.type === ChatTypeEnum.TTS || chat.config.enableAutoTts)
           }
         />
-      </div>
-      <div className="flex justify-start text-xs text-muted-foreground timestamp">
-        {formatDateTime(chatMessage.createdAt)}
+
+        <div className="mt-1 text-xxxs text-ej-muted timestamp">
+          {formatDateTime(chatMessage.createdAt)}
+        </div>
       </div>
     </div>
   );
@@ -317,111 +348,125 @@ const ChatAgentMessageActions = (props: {
 
   return (
     <DropdownMenu>
-      <div className="flex items-center space-x-4">
+      <div className="mt-2 flex items-center gap-0.5 -ml-1.5">
         {Boolean(chatMessage.speech) &&
           (resourcing ? (
-            <LoaderIcon
-              data-tooltip-id="global-tooltip"
-              data-tooltip-content={t("addingResource")}
-              className="w-4 h-4 animate-spin"
-            />
+            <EjIconButton disabled>
+              <LoaderIcon
+                data-tooltip-id="global-tooltip"
+                data-tooltip-content={t("addingResource")}
+                className="size-4 animate-spin"
+              />
+            </EjIconButton>
           ) : (
-            <MicIcon
+            <EjIconButton
               data-tooltip-id="global-tooltip"
               data-tooltip-content={t("shadowingExercise")}
               data-testid="message-start-shadow"
               onClick={startShadow}
-              className="w-4 h-4 cursor-pointer"
-            />
+            >
+              <MicIcon className="size-4" />
+            </EjIconButton>
           ))}
+
         {!Boolean(chatMessage.speech) && (
-          <SpeechIcon
+          <EjIconButton
             data-tooltip-id="global-tooltip"
             data-tooltip-content={t("textToSpeech")}
             onClick={createSpeech}
-            className="w-4 h-4 cursor-pointer"
-          />
+          >
+            <SpeechIcon className="size-4" />
+          </EjIconButton>
         )}
-        {displayContent ? (
-          <EyeOffIcon
-            data-tooltip-id="global-tooltip"
-            data-tooltip-content={t("hideContent")}
-            className="w-4 h-4 cursor-pointer"
-            onClick={() => setDisplayContent(false)}
-          />
-        ) : (
-          <EyeIcon
-            data-tooltip-id="global-tooltip"
-            data-tooltip-content={t("displayContent")}
-            className="w-4 h-4 cursor-pointer"
-            onClick={() => setDisplayContent(true)}
-          />
-        )}
+
+        <EjIconButton
+          data-tooltip-id="global-tooltip"
+          data-tooltip-content={displayContent ? t("hideContent") : t("displayContent")}
+          active={!displayContent}
+          onClick={() => setDisplayContent(!displayContent)}
+        >
+          {displayContent ? (
+            <EyeOffIcon className="size-4" />
+          ) : (
+            <EyeIcon className="size-4" />
+          )}
+        </EjIconButton>
+
         {translating ? (
-          <LoaderIcon
-            data-tooltip-id="global-tooltip"
-            data-tooltip-content={t("translating")}
-            className="w-4 h-4 animate-spin"
-          />
+          <EjIconButton disabled>
+            <LoaderIcon
+              data-tooltip-id="global-tooltip"
+              data-tooltip-content={t("translating")}
+              className="size-4 animate-spin"
+            />
+          </EjIconButton>
         ) : (
           displayContent && (
-            <LanguagesIcon
+            <EjIconButton
               data-tooltip-id="global-tooltip"
               data-tooltip-content={t("translation")}
-              className="w-4 h-4 cursor-pointer"
+              active={Boolean(translation)}
               onClick={handleTranslate}
-            />
+            >
+              <LanguagesIcon className="size-4" />
+            </EjIconButton>
           )
         )}
-        {copied ? (
-          <CheckIcon className="w-4 h-4 text-green-500" />
-        ) : (
-          <CopyIcon
-            data-tooltip-id="global-tooltip"
-            data-tooltip-content={t("copyText")}
-            className="w-4 h-4 cursor-pointer"
-            onClick={() => {
-              copyToClipboard(chatMessage.content);
-              setCopied(true);
-              setTimeout(() => {
-                setCopied(false);
-              }, 3000);
-            }}
-          />
-        )}
+
+        <EjIconButton
+          data-tooltip-id="global-tooltip"
+          data-tooltip-content={t("copyText")}
+          onClick={() => {
+            copyToClipboard(chatMessage.content);
+            setCopied(true);
+            setTimeout(() => {
+              setCopied(false);
+            }, 3000);
+          }}
+        >
+          {copied ? (
+            <CheckIcon className="size-4 text-ej-ok" />
+          ) : (
+            <CopyIcon className="size-4" />
+          )}
+        </EjIconButton>
+
         <CopilotForwarder
           prompt={chatMessage.content}
           trigger={
-            <ForwardIcon
+            <EjIconButton
               data-tooltip-id="global-tooltip"
               data-tooltip-content={t("forward")}
-              className="w-4 h-4 cursor-pointer"
-            />
+            >
+              <ForwardIcon className="size-4" />
+            </EjIconButton>
           }
         />
+
         {Boolean(chatMessage.speech) && (
-          <DownloadIcon
+          <EjIconButton
             data-tooltip-id="global-tooltip"
             data-tooltip-content={t("download")}
             data-testid="chat-message-download-speech"
             onClick={handleDownload}
-            className="w-4 h-4 cursor-pointer"
-          />
+          >
+            <DownloadIcon className="size-4" />
+          </EjIconButton>
         )}
 
-        <DropdownMenuTrigger>
-          <MoreHorizontalIcon className="w-4 h-4" />
+        <DropdownMenuTrigger asChild>
+          <EjIconButton>
+            <MoreHorizontalIcon className="size-4" />
+          </EjIconButton>
         </DropdownMenuTrigger>
       </div>
 
-      <DropdownMenuContent>
+      <DropdownMenuContent align="start">
         <DropdownMenuItem
-          className="cursor-pointer"
+          className="cursor-pointer text-xs"
           onClick={() => deleteMessage(chatMessage.id)}
         >
-          <span className="mr-auto text-destructive capitalize">
-            {t("delete")}
-          </span>
+          <span className="mr-auto text-ej-bad">{t("delete")}</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

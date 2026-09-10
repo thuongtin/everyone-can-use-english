@@ -17,7 +17,7 @@ export const DictSelect = () => {
       value={currentDictValue}
       onValueChange={(value: string) => handleSetCurrentDict(value)}
     >
-      <SelectTrigger className="text-sm italic text-muted-foreground h-8">
+      <SelectTrigger className="h-8 border-ej-line bg-ej-surface text-xs text-ej-ink2">
         <SelectValue title="asdf"></SelectValue>
       </SelectTrigger>
       <SelectContent>

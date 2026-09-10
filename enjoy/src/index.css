@@ -9,68 +9,131 @@
 @tailwind utilities;
 
 @layer base {
+  /*
+   * Enjoy design tokens.
+   *
+   * Two parallel sets live here on purpose:
+   *  - `--ej-*` raw hex tokens are the design language (paper background, ink
+   *    text, one blue accent, semantic score colors). New UI uses these through
+   *    the `ej-*` Tailwind color utilities.
+   *  - The shadcn HSL triplets below are remapped onto the same palette so every
+   *    existing `components/ui/*` primitive inherits the new look untouched.
+   */
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --ej-bg: #f5f3ee;
+    --ej-surface: #ffffff;
+    --ej-surface2: #eeebe4;
+    --ej-side: #ece9e2;
+    --ej-ink: #1c1b18;
+    --ej-ink2: #4b4842;
+    --ej-muted: #75726a;
+    --ej-line: #e3dfd6;
+    --ej-line2: #cfcabf;
+    --ej-accent: #2d6be0;
+    --ej-accent-ink: #1f55bd;
+    --ej-accent-soft: #e4ecfb;
+    --ej-accent-soft2: #cbdbf8;
+    --ej-hl: #fff0b8;
+    --ej-hl-ink: #5a4500;
+    --ej-ok: #1e8e4e;
+    --ej-ok-soft: #dcf3e3;
+    --ej-warn: #c06e00;
+    --ej-warn-soft: #ffebcb;
+    --ej-bad: #cf3a2f;
+    --ej-bad-soft: #fbe0dc;
+    --ej-wave: #cfcabf;
+    --ej-wave-on: #2d6be0;
+    --ej-pitch: #e0587a;
+    --ej-shadow: 0 1px 2px rgba(28, 27, 24, 0.05),
+      0 10px 28px -14px rgba(28, 27, 24, 0.22);
+
+    --background: 42.9 25.9% 94.7%;
+    --foreground: 45 7.7% 10.2%;
 
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 45 7.7% 10.2%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover-foreground: 45 7.7% 10.2%;
 
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 45 7.7% 10.2%;
+    --primary-foreground: 42.9 25.9% 94.7%;
 
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+    --secondary: 42 20.8% 90.6%;
+    --secondary-foreground: 45 7.7% 10.2%;
 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
+    --muted: 42 22.7% 91.4%;
+    --muted-foreground: 43.6 4.9% 43.7%;
 
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --accent: 42 22.7% 91.4%;
+    --accent-foreground: 45 7.7% 10.2%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 4.1 63% 49.8%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
-    --active-word: 201 94% 86%;
+    --border: 41.5 18.8% 86.5%;
+    --input: 41.5 18.8% 86.5%;
+    --ring: 219.2 74.3% 52.7%;
+    --active-word: 47.3 100% 86.1%;
 
-    --radius: 0.5rem;
+    --radius: 0.625rem;
   }
 
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    --ej-bg: #141619;
+    --ej-surface: #1c1f24;
+    --ej-surface2: #262a31;
+    --ej-side: #0f1114;
+    --ej-ink: #eceae3;
+    --ej-ink2: #c6c3ba;
+    --ej-muted: #918e86;
+    --ej-line: #2a2e35;
+    --ej-line2: #3b404a;
+    --ej-accent: #6c9df2;
+    --ej-accent-ink: #93b6f7;
+    --ej-accent-soft: #1b2a47;
+    --ej-accent-soft2: #26395f;
+    --ej-hl: #3b3212;
+    --ej-hl-ink: #f1d67a;
+    --ej-ok: #43c078;
+    --ej-ok-soft: #173a27;
+    --ej-warn: #f0a030;
+    --ej-warn-soft: #3f2e10;
+    --ej-bad: #f26d62;
+    --ej-bad-soft: #45211e;
+    --ej-wave: #3b404a;
+    --ej-wave-on: #6c9df2;
+    --ej-pitch: #e0587a;
+    --ej-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 28px -14px rgba(0, 0, 0, 0.7);
 
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --background: 216 11.1% 8.8%;
+    --foreground: 46.7 19.1% 90.8%;
 
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --card: 217.5 12.5% 12.5%;
+    --card-foreground: 46.7 19.1% 90.8%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
+    --popover: 217.5 12.5% 12.5%;
+    --popover-foreground: 46.7 19.1% 90.8%;
 
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+    --primary: 46.7 19.1% 90.8%;
+    --primary-foreground: 216 11.1% 8.8%;
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --secondary: 216 14.3% 6.9%;
+    --secondary-foreground: 46.7 19.1% 90.8%;
 
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    --muted: 218.2 12.6% 17.1%;
+    --muted-foreground: 43.6 4.8% 54.7%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --accent: 218.2 12.6% 17.1%;
+    --accent-foreground: 46.7 19.1% 90.8%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
-    --active-word: 201 93% 30%;
+    --destructive: 4.6 84.7% 66.7%;
+    --destructive-foreground: 216 11.1% 8.8%;
+
+    --border: 218.2 11.6% 18.6%;
+    --input: 218.2 11.6% 18.6%;
+    --ring: 218.1 83.7% 68.6%;
+    --active-word: 46.8 53.2% 15.1%;
   }
 }
 
@@ -80,6 +143,56 @@
   }
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  @font-face {
+    font-family: "Be Vietnam Pro";
+    src: url("/assets/fonts/BeVietnamPro-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Be Vietnam Pro";
+    src: url("/assets/fonts/BeVietnamPro-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Be Vietnam Pro";
+    src: url("/assets/fonts/BeVietnamPro-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Be Vietnam Pro";
+    src: url("/assets/fonts/BeVietnamPro-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Literata";
+    src: url("/assets/fonts/Literata-Variable.ttf") format("truetype");
+    font-weight: 200 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Literata";
+    src: url("/assets/fonts/Literata-Italic-Variable.ttf") format("truetype");
+    font-weight: 200 900;
+    font-style: italic;
+    font-display: swap;
   }
 
   @font-face {
@@ -106,8 +219,29 @@
   }
 
   :root {
-    --sidebar-collapsed-width: 48px;
-    --sidebar-expanded-width: 192px;
+    --sidebar-collapsed-width: 60px;
+    --sidebar-expanded-width: 228px;
+    --ej-titlebar-h: 38px;
+    --ej-aside-w: 340px;
+
+    /* Layout mode variables. Flipped by `[data-fluid="true"]` on <html>. */
+    --ej-content-max: 1120px;
+    --ej-row-display: flex;
+    --ej-row-cols: none;
+    --ej-row-cols-wide: none;
+    --ej-row-overflow: auto;
+    --ej-card-w: 172px;
+    --ej-card-w-wide: 250px;
+  }
+
+  [data-fluid="true"] {
+    --ej-content-max: 100%;
+    --ej-row-display: grid;
+    --ej-row-cols: repeat(auto-fill, minmax(172px, 1fr));
+    --ej-row-cols-wide: repeat(auto-fill, minmax(250px, 1fr));
+    --ej-row-overflow: visible;
+    --ej-card-w: auto;
+    --ej-card-w-wide: auto;
   }
 }
 
@@ -121,6 +255,253 @@
   .non-draggable-region {
     -webkit-app-region: no-drag;
   }
+
+  /* Page shell: centred at 1120px in fixed layout, full-bleed in fluid. */
+  .ej-page {
+    width: 100%;
+    max-width: var(--ej-content-max);
+    margin: 0 auto;
+    padding: 22px 28px 44px;
+  }
+
+  /* Horizontal card rail in fixed layout, auto-filling grid in fluid. */
+  .ej-row {
+    display: var(--ej-row-display);
+    grid-template-columns: var(--ej-row-cols);
+    overflow-x: var(--ej-row-overflow);
+    gap: 16px;
+  }
+  .ej-row-wide {
+    grid-template-columns: var(--ej-row-cols-wide);
+  }
+  .ej-row > * {
+    width: var(--ej-card-w);
+    flex: none;
+  }
+  .ej-row-wide > * {
+    width: var(--ej-card-w-wide);
+  }
+
+  /* Uppercase group label used for nav groups and panel headers. */
+  .ej-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ej-muted);
+  }
+
+  .ej-tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* One row of the settings dialog: label + description left, control right. */
+  .ej-setting-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--ej-line);
+  }
+  .ej-setting-row > *:last-child {
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+  }
+  .ej-setting-row > *:first-child {
+    min-width: 0;
+  }
+  .ej-setting-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ej-ink);
+    margin-bottom: 3px;
+  }
+  .ej-setting-desc {
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--ej-muted);
+    word-break: break-word;
+  }
+
+  /* Rows already carry their own rule, so the legacy separators are noise. */
+  .ej-settings-pane [data-orientation="horizontal"] {
+    display: none;
+  }
+  .ej-settings-pane .ej-setting-row:last-child {
+    border-bottom: none;
+  }
+
+  /* Reader column: Literata body text, per-paragraph blocks with a gutter for
+     the paragraph controls. Font size is driven by --ej-reader-size (A- / A+). */
+  .ej-reader {
+    --ej-reader-size: 17px;
+    color: var(--ej-ink);
+  }
+  .ej-reader .segment {
+    position: relative;
+    margin: 0;
+    padding: 12px 16px 12px 52px;
+    border-radius: 10px;
+    font-family: Literata, Georgia, serif;
+    font-size: var(--ej-reader-size);
+    line-height: 1.72;
+    transition: background-color 140ms ease;
+  }
+  .ej-reader p.segment {
+    font-weight: 400;
+  }
+  .ej-reader h1.segment,
+  .ej-reader h2.segment,
+  .ej-reader h3.segment,
+  .ej-reader h4.segment,
+  .ej-reader h5.segment {
+    font-weight: 700;
+    line-height: 1.35;
+    margin-top: 18px;
+  }
+  .ej-reader h1.segment {
+    font-size: calc(var(--ej-reader-size) * 1.7);
+  }
+  .ej-reader h2.segment {
+    font-size: calc(var(--ej-reader-size) * 1.42);
+  }
+  .ej-reader h3.segment {
+    font-size: calc(var(--ej-reader-size) * 1.22);
+  }
+  .ej-reader h4.segment,
+  .ej-reader h5.segment {
+    font-size: calc(var(--ej-reader-size) * 1.08);
+  }
+  .ej-reader .segment:hover {
+    background: var(--ej-surface2);
+  }
+  .ej-reader .segment.playing-segment {
+    background: var(--ej-accent-soft2) !important;
+  }
+  /* The control cluster injected by MarkdownWrapper sits in the left gutter:
+     the index on its own row, the play / translate actions underneath. */
+  .ej-reader .segment > .segment-controls {
+    position: absolute;
+    left: 6px;
+    top: 12px;
+    width: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2px;
+    font-family: "Be Vietnam Pro", "Noto Sans", sans-serif;
+    color: var(--ej-muted);
+    opacity: 0.45;
+    transition: opacity 140ms ease;
+  }
+  .ej-reader .segment:hover > .segment-controls,
+  .ej-reader .segment.playing-segment > .segment-controls {
+    opacity: 1;
+  }
+  .ej-reader .segment-index {
+    width: 100%;
+    text-align: right;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--ej-muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .ej-reader .segment-action {
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: var(--ej-ink2);
+    transition: background-color 140ms ease, color 140ms ease;
+  }
+  .ej-reader .segment-action:hover {
+    background: var(--ej-surface2);
+    color: var(--ej-accent-ink);
+  }
+  .ej-reader .translation {
+    margin: -4px 0 6px;
+    padding: 0 16px 0 52px;
+    font-family: "Be Vietnam Pro", "Noto Sans", sans-serif;
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: var(--ej-muted);
+  }
+  .ej-reader a {
+    color: var(--ej-accent-ink);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .ej-reader img {
+    border-radius: 10px;
+    margin: 12px auto;
+  }
+  .ej-reader blockquote {
+    margin: 8px 0 8px 52px;
+    padding-left: 14px;
+    border-left: 3px solid var(--ej-line2);
+    color: var(--ej-ink2);
+  }
+
+  /* Plain article prose (stories, previews): the same Literata reading scale
+     as the document reader, without the per-paragraph segment gutter. */
+  .ej-prose {
+    font-family: Literata, Georgia, serif;
+    font-size: var(--ej-reader-size, 17px);
+    line-height: 1.72;
+    color: var(--ej-ink);
+  }
+  .ej-prose h1,
+  .ej-prose h2,
+  .ej-prose h3,
+  .ej-prose h4 {
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 22px 0 10px;
+  }
+  .ej-prose h1 {
+    font-size: calc(var(--ej-reader-size, 17px) * 1.7);
+  }
+  .ej-prose h2 {
+    font-size: calc(var(--ej-reader-size, 17px) * 1.42);
+  }
+  .ej-prose h3 {
+    font-size: calc(var(--ej-reader-size, 17px) * 1.22);
+  }
+  .ej-prose h4 {
+    font-size: calc(var(--ej-reader-size, 17px) * 1.08);
+  }
+  .ej-prose p {
+    margin: 0 0 14px;
+  }
+  .ej-prose img {
+    border-radius: 10px;
+    margin: 14px auto;
+  }
+  .ej-prose a {
+    color: var(--ej-accent-ink);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .ej-prose blockquote {
+    margin: 10px 0;
+    padding-left: 14px;
+    border-left: 3px solid var(--ej-line2);
+    color: var(--ej-ink2);
+  }
+  .ej-prose mark {
+    background: var(--ej-hl);
+    color: var(--ej-hl-ink);
+    border-radius: 3px;
+    padding: 0 1px;
+  }
 }
 
 body {
@@ -132,29 +513,13 @@ body {
 
 /* make scrollbar beautiful */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
+  height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f8f8f8;
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #e0e0e0;
-  border-radius: 10px;
-}
-
-/* Dark mode styles for scrollbar */
-html.dark {
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  ::-webkit-scrollbar-track {
-    background: #1a1a1a;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #444;
-    border-radius: 10px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
+  background: var(--ej-line2);
+  border-radius: 8px;
 }

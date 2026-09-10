@@ -1,9 +1,72 @@
 import { t } from "i18next";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useMemo, useCallback } from "react";
 import { PronunciationAssessmentWordResult } from "@renderer/components";
-import { Switch, ScrollArea } from "@renderer/components/ui";
+import { Switch } from "@renderer/components/ui";
 import { InfoIcon } from "lucide-react";
 import { cn } from "@renderer/lib/utils";
+
+type ErrorKey =
+  | "mispronunciation"
+  | "omission"
+  | "insertion"
+  | "unexpectedBreak"
+  | "missingBreak"
+  | "monotone";
+
+/** Error type as reported by Azure Speech, paired with its swatch. */
+const ERROR_TYPES: {
+  key: ErrorKey;
+  errorType: string;
+  labelKey: string;
+  explainationKey: string;
+  swatch: string;
+}[] = [
+  {
+    key: "mispronunciation",
+    errorType: "Mispronunciation",
+    labelKey: "models.pronunciationAssessment.errors.misspronunciation",
+    explainationKey:
+      "models.pronunciationAssessment.explainations.misspronunciation",
+    swatch: "bg-ej-warn",
+  },
+  {
+    key: "omission",
+    errorType: "Omission",
+    labelKey: "models.pronunciationAssessment.errors.omission",
+    explainationKey: "models.pronunciationAssessment.explainations.omission",
+    swatch: "bg-ej-muted",
+  },
+  {
+    key: "insertion",
+    errorType: "Insertion",
+    labelKey: "models.pronunciationAssessment.errors.insertion",
+    explainationKey: "models.pronunciationAssessment.explainations.insertion",
+    swatch: "bg-ej-bad",
+  },
+  {
+    key: "unexpectedBreak",
+    errorType: "UnexpectedBreak",
+    labelKey: "models.pronunciationAssessment.errors.unexpectedBreak",
+    explainationKey:
+      "models.pronunciationAssessment.explainations.unexpectedBreak",
+    swatch: "bg-ej-pitch",
+  },
+  {
+    key: "missingBreak",
+    errorType: "MissingBreak",
+    labelKey: "models.pronunciationAssessment.errors.missingBreak",
+    explainationKey:
+      "models.pronunciationAssessment.explainations.missingBreak",
+    swatch: "bg-ej-line2",
+  },
+  {
+    key: "monotone",
+    errorType: "Monotone",
+    labelKey: "models.pronunciationAssessment.errors.monotone",
+    explainationKey: "models.pronunciationAssessment.explainations.monotone",
+    swatch: "bg-ej-accent",
+  },
+];
 
 export const PronunciationAssessmentFulltextResult = (props: {
   words: PronunciationAssessmentWordResultType[];
@@ -13,15 +76,7 @@ export const PronunciationAssessmentFulltextResult = (props: {
   className?: string;
 }) => {
   const { words, currentTime, src, onPlayOrigin, className } = props;
-  const [errorStats, setErrorStats] = useState({
-    mispronunciation: 0,
-    omission: 0,
-    insertion: 0,
-    unexpectedBreak: 0,
-    missingBreak: 0,
-    monotone: 0,
-  });
-  const [errorDisplay, setErrorDisplay] = useState({
+  const [errorDisplay, setErrorDisplay] = useState<Record<ErrorKey, boolean>>({
     mispronunciation: true,
     omission: true,
     insertion: true,
@@ -30,42 +85,33 @@ export const PronunciationAssessmentFulltextResult = (props: {
     monotone: true,
   });
 
-  const handlePlayOrigin = useCallback((word: string, index: number) => {
-    if (!onPlayOrigin) return;
-    onPlayOrigin(word, index);
-  }, []);
+  const errorStats = useMemo(() => {
+    const stats = {} as Record<ErrorKey, number>;
+    ERROR_TYPES.forEach((type) => {
+      stats[type.key] = words.filter(
+        (w) => w.pronunciationAssessment?.errorType === type.errorType
+      ).length;
+    });
+    return stats;
+  }, [words]);
 
-  const calErrorStats = () => {
-    return {
-      mispronunciation: words.filter(
-        (w) => w.pronunciationAssessment.errorType === "Mispronunciation"
-      ).length,
-      omission: words.filter(
-        (w) => w.pronunciationAssessment.errorType === "Omission"
-      ).length,
-      insertion: words.filter(
-        (w) => w.pronunciationAssessment.errorType === "Insertion"
-      ).length,
-      unexpectedBreak: words.filter(
-        (w) => w.pronunciationAssessment.errorType === "UnexpectedBreak"
-      ).length,
-      missingBreak: words.filter(
-        (w) => w.pronunciationAssessment.errorType === "MissingBreak"
-      ).length,
-      monotone: words.filter(
-        (w) => w.pronunciationAssessment.errorType === "Monotone"
-      ).length,
-    };
-  };
-
-  useEffect(() => {
-    setErrorStats(calErrorStats());
-  }, []);
+  const handlePlayOrigin = useCallback(
+    (word: string, index: number) => {
+      if (!onPlayOrigin) return;
+      onPlayOrigin(word, index);
+    },
+    [onPlayOrigin]
+  );
 
   return (
-    <ScrollArea className={cn("min-h-72", className)}>
-      <div className="flex items-start justify-between space-x-6">
-        <div className="flex-1 py-4 flex items-center flex-wrap">
+    <div
+      className={cn(
+        "min-h-72 grid gap-4 grid-cols-1 lg:grid-cols-[1fr_240px]",
+        className
+      )}
+    >
+      <div className="min-w-0 rounded-ej-lg border border-ej-line bg-ej-surface2/30 px-4 py-4">
+        <div className="flex items-start flex-wrap gap-x-0.5 gap-y-1">
           {words.map((result, index: number) => (
             <PronunciationAssessmentWordResult
               key={index}
@@ -74,8 +120,6 @@ export const PronunciationAssessmentFulltextResult = (props: {
               currentTime={currentTime}
               src={src}
               onPlayOrigin={() => {
-                // if (!onPlayOrigin) return;
-
                 const word = words[index];
                 const candidates = words.filter((w) => w.word === word.word);
                 const wordIndex = candidates.findIndex(
@@ -86,185 +130,50 @@ export const PronunciationAssessmentFulltextResult = (props: {
             />
           ))}
         </div>
+      </div>
 
-        <div className="">
-          <div className="font-bold mb-4">{t("errors")}</div>
+      <div className="min-w-0 rounded-ej-lg border border-ej-line bg-ej-surface p-3">
+        <div className="ej-label mb-3">{t("errors")}</div>
 
-          <div className="flex items-center justify-between space-x-6 mb-2 min-w-[12rem]">
-            <div className="flex items-center">
-              <span className="bg-yellow-600 text-sm px-1">
-                {errorStats.mispronunciation}
-              </span>
-              <span className="ml-2">
-                {t("models.pronunciationAssessment.errors.misspronunciation")}
-              </span>
-              <InfoIcon
-                data-tooltip-id="recording-tooltip"
-                data-tooltip-content={t(
-                  "models.pronunciationAssessment.explainations.misspronunciation"
-                )}
-                className="inline w-3 h-3 cursor-pointer ml-2"
-              />
-            </div>
-            <div className="">
+        <div className="space-y-1">
+          {ERROR_TYPES.map((type) => (
+            <div
+              key={type.key}
+              className="flex items-center justify-between gap-2 py-1"
+            >
+              <div className="flex items-center gap-2 min-w-0">
+                <span
+                  className={cn(
+                    "shrink-0 min-w-5 h-5 px-1 rounded-md text-white text-xxs font-bold ej-tabular inline-flex items-center justify-center",
+                    type.swatch
+                  )}
+                >
+                  {errorStats[type.key]}
+                </span>
+                <span className="text-xs text-ej-ink2 truncate">
+                  {t(type.labelKey)}
+                </span>
+                <InfoIcon
+                  data-tooltip-id="recording-tooltip"
+                  data-tooltip-content={t(type.explainationKey)}
+                  className="size-3 shrink-0 cursor-pointer text-ej-muted"
+                />
+              </div>
+
               <Switch
-                checked={errorDisplay.mispronunciation}
-                onClick={() => {
+                className="shrink-0"
+                checked={errorDisplay[type.key]}
+                onClick={() =>
                   setErrorDisplay({
                     ...errorDisplay,
-                    mispronunciation: !errorDisplay.mispronunciation,
-                  });
-                }}
+                    [type.key]: !errorDisplay[type.key],
+                  })
+                }
               />
             </div>
-          </div>
-
-          <div className="flex items-center justify-between space-x-6 mb-2">
-            <div className="flex items-center">
-              <span className="bg-gray-600 text-sm text-white px-1">
-                {errorStats.omission}
-              </span>
-              <span className="ml-2">
-                {t("models.pronunciationAssessment.errors.omission")}
-              </span>
-              <InfoIcon
-                data-tooltip-id="recording-tooltip"
-                data-tooltip-content={t(
-                  "models.pronunciationAssessment.explainations.omission"
-                )}
-                className="inline w-3 h-3 cursor-pointer ml-2"
-              />
-            </div>
-            <div className="">
-              <Switch
-                checked={errorDisplay.omission}
-                onClick={() => {
-                  setErrorDisplay({
-                    ...errorDisplay,
-                    omission: !errorDisplay.omission,
-                  });
-                }}
-              />
-            </div>
-          </div>
-
-          <div className="flex items-center justify-between space-x-6 mb-2">
-            <div className="flex items-center">
-              <span className="bg-red-600 text-sm text-white px-1">
-                {errorStats.insertion}
-              </span>
-              <span className="ml-2">
-                {t("models.pronunciationAssessment.errors.insertion")}
-              </span>
-              <InfoIcon
-                data-tooltip-id="recording-tooltip"
-                data-tooltip-content={t(
-                  "models.pronunciationAssessment.explainations.insertion"
-                )}
-                className="inline w-3 h-3 cursor-pointer ml-2"
-              />
-            </div>
-            <div className="">
-              <Switch
-                checked={errorDisplay.insertion}
-                onClick={() => {
-                  setErrorDisplay({
-                    ...errorDisplay,
-                    insertion: !errorDisplay.insertion,
-                  });
-                }}
-              />
-            </div>
-          </div>
-
-          <div className="flex items-center justify-between space-x-6 mb-2">
-            <div className="flex items-center">
-              <span className="bg-pink-600 text-sm text-white px-1">
-                {errorStats.unexpectedBreak}
-              </span>
-              <span className="ml-2">
-                {t("models.pronunciationAssessment.errors.unexpectedBreak")}
-              </span>
-              <InfoIcon
-                data-tooltip-id="recording-tooltip"
-                data-tooltip-content={t(
-                  "models.pronunciationAssessment.explainations.unexpectedBreak"
-                )}
-                className="inline w-3 h-3 cursor-pointer ml-2"
-              />
-            </div>
-            <div className="">
-              <Switch
-                checked={errorDisplay.unexpectedBreak}
-                onClick={() => {
-                  setErrorDisplay({
-                    ...errorDisplay,
-                    unexpectedBreak: !errorDisplay.unexpectedBreak,
-                  });
-                }}
-              />
-            </div>
-          </div>
-
-          <div className="flex items-center justify-between space-x-6 mb-2">
-            <div className="flex items-center">
-              <span className="bg-gray-200 text-sm px-1">
-                {errorStats.missingBreak}
-              </span>
-              <span className="ml-2">
-                {t("models.pronunciationAssessment.errors.missingBreak")}
-              </span>
-              <InfoIcon
-                data-tooltip-id="recording-tooltip"
-                data-tooltip-content={t(
-                  "models.pronunciationAssessment.explainations.missingBreak"
-                )}
-                className="inline w-3 h-3 cursor-pointer ml-2"
-              />
-            </div>
-            <div className="">
-              <Switch
-                checked={errorDisplay.missingBreak}
-                onClick={() => {
-                  setErrorDisplay({
-                    ...errorDisplay,
-                    missingBreak: !errorDisplay.missingBreak,
-                  });
-                }}
-              />
-            </div>
-          </div>
-
-          <div className="flex items-center justify-between space-x-6 mb-2">
-            <div className="flex items-center">
-              <span className="bg-purple-600 text-sm text-white px-1">
-                {errorStats.monotone}
-              </span>
-              <span className="ml-2">
-                {t("models.pronunciationAssessment.errors.monotone")}
-              </span>
-              <InfoIcon
-                data-tooltip-id="recording-tooltip"
-                data-tooltip-content={t(
-                  "models.pronunciationAssessment.explainations.monotone"
-                )}
-                className="inline w-3 h-3 cursor-pointer ml-2"
-              />
-            </div>
-            <div className="">
-              <Switch
-                checked={errorDisplay.monotone}
-                onClick={() => {
-                  setErrorDisplay({
-                    ...errorDisplay,
-                    monotone: !errorDisplay.monotone,
-                  });
-                }}
-              />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </ScrollArea>
+    </div>
   );
 };

@@ -1,5 +1,4 @@
 import {
-  Button,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -10,6 +9,8 @@ import { EllipsisIcon, SpeechIcon, UsersRoundIcon } from "lucide-react";
 import { t } from "i18next";
 import dayjs from "@renderer/lib/dayjs";
 import { ChatTypeEnum } from "@/types/enums";
+import { cn } from "@renderer/lib/utils";
+import { EjIconButton } from "@renderer/components/enjoy";
 
 export const ChatCard = (props: {
   chat: ChatType;
@@ -27,44 +28,65 @@ export const ChatCard = (props: {
     onSelect,
     onDelete,
   } = props;
+
   return (
-    <div className="px-2">
+    <div>
       {displayDate && (
-        <div className="text-xs text-muted-foreground my-2 capitalize">
+        <div className="ej-label mt-3 mb-1.5 px-1">
           {dayjs(chat.updatedAt).fromNow()}
         </div>
       )}
+
       <div
-        className={`flex items-center space-x-2 rounded-lg py-1 hover:bg-muted/50 cursor-pointer ${
-          selected ? "bg-muted/50" : ""
-        } ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}
+        className={cn(
+          "group flex items-center gap-2 px-2.5 py-2 rounded-ej cursor-pointer",
+          "border transition-colors duration-ej",
+          selected
+            ? "bg-ej-surface border-ej-line shadow-ej"
+            : "bg-transparent border-transparent hover:bg-ej-surface/70",
+          disabled && "opacity-50 cursor-not-allowed"
+        )}
         onClick={() => !disabled && onSelect(chat)}
       >
-        {chat.type === ChatTypeEnum.CONVERSATION && (
-          <ChatBubbleIcon className="w-4 h-4" />
-        )}
-        {chat.type === ChatTypeEnum.GROUP && (
-          <UsersRoundIcon className="w-4 h-4" />
-        )}
-        {chat.type === ChatTypeEnum.TTS && <SpeechIcon className="w-4 h-4" />}
-        <div className="flex-1 text-sm font-sans line-clamp-1">
+        <span
+          className={cn(
+            "shrink-0",
+            selected ? "text-ej-accent" : "text-ej-muted"
+          )}
+        >
+          {chat.type === ChatTypeEnum.CONVERSATION && (
+            <ChatBubbleIcon className="size-3.5" />
+          )}
+          {chat.type === ChatTypeEnum.GROUP && (
+            <UsersRoundIcon className="size-3.5" />
+          )}
+          {chat.type === ChatTypeEnum.TTS && <SpeechIcon className="size-3.5" />}
+        </span>
+
+        <div className="flex-1 min-w-0 text-xs text-ej-ink truncate">
           {chat.name}
         </div>
+
         {onDelete && (
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon" className="h-4">
-                <EllipsisIcon className="w-4 h-4" />
-              </Button>
+              <EjIconButton
+                size={22}
+                className="opacity-0 group-hover:opacity-100 data-[state=open]:opacity-100"
+                onClick={(event) => event.stopPropagation()}
+              >
+                <EllipsisIcon className="size-3.5" />
+              </EjIconButton>
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
+            <DropdownMenuContent align="end">
               <DropdownMenuItem
+                className="cursor-pointer text-xs"
                 onClick={(event) => {
                   event.stopPropagation();
                   onDelete(chat);
                 }}
               >
-                <span className="text-destructive">{t("delete")}</span>
+                <span className="text-ej-bad">{t("delete")}</span>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

@@ -1,0 +1,303 @@
+{
+  "generatedAt": "2026-09-08",
+  "scope": "Open-source ASR long-audio chunking and playback research. Every listed URL was successfully fetched through the web tool on the accessed date.",
+  "sources": [
+    {
+      "id": "whisper-transcribe",
+      "url": "https://github.com/openai/whisper/blob/86098128c0b4f24f0e2aa2994de830614b474227/whisper/transcribe.py",
+      "title": "openai/whisper transcribe.py",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "seek loop, prompt carry/reset, fallback and no-speech behavior",
+      "limitations": "main branch snapshot, not a provider behavior contract",
+      "sourceType": "primary-source-code",
+      "version": "commit 86098128c0b4f24f0e2aa2994de830614b474227"
+    },
+    {
+      "id": "whisper-license",
+      "url": "https://github.com/openai/whisper/blob/86098128c0b4f24f0e2aa2994de830614b474227/LICENSE",
+      "title": "openai/whisper LICENSE",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "MIT License",
+      "limitations": "does not cover external model weights or dependencies",
+      "sourceType": "primary-license",
+      "version": "commit 86098128c0b4f24f0e2aa2994de830614b474227"
+    },
+    {
+      "id": "whisper-hallucination-discussion",
+      "url": "https://github.com/openai/whisper/discussions/679",
+      "title": "A possible solution to Whisper hallucination",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "community reports ghost transcript and repetition around silence/context",
+      "limitations": "user discussion, not a maintained guarantee or measured rate",
+      "sourceType": "first-hand-community-discussion",
+      "version": "discussion 679"
+    },
+    {
+      "id": "faster-whisper-readme",
+      "url": "https://github.com/SYSTRAN/faster-whisper/blob/ed9a06cd89a93e47838f564998a6c09b655d7f43/README.md",
+      "title": "faster-whisper README",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "Silero VAD integration, conservative two-second default and word timestamps",
+      "limitations": "documentation, not a quality benchmark",
+      "sourceType": "primary-project-docs",
+      "version": "commit ed9a06cd89a93e47838f564998a6c09b655d7f43"
+    },
+    {
+      "id": "faster-whisper-vad",
+      "url": "https://github.com/SYSTRAN/faster-whisper/blob/ed9a06cd89a93e47838f564998a6c09b655d7f43/faster_whisper/vad.py",
+      "title": "faster-whisper vad.py",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "VAD chunk split, padding and SpeechTimestampsMap restore original time",
+      "limitations": "local implementation, not Cloudflare behavior",
+      "sourceType": "primary-source-code",
+      "version": "commit ed9a06cd89a93e47838f564998a6c09b655d7f43"
+    },
+    {
+      "id": "faster-whisper-transcribe",
+      "url": "https://github.com/SYSTRAN/faster-whisper/blob/ed9a06cd89a93e47838f564998a6c09b655d7f43/faster_whisper/transcribe.py",
+      "title": "faster-whisper transcribe.py",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "batched inference restores timestamps after VAD and exposes word-level options",
+      "limitations": "local CTranslate2 engine only",
+      "sourceType": "primary-source-code",
+      "version": "commit ed9a06cd89a93e47838f564998a6c09b655d7f43"
+    },
+    {
+      "id": "faster-whisper-license",
+      "url": "https://github.com/SYSTRAN/faster-whisper/blob/ed9a06cd89a93e47838f564998a6c09b655d7f43/LICENSE",
+      "title": "faster-whisper LICENSE",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "MIT License",
+      "limitations": "does not cover external model weights or dependencies",
+      "sourceType": "primary-license",
+      "version": "commit ed9a06cd89a93e47838f564998a6c09b655d7f43"
+    },
+    {
+      "id": "faster-whisper-repeat-465",
+      "url": "https://github.com/SYSTRAN/faster-whisper/issues/465",
+      "title": "Transcriptions with repeated sentences",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "user reports repeated/nonsense transcript with VAD",
+      "limitations": "single community reproduction, no causal proof",
+      "sourceType": "first-hand-github-issue",
+      "version": "issue 465"
+    },
+    {
+      "id": "faster-whisper-timestamps-1119",
+      "url": "https://github.com/SYSTRAN/faster-whisper/issues/1119",
+      "title": "After using VAD start and end times incorrect",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "user timing complaint and collaborator suggests word timestamps or forced alignment",
+      "limitations": "case-specific report; no universal VAD conclusion",
+      "sourceType": "first-hand-github-issue",
+      "version": "issue 1119"
+    },
+    {
+      "id": "faster-whisper-vad-944",
+      "url": "https://github.com/SYSTRAN/faster-whisper/issues/944",
+      "title": "VAD v5 worse for some audio",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "community report of truncation on a music lyric test",
+      "limitations": "single user test and historical versions",
+      "sourceType": "first-hand-github-issue",
+      "version": "issue 944"
+    },
+    {
+      "id": "whisperx-readme",
+      "url": "https://github.com/m-bain/whisperX/blob/2cfd7b7c5c7bba144954364db747319b50e8232b/README.md",
+      "title": "WhisperX README",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "VAD, faster-whisper backend, wav2vec2 alignment, sentence segmentation and limits",
+      "limitations": "project documentation; requires local runtime/dependencies",
+      "sourceType": "primary-project-docs",
+      "version": "commit 2cfd7b7c5c7bba144954364db747319b50e8232b"
+    },
+    {
+      "id": "whisperx-asr",
+      "url": "https://github.com/m-bain/whisperX/blob/2cfd7b7c5c7bba144954364db747319b50e8232b/whisperx/asr.py",
+      "title": "WhisperX asr.py",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "load_model and VAD/ASR default options",
+      "limitations": "not a hosted provider contract",
+      "sourceType": "primary-source-code",
+      "version": "commit 2cfd7b7c5c7bba144954364db747319b50e8232b"
+    },
+    {
+      "id": "whisperx-license",
+      "url": "https://github.com/m-bain/whisperX/blob/2cfd7b7c5c7bba144954364db747319b50e8232b/LICENSE",
+      "title": "WhisperX LICENSE",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "BSD 2-Clause License",
+      "limitations": "does not cover downloaded aligner/VAD models",
+      "sourceType": "primary-license",
+      "version": "commit 2cfd7b7c5c7bba144954364db747319b50e8232b"
+    },
+    {
+      "id": "whisperx-long-align-289",
+      "url": "https://github.com/m-bain/whisperX/issues/289",
+      "title": "Question: How to use Alignment only?",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "owner says long-audio alignment drifts, consumes memory and VAD avoids mid-word cuts",
+      "limitations": "issue answer applies to current code and its aligner",
+      "sourceType": "first-hand-maintainer-issue",
+      "version": "issue 289"
+    },
+    {
+      "id": "whisperx-noise-align-344",
+      "url": "https://github.com/m-bain/whisperX/issues/344",
+      "title": "Alignment off with background noise and music",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "reported wav2vec2 alignment problem with music/noise",
+      "limitations": "open issue user report, not a measured general rate",
+      "sourceType": "first-hand-github-issue",
+      "version": "issue 344"
+    },
+    {
+      "id": "whispercpp-stream-readme",
+      "url": "https://github.com/ggml-org/whisper.cpp/blob/c44b60b8053bbf2a5c1e014f11323fb3f2485177/examples/stream/README.md",
+      "title": "whisper.cpp stream README",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "sliding VAD window operation and threshold example",
+      "limitations": "naive microphone example, not batch long-file API",
+      "sourceType": "primary-project-docs",
+      "version": "commit c44b60b8053bbf2a5c1e014f11323fb3f2485177"
+    },
+    {
+      "id": "whispercpp-stream-source",
+      "url": "https://github.com/ggml-org/whisper.cpp/blob/c44b60b8053bbf2a5c1e014f11323fb3f2485177/examples/stream/stream.cpp",
+      "title": "whisper.cpp stream.cpp",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "keep/context and VAD parameter wiring",
+      "limitations": "example program, requires native integration",
+      "sourceType": "primary-source-code",
+      "version": "commit c44b60b8053bbf2a5c1e014f11323fb3f2485177"
+    },
+    {
+      "id": "whispercpp-license",
+      "url": "https://github.com/ggml-org/whisper.cpp/blob/c44b60b8053bbf2a5c1e014f11323fb3f2485177/LICENSE",
+      "title": "whisper.cpp LICENSE",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "MIT License",
+      "limitations": "does not cover model weights",
+      "sourceType": "primary-license",
+      "version": "commit c44b60b8053bbf2a5c1e014f11323fb3f2485177"
+    },
+    {
+      "id": "whispercpp-vad-overlap-3683",
+      "url": "https://github.com/ggml-org/whisper.cpp/issues/3683",
+      "title": "VAD overlap timestamp drift",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "issue describes VAD-overlap timestamp drift",
+      "limitations": "specific issue; no release or PR link for a fix was verified in this research pass",
+      "sourceType": "first-hand-github-issue",
+      "version": "issue 3683"
+    },
+    {
+      "id": "stablets-readme",
+      "url": "https://github.com/jianfch/stable-ts/blob/e312072cc024ae9fceb25b057d7d18524873a02b/README.md",
+      "title": "stable-ts README",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "regrouping, silence and gap adjustment; repository archived and development paused",
+      "limitations": "archived project and local-only postprocessing",
+      "sourceType": "primary-project-docs",
+      "version": "archived; commit e312072cc024ae9fceb25b057d7d18524873a02b"
+    },
+    {
+      "id": "stablets-changelog",
+      "url": "https://github.com/jianfch/stable-ts/blob/e312072cc024ae9fceb25b057d7d18524873a02b/CHANGELOG.md",
+      "title": "stable-ts CHANGELOG",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "recent recorded fixes around alignment, gaps and repetitions",
+      "limitations": "changelog claims, no independent reproduction",
+      "sourceType": "primary-project-changelog",
+      "version": "archived; commit e312072cc024ae9fceb25b057d7d18524873a02b"
+    },
+    {
+      "id": "stablets-license",
+      "url": "https://github.com/jianfch/stable-ts/blob/e312072cc024ae9fceb25b057d7d18524873a02b/LICENSE",
+      "title": "stable-ts LICENSE",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "MIT License",
+      "limitations": "does not cover dependencies and project is archived",
+      "sourceType": "primary-license",
+      "version": "archived; commit e312072cc024ae9fceb25b057d7d18524873a02b"
+    },
+    {
+      "id": "hf-asr-pipeline",
+      "url": "https://github.com/huggingface/transformers/blob/0514b65827ea0eade3d0260a81afcef763a3b94d/src/transformers/pipelines/automatic_speech_recognition.py",
+      "title": "Transformers ASR pipeline",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "seq2seq chunking warning and Whisper long-form generate guidance",
+      "limitations": "Transformers implementation, not Cloudflare or generic Whisper wire protocol",
+      "sourceType": "primary-source-code",
+      "version": "commit 0514b65827ea0eade3d0260a81afcef763a3b94d"
+    },
+    {
+      "id": "hf-right-stride-21568",
+      "url": "https://github.com/huggingface/transformers/issues/21568",
+      "title": "Incorrect right stride at penultimate chunk",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "historical Whisper chunk right-stride boundary defect report",
+      "limitations": "reported against Transformers 4.26.0 and closed; not current-release proof",
+      "sourceType": "first-hand-github-issue",
+      "version": "issue 21568"
+    },
+    {
+      "id": "whisperstreaming-readme",
+      "url": "https://github.com/ufal/whisper_streaming/blob/6da90b44b7e50d79695e68166d2a2c7609c75abb/README.md",
+      "title": "whisper_streaming README",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "LocalAgreement-n and why fixed chunks can split words",
+      "limitations": "realtime streaming design, not hosted batch API",
+      "sourceType": "primary-project-docs",
+      "version": "commit 6da90b44b7e50d79695e68166d2a2c7609c75abb"
+    },
+    {
+      "id": "whisperstreaming-source",
+      "url": "https://github.com/ufal/whisper_streaming/blob/6da90b44b7e50d79695e68166d2a2c7609c75abb/whisper_online.py",
+      "title": "whisper_streaming whisper_online.py",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "OnlineASRProcessor and VAC buffering, confirmation and prompt mechanics",
+      "limitations": "local Python stateful service",
+      "sourceType": "primary-source-code",
+      "version": "commit 6da90b44b7e50d79695e68166d2a2c7609c75abb"
+    },
+    {
+      "id": "whisperstreaming-license",
+      "url": "https://github.com/ufal/whisper_streaming/blob/6da90b44b7e50d79695e68166d2a2c7609c75abb/LICENSE",
+      "title": "whisper_streaming LICENSE",
+      "accessed": "2026-09-08",
+      "status": "fetched",
+      "claim": "MIT License",
+      "limitations": "does not cover dependencies or models",
+      "sourceType": "primary-license",
+      "version": "commit 6da90b44b7e50d79695e68166d2a2c7609c75abb"
+    }
+  ]
+}

@@ -24,7 +24,9 @@ type RuntimeAISettings = {
 };
 
 export const useConversation = () => {
-  const { EnjoyApp, user, apiUrl } = useContext(AppSettingsProviderContext);
+  const { EnjoyApp } = useContext(
+    AppSettingsProviderContext
+  );
   const { openai, getProviderConfig } = useContext(
     AISettingsProviderContext
   ) as RuntimeAISettings;
@@ -44,18 +46,8 @@ export const useConversation = () => {
     const provider = conversation.engine;
     const configuredProvider = getProviderConfig?.(provider);
     const legacyProvider = provider === "openai" ? openai : undefined;
-    const key = configuredProvider?.key ?? legacyProvider?.key ??
-      (provider === "enjoyai" ? user?.accessToken : undefined);
-    const resolvedBaseUrl =
-      provider === "enjoyai"
-        ? apiUrl
-          ? `${apiUrl}/api/ai`
-          : undefined
-        : baseUrl || configuredProvider?.baseUrl || legacyProvider?.baseUrl;
-
-    if (provider === "enjoyai" && !key) {
-      throw new Error("EnjoyAI authorization is required");
-    }
+    const key = configuredProvider?.key ?? legacyProvider?.key;
+    const resolvedBaseUrl = baseUrl || configuredProvider?.baseUrl || legacyProvider?.baseUrl;
     if (provider === "openai" && !key) {
       throw new Error("OpenAI API key is required");
     }

@@ -1,0 +1,951 @@
+{
+  "id": "local-integrated-jfk-align-whisper",
+  "ok": true,
+  "elapsedMs": 593,
+  "transcript": "And so my fellow Americans ask not what your country can do for you ask what you can do for your country.",
+  "language": "en-US",
+  "timeline": [
+    {
+      "type": "segment",
+      "text": "And so my fellow Americans ask not what your country can do for you ask what you can do for your country.",
+      "startTime": 0,
+      "endTime": 10.44,
+      "timeline": [
+        {
+          "type": "sentence",
+          "text": "And so my fellow Americans ask not what your country can do for you ask what you can do for your country.",
+          "startTime": 0,
+          "endTime": 10.44,
+          "timeline": [
+            {
+              "type": "word",
+              "text": "And",
+              "startTime": 0,
+              "endTime": 0.38,
+              "confidence": 1,
+              "timeline": [
+                {
+                  "type": "token",
+                  "text": "And",
+                  "id": 1870,
+                  "startTime": 0,
+                  "endTime": 0.38,
+                  "confidence": 1
+                }
+              ],
+              "startOffsetUtf16": 0,
+              "endOffsetUtf16": 3,
+              "startOffsetUtf32": 0,
+              "endOffsetUtf32": 3
+            },
+            {
+              "type": "word",
+              "text": "so",
+              "startTime": 0.38,
+              "endTime": 0.88,
+              "confidence": 1,
+              "timeline": [
+                {
+                  "type": "token",
+                  "text": " so",
+                  "id": 523,
+                  "startTime": 0.38,
+                  "endTime": 0.88,
+                  "confidence": 1
+                }
+              ],
+              "startOffsetUtf16": 4,
+              "endOffsetUtf16": 6,
+              "startOffsetUtf32": 4,
+              "endOffsetUtf32": 6
+            },
+            {
+              "type": "word",
+              "text": "my",
+              "startTime": 0.88,
+              "endTime": 1.2,
+              "confidence": 1,
+              "timeline": [
+                {
+                  "type": "token",
+                  "text": " my",
+                  "id": 616,
+                  "startTime": 0.88,
+                  "endTime": 1.2,
+                  "confidence": 1
+                }
+              ],
+              "startOffsetUtf16": 7,
+              "endOffsetUtf16": 9,
+              "startOffsetUtf32": 7,
+              "endOffsetUtf32": 9
+            },
+            {
+              "type": "word",
+              "text": "fellow",
+              "startTime": 1.2,
+              "endTime": 1.62,
+              "confidence": 1,
+              "timeline": [
+                {
+                  "type": "token",
+                  "text": " fellow",
+                  "id": 5891,
+                  "startTime": 1.2,
+                  "endTime": 1.62,
+                  "confidence": 1
+                }
+              ],
+              "startOffsetUtf16": 10,
+              "endOffsetUtf16": 16,
+              "startOffsetUtf32": 10,
+              "endOffsetUtf32": 16
+            },
+            {
+              "type": "word",
+              "text": "Americans",
+              "startTime": 1.62,
+              "endTime": 2.3000000000000003,
+              "confidence": 1,
+              "timeline": [
+                {
+                  "type": "token",
+                  "text": " Americans",
+                  "id": 3399,
+                  "startTime": 1.62,
+                  "endTime": 2.3000000000000003,
+                  "confidence": 1
+                }
+              ],
+              "startOffsetUtf16": 17,
+              "endOffsetUtf16": 26,
+              "startOffsetUtf32": 17,
+              "endOffsetUtf32": 26
+            },
+            {
+              "type": "word",
+              "text": "ask",
+              "startTime": 2.3000000000000003,
+              "endTime": 3.7800000000000002,
+              "confidence": 1,
+              "timeline": [
+                {
+                  "type": "token",
+                  "text": " ask",
+                  "id": 1265,
+                  "startTime": 2.3000000000000003,
+                  "endTime": 3.7800000000000002,
+                  "confidence": 1
+                }
+              ],
+              "startOffsetUtf16": 27,
+              "endOffsetUtf16": 30,
+              "startOffsetUtf32": 27,
+              "endOffsetUtf32": 30
+            },
+            {
+              "type": "word",
+              "text": "not",
+              "startTime": 3.7800000000000002,
+              "endTime": 4.5,
+              "confidence": 1,
+              "timeline": [
+                {
+                  "type": "token",
+                  "text": " not",
+                  "id": 407,
+                  "startTime": 3.7800000000000002,
+                  "endTime": 4.5,
+                  "confidence": 1
+                }
+              ],
+              "startOffsetUtf16": 31,
+              "endOffsetUtf16": 34,
+              "startOffsetUtf32": 31,
+              "endOffsetUtf32": 34
+            },
+            {
+              "type": "word",
+              "text": "what",
+              "startTime": 4.5,
+              "endTime": 5.5600000000000005,
+              "confidence": 1,
+              "timeline": [
+                {
+                  "type": "token",
+                  "text": " what",
+                  "id": 644,
+                  "startTime": 4.5,
+                  "endTime": 5.5600000000000005,
+                  "confidence": 1
+                }
+              ],
+              "startOffsetUtf16": 35,
+              "endOffsetUtf16": 39,
+              "startOffsetUtf32": 35,
+              "endOffsetUtf32": 39
+            },
+            {
+              "type": "word",
+              "text": "your",
+              "startTime": 5.5600000000000005,
+              "endTime": 5.8,
+              "confidence": 1,
+              "timeline": [
+                {
+                  "type": "token",
+                  "text": " your",
+                  "id": 534,
+                  "startTime": 5.5600000000000005,
+                  "endTime": 5.8,
+                  "confidence": 1
+                }
+              ],
+              "startOffsetUtf16": 40,
+              "endOffsetUtf16": 44,
+              "startOffsetUtf32": 40,
+              "endOffsetUtf32": 44
+            },
+            {
+              "type": "word",
+              "text": "country",
+              "startTime": 5.8,
+              "endTime": 6.3,
+              "confidence": 1,
+              "timeline": [
+                {
+                  "type": "token",
+                  "text": " country",
+                  "id": 1499,
+                  "startTime": 5.8,
+                  "endTime": 6.3,
+                  "confidence": 1
+                }
+              ],
+              "startOffsetUtf16": 45,
+              "endOffsetUtf16": 52,
+              "startOffsetUtf32": 45,
+              "endOffsetUtf32": 52
+            },
+            {
+              "type": "word",
+              "text": "can",
+              "startTime": 6.3,
+              "endTime": 6.58,
+              "confidence": 1,
+              "timeline": [
+                {
+                  "type": "token",
+                  "text": " can",
+                  "id": 460,
+                  "startTime": 6.3,
+                  "endTime": 6.58,
+                  "confidence": 1
+                }
+              ],
+              "startOffsetUtf16": 53,
+              "endOffsetUtf16": 56,
+              "startOffsetUtf32": 53,
+              "endOffsetUtf32": 56
+            },
+            {
+              "type": "word",
+              "text": "do",
+              "startTime": 6.58,
+              "endTime": 6.96,
+              "confidence": 1,
+              "timeline": [
+                {
+                  "type": "token",
+                  "text": " do",
+                  "id": 466,
+                  "startTime": 6.58,
+                  "endTime": 6.96,
+                  "confidence": 1
+                }
+              ],
+              "startOffsetUtf16": 57,
+              "endOffsetUtf16": 59,
+              "startOffsetUtf32": 57,
+              "endOffsetUtf32": 59
+            },
+            {
+              "type": "word",
+              "text": "for",
+              "startTime": 6.96,
+              "endTime": 7.140000000000001,
+              "confidence": 1,
+              "timeline": [
+                {
+                  "type": "token",
+                  "text": " for",
+                  "id": 329,
+                  "startTime": 6.96,
+                  "endTime": 7.140000000000001,
+                  "confidence": 1
+                }
+              ],
+              "startOffsetUtf16": 60,
+              "endOffsetUtf16": 63,
+              "startOffsetUtf32": 60,
+              "endOffsetUtf32": 63
+            },
+            {
+              "type": "word",
+              "text": "you",
+              "startTime": 7.140000000000001,
+              "endTime": 7.76,
+              "confidence": 1,
+              "timeline": [
+                {
+                  "type": "token",
+                  "text": " you",
+                  "id": 345,
+                  "startTime": 7.140000000000001,
+                  "endTime": 7.76,
+                  "confidence": 1
+                }
+              ],
+              "startOffsetUtf16": 64,
+              "endOffsetUtf16": 67,
+              "startOffsetUtf32": 64,
+              "endOffsetUtf32": 67
+            },
+            {
+              "type": "word",
+              "text": "ask",
+              "startTime": 8.08,
+              "endTime": 8.64,
+              "confidence": 1,
+              "timeline": [
+                {
+                  "type": "token",
+                  "text": " ask",
+                  "id": 1265,
+                  "startTime": 8.08,
+                  "endTime": 8.64,
+                  "confidence": 1
+                }
+              ],
+              "startOffsetUtf16": 68,
+              "endOffsetUtf16": 71,
+              "startOffsetUtf32": 68,
+              "endOffsetUtf32": 71
+            },
+            {
+              "type": "word",
+              "text": "what",
+              "startTime": 8.64,
+              "endTime": 8.86,
+              "confidence": 1,
+              "timeline": [
+                {
+                  "type": "token",
+                  "text": " what",
+                  "id": 644,
+                  "startTime": 8.64,
+                  "endTime": 8.86,
+                  "confidence": 1
+                }
+              ],
+              "startOffsetUtf16": 72,
+              "endOffsetUtf16": 76,
+              "startOffsetUtf32": 72,
+              "endOffsetUtf32": 76
+            },
+            {
+              "type": "word",
+              "text": "you",
+              "startTime": 8.86,
+              "endTime": 9.200000000000001,
+              "confidence": 1,
+              "timeline": [
+                {
+                  "type": "token",
+                  "text": " you",
+                  "id": 345,
+                  "startTime": 8.86,
+                  "endTime": 9.200000000000001,
+                  "confidence": 1
+                }
+              ],
+              "startOffsetUtf16": 77,
+              "endOffsetUtf16": 80,
+              "startOffsetUtf32": 77,
+              "endOffsetUtf32": 80
+            },
+            {
+              "type": "word",
+              "text": "can",
+              "startTime": 9.200000000000001,
+              "endTime": 9.42,
+              "confidence": 1,
+              "timeline": [
+                {
+                  "type": "token",
+                  "text": " can",
+                  "id": 460,
+                  "startTime": 9.200000000000001,
+                  "endTime": 9.42,
+                  "confidence": 1
+                }
+              ],
+              "startOffsetUtf16": 81,
+              "endOffsetUtf16": 84,
+              "startOffsetUtf32": 81,
+              "endOffsetUtf32": 84
+            },
+            {
+              "type": "word",
+              "text": "do",
+              "startTime": 9.42,
+              "endTime": 9.68,
+              "confidence": 1,
+              "timeline": [
+                {
+                  "type": "token",
+                  "text": " do",
+                  "id": 466,
+                  "startTime": 9.42,
+                  "endTime": 9.68,
+                  "confidence": 1
+                }
+              ],
+              "startOffsetUtf16": 85,
+              "endOffsetUtf16": 87,
+              "startOffsetUtf32": 85,
+              "endOffsetUtf32": 87
+            },
+            {
+              "type": "word",
+              "text": "for",
+              "startTime": 9.68,
+              "endTime": 9.82,
+              "confidence": 1,
+              "timeline": [
+                {
+                  "type": "token",
+                  "text": " for",
+                  "id": 329,
+                  "startTime": 9.68,
+                  "endTime": 9.82,
+                  "confidence": 1
+                }
+              ],
+              "startOffsetUtf16": 88,
+              "endOffsetUtf16": 91,
+              "startOffsetUtf32": 88,
+              "endOffsetUtf32": 91
+            },
+            {
+              "type": "word",
+              "text": "your",
+              "startTime": 9.82,
+              "endTime": 10.06,
+              "confidence": 1,
+              "timeline": [
+                {
+                  "type": "token",
+                  "text": " your",
+                  "id": 534,
+                  "startTime": 9.82,
+                  "endTime": 10.06,
+                  "confidence": 1
+                }
+              ],
+              "startOffsetUtf16": 92,
+              "endOffsetUtf16": 96,
+              "startOffsetUtf32": 92,
+              "endOffsetUtf32": 96
+            },
+            {
+              "type": "word",
+              "text": "country",
+              "startTime": 10.06,
+              "endTime": 10.44,
+              "confidence": 1,
+              "timeline": [
+                {
+                  "type": "token",
+                  "text": " country",
+                  "id": 1499,
+                  "startTime": 10.06,
+                  "endTime": 10.44,
+                  "confidence": 1
+                }
+              ],
+              "startOffsetUtf16": 97,
+              "endOffsetUtf16": 104,
+              "startOffsetUtf32": 97,
+              "endOffsetUtf32": 104
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "wordTimeline": [
+    {
+      "type": "word",
+      "text": "And",
+      "startTime": 0,
+      "endTime": 0.38,
+      "confidence": 1,
+      "timeline": [
+        {
+          "type": "token",
+          "text": "And",
+          "id": 1870,
+          "startTime": 0,
+          "endTime": 0.38,
+          "confidence": 1
+        }
+      ],
+      "startOffsetUtf16": 0,
+      "endOffsetUtf16": 3,
+      "startOffsetUtf32": 0,
+      "endOffsetUtf32": 3
+    },
+    {
+      "type": "word",
+      "text": "so",
+      "startTime": 0.38,
+      "endTime": 0.88,
+      "confidence": 1,
+      "timeline": [
+        {
+          "type": "token",
+          "text": " so",
+          "id": 523,
+          "startTime": 0.38,
+          "endTime": 0.88,
+          "confidence": 1
+        }
+      ],
+      "startOffsetUtf16": 4,
+      "endOffsetUtf16": 6,
+      "startOffsetUtf32": 4,
+      "endOffsetUtf32": 6
+    },
+    {
+      "type": "word",
+      "text": "my",
+      "startTime": 0.88,
+      "endTime": 1.2,
+      "confidence": 1,
+      "timeline": [
+        {
+          "type": "token",
+          "text": " my",
+          "id": 616,
+          "startTime": 0.88,
+          "endTime": 1.2,
+          "confidence": 1
+        }
+      ],
+      "startOffsetUtf16": 7,
+      "endOffsetUtf16": 9,
+      "startOffsetUtf32": 7,
+      "endOffsetUtf32": 9
+    },
+    {
+      "type": "word",
+      "text": "fellow",
+      "startTime": 1.2,
+      "endTime": 1.62,
+      "confidence": 1,
+      "timeline": [
+        {
+          "type": "token",
+          "text": " fellow",
+          "id": 5891,
+          "startTime": 1.2,
+          "endTime": 1.62,
+          "confidence": 1
+        }
+      ],
+      "startOffsetUtf16": 10,
+      "endOffsetUtf16": 16,
+      "startOffsetUtf32": 10,
+      "endOffsetUtf32": 16
+    },
+    {
+      "type": "word",
+      "text": "Americans",
+      "startTime": 1.62,
+      "endTime": 2.3000000000000003,
+      "confidence": 1,
+      "timeline": [
+        {
+          "type": "token",
+          "text": " Americans",
+          "id": 3399,
+          "startTime": 1.62,
+          "endTime": 2.3000000000000003,
+          "confidence": 1
+        }
+      ],
+      "startOffsetUtf16": 17,
+      "endOffsetUtf16": 26,
+      "startOffsetUtf32": 17,
+      "endOffsetUtf32": 26
+    },
+    {
+      "type": "word",
+      "text": "ask",
+      "startTime": 2.3000000000000003,
+      "endTime": 3.7800000000000002,
+      "confidence": 1,
+      "timeline": [
+        {
+          "type": "token",
+          "text": " ask",
+          "id": 1265,
+          "startTime": 2.3000000000000003,
+          "endTime": 3.7800000000000002,
+          "confidence": 1
+        }
+      ],
+      "startOffsetUtf16": 27,
+      "endOffsetUtf16": 30,
+      "startOffsetUtf32": 27,
+      "endOffsetUtf32": 30
+    },
+    {
+      "type": "word",
+      "text": "not",
+      "startTime": 3.7800000000000002,
+      "endTime": 4.5,
+      "confidence": 1,
+      "timeline": [
+        {
+          "type": "token",
+          "text": " not",
+          "id": 407,
+          "startTime": 3.7800000000000002,
+          "endTime": 4.5,
+          "confidence": 1
+        }
+      ],
+      "startOffsetUtf16": 31,
+      "endOffsetUtf16": 34,
+      "startOffsetUtf32": 31,
+      "endOffsetUtf32": 34
+    },
+    {
+      "type": "word",
+      "text": "what",
+      "startTime": 4.5,
+      "endTime": 5.5600000000000005,
+      "confidence": 1,
+      "timeline": [
+        {
+          "type": "token",
+          "text": " what",
+          "id": 644,
+          "startTime": 4.5,
+          "endTime": 5.5600000000000005,
+          "confidence": 1
+        }
+      ],
+      "startOffsetUtf16": 35,
+      "endOffsetUtf16": 39,
+      "startOffsetUtf32": 35,
+      "endOffsetUtf32": 39
+    },
+    {
+      "type": "word",
+      "text": "your",
+      "startTime": 5.5600000000000005,
+      "endTime": 5.8,
+      "confidence": 1,
+      "timeline": [
+        {
+          "type": "token",
+          "text": " your",
+          "id": 534,
+          "startTime": 5.5600000000000005,
+          "endTime": 5.8,
+          "confidence": 1
+        }
+      ],
+      "startOffsetUtf16": 40,
+      "endOffsetUtf16": 44,
+      "startOffsetUtf32": 40,
+      "endOffsetUtf32": 44
+    },
+    {
+      "type": "word",
+      "text": "country",
+      "startTime": 5.8,
+      "endTime": 6.3,
+      "confidence": 1,
+      "timeline": [
+        {
+          "type": "token",
+          "text": " country",
+          "id": 1499,
+          "startTime": 5.8,
+          "endTime": 6.3,
+          "confidence": 1
+        }
+      ],
+      "startOffsetUtf16": 45,
+      "endOffsetUtf16": 52,
+      "startOffsetUtf32": 45,
+      "endOffsetUtf32": 52
+    },
+    {
+      "type": "word",
+      "text": "can",
+      "startTime": 6.3,
+      "endTime": 6.58,
+      "confidence": 1,
+      "timeline": [
+        {
+          "type": "token",
+          "text": " can",
+          "id": 460,
+          "startTime": 6.3,
+          "endTime": 6.58,
+          "confidence": 1
+        }
+      ],
+      "startOffsetUtf16": 53,
+      "endOffsetUtf16": 56,
+      "startOffsetUtf32": 53,
+      "endOffsetUtf32": 56
+    },
+    {
+      "type": "word",
+      "text": "do",
+      "startTime": 6.58,
+      "endTime": 6.96,
+      "confidence": 1,
+      "timeline": [
+        {
+          "type": "token",
+          "text": " do",
+          "id": 466,
+          "startTime": 6.58,
+          "endTime": 6.96,
+          "confidence": 1
+        }
+      ],
+      "startOffsetUtf16": 57,
+      "endOffsetUtf16": 59,
+      "startOffsetUtf32": 57,
+      "endOffsetUtf32": 59
+    },
+    {
+      "type": "word",
+      "text": "for",
+      "startTime": 6.96,
+      "endTime": 7.140000000000001,
+      "confidence": 1,
+      "timeline": [
+        {
+          "type": "token",
+          "text": " for",
+          "id": 329,
+          "startTime": 6.96,
+          "endTime": 7.140000000000001,
+          "confidence": 1
+        }
+      ],
+      "startOffsetUtf16": 60,
+      "endOffsetUtf16": 63,
+      "startOffsetUtf32": 60,
+      "endOffsetUtf32": 63
+    },
+    {
+      "type": "word",
+      "text": "you",
+      "startTime": 7.140000000000001,
+      "endTime": 7.76,
+      "confidence": 1,
+      "timeline": [
+        {
+          "type": "token",
+          "text": " you",
+          "id": 345,
+          "startTime": 7.140000000000001,
+          "endTime": 7.76,
+          "confidence": 1
+        }
+      ],
+      "startOffsetUtf16": 64,
+      "endOffsetUtf16": 67,
+      "startOffsetUtf32": 64,
+      "endOffsetUtf32": 67
+    },
+    {
+      "type": "word",
+      "text": "ask",
+      "startTime": 8.08,
+      "endTime": 8.64,
+      "confidence": 1,
+      "timeline": [
+        {
+          "type": "token",
+          "text": " ask",
+          "id": 1265,
+          "startTime": 8.08,
+          "endTime": 8.64,
+          "confidence": 1
+        }
+      ],
+      "startOffsetUtf16": 68,
+      "endOffsetUtf16": 71,
+      "startOffsetUtf32": 68,
+      "endOffsetUtf32": 71
+    },
+    {
+      "type": "word",
+      "text": "what",
+      "startTime": 8.64,
+      "endTime": 8.86,
+      "confidence": 1,
+      "timeline": [
+        {
+          "type": "token",
+          "text": " what",
+          "id": 644,
+          "startTime": 8.64,
+          "endTime": 8.86,
+          "confidence": 1
+        }
+      ],
+      "startOffsetUtf16": 72,
+      "endOffsetUtf16": 76,
+      "startOffsetUtf32": 72,
+      "endOffsetUtf32": 76
+    },
+    {
+      "type": "word",
+      "text": "you",
+      "startTime": 8.86,
+      "endTime": 9.200000000000001,
+      "confidence": 1,
+      "timeline": [
+        {
+          "type": "token",
+          "text": " you",
+          "id": 345,
+          "startTime": 8.86,
+          "endTime": 9.200000000000001,
+          "confidence": 1
+        }
+      ],
+      "startOffsetUtf16": 77,
+      "endOffsetUtf16": 80,
+      "startOffsetUtf32": 77,
+      "endOffsetUtf32": 80
+    },
+    {
+      "type": "word",
+      "text": "can",
+      "startTime": 9.200000000000001,
+      "endTime": 9.42,
+      "confidence": 1,
+      "timeline": [
+        {
+          "type": "token",
+          "text": " can",
+          "id": 460,
+          "startTime": 9.200000000000001,
+          "endTime": 9.42,
+          "confidence": 1
+        }
+      ],
+      "startOffsetUtf16": 81,
+      "endOffsetUtf16": 84,
+      "startOffsetUtf32": 81,
+      "endOffsetUtf32": 84
+    },
+    {
+      "type": "word",
+      "text": "do",
+      "startTime": 9.42,
+      "endTime": 9.68,
+      "confidence": 1,
+      "timeline": [
+        {
+          "type": "token",
+          "text": " do",
+          "id": 466,
+          "startTime": 9.42,
+          "endTime": 9.68,
+          "confidence": 1
+        }
+      ],
+      "startOffsetUtf16": 85,
+      "endOffsetUtf16": 87,
+      "startOffsetUtf32": 85,
+      "endOffsetUtf32": 87
+    },
+    {
+      "type": "word",
+      "text": "for",
+      "startTime": 9.68,
+      "endTime": 9.82,
+      "confidence": 1,
+      "timeline": [
+        {
+          "type": "token",
+          "text": " for",
+          "id": 329,
+          "startTime": 9.68,
+          "endTime": 9.82,
+          "confidence": 1
+        }
+      ],
+      "startOffsetUtf16": 88,
+      "endOffsetUtf16": 91,
+      "startOffsetUtf32": 88,
+      "endOffsetUtf32": 91
+    },
+    {
+      "type": "word",
+      "text": "your",
+      "startTime": 9.82,
+      "endTime": 10.06,
+      "confidence": 1,
+      "timeline": [
+        {
+          "type": "token",
+          "text": " your",
+          "id": 534,
+          "startTime": 9.82,
+          "endTime": 10.06,
+          "confidence": 1
+        }
+      ],
+      "startOffsetUtf16": 92,
+      "endOffsetUtf16": 96,
+      "startOffsetUtf32": 92,
+      "endOffsetUtf32": 96
+    },
+    {
+      "type": "word",
+      "text": "country",
+      "startTime": 10.06,
+      "endTime": 10.44,
+      "confidence": 1,
+      "timeline": [
+        {
+          "type": "token",
+          "text": " country",
+          "id": 1499,
+          "startTime": 10.06,
+          "endTime": 10.44,
+          "confidence": 1
+        }
+      ],
+      "startOffsetUtf16": 97,
+      "endOffsetUtf16": 104,
+      "startOffsetUtf32": 97,
+      "endOffsetUtf32": 104
+    }
+  ]
+}

@@ -70,7 +70,7 @@ Chức năng này dùng **văn bản của câu đang luyện lúc ghi âm làm 
 _* Ví dụ kết quả đánh giá phát âm từ tài liệu gốc._
 
 ::: warning Sử dụng kết quả đánh giá
-Theo tài liệu gốc, đây là chức năng trả phí, mỗi lần dùng sẽ trừ số dư tài khoản Enjoy. Khi không đủ số dư, cần xem [thông tin nạp tiền](./settings.md#deposit) và điều kiện hiện tại trước khi tiếp tục.
+Bản local dùng credential và quota của tài khoản Azure Speech do bạn cấu hình, có thể phát sinh phí tại Azure. Xem [thiết lập dịch vụ](./settings.md) trước khi sử dụng; chức năng này không dùng số dư Enjoy.
 
 Tài liệu gốc lưu ý rằng chức năng này tập trung vào cách phát âm từ và không dùng để kết luận việc thay đổi ngữ điệu có đúng hay không. Hãy xem điểm số như phản hồi tham khảo, kết hợp nghe lại và so sánh bản ghi.
 :::

@@ -1,0 +1,48 @@
+import assert from "node:assert/strict";
+import { mkdtemp, rm } from "node:fs/promises";
+import os from "node:os";
+import path from "node:path";
+import { pathToFileURL } from "node:url";
+import { build } from "esbuild";
+
+const root = path.resolve(import.meta.dirname, "..");
+const temp = await mkdtemp(path.join(os.tmpdir(), "enjoy-brief-check-"));
+try {
+  const output = path.join(temp, "brief.mjs");
+  await build({ entryPoints: [path.join(root, "src/lib/learning-brief-suggestion.ts")], bundle: true, platform: "node", format: "esm", outfile: output, logLevel: "silent" });
+  const { parseBriefSuggestion, briefSuggestionPrompt, suggestLessonBrief } = await import(pathToFileURL(output).href);
+  const topic = { topic: "At a cafe", keywords: [], level: "A2", length: "short", imageCount: 0, audio: false };
+  const keywords = { ...topic, topic: "", keywords: ["order coffee"] };
+  const target = { term: "order coffee", sense: "ask for a coffee", definition: "To ask a cafe worker for a coffee.", translationVi: "gọi cà phê", example: "I order coffee before work." };
+  const text = JSON.stringify({ targets: [target] });
+  assert.equal(parseBriefSuggestion(topic, text).targets[0].evidence.status, "unverified");
+  assert.equal(parseBriefSuggestion(keywords, text).targets[0].term, "order coffee");
+  assert.equal(parseBriefSuggestion(keywords, `\`\`\`json\n${text}\n\`\`\``).level, "A2");
+  assert.throws(() => parseBriefSuggestion({ ...keywords, keywords: ["receipt"] }, text));
+  assert.throws(() => parseBriefSuggestion(topic, JSON.stringify({ targets: [target, target] })));
+  assert.throws(() => parseBriefSuggestion(topic, JSON.stringify({ targets: [{ ...target, evidence: { status: "dictionary" } }] })));
+  assert.throws(() => parseBriefSuggestion(topic, JSON.stringify({ targets: [target], level: "C2" })));
+  assert.throws(() => parseBriefSuggestion(topic, "The answer is done."));
+  assert.throws(() => parseBriefSuggestion({ ...topic, topic: "" }, text));
+  assert.match(briefSuggestionPrompt(keywords), /order coffee/);
+  assert.match(briefSuggestionPrompt(topic), /six useful/);
+  const original = JSON.stringify(keywords);
+  const updates = [];
+  const bridge = { invoke: async request => { updates.push(request); return { text, model: "fixture" }; }, cancel: async id => { updates.push(id); } };
+  const result = await suggestLessonBrief(bridge, keywords, "claude", new AbortController().signal, "fixture-model");
+  assert.equal(result.targets.length, 1);
+  assert.equal(updates[0].provider, "claude");
+  assert.equal(updates[0].model, "fixture-model");
+  assert.equal(JSON.stringify(keywords), original);
+  await assert.rejects(() => suggestLessonBrief({ ...bridge, invoke: async () => { throw new Error("native_auth_required"); } }, keywords, "codex", new AbortController().signal), /Hãy đăng nhập CLI/);
+  await assert.rejects(() => suggestLessonBrief({ ...bridge, invoke: async () => { throw new Error("provider failed secret-fixture-token"); } }, keywords, "codex", new AbortController().signal), error => !error.message.includes("secret-fixture-token") && error.message.includes("đầu vào vẫn được giữ nguyên"));
+  assert.equal(JSON.stringify(keywords), original);
+  const controller = new AbortController();
+  let complete;
+  const delayed = suggestLessonBrief({ ...bridge, invoke: () => new Promise(resolve => { complete = resolve; }) }, keywords, "codex", controller.signal);
+  controller.abort();
+  complete({ text, model: "fixture" });
+  await assert.rejects(delayed, error => error.name === "AbortError");
+  assert.equal(typeof updates.at(-1), "string");
+  console.info("check-learning-brief-suggestion: PASS (topic, phrases, strict targets, evidence, cancellation, provider failure; transport fixture only)");
+} finally { await rm(temp, { recursive: true, force: true }); }

@@ -1,17 +1,14 @@
 import { useEffect, useState, useReducer, useContext } from "react";
 import {
   VideoCard,
-  VideosTable,
-  VideoEditForm,
   MediaAddButton,
+  MediaTable,
+  VideoEditForm,
   LoaderSpin,
 } from "@renderer/components";
 import { t } from "i18next";
 import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
+  Button,
   AlertDialog,
   AlertDialogFooter,
   AlertDialogHeader,
@@ -20,19 +17,17 @@ import {
   AlertDialogDescription,
   AlertDialogCancel,
   AlertDialogAction,
-  Button,
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
+  toast,
   Select,
   SelectTrigger,
   SelectValue,
   SelectContent,
   SelectGroup,
   SelectItem,
-  toast,
-  Input,
   DialogDescription,
   AlertDialogTrigger,
 } from "@renderer/components/ui";
@@ -41,6 +36,15 @@ import {
   AppSettingsProviderContext,
 } from "@renderer/context";
 import { LayoutGridIcon, LayoutListIcon } from "lucide-react";
+import {
+  EJ_CONTROL_CLASS,
+  EjEmptyState,
+  EjMediaGrid,
+  EjPageHeader,
+  EjSearchInput,
+  EjToolbar,
+  Segmented,
+} from "@renderer/components/enjoy";
 import { videosReducer } from "@renderer/reducers";
 import { useDebounce } from "@uidotdev/usehooks";
 import { LANGUAGES } from "@/constants";
@@ -114,6 +118,7 @@ export const VideosComponent = () => {
     if (language != "all") {
       where = { language };
     }
+
     EnjoyApp.videos
       .findAll({
         offset,
@@ -144,12 +149,12 @@ export const VideosComponent = () => {
     if (!record) return;
 
     if (model === "Video") {
-      if (action === "create") {
+      if (action === "destroy") {
+        dispatchVideos({ type: "destroy", record });
+      } else if (action === "create") {
         dispatchVideos({ type: "create", record });
       } else if (action === "update") {
         dispatchVideos({ type: "update", record });
-      } else if (action === "destroy") {
-        dispatchVideos({ type: "destroy", record });
       }
     } else if (model === "Transcription" && action === "update") {
       dispatchVideos({
@@ -169,67 +174,16 @@ export const VideosComponent = () => {
 
   return (
     <>
-      <div className="">
-        <Tabs value={tab} onValueChange={setTab}>
-          <div className="flex flex-wrap items-center gap-4 mb-4">
-            <TabsList>
-              <TabsTrigger value="grid">
-                <LayoutGridIcon className="h-4 w-4" />
-              </TabsTrigger>
-              <TabsTrigger value="list">
-                <LayoutListIcon className="h-4 w-4" />
-              </TabsTrigger>
-            </TabsList>
-            <Select value={orderBy} onValueChange={setOrderBy}>
-              <SelectTrigger className="max-w-36">
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
-                  <SelectItem value="updatedAtDesc">
-                    {t("updatedAtDesc")}
-                  </SelectItem>
-                  <SelectItem value="createdAtDesc">
-                    {t("createdAtDesc")}
-                  </SelectItem>
-                  <SelectItem value="createdAtAsc">
-                    {t("createdAtAsc")}
-                  </SelectItem>
-                  <SelectItem value="recordingsDurationDesc">
-                    {t("recordingsDurationDesc")}
-                  </SelectItem>
-                  <SelectItem value="recordingsCountDesc">
-                    {t("recordingsCountDesc")}
-                  </SelectItem>
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-
-            <Select value={language} onValueChange={setLanguage}>
-              <SelectTrigger className="max-w-36">
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
-                  <SelectItem value="all">{t("allLanguages")}</SelectItem>
-                  {LANGUAGES.map((lang) => (
-                    <SelectItem key={lang.code} value={lang.code}>
-                      {lang.code}
-                    </SelectItem>
-                  ))}
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-
-            <Input
-              className="max-w-48"
-              placeholder={t("search")}
-              onChange={(e) => setQuery(e.target.value)}
-            />
-            <MediaAddButton type="Video" />
+      <EjPageHeader
+        title={t("library.videos")}
+        description={t("library.videosDescription")}
+        actions={
+          <>
             <AlertDialog>
               <AlertDialogTrigger asChild>
-                <Button variant="secondary">{t("cleanUp")}</Button>
+                <Button variant="secondary" size="sm">
+                  {t("cleanUp")}
+                </Button>
               </AlertDialogTrigger>
               <AlertDialogContent>
                 <AlertDialogTitle>{t("cleanUp")}</AlertDialogTitle>
@@ -250,42 +204,108 @@ export const VideosComponent = () => {
                 </AlertDialogFooter>
               </AlertDialogContent>
             </AlertDialog>
-          </div>
-          {videos.length === 0 ? (
-            loading ? (
-              <LoaderSpin />
-            ) : (
-              <div className="flex items-center justify-center h-48 border border-dashed rounded-lg">
-                {t("noData")}
-              </div>
-            )
-          ) : (
-            <>
-              <TabsContent value="grid">
-                <div className="grid gap-4 grid-cols-4">
-                  {videos.map((video) => (
-                    <VideoCard
-                      video={video}
-                      key={video.id}
-                      onDelete={() => setDeleting(video)}
-                    />
-                  ))}
-                </div>
-              </TabsContent>
-              <TabsContent value="list">
-                <VideosTable
-                  videos={videos}
-                  onEdit={(video) => setEditing(video)}
-                  onDelete={(video) => setDeleting(video)}
-                />
-              </TabsContent>
-            </>
-          )}
-        </Tabs>
-      </div>
+            <MediaAddButton type="Video" />
+          </>
+        }
+      />
 
-      {!loading && hasMore && (
-        <div className="flex items-center justify-center my-4">
+      <EjToolbar>
+        <EjSearchInput
+          value={query}
+          onChange={setQuery}
+          placeholder={t("library.searchPlaceholder")}
+        />
+
+        <Select value={language} onValueChange={setLanguage}>
+          <SelectTrigger className={`${EJ_CONTROL_CLASS} w-[128px]`}>
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              <SelectItem value="all">{t("allLanguages")}</SelectItem>
+              {LANGUAGES.map((lang) => (
+                <SelectItem key={lang.code} value={lang.code}>
+                  {lang.code}
+                </SelectItem>
+              ))}
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+
+        <Select value={orderBy} onValueChange={setOrderBy}>
+          <SelectTrigger className={`${EJ_CONTROL_CLASS} w-[176px]`}>
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              <SelectItem value="updatedAtDesc">{t("updatedAtDesc")}</SelectItem>
+              <SelectItem value="createdAtDesc">{t("createdAtDesc")}</SelectItem>
+              <SelectItem value="createdAtAsc">{t("createdAtAsc")}</SelectItem>
+              <SelectItem value="recordingsDurationDesc">
+                {t("recordingsDurationDesc")}
+              </SelectItem>
+              <SelectItem value="recordingsCountDesc">
+                {t("recordingsCountDesc")}
+              </SelectItem>
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+
+        <div className="ml-auto flex items-center gap-2">
+          <span className="text-xs text-ej-muted ej-tabular">
+            {t("library.itemsCount", { count: videos.length })}
+          </span>
+          <Segmented
+            value={tab}
+            onChange={setTab}
+            options={[
+              {
+                value: "grid",
+                title: t("library.gridView"),
+                label: <LayoutGridIcon className="size-3.5" />,
+              },
+              {
+                value: "list",
+                title: t("library.listView"),
+                label: <LayoutListIcon className="size-3.5" />,
+              },
+            ]}
+          />
+        </div>
+      </EjToolbar>
+
+      {videos.length === 0 ? (
+        loading ? (
+          <LoaderSpin />
+        ) : (
+          <EjEmptyState
+            title={t("library.empty")}
+            description={t("library.emptyDescription")}
+            actions={<MediaAddButton type="Video" />}
+          />
+        )
+      ) : tab === "grid" ? (
+        <EjMediaGrid wide>
+          {videos.map((video) => (
+            <VideoCard
+              video={video}
+              key={video.id}
+              onEdit={() => setEditing(video)}
+              onDelete={() => setDeleting(video)}
+            />
+          ))}
+        </EjMediaGrid>
+      ) : (
+        <MediaTable
+          kind="videos"
+          items={videos}
+          onEdit={(video) => setEditing(video)}
+          onDelete={(video) => setDeleting(video)}
+        />
+      )}
+
+      {!loading && hasMore && videos.length > 0 && (
+        <div className="flex items-center justify-center mt-6">
           <Button variant="link" onClick={() => fetchVideos()}>
             {t("loadMore")}
           </Button>
@@ -299,7 +319,7 @@ export const VideosComponent = () => {
           setEditing(null);
         }}
       >
-        <DialogContent aria-describedby={undefined}>
+        <DialogContent>
           <DialogHeader>
             <DialogTitle>{t("editResource")}</DialogTitle>
             <DialogDescription className="sr-only">
@@ -316,13 +336,13 @@ export const VideosComponent = () => {
       </Dialog>
 
       <AlertDialog
-        open={!!deleting}
+        open={Boolean(deleting)}
         onOpenChange={(value) => {
           if (value) return;
           setDeleting(null);
         }}
       >
-        <AlertDialogContent aria-describedby={undefined}>
+        <AlertDialogContent className="max-w-[420px]">
           <AlertDialogHeader>
             <AlertDialogTitle>{t("deleteResource")}</AlertDialogTitle>
             <AlertDialogDescription>
@@ -336,7 +356,7 @@ export const VideosComponent = () => {
           <AlertDialogFooter>
             <AlertDialogCancel>{t("cancel")}</AlertDialogCancel>
             <AlertDialogAction
-              className="bg-destructive"
+              className="bg-ej-bad"
               onClick={() => {
                 if (!deleting) return;
                 EnjoyApp.videos

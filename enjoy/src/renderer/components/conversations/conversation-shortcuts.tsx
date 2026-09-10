@@ -136,7 +136,7 @@ export const ConversationShortcuts = (props: {
       <ScrollArea>
         {conversations.filter((c) => !excludedIds.includes(c.id)).length ===
           0 && (
-          <div className="text-center text-sm text-muted-foreground py-4">
+          <div className="text-center text-sm text-ej-muted py-4">
             {t("noConversationsYet")}
           </div>
         )}

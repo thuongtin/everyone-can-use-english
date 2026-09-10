@@ -5,6 +5,11 @@ export type YoutubeVideo = {
   duration?: string;
 };
 
+export type YoutubeChannel = {
+  name?: string;
+  videos: YoutubeVideo[];
+};
+
 type RecordValue = Record<string, unknown>;
 
 const isRecord = (value: unknown): value is RecordValue =>
@@ -145,6 +150,13 @@ const readVideoContents = (data: unknown): unknown[] => {
   return [];
 };
 
+const readChannelName = (data: unknown) => {
+  if (!isRecord(data) || !isRecord(data.metadata)) return;
+  const metadata = data.metadata.channelMetadataRenderer;
+  if (!isRecord(metadata) || typeof metadata.title !== "string") return;
+  return metadata.title.trim() || undefined;
+};
+
 const readVideo = (value: unknown): YoutubeVideo | undefined => {
   if (!isRecord(value) || !isRecord(value.richItemRenderer)) return;
 
@@ -198,4 +210,15 @@ export const extractYoutubeVideos = (html: string): YoutubeVideo[] => {
     const video = readVideo(item);
     return video ? [video] : [];
   });
+};
+
+export const extractYoutubeChannel = (html: string): YoutubeChannel => {
+  const data = readInitialData(html);
+  return {
+    name: readChannelName(data),
+    videos: readVideoContents(data).flatMap((item) => {
+      const video = readVideo(item);
+      return video ? [video] : [];
+    }),
+  };
 };

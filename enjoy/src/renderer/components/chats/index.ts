@@ -1,3 +1,4 @@
+export * from "./chat-aside";
 export * from "./chat-session";
 export * from "./chat-agents";
 export * from "./chat-agent-form";

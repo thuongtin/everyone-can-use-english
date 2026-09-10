@@ -36,7 +36,7 @@ export const NoteSemgent = (props: {
 
   return (
     <>
-      <div className="flex flex-wrap p-2 rounded-t-lg bg-muted/50 mb-4">
+      <div className="flex flex-wrap p-2 rounded-t-lg bg-ej-surface2/50 mb-4">
         {/* use the words splitted by caption text if it is matched with the timeline length, otherwise use the timeline */}
         {words.map((word, index) => (
           <div
@@ -56,7 +56,7 @@ export const NoteSemgent = (props: {
             </div>
 
             <div
-              className={`select-text text-xs 2xl:text-sm text-muted-foreground font-code mb-1 ${
+              className={`select-text text-xs 2xl:text-sm text-ej-muted font-code mb-1 ${
                 index === 0 ? "before:content-['/']" : ""
               } ${
                 index === caption.timeline.length - 1

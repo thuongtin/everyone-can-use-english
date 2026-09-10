@@ -10,7 +10,7 @@ import {
   Separator,
   toast,
 } from "@renderer/components/ui";
-import { ReactElement, useContext, useEffect, useState } from "react";
+import { ReactElement, useContext, useEffect, useRef, useState } from "react";
 import {
   AppSettingsProviderContext,
   ChatSessionProviderContext,
@@ -18,9 +18,8 @@ import {
 import { t } from "i18next";
 import { LoaderSpin } from "@renderer/components";
 import { useAiCommand } from "@renderer/hooks";
-import { md5 } from "js-md5";
 import dayjs from "@renderer/lib/dayjs";
-import { ChatMessageRoleEnum, ChatMessageStateEnum } from "@/types/enums";
+import { ChatMessageRoleEnum } from "@/types/enums";
 
 export const ChatSuggestionButton = (props: {
   chat: ChatType;
@@ -39,7 +38,7 @@ export const ChatSuggestionButton = (props: {
   const [open, setOpen] = useState(false);
   const { EnjoyApp, user } = useContext(AppSettingsProviderContext);
 
-  const { chatSuggestion } = useAiCommand();
+  const { chatSuggestion, suggestionCacheKey } = useAiCommand();
 
   const context = `I'm ${user.name}.
 
@@ -67,19 +66,18 @@ export const ChatSuggestionButton = (props: {
     .join("\n")}
   `;
 
-  const contextCacheKey = `chat-suggestion-${md5(
-    chatMessages
-      .filter((m) => m.state === ChatMessageStateEnum.COMPLETED)
-      .map((m) => m.content)
-      .join("\n")
-  )}`;
+  const contextCacheKey = suggestionCacheKey(context);
+  const activeKey = useRef(contextCacheKey);
+  activeKey.current = contextCacheKey;
 
   const suggest = async () => {
     setLoading(true);
     chatSuggestion(context, {
       cacheKey: contextCacheKey,
     })
-      .then((res) => setSuggestions(res.suggestions))
+      .then((res) => {
+        if (activeKey.current === contextCacheKey) setSuggestions(res.suggestions);
+      })
       .catch((err) => {
         toast.error(err.message);
       })
@@ -95,13 +93,17 @@ export const ChatSuggestionButton = (props: {
   }, [open]);
 
   useEffect(() => {
+    let active = true;
+    setSuggestions([]);
     EnjoyApp.cacheObjects.get(contextCacheKey).then((result) => {
+      if (!active) return;
       if (result && result?.suggestions) {
         setSuggestions(result.suggestions as typeof suggestions);
       } else {
         setSuggestions([]);
       }
     });
+    return () => { active = false; };
   }, [contextCacheKey]);
 
   return (
@@ -121,7 +123,7 @@ export const ChatSuggestionButton = (props: {
           </Button>
         )}
       </PopoverTrigger>
-      <PopoverContent side="top" className="bg-muted w-full max-w-screen-md">
+      <PopoverContent side="top" className="bg-ej-surface2 w-full max-w-screen-md">
         {loading || suggestions.length === 0 ? (
           <LoaderSpin />
         ) : (

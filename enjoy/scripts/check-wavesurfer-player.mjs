@@ -13,14 +13,18 @@ const componentSource = await readFile(
 
 assert.match(componentSource, /threshold:\s*0/);
 assert.match(componentSource, /absolute inset-0/);
-const containerStart = componentSource.indexOf('className="col-span-8 min-w-0 h-[80px]"');
+// The waveform container is located by its ref rather than by a class list:
+// wavesurfer measures this node, so it must always render, must keep a zero
+// min-width inside its flex row, and must never be hidden.
+const containerRefAt = componentSource.indexOf("ref={containerRef}");
+assert.notEqual(containerRefAt, -1);
+const containerStart = componentSource.lastIndexOf("<div", containerRefAt);
 assert.notEqual(containerStart, -1);
-const containerEnd = componentSource.indexOf("/>", containerStart);
+const containerEnd = componentSource.indexOf("/>", containerRefAt);
 assert.notEqual(containerEnd, -1);
-assert.doesNotMatch(
-  componentSource.slice(containerStart, containerEnd),
-  /\bhidden\b/
-);
+const container = componentSource.slice(containerStart, containerEnd);
+assert.match(container, /min-w-0/);
+assert.doesNotMatch(container, /\bhidden\b/);
 const missingSourceBranch = componentSource.slice(
   componentSource.indexOf("if (!isIntersecting || !src"),
   componentSource.indexOf("const uuid")

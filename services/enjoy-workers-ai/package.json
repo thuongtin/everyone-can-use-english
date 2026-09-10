@@ -1,0 +1,14 @@
+{
+  "name": "@enjoy/enjoy-workers-ai",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "types": "wrangler types",
+    "check": "npm run test && npm run types && wrangler deploy --dry-run"
+  },
+  "devDependencies": {
+    "wrangler": "4.83.0"
+  }
+}

@@ -2,8 +2,8 @@ import { LoaderIcon } from "lucide-react";
 
 export const LoaderSpin = () => {
   return (
-    <div className="h-full w-full px-4 py-6 lg:px-8 flex justify-center items-center">
-      <LoaderIcon className="text-muted-foreground animate-spin" />
+    <div className="flex h-full w-full items-center justify-center px-7 py-[22px]">
+      <LoaderIcon className="size-5 animate-spin text-ej-muted" />
     </div>
   );
 };

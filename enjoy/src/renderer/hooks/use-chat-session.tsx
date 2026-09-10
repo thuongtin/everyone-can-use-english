@@ -37,7 +37,7 @@ type RuntimeAISettings = {
 };
 
 export const useChatSession = (chatId: string) => {
-  const { EnjoyApp, user, apiUrl } = useContext(
+  const { EnjoyApp, user } = useContext(
     AppSettingsProviderContext
   );
   const {
@@ -334,7 +334,7 @@ export const useChatSession = (chatId: string) => {
 
   const buildLlm = (member: ChatMemberType) => {
     const {
-      engine = "enjoyai",
+      engine = "needs-selection",
       model,
       temperature,
       maxCompletionTokens,
@@ -345,21 +345,8 @@ export const useChatSession = (chatId: string) => {
 
     const providerConfig = getProviderConfig?.(engine);
     const key = providerConfig?.key ??
-      (engine === "enjoyai"
-        ? user?.accessToken
-        : engine === "openai"
-          ? openai?.key
-          : undefined);
-    const baseUrl =
-      engine === "enjoyai"
-        ? apiUrl
-          ? `${apiUrl}/api/ai`
-          : undefined
-        : member.config.gpt.baseUrl || providerConfig?.baseUrl;
-
-    if (engine === "enjoyai" && !key) {
-      throw new Error(t("authorizationExpired"));
-    }
+      (engine === "openai" ? openai?.key : undefined);
+    const baseUrl = member.config.gpt.baseUrl || providerConfig?.baseUrl;
     if (engine === "openai" && !key) {
       throw new Error(t("openaiKeyRequired"));
     }

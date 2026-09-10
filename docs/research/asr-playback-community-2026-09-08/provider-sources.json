@@ -1,0 +1,146 @@
+{
+  "generatedAt": "2026-09-08",
+  "scope": "Read-only comparison of official OpenAI and OpenRouter transcription contracts, then relevant Enjoy source and existing evidence. No paid inference or configuration changes were made.",
+  "sources": [
+    {
+      "id": "oa-file-transcription",
+      "url": "https://developers.openai.com/api/docs/guides/speech-to-text",
+      "title": "OpenAI File transcription",
+      "accessed": "2026-09-08",
+      "status": "verified",
+      "sourceType": "official-openai-guide",
+      "claim": "25 MB file cap; supported formats; longer-input guidance; prompting, diarization and streaming behavior.",
+      "limitations": "Does not define MB in bytes or guarantee accuracy/latency for a particular file."
+    },
+    {
+      "id": "oa-transcriptions-reference",
+      "url": "https://developers.openai.com/api/reference/python/resources/audio/subresources/transcriptions/methods/create",
+      "title": "OpenAI Create transcription API reference",
+      "accessed": "2026-09-08",
+      "status": "verified",
+      "sourceType": "official-openai-reference",
+      "claim": "Current model IDs, file formats, response formats, prompt/chunking strategy, timestamp and streaming constraints.",
+      "limitations": "API contract, not a long-form quality benchmark."
+    },
+    {
+      "id": "oa-model-catalog",
+      "url": "https://developers.openai.com/api/docs/models/all",
+      "title": "OpenAI model catalog",
+      "accessed": "2026-09-08",
+      "status": "verified",
+      "sourceType": "official-openai-catalog",
+      "claim": "Lists current transcription family including GPT Transcribe, GPT-4o Transcribe, GPT-4o Mini Transcribe, diarize and Whisper.",
+      "limitations": "Catalog does not replace endpoint-level parameter restrictions."
+    },
+    {
+      "id": "oa-whisper-model",
+      "url": "https://developers.openai.com/api/docs/models/whisper-1",
+      "title": "OpenAI Whisper model page",
+      "accessed": "2026-09-08",
+      "status": "verified",
+      "sourceType": "official-openai-model-page",
+      "claim": "whisper-1 remains an available transcription model.",
+      "limitations": "Use the transcription guide/reference for response and timestamp contract."
+    },
+    {
+      "id": "oa-gpt4o-transcribe-model",
+      "url": "https://developers.openai.com/api/docs/models/gpt-4o-transcribe",
+      "title": "OpenAI GPT-4o Transcribe model page",
+      "accessed": "2026-09-08",
+      "status": "verified",
+      "sourceType": "official-openai-model-page",
+      "claim": "gpt-4o-transcribe is current in the OpenAI catalog.",
+      "limitations": "Endpoint reference is the source of response-format constraints."
+    },
+    {
+      "id": "oa-gpt4o-mini-transcribe-model",
+      "url": "https://developers.openai.com/api/docs/models/gpt-4o-mini-transcribe",
+      "title": "OpenAI GPT-4o Mini Transcribe model page",
+      "accessed": "2026-09-08",
+      "status": "verified",
+      "sourceType": "official-openai-model-page",
+      "claim": "gpt-4o-mini-transcribe is current in the OpenAI catalog.",
+      "limitations": "Endpoint reference is the source of response-format constraints."
+    },
+    {
+      "id": "oa-gpt4o-diarize-model",
+      "url": "https://developers.openai.com/api/docs/models/gpt-4o-transcribe-diarize",
+      "title": "OpenAI GPT-4o Transcribe Diarize model page",
+      "accessed": "2026-09-08",
+      "status": "verified",
+      "sourceType": "official-openai-model-page",
+      "claim": "gpt-4o-transcribe-diarize is current in the OpenAI catalog.",
+      "limitations": "Endpoint reference and guide define diarized_json and chunking requirements."
+    },
+    {
+      "id": "or-stt-guide",
+      "url": "https://openrouter.ai/docs/guides/overview/multimodal/stt",
+      "title": "OpenRouter Speech-to-Text guide",
+      "accessed": "2026-09-08",
+      "status": "verified",
+      "sourceType": "official-openrouter-guide",
+      "claim": "Dedicated STT endpoint; JSON/multipart request contracts; verbose timestamps; multipart cap; provider option behavior; upstream timeout guidance.",
+      "limitations": "Base64 JSON maximum is not published; fields and options vary by matched provider/model."
+    },
+    {
+      "id": "or-multimodal-overview",
+      "url": "https://openrouter.ai/docs/guides/overview/multimodal/overview",
+      "title": "OpenRouter multimodal overview",
+      "accessed": "2026-09-08",
+      "status": "verified",
+      "sourceType": "official-openrouter-guide",
+      "claim": "Distinguishes audio input in Chat Completions from the dedicated STT endpoint.",
+      "limitations": "Overview does not establish timing behavior of each STT model."
+    },
+    {
+      "id": "or-mai-transcribe-2",
+      "url": "https://openrouter.ai/microsoft/mai-transcribe-2",
+      "title": "OpenRouter MicrosoftAI MAI-Transcribe 2 model page",
+      "accessed": "2026-09-08",
+      "status": "verified",
+      "sourceType": "official-openrouter-model-page",
+      "claim": "Documents verbose_json segments, word timestamp request and Azure diarization option for MAI-Transcribe 2.",
+      "limitations": "Model page is not proof for Enjoy 53:57 performance."
+    },
+    {
+      "id": "or-transcription-blog",
+      "url": "https://openrouter.ai/blog/tutorials/transcription-on-openrouter/",
+      "title": "OpenRouter Transcription on OpenRouter",
+      "accessed": "2026-09-08",
+      "status": "verified",
+      "sourceType": "official-openrouter-blog",
+      "claim": "Explains dedicated endpoint, JSON/multipart options, routing limitations and timeout-oriented long-audio guidance.",
+      "limitations": "Product guidance, not a per-model service-level guarantee."
+    },
+    {
+      "id": "enjoy-mai-service",
+      "path": "enjoy/src/main/mai-transcribe/service.ts",
+      "title": "Enjoy MAI Transcribe service",
+      "accessed": "2026-09-08",
+      "status": "verified-local-source",
+      "sourceType": "local-source-code",
+      "claim": "Uses dedicated OpenRouter STT endpoint with MAI 2, 60-second WAV chunks, 8 MB JSON safety limit, timestamp offsets and cancellation.",
+      "limitations": "Application policy, not provider limit proof."
+    },
+    {
+      "id": "enjoy-mai-acceptance",
+      "path": "docs/research/enjoy-api-replacement/2026-09-08-mai-transcribe-integration.md",
+      "title": "Enjoy MAI Transcribe 2 integration acceptance",
+      "accessed": "2026-09-08",
+      "status": "verified-local-evidence",
+      "sourceType": "local-runtime-evidence",
+      "claim": "Packaged active app passed a 5:23 video in six 60-second chunks with captions, IPA, seek and playback.",
+      "limitations": "Does not test the 53:57 file or establish general provider limits."
+    },
+    {
+      "id": "enjoy-cloudflare-5357",
+      "path": "enjoy/tmp/whisper-tiny-53min/whisper-research.md",
+      "title": "Enjoy Cloudflare 53:57 runtime evidence",
+      "accessed": "2026-09-08",
+      "status": "verified-local-evidence",
+      "sourceType": "local-runtime-evidence",
+      "claim": "Exact file is 25,903,156 bytes and 3,237.744063 seconds; whole-file whisper and tiny-en failed, while short controls succeeded.",
+      "limitations": "Does not test OpenAI direct, OpenRouter MAI 2, or Cloudflare turbo."
+    }
+  ]
+}

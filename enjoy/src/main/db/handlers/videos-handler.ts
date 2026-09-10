@@ -54,10 +54,6 @@ class VideosHandler {
     });
     if (!video) return;
 
-    if (!video.isSynced) {
-      video.sync().catch(() => {});
-    }
-
     return video.toJSON();
   }
 
@@ -126,22 +122,6 @@ class VideosHandler {
     return await video.destroy();
   }
 
-  private async upload(event: IpcMainEvent, id: string) {
-    const video = await Video.findByPk(id);
-    if (!video) {
-      throw new Error(t("models.video.notFound"));
-    }
-    video
-      .upload()
-      .then((res) => {
-        return res;
-      })
-      .catch((err) => {
-        logger.error(err);
-        throw err;
-      });
-  }
-
   private async crop(
     _event: IpcMainEvent,
     id: string,
@@ -176,7 +156,6 @@ class VideosHandler {
     ipcMain.handle("videos-create", this.create);
     ipcMain.handle("videos-update", this.update);
     ipcMain.handle("videos-destroy", this.destroy);
-    ipcMain.handle("videos-upload", this.upload);
     ipcMain.handle("videos-crop", this.crop);
     ipcMain.handle("videos-clean-up", this.cleanUp);
   }
@@ -187,7 +166,6 @@ class VideosHandler {
     ipcMain.removeHandler("videos-create");
     ipcMain.removeHandler("videos-update");
     ipcMain.removeHandler("videos-destroy");
-    ipcMain.removeHandler("videos-upload");
     ipcMain.removeHandler("videos-crop");
     ipcMain.removeHandler("videos-clean-up");
   }

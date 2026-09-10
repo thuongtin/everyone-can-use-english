@@ -1,0 +1,16 @@
+{
+  "task": "image_generation",
+  "status": "pass",
+  "model": "openai/gpt-5-image-mini",
+  "latencyMs": 8407,
+  "mediaType": "image/png",
+  "bytes": 1088685,
+  "outputFile": "llm-image.png",
+  "usage": {
+    "promptTokens": 46,
+    "completionTokens": 272,
+    "totalTokens": 318,
+    "reasoningTokens": 0,
+    "costUsd": 0.002291
+  }
+}

@@ -26,7 +26,7 @@ export const ChatMessage = (props: {
     );
   } else if (chatMessage.role === ChatMessageRoleEnum.SYSTEM) {
     return (
-      <div className="text-sm text-muted-foreground text-center">
+      <div className="text-sm text-ej-muted text-center">
         {chatMessage.category === ChatMessageCategoryEnum.MEMBER_JOINED && (
           <span>
             {chatMessage.agent

@@ -6,7 +6,6 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogTitle,
-  Button,
   toast,
 } from "@renderer/components/ui";
 import { t } from "i18next";
@@ -19,7 +18,6 @@ import {
 import { ChatCard } from "@renderer/components";
 import { PlusIcon } from "lucide-react";
 import { DEFAULT_GPT_CONFIG } from "@/constants";
-import { useChat } from "@renderer/hooks";
 import { isSameTimeRange } from "@renderer/lib/utils";
 import { ChatAgentTypeEnum } from "@/types/enums";
 
@@ -33,7 +31,7 @@ export const ChatList = (props: {
   const { sttEngine, currentGptEngine, ttsConfig } = useContext(
     AISettingsProviderContext
   );
-  const { EnjoyApp, learningLanguage } = useContext(AppSettingsProviderContext);
+  const { EnjoyApp } = useContext(AppSettingsProviderContext);
   const { currentChat: copilotCurrentChat } = useContext(
     CopilotProviderContext
   );
@@ -130,45 +128,48 @@ export const ChatList = (props: {
 
   return (
     <>
-      <div className="overflow-y-auto h-full py-2 px-1 relative">
-        <Button
-          className="w-full mb-1 p-1 justify-start items-center"
-          variant="ghost"
-          size="sm"
-          disabled={!chatAgent}
-          onClick={handleCreateChat}
-        >
-          <PlusIcon className="w-4 h-4 mr-1" />
-          <span className="text-xs font-semibold capitalize">
+      <div className="h-full flex flex-col min-h-0">
+        <div className="shrink-0 px-3 pt-3 pb-2">
+          <button
+            type="button"
+            disabled={!chatAgent}
+            onClick={handleCreateChat}
+            className="w-full h-8 rounded-full bg-ej-ink text-ej-bg text-xs font-semibold flex items-center justify-center gap-1.5 transition-opacity duration-ej hover:opacity-90 disabled:opacity-40 disabled:pointer-events-none"
+          >
+            <PlusIcon className="size-3.5" />
             {t("newChat")}
-          </span>
-        </Button>
-        <div className="px-2 mb-1">
-          <span className="text-sm font-semibold capitalize">
-            {t("recents")}
-          </span>
+          </button>
         </div>
-        {chats.length === 0 && (
-          <div className="text-center my-4">
-            <span className="text-sm text-muted-foreground">{t("noData")}</span>
-          </div>
-        )}
-        <div className="grid gap-1">
-          {chats.map((chat, index) => (
-            <ChatCard
-              key={chat.id}
-              chat={chat}
-              displayDate={
-                index === 0 ||
-                !isSameTimeRange(chat.updatedAt, chats[index - 1].updatedAt)
-              }
-              selected={currentChat?.id === chat.id}
-              onSelect={setCurrentChat}
-              onDelete={setDeletingChat}
-            />
-          ))}
+
+        <div className="shrink-0 px-4 pb-1">
+          <div className="ej-label">{t("recentChats")}</div>
+        </div>
+
+        <div className="flex-1 min-h-0 overflow-y-auto scroll px-2 pb-3">
+          {chats.length === 0 ? (
+            <div className="py-8 text-center text-xxs text-ej-muted">
+              {t("noData")}
+            </div>
+          ) : (
+            <div className="grid gap-0.5">
+              {chats.map((chat, index) => (
+                <ChatCard
+                  key={chat.id}
+                  chat={chat}
+                  displayDate={
+                    index === 0 ||
+                    !isSameTimeRange(chat.updatedAt, chats[index - 1].updatedAt)
+                  }
+                  selected={currentChat?.id === chat.id}
+                  onSelect={setCurrentChat}
+                  onDelete={setDeletingChat}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </div>
+
       <AlertDialog
         open={!!deletingChat}
         onOpenChange={() => setDeletingChat(null)}
@@ -183,7 +184,7 @@ export const ChatList = (props: {
               {t("cancel")}
             </AlertDialogCancel>
             <AlertDialogAction
-              className="bg-destructive hover:bg-destructive-hover"
+              className="bg-ej-bad hover:opacity-90"
               onClick={handleDeleteChat}
             >
               {t("delete")}

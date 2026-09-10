@@ -5,11 +5,13 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
   DropdownMenuContent,
-  Button,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
 } from "@renderer/components/ui";
+import { EjIconButton } from "@renderer/components/enjoy";
+import { cn } from "@renderer/lib/utils";
+import {
+  createLearningSegmentPlaybackController,
+  shouldPreserveLearningSubregion,
+} from "@renderer/lib/learning-segment-playback";
 import {
   MediaShadowProviderContext,
   AppSettingsProviderContext,
@@ -21,7 +23,6 @@ import {
   PauseIcon,
   Repeat1Icon,
   RepeatIcon,
-  GaugeIcon,
   ListRestartIcon,
   SkipForwardIcon,
   SkipBackIcon,
@@ -36,7 +37,7 @@ import debounce from "lodash/debounce";
 import { AlignmentResult } from "echogarden/dist/api/API.d.js";
 import { TimelineEntry } from "echogarden/dist/utilities/Timeline.d.js";
 
-const PLAYBACK_RATE_OPTIONS = [0.75, 0.8, 0.9, 1.0];
+const PLAYBACK_RATE_OPTIONS = [0.5, 0.75, 1.0, 1.25, 1.5];
 export const MediaPlayerControls = () => {
   const {
     decoded,
@@ -61,29 +62,64 @@ export const MediaPlayerControls = () => {
   const [playMode, setPlayMode] = useState<"loop" | "single" | "all">("single");
   const [playbackRate, setPlaybackRate] = useState<number>(1);
   const [grouping, setGrouping] = useState(false);
-  const isLoopPausing = useRef(false);
+  const learningPlaybackRef = useRef<
+    ReturnType<typeof createLearningSegmentPlaybackController> | null
+  >(null);
 
   const playOrPause = () => {
-    if (!wavesurfer) return;
-
-    wavesurfer.playPause();
+    learningPlaybackRef.current?.toggle();
   };
   const debouncedPlayOrPause = debounce(playOrPause, 100);
 
+  useEffect(() => {
+    if (!wavesurfer) return;
+
+    const controller = createLearningSegmentPlaybackController({
+      player: wavesurfer,
+    });
+    learningPlaybackRef.current = controller;
+
+    return () => {
+      if (learningPlaybackRef.current === controller) {
+        learningPlaybackRef.current = null;
+      }
+      controller.destroy();
+    };
+  }, [wavesurfer]);
+
+  useEffect(() => {
+    learningPlaybackRef.current?.setMode(playMode);
+  }, [playMode, wavesurfer]);
+
+  useEffect(() => {
+    learningPlaybackRef.current?.setActiveRegion(activeRegion);
+  }, [activeRegion, wavesurfer]);
+
+  const segmentPlaybackRegion = (index: number) => {
+    const segment = transcription?.result?.timeline?.[index];
+    if (!segment) return null;
+    return {
+      id: `segment-region-${index}`,
+      start: segment.startTime,
+      end: segment.endTime,
+    };
+  };
+
+  const navigateToSegment = (index: number) => {
+    const region = segmentPlaybackRegion(index);
+    if (!region) return;
+    learningPlaybackRef.current?.navigateToRegion(region);
+    setCurrentSegmentIndex(index);
+  };
+
   const onPrev = () => {
     if (!wavesurfer) return;
-    const segment = transcription?.result?.timeline[currentSegmentIndex - 1];
-    if (!segment) return;
-
-    setCurrentSegmentIndex(currentSegmentIndex - 1);
+    navigateToSegment(currentSegmentIndex - 1);
   };
 
   const onNext = () => {
     if (!wavesurfer) return;
-    const segment = transcription?.result?.timeline[currentSegmentIndex + 1];
-    if (!segment) return;
-
-    setCurrentSegmentIndex(currentSegmentIndex + 1);
+    navigateToSegment(currentSegmentIndex + 1);
   };
 
   /*
@@ -135,12 +171,7 @@ export const MediaPlayerControls = () => {
      * Remain active wordRegion unchanged if it's still in the segment region.
      * It happens when word region finish editing and the transcription is updated.
      */
-    if (
-      activeRegion &&
-      activeRegion.id.startsWith("word-region") &&
-      activeRegion.start >= region.start &&
-      activeRegion.end <= region.end
-    ) {
+    if (shouldPreserveLearningSubregion(activeRegion, region)) {
       return;
     }
 
@@ -156,8 +187,21 @@ export const MediaPlayerControls = () => {
     wavesurfer.setScrollTime(region.start);
   };
 
-  // Debounce updateSegmentRegion
-  const debouncedUpdateSegmentRegion = debounce(updateSegmentRegion, 100);
+  // Keep one debounced callback for the component lifetime. It dereferences
+  // the latest render so a word selection made during the wait is preserved.
+  const updateSegmentRegionRef = useRef(updateSegmentRegion);
+  updateSegmentRegionRef.current = updateSegmentRegion;
+  const debouncedUpdateSegmentRegionRef = useRef(
+    debounce(() => updateSegmentRegionRef.current(), 100)
+  );
+  const debouncedUpdateSegmentRegion = debouncedUpdateSegmentRegionRef.current;
+
+  useEffect(
+    () => () => {
+      debouncedUpdateSegmentRegion.cancel();
+    },
+    [debouncedUpdateSegmentRegion]
+  );
 
   const groupMeanings = () => {
     if (!regions) return;
@@ -245,6 +289,25 @@ export const MediaPlayerControls = () => {
   }, [currentSegmentIndex, regions, transcription?.result]);
 
   /*
+   * Handle segment-index changes from transcript and caption controls without
+   * waiting for the visual region debounce. Index changes driven by all-mode
+   * playback already have native time inside the new segment and only need to
+   * invalidate the old controller region.
+   */
+  useEffect(() => {
+    if (!wavesurfer) return;
+    const region = segmentPlaybackRegion(currentSegmentIndex);
+    if (!region) return;
+
+    const time = wavesurfer.getCurrentTime();
+    if (time >= region.start && time < region.end) {
+      learningPlaybackRef.current?.setActiveRegion(region);
+      return;
+    }
+    learningPlaybackRef.current?.navigateToRegion(region);
+  }, [currentSegmentIndex, transcription?.id, wavesurfer]);
+
+  /*
    * Update region to editable when editingRegion is toggled
    */
   useEffect(() => {
@@ -296,80 +359,22 @@ export const MediaPlayerControls = () => {
 
       regions.on("region-clicked", (region, event) => {
         if (region.id.startsWith("meaning-group-region")) {
+          learningPlaybackRef.current?.setActiveRegion(region);
           setActiveRegion(region);
-          region.play();
+          learningPlaybackRef.current?.playRegion(region);
           event.stopPropagation();
         }
       }),
 
       regions.on("region-out", (region) => {
-        if (region.id !== activeRegion?.id) return;
-        if (playMode === "all" || isLoopPausing.current) return;
-
-        // Pause immediately
-        wavesurfer.pause();
-
-        // Use requestAnimationFrame to prevent recursion
-        requestAnimationFrame(() => {
-          if (playMode === "loop") {
-            // Set time and play with proper guards
-            if (!isLoopPausing.current) {
-              isLoopPausing.current = true;
-              wavesurfer.setTime(parseFloat(region.start.toFixed(6)));
-
-              setTimeout(() => {
-                isLoopPausing.current = false;
-                if (playMode === "loop") {
-                  wavesurfer.play();
-                }
-              }, 500);
-            }
-          } else if (playMode === "single") {
-            wavesurfer.setTime(parseFloat(region.start.toFixed(6)));
-            wavesurfer.setScrollTime(parseFloat(region.start.toFixed(6)));
-          }
-        });
+        learningPlaybackRef.current?.handleRegionOut(region);
       }),
     ];
 
-    // More robust position check interval
-    const checkIntervalId = setInterval(() => {
-      if (
-        !activeRegion ||
-        playMode === "all" ||
-        !wavesurfer.isPlaying() ||
-        isLoopPausing.current
-      )
-        return;
-
-      const currentTime = wavesurfer.getCurrentTime();
-      const EPSILON = 0.01;
-
-      const isOutsideRegion =
-        currentTime < activeRegion.start - EPSILON ||
-        currentTime > activeRegion.end + EPSILON;
-
-      if (isOutsideRegion && currentTime !== 0) {
-        if (playMode === "loop") {
-          // Force reset to start and ensure playback continues
-          wavesurfer.pause();
-          isLoopPausing.current = true;
-          wavesurfer.setTime(parseFloat(activeRegion.start.toFixed(6)));
-          setTimeout(() => {
-            isLoopPausing.current = false;
-            if (playMode === "loop") {
-              wavesurfer.play();
-            }
-          }, 500);
-        }
-      }
-    }, 50); // Even more frequent checks for better reliability
-
     return () => {
       subscriptions.forEach((unsub) => unsub());
-      clearInterval(checkIntervalId);
     };
-  }, [playMode, regions, transcription, currentSegmentIndex, activeRegion]);
+  }, [regions, transcription, currentSegmentIndex]);
 
   /*
    * Auto select the firt segment when everything is ready
@@ -482,6 +487,7 @@ export const MediaPlayerControls = () => {
    */
   useEffect(() => {
     if (!activeRegion) return;
+    if (!wavesurfer) return;
     if (zoomRatio === fitZoomRatio) return;
     if (playMode === "all") return;
 
@@ -494,7 +500,7 @@ export const MediaPlayerControls = () => {
       }
       setZoomRatio(fitZoomRatio);
     }
-  }, [activeRegion, fitZoomRatio]);
+  }, [activeRegion, fitZoomRatio, playMode, wavesurfer, zoomRatio]);
 
   /*
    * Remove word regions when meaning group region is active
@@ -540,201 +546,162 @@ export const MediaPlayerControls = () => {
     };
   }, [grouping]);
 
+  const cyclePlaybackRate = () => {
+    const index = PLAYBACK_RATE_OPTIONS.indexOf(playbackRate);
+    setPlaybackRate(
+      PLAYBACK_RATE_OPTIONS[(index + 1) % PLAYBACK_RATE_OPTIONS.length]
+    );
+  };
+
   return (
-    <div className="w-full h-14 flex items-center justify-center px-6">
-      <div className="flex items-center justify-center space-x-2">
-        <Popover>
-          <PopoverTrigger asChild>
-            <Button
-              variant={`${playbackRate == 1.0 ? "ghost" : "secondary"}`}
-              data-tooltip-id="media-shadow-tooltip"
-              data-tooltip-content={t("playbackSpeed")}
-              className="relative aspect-square p-0 h-8"
-            >
-              <GaugeIcon className="w-6 h-6" />
-              {playbackRate != 1.0 && (
-                <span className="absolute left-[1.25rem] top-6 text-[0.6rem] font-bold text-gray-400">
-                  {playbackRate.toFixed(2)}
-                </span>
-              )}
-            </Button>
-          </PopoverTrigger>
-          <PopoverContent className="w-96">
-            <div
-              id="media-playback-rate-controller"
-              className="mb-4 text-center"
-            >
-              {t("playbackRate")}
-            </div>
-            <div className="w-full rounded-full flex items-center justify-between bg-muted">
-              {PLAYBACK_RATE_OPTIONS.map((rate, i) => (
-                <div
-                  key={i}
-                  className={`cursor-pointer h-8 w-8 leading-8 rounded-full flex items-center justify-center ${
-                    rate === playbackRate
-                      ? "bg-primary text-white text-md"
-                      : "text-black/70 text-xs"
-                  }`}
-                  onClick={() => {
-                    setPlaybackRate(rate);
-                  }}
-                >
-                  <span className="">{rate}</span>
-                </div>
-              ))}
-            </div>
-          </PopoverContent>
-        </Popover>
+    <div className="w-full h-[62px] flex items-center justify-center gap-1.5 px-6 border-t border-ej-line">
+      <EjIconButton
+        size={32}
+        active={playbackRate !== 1.0}
+        data-tooltip-id="media-shadow-tooltip"
+        data-tooltip-content={t("playbackSpeed")}
+        onClick={cyclePlaybackRate}
+      >
+        <span className="text-xxs font-bold ej-tabular">{playbackRate}x</span>
+      </EjIconButton>
 
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button
-              variant="ghost"
-              data-tooltip-id="media-shadow-tooltip"
-              data-tooltip-content={t("switchPlayMode")}
-              className="aspect-square p-0 h-8"
-            >
-              {playMode === "single" && <RepeatIcon className="w-6 h-6" />}
-              {playMode === "loop" && <Repeat1Icon className="w-6 h-6" />}
-              {playMode === "all" && <ListRestartIcon className="w-6 h-6" />}
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent>
-            <DropdownMenuItem
-              className={playMode === "single" ? "bg-muted" : ""}
-              onClick={() => setPlayMode("single")}
-            >
-              <RepeatIcon className="w-4 h-4 mr-2" />
-              <span>{t("playSingleSegment")}</span>
-            </DropdownMenuItem>
-            <DropdownMenuItem
-              className={playMode === "loop" ? "bg-muted" : ""}
-              onClick={() => setPlayMode("loop")}
-            >
-              <Repeat1Icon className="w-4 h-4 mr-2" />
-              <span>{t("playInLoop")}</span>
-            </DropdownMenuItem>
-            <DropdownMenuItem
-              className={playMode === "all" ? "bg-muted" : ""}
-              onClick={() => setPlayMode("all")}
-            >
-              <ListRestartIcon className="w-4 h-4 mr-2" />
-              <span>{t("playAllSegments")}</span>
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-
-        <Button
-          variant="ghost"
-          size="lg"
-          onClick={onPrev}
-          id="media-play-previous-button"
-          data-tooltip-id="media-shadow-tooltip"
-          data-tooltip-content={t("playPreviousSegment")}
-          className="aspect-square p-0 h-8"
-        >
-          <SkipBackIcon className="w-6 h-6" />
-        </Button>
-
-        {wavesurfer?.isPlaying() ? (
-          <Button
-            variant="default"
-            onClick={debouncedPlayOrPause}
-            id="media-play-or-pause-button"
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <EjIconButton
+            size={32}
+            active={playMode !== "single"}
             data-tooltip-id="media-shadow-tooltip"
-            data-tooltip-content={t("pause")}
-            className="aspect-square p-0 h-10 rounded-full"
+            data-tooltip-content={t("switchPlayMode")}
           >
-            <PauseIcon fill="white" className="w-6 h-6" />
-          </Button>
-        ) : (
-          <Button
-            variant="default"
-            onClick={debouncedPlayOrPause}
-            id="media-play-or-pause-button"
-            data-tooltip-id="media-shadow-tooltip"
-            data-tooltip-content={t("play")}
-            className="aspect-square p-0 h-10 rounded-full"
+            {playMode === "single" && <RepeatIcon className="size-[18px]" />}
+            {playMode === "loop" && <Repeat1Icon className="size-[18px]" />}
+            {playMode === "all" && <ListRestartIcon className="size-[18px]" />}
+          </EjIconButton>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="center" className="w-48">
+          <DropdownMenuItem
+            className={playMode === "single" ? "bg-ej-surface2" : ""}
+            onClick={() => setPlayMode("single")}
           >
-            <PlayIcon fill="white" className="w-6 h-6" />
-          </Button>
+            <RepeatIcon className="size-4 mr-2" />
+            <span>{t("playSingleSegment")}</span>
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            className={playMode === "loop" ? "bg-ej-surface2" : ""}
+            onClick={() => setPlayMode("loop")}
+          >
+            <Repeat1Icon className="size-4 mr-2" />
+            <span>{t("playInLoop")}</span>
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            className={playMode === "all" ? "bg-ej-surface2" : ""}
+            onClick={() => setPlayMode("all")}
+          >
+            <ListRestartIcon className="size-4 mr-2" />
+            <span>{t("playAllSegments")}</span>
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+
+      <EjIconButton
+        size={32}
+        onClick={onPrev}
+        id="media-play-previous-button"
+        data-tooltip-id="media-shadow-tooltip"
+        data-tooltip-content={t("playPreviousSegment")}
+      >
+        <SkipBackIcon className="size-[18px]" />
+      </EjIconButton>
+
+      <button
+        type="button"
+        onClick={debouncedPlayOrPause}
+        id="media-play-or-pause-button"
+        data-tooltip-id="media-shadow-tooltip"
+        data-tooltip-content={wavesurfer?.isPlaying() ? t("pause") : t("play")}
+        className={cn(
+          "size-10 rounded-full shrink-0 inline-flex items-center justify-center mx-1",
+          "bg-ej-accent text-white shadow-ej transition-colors duration-ej",
+          "hover:bg-ej-accent-ink"
         )}
+      >
+        {wavesurfer?.isPlaying() ? (
+          <PauseIcon fill="currentColor" className="size-[18px]" />
+        ) : (
+          <PlayIcon fill="currentColor" className="size-[18px] ml-0.5" />
+        )}
+      </button>
 
-        <Button
-          variant="ghost"
-          size="lg"
-          onClick={onNext}
-          id="media-play-next-button"
+      <EjIconButton
+        size={32}
+        onClick={onNext}
+        id="media-play-next-button"
+        data-tooltip-id="media-shadow-tooltip"
+        data-tooltip-content={t("playNextSegment")}
+      >
+        <SkipForwardIcon className="size-[18px]" />
+      </EjIconButton>
+
+      <EjIconButton
+        size={32}
+        active={grouping}
+        data-tooltip-id="media-shadow-tooltip"
+        data-tooltip-content={t("autoGroup")}
+        onClick={() => setGrouping(!grouping)}
+      >
+        <GroupIcon className="size-[18px]" />
+      </EjIconButton>
+
+      <div className="relative">
+        <EjIconButton
+          size={32}
+          active={editingRegion}
           data-tooltip-id="media-shadow-tooltip"
-          data-tooltip-content={t("playNextSegment")}
-          className="aspect-square p-0 h-8"
+          data-tooltip-content={
+            editingRegion ? t("dragRegionBorderToEdit") : t("editRegion")
+          }
+          onClick={() => {
+            setEditingRegion(!editingRegion);
+          }}
         >
-          <SkipForwardIcon className="w-6 h-6" />
-        </Button>
+          <ScissorsIcon className="size-[18px]" />
+        </EjIconButton>
 
-        <Button
-          variant={grouping ? "secondary" : "ghost"}
-          size="icon"
-          data-tooltip-id="media-shadow-tooltip"
-          data-tooltip-content={t("autoGroup")}
-          className="relative aspect-square p-0 h-8"
-          onClick={() => setGrouping(!grouping)}
-        >
-          <GroupIcon className="w-6 h-6" />
-        </Button>
+        {editingRegion && (
+          <div className="absolute top-0 left-10 flex items-center gap-1">
+            <EjIconButton
+              size={32}
+              data-tooltip-id="media-shadow-tooltip"
+              data-tooltip-content={t("cancel")}
+              onClick={() => {
+                setEditingRegion(false);
+                setTranscriptionDraft(null);
+              }}
+            >
+              <UndoIcon className="size-[18px]" />
+            </EjIconButton>
+            <EjIconButton
+              size={32}
+              className="bg-ej-accent text-white hover:bg-ej-accent-ink hover:text-white"
+              data-tooltip-id="media-shadow-tooltip"
+              data-tooltip-content={t("save")}
+              onClick={() => {
+                if (!transcriptionDraft) return;
 
-        <div className="relative">
-          <Button
-            variant={`${editingRegion ? "secondary" : "ghost"}`}
-            data-tooltip-id="media-shadow-tooltip"
-            data-tooltip-content={
-              editingRegion ? t("dragRegionBorderToEdit") : t("editRegion")
-            }
-            className="relative aspect-square p-0 h-8"
-            onClick={() => {
-              setEditingRegion(!editingRegion);
-            }}
-          >
-            <ScissorsIcon className="w-6 h-6" />
-          </Button>
-
-          {editingRegion && (
-            <div className="absolute top-0 left-12 flex items-center space-x-2">
-              <Button
-                variant="secondary"
-                className="relative aspect-square p-0 h-8"
-                data-tooltip-id="media-shadow-tooltip"
-                data-tooltip-content={t("cancel")}
-                onClick={() => {
-                  setEditingRegion(false);
-                  setTranscriptionDraft(null);
-                }}
-              >
-                <UndoIcon className="w-6 h-6" />
-              </Button>
-              <Button
-                variant="default"
-                className="relative aspect-square p-0 h-8"
-                data-tooltip-id="media-shadow-tooltip"
-                data-tooltip-content={t("save")}
-                onClick={() => {
-                  if (!transcriptionDraft) return;
-
-                  EnjoyApp.transcriptions
-                    .update(transcription.id, {
-                      result: transcriptionDraft,
-                    })
-                    .then(() => {
-                      setTranscriptionDraft(null);
-                      setEditingRegion(false);
-                    });
-                }}
-              >
-                <SaveIcon className="w-6 h-6" />
-              </Button>
-            </div>
-          )}
-        </div>
+                EnjoyApp.transcriptions
+                  .update(transcription.id, {
+                    result: transcriptionDraft,
+                  })
+                  .then(() => {
+                    setTranscriptionDraft(null);
+                    setEditingRegion(false);
+                  });
+              }}
+            >
+              <SaveIcon className="size-[18px]" />
+            </EjIconButton>
+          </div>
+        )}
       </div>
     </div>
   );

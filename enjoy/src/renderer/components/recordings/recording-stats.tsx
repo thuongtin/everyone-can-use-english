@@ -1,76 +1,40 @@
-import { useEffect, useState, useContext } from "react";
-import { AppSettingsProviderContext } from "@renderer/context";
-import { secondsToTimestamp } from "@renderer/lib/utils";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
-} from "@renderer/components/ui";
-import { t } from "i18next";
-import dayjs from "@renderer/lib/dayjs";
+import { cn } from "@renderer/lib/utils";
 
-export const RecordingStats = () => {
-  return (
-    <div className="grid grid-cols-3 gap-4">
-      <RecordingStatsCard
-        label={t("today")}
-        from={dayjs().startOf("day").format()}
-        to={dayjs().endOf("day").format()}
-      />
-      <RecordingStatsCard
-        label={t("yesterday")}
-        from={dayjs().subtract(1, "day").startOf("day").format()}
-        to={dayjs().subtract(1, "day").endOf("day").format()}
-      />
-      <RecordingStatsCard label={t("total")} />
-    </div>
-  );
+export type RecordingStat = {
+  label: string;
+  value: string;
+  hint?: string;
+  hintTone?: "ok" | "muted";
+  icon: React.ReactNode;
+  iconClassName?: string;
 };
 
-export const RecordingStatsCard = (props: {
-  label: string;
-  from?: string;
-  to?: string;
-}) => {
-  const { EnjoyApp } = useContext(AppSettingsProviderContext);
-  const { label, from, to } = props;
-  const [stats, setStats] = useState<{
-    count: number;
-    duration: number;
-  } | null>(null);
-
-  useEffect(() => {
-    EnjoyApp.recordings.stats({ from, to }).then((_stats) => {
-      setStats(_stats);
-    });
-  }, []);
-
-  if (!stats) {
-    return null;
-  }
-
-  return (
-    <Card>
-      <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-        <CardTitle className="text-sm font-medium capitalize">
-          {label}
-        </CardTitle>
-      </CardHeader>
-
-      <CardContent>
-        <div className="mb-2">
-          <span className="text-2xl font-bold">{stats.count}</span>
-          <span className="text-sm text-muted-foreground">
-            {t("totalRecordings", { total: "" })}
+/** The four headline numbers on the profile screen. */
+export const RecordingStats = (props: { stats: RecordingStat[] }) => (
+  <div className="grid grid-cols-[repeat(auto-fit,minmax(170px,1fr))] gap-3">
+    {props.stats.map((stat) => (
+      <div
+        key={stat.label}
+        className="flex animate-rise flex-col gap-1 rounded-[14px] border border-ej-line bg-ej-surface px-4 py-3.5"
+      >
+        <div className="flex items-center justify-between gap-2 text-[11.5px] text-ej-muted">
+          <span className="min-w-0 truncate">{stat.label}</span>
+          <span className={cn("shrink-0", stat.iconClassName)}>
+            {stat.icon}
           </span>
         </div>
-        <div className="text-sm text-muted-foreground">
-          {t("totalDuration", {
-            duration: secondsToTimestamp(stats.duration / 1000),
-          })}
+        <div className="ej-tabular text-[26px] font-bold leading-tight tracking-[-0.02em] text-ej-ink">
+          {stat.value}
         </div>
-      </CardContent>
-    </Card>
-  );
-};
+        <div
+          className={cn(
+            "text-[11.5px]",
+            stat.hintTone === "ok" ? "text-ej-ok" : "text-ej-muted"
+          )}
+        >
+          {stat.hint}
+        </div>
+      </div>
+    ))}
+  </div>
+);

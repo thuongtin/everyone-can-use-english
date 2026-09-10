@@ -30,6 +30,7 @@ import {
   toast,
 } from "@renderer/components/ui";
 import { t } from "i18next";
+import { displayableResourceUrl } from "@renderer/lib/retired-resource";
 import { TTSForm } from "@renderer/components";
 import {
   AISettingsProviderContext,
@@ -45,12 +46,12 @@ export const ChatAgentForm = (props: {
   onFinish: () => void;
 }) => {
   const { agent, onFinish } = props;
-  const { EnjoyApp, learningLanguage, webApi } = useContext(
+  const { EnjoyApp } = useContext(
     AppSettingsProviderContext
   );
   const { ttsConfig } = useContext(AISettingsProviderContext);
   const [selectedTemplate, setSelectedTemplate] = useState<string>("custom");
-  const [templates, setTemplates] = useState<
+  const [templates] = useState<
     {
       key: string;
       name: string;
@@ -59,13 +60,7 @@ export const ChatAgentForm = (props: {
     }[]
   >(CHAT_AGENT_TEMPLATES);
 
-  const fetchTemplates = () => {
-    webApi.config("chat_agent_templates").then((tpls) => {
-      if (Array.isArray(tpls) && tpls.length > 0) {
-        setTemplates(tpls);
-      }
-    });
-  };
+
 
   const agentFormSchema = z.object({
     type: z.enum([ChatAgentTypeEnum.GPT, ChatAgentTypeEnum.TTS]),
@@ -188,7 +183,6 @@ export const ChatAgentForm = (props: {
   }, [selectedTemplate, form.watch("type")]);
 
   useEffect(() => {
-    fetchTemplates();
   }, []);
 
   return (
@@ -200,7 +194,7 @@ export const ChatAgentForm = (props: {
             <Avatar className="w-12 h-12 border">
               <img
                 src={
-                  agent?.avatarUrl ||
+                  displayableResourceUrl(agent?.avatarUrl) ||
                   `https://api.dicebear.com/9.x/shapes/svg?seed=${form.watch(
                     "name"
                   )}`
@@ -259,7 +253,7 @@ export const ChatAgentForm = (props: {
                     role="combobox"
                     className={cn(
                       "w-full justify-between",
-                      !selectedTemplate && "text-muted-foreground"
+                      !selectedTemplate && "text-ej-muted"
                     )}
                   >
                     {selectedTemplate

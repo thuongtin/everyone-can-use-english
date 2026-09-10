@@ -9,6 +9,8 @@ export type DbConnectionState = {
   state: DbLifecycleState;
   path?: string;
   error?: string | null;
+  connectionId?: string;
+  profileId?: string;
 };
 
 export type DbLifecycleUser = {
@@ -19,7 +21,7 @@ export type DbLifecycleDependencies = {
   getUser: () => Promise<DbLifecycleUser | null | undefined>;
   getLibrary: () => Promise<string | null | undefined>;
   connect: () => Promise<DbConnectionState>;
-  disconnect: () => Promise<void>;
+  disconnect: (connectionId?: string) => Promise<void>;
 };
 
 export type DbLifecycleProbeResult =
@@ -46,7 +48,7 @@ export type DbLifecycle = {
   dispose: () => void;
 };
 
-const sameUserId = (left: string, right: string) => left === right;
+const sameUserId = (left: string, right: string) => String(left) === String(right);
 
 const enqueue = <T>(
   queue: { current: Promise<void> },
@@ -66,12 +68,23 @@ export const createDbLifecycle = (
   const queue = { current: Promise.resolve() };
   let generation = 0;
   let disposed = false;
+  let activeConnection: DbConnectionState | undefined;
+  let activeConnectionId: string | undefined;
+  let activeUserId: string | undefined;
+  let activeLibrary: string | undefined;
+
+  const clearActiveConnection = () => {
+    activeConnection = undefined;
+    activeConnectionId = undefined;
+    activeUserId = undefined;
+    activeLibrary = undefined;
+  };
 
   const isCurrent = (intent: number) => !disposed && generation === intent;
 
-  const disconnectQuietly = async () => {
+  const disconnectQuietly = async (connectionId?: string) => {
     try {
-      await dependencies.disconnect();
+      await dependencies.disconnect(connectionId);
     } catch {
       // Preserve the original stale outcome while best-effort closing the connection.
     }
@@ -139,6 +152,20 @@ export const createDbLifecycle = (
       if (!isCurrent(intent)) return { kind: "stale" };
       if (!library) return { kind: "not-ready" };
 
+      if (activeConnection && activeUserId && activeLibrary) {
+        if (sameUserId(activeUserId, user.id) && activeLibrary === library) {
+          return {
+            kind: "connected",
+            connection: activeConnection,
+            userId: activeUserId,
+          };
+        }
+
+        await disconnectQuietly(activeConnectionId);
+        clearActiveConnection();
+        if (!isCurrent(intent)) return { kind: "stale" };
+      }
+
       let connection: DbConnectionState;
       try {
         connection = await dependencies.connect();
@@ -150,7 +177,7 @@ export const createDbLifecycle = (
         return { kind: "connection-error", error };
       }
       if (!isCurrent(intent)) {
-        await disconnectQuietly();
+        await disconnectQuietly(connection.connectionId);
         return { kind: "stale" };
       }
 
@@ -164,25 +191,34 @@ export const createDbLifecycle = (
         return { kind: "retry", connection };
       }
 
+      if (
+        !connection.connectionId
+        || !connection.profileId
+        || !sameUserId(connection.profileId, user.id)
+      ) {
+        await disconnectQuietly(connection.connectionId);
+        return { kind: "session-changed" };
+      }
+
       let currentUser: DbLifecycleUser | null | undefined;
       try {
         currentUser = await dependencies.getUser();
       } catch (error) {
-        await disconnectQuietly();
+        await disconnectQuietly(connection.connectionId);
         return isCurrent(intent)
           ? { kind: "probe-error", error }
           : { kind: "stale" };
       }
       if (!isCurrent(intent)) {
-        await disconnectQuietly();
+        await disconnectQuietly(connection.connectionId);
         return { kind: "stale" };
       }
       if (!currentUser?.id) {
-        await disconnectQuietly();
+        await disconnectQuietly(connection.connectionId);
         return { kind: "unauthenticated" };
       }
       if (!sameUserId(currentUser.id, user.id)) {
-        await disconnectQuietly();
+        await disconnectQuietly(connection.connectionId);
         return { kind: "session-changed" };
       }
 
@@ -190,32 +226,38 @@ export const createDbLifecycle = (
       try {
         currentLibrary = await dependencies.getLibrary();
       } catch (error) {
-        await disconnectQuietly();
+        await disconnectQuietly(connection.connectionId);
         return isCurrent(intent)
           ? { kind: "probe-error", error }
           : { kind: "stale" };
       }
       if (!isCurrent(intent)) {
-        await disconnectQuietly();
+        await disconnectQuietly(connection.connectionId);
         return { kind: "stale" };
       }
       if (!currentLibrary) {
-        await disconnectQuietly();
+        await disconnectQuietly(connection.connectionId);
         return { kind: "not-ready" };
       }
       if (currentLibrary !== library) {
-        await disconnectQuietly();
+        await disconnectQuietly(connection.connectionId);
         return { kind: "session-changed" };
       }
 
-      return { kind: "connected", connection, userId: user.id };
+      activeConnection = connection;
+      activeConnectionId = connection.connectionId;
+      activeUserId = connection.profileId;
+      activeLibrary = currentLibrary;
+      return { kind: "connected", connection, userId: connection.profileId };
     });
   };
 
   const disconnect = async () => {
+    const connectionId = activeConnectionId;
+    clearActiveConnection();
     generation += 1;
     await enqueue(queue, async () => {
-      await dependencies.disconnect();
+      await dependencies.disconnect(connectionId);
     });
   };
 

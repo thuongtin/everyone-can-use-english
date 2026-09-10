@@ -3,10 +3,9 @@ import {
   DbProviderContext,
   AppSettingsProviderContext,
 } from "@renderer/context";
-import { Button, ScrollArea, ScrollBar } from "@renderer/components/ui";
 import { AudioCard, MediaAddButton } from "@renderer/components";
+import { EjSectionHeader, EjSeeAllLink } from "@renderer/components/enjoy";
 import { t } from "i18next";
-import { Link } from "react-router-dom";
 
 export const AudiosSegment = (props: { limit?: number }) => {
   const { limit = 10 } = props;
@@ -43,39 +42,26 @@ export const AudiosSegment = (props: { limit?: number }) => {
       setAudios(audios.filter((r) => r.id !== record.id));
     }
   };
+
   return (
-    <div>
-      <div className="flex items-start justify-between mb-4">
-        <div className="space-y-1">
-          <h2 className="text-2xl font-semibold tracking-tight capitalize">
-            {t("addedAudios")}
-          </h2>
-        </div>
-        <div className="ml-auto mr-4">
-          <Link to="/audios">
-            <Button variant="link" className="capitalize">
-              {t("seeMore")}
-            </Button>
-          </Link>
-        </div>
-      </div>
+    <section>
+      <EjSectionHeader
+        title={t("home.audios")}
+        count={t("home.audiosCount", { count: audios.length })}
+        action={<EjSeeAllLink to="/audios" label={t("home.seeAll")} />}
+      />
 
       {audios.length === 0 ? (
-        <div className="flex items-center justify-center h-48 border border-dashed rounded-lg">
+        <div className="flex items-center justify-center h-40 rounded-ej-lg border border-dashed border-ej-line2 bg-ej-surface/40">
           <MediaAddButton type="Audio" />
         </div>
       ) : (
-        <ScrollArea className="w-full">
-          <div className="flex w-max items-center space-x-4 pb-4">
-            {audios.map((audio) => {
-              return (
-                <AudioCard className="w-36" key={audio.id} audio={audio} />
-              );
-            })}
-          </div>
-          <ScrollBar orientation="horizontal" />
-        </ScrollArea>
+        <div className="ej-row pb-1">
+          {audios.map((audio) => (
+            <AudioCard key={audio.id} audio={audio} />
+          ))}
+        </div>
       )}
-    </div>
+    </section>
   );
 };

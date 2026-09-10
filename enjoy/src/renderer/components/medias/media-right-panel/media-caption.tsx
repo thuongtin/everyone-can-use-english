@@ -1,119 +1,130 @@
-import { useState, useContext } from "react";
-import {
-  AppSettingsProviderContext,
-  MediaShadowProviderContext,
-} from "@renderer/context";
-import { convertWordIpaToNormal } from "@/utils";
+import { useContext } from "react";
+import { AppSettingsProviderContext } from "@renderer/context";
 import { TimelineEntry } from "echogarden/dist/utilities/Timeline.d.js";
+import { cn } from "@renderer/lib/utils";
+import { t } from "i18next";
+import {
+  captionIpas,
+  isLexical,
+  scoreTone,
+  WEAK_SCORE,
+} from "./caption-words";
 
+const UNDERLINE_COLOR: Record<string, string> = {
+  warn: "var(--ej-warn)",
+  bad: "var(--ej-bad)",
+};
+
+/**
+ * The sentence itself: one column per word, the phonetics sitting under it and
+ * the practice marks drawn from the selected recording.
+ */
 export const MediaCaption = (props: {
   caption: TimelineEntry;
+  words: string[];
   language?: string;
   selectedIndices?: number[];
   currentSegmentIndex: number;
   activeIndex?: number;
   displayIpa?: boolean;
-  displayNotes?: boolean;
-  onClick?: (index: number) => void;
+  wordScores?: Map<number, number>;
+  notedIndices?: number[];
+  onWordClick?: (index: number, element: HTMLElement) => void;
 }) => {
-  const { currentNotes } = useContext(MediaShadowProviderContext);
   const { learningLanguage, ipaMappings } = useContext(
     AppSettingsProviderContext
   );
-  const notes = currentNotes.filter((note) => note.parameters?.quoteIndices);
   const {
     caption,
+    words,
     selectedIndices = [],
     currentSegmentIndex,
     activeIndex,
     displayIpa,
-    displayNotes,
-    onClick,
+    wordScores,
+    notedIndices = [],
+    onWordClick,
   } = props;
   const language = props.language || learningLanguage;
 
-  const [notedquoteIndices, setNotedquoteIndices] = useState<number[]>([]);
-
-  let words = caption.text
-    .replace(/ ([.,!?:;])/g, "$1")
-    .replace(/ (['"")])/g, "$1")
-    .replace(/ \.\.\./g, "...")
-    .split(/([—]|\s+)/g)
-    .filter((word) => word.trim() !== "" && word !== "—");
-
-  const ipas = caption.timeline.map((w) =>
-    w.timeline?.map((t) =>
-      t.timeline && language.startsWith("en")
-        ? convertWordIpaToNormal(
-            t.timeline.map((s) => s.text),
-            { mappings: ipaMappings }
-          ).join("")
-        : t.text
-    )
-  );
-
-  if (words.length !== caption.timeline.length) {
-    words = caption.timeline.map((w) => w.text);
-  }
+  const ipas = captionIpas(caption, language, ipaMappings);
 
   return (
-    <div className="flex flex-wrap px-4 py-2 bg-muted/50">
-      {/* use the words splitted by caption text if it is matched with the timeline length, otherwise use the timeline */}
-      {words.map((word, index) => (
-        <div
-          className=""
-          key={`word-${currentSegmentIndex}-${index}`}
-          id={`word-${currentSegmentIndex}-${index}`}
-        >
+    <div className="flex flex-wrap items-start gap-x-px gap-y-2 px-5 pb-3.5 pt-5">
+      {words.map((word, index) => {
+        const clickable = isLexical(word);
+        const playing = index === activeIndex;
+        const selected = selectedIndices.includes(index);
+        const score = wordScores?.get(index);
+        const weak = typeof score === "number" && score < WEAK_SCORE;
+        const tone = weak ? scoreTone(score) : null;
+
+        return (
           <div
-            className={`font-sans xl:text-lg 2xl:text-xl px-1 ${
-              onClick && "hover:bg-red-500/10 cursor-pointer"
-            } ${index === activeIndex ? "text-red-500" : ""} ${
-              selectedIndices.includes(index) ? "bg-red-500/10 selected" : ""
-            } ${
-              notedquoteIndices.includes(index)
-                ? "border-b border-red-500 border-dashed"
-                : ""
-            }`}
-            onClick={() => onClick && onClick(index)}
+            key={`word-${currentSegmentIndex}-${index}`}
+            id={`word-${currentSegmentIndex}-${index}`}
+            role={clickable ? "button" : undefined}
+            tabIndex={clickable ? 0 : undefined}
+            data-tooltip-id={weak ? "media-shadow-tooltip" : undefined}
+            data-tooltip-content={
+              weak ? t("segment.weakWordTooltip", { score }) : undefined
+            }
+            onClick={(event) =>
+              clickable && onWordClick?.(index, event.currentTarget)
+            }
+            className={cn(
+              "relative flex flex-col items-center rounded-lg px-[5px] py-0.5",
+              "transition-colors duration-ej",
+              clickable && "cursor-pointer hover:bg-ej-accent-soft",
+              playing && "bg-ej-hl",
+              selected && "bg-ej-accent-soft"
+            )}
           >
-            {word}
-          </div>
-
-          {displayIpa && (
-            <div
-              className={`select-text text-sm 2xl:text-base text-muted-foreground font-code px-1 ${
-                index === 0 ? "before:content-['/']" : ""
-              } ${
-                index === caption.timeline.length - 1
-                  ? "after:content-['/']"
-                  : ""
-              }`}
+            <span
+              className={cn(
+                "font-literata text-[19px] leading-[1.3]",
+                playing
+                  ? "font-semibold text-ej-hl-ink"
+                  : selected
+                    ? "text-ej-accent-ink"
+                    : "text-ej-ink"
+              )}
+              style={
+                weak
+                  ? {
+                      textDecoration: "underline",
+                      textDecorationThickness: "2px",
+                      textDecorationColor: UNDERLINE_COLOR[tone],
+                      textUnderlineOffset: "4px",
+                      textDecorationSkipInk: "none",
+                    }
+                  : undefined
+              }
             >
-              {ipas[index]}
-            </div>
-          )}
+              {word}
+            </span>
 
-          {displayNotes &&
-            notes
-              .filter((note) => note.parameters.quoteIndices[0] === index)
-              .map((note) => (
-                <div
-                  key={`note-${currentSegmentIndex}-${note.id}`}
-                  className="mb-1 text-xs 2xl:text-sm text-red-500 max-w-64 line-clamp-3 font-code cursor-pointer"
-                  onMouseOver={() =>
-                    setNotedquoteIndices(note.parameters.quoteIndices)
-                  }
-                  onMouseLeave={() => setNotedquoteIndices([])}
-                  onClick={() =>
-                    document.getElementById("note-" + note.id)?.scrollIntoView()
-                  }
-                >
-                  {note.parameters.quoteIndices[0] === index && note.content}
-                </div>
-              ))}
-        </div>
-      ))}
+            {displayIpa && ipas[index] && (
+              <span
+                className={cn(
+                  "mt-0.5 select-text font-ipa text-[11.5px] leading-[1.3]",
+                  playing
+                    ? "font-semibold text-ej-hl-ink"
+                    : selected
+                      ? "text-ej-accent-ink"
+                      : "text-ej-muted"
+                )}
+              >
+                {ipas[index]}
+              </span>
+            )}
+
+            {notedIndices.includes(index) && (
+              <span className="absolute right-0 top-[3px] size-[5px] rounded-full bg-ej-accent" />
+            )}
+          </div>
+        );
+      })}
     </div>
   );
 };

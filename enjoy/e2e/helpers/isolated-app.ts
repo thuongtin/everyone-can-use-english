@@ -59,6 +59,7 @@ export type IsolatedApp = {
   readonly electronApp: ElectronApplication;
   readonly page: Page;
   restart: () => Promise<void>;
+  consumeExpectedErrors: (expected: { pageConsoleErrors?: string[]; mainConsoleErrors?: string[] }) => void;
   assertNoRuntimeIssues: () => void;
   close: () => Promise<void>;
 };
@@ -503,6 +504,8 @@ export const launchIsolatedApp = async (): Promise<IsolatedApp> => {
         `--proxy-server=${mockServer.proxyOrigin}`,
         "--proxy-bypass-list=<-loopback>",
         "--ignore-certificate-errors",
+        // This credential-free fixture must not open the user's macOS Keychain.
+        ...(process.platform === "darwin" ? ["--use-mock-keychain"] : []),
       ],
       executablePath: appInfo.executable,
       env: makeLaunchEnvironment(directories, mockServer),
@@ -588,6 +591,25 @@ export const launchIsolatedApp = async (): Promise<IsolatedApp> => {
       page = undefined;
       observedPages.clear();
       await launch();
+    },
+    consumeExpectedErrors: (expected) => {
+      const plain = (line: string) => line.replace(/\u001b\[[\d;]*m/g, "").trim();
+      const consume = (values: string[], expectedLine: string, firstLine = false) => {
+        const matching = values.map((value, index) => ({ value, index }))
+          .filter(({ value }) => plain(firstLine ? value.split("\n")[0] : value) === expectedLine);
+        if (matching.length !== 1) throw new Error(`Expected exactly one runtime error: ${expectedLine}; found ${matching.length}`);
+        values.splice(matching[0].index, 1);
+        return matching[0].value;
+      };
+      for (const line of expected.pageConsoleErrors ?? []) consume(pageConsoleErrors, line);
+      for (const line of expected.mainConsoleErrors ?? []) {
+        const message = consume(mainConsoleErrors, line, true);
+        // Electron mirrors an IPC exception and its stack to stderr.
+        for (const part of message.split("\n").map(plain).filter(Boolean)) {
+          const index = unexpectedMainStderr.findIndex(value => plain(value) === part);
+          if (index !== -1) unexpectedMainStderr.splice(index, 1);
+        }
+      }
     },
     assertNoRuntimeIssues: () => {
       const process = appProcess;

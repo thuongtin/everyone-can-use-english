@@ -1,31 +1,43 @@
 import { Link } from "react-router-dom";
-import { cn, imgErrorToDefalut } from "@renderer/lib/utils";
+import { cn } from "@renderer/lib/utils";
+import { GradientCover } from "@renderer/components/enjoy";
+import { NewspaperIcon } from "lucide-react";
+import type { LocalStory } from "../../../types/local-study-api";
+import { displayableResourceUrl } from "@renderer/lib/retired-resource";
 
-export const StoryCard = (props: { story: StoryType; className?: string }) => {
+export const StoryCard = (props: { story: LocalStory; className?: string }) => {
   const { story, className } = props;
 
   if (!story) {
     return null;
   }
+  const imageUrl = displayableResourceUrl(story.metadata?.image);
 
   return (
-    <div className={cn("w-full", className)}>
-      <Link to={`/stories/${story.id}`}>
-        <div className="border rounded-lg overflow-hidden cursor-pointer">
-          <div className="aspect-[16/9] overflow-hidden">
-            <img
-              crossOrigin="anonymous"
-              src={story.metadata.image}
-              onError={imgErrorToDefalut} 
-              className="w-full h-full object-cover hover:scale-105"
-            />
-          </div>
+    <Link
+      to={`/stories/${story.id}`}
+      className={cn(
+        "group block w-full rounded-ej overflow-hidden",
+        "border border-ej-line bg-ej-surface",
+        "transition-all duration-ej hover:-translate-y-0.5 hover:shadow-ej",
+        className
+      )}
+    >
+      <GradientCover
+        id={story.id}
+        src={imageUrl}
+        alt={story.title}
+        rounded="rounded-none"
+        className="aspect-[16/9] w-full"
+      >
+        {!imageUrl && <NewspaperIcon className="size-7" />}
+      </GradientCover>
 
-          <div className="overflow-hidden px-4 py-2 h-16">
-            <div className="font-semibold line-clamp-2 ">{story.title}</div>
-          </div>
+      <div className="h-16 px-3.5 py-2.5 overflow-hidden">
+        <div className="text-[13px] font-semibold leading-[1.35] text-ej-ink line-clamp-2 group-hover:text-ej-accent-ink transition-colors duration-ej">
+          {story.title}
         </div>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 };

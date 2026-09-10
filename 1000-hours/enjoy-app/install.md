@@ -2,15 +2,15 @@
 
 Enjoy App là ứng dụng máy tính đa nền tảng, chạy trên Windows, Mac và Linux. Hãy chọn gói cài đặt phù hợp với hệ điều hành và loại chip của máy.
 
-::: info Phiên bản của các liên kết bên dưới
-Tài liệu gốc giới thiệu **v0.7.9** là phiên bản mới nhất tại thời điểm biên soạn. Các liên kết bên dưới được giữ lại để tham khảo bản phát hành của dự án gốc, không phải gói cài đặt của bản Việt hóa này. Để biết bản phát hành hiện có, xem [trang Releases của dự án gốc](https://github.com/zuodaotech/everyone-can-use-english/releases).
+::: info Chọn đúng bản ứng dụng
+Xem [trang Releases của kho mã này](https://github.com/thuongtin/everyone-can-use-english/releases) để kiểm tra gói đã được phát hành. Nếu chưa có gói phù hợp, dùng [hướng dẫn chạy mã nguồn](#vietnamese-source-build). Tài liệu không trỏ tới kho tải Enjoy cũ; bản build local không đồng nghĩa đã có bản phát hành công khai.
 :::
 
 ## Windows
 
 Theo tài liệu gốc, ứng dụng hỗ trợ Windows 10 trở lên.
 
-[Tải gói cài đặt Windows v0.7.9](https://dl.enjoy.bot/app/win32/x64/Enjoy-0.7.9%20Setup.exe)
+Nếu có bản Windows trong trang Releases, chọn gói phù hợp với kiến trúc máy.
 
 Sau khi tải xuống, nhấp đúp vào tệp để cài đặt.
 
@@ -33,8 +33,8 @@ Sau đó thử cài đặt Enjoy lại. Nếu lỗi vẫn xảy ra, giữ lại 
 
 Chọn phiên bản theo chip của máy Mac:
 
-- [Apple Silicon, arm64, v0.7.9](https://dl.enjoy.bot/app/darwin/arm64/Enjoy-0.7.9-arm64.dmg)
-- [Intel, x64, v0.7.9](https://dl.enjoy.bot/app/darwin/x64/Enjoy-0.7.9-x64.dmg)
+- Apple Silicon: chọn gói `arm64` nếu đã được phát hành.
+- Intel: chọn gói `x64` nếu đã được phát hành.
 
 ::: info Kiểm tra cấu hình máy
 Các máy Mac dùng chip M1, M2, M3 và những chip thuộc dòng Apple M là máy Apple Silicon.
@@ -50,8 +50,8 @@ Tài liệu gốc khuyến nghị macOS 12 trở lên; một số chức năng c
 
 Chọn định dạng phù hợp với bản phân phối Linux đang dùng:
 
-- [Tải gói deb v0.7.9](https://dl.enjoy.bot/app/linux/x64/enjoy_0.7.9_amd64.deb)
-- [Tải gói zip v0.7.9](https://dl.enjoy.bot/app/linux/x64/Enjoy-linux-x64-0.7.9.zip)
+- Gói `deb` cho bản phân phối hỗ trợ định dạng này, nếu có trong Releases.
+- Gói `zip` tương ứng kiến trúc máy, nếu có trong Releases.
 
 ## Các phiên bản trước {#previous-releases}
 

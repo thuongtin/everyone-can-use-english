@@ -5,6 +5,13 @@ import path from "path";
 import settings from "@main/settings";
 import { hashFile } from "@main/utils";
 import { Attributes, WhereOptions } from "sequelize";
+import {
+  getAzureSpeechConfig,
+  setAzureSpeechConfig,
+  type AzureSpeechConfigUpdate,
+} from "@main/speech/azure-config";
+
+const activeSpeechJobs = new Set<AbortController>();
 
 class SpeechesHandler {
   private async findOne(
@@ -57,6 +64,45 @@ class SpeechesHandler {
       });
   }
 
+  private async generate(
+    event: IpcMainEvent,
+    params: {
+      sourceId: string;
+      sourceType: string;
+      text: string;
+      section?: number;
+      segment?: number;
+      configuration?: {
+        engine?: string;
+        model?: string;
+        voice?: string;
+        baseUrl?: string;
+      };
+    }
+  ) {
+    const controller = new AbortController();
+    const abortOnOwnerDestroyed = (): void => controller.abort();
+    activeSpeechJobs.add(controller);
+    event.sender.once("destroyed", abortOnOwnerDestroyed);
+    try {
+      return (await Speech.generate({ ...params, signal: controller.signal })).toJSON();
+    } finally {
+      event.sender.removeListener("destroyed", abortOnOwnerDestroyed);
+      activeSpeechJobs.delete(controller);
+    }
+  }
+
+  private async getAzureConfig() {
+    return getAzureSpeechConfig();
+  }
+
+  private async setAzureConfig(
+    _event: IpcMainEvent,
+    update: AzureSpeechConfigUpdate
+  ) {
+    return setAzureSpeechConfig(update);
+  }
+
   private async delete(event: IpcMainEvent, id: string) {
     await Speech.destroy({ where: { id } });
   }
@@ -64,13 +110,21 @@ class SpeechesHandler {
   register() {
     ipcMain.handle("speeches-find-one", this.findOne);
     ipcMain.handle("speeches-create", this.create);
+    ipcMain.handle("speeches-generate", this.generate);
     ipcMain.handle("speeches-delete", this.delete);
+    ipcMain.handle("azure-speech-config-get", this.getAzureConfig);
+    ipcMain.handle("azure-speech-config-set", this.setAzureConfig);
   }
 
   unregister() {
+    for (const controller of activeSpeechJobs) controller.abort();
+    activeSpeechJobs.clear();
     ipcMain.removeHandler("speeches-find-one");
     ipcMain.removeHandler("speeches-create");
+    ipcMain.removeHandler("speeches-generate");
     ipcMain.removeHandler("speeches-delete");
+    ipcMain.removeHandler("azure-speech-config-get");
+    ipcMain.removeHandler("azure-speech-config-set");
   }
 }
 

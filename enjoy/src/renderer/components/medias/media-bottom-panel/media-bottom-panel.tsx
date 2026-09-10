@@ -6,12 +6,12 @@ import {
 
 export const MediaBottomPanel = () => {
   return (
-    <div className="flex flex-col h-full">
-      <div className="flex-1 flex flex-col pt-2 overflow-hidden">
-        <div className="flex-1 overflow-hidden px-4 py-2">
+    <div className="shrink-0 border-t border-ej-line bg-ej-surface">
+      <div className="px-4 pt-3 pb-1 space-y-2">
+        <div className="h-[84px]">
           <MediaCurrentRecording />
         </div>
-        <div className="flex-1 overflow-hidden px-4 py-2">
+        <div className="h-[92px]">
           <MediaWaveform />
         </div>
       </div>

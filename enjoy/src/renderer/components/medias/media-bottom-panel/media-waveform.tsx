@@ -6,14 +6,6 @@ import {
 import { formatDuration } from "@renderer/lib/utils";
 import { t } from "i18next";
 import {
-  AlertDialog,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogCancel,
-  AlertDialogAction,
   DropdownMenu,
   DropdownMenuItem,
   DropdownMenuTrigger,
@@ -23,7 +15,6 @@ import {
 } from "@renderer/components/ui";
 import {
   GalleryHorizontalIcon,
-  Share2Icon,
   SpellCheckIcon,
   MinimizeIcon,
   ZoomInIcon,
@@ -41,7 +32,7 @@ const MAX_ZOOM_RATIO = 4.0;
 const ACTION_BUTTON_HEIGHT = 35;
 
 export const MediaWaveform = () => {
-  const { EnjoyApp, webApi } = useContext(AppSettingsProviderContext);
+  const { EnjoyApp } = useContext(AppSettingsProviderContext);
   const {
     media,
     currentTime,
@@ -54,39 +45,10 @@ export const MediaWaveform = () => {
   } = useContext(MediaShadowProviderContext);
   const [displayInlineCaption, setDisplayInlineCaption] =
     useState<boolean>(true);
-  const [isSharing, setIsSharing] = useState(false);
   const [size, setSize] = useState<{ width: number; height: number }>();
   const [actionButtonsCount, setActionButtonsCount] = useState(0);
 
   const ref = useRef(null);
-
-  const onShare = async () => {
-    if (!media.source && !media.isUploaded) {
-      try {
-        await EnjoyApp.audios.upload(media.id);
-      } catch (err) {
-        toast.error(t("shareFailed"), {
-          description: err.message,
-        });
-        return;
-      }
-    }
-    webApi
-      .createPost({
-        targetType: media.mediaType,
-        targetId: media.id,
-      })
-      .then(() => {
-        toast.success(t("sharedSuccessfully"), {
-          description: t("sharedAudio"),
-        });
-      })
-      .catch((err) => {
-        toast.error(t("shareFailed"), {
-          description: err.message,
-        });
-      });
-  };
 
   const calContainerSize = () => {
     const size = ref?.current
@@ -222,12 +184,6 @@ export const MediaWaveform = () => {
       },
     },
     {
-      name: "share",
-      label: t("share"),
-      icon: Share2Icon,
-      onClick: () => setIsSharing(true),
-    },
-    {
       name: "download",
       label: t("download"),
       icon: DownloadIcon,
@@ -238,7 +194,7 @@ export const MediaWaveform = () => {
   return (
     <div
       ref={ref}
-      className="flex h-full media-player-wrapper border rounded-lg shadow"
+      className="flex h-full media-player-wrapper border border-ej-line rounded-ej bg-ej-surface2/30 overflow-hidden"
     >
       <div
         data-testid="media-player-container"
@@ -251,12 +207,10 @@ export const MediaWaveform = () => {
           }}
           className="waveform-container"
         />
-        <div className="absolute right-2 top-1">
-          <span className="text-sm">{formatDuration(currentTime || 0)}</span>
+        <div className="absolute right-2 top-1 rounded-full bg-ej-surface/85 px-2 py-0.5 text-xxs ej-tabular text-ej-muted">
+          <span>{formatDuration(currentTime || 0)}</span>
           <span className="mx-1">/</span>
-          <span className="text-sm">
-            {formatDuration(media?.duration || 0)}
-          </span>
+          <span>{formatDuration(media?.duration || 0)}</span>
         </div>
       </div>
       <div
@@ -264,7 +218,7 @@ export const MediaWaveform = () => {
           actionButtonsCount < Actions.length
             ? actionButtonsCount + 1
             : Actions.length
-        } w-10 border-l rounded-r-lg`}
+        } w-10 border-l border-ej-line`}
       >
         {Actions.slice(0, actionButtonsCount).map((action) => (
           <Button
@@ -310,30 +264,6 @@ export const MediaWaveform = () => {
           </DropdownMenu>
         )}
 
-        <AlertDialog open={isSharing} onOpenChange={setIsSharing}>
-          <AlertDialogContent>
-            <AlertDialogHeader>
-              <AlertDialogTitle>
-                {media?.mediaType === "Audio"
-                  ? t("shareAudio")
-                  : t("shareVideo")}
-              </AlertDialogTitle>
-              <AlertDialogDescription>
-                {media?.mediaType === "Audio"
-                  ? t("areYouSureToShareThisAudioToCommunity")
-                  : t("areYouSureToShareThisVideoToCommunity")}
-              </AlertDialogDescription>
-            </AlertDialogHeader>
-            <AlertDialogFooter>
-              <AlertDialogCancel>{t("cancel")}</AlertDialogCancel>
-              <AlertDialogAction asChild>
-                <Button variant="default" onClick={onShare}>
-                  {t("share")}
-                </Button>
-              </AlertDialogAction>
-            </AlertDialogFooter>
-          </AlertDialogContent>
-        </AlertDialog>
       </div>
     </div>
   );

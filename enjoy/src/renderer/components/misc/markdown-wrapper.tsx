@@ -17,11 +17,13 @@ import {
   PlayIcon,
   RefreshCwIcon,
 } from "lucide-react";
-import { Button, toast } from "@renderer/components/ui";
+import { toast } from "@renderer/components/ui";
 import { useIntersectionObserver } from "@uidotdev/usehooks";
 import { md5 } from "js-md5";
 import { AppSettingsProviderContext } from "@/renderer/context";
 import { useAiCommand } from "@/renderer/hooks";
+import { resolveDisplayResource } from "@renderer/lib/retired-resource";
+import { t } from "i18next";
 
 function rehypeWrapText() {
   return function wrapTextTransform(tree: any) {
@@ -135,37 +137,35 @@ const Segment = memo(
           data-section={section}
           className="segment"
         >
-          <span className="flex items-center gap-2 opacity-50 hover:opacity-100">
+          <span className="segment-controls flex items-center gap-1 opacity-50 hover:opacity-100">
             {content && (onSpeech || translatable) && (
-              <span className="text-xs text-muted-foreground">
+              <span className="segment-index text-xxs text-ej-muted">
                 #{index + 1}
               </span>
             )}
             {onSpeech && content && (
-              <Button
+              <button
+                type="button"
+                className="segment-action"
                 onClick={() => {
                   onSpeech(id);
                 }}
-                variant="ghost"
-                size="icon"
-                className="w-4 h-4"
               >
                 <PlayIcon className="w-3 h-3" />
-              </Button>
+              </button>
             )}
             {translatable && content && (
-              <Button
+              <button
+                type="button"
+                className="segment-action"
                 onClick={toggleTranslation}
-                variant="ghost"
-                size="icon"
-                className="w-4 h-4"
               >
                 {translating ? (
                   <LoaderIcon className="w-3 h-3 animate-spin" />
                 ) : (
                   <LanguagesIcon className="w-3 h-3" />
                 )}
-              </Button>
+              </button>
             )}
           </span>
           <span className="segment-content">{children}</span>
@@ -173,14 +173,13 @@ const Segment = memo(
         {translation && (
           <Tag id={`translation-${index}`} className="translation">
             {translation}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="w-4 h-4 opacity-50 hover:opacity-100"
+            <button
+              type="button"
+              className="segment-action opacity-50 hover:opacity-100"
               onClick={() => handleTranslate(true)}
             >
               <RefreshCwIcon className="w-3 h-3" />
-            </Button>
+            </button>
           </Tag>
         )}
       </>
@@ -239,6 +238,19 @@ export const MarkdownWrapper = memo(
 
       return {
         a({ node, children, ...props }: any) {
+          const resource = resolveDisplayResource(props.href);
+          if (resource.retired) {
+            return (
+              <span
+                className="text-ej-muted"
+                title={t("cannotFindSourceFile")}
+                data-retired-resource
+              >
+                {children}
+              </span>
+            );
+          }
+
           try {
             new URL(props.href ?? "");
             props.target = "_blank";
@@ -250,6 +262,26 @@ export const MarkdownWrapper = memo(
               {children}
             </a>
           );
+        },
+        img(props: any) {
+          const { node, ...imageProps } = props;
+          void node;
+          const resource = resolveDisplayResource(imageProps.src);
+          if (resource.retired) {
+            return (
+              <span
+                role="img"
+                aria-label={imageProps.alt || t("cannotFindSourceFile")}
+                title={t("cannotFindSourceFile")}
+                className="inline-flex min-h-10 min-w-10 items-center justify-center rounded border border-ej-line bg-ej-surface2 px-2 text-xs text-ej-muted"
+                data-retired-resource
+              >
+                {imageProps.alt || t("cannotFindSourceFile")}
+              </span>
+            );
+          }
+
+          return <img {...imageProps} src={resource.url} />;
         },
         vocabulary({ node, children, ...props }: any) {
           return <Sentence sentence={props.text} />;

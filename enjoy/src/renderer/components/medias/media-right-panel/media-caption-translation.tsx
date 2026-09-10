@@ -1,134 +1,101 @@
-import { isBilingualDirection } from "@/constants/bilingual-dictionaries";
-import { useContext } from "react";
-import {
-  AppSettingsProviderContext,
-  MediaShadowProviderContext,
-  DictProviderContext,
-} from "@renderer/context";
-import { TabsContent, Separator } from "@renderer/components/ui";
+import { useContext, useEffect, useState } from "react";
 import { t } from "i18next";
-import { TimelineEntry } from "echogarden/dist/utilities/Timeline.d.js";
-import { convertWordIpaToNormal } from "@/utils";
+import { LoaderIcon, SparklesIcon } from "lucide-react";
+import { md5 } from "js-md5";
 import {
-  BilingualLookupResult,
-  DictLookupResult,
-  AiLookupResult,
-  TranslateResult,
-  DictSelect,
-  VocabularyPronunciationAssessment,
-} from "@renderer/components";
+  AISettingsProviderContext,
+  AppSettingsProviderContext,
+} from "@renderer/context";
+import { toast } from "@renderer/components/ui";
+import { useAiCommand } from "@renderer/hooks";
 
-/*
- * Translation tab content.
+const formatDay = (date: Date) =>
+  `${String(date.getDate()).padStart(2, "0")}/${String(
+    date.getMonth() + 1
+  ).padStart(2, "0")}`;
+
+/**
+ * Translation pane of the sentence. The result is cached per sentence, so
+ * moving back and forth never spends another AI call.
  */
 export function MediaCaptionTranslation(props: {
-  caption: TimelineEntry;
-  selectedIndices: number[];
+  text: string;
+  onTranslationChange?: (translation?: string) => void;
 }) {
-  const { caption } = props;
+  const { text, onTranslationChange } = props;
+  const { EnjoyApp } = useContext(AppSettingsProviderContext);
+  const { currentGptEngine } = useContext(AISettingsProviderContext);
+  const { translate } = useAiCommand();
+
+  const [translation, setTranslation] = useState<string>();
+  const [translating, setTranslating] = useState<boolean>(false);
+  const [translatedAt, setTranslatedAt] = useState<Date>();
+
+  const handleTranslate = () => {
+    if (translating || !text) return;
+
+    setTranslating(true);
+    translate(text, `translate-${md5(text)}`)
+      .then((result) => {
+        if (!result) return;
+        setTranslation(result);
+        setTranslatedAt(new Date());
+      })
+      .catch((err) => toast.error(err.message))
+      .finally(() => setTranslating(false));
+  };
+
+  useEffect(() => {
+    if (!text) return;
+
+    setTranslatedAt(undefined);
+    EnjoyApp.cacheObjects.get(`translate-${md5(text)}`).then((cached) => {
+      setTranslation(cached || undefined);
+    });
+  }, [text]);
+
+  useEffect(() => {
+    onTranslationChange?.(translation);
+  }, [translation]);
+
+  if (!translation) {
+    return (
+      <button
+        type="button"
+        disabled={translating}
+        onClick={handleTranslate}
+        className="inline-flex h-[34px] items-center gap-2 rounded-[10px] border border-ej-line bg-ej-surface px-3 text-xs font-semibold text-ej-ink transition-colors duration-ej hover:bg-ej-surface2 disabled:cursor-not-allowed disabled:opacity-60"
+      >
+        {translating ? (
+          <LoaderIcon className="size-3.5 animate-spin" />
+        ) : (
+          <SparklesIcon className="size-3.5 text-ej-accent" />
+        )}
+        {translating ? t("translating") : t("aiTranslate")}
+      </button>
+    );
+  }
 
   return (
-    <TabsContent value="translation">
-      <SelectedWords {...props} />
-      <Separator className="my-4" />
-      <div className="text-sm italic text-muted-foreground mb-2">
-        {t("translateSentence")}
+    <div>
+      <p className="select-text text-[14.5px] leading-[1.65] text-ej-ink">
+        {translation}
+      </p>
+
+      <div className="mt-2 flex flex-wrap items-center gap-2 text-[11.5px] text-ej-muted">
+        <span>
+          {currentGptEngine?.name || t("aiAssistant")}
+          {translatedAt ? ` · ${formatDay(translatedAt)}` : ""}
+        </span>
+        <button
+          type="button"
+          disabled={translating}
+          onClick={handleTranslate}
+          className="font-semibold text-ej-accent transition-opacity duration-ej hover:opacity-80 disabled:opacity-50"
+        >
+          {translating ? t("translating") : t("reTranslate")}
+        </button>
       </div>
-      <TranslateResult text={caption.text} />
-    </TabsContent>
+    </div>
   );
 }
-
-const SelectedWords = (props: {
-  caption: TimelineEntry;
-  selectedIndices: number[];
-}) => {
-  const { selectedIndices, caption } = props;
-
-  const { currentDictValue } = useContext(DictProviderContext);
-  const { transcription } = useContext(MediaShadowProviderContext);
-  const { learningLanguage, ipaMappings } = useContext(
-    AppSettingsProviderContext
-  );
-
-  const word = selectedIndices
-    .map((index) => caption.timeline[index]?.text || "")
-    .join(" ")
-    .trim();
-
-  if (selectedIndices.length === 0)
-    return (
-      <div className="text-sm text-muted-foreground py-4">
-        {t("clickAnyWordToSelect")}
-      </div>
-    );
-
-  return (
-    <>
-      <div className="flex justify-between items-start flex-wrap">
-        <div className="flex flex-1 flex-wrap items-center space-x-2 select-text mb-4">
-          {selectedIndices.map((index, i) => {
-            const word = caption.timeline[index];
-            if (!word) return;
-            return (
-              <div key={index}>
-                <div className="font-sans text-lg font-semibold tracking-tight">
-                  {word.text}
-                </div>
-                {word.timeline.length > 0 && (
-                  <div className="text-sm font-sans text-muted-foreground">
-                    <span
-                      className={`mr-2 font-code ${
-                        i === 0 ? "before:content-['/']" : ""
-                      }
-                        ${
-                          i === selectedIndices.length - 1
-                            ? "after:content-['/']"
-                            : ""
-                        }`}
-                    >
-                      {word.timeline
-                        .map((t) =>
-                          learningLanguage.startsWith("en")
-                            ? convertWordIpaToNormal(
-                                t.timeline.map((s) => s.text),
-                                {
-                                  mappings: ipaMappings,
-                                }
-                              ).join("")
-                            : t.text
-                        )
-                        .join(" ")}
-                    </span>
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-        <div className="w-60">
-          <DictSelect />
-        </div>
-      </div>
-
-      <VocabularyPronunciationAssessment word={word} />
-
-      <Separator className="my-4" />
-
-      <div className="rounded-lg overflow-hidden mr-10">
-        {isBilingualDirection(currentDictValue) ? (
-          <BilingualLookupResult word={word} direction={currentDictValue} />
-        ) : currentDictValue === "ai" ? (
-          <AiLookupResult
-            word={word}
-            context={caption.text}
-            sourceId={transcription.targetId}
-            sourceType={transcription.targetType}
-          />
-        ) : (
-          <DictLookupResult word={word} autoHeight={true} />
-        )}
-      </div>
-    </>
-  );
-};

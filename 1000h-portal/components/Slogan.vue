@@ -56,11 +56,6 @@
       </a>
     </div>
 
-    <div class="mt-6 text-greyscale_4 text-[14px] md:text-[18px] total-hour">
-      <span v-show="totalHour">
-        Cộng đồng Enjoy đã luyện tập tổng cộng {{ totalHourText }} giờ
-      </span>
-    </div>
   </div>
 
   <div class="demo mt-[80px] md:mt-[120px] h-[260px] md:h-[380px] lg:h-[620px]">
@@ -81,37 +76,8 @@ export default {
 <script lang="ts" setup>
 import { resolveDistributionLinks } from "~/utils/distribution-links";
 
-const totalHour = ref(0);
 const distributionLinks = resolveDistributionLinks(useRuntimeConfig().public);
 
-const totalHourText = computed(() => totalHour.value.toLocaleString("vi-VN"));
-
-onMounted(() => {
-  requestTotalPracticeTime();
-});
-
-async function requestTotalPracticeTime() {
-  try {
-    const response = await fetch("https://enjoy.bot/api/badges/recordings");
-    if (!response.ok) return;
-
-    const data: unknown = await response.json();
-    if (typeof data !== "object" || data === null || !("message" in data)) {
-      return;
-    }
-
-    const message = data.message;
-    if (typeof message !== "string") return;
-
-    const match = message.trim().match(/^(\d+(?:\.\d+)?)\s*h$/i);
-    const hours = match ? Number(match[1]) : undefined;
-    if (hours !== undefined && Number.isFinite(hours) && hours >= 0) {
-      totalHour.value = hours;
-    }
-  } catch (error) {
-    console.warn("total practice time request failed", error);
-  }
-}
 </script>
 
 <style lang="scss" scoped>
@@ -148,13 +114,6 @@ async function requestTotalPracticeTime() {
     color: #4797f5;
     border-color: #4797f5;
   }
-}
-
-.total-hour {
-  transition: all ease 0.5s;
-  height: 28px;
-  line-height: 28px;
-  transition: all ease 0.5s;
 }
 
 .demo {

@@ -85,7 +85,10 @@ class EchogardenWrapper {
             process.removeListener("unhandledRejection", handler);
             resolve(result);
           })
-          .catch(reject);
+          .catch((error) => {
+            process.removeListener("unhandledRejection", handler);
+            reject(error);
+          });
       });
     };
     this.align = (input, transcript, options) => {
@@ -108,7 +111,10 @@ class EchogardenWrapper {
             process.removeListener("unhandledRejection", handler);
             resolve(result);
           })
-          .catch(reject);
+          .catch((error) => {
+            process.removeListener("unhandledRejection", handler);
+            reject(error);
+          });
       });
     };
     this.alignSegments = (input, timeline, options) => {
@@ -131,7 +137,10 @@ class EchogardenWrapper {
             process.removeListener("unhandledRejection", handler);
             resolve(result);
           })
-          .catch(reject);
+          .catch((error) => {
+            process.removeListener("unhandledRejection", handler);
+            reject(error);
+          });
       });
     };
     this.denoise = Echogarden.denoise;

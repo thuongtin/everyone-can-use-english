@@ -21,6 +21,10 @@ import {
   UserSettingKeyEnum,
 } from "@/types/enums";
 import { DEFAULT_GPT_CONFIG } from "@/constants";
+import {
+  migrateConversationGptConfig,
+  migrateConversationTtsConfig,
+} from "@/lib/conversation-migration";
 
 const logger = log.scope("db/models/chat-agent");
 @Table({
@@ -133,18 +137,21 @@ export class ChatAgent extends Model<ChatAgent> {
           member.userType = "ChatAgent";
           member.config = {
             ...member.config,
-            gpt: {
-              ...DEFAULT_GPT_CONFIG,
-              engine: chatAgent.config.engine,
-              model: chatAgent.config.model,
-              temperature: chatAgent.config.temperature,
-            },
-            tts: {
+            gpt: migrateConversationGptConfig(
+              {
+                engine: chatAgent.config.engine,
+                model: chatAgent.config.model,
+                baseUrl: chatAgent.config.baseUrl,
+                temperature: chatAgent.config.temperature,
+              },
+              DEFAULT_GPT_CONFIG
+            ),
+            tts: migrateConversationTtsConfig({
               engine: chatAgent.config.ttsEngine,
               model: chatAgent.config.ttsModel,
               language: learningLanguage,
               voice: chatAgent.config.ttsVoice,
-            },
+            }),
           };
           for (const chatMessage of chatMessages) {
             await chatMessage.update(

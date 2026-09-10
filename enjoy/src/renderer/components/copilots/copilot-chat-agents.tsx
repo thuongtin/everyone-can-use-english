@@ -40,7 +40,7 @@ export const CopilotChatAgents = (props: {
       </div>
       {chatAgents.length === 0 && (
         <div className="text-center my-4">
-          <span className="text-sm text-muted-foreground">{t("noData")}</span>
+          <span className="text-sm text-ej-muted">{t("noData")}</span>
         </div>
       )}
       {chatAgents.map((agent) => (

@@ -29,9 +29,11 @@ export const MediaTranscriptionGenerateButton = (props: {
     media,
     generateTranscription,
     transcribing,
+    committing,
     transcription,
     transcribingProgress,
     transcribingOutput,
+    abortGenerateTranscription,
   } = useContext(MediaShadowProviderContext);
   const [open, setOpen] = useState(false);
 
@@ -74,7 +76,13 @@ export const MediaTranscriptionGenerateButton = (props: {
           </TabsList>
           <TabsContent value="transcribe">
             <TranscriptionCreateForm
-              onCancel={() => setOpen(false)}
+              onCancel={() => {
+                if (transcribing) {
+                  abortGenerateTranscription();
+                } else {
+                  setOpen(false);
+                }
+              }}
               onSubmit={(data) => {
                 generateTranscription({
                   originalText: data.text,
@@ -91,6 +99,7 @@ export const MediaTranscriptionGenerateButton = (props: {
               }}
               originalText=""
               transcribing={transcribing}
+              committing={committing}
               transcribingProgress={transcribingProgress}
               transcribingOutput={transcribingOutput}
             />

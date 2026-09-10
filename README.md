@@ -9,8 +9,6 @@ AI là người thầy ngoại ngữ hàng đầu hiện nay; Enjoy đồng hàn
 [![Deploy 1000h website](https://github.com/ZuodaoTech/everyone-can-use-english/actions/workflows/deploy-1000h.yml/badge.svg)](https://github.com/ZuodaoTech/everyone-can-use-english/actions/workflows/deploy-1000h.yml)
 [![Test Enjoy App](https://github.com/ZuodaoTech/everyone-can-use-english/actions/workflows/test-enjoy-app.yml/badge.svg)](https://github.com/ZuodaoTech/everyone-can-use-english/actions/workflows/test-enjoy-app.yml)
 [![Release Enjoy App](https://github.com/ZuodaoTech/everyone-can-use-english/actions/workflows/release-enjoy-app.yml/badge.svg)](https://github.com/ZuodaoTech/everyone-can-use-english/actions/workflows/release-enjoy-app.yml)
-![Latest Version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fenjoy.bot%2Fapi%2Fconfig%2Fapp_version&query=%24.version&label=Latest&link=https%3A%2F%2F1000h.org%2Fenjoy-app%2Finstall.html)
-![Recording Duration](https://img.shields.io/endpoint?url=https%3A%2F%2Fenjoy.bot%2Fapi%2Fbadges%2Frecordings)
 
 ---
 
@@ -20,9 +18,9 @@ Repo này đang được Việt hóa: giao diện và hướng dẫn bằng ti�
 
 Theo dõi phạm vi đã kiểm tra và phần còn lại trong [tiến độ Việt hóa](./execution-notes.md). Các website, bản phát hành và tiện ích bên ngoài dưới đây thuộc dự án gốc; chúng không tự nhận các thay đổi tiếng Việt trong repo này.
 
-## Phiên bản web
+## Ứng dụng học tập local
 
-Dự án gốc giới thiệu phiên bản Enjoy mới tại [Enjoy trên web](https://enjoy.bot), có thể dùng trực tiếp trên trình duyệt.
+Ứng dụng máy tính trong repo này sử dụng hồ sơ và thư viện trên máy. Các chức năng AI dùng nhà cung cấp do bạn cấu hình, không cần tài khoản hoặc số dư Enjoy. Xem [hướng dẫn cài đặt](./1000-hours/enjoy-app/install.md) và [cấu hình dịch vụ](./1000-hours/enjoy-app/settings.md).
 
 ![](./enjoy/snapshots/screenshot-video.png)
 ![](./enjoy/snapshots/screenshot-ebook.png)
@@ -40,10 +38,15 @@ Tiện ích Enjoy của dự án gốc hỗ trợ YouTube và Netflix. Bạn có
 
 ## Phiên bản máy tính
 
-Theo giới thiệu của dự án gốc, phiên bản máy tính mới sẽ bao bọc và bổ sung khả năng cho phiên bản web, với kế hoạch phát hành sau. Mã nguồn Electron hiện có trong thư mục [enjoy](./enjoy/README.md).
+Mã nguồn Electron nằm trong thư mục [enjoy](./enjoy/README.md). Mỗi khả năng AI cần provider tương ứng đã cấu hình; thư viện và nội dung đã lưu vẫn mở được khi offline. Bản build local và bản phát hành công khai là hai trạng thái riêng, xem [hướng dẫn chạy mã nguồn](./1000-hours/enjoy-app/install.md#vietnamese-source-build).
 
 
 ## Tài liệu liên quan
+
+### Thiết lập dịch vụ AI cho Enjoy
+
+- [Azure API key, deployment và các model](./docs/azure-api-key-models-setup.vi.md)
+- [Vertex AI Express](./docs/vertex-express-setup.vi.md)
 
 ### Một nghìn giờ (2024)
 

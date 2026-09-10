@@ -1,6 +1,5 @@
 import { useState, useEffect, useReducer, useContext, useRef } from "react";
 import {
-  Button,
   ScrollArea,
   Textarea,
   Sheet,
@@ -10,14 +9,29 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@renderer/components/ui";
-import { MessageComponent, ConversationForm } from "@renderer/components";
-import { SendIcon, BotIcon, LoaderIcon, SettingsIcon } from "lucide-react";
+import {
+  MessageComponent,
+  ConversationForm,
+  ConversationList,
+} from "@renderer/components";
+import {
+  EjButton,
+  EjIconButton,
+  Pill,
+} from "@renderer/components/enjoy";
+import {
+  SendIcon,
+  LoaderIcon,
+  SettingsIcon,
+  ChevronLeftIcon,
+} from "lucide-react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import { t } from "i18next";
 import {
   DbProviderContext,
   AppSettingsProviderContext,
   MediaShadowProvider,
+  useLayout,
 } from "@renderer/context";
 import { messagesReducer } from "@renderer/reducers";
 import { v4 as uuidv4 } from "uuid";
@@ -31,6 +45,7 @@ export default () => {
   const [conversation, setConversation] = useState<ConversationType>();
   const { addDblistener, removeDbListener } = useContext(DbProviderContext);
   const { EnjoyApp } = useContext(AppSettingsProviderContext);
+  const { fluid } = useLayout();
   const [content, setContent] = useState<string>(
     searchParams.get("text") || ""
   );
@@ -222,34 +237,70 @@ export default () => {
 
   if (!conversation) {
     return (
-      <div className="w-full p-16 flex items-center justify-center">
-        <LoaderIcon className="h-8 w-8 animate-spin" />
+      <div className="flex h-content w-full items-center justify-center">
+        <LoaderIcon className="size-7 animate-spin text-ej-muted" />
       </div>
     );
   }
 
+  const model =
+    conversation.type === "tts"
+      ? conversation.configuration?.tts?.model
+      : conversation.model;
+
   return (
-    <div
-      data-testid="conversation-page"
-      className="h-content px-4 py-4 lg:px-8 flex flex-col"
-    >
-      <div className="h-[calc(100vh-5rem)] relative w-full max-w-screen-md mx-auto flex flex-col">
-        <div className="flex items-center justify-center py-2 relative">
-          <div className="cursor-pointer h-6 opacity-50 hover:opacity-100">
-            <Link className="flex items-center" to="/conversations">
-              <BotIcon className="h-5 mr-2" />
-              <span className="">{conversation.name}</span>
+    <div data-testid="conversation-page" className="flex h-content">
+      {fluid && (
+        <aside className="flex w-[360px] shrink-0 flex-col border-r border-ej-line bg-ej-side">
+          <div className="flex h-12 shrink-0 items-center justify-between border-b border-ej-line px-4">
+            <span className="ej-label">{t("conversations")}</span>
+            <Link
+              to="/conversations"
+              className="text-xxs font-semibold text-ej-accent-ink hover:underline"
+            >
+              {t("newConversation")}
             </Link>
+          </div>
+          <ScrollArea className="flex-1">
+            <div className="p-3">
+              <ConversationList activeId={id} compact />
+            </div>
+          </ScrollArea>
+        </aside>
+      )}
+
+      <div className="flex min-w-0 flex-1 flex-col">
+        <header className="flex h-12 shrink-0 items-center gap-3 border-b border-ej-line bg-ej-surface px-5">
+          {!fluid && (
+            <Link to="/conversations" aria-label={t("backToConversations")}>
+              <EjIconButton>
+                <ChevronLeftIcon className="size-4" />
+              </EjIconButton>
+            </Link>
+          )}
+
+          <div className="min-w-0 flex-1">
+            <div className="truncate text-xs font-bold text-ej-ink">
+              {conversation.name}
+            </div>
+          </div>
+
+          <div className="flex shrink-0 items-center gap-1.5">
+            <Pill tone="muted">{conversation.engine}</Pill>
+            {model && <Pill tone="muted">{model}</Pill>}
           </div>
 
           <Sheet open={editting} onOpenChange={(value) => setEditting(value)}>
-            <SheetTrigger>
-              <div className="absolute right-4 top-0 py-3">
-                <SettingsIcon className="w-5 h-5 text-muted-foreground" />
-              </div>
+            <SheetTrigger asChild>
+              <EjIconButton aria-label={t("conversationSettings")}>
+                <SettingsIcon className="size-4" />
+              </EjIconButton>
             </SheetTrigger>
 
-            <SheetContent className="p-0 pt-8" aria-describedby={undefined}>
+            <SheetContent
+              className="w-[460px] p-0 pt-8 sm:max-w-[460px]"
+              aria-describedby={undefined}
+            >
               <SheetHeader>
                 <SheetTitle className="sr-only">
                   {t("editConversation")}
@@ -266,81 +317,89 @@ export default () => {
               </div>
             </SheetContent>
           </Sheet>
-        </div>
+        </header>
 
         <MediaShadowProvider>
-          <ScrollArea ref={containerRef} className="px-4 flex-1">
-            <div className="messages flex flex-col-reverse gap-6 my-6">
-              <div className="w-full h-24"></div>
-              {messages.map((message) => (
-                <MessageComponent
-                  key={message.id}
-                  message={message}
-                  configuration={{
-                    type: conversation.type,
-                    ...conversation.configuration,
-                  }}
-                  onResend={() => {
-                    if (message.status === "error") {
-                      dispatchMessages({ type: "destroy", record: message });
-                    }
+          <ScrollArea ref={containerRef} className="min-h-0 flex-1">
+            <div className="mx-auto w-full max-w-[760px] px-6">
+              <div className="messages my-6 flex flex-col-reverse gap-6">
+                {messages.map((message) => (
+                  <MessageComponent
+                    key={message.id}
+                    message={message}
+                    configuration={{
+                      type: conversation.type,
+                      ...conversation.configuration,
+                    }}
+                    onResend={() => {
+                      if (message.status === "error") {
+                        dispatchMessages({ type: "destroy", record: message });
+                      }
 
-                    handleSubmit(message.content);
-                  }}
-                  onRemove={() => {
-                    if (message.status === "error") {
-                      dispatchMessages({ type: "destroy", record: message });
-                    } else {
-                      EnjoyApp.messages.destroy(message.id).catch((err) => {
-                        toast.error(err.message);
-                      });
-                    }
-                  }}
-                />
-              ))}
-              {offset > -1 && (
-                <div className="flex justify-center">
-                  <Button
-                    variant="ghost"
-                    onClick={() => fetchMessages()}
-                    disabled={loading || offset === -1}
-                    className="px-4 py-2"
-                  >
-                    {t("loadMore")}
-                    {loading && (
-                      <LoaderIcon className="h-4 w-4 animate-spin ml-2" />
-                    )}
-                  </Button>
-                </div>
-              )}
+                      handleSubmit(message.content);
+                    }}
+                    onRemove={() => {
+                      if (message.status === "error") {
+                        dispatchMessages({ type: "destroy", record: message });
+                      } else {
+                        EnjoyApp.messages.destroy(message.id).catch((err) => {
+                          toast.error(err.message);
+                        });
+                      }
+                    }}
+                  />
+                ))}
+                {offset > -1 && (
+                  <div className="flex justify-center">
+                    <EjButton
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => fetchMessages()}
+                      disabled={loading || offset === -1}
+                    >
+                      {t("loadMore")}
+                      {loading && (
+                        <LoaderIcon className="size-3.5 animate-spin" />
+                      )}
+                    </EjButton>
+                  </div>
+                )}
+              </div>
             </div>
           </ScrollArea>
         </MediaShadowProvider>
 
-        <div className="bg-background px-4 absolute w-full bottom-0 left-0 z-50">
-          <div className="focus-within:bg-background pr-4 py-2 flex items-end space-x-4 rounded-lg shadow-lg border scrollbar">
-            <Textarea
-              ref={inputRef}
-              value={content}
-              onChange={(e) => setContent(e.target.value)}
-              placeholder={t("pressEnterToSend")}
-              data-testid="conversation-page-input"
-              className="text-base px-4 py-0 shadow-none focus-visible:outline-0 focus-visible:ring-0 border-none min-h-[1rem] max-h-[70vh] scrollbar-thin !overflow-x-hidden"
-            />
-            <div className="h-12 py-1">
-              <Button
-                type="submit"
+        <div className="shrink-0 border-t border-ej-line bg-ej-bg px-6 py-3">
+          <div className="mx-auto w-full max-w-[760px]">
+            <div className="flex items-end gap-3 rounded-ej-lg border border-ej-line bg-ej-surface py-2 pr-2.5 shadow-ej transition-colors duration-ej focus-within:border-ej-accent">
+              <Textarea
+                ref={inputRef}
+                value={content}
+                onChange={(e) => setContent(e.target.value)}
+                placeholder={t("typeYourMessage")}
+                data-testid="conversation-page-input"
+                className="max-h-[40vh] min-h-[1rem] resize-none border-none bg-transparent px-4 py-1.5 text-[13px] leading-6 text-ej-ink shadow-none scrollbar-thin !overflow-x-hidden placeholder:text-ej-muted focus-visible:outline-0 focus-visible:ring-0"
+              />
+              <EjButton
                 ref={submitRef}
+                variant="primary"
                 disabled={submitting || !content}
                 data-testid="conversation-page-submit"
                 onClick={() => handleSubmit(content)}
                 data-tooltip-id="global-tooltip"
                 data-tooltip-content={t("send")}
-                className="h-10"
+                className="size-9 shrink-0 px-0"
               >
-                <SendIcon className="w-5 h-5" />
-              </Button>
+                {submitting ? (
+                  <LoaderIcon className="size-4 animate-spin" />
+                ) : (
+                  <SendIcon className="size-4" />
+                )}
+              </EjButton>
             </div>
+            <p className="mt-1.5 text-center text-xxs text-ej-muted">
+              {t("sendMessageHint")}
+            </p>
           </div>
         </div>
       </div>

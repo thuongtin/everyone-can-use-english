@@ -1,7 +1,8 @@
 import { t } from "i18next";
-import { Button, Separator, toast } from "@renderer/components/ui";
-import { AppSettingsProviderContext } from "@renderer/context";
 import { useContext } from "react";
+import { ExternalLinkIcon } from "lucide-react";
+import { Button, toast } from "@renderer/components/ui";
+import { AppSettingsProviderContext } from "@renderer/context";
 
 export const About = () => {
   const { version, distribution, EnjoyApp } = useContext(
@@ -22,71 +23,61 @@ export const About = () => {
   };
 
   return (
-    <>
-      <div className="font-semibold mb-4 capitilized">{t("about")}</div>
-
-      <div className="flex items-start justify-between py-4">
-        <div className="">
-          <div className="mb-2">{t("currentVersion")}</div>
-          <div className="text-sm text-muted-foreground mb-2">v{version}</div>
-        </div>
-        <div className="flex flex-col items-end gap-2">
-          <Button onClick={checkUpdate}>
-            {distribution.updateFeedUrl ? t("checkUpdate") : t("open")}
-          </Button>
-          {!distribution.updateFeedUrl && (
-            <p className="max-w-xs text-right text-xs text-muted-foreground">
-              {t("automaticUpdatesUnavailable")}
-            </p>
-          )}
-        </div>
+    <div className="pt-4 flex flex-col items-center text-center">
+      <img
+        src="./assets/icon.png"
+        alt="Enjoy"
+        className="size-16 rounded-[14px] mb-3"
+      />
+      <div className="text-xl font-bold text-ej-ink">Enjoy</div>
+      <div className="ej-tabular text-xs text-ej-muted mb-3">
+        v{version} · {t("settings.localFirst")}
       </div>
+      <p className="max-w-[380px] text-[12.5px] leading-relaxed text-ej-ink2 mb-6">
+        {t("settings.aboutDescription")}
+      </p>
 
-      <Separator />
-
-      <div className="flex items-start justify-between py-4">
-        <div className="">
-          <div className="mb-2">{t("userGuide")}</div>
-        </div>
+      <div className="flex flex-wrap items-center justify-center gap-2">
+        <Button onClick={checkUpdate}>
+          {distribution.updateFeedUrl ? t("checkUpdate") : t("open")}
+        </Button>
         <Button
-          variant="secondary"
-          onClick={() => {
-            EnjoyApp.shell.openExternal(distribution.docsUrl);
-          }}
+          variant="outline"
+          className="gap-1.5"
+          onClick={() => EnjoyApp.shell.openExternal(distribution.docsUrl)}
         >
-          {t("open")}
+          {t("userGuide")}
+          <ExternalLinkIcon className="size-3.5" />
+        </Button>
+        <Button
+          variant="outline"
+          className="gap-1.5"
+          onClick={() =>
+            EnjoyApp.shell.openExternal(distribution.repositoryUrl)
+          }
+        >
+          {t("sourceCode")}
+          <ExternalLinkIcon className="size-3.5" />
         </Button>
       </div>
 
-      <Separator />
+      {!distribution.updateFeedUrl && (
+        <p className="mt-4 max-w-[360px] text-xs text-ej-muted">
+          {t("automaticUpdatesUnavailable")}
+        </p>
+      )}
 
-      <div className="flex items-start justify-between py-4">
-        <div className="">
-          <div className="mb-2">{t("feedback")}</div>
-        </div>
-        <div className="flex items-center space-x-2">
-          <Button
-            variant="secondary"
-            onClick={() => {
-              EnjoyApp.shell.openExternal(
-                "https://mixin.one/codes/f8ff96b8-54fb-4ad8-a6d4-5a5bdb1df13e"
-              );
-            }}
-          >
-            Mixin
-          </Button>
-          <Button
-            variant="secondary"
-            onClick={() => {
-              EnjoyApp.shell.openExternal(
-                `${distribution.repositoryUrl.replace(/\/+$/, "")}/discussions`
-              );
-            }}
-          >
-            GitHub
-          </Button>
-        </div>
-      </div>
-    </>
+      <button
+        type="button"
+        onClick={() =>
+          EnjoyApp.shell.openExternal(
+            `${distribution.repositoryUrl.replace(/\/+$/, "")}/discussions`
+          )
+        }
+        className="mt-6 text-xs text-ej-accent hover:text-ej-accent-ink transition-colors duration-ej"
+      >
+        {t("feedback")}
+      </button>
+    </div>
   );
 };

@@ -43,9 +43,11 @@ const LoadingContent = () => {
     decodeError,
     transcription,
     transcribing,
+    committing,
     transcribingProgress,
     transcribingOutput,
     generateTranscription,
+    abortGenerateTranscription,
     onCancel,
   } = useContext(MediaShadowProviderContext);
   if (decoded) {
@@ -70,8 +72,11 @@ const LoadingContent = () => {
                   isolate: data.isolate,
                 });
               }}
-              onCancel={onCancel}
+              onCancel={
+                transcribing ? abortGenerateTranscription : onCancel
+              }
               transcribing={transcribing}
+              committing={committing}
               transcribingProgress={transcribingProgress}
               transcribingOutput={transcribingOutput}
             />
@@ -94,11 +99,11 @@ const LoadingContent = () => {
       <>
         <div className="mb-4 flex items-center space-x-4">
           <div className="w-4 h-4">
-            <CircleAlertIcon className="text-destructive w-4 h-4" />
+            <CircleAlertIcon className="text-ej-bad w-4 h-4" />
           </div>
           <div className="select-text">
             <div className="mb-2">{decodeError}</div>
-            <div className="text-sm text-muted-foreground">
+            <div className="text-sm text-ej-muted">
               {t("failedToDecodeWaveform")}:{" "}
               <span className="break-all ">{media?.src}</span>
             </div>
@@ -122,7 +127,7 @@ const LoadingContent = () => {
             </>
           ) : (
             <>
-              <CircleAlertIcon className="text-destructive w-4 h-4" />
+              <CircleAlertIcon className="text-ej-bad w-4 h-4" />
               <span>{t("cannotFindSourceFile")}</span>
             </>
           )}

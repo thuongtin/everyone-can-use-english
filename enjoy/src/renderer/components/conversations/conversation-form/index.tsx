@@ -12,7 +12,6 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-  Button,
   FormField,
   Form,
   FormItem,
@@ -21,13 +20,9 @@ import {
   FormMessage,
   Input,
   ScrollArea,
-  Select,
-  SelectTrigger,
-  SelectValue,
-  SelectContent,
-  SelectItem,
   toast,
 } from "@renderer/components/ui";
+import { EjButton, Segmented } from "@renderer/components/enjoy";
 import { useState, useContext } from "react";
 import {
   AppSettingsProviderContext,
@@ -36,16 +31,17 @@ import {
 import { LoaderIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import {
-  GPTShareButton,
   ConversationFormGPT,
   ConversationFormTTS,
 } from "@renderer/components";
 import {
   SUPPORTED_LLM_PROVIDER_IDS,
   isSupportedProvider,
+  PROVIDER_SELECTION_REQUIRED,
   providerSupportsOption,
   type AiProviderId,
 } from "@/lib/ai-providers";
+import { resolveSynthesisProviderSelection } from "@/lib/provider-selection-migration";
 
 export const ConversationForm = (props: {
   conversation: Partial<ConversationType>;
@@ -68,9 +64,10 @@ export const ConversationForm = (props: {
 
   const conversationFormSchema = z.object({
     name: z.string().optional(),
-    engine: z
-      .enum([...SUPPORTED_LLM_PROVIDER_IDS] as [AiProviderId, ...AiProviderId[]])
-      .default("enjoyai"),
+    engine: z.union([
+      z.enum([...SUPPORTED_LLM_PROVIDER_IDS] as [AiProviderId, ...AiProviderId[]]),
+      z.literal(PROVIDER_SELECTION_REQUIRED),
+    ]).default(PROVIDER_SELECTION_REQUIRED),
     configuration: z.object({
       type: z.enum(["gpt", "tts"]),
       model: z.string().optional(),
@@ -84,9 +81,9 @@ export const ConversationForm = (props: {
       historyBufferSize: z.number().min(0).default(10),
       tts: z.object({
         language: z.string().default(learningLanguage).optional(),
-        engine: z.enum(["openai", "enjoyai"]).default("enjoyai"),
-        model: z.string().default("openai/tts-1"),
-        voice: z.string(),
+        engine: z.enum(["openai", "azure", PROVIDER_SELECTION_REQUIRED]).default(PROVIDER_SELECTION_REQUIRED),
+        model: z.string().default(""),
+        voice: z.string().default(""),
         baseUrl: z.string().optional(),
       }),
     }),
@@ -104,6 +101,11 @@ export const ConversationForm = (props: {
 
   if (!defaultConfig.engine) {
     defaultConfig.engine = currentGptEngine.name;
+  }
+  if (!isSupportedProvider(defaultConfig.engine)) {
+    defaultConfig.engine = PROVIDER_SELECTION_REQUIRED;
+    defaultConfig.configuration ||= {};
+    defaultConfig.configuration.model = "";
   }
   if (!defaultConfig.configuration) {
     defaultConfig.configuration = {};
@@ -140,12 +142,20 @@ export const ConversationForm = (props: {
 
   defaultConfig.configuration.tts = {
     ...(ttsConfig || {
-      engine: "enjoyai",
-      model: "openai/tts-1",
-      voice: "alloy",
+      engine: PROVIDER_SELECTION_REQUIRED,
+      model: "",
+      voice: "",
     }),
     ...(defaultConfig.configuration.tts || {}),
   };
+  if (resolveSynthesisProviderSelection(defaultConfig.configuration.tts).status !== "configured") {
+    defaultConfig.configuration.tts = {
+      engine: PROVIDER_SELECTION_REQUIRED,
+      model: "",
+      voice: "",
+      language: defaultConfig.configuration.tts.language || learningLanguage,
+    };
+  }
 
   if (!defaultConfig.configuration.tts.language) {
     defaultConfig.configuration.tts.language = learningLanguage;
@@ -153,22 +163,13 @@ export const ConversationForm = (props: {
 
   const form = useForm<z.infer<typeof conversationFormSchema>>({
     resolver: zodResolver(conversationFormSchema),
-    values: conversation?.id
-      ? {
-          name: conversation.name,
-          engine: conversation.engine,
-          configuration: {
-            type: conversation.configuration.type || "gpt",
-            ...conversation.configuration,
-          },
-        }
-      : {
-          name: defaultConfig.name,
-          engine: defaultConfig.engine,
-          configuration: {
-            ...defaultConfig.configuration,
-          },
-        },
+    values: {
+      name: defaultConfig.name,
+      engine: defaultConfig.engine,
+      configuration: {
+        ...defaultConfig.configuration,
+      },
+    },
   });
 
   const onSubmit = async (data: z.infer<typeof conversationFormSchema>) => {
@@ -188,10 +189,14 @@ export const ConversationForm = (props: {
       EnjoyApp.conversations
         .update(conversation.id, {
           name,
+          engine,
           configuration,
         })
         .then(() => {
           if (onFinish) onFinish();
+        })
+        .catch(() => {
+          toast.error(t("somethingWentWrong"));
         })
         .finally(() => {
           setSubmitting(false);
@@ -216,6 +221,13 @@ export const ConversationForm = (props: {
     data: z.infer<typeof conversationFormSchema>
   ) => {
     const { engine, configuration } = data;
+    if (configuration.type === "gpt" && !isSupportedProvider(engine)) {
+      throw new Error(t("providerSelectionRequired"));
+    }
+    const synthesis = resolveSynthesisProviderSelection(configuration.tts);
+    if (configuration.type === "tts" && synthesis.status !== "configured") {
+      throw new Error(t("providerSelectionRequired"));
+    }
     const mutableConfiguration = configuration as typeof configuration &
       Record<string, unknown>;
 
@@ -225,10 +237,10 @@ export const ConversationForm = (props: {
       if (
         configuration.type === "gpt" &&
         !providerSupportsOption(
-          engine,
+          engine as AiProviderId,
           key as Parameters<typeof providerSupportsOption>[1],
           configuration.model,
-          gptProviders[engine]
+          isSupportedProvider(engine) ? gptProviders[engine] : undefined
         )
       ) {
         delete mutableConfiguration[key];
@@ -238,7 +250,9 @@ export const ConversationForm = (props: {
 
     // use default base url if not set
     if (!configuration.baseUrl) {
-      configuration.baseUrl = gptProviders[engine]?.baseUrl;
+      configuration.baseUrl = isSupportedProvider(engine)
+        ? gptProviders[engine]?.baseUrl
+        : undefined;
     }
 
     // use default base url if not set
@@ -251,12 +265,6 @@ export const ConversationForm = (props: {
           : ttsProviders[configuration.tts.engine]?.baseUrl);
     }
 
-    if (!configuration.tts.engine) {
-      configuration.tts.engine = "openai";
-    }
-    if (!configuration.tts.model) {
-      configuration.tts.model = "openai/tts-1";
-    }
     if (!configuration.tts.baseUrl) {
       configuration.tts.baseUrl =
         ttsConfig?.engine === configuration.tts.engine
@@ -269,6 +277,7 @@ export const ConversationForm = (props: {
     // validates tts voice
     const ttsEngine = configuration.tts.engine;
     for (const key of Object.keys(configuration.tts)) {
+      if (key === "engine") continue;
       if (!ttsProviders[ttsEngine]?.configurable.includes(key)) {
         delete (configuration.tts as Record<string, unknown>)[key];
       }
@@ -283,20 +292,10 @@ export const ConversationForm = (props: {
         configuration.tts.voice = options[0];
       }
     }
-    if (ttsEngine === "enjoyai") {
-      const model = configuration.tts.model.split("/")[0];
-      const options = ttsProviders.enjoyai?.voices?.[model] || [];
-      if (model === "openai" && options.length > 0 && !options.includes(voice)) {
-        configuration.tts.voice = options[0];
-      } else if (
-        model === "azure" &&
-        options.findIndex(
-          (o: any) => o.language === language && o.value === voice
-        ) < 0
-      ) {
-        configuration.tts.voice = options.find(
-          (o: any) => o.language === language
-        )?.value;
+    if (ttsEngine === "azure") {
+      const options = ttsProviders.azure?.voices || [];
+      if (options.findIndex((o: any) => o.language === language && o.value === voice) < 0) {
+        configuration.tts.voice = options.find((o: any) => o.language === language)?.value;
       }
     }
 
@@ -307,24 +306,30 @@ export const ConversationForm = (props: {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="h-full flex flex-col pt-6"
+        className="flex h-full flex-col"
         data-testid="conversation-form"
       >
-        <div className="mb-4 px-6 flex items-center space-x-4">
-          <div className="text-lg font-bold">
+        <div className="shrink-0 border-b border-ej-line px-6 pb-4">
+          <div className="ej-label text-ej-accent">{t("aiAssistant")}</div>
+          <div className="mt-0.5 text-base font-bold tracking-[-0.01em] text-ej-ink">
             {conversation.id ? t("editConversation") : t("startConversation")}
           </div>
-          <GPTShareButton conversation={conversation} />
         </div>
-        <ScrollArea className="flex-1 px-4">
-          <div className="space-y-4 px-2 mb-6">
+        <ScrollArea className="flex-1">
+          <div className="space-y-5 px-6 py-5">
             <FormField
               control={form.control}
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>{t("models.conversation.name")}</FormLabel>
-                  <Input value={field.value} onChange={field.onChange} />
+                  <FormLabel className="ej-label">
+                    {t("models.conversation.name")}
+                  </FormLabel>
+                  <Input
+                    value={field.value}
+                    onChange={field.onChange}
+                    className="h-9 rounded-[10px] border-ej-line bg-ej-surface text-xs text-ej-ink focus-visible:ring-ej-accent"
+                  />
                   <FormMessage />
                 </FormItem>
               )}
@@ -335,26 +340,25 @@ export const ConversationForm = (props: {
               name="configuration.type"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>{t("models.conversation.type")}</FormLabel>
-                  <Select
-                    disabled={Boolean(conversation?.id)}
-                    onValueChange={field.onChange}
-                    value={field.value}
-                  >
-                    <FormControl>
-                      <SelectTrigger>
-                        <SelectValue placeholder={t("selectAiType")} />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent>
-                      <SelectItem key="gpt" value="gpt">
-                        GPT
-                      </SelectItem>
-                      <SelectItem key="tts" value="tts">
-                        TTS
-                      </SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <FormLabel className="ej-label">
+                    {t("models.conversation.type")}
+                  </FormLabel>
+                  <FormControl>
+                    <div
+                      className={
+                        conversation?.id ? "pointer-events-none opacity-50" : ""
+                      }
+                    >
+                      <Segmented
+                        value={field.value}
+                        onChange={field.onChange}
+                        options={[
+                          { value: "gpt", label: "GPT" },
+                          { value: "tts", label: t("textToSpeech") },
+                        ]}
+                      />
+                    </div>
+                  </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
@@ -372,17 +376,13 @@ export const ConversationForm = (props: {
           </div>
         </ScrollArea>
 
-        <div className="flex justify-center space-x-4 py-6 px-6 border-t shadow">
+        <div className="flex shrink-0 items-center gap-3 border-t border-ej-line bg-ej-surface px-6 py-4">
           {conversation.id && (
             <AlertDialog>
               <AlertDialogTrigger asChild>
-                <Button
-                  className="w-full h-12 text-destructive"
-                  size="lg"
-                  variant="secondary"
-                >
+                <EjButton variant="danger" size="lg" className="flex-1">
                   {t("delete")}
-                </Button>
+                </EjButton>
               </AlertDialogTrigger>
 
               <AlertDialogContent>
@@ -395,7 +395,7 @@ export const ConversationForm = (props: {
                 <AlertDialogFooter>
                   <AlertDialogCancel>{t("cancel")}</AlertDialogCancel>
                   <AlertDialogAction
-                    className="bg-destructive hover:bg-destructive-hover"
+                    className="bg-ej-bad hover:opacity-90"
                     onClick={destroyConversation}
                   >
                     {t("delete")}
@@ -405,18 +405,19 @@ export const ConversationForm = (props: {
             </AlertDialog>
           )}
 
-          <Button
+          <EjButton
             disabled={
               submitting || (conversation.id && !form.formState.isDirty)
             }
-            className="w-full h-12"
-            data-testid="conversation-form-submit"
+            variant="primary"
             size="lg"
+            className="flex-1"
+            data-testid="conversation-form-submit"
             type="submit"
           >
-            {submitting && <LoaderIcon className="mr-2 animate-spin" />}
+            {submitting && <LoaderIcon className="size-4 animate-spin" />}
             {t("confirm")}
-          </Button>
+          </EjButton>
         </div>
       </form>
     </Form>

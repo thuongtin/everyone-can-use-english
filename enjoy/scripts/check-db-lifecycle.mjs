@@ -56,19 +56,19 @@ export { syncDbSession } from "./src/renderer/lib/db-session-sync.ts";`,
         connectStarted.resolve();
         return connection.promise;
       },
-      disconnect: async () => {
-        disconnectCalls.push("disconnect");
+      disconnect: async (connectionId) => {
+        disconnectCalls.push(connectionId);
       },
     });
 
     const connectResult = lifecycle.connect();
     await connectStarted.promise;
     const disconnectResult = lifecycle.disconnect();
-    connection.resolve({ state: "connected", path: "library-1/db.sqlite" });
+    connection.resolve({ state: "connected", path: "library-1/db.sqlite", connectionId: "connection-1", profileId: "user-1" });
 
     assert.deepEqual(await connectResult, { kind: "stale" });
     await disconnectResult;
-    assert.deepEqual(disconnectCalls, ["disconnect", "disconnect"]);
+    assert.deepEqual(disconnectCalls, ["connection-1", undefined]);
     lifecycle.dispose();
   });
 
@@ -79,8 +79,8 @@ export { syncDbSession } from "./src/renderer/lib/db-session-sync.ts";`,
       getUser: () => user.promise,
       getLibrary: async () => "library-1",
       connect: async () => ({ state: "connected", path: "library-1/db.sqlite" }),
-      disconnect: async () => {
-        disconnectCalls.push("disconnect");
+      disconnect: async (connectionId) => {
+        disconnectCalls.push(connectionId);
       },
     });
 
@@ -91,7 +91,7 @@ export { syncDbSession } from "./src/renderer/lib/db-session-sync.ts";`,
 
     assert.deepEqual(await connectResult, { kind: "stale" });
     await disconnectResult;
-    assert.deepEqual(disconnectCalls, ["disconnect"]);
+    assert.deepEqual(disconnectCalls, [undefined]);
     lifecycle.dispose();
   });
 
@@ -126,14 +126,89 @@ export { syncDbSession } from "./src/renderer/lib/db-session-sync.ts";`,
         return { id: userRead === 1 ? "user-1" : "user-2" };
       },
       getLibrary: async () => "library-1",
-      connect: async () => ({ state: "connected", path: "library-1/db.sqlite" }),
-      disconnect: async () => {
-        disconnectCalls.push("disconnect");
+      connect: async () => ({ state: "connected", path: "library-1/db.sqlite", connectionId: "connection-1", profileId: "user-1" }),
+      disconnect: async (connectionId) => {
+        disconnectCalls.push(connectionId);
       },
     });
 
     assert.deepEqual(await lifecycle.connect(), { kind: "session-changed" });
-    assert.deepEqual(disconnectCalls, ["disconnect"]);
+    assert.deepEqual(disconnectCalls, ["connection-1"]);
+    lifecycle.dispose();
+  });
+
+  await test("retains the actual connection receipt on repeated connect", async () => {
+    let connectCalls = 0;
+    const receipt = { state: "connected", path: "library-1/db.sqlite", connectionId: "connection-1", profileId: "user-1" };
+    const lifecycle = createDbLifecycle({
+      getUser: async () => ({ id: "user-1" }),
+      getLibrary: async () => "library-1",
+      connect: async () => { connectCalls += 1; return receipt; },
+      disconnect: async () => {},
+    });
+    const first = await lifecycle.connect();
+    const second = await lifecycle.connect();
+    assert.equal(first.kind, "connected");
+    assert.deepEqual(second, first);
+    assert.equal(connectCalls, 1);
+    lifecycle.dispose();
+  });
+
+  await test("passes the stale response token when a connect is invalidated", async () => {
+    const connection = deferred();
+    const connectStarted = deferred();
+    const disconnectCalls = [];
+    const lifecycle = createDbLifecycle({
+      getUser: async () => ({ id: "user-1" }),
+      getLibrary: async () => "library-1",
+      connect: () => {
+        connectStarted.resolve();
+        return connection.promise;
+      },
+      disconnect: async (connectionId) => { disconnectCalls.push(connectionId); },
+    });
+    const pending = lifecycle.connect();
+    await connectStarted.promise;
+    const logout = lifecycle.disconnect();
+    connection.resolve({ state: "connected", path: "library-1/db.sqlite", connectionId: "stale-connection", profileId: "user-1" });
+    assert.deepEqual(await pending, { kind: "stale" });
+    await logout;
+    assert.deepEqual(disconnectCalls, ["stale-connection", undefined]);
+    lifecycle.dispose();
+  });
+
+  await test("captures the old token so a queued new connection survives disconnect", async () => {
+    const closing = deferred();
+    const disconnectCalls = [];
+    let connectCalls = 0;
+    const lifecycle = createDbLifecycle({
+      getUser: async () => ({ id: "user-1" }),
+      getLibrary: async () => "library-1",
+      connect: async () => ({ state: "connected", path: "library-1/db.sqlite", connectionId: `connection-${++connectCalls}`, profileId: "user-1" }),
+      disconnect: async (connectionId) => { disconnectCalls.push(connectionId); if (connectionId === "connection-1") await closing.promise; },
+    });
+    assert.equal((await lifecycle.connect()).kind, "connected");
+    const disconnect = lifecycle.disconnect();
+    const reconnect = lifecycle.connect();
+    closing.resolve();
+    assert.equal((await disconnect), undefined);
+    const connected = await reconnect;
+    assert.equal(connected.kind, "connected");
+    assert.deepEqual(disconnectCalls, ["connection-1"]);
+    assert.equal(connected.connection.connectionId, "connection-2");
+    lifecycle.dispose();
+  });
+
+  await test("rejects a main connection whose profile differs from the account", async () => {
+    const disconnectCalls = [];
+    const lifecycle = createDbLifecycle({
+      getUser: async () => ({ id: "user-1" }),
+      getLibrary: async () => "library-1",
+      connect: async () => ({ state: "connected", path: "library-1/db.sqlite", connectionId: "wrong-profile", profileId: "user-2" }),
+      disconnect: async (connectionId) => { disconnectCalls.push(connectionId); },
+    });
+    assert.deepEqual(await lifecycle.connect(), { kind: "session-changed" });
+    assert.deepEqual(disconnectCalls, ["wrong-profile"]);
     lifecycle.dispose();
   });
 
@@ -144,22 +219,14 @@ export { syncDbSession } from "./src/renderer/lib/db-session-sync.ts";`,
       const connectStarted = deferred();
       let active = true;
       let localProfileCalls = 0;
-      let persistProfileCalls = 0;
-      let cableCalls = 0;
       let applyProfileCalls = 0;
 
-      const syncPromise = syncDbSession("user-1", null, {
+      const syncPromise = syncDbSession("user-1", {
         connect: () => {
           connectStarted.resolve();
           return connection.promise;
         },
         isActive: () => active,
-        persistAuthenticatedProfile: async () => {
-          persistProfileCalls += 1;
-        },
-        createCable: async () => {
-          cableCalls += 1;
-        },
         getLocalProfile: async () => {
           localProfileCalls += 1;
           return { id: "user-1", name: "Fixture" };
@@ -179,8 +246,6 @@ export { syncDbSession } from "./src/renderer/lib/db-session-sync.ts";`,
 
       assert.deepEqual(await syncPromise, { kind: "stale" });
       assert.equal(localProfileCalls, 0);
-      assert.equal(persistProfileCalls, 0);
-      assert.equal(cableCalls, 0);
       assert.equal(applyProfileCalls, 0);
     }
   );

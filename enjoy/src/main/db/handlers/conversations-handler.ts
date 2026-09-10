@@ -3,6 +3,8 @@ import { Conversation, Message } from "@main/db/models";
 import { FindOptions, WhereOptions, Attributes } from "sequelize";
 import log from "@main/logger";
 import { t } from "i18next";
+import { isSupportedProvider } from "@/lib/ai-providers";
+import { isRetiredEnjoyUrl } from "@/lib/network-policy";
 
 class ConversationsHandler {
   private async findAll(
@@ -78,24 +80,46 @@ class ConversationsHandler {
   private async update(
     event: IpcMainEvent,
     id: string,
-    params: Attributes<Conversation>
+    params: Partial<Attributes<Conversation>>
   ) {
-    const { name, configuration } = params;
+    const { name, engine, configuration } = params;
 
     return Conversation.findOne({
       where: { id },
     })
-      .then((conversation) => {
+      .then(async (conversation) => {
         if (!conversation) {
           throw new Error(t("models.conversation.notFound"));
         }
-        conversation.update({ name, configuration });
+        const mergedConfiguration = {
+          ...conversation.configuration,
+          ...configuration,
+        };
+        const nextEngine = engine ?? conversation.engine;
+        if (
+          mergedConfiguration.type === "gpt" &&
+          (!isSupportedProvider(nextEngine) ||
+            typeof mergedConfiguration.model !== "string" ||
+            !mergedConfiguration.model.trim() ||
+            isRetiredEnjoyUrl(mergedConfiguration.baseUrl))
+        ) {
+          throw new Error("provider_selection_required");
+        }
+        const updated = await conversation.update({
+          name,
+          engine: mergedConfiguration.type === "gpt" ? nextEngine : conversation.engine,
+          configuration: mergedConfiguration,
+        });
+        return updated.toJSON();
       })
       .catch((err) => {
         event.sender.send("on-notification", {
           type: "error",
-          message: err.message,
+          message: err.message === "provider_selection_required"
+            ? t("providerSelectionRequired")
+            : t("somethingWentWrong"),
         });
+        throw err;
       });
   }
 

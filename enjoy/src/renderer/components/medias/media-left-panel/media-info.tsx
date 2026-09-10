@@ -5,9 +5,9 @@ import {
 } from "@renderer/context";
 import { formatDuration, formatDateTime } from "@renderer/lib/utils";
 import { t } from "i18next";
-import { Button, toast } from "@renderer/components/ui";
+import { toast } from "@renderer/components/ui";
 import { useAiCommand } from "@renderer/hooks";
-import { LoaderIcon } from "lucide-react";
+import { LoaderIcon, SparklesIcon } from "lucide-react";
 
 export const MediaInfo = () => {
   const { media, transcription } = useContext(MediaShadowProviderContext);
@@ -39,52 +39,61 @@ export const MediaInfo = () => {
   if (!media) return null;
 
   return (
-    <div className="px-4" data-testid="media-info-panel">
-      <div className="mb-2">
-        <div className="flex items-center justify-between">
-          <div className="capitalize text-sm text-muted-foreground mb-1">
-            {t("models.audio.name")}
-          </div>
-          <Button
+    <div className="px-4 py-4 space-y-4" data-testid="media-info-panel">
+      <div>
+        <div className="flex items-center justify-between gap-2 mb-1">
+          <span className="ej-label">{t("models.audio.name")}</span>
+          <button
+            type="button"
             disabled={summarizing}
             onClick={handleSummarize}
-            variant="outline"
-            size="sm"
+            className="inline-flex items-center gap-1.5 h-6 px-2 rounded-lg text-xxs font-semibold text-ej-accent-ink bg-ej-accent-soft hover:bg-ej-accent-soft2 transition-colors duration-ej disabled:opacity-40"
           >
-            {summarizing && (
-              <LoaderIcon className="animate-spin mr-2" size={16} />
+            {summarizing ? (
+              <LoaderIcon className="size-3 animate-spin" />
+            ) : (
+              <SparklesIcon className="size-3" />
             )}
             {t("summarize")}
-          </Button>
+          </button>
         </div>
-        <div className="">{media.name}</div>
+        <div className="font-literata text-[15px] leading-[1.45] text-ej-ink">
+          {media.name}
+        </div>
       </div>
 
-      {[
-        {
-          label: t("models.audio.duration"),
-          value: formatDuration(media.duration),
-        },
-        {
-          label: t("models.audio.recordingsCount"),
-          value: media.recordingsCount ? media.recordingsCount : 0,
-        },
-        {
-          label: t("models.audio.recordingsDuration"),
-          value: formatDuration(media.recordingsDuration, "ms"),
-        },
-        {
-          label: t("models.audio.createdAt"),
-          value: formatDateTime(media.createdAt),
-        },
-      ].map((item, index) => (
-        <div key={`media-info-item-${index}`} className="mb-2">
-          <div className="capitalize text-sm text-muted-foreground mb-1">
-            {item.label}
+      <div className="rounded-ej border border-ej-line overflow-hidden">
+        {[
+          {
+            label: t("models.audio.duration"),
+            value: formatDuration(media.duration),
+          },
+          {
+            label: t("models.audio.recordingsCount"),
+            value: media.recordingsCount ? media.recordingsCount : 0,
+          },
+          {
+            label: t("models.audio.recordingsDuration"),
+            value: formatDuration(media.recordingsDuration, "ms"),
+          },
+          {
+            label: t("models.audio.createdAt"),
+            value: formatDateTime(media.createdAt),
+          },
+        ].map((item, index) => (
+          <div
+            key={`media-info-item-${index}`}
+            className="flex items-center justify-between gap-3 px-3 py-2 border-b border-ej-line last:border-b-0"
+          >
+            <span className="text-xs text-ej-muted capitalize">
+              {item.label}
+            </span>
+            <span className="text-xs font-semibold ej-tabular text-ej-ink">
+              {item.value}
+            </span>
           </div>
-          <div className="">{item.value}</div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

@@ -1,23 +1,44 @@
-import { useEffect, useContext, useRef } from "react";
+import { useEffect, useContext, useRef, Fragment } from "react";
 import { useNavigate } from "react-router-dom";
 import { AppSettingsProviderContext } from "@renderer/context";
 import { ChevronLeftIcon, ExternalLinkIcon } from "lucide-react";
-import { Button } from "@renderer/components/ui";
+import { EjIconButton, EjReader, EjReaderFontSize } from "@renderer/components/enjoy";
 import uniq from "lodash/uniq";
 import Mark from "mark.js";
 import { Vocabulary } from "@renderer/components";
+import { t } from "i18next";
+import type {
+  LocalMeaning,
+  LocalStudyLookup,
+} from "../../../types/local-study-api";
+import { displayableResourceUrl } from "@renderer/lib/retired-resource";
 
 export const StoryViewer = (props: {
-  story: Partial<StoryType> & Partial<CreateStoryParamsType>;
+  story: {
+    id?: string;
+    title?: string;
+    content?: string;
+    url?: string;
+    metadata?: Record<string, string>;
+  };
   marked?: boolean;
-  meanings?: MeaningType[];
-  setMeanings: (meanings: MeaningType[]) => void;
-  pendingLookups?: Partial<LookupType>[];
+  meanings?: LocalMeaning[];
+  setMeanings: (meanings: LocalMeaning[]) => void;
+  pendingLookups?: Partial<LocalStudyLookup>[];
   doc: any;
+  actions?: React.ReactNode;
 }) => {
   const navigate = useNavigate();
-  const { story, marked, meanings = [], pendingLookups = [], doc } = props;
+  const {
+    story,
+    marked,
+    meanings = [],
+    pendingLookups = [],
+    doc,
+    actions,
+  } = props;
   if (!story || !doc) return null;
+  const faviconUrl = displayableResourceUrl(story.metadata?.favicon);
 
   const paragraphs: { terms: any[]; text: string }[][] = doc
     .paragraphs()
@@ -49,12 +70,11 @@ export const StoryViewer = (props: {
   }, [meanings, pendingLookups, marked]);
 
   return (
-    <>
-      <div className="w-full max-w-2xl xl:max-w-3xl mx-auto sticky bg-background top-0 z-30 px-4 py-2 border-b">
-        <div className="w-full flex items-center space-x-4">
-          <Button
-            variant="ghost"
-            size="icon"
+    <EjReader>
+      <div className="sticky top-0 z-30 border-b border-ej-line bg-ej-surface/95 backdrop-blur-sm">
+        <div className="mx-auto w-full max-w-[760px] fluid:max-w-[820px] px-4 py-2 flex items-center gap-2">
+          <EjIconButton
+            title={t("back")}
             onClick={() => {
               if (story.id) {
                 navigate("/stories");
@@ -63,73 +83,72 @@ export const StoryViewer = (props: {
               }
             }}
           >
-            <ChevronLeftIcon className="w-6 h-6 text-muted-foreground" />
-          </Button>
+            <ChevronLeftIcon className="size-4" />
+          </EjIconButton>
 
-          <div className="truncate flex-1 font-sans text-muted-foreground">
+          <div className="flex-1 min-w-0 text-xs text-ej-muted truncate">
             {story.title}
           </div>
 
-          <div
-            onClick={() => {
-              EnjoyApp.shell.openExternal(story.url);
-            }}
-            className="cursor-pointer flex items-center space-x-2"
-          >
-            {story.metadata?.favicon ? (
-              <img src={story.metadata.favicon} className="h-6 w-auto" />
-            ) : (
-              <ExternalLinkIcon className="w-5 h-5 text-muted-foreground" />
+          <div className="shrink-0 flex items-center gap-1">
+            <EjReaderFontSize />
+            {actions}
+            {story.url && (
+              <EjIconButton
+                title={t("source")}
+                onClick={() => EnjoyApp.shell.openExternal(story.url)}
+              >
+                {faviconUrl ? (
+                  <img src={faviconUrl} className="size-4" />
+                ) : (
+                  <ExternalLinkIcon className="size-4" />
+                )}
+              </EjIconButton>
             )}
           </div>
         </div>
       </div>
-      <div className="bg-background py-6 px-8 max-w-2xl xl:max-w-3xl mx-auto relative shadow-lg">
+
+      <div className="mx-auto w-full max-w-[760px] fluid:max-w-[820px] px-5 py-7">
         <article
           ref={ref}
-          className="relative select-text prose dark:prose-invert prose-lg xl:prose-xl font-sans text-lg"
+          className="ej-prose select-text"
           data-source-type="Story"
           data-source-id={story.id}
         >
-          <h2>
-            {story.title.split(" ").map((word, i) => (
-              <span key={`title-word-${i}`} className="">
-                {word}{" "}
-              </span>
-            ))}
-          </h2>
+          <h1>{story.title}</h1>
 
           {paragraphs.map((sentences, i: number) => (
-            <p key={`paragraph-${i}`} className="">
+            <p key={`paragraph-${i}`}>
               {sentences.map((sentence, j: number) => {
                 if (sentence.text.match(/!\[\]\(\S+\)/g)) {
                   const [img] = sentence.text.match(/!\[\]\(\S+\)/g);
-                  const src = img.replace(/!\[\]\(/g, "").replace(/\)/g, "");
-                  return <img key={`paragraph-${i}-sentence-${j}`} src={src} />;
-                } else {
-                  return (
-                    <span
-                      className="sentence select-auto whitespace-normal"
-                      key={`paragraph-${i}-sentence-${j}`}
-                    >
-                      {sentence.terms.map((term) => (
-                        <>
-                          {term.pre}
-                          <Vocabulary
-                            word={term.text}
-                            context={sentence.text}
-                          />
-                          {term.post}
-                        </>
-                      ))}
-                    </span>
+                  const src = displayableResourceUrl(
+                    img.replace(/!\[\]\(/g, "").replace(/\)/g, "")
                   );
+                  if (!src) return null;
+                  return <img key={`paragraph-${i}-sentence-${j}`} src={src} />;
                 }
+
+                return (
+                  <span
+                    className="sentence select-auto whitespace-normal"
+                    key={`paragraph-${i}-sentence-${j}`}
+                  >
+                    {sentence.terms.map((term, k: number) => (
+                      <Fragment key={`term-${i}-${j}-${k}`}>
+                        {term.pre}
+                        <Vocabulary word={term.text} context={sentence.text} />
+                        {term.post}
+                      </Fragment>
+                    ))}
+                  </span>
+                );
               })}
             </p>
           ))}
         </article>
       </div>
-    </>
+    </EjReader>
   );
 };

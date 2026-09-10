@@ -1,0 +1,18 @@
+{
+  "currency": "USD",
+  "keyUsageBefore": 0,
+  "keyUsageAfter": 0.083797509,
+  "keyUsageDelta": 0.083797509,
+  "checkedAt": "2026-09-08T07:06:17.766362+00:00",
+  "receiptCosts": {
+    "asrBaselineDeepStyles": 0.020192550465555556,
+    "asrTtsRoundtrip": 0.002904861111111111,
+    "ttsSynthesis": 0.02841992,
+    "llmDirect": 0.0172452,
+    "llmFactoryCaptured": 0.0064532,
+    "image": 0.002291
+  },
+  "receiptTotal": 0.07750673157666667,
+  "unallocatedDelta": 0.006290777423333338,
+  "unallocatedExplanation": "An earlier nine-command factory run completed before receipt interception; its per-request usage was not retained. Any failed or timed-out request without a receipt cannot be allocated precisely. Key delta covers the full shared test interval, not only one modality."
+}

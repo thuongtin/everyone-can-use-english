@@ -4,4 +4,6 @@ export * from "./media-bottom-panel";
 
 export * from "./media-loading-modal";
 export * from "./media-add-button";
+export * from "./media-header";
+export * from "./media-table";
 export * from "./media-shadow-player";

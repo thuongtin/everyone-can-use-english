@@ -1,6 +1,6 @@
 import { app } from "electron";
 import path from "path";
-import { exec, spawn } from "child_process";
+import { execFile, spawn } from "child_process";
 import fs from "fs-extra";
 import os from "os";
 import log from "@main/logger";
@@ -9,6 +9,7 @@ import settings from "@main/settings";
 import mainWin from "@main/window";
 import ffmpegPath from "ffmpeg-static";
 import { downloaderEnv, findYtDlp, downloadWithYtDlp } from "./yt-dlp";
+import { assertAllowedNetworkUrl } from "@/lib/network-policy";
 
 //  youtubedr bin file will be in /app.asar.unpacked instead of /app.asar
 const __dirname = import.meta.dirname.replace("app.asar", "app.asar.unpacked");
@@ -61,12 +62,13 @@ class Youtubedr {
   }
 
   async autoDownload(url: string) {
+    const videoId = this.assertAllowedYtURL(url, "youtube.auto-download");
     const env = downloaderEnv(this.proxyEnv());
     const binary = findYtDlp(env);
     if (binary) {
       this.abortController?.abort();
       this.abortController = new AbortController();
-      logger.info("Downloading YouTube video with yt-dlp", this.getYtVideoId(url));
+      logger.info("Downloading YouTube video with yt-dlp", videoId);
       return downloadWithYtDlp({
         binary, url, env,
         cachePath: settings.cachePath(),
@@ -75,13 +77,13 @@ class Youtubedr {
         onProgress: (received, speed) => {
           if (!mainWin.win.webContents.isDestroyed()) {
             mainWin.win.webContents.send("download-on-state", {
-              name: this.getYtVideoId(url), state: "progressing", received, speed,
+              name: videoId, state: "progressing", received, speed,
             });
           }
         },
       });
     }
-    logger.debug("fetching video info", url);
+    logger.debug("Fetching YouTube video info", videoId);
 
     const info = await this.info(url);
     // Ensure the format is video and has audio
@@ -91,14 +93,13 @@ class Youtubedr {
     );
 
     if (!format) {
-      logger.debug("formats", info);
       throw new Error("No suitable format found");
     }
 
     const filename = `${snakeCase(info.Title)}.mp4`;
     const directory = settings.cachePath();
 
-    logger.debug("try to download", format);
+    logger.debug("Selected YouTube format", format.Itag);
     return this.download(url, {
       quality: format.Itag,
       filename,
@@ -115,25 +116,17 @@ class Youtubedr {
       webContents?: Electron.WebContents;
     } = {}
   ): Promise<string> {
+    const videoId = this.assertAllowedYtURL(url, "youtube.download-fallback");
     this.abortController?.abort();
     this.abortController = new AbortController();
 
     const {
       quality,
-      filename = this.getYtVideoId(url) + ".mp4",
+      filename = videoId + ".mp4",
       directory = app.getPath("downloads"),
       webContents = mainWin.win.webContents,
     } = options;
-    const command = [
-      this.binFile,
-      "download",
-      `"${url}"`,
-      `--quality ${quality || "medium"}`,
-      `--filename "${filename}"`,
-      `--directory "${directory}"`,
-    ].join(" ");
-
-    logger.info(`Running command: ${command}`);
+    logger.info("Downloading YouTube video with youtubedr", videoId);
 
     let currentSpeed = "";
 
@@ -150,7 +143,7 @@ class Youtubedr {
         {
           timeout: TEN_MINUTES,
           signal: this.abortController.signal,
-          env: this.proxyEnv(),
+          env: downloaderEnv(this.proxyEnv()),
         }
       );
 
@@ -159,7 +152,7 @@ class Youtubedr {
         const match = output.match(/iB (\d+) % \[/);
 
         if (match) {
-          let speed = output.match(/\ ] (.*)/);
+          const speed = output.match(/ ] (.*)/);
           if (speed) {
             currentSpeed = speed[1];
           }
@@ -198,39 +191,41 @@ class Youtubedr {
   }
 
   async info(url: string): Promise<YoutubeInfoType> {
-    const command = [this.binFile, "info", `"${url}"`, "--format json"].join(
-      " "
-    );
+    this.assertAllowedYtURL(url, "youtube.info-fallback");
     return new Promise((resolve, reject) => {
-      exec(
-        command,
+      execFile(
+        this.binFile,
+        ["info", url, "--format", "json"],
         {
           timeout: ONE_MINUTE,
-          env: this.proxyEnv(),
+          env: downloaderEnv(this.proxyEnv()),
         },
         (error, stdout, stderr) => {
           if (error) {
-            logger.error(error);
-            reject(error);
+            logger.error("Youtubedr info failed", {
+              code: error.code,
+              killed: error.killed,
+              signal: error.signal,
+            });
+            return reject(new Error("Youtubedr info failed"));
           }
 
           if (stderr) {
-            logger.error(stderr);
-            reject(new Error(stderr));
+            logger.error("Youtubedr info returned stderr");
+            return reject(new Error("Youtubedr info failed"));
           }
 
           if (stdout) {
-            logger.debug(stdout);
             try {
               const info = JSON.parse(stdout);
-              resolve(info);
+              return resolve(info);
             } catch (err) {
               logger.error("json result failed to parse", err);
-              reject(stdout);
+              return reject(new Error("Youtubedr info returned invalid JSON"));
             }
           }
 
-          reject(new Error("Youtubedr info failed: unknown error"));
+          return reject(new Error("Youtubedr info failed: unknown error"));
         }
       );
     });
@@ -243,6 +238,9 @@ class Youtubedr {
 
   getYtVideoId = (url: string) => {
     const parsed = new URL(url);
+    if (parsed.protocol !== "https:" && parsed.protocol !== "http:") {
+      throw Error("Unsupported YouTube URL protocol");
+    }
     let id = parsed.searchParams.get("v");
     if (validPathDomains.test(url.trim()) && !id) {
       const paths = parsed.pathname.split("/");
@@ -251,7 +249,7 @@ class Youtubedr {
       throw Error("Not a YouTube domain");
     }
     if (!id) {
-      throw Error(`No video id found: "${url}"`);
+      throw Error("No YouTube video id found");
     }
     id = id.substring(0, 11);
     if (!this.validateYtVideoId(id)) {
@@ -260,6 +258,12 @@ class Youtubedr {
 
     return id;
   };
+
+  private assertAllowedYtURL(url: string, operation: string): string {
+    // The child process owns subsequent redirects, so this covers its initial URL only.
+    assertAllowedNetworkUrl(url, { transport: "youtube-subprocess", operation });
+    return this.getYtVideoId(url);
+  }
 
   validateYtURL = (url: string) => {
     try {
@@ -281,9 +285,13 @@ class Youtubedr {
    */
   proxyEnv = () => {
     // keep current environment variables
-    let env = { ...process.env };
+    const env = { ...process.env };
     const proxyConfig = settings.getSync("proxy") as ProxyConfigType;
     if (proxyConfig?.enabled && proxyConfig.url) {
+      assertAllowedNetworkUrl(proxyConfig.url, {
+        transport: "youtube-subprocess",
+        operation: "proxy",
+      });
       env["HTTP_PROXY"] = proxyConfig.url;
       env["HTTPS_PROXY"] = proxyConfig.url;
     }

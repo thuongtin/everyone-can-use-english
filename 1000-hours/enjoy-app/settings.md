@@ -1,11 +1,11 @@
 # Cài đặt ứng dụng
 
-Enjoy được thiết kế để có thể sử dụng ngay sau khi đăng nhập, **không cần cấu hình thêm**. Bạn vẫn có thể điều chỉnh theo nhu cầu.
+Enjoy mở bằng hồ sơ local, không cần đăng nhập Enjoy. Thư viện và từ điển dùng được trên máy; các tác vụ AI cần chọn và cấu hình provider phù hợp.
 
 Mở Enjoy rồi nhấn biểu tượng bánh răng ở cuối thanh bên trái để mở **Cài đặt**.
 
 ::: info Ghi chú cho bản tiếng Việt
-Bản này dùng tiếng Việt cho giao diện và tiếng mẹ đẻ mặc định, tiếng Anh Mỹ cho ngôn ngữ học. Lựa chọn đã lưu của người dùng được giữ nguyên. Các mô tả giá, dịch vụ đám mây, phiên bản hệ điều hành dưới đây được dịch từ tài liệu gốc; tình trạng dịch vụ bên ngoài chưa được bản Việt hóa xác nhận lại. Không coi việc dịch tài liệu là bằng chứng dịch vụ đang miễn phí hoặc tài khoản đã được cấp quyền sử dụng.
+Bản này dùng tiếng Việt cho giao diện và tiếng mẹ đẻ mặc định, tiếng Anh Mỹ cho ngôn ngữ học. Lựa chọn đã lưu của người dùng được giữ nguyên. Bản này không dùng backend, ví hoặc token dịch vụ của Enjoy. Việc có adapter không đồng nghĩa tài khoản provider đã có quyền dùng mô hình; hãy kiểm tra cấu hình của từng dịch vụ.
 :::
 
 ## Cài đặt cơ bản {#basic-settings}
@@ -50,23 +50,13 @@ Một số máy hoặc hệ điều hành, ví dụ macOS 11 được nhắc tro
 :::
 </details>
 
-<details>
-<summary>Azure AI STT</summary>
+Các dịch vụ chép lời cloud được cấu hình riêng:
 
-Dùng API nhận dạng giọng nói của Microsoft Azure AI. Đây là **dịch vụ trả phí**: mỗi lần dùng sẽ trừ vào số dư tài khoản Enjoy. Nếu không đủ số dư, cần [nạp tiền](#deposit) trước khi tiếp tục.
-</details>
+- **Cloudflare Workers AI:** endpoint Worker và token của bạn.
+- **MAI Transcribe:** mô hình MAI qua cấu hình OpenRouter của bạn.
+- **OpenAI:** API key và mô hình transcription phù hợp.
 
-<details>
-<summary>Cloudflare AI STT</summary>
-
-Dùng dịch vụ Whisper trên đám mây của Cloudflare. Tại thời điểm tài liệu gốc, dịch vụ được mô tả là miễn phí. Tác giả ghi nhận sai số khá lớn với một số đoạn âm thanh ngắn.
-</details>
-
-<details>
-<summary>OpenAI STT</summary>
-
-Dùng dịch vụ Whisper trên đám mây của OpenAI. Bạn cần [cấu hình API key OpenAI của mình](#openai-settings).
-</details>
+Ứng dụng không tự đổi provider khi hết hạn mức hoặc thiếu cấu hình. Cấu hình STT Enjoy cũ cần chọn lại dịch vụ; dữ liệu chép lời đã lưu vẫn được giữ.
 
 ### Dịch vụ chuyển văn bản thành giọng nói {#text-to-speech}
 
@@ -76,7 +66,7 @@ Cài đặt -> Cơ bản -> Dịch vụ chuyển văn bản thành giọng nói
 
 Chuyển văn bản thành giọng nói, hay TTS (Text to Speech), tổng hợp âm thanh từ văn bản để luyện đọc theo mẫu. Lựa chọn ở đây là mặc định; mỗi lần tạo giọng nói, bạn vẫn có thể chọn dịch vụ khác.
 
-Ngoài OpenAI TTS, EnjoyAI còn tích hợp Azure TTS. Chọn mô hình `azure/speech` để sử dụng. Azure TTS cung cấp nhiều giọng đọc để lựa chọn.
+Chọn OpenAI hoặc Azure Speech với cấu hình riêng, sau đó chọn mô hình và giọng đọc tương thích. Azure Speech dùng credential/resource riêng; key OpenRouter dùng cho MAI không thay thế cấu hình này. Không cần số dư Enjoy.
 
 ### Dịch vụ AI mặc định {#default-ai-engine}
 
@@ -86,9 +76,7 @@ Cài đặt -> Cơ bản -> Dịch vụ AI mặc định
 
 Enjoy có nhiều chức năng hỗ trợ việc học.
 
-Giá trị mặc định là `Enjoy AI`, dịch vụ do Enjoy cung cấp. Mỗi lần dùng sẽ trừ tiền trong tài khoản; khi không đủ số dư, cần [nạp tiền](#deposit) để tiếp tục. EnjoyAI cung cấp nhiều mô hình để người dùng lựa chọn, bao gồm mô hình của OpenAI và các nhà cung cấp khác.
-
-Nếu có [API key OpenAI](#openai-settings) sử dụng được, bạn cũng có thể chọn `OpenAI` làm **Dịch vụ AI mặc định**.
+Chọn một provider đã cấu hình: OpenAI, Gemini, DeepSeek, OpenRouter, Ollama, LM Studio hoặc Codex/Claude qua ACP. Mỗi dịch vụ chỉ cung cấp những khả năng tương ứng được hiển thị trong ứng dụng. Khi chưa chọn dịch vụ, các tác vụ AI sẽ hướng dẫn cấu hình; nội dung local vẫn mở được.
 
 Trong phần mô hình mặc định, bạn có thể chọn mô hình khác nhau cho từng chức năng.
 
@@ -127,7 +115,7 @@ Enjoy vẫn hỗ trợ MDict. Với bộ chỉ có một tệp `.mdx`, nhập tr
 
 ### Cài đặt API {#api-settings}
 
-Đặt địa chỉ API của dịch vụ Enjoy. Giá trị mặc định là `https://enjoy.bot`.
+Ứng dụng không còn địa chỉ API backend Enjoy chung. Cấu hình endpoint nằm trong từng provider; không dùng địa chỉ backend Enjoy cũ hoặc địa chỉ thay thế của backend đó.
 
 ### Cài đặt proxy {#proxy-settings}
 
@@ -135,7 +123,7 @@ Cấu hình proxy cho Enjoy App.
 
 ### Trạng thái mạng {#network-status}
 
-Kiểm tra kết nối mạng giữa ứng dụng Enjoy và máy chủ.
+Kiểm tra cấu hình và kết nối của provider đang dùng. Một provider không khả dụng không ngăn bạn mở thư viện local.
 
 ### Cấu hình OpenAI {#openai-settings}
 
@@ -155,11 +143,11 @@ Tài liệu gốc đề cập việc OpenAI không cung cấp dịch vụ tại 
 
 ### Đặt lại cài đặt {#reset-settings}
 
-Theo mô tả của tài liệu gốc, thao tác này đăng xuất và đưa toàn bộ cài đặt Enjoy về mặc định.
+Đưa cài đặt về mặc định. Đọc phạm vi xóa hiển thị trong ứng dụng trước khi xác nhận; cấu hình provider có thể cần nhập lại.
 
 ### Đặt lại tất cả {#reset-all}
 
-Đăng xuất và xóa toàn bộ dữ liệu cá nhân.
+Xóa dữ liệu theo phạm vi hiển thị trong hộp xác nhận. Sao lưu thư viện trước khi thực hiện.
 
 ## Cài đặt tài khoản {#account-settings}
 
@@ -211,7 +199,7 @@ Mở `EnjoyLibrary`, bạn sẽ thấy cấu trúc tương tự:
 │   │   └── ...
 ```
 
-- `/2400xxxx/`: ID tài khoản Enjoy đã đăng nhập. Thư mục chứa dữ liệu cá nhân tạo trong quá trình sử dụng.
+- `/2400xxxx/`: ID hồ sơ local, có thể giữ ID từ bản cũ. Thư mục chứa dữ liệu cá nhân tạo trong quá trình sử dụng.
   - `/2400xxxx/audios/`: tệp âm thanh đã thêm.
   - `/2400xxxx/speeches/`: tệp giọng nói do TTS tạo.
   - `/2400xxxx/videos/`: tệp video đã thêm.
@@ -236,21 +224,9 @@ Nhấn **Chi tiết** để xem dung lượng thư viện Enjoy đang sử dụn
 
 Nhấn **Giải phóng** để xóa hàng loạt tệp ghi âm và giải phóng dung lượng.
 
-### Nạp tiền {#deposit}
+### Tài khoản và chi phí provider {#deposit}
 
-::: info Đường dẫn cài đặt
-Cài đặt -> Tài khoản -> Số dư
-:::
-
-Một số dịch vụ AI của Enjoy **tính phí theo mức sử dụng**. Mỗi lần dùng, tài khoản bị trừ khoản tương ứng; khi số dư không đủ, dịch vụ đó dừng cung cấp.
-
-Nếu muốn tiếp tục, nhấn **Nạp tiền**.
-
-::: danger Trước khi nạp tiền
-Theo điều khoản được nêu trong tài liệu gốc, tiền nạp thành công được ghi vào số dư Enjoy. Số dư chỉ dùng để trả cho dịch vụ tính phí của Enjoy, **không hoàn lại** và **không rút ra được**.
-
-Hãy cân nhắc và chỉ nạp theo nhu cầu. Kiểm tra điều khoản hiển thị tại thời điểm thanh toán trước khi xác nhận.
-:::
+Bản này không có ví hoặc chức năng nạp tiền Enjoy. Hạn mức, quyền dùng mô hình và chi phí thuộc tài khoản provider bạn chọn. Cấu hình provider riêng không khôi phục dữ liệu chỉ còn trên server Enjoy; dùng file export bạn đã có để nhập dữ liệu được hỗ trợ.
 
 ## Phím tắt {#hotkeys}
 

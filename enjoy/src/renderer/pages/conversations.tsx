@@ -1,46 +1,42 @@
 import { t } from "i18next";
+import { useState, useEffect, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { MessageCirclePlusIcon, SpeechIcon, SparklesIcon } from "lucide-react";
+
 import {
-  Button,
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
   Sheet,
   SheetContent,
-  ScrollArea,
-  toast,
   SheetHeader,
   SheetTitle,
+  ScrollArea,
 } from "@renderer/components/ui";
-import { ConversationCard, ConversationForm } from "@renderer/components";
-import { useState, useEffect, useContext, useReducer } from "react";
-import { LoaderIcon } from "lucide-react";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { ConversationForm, ConversationList } from "@renderer/components";
 import {
-  DbProviderContext,
-  AppSettingsProviderContext,
+  EjButton,
+  EjPage,
+  EjPageHeader,
+  EjSectionHeader,
+} from "@renderer/components/enjoy";
+import {
   AISettingsProviderContext,
 } from "@renderer/context";
-import { conversationsReducer } from "@renderer/reducers";
 import { GPT_PRESETS } from "@/constants";
 
 export default () => {
-  const [searchParams] = useSearchParams();
-  const { addDblistener, removeDbListener } = useContext(DbProviderContext);
-  const { EnjoyApp, webApi } = useContext(AppSettingsProviderContext);
   const { currentGptEngine, ttsConfig } = useContext(AISettingsProviderContext);
   const getDefaultTtsConfig = () => ({
-    engine: "enjoyai",
-    model: "openai/tts-1",
+    engine: "needs-selection",
+    model: "",
     voice: "alloy",
     ...(ttsConfig || {}),
   });
   const defaultTtsConfig = getDefaultTtsConfig();
-  const [conversations, dispatchConversations] = useReducer(
-    conversationsReducer,
-    []
-  );
   const [creating, setCreating] = useState<boolean>(false);
   const [preset, setPreset] = useState<any>({});
   const [config, setConfig] = useState<any>({
@@ -58,99 +54,25 @@ export default () => {
       },
     },
   });
-  const [hasMore, setHasMore] = useState<boolean>(false);
-  const [loading, setLoading] = useState<boolean>(false);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    fetchConversations();
-    addDblistener(onConversationsUpdate);
-
-    return () => {
-      removeDbListener(onConversationsUpdate);
-    };
-  }, []);
-
-  useEffect(() => {
-    const postId = searchParams.get("postId");
-    if (!postId) return;
-
-    webApi.post(postId).then((post) => {
-      const preset: any = post.metadata.content;
-      if (!preset?.configuration?.roleDefinition) {
-        return;
-      }
-
-      setPreset(preset);
-      setCreating(true);
-    });
-  }, [searchParams.get("postId")]);
-
-  const fetchConversations = async () => {
-    const limit = 10;
-
-    setLoading(true);
-    EnjoyApp.conversations
-      .findAll({
-        order: [["updatedAt", "DESC"]],
-        limit,
-        offset: conversations?.length || 0,
-      })
-      .then((_conversations) => {
-        if (_conversations.length === 0) {
-          setHasMore(false);
-          return;
-        }
-
-        if (_conversations.length < limit) {
-          setHasMore(false);
-        } else {
-          setHasMore(true);
-        }
-
-        if (conversations.length === 0) {
-          dispatchConversations({ type: "set", records: _conversations });
-        } else {
-          dispatchConversations({ type: "append", records: _conversations });
-        }
-      })
-      .catch((error) => {
-        toast.error(error.message);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  };
-
-  const onConversationsUpdate = (event: CustomEvent) => {
-    const { model, action, record } = event.detail || {};
-    if (model != "Conversation") return;
-
-    if (action === "destroy") {
-      dispatchConversations({ type: "destroy", record });
-    } else if (action === "create") {
-      dispatchConversations({ type: "create", record });
-      navigate(`/conversations/${record.id}`);
-    }
-  };
-
   const preparePresets = async () => {
-    let presets = GPT_PRESETS;
+    const presets = GPT_PRESETS;
     const savedTtsConfig = getDefaultTtsConfig();
-    let defaultGptPreset = {
+    const defaultGptPreset = {
       key: "custom",
-      engine: currentGptEngine.name,
+      engine: (currentGptEngine?.name || "needs-selection"),
       name: t("custom"),
       configuration: {
         type: "gpt",
-        engine: currentGptEngine.name,
-        model: currentGptEngine.models.default,
+        engine: (currentGptEngine?.name || "needs-selection"),
+        model: (currentGptEngine?.models?.default || ""),
         tts: {
           ...savedTtsConfig,
         },
       },
     };
-    let defaultTtsPreset = {
+    const defaultTtsPreset = {
       key: "tts",
       name: "TTS",
       engine: savedTtsConfig.engine,
@@ -162,55 +84,12 @@ export default () => {
       },
     };
 
-    try {
-      const gptPresets: any[] = await webApi.config("gpt_presets");
-      const defaultGpt = await webApi.config("default_gpt_preset");
-      const defaultTts = await webApi.config("default_tts_preset");
-
-      if (gptPresets.length > 0) {
-        presets = [...gptPresets];
-      }
-
-      if (defaultGpt?.engine === currentGptEngine.name) {
-        defaultGpt.key = "custom";
-        defaultGpt.name = t("custom");
-        defaultGpt.configuration ||= {};
-        defaultGpt.configuration.model = currentGptEngine.models.default;
-        defaultGpt.configuration.tts = {
-          ...defaultGpt.configuration.tts,
-          ...savedTtsConfig,
-        };
-
-        defaultGptPreset = defaultGpt;
-      }
-
-      if (
-        defaultTts?.engine === savedTtsConfig.engine ||
-        defaultTts?.configuration?.tts?.engine === savedTtsConfig.engine
-      ) {
-        defaultTtsPreset = {
-          ...defaultTts,
-          engine: savedTtsConfig.engine,
-          configuration: {
-            ...defaultTts.configuration,
-            type: "tts",
-            tts: {
-              ...defaultTts.configuration?.tts,
-              ...savedTtsConfig,
-            },
-          },
-        };
-      }
-    } catch (error) {
-      console.error(error);
-    }
-
     const gptPresets = presets.map((preset) =>
       Object.assign({}, preset, {
         engine: currentGptEngine?.name,
         configuration: {
           ...preset.configuration,
-          model: currentGptEngine.models.default,
+          model: (currentGptEngine?.models?.default || ""),
           tts: {
             ...preset.configuration.tts,
             ...savedTtsConfig,
@@ -230,121 +109,123 @@ export default () => {
     preparePresets();
   }, [currentGptEngine, ttsConfig]);
 
+  const startWithPreset = (nextPreset: any) => {
+    setPreset(nextPreset);
+    setCreating(true);
+  };
+
+  const newConversationButton = (
+    <EjButton data-testid="conversation-new-button" variant="primary">
+      <MessageCirclePlusIcon className="size-3.5" />
+      {t("newConversation")}
+    </EjButton>
+  );
+
   return (
-    <div className="min-h-full px-4 py-6 lg:px-8 max-w-5xl mx-auto">
-      <div className="mb-6 flex justify-center">
-        <Dialog>
-          <DialogTrigger asChild>
-            <Button
-              data-testid="conversation-new-button"
-              className="h-12 rounded-lg w-96"
-            >
-              {t("newConversation")}
-            </Button>
-          </DialogTrigger>
+    <EjPage>
+      <Dialog>
+        <EjPageHeader
+          kicker={t("aiAssistant")}
+          title={t("conversations")}
+          description={t("aiAssistantDescription")}
+          actions={<DialogTrigger asChild>{newConversationButton}</DialogTrigger>}
+        />
 
-          <DialogContent aria-describedby={undefined}>
-            <DialogHeader>
-              <DialogTitle>{t("selectAiRole")}</DialogTitle>
-            </DialogHeader>
+        <DialogContent className="max-w-[560px]">
+          <DialogHeader>
+            <DialogTitle className="text-base font-bold text-ej-ink">
+              {t("chooseAiRole")}
+            </DialogTitle>
+            <DialogDescription className="text-xs text-ej-muted">
+              {t("chooseAiRoleDescription")}
+            </DialogDescription>
+          </DialogHeader>
 
-            <div data-testid="conversation-presets" className="">
-              <div className="text-sm text-foreground/70 mb-2">
-                {t("chooseFromPresetGpts")}
-              </div>
-              <ScrollArea className="h-64 pr-4">
+          <div data-testid="conversation-presets">
+            <div className="ej-label mb-2">{t("chooseFromPresetGpts")}</div>
+            <ScrollArea className="h-64 pr-3">
+              <div className="space-y-1.5">
                 {config.gptPresets.map((preset: any) => (
                   <DialogTrigger
                     key={preset.key}
                     data-testid={`conversation-preset-${preset.key}`}
                     asChild
-                    onClick={() => {
-                      setPreset(preset);
-                      setCreating(true);
-                    }}
+                    onClick={() => startWithPreset(preset)}
                   >
-                    <div className="w-full p-2 cursor-pointer rounded hover:bg-muted">
-                      <div className="capitalize truncate">{preset.name}</div>
+                    <div className="cursor-pointer rounded-[10px] border border-ej-line bg-ej-surface px-3.5 py-2.5 transition-colors duration-ej hover:border-ej-accent hover:bg-ej-accent-soft">
+                      <div className="truncate text-xs font-semibold capitalize text-ej-ink">
+                        {preset.name}
+                      </div>
                       {preset.configuration.roleDefinition && (
-                        <div className="line-clamp-1 text-xs text-foreground/70">
+                        <div className="mt-0.5 line-clamp-1 text-xxs text-ej-muted">
                           {preset.configuration.roleDefinition}
                         </div>
                       )}
                     </div>
                   </DialogTrigger>
                 ))}
-              </ScrollArea>
-            </div>
+              </div>
+            </ScrollArea>
+          </div>
 
-            <div className="grid grid-cols-2 gap-4 mb-6">
-              <DialogTrigger asChild>
-                <Button
-                  data-testid={`conversation-preset-${config.customPreset.key}`}
-                  onClick={() => {
-                    setPreset(config.customPreset);
-                    setCreating(true);
-                  }}
-                  variant="secondary"
+          <div className="grid grid-cols-2 gap-3">
+            <DialogTrigger
+              asChild
+              onClick={() => startWithPreset(config.customPreset)}
+            >
+              <EjButton
+                data-testid={`conversation-preset-${config.customPreset.key}`}
+                className="w-full"
+              >
+                <SparklesIcon className="size-3.5" />
+                {t("customRole")}
+              </EjButton>
+            </DialogTrigger>
+            {config.ttsPreset.key && (
+              <DialogTrigger
+                asChild
+                onClick={() => startWithPreset(config.ttsPreset)}
+              >
+                <EjButton
+                  data-testid={`conversation-preset-${config.ttsPreset.key}`}
                   className="w-full"
                 >
-                  {t("custom")} GPT
-                </Button>
+                  <SpeechIcon className="size-3.5" />
+                  {t("textToSpeech")}
+                </EjButton>
               </DialogTrigger>
-              {config.ttsPreset.key && (
-                <DialogTrigger asChild>
-                  <Button
-                    data-testid={`conversation-preset-${config.ttsPreset.key}`}
-                    onClick={() => {
-                      setPreset(config.ttsPreset);
-                      setCreating(true);
-                    }}
-                    variant="secondary"
-                    className="w-full"
-                  >
-                    TTS
-                  </Button>
-                </DialogTrigger>
-              )}
-            </div>
-          </DialogContent>
-        </Dialog>
+            )}
+          </div>
+        </DialogContent>
 
-        <Sheet open={creating} onOpenChange={(value) => setCreating(value)}>
-          <SheetContent className="p-0 pt-8" aria-describedby={undefined}>
-            <SheetHeader>
-              <SheetTitle className="sr-only">
-                {t("startConversation")}
-              </SheetTitle>
-            </SheetHeader>
-            <div className="h-content relative">
-              <ConversationForm
-                conversation={preset}
-                onFinish={() => setCreating(false)}
-              />
-            </div>
-          </SheetContent>
-        </Sheet>
-      </div>
+        <EjSectionHeader title={t("conversations")} className="mt-7" />
 
-      {conversations.map((conversation) => (
-        <Link key={conversation.id} to={`/conversations/${conversation.id}`}>
-          <ConversationCard conversation={conversation} />
-        </Link>
-      ))}
+        <ConversationList
+          onCreated={(conversation) =>
+            navigate(`/conversations/${conversation.id}`)
+          }
+          emptyAction={
+            <DialogTrigger asChild>{newConversationButton}</DialogTrigger>
+          }
+        />
+      </Dialog>
 
-      {hasMore && (
-        <div className="flex justify-center">
-          <Button
-            variant="ghost"
-            onClick={() => fetchConversations()}
-            disabled={loading || !hasMore}
-            className="px-4 py-2"
-          >
-            {t("loadMore")}
-            {loading && <LoaderIcon className="w-4 h-4 animate-spin ml-2" />}
-          </Button>
-        </div>
-      )}
-    </div>
+      <Sheet open={creating} onOpenChange={(value) => setCreating(value)}>
+        <SheetContent
+          className="w-[460px] p-0 pt-8 sm:max-w-[460px]"
+          aria-describedby={undefined}
+        >
+          <SheetHeader>
+            <SheetTitle className="sr-only">{t("startConversation")}</SheetTitle>
+          </SheetHeader>
+          <div className="h-content relative">
+            <ConversationForm
+              conversation={preset}
+              onFinish={() => setCreating(false)}
+            />
+          </div>
+        </SheetContent>
+      </Sheet>
+    </EjPage>
   );
 };

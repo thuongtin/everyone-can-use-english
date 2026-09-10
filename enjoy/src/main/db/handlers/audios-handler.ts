@@ -55,10 +55,6 @@ class AudiosHandler {
     });
     if (!audio) return;
 
-    if (!audio.isSynced) {
-      audio.sync().catch(() => {});
-    }
-
     return audio.toJSON();
   }
 
@@ -146,15 +142,6 @@ class AudiosHandler {
     return await audio.destroy();
   }
 
-  private async upload(event: IpcMainEvent, id: string) {
-    const audio = await Audio.findByPk(id);
-    if (!audio) {
-      throw new Error(t("models.audio.notFound"));
-    }
-
-    return await audio.upload();
-  }
-
   private async crop(
     _event: IpcMainEvent,
     id: string,
@@ -187,7 +174,6 @@ class AudiosHandler {
     ipcMain.handle("audios-create", this.create);
     ipcMain.handle("audios-update", this.update);
     ipcMain.handle("audios-destroy", this.destroy);
-    ipcMain.handle("audios-upload", this.upload);
     ipcMain.handle("audios-crop", this.crop);
     ipcMain.handle("audios-clean-up", this.cleanUp);
   }
@@ -198,7 +184,6 @@ class AudiosHandler {
     ipcMain.removeHandler("audios-create");
     ipcMain.removeHandler("audios-update");
     ipcMain.removeHandler("audios-destroy");
-    ipcMain.removeHandler("audios-upload");
     ipcMain.removeHandler("audios-crop");
     ipcMain.removeHandler("audios-clean-up");
   }

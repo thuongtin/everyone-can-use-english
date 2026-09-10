@@ -11,10 +11,12 @@ test.describe.configure({ mode: "serial" });
 
 let fixture: IsolatedApp | undefined;
 
+const DICTIONARY_LINK = "Mở từ điển song ngữ (không cần hồ sơ)";
+
 const openDictionary = async () => {
   const page = fixture!.page;
-  await expect(page.getByRole("link", { name: "Mở từ điển offline" })).toBeVisible();
-  await page.getByRole("link", { name: "Mở từ điển offline" }).click();
+  await expect(page.getByRole("link", { name: DICTIONARY_LINK })).toBeVisible();
+  await page.getByRole("link", { name: DICTIONARY_LINK }).click();
   await expect(page.getByTestId("bilingual-panel")).toBeVisible();
 };
 
@@ -43,9 +45,10 @@ test("looks up English and Vietnamese entries and persists direction after relau
   const page = fixture!.page;
   await openDictionary();
 
-  const direction = page.getByLabel("Chiều tra cứu");
+  const enViTab = page.getByRole("tab", { name: "Anh - Việt" });
+  const viEnTab = page.getByRole("tab", { name: "Việt - Anh" });
   const query = page.getByLabel("Từ hoặc cụm từ");
-  const search = page.getByRole("button", { name: "Tra từ" });
+  const search = page.getByRole("button", { name: "Tra", exact: true });
 
   const englishEntries = await page.evaluate(() =>
     window.__ENJOY_APP__.bilingual.lookup("en-vi", "learn")
@@ -53,7 +56,7 @@ test("looks up English and Vietnamese entries and persists direction after relau
   expect(englishEntries.length).toBeGreaterThan(0);
   expect(JSON.stringify(englishEntries)).toContain("Học");
 
-  await direction.selectOption("en-vi");
+  await enViTab.click();
   await query.fill("learn");
   await search.click();
   await expect(page.getByTestId("bilingual-result")).toContainText("learn");
@@ -65,20 +68,22 @@ test("looks up English and Vietnamese entries and persists direction after relau
   expect(vietnameseEntries.length).toBeGreaterThan(0);
   expect(JSON.stringify(vietnameseEntries)).toContain("to study; to learn");
 
-  await direction.selectOption("vi-en");
+  await viEnTab.click();
   await query.fill("học");
   await search.click();
   await expect(page.getByTestId("bilingual-result")).toContainText("học");
   await expect(page.getByTestId("bilingual-result")).toContainText("to study; to learn");
-  await expect(direction).toHaveValue("vi-en");
+  await expect(viEnTab).toHaveAttribute("aria-selected", "true");
 
   await fixture!.restart();
   await openDictionary();
   const relaunchedPage = fixture!.page;
-  await expect(relaunchedPage.getByLabel("Chiều tra cứu")).toHaveValue("vi-en");
+  await expect(
+    relaunchedPage.getByRole("tab", { name: "Việt - Anh" })
+  ).toHaveAttribute("aria-selected", "true");
 
   await relaunchedPage.getByLabel("Từ hoặc cụm từ").fill("học");
-  await relaunchedPage.getByRole("button", { name: "Tra từ" }).click();
+  await relaunchedPage.getByRole("button", { name: "Tra", exact: true }).click();
   await expect(relaunchedPage.getByTestId("bilingual-result")).toContainText("to study; to learn");
   await relaunchedPage.screenshot({ path: testInfo.outputPath("offline-dictionary.png") });
 });

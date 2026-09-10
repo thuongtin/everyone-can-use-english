@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext, useEffect, useRef } from "react";
 import { useTranscribe } from "@renderer/hooks";
 import {
   AISettingsProviderContext,
@@ -10,22 +10,43 @@ import { TimelineEntry } from "echogarden/dist/utilities/Timeline.d.js";
 import { MAGIC_TOKEN_REGEX, END_OF_SENTENCE_REGEX } from "@/constants";
 import { SttEngineOptionEnum } from "@/types/enums";
 import { t } from "i18next";
+import { isLearningAsrEngine } from "@/lib/learning-asr-models";
+import { resolveTranscriptionProviderSelection } from "@/lib/provider-selection-migration";
 
 export const useTranscriptions = (media: AudioType | VideoType) => {
   const { sttEngine } = useContext(AISettingsProviderContext);
-  const { EnjoyApp, learningLanguage, webApi } = useContext(
-    AppSettingsProviderContext
+  const { EnjoyApp, learningLanguage } = useContext(
+    AppSettingsProviderContext,
   );
-  const { addDblistener, removeDbListener } = useContext(DbProviderContext);
+  const { connection, addDblistener, removeDbListener } = useContext(DbProviderContext);
   const [transcription, setTranscription] = useState<TranscriptionType>(null);
-  const { transcribe, output } = useTranscribe();
+  const {
+    transcribe,
+    cancel: cancelTranscription,
+    ensureActive,
+    output,
+    progress,
+  } = useTranscribe();
   const [transcribingProgress, setTranscribingProgress] = useState<number>(0);
   const [transcribing, setTranscribing] = useState<boolean>(false);
+  const [committing, setCommitting] = useState<boolean>(false);
   const [creating, setCreating] = useState<boolean>(false);
   const [transcribingOutput, setTranscribingOutput] = useState<string>("");
-  const [service, setService] = useState<SttEngineOptionEnum | "upload">(
-    sttEngine
+  const [service, setService] = useState<
+    SttEngineOptionEnum | "upload" | null
+  >(
+    sttEngine,
   );
+  const generationRef = useRef(0);
+  const committingRef = useRef(false);
+  const connectionRef = useRef({
+    profileId: connection?.profileId,
+    connectionId: connection?.connectionId,
+  });
+  connectionRef.current = {
+    profileId: connection?.profileId,
+    connectionId: connection?.connectionId,
+  };
 
   const onTransactionUpdate = (event: CustomEvent) => {
     if (!transcription) return;
@@ -58,25 +79,8 @@ export const useTranscriptions = (media: AudioType | VideoType) => {
           };
         }
 
-        const transcriptionOnline = await findTranscriptionOnline();
-        if (transcriptionOnline && !tr?.result?.timeline) {
-          await EnjoyApp.transcriptions.update(tr.id, {
-            state: "finished",
-            result: transcriptionOnline.result,
-            engine: transcriptionOnline.engine,
-            model: transcriptionOnline.model,
-            language: transcriptionOnline.language || media.language,
-          });
-          setTranscription(transcriptionOnline);
-          toast.success(t("downloadedTranscriptionFromCloud"));
-          if (transcribing) {
-            abortGenerateTranscription();
-          }
-          return transcriptionOnline;
-        } else {
-          setTranscription(tr);
-          return tr;
-        }
+        setTranscription(tr);
+        return tr;
       } catch (err) {
         console.error(err);
         return null;
@@ -85,71 +89,83 @@ export const useTranscriptions = (media: AudioType | VideoType) => {
       }
     };
 
-  const findTranscriptionOnline = async () => {
-    if (!media) return;
-
-    try {
-      const result = await webApi.transcriptions({
-        targetMd5: media.md5,
-        items: 10,
-      });
-      if (result.transcriptions.length) {
-        for (const tr of result.transcriptions) {
-          if (validateTranscription(tr)) {
-            return tr;
-          } else {
-            console.warn(`Invalid transcription: ${tr.id}`);
-          }
-        }
-      } else {
-        return null;
-      }
-    } catch (err) {
-      console.error(err);
-      return null;
-    }
-  };
-
   const generateTranscription = async (params?: {
     originalText?: string;
     language?: string;
     service?: SttEngineOptionEnum | "upload";
     isolate?: boolean;
   }) => {
+    if (committingRef.current) return;
+    const generation = generationRef.current + 1;
+    generationRef.current = generation;
+    committingRef.current = false;
+    const boundConnection = { ...connectionRef.current };
+    const assertCurrentGeneration = () => {
+      if (
+        generation !== generationRef.current ||
+        boundConnection.profileId !== connectionRef.current.profileId ||
+        boundConnection.connectionId !== connectionRef.current.connectionId
+      ) {
+        throw new Error(t("learningAsrCancelled"));
+      }
+    };
     let {
       originalText,
-      language = learningLanguage,
       service = sttEngine,
-      isolate = false,
     } = params || {};
-    setService(service);
-    setTranscribing(true);
-    setTranscribingProgress(0);
-
+    const { language = learningLanguage, isolate = false } = params || {};
+    let transcriptionForCommit = transcription;
     try {
+      if (service !== "upload") {
+        const selection = resolveTranscriptionProviderSelection(service);
+        if (selection.status !== "configured") {
+          throw new Error(t("models.chat.sttAiServicePlaceholder"));
+        }
+        service = selection.value as SttEngineOptionEnum;
+      }
+      setService(service);
+      setTranscribing(true);
+      setTranscribingProgress(0);
       if (originalText === undefined) {
         if (transcription?.targetId === media.id) {
           originalText = transcription.result?.originalText;
         } else {
           const r = await findOrCreateTranscription();
+          assertCurrentGeneration();
           if (r) {
+            transcriptionForCommit = r;
             originalText = r.result?.originalText;
           }
         }
       }
-      const { engine, model, transcript, timeline, tokenId } = await transcribe(
-        media.src,
-        {
-          targetId: media.id,
-          targetType: media.mediaType,
-          originalText,
-          language,
-          service,
-          isolate,
-        }
-      );
+      assertCurrentGeneration();
+      const {
+        engine,
+        model,
+        transcript,
+        timeline,
+        validation,
+        tokenId,
+        runVersion,
+      } = await transcribe(media.src, {
+        targetId: media.id,
+        targetType: media.mediaType,
+        originalText,
+        language,
+        service,
+        isolate,
+      });
+      assertCurrentGeneration();
+      ensureActive(runVersion);
 
-      const processedTimeline = preProcessTranscription(timeline);
+      if (isLearningAsrEngine(service) && !validation) {
+        throw new Error(t("learningAsrInvalidResponse"));
+      }
+      const processedTimeline = validation
+        ? timeline
+        : preProcessTranscription(timeline);
+      assertCurrentGeneration();
+      ensureActive(runVersion);
       if (media.language !== language) {
         if (media.mediaType === "Video") {
           await EnjoyApp.videos.update(media.id, {
@@ -160,25 +176,40 @@ export const useTranscriptions = (media: AudioType | VideoType) => {
             language,
           });
         }
+        assertCurrentGeneration();
+        ensureActive(runVersion);
       }
 
-      await EnjoyApp.transcriptions.update(transcription.id, {
+      assertCurrentGeneration();
+      ensureActive(runVersion);
+      if (!transcriptionForCommit?.id) {
+        throw new Error(t("models.transcription.notFound"));
+      }
+      committingRef.current = true;
+      setCommitting(true);
+      await EnjoyApp.transcriptions.update(transcriptionForCommit.id, {
         state: "finished",
         result: {
           timeline: processedTimeline,
           transcript,
           originalText,
           tokenId,
+          ...(validation ? { validation } : {}),
         },
         engine,
         model,
         language,
       });
-
-      setTranscribing(false);
     } catch (err) {
-      setTranscribing(false);
-      toast.error(err.message);
+      if (generation === generationRef.current) {
+        toast.error(err.message);
+      }
+    } finally {
+      if (generation === generationRef.current) {
+        committingRef.current = false;
+        setCommitting(false);
+        setTranscribing(false);
+      }
     }
   };
 
@@ -235,7 +266,7 @@ export const useTranscriptions = (media: AudioType | VideoType) => {
                   connector = "-";
                 }
                 token.text = [token.text, sentence.timeline[k].text].join(
-                  connector
+                  connector,
                 );
                 token.timeline = [
                   ...token.timeline,
@@ -252,25 +283,10 @@ export const useTranscriptions = (media: AudioType | VideoType) => {
     } catch (err) {
       console.warn(err);
       toast.warning(
-        `Failed to pre-process transcription timeline: ${err.message}`
+        `Failed to pre-process transcription timeline: ${err.message}`,
       );
     }
     return timeline;
-  };
-
-  const validateTranscription = (transcription: TranscriptionType) => {
-    if (!transcription) return;
-
-    const { timeline, transcript } = transcription.result;
-    if (!timeline || !transcript) {
-      return false;
-    }
-
-    if (timeline[0]?.type !== "sentence") {
-      return false;
-    }
-
-    return true;
   };
 
   /*
@@ -310,7 +326,20 @@ export const useTranscriptions = (media: AudioType | VideoType) => {
     };
   }, [media, service, transcribing]);
 
+  useEffect(() => {
+    if (transcribing) setTranscribingProgress(progress);
+  }, [progress, transcribing]);
+
+  useEffect(() => {
+    return () => {
+      generationRef.current += 1;
+    };
+  }, [connection?.connectionId, connection?.profileId]);
+
   const abortGenerateTranscription = () => {
+    if (committingRef.current) return;
+    generationRef.current += 1;
+    void cancelTranscription();
     setTranscribing(false);
   };
 
@@ -318,6 +347,7 @@ export const useTranscriptions = (media: AudioType | VideoType) => {
     transcription,
     transcribingProgress,
     transcribing,
+    committing,
     transcribingOutput: output || transcribingOutput,
     generateTranscription,
     abortGenerateTranscription,

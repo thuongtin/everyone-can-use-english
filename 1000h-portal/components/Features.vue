@@ -73,8 +73,8 @@ const features = ref([
   },
   {
     icon: "/portal-static/images/cham.png",
-    title: "Cùng cộng đồng luyện tập",
-    subtitle: "Cùng những người học khác tiến bộ qua mỗi ngày, mỗi tuần, mỗi tháng.",
+    title: "Theo dõi việc học trên máy",
+    subtitle: "Giữ lịch sử học trong hồ sơ local và theo dõi tiến bộ của chính bạn.",
   },
 ]);
 </script>
@@ -130,24 +130,6 @@ const features = ref([
       }
     }
 
-    .compitition {
-      color: #fff;
-      background-image: url("/portal-static/images/bg-features.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: relative;
-      overflow: hidden;
-
-      &::after {
-        content: "";
-        position: absolute;
-        top: 48px;
-        right: -20px;
-        width: 824px;
-        height: 448px;
-        background-image: url("/portal-static/images/rank.png");
-      }
-    }
   }
 }
 </style>

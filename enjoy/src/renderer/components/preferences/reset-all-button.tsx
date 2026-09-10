@@ -35,7 +35,7 @@ export const ResetAllButton = (props: { children: React.ReactNode }) => {
         <AlertDialogFooter>
           <AlertDialogCancel>{t("cancel")}</AlertDialogCancel>
           <AlertDialogAction
-            className="bg-destructive hover:bg-destructive-hover"
+            className="bg-ej-bad hover:opacity-90"
             onClick={reset}
           >
             {t("resetAll")}
@@ -72,7 +72,7 @@ export const ResetSettingsButton = (props: { children: React.ReactNode }) => {
         <AlertDialogFooter>
           <AlertDialogCancel>{t("cancel")}</AlertDialogCancel>
           <AlertDialogAction
-            className="bg-destructive hover:bg-destructive-hover"
+            className="bg-ej-bad hover:opacity-90"
             onClick={reset}
           >
             {t("resetSettings")}

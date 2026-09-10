@@ -10,7 +10,7 @@ import {
   WandIcon,
   XIcon,
 } from "lucide-react";
-import { Button, Textarea } from "@renderer/components/ui";
+import { Textarea } from "@renderer/components/ui";
 import { useContext, useEffect, useRef, useState } from "react";
 import { LiveAudioVisualizer } from "react-audio-visualize";
 import {
@@ -23,6 +23,14 @@ import autosize from "autosize";
 import { ChatMentioning, ChatSuggestionButton } from "@renderer/components";
 import { useHotkeys } from "react-hotkeys-hook";
 import { ChatTypeEnum } from "@/types/enums";
+import { cn } from "@renderer/lib/utils";
+import { EjIconButton } from "@renderer/components/enjoy";
+
+const Kbd = (props: { children: React.ReactNode }) => (
+  <span className="rounded border border-ej-line bg-ej-surface2 px-1 py-px text-xxxs font-medium text-ej-ink2">
+    {props.children}
+  </span>
+);
 
 export const ChatInput = () => {
   const {
@@ -119,10 +127,29 @@ export const ChatInput = () => {
     }
   );
 
+  const timer = `${Math.floor(recordingTime / 60)}:${String(
+    recordingTime % 60
+  ).padStart(2, "0")}`;
+
+  const hints = (
+    <div className="mt-1.5 flex items-center justify-center gap-3 text-xxxs text-ej-muted">
+      <span className="flex items-center gap-1">
+        <Kbd>Enter</Kbd>
+        {t("send")}
+      </span>
+      <span className="flex items-center gap-1">
+        <Kbd>{currentHotkeys.StartOrStopRecording}</Kbd>
+        {t("record")}
+      </span>
+    </div>
+  );
+
   if (isRecording) {
     return (
-      <div className="z-10 w-full flex justify-center">
-        <div className="flex items-center space-x-2">
+      <div className="z-10 w-full">
+        <div className="w-full flex items-center gap-2.5 px-2.5 py-2 rounded-[14px] bg-ej-bad text-white shadow-ej">
+          <span className="size-2 shrink-0 rounded-full bg-white animate-ej-pulse" />
+
           <LiveAudioVisualizer
             mediaRecorder={mediaRecorder}
             barWidth={2}
@@ -133,51 +160,45 @@ export const ChatInput = () => {
             maxDecibels={-10}
             minDecibels={-80}
             smoothingTimeConstant={0.4}
+            barColor="rgba(255,255,255,0.85)"
           />
-          <span className="text-sm text-muted-foreground">
-            {Math.floor(recordingTime / 60)}:
-            {String(recordingTime % 60).padStart(2, "0")}
-          </span>
-          <Button
+
+          <div className="flex-1 min-w-0 text-xs truncate">
+            {t("recordingVoiceMessage")}
+            <span className="ej-tabular"> · {timer}</span>
+          </div>
+
+          <button
+            type="button"
             data-tooltip-id={`${chat.id}-tooltip`}
             data-tooltip-content={t("cancel")}
             onClick={cancelRecording}
-            className="rounded-full shadow w-8 h-8 bg-red-500 hover:bg-red-600"
-            variant="secondary"
-            size="icon"
+            className="size-8 shrink-0 rounded-full bg-white/15 hover:bg-white/25 inline-flex items-center justify-center transition-colors duration-ej"
           >
-            <XIcon fill="white" className="w-4 h-4 text-white" />
-          </Button>
-          <Button
+            <XIcon className="size-4" />
+          </button>
+          <button
+            type="button"
+            data-tooltip-id={`${chat.id}-tooltip`}
+            data-tooltip-content={isPaused ? t("continue") : t("pause")}
             onClick={togglePauseResume}
-            className="rounded-full shadow w-8 h-8"
-            size="icon"
+            className="size-8 shrink-0 rounded-full bg-white/15 hover:bg-white/25 inline-flex items-center justify-center transition-colors duration-ej"
           >
             {isPaused ? (
-              <PlayIcon
-                data-tooltip-id={`${chat.id}-tooltip`}
-                data-tooltip-content={t("continue")}
-                fill="white"
-                className="w-4 h-4"
-              />
+              <PlayIcon className="size-4 fill-current" />
             ) : (
-              <PauseIcon
-                data-tooltip-id={`${chat.id}-tooltip`}
-                data-tooltip-content={t("pause")}
-                fill="white"
-                className="w-4 h-4"
-              />
+              <PauseIcon className="size-4 fill-current" />
             )}
-          </Button>
-          <Button
+          </button>
+          <button
+            type="button"
             data-tooltip-id={`${chat.id}-tooltip`}
             data-tooltip-content={t("finish")}
             onClick={stopRecording}
-            className="rounded-full bg-green-500 hover:bg-green-600 shadow w-8 h-8"
-            size="icon"
+            className="size-8 shrink-0 rounded-full bg-white text-ej-bad hover:opacity-90 inline-flex items-center justify-center transition-opacity duration-ej"
           >
-            <CheckIcon className="w-4 h-4 text-white" />
-          </Button>
+            <CheckIcon className="size-4" />
+          </button>
         </div>
       </div>
     );
@@ -197,49 +218,48 @@ export const ChatInput = () => {
         }}
         onCancel={() => setContent("")}
       >
-        <div className="z-10 w-full mx-4">
+        <div className="z-10 w-full">
           {mentioned.length > 0 && (
-            <div className="w-full bg-purple-300 rounded px-4 py-2 mb-1 opacity-80 hover:opacity-100">
+            <div className="w-full rounded-ej border border-ej-accent-soft2 bg-ej-accent-soft px-3 py-2 mb-1.5">
               {mentioned.map((chatAgent) => (
                 <div
-                  className="flex items-center justify-between"
+                  className="flex items-center justify-between gap-2"
                   key={chatAgent.id}
                 >
-                  <div className="text-sm text-purple-700">
+                  <div className="flex-1 min-w-0 text-xs text-ej-accent-ink truncate">
                     {chatAgents.findIndex((ca) => ca.id === chatAgent.id) > -1
                       ? t("askAgentToReply", { name: chatAgent.name })
                       : t("inviteAgentInChatAndReply", {
                           name: chatAgent.name,
                         })}
                   </div>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    className="w-6 h-6 text-purple-700 hover:bg-transparent hover:text-purple-900"
+                  <EjIconButton
+                    size={22}
+                    className="text-ej-accent-ink"
                     onClick={() =>
                       setMentioned(
                         mentioned.filter((ca) => ca.id !== chatAgent.id)
                       )
                     }
                   >
-                    <XIcon className="w-4 h-4" />
-                  </Button>
+                    <XIcon className="size-3.5" />
+                  </EjIconButton>
                 </div>
               ))}
             </div>
           )}
-          <div className="w-full flex items-end gap-2 px-2 py-2 bg-muted rounded-3xl shadow-lg">
-            <Button
+
+          <div className="w-full flex items-end gap-1 px-2 py-2 rounded-[14px] border border-ej-line bg-ej-surface shadow-ej">
+            <EjIconButton
+              size={32}
               data-tooltip-id={`${chat.id}-tooltip`}
               data-tooltip-content={t("audioInput")}
               disabled={submitting}
               onClick={() => setInputMode("audio")}
-              variant="ghost"
-              className=""
-              size="icon"
             >
-              <MicIcon className="w-6 h-6" />
-            </Button>
+              <MicIcon className="size-[18px]" />
+            </EjIconButton>
+
             <Textarea
               ref={inputRef}
               value={content}
@@ -247,10 +267,12 @@ export const ChatInput = () => {
               disabled={submitting}
               placeholder={t("pressEnterToSend")}
               data-testid="chat-input"
-              className="flex-1 h-8 text-muted-foreground rounded-lg text-sm leading-7 px-0 py-1 shadow-none focus-visible:outline-0 focus-visible:ring-0 border-none min-h-[2.25rem] max-h-[70vh] scrollbar-thin !overflow-x-hidden"
+              className="flex-1 bg-transparent text-ej-ink placeholder:text-ej-muted rounded-lg text-sm leading-6 px-1.5 py-1.5 shadow-none focus-visible:outline-0 focus-visible:ring-0 border-none min-h-8 max-h-[40vh] scrollbar-thin !overflow-x-hidden resize-none"
             />
-            <Button
+
+            <button
               ref={submitRef}
+              type="button"
               data-tooltip-id={`${chat.id}-tooltip`}
               data-tooltip-content={t("send")}
               onClick={() =>
@@ -260,90 +282,106 @@ export const ChatInput = () => {
                 })
               }
               disabled={submitting || !content.trim() || content === "@"}
-              className="rounded-full shadow w-8 h-8"
-              variant="default"
-              size="icon"
+              className={cn(
+                "size-8 shrink-0 rounded-full inline-flex items-center justify-center transition-all duration-ej",
+                "disabled:pointer-events-none",
+                content.trim() && content !== "@"
+                  ? "bg-ej-ink text-ej-bg hover:opacity-90"
+                  : "bg-ej-surface2 text-ej-muted"
+              )}
             >
               {submitting ? (
-                <LoaderIcon className="w-6 h-6 animate-spin" />
+                <LoaderIcon className="size-4 animate-spin" />
               ) : (
-                <ArrowUpIcon className="w-6 h-6" />
+                <ArrowUpIcon className="size-4" />
               )}
-            </Button>
+            </button>
+
             {chat.config.enableChatAssistant && (
               <ChatSuggestionButton chat={chat} asChild>
-                <Button
+                <EjIconButton
+                  size={32}
                   data-tooltip-id={`${chat.id}-tooltip`}
                   data-tooltip-content={t("suggestion")}
-                  className="rounded-full w-8 h-8"
-                  variant="ghost"
-                  size="icon"
                 >
-                  <WandIcon className="w-6 h-6" />
-                </Button>
+                  <WandIcon className="size-[18px]" />
+                </EjIconButton>
               </ChatSuggestionButton>
             )}
 
             {chat.type === ChatTypeEnum.GROUP && (
-              <Button
+              <EjIconButton
+                size={32}
                 data-tooltip-id={`${chat.id}-tooltip`}
                 data-tooltip-content={t("continue")}
                 disabled={submitting}
                 onClick={() => askAgent({ force: true })}
-                className=""
-                variant="ghost"
-                size="icon"
               >
-                <StepForwardIcon className="w-6 h-6" />
-              </Button>
+                <StepForwardIcon className="size-[18px]" />
+              </EjIconButton>
             )}
           </div>
+
+          {hints}
         </div>
       </ChatMentioning>
     );
   }
 
   return (
-    <div className="w-full flex items-center gap-4 justify-center relative">
-      <Button
-        data-tooltip-id={`${chat.id}-tooltip`}
-        data-tooltip-content={t("textInput")}
-        disabled={submitting}
-        onClick={() => setInputMode("text")}
-        className="rounded-full shadow-lg w-8 h-8"
-        variant="secondary"
-        size="icon"
-      >
-        <TypeIcon className="w-4 h-4" />
-      </Button>
-      <Button
-        data-tooltip-id={`${chat.id}-tooltip`}
-        data-tooltip-content={t("record")}
-        disabled={submitting}
-        onClick={startRecording}
-        className="rounded-full shadow-lg w-10 h-10"
-        size="icon"
-      >
-        {submitting ? (
-          <LoaderIcon className="w-6 h-6 animate-spin" />
-        ) : (
-          <MicIcon className="w-6 h-6" />
-        )}
-      </Button>
-      {chat.config.enableChatAssistant && <ChatSuggestionButton chat={chat} />}
-      {chat.type === ChatTypeEnum.GROUP && (
-        <Button
+    <div className="z-10 w-full">
+      <div className="w-full flex items-center justify-center gap-3 px-2.5 py-2.5 rounded-[14px] border border-ej-line bg-ej-surface shadow-ej">
+        <EjIconButton
+          size={32}
           data-tooltip-id={`${chat.id}-tooltip`}
-          data-tooltip-content={t("continue")}
+          data-tooltip-content={t("textInput")}
           disabled={submitting}
-          onClick={() => askAgent({ force: true })}
-          className="rounded-full shadow-lg w-8 h-8"
-          variant="default"
-          size="icon"
+          onClick={() => setInputMode("text")}
         >
-          <StepForwardIcon className="w-4 h-4" />
-        </Button>
-      )}
+          <TypeIcon className="size-[18px]" />
+        </EjIconButton>
+
+        <button
+          type="button"
+          data-tooltip-id={`${chat.id}-tooltip`}
+          data-tooltip-content={t("record")}
+          disabled={submitting}
+          onClick={startRecording}
+          className="size-11 rounded-full bg-ej-bad text-white inline-flex items-center justify-center transition-opacity duration-ej hover:opacity-90 disabled:opacity-40 disabled:pointer-events-none"
+        >
+          {submitting ? (
+            <LoaderIcon className="size-5 animate-spin" />
+          ) : (
+            <MicIcon className="size-5" />
+          )}
+        </button>
+
+        {chat.config.enableChatAssistant && (
+          <ChatSuggestionButton chat={chat} asChild>
+            <EjIconButton
+              size={32}
+              data-tooltip-id={`${chat.id}-tooltip`}
+              data-tooltip-content={t("suggestion")}
+            >
+              <WandIcon className="size-[18px]" />
+            </EjIconButton>
+          </ChatSuggestionButton>
+        )}
+
+        {chat.type === ChatTypeEnum.GROUP && (
+          <EjIconButton
+            size={32}
+            data-tooltip-id={`${chat.id}-tooltip`}
+            data-tooltip-content={t("continue")}
+            disabled={submitting}
+            onClick={() => askAgent({ force: true })}
+          >
+            <StepForwardIcon className="size-[18px]" />
+          </EjIconButton>
+        )}
+      </div>
+
+      {hints}
     </div>
   );
 };

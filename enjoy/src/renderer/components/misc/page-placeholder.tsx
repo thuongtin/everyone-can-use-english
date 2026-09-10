@@ -1,6 +1,6 @@
-import { AlertTriangle } from "lucide-react";
+import { AlertTriangleIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { Button } from "@renderer/components/ui/button";
+import { EjButton } from "@renderer/components/enjoy";
 import { t } from "i18next";
 
 export const PagePlaceholder = (props: {
@@ -11,22 +11,27 @@ export const PagePlaceholder = (props: {
   const { placeholder, extra, showBackButton } = props;
   const navigate = useNavigate();
 
-  const goBack = () => {
-    navigate(-1);
-  };
   return (
-    <div className="flex h-full shrink-0 items-center justify-center rounded-md border border-dashed">
+    <div className="flex h-full shrink-0 items-center justify-center rounded-[20px] border border-dashed border-ej-line2 bg-ej-surface px-6 py-14">
       <div className="mx-auto flex max-w-[420px] flex-col items-center justify-center text-center">
-        <AlertTriangle className="h-10 w-10 text-muted-foreground" />
+        <AlertTriangleIcon className="size-9 text-ej-warn" />
 
-        <h3 className="mt-4 text-lg font-semibold">
+        <h3 className="mt-4 text-base font-bold text-ej-ink">
           {placeholder || t("notReadyYet")}
         </h3>
-        <p className="mb-4 mt-2 text-sm text-muted-foreground">{extra}</p>
+        {extra && (
+          <p className="mt-2 select-text break-words text-xs leading-relaxed text-ej-muted">
+            {extra}
+          </p>
+        )}
         {showBackButton && (
-          <Button onClick={goBack} variant="secondary">
+          <EjButton
+            variant="secondary"
+            className="mt-4"
+            onClick={() => navigate(-1)}
+          >
             {t("goBack")}
-          </Button>
+          </EjButton>
         )}
       </div>
     </div>

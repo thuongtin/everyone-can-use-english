@@ -1,267 +1,184 @@
 import { t } from "i18next";
-import { ScrollArea, toast } from "@renderer/components/ui";
-import {
-  LoaderSpin,
-  PagePlaceholder,
-  StoryToolbar,
-  StoryViewer,
-  StoryVocabularySheet,
-} from "@renderer/components";
-import { useState, useContext, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { toast } from "@renderer/components/ui";
+import { LoaderSpin, PagePlaceholder, StoryToolbar, StoryViewer, StoryVocabularySheet } from "@renderer/components";
+import { useCallback, useContext, useEffect, useMemo, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { AppSettingsProviderContext } from "@renderer/context";
 import { useAiCommand } from "@renderer/hooks";
 import nlp from "compromise";
 import paragraphs from "compromise-paragraphs";
+import type { LocalMeaning, LocalStory, LocalStudyExtraction, LocalStudyLookup } from "../../types/local-study-api";
+
 nlp.plugin(paragraphs);
 
+const pendingFor = (story: LocalStory | undefined, document: any, meanings: LocalMeaning[]): LocalStudyLookup[] => {
+  if (!story?.extraction || !document) return [];
+  const completed = new Set(meanings.map((meaning) => meaning.word.toLocaleLowerCase()));
+  const pending = new Map<string, LocalStudyLookup>();
+  for (const word of [...story.extraction.words, ...story.extraction.idioms]) {
+    if (completed.has(word.toLocaleLowerCase())) continue;
+    const sentences = document.lookup(word).sentences().json();
+    for (const sentence of sentences) {
+      const context = String(sentence.text || "").trim();
+      if (!context) continue;
+      pending.set(`${word.toLocaleLowerCase()}\n${context}`, { word, context, status: "pending" });
+    }
+  }
+  return [...pending.values()];
+};
+
 export default () => {
-  const { id } = useParams<{ id: string }>();
-  const { webApi } = useContext(AppSettingsProviderContext);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [story, setStory] = useState<StoryType>();
-  const [meanings, setMeanings] = useState<MeaningType[]>([]);
-  const [pendingLookups, setPendingLookups] = useState<Partial<LookupType>[]>(
-    []
-  );
-  const [scanning, setScanning] = useState<boolean>(true);
-  const [marked, setMarked] = useState<boolean>(true);
-  const [doc, setDoc] = useState<any>(null);
-  const [vocabularyVisible, setVocabularyVisible] = useState<boolean>(false);
-  const [lookingUpInBatch, setLookupInBatch] = useState<boolean>(false);
-  const [lookingUp, setLookingUp] = useState<boolean>(false);
+  const { id = "" } = useParams<{ id: string }>();
+  const navigate = useNavigate();
+  const { EnjoyApp } = useContext(AppSettingsProviderContext);
+  const [loading, setLoading] = useState(true);
+  const [story, setStory] = useState<LocalStory>();
+  const [meanings, setMeanings] = useState<LocalMeaning[]>([]);
+  const [scanning, setScanning] = useState(false);
+  const [extractionFailed, setExtractionFailed] = useState(false);
+  const [marked, setMarked] = useState(true);
+  const [vocabularyVisible, setVocabularyVisible] = useState(false);
+  const [lookingUpInBatch, setLookupInBatch] = useState(false);
+  const [lookingUp, setLookingUp] = useState(false);
   const { lookupWord, extractStory } = useAiCommand();
 
-  const fetchStory = async () => {
-    webApi
-      .story(id)
-      .then((story) => {
-        setStory(story);
-        setVocabularyVisible(!story.extracted);
-        const doc = nlp(story.content);
-        doc.cache();
-        setDoc(doc);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  };
+  const document = useMemo(() => {
+    if (!story?.content) return null;
+    const parsed = nlp(story.content);
+    parsed.cache();
+    return parsed;
+  }, [story?.content]);
+  const pendingLookups = useMemo(() => pendingFor(story, document, meanings), [story, document, meanings]);
 
-  const fetchMeanings = async () => {
-    setScanning(true);
-    webApi
-      .storyMeanings(id, { items: 500 })
-      .then((response) => {
-        if (!response) return;
+  const fetchStory = useCallback(async () => {
+    try {
+      const localStory = await EnjoyApp.localStudy.stories.get(id);
+      setStory(localStory);
+      setVocabularyVisible(!localStory.extracted);
+    } catch {
+      setStory(undefined);
+    } finally {
+      setLoading(false);
+    }
+  }, [EnjoyApp, id]);
 
-        setMeanings(response.meanings);
-        setPendingLookups(response.pendingLookups || []);
-      })
-      .finally(() => {
-        setScanning(false);
-      });
-  };
+  const fetchMeanings = useCallback(async () => {
+    const response = await EnjoyApp.localStudy.meanings.list({ storyId: id, page: 1, items: 100 });
+    setMeanings(response.meanings);
+  }, [EnjoyApp, id]);
 
   const extractVocabulary = async () => {
-    if (!story) return;
-
-    const { words = [], idioms = [] } = story?.extraction || {};
-    if (story?.extracted && (words.length > 0 || idioms.length > 0)) return;
-
-    toast.promise(
-      extractStory(story)
-        .then(() => {
-          fetchStory();
-        })
-        .finally(() => {
-          setScanning(false);
-        }),
-      {
-        loading: t("extracting"),
-        success: t("extractedSuccessfully"),
-        error: (err) => t("extractionFailed", { error: err.message }),
-        position: "bottom-right",
+    if (!story || scanning) return;
+    setExtractionFailed(false);
+    setScanning(true);
+    try {
+      const result = await extractStory(story as unknown as StoryType);
+      const extraction = result as unknown as LocalStudyExtraction;
+      if (!Array.isArray(extraction?.words) || !Array.isArray(extraction?.idioms)) {
+        throw new Error("Provider returned an invalid vocabulary extraction");
       }
-    );
-  };
-
-  const buildVocabulary = () => {
-    if (!story?.extraction) return;
-    if (meanings.length > 0 || pendingLookups.length > 0) return;
-    if (!doc) return;
-    if (scanning) return;
-
-    const { words = [], idioms = [] } = story.extraction || {};
-
-    const lookups: any[] = [];
-
-    [...words, ...idioms].forEach((word) => {
-      const m = doc.lookup(word);
-
-      const sentences = m.sentences().json();
-      sentences.forEach((sentence: any) => {
-        const context = sentence.text.trim();
-        if (!context) {
-          console.warn(`No context for ${word}`);
-          return;
-        }
-
-        lookups.push({
-          word,
-          context,
-          sourceId: story.id,
-          sourceType: "Story",
-        });
-      });
-    });
-
-    const pendings = lookups
-      .filter(
-        (v) =>
-          meanings.findIndex(
-            (m) => m.word.toLowerCase() === v.word.toLowerCase()
-          ) < 0
-      )
-      .filter(
-        (v) =>
-          pendingLookups.findIndex(
-            (l) => l.word.toLowerCase() === v.word.toLowerCase()
-          ) < 0
-      );
-
-    if (pendings.length === 0) return;
-
-    webApi.lookupInBatch(pendings).then(() => {
-      fetchMeanings();
-    });
-  };
-
-  const toggleStarred = () => {
-    if (!story) return;
-
-    if (story.starred) {
-      webApi.unstarStory(id).then((result) => {
-        setStory({ ...story, starred: result.starred });
-      });
-    } else {
-      webApi.starStory(id).then((result) => {
-        setStory({ ...story, starred: result.starred });
-      });
+      setStory(await EnjoyApp.localStudy.stories.update(story.id, { extraction, extracted: true }));
+      setVocabularyVisible(true);
+      toast.success(t("extractedSuccessfully"), { position: "bottom-right" });
+    } catch {
+      setExtractionFailed(true);
+      toast.error(t("extractionFailed"), { position: "bottom-right" });
+    } finally {
+      setScanning(false);
     }
   };
 
-  const handleShare = async () => {
-    webApi
-      .createPost({ targetId: story.id, targetType: "Story" })
-      .then(() => {
-        toast.success(t("sharedStory"));
-      })
-      .catch((error) => {
-        toast.error(t("shareFailed"), {
-          description: error.message,
-        });
-      });
-  };
-
-  const processLookup = async (pendingLookup: Partial<LookupType>) => {
-    if (lookingUp) return;
-
+  const processLookup = useCallback(async (pendingLookup: LocalStudyLookup) => {
+    if (lookingUp || !story) return;
     setLookingUp(true);
-    toast.promise(
-      lookupWord({
+    await toast.promise(
+      Promise.resolve(lookupWord({
         word: pendingLookup.word,
         context: pendingLookup.context,
         sourceId: story.id,
         sourceType: "Story",
-      })
-        .then(() => {
-          fetchMeanings();
+      }))
+        .then(async (lookup) => {
+          if (!lookup?.meaning) throw new Error("Provider returned no meaning");
+          await EnjoyApp.localStudy.meanings.upsert({ storyId: story.id, lookup: lookup as LocalStudyLookup });
+          await fetchMeanings();
         })
-        .finally(() => {
-          setLookingUp(false);
-        }),
+        .finally(() => setLookingUp(false)),
       {
         loading: t("lookingUp"),
         success: t("lookedUpSuccessfully"),
-        error: (err) => t("lookupFailed", { error: err.message }),
+        error: (error) => t("lookupFailed", { error: error.message }),
         position: "bottom-right",
-      }
+      },
     );
+  }, [EnjoyApp, fetchMeanings, lookingUp, lookupWord, story]);
+
+  const toggleStarred = async () => {
+    if (story) setStory(await EnjoyApp.localStudy.stories.setStarred(story.id, !story.starred));
+  };
+  const destroyStory = async () => {
+    if (!story) return;
+    await EnjoyApp.localStudy.stories.destroy(story.id);
+    navigate("/stories");
   };
 
   useEffect(() => {
-    fetchStory();
-    fetchMeanings();
-  }, [id]);
+    void Promise.all([fetchStory(), fetchMeanings()]).catch((error) => {
+      console.error(error);
+      setLoading(false);
+    });
+  }, [fetchMeanings, fetchStory]);
 
   useEffect(() => {
-    extractVocabulary();
-  }, [story?.extracted]);
+    if (!lookingUpInBatch || lookingUp) return;
+    if (!pendingLookups.length) {
+      setLookupInBatch(false);
+      return;
+    }
+    void processLookup(pendingLookups[0]);
+  }, [lookingUp, lookingUpInBatch, pendingLookups, processLookup]);
 
-  useEffect(() => {
-    buildVocabulary();
-  }, [pendingLookups, meanings, story?.extraction]);
-
-  useEffect(() => {
-    if (!lookingUpInBatch) return;
-    if (pendingLookups.length === 0) return;
-
-    processLookup(pendingLookups[0]);
-  }, [pendingLookups, lookingUpInBatch]);
-
-  if (loading) {
-    return (
-      <div className="h-[100vh] w-full p-4">
-        <LoaderSpin />
-      </div>
-    );
-  }
-
-  if (!story) {
-    return (
-      <PagePlaceholder
-        placeholder={t("notFound")}
-        extra={`id=${id}`}
-        showBackButton
-      />
-    );
-  }
+  if (loading) return <div className="h-content w-full flex items-center justify-center bg-ej-bg"><LoaderSpin /></div>;
+  if (!story) return <PagePlaceholder placeholder={t("notFound")} extra={`id=${id}`} showBackButton />;
 
   return (
     <>
-      <ScrollArea className="h-content w-full bg-muted">
-        <StoryToolbar
-          marked={marked}
-          toggleMarked={() => setMarked(!marked)}
-          meanings={meanings}
-          scanning={scanning}
-          onScan={fetchMeanings}
-          extracted={story.extracted}
-          starred={story.starred}
-          toggleStarred={toggleStarred}
-          handleShare={handleShare}
-          vocabularyVisible={vocabularyVisible}
-          setVocabularyVisible={setVocabularyVisible}
-        />
-
+      <div className="h-content w-full overflow-y-auto scroll bg-ej-bg">
         <StoryViewer
           story={story}
           marked={marked}
           pendingLookups={pendingLookups}
           meanings={meanings}
           setMeanings={setMeanings}
-          doc={doc}
+          doc={document}
+          actions={<StoryToolbar
+            marked={marked}
+            toggleMarked={() => setMarked(!marked)}
+            meanings={meanings}
+            scanning={scanning}
+            onScan={story.extracted ? () => setVocabularyVisible(true) : extractVocabulary}
+            extracted={story.extracted}
+            starred={story.starred}
+            toggleStarred={() => void toggleStarred()}
+            deleteStory={() => void destroyStory()}
+            storyTitle={story.title}
+            vocabularyVisible={vocabularyVisible}
+            setVocabularyVisible={setVocabularyVisible}
+          />}
         />
-      </ScrollArea>
+      </div>
       <StoryVocabularySheet
         pendingLookups={pendingLookups}
         extracted={story.extracted}
+        scanning={scanning}
+        extractionFailed={extractionFailed}
+        onExtract={() => void extractVocabulary()}
         meanings={meanings}
         vocabularyVisible={vocabularyVisible}
         setVocabularyVisible={setVocabularyVisible}
         lookingUpInBatch={lookingUpInBatch}
         setLookupInBatch={setLookupInBatch}
-        processLookup={processLookup}
+        processLookup={(lookup) => void processLookup(lookup as LocalStudyLookup)}
         lookingUp={lookingUp}
       />
     </>

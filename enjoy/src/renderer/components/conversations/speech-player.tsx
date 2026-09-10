@@ -92,7 +92,7 @@ export const SpeechPlayer = (props: {
   return (
     <div className="w-full">
       <div className="flex justify-end">
-        <span className="text-xs text-muted-foreground mb-1">
+        <span className="text-xs text-ej-muted mb-1">
           {secondsToTimestamp(duration)}
         </span>
       </div>

@@ -83,7 +83,7 @@ export const NoteForm = (props: {
       <div className="flex items-center justify-between">
         {parameters.quoteIndices?.length > 0 ? (
           <div className="flex space-x-2">
-            <span className="text-sm px-1 rounded text-muted-foreground border-b border-red-500 border-dashed">
+            <span className="text-sm px-1 rounded text-ej-muted border-b border-red-500 border-dashed">
               {parameters.quoteIndices
                 .map(
                   (index: number) => segment?.caption?.timeline?.[index]?.text

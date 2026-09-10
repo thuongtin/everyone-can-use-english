@@ -1,5 +1,9 @@
+import { assertAllowedNetworkUrl, createGuardedFetch } from "./network-policy";
 import { ChatOllama } from "@langchain/ollama";
 import { ChatOpenAI } from "@langchain/openai";
+import { AcpChatModel } from "./acp-chat-model";
+import { VertexExpressChatModel } from "./vertex-express-chat-model";
+import type { AcpBridge } from "@/types/acp-api";
 
 /**
  * The small set of options shared by command, conversation, and chat-agent
@@ -16,12 +20,14 @@ export type ChatModelOptions = {
   frequencyPenalty?: number;
   presencePenalty?: number;
   numberOfChoices?: number;
+  signal?: AbortSignal;
+  acpBridge?: AcpBridge;
 };
 
 export type ChatModelRequestPolicy = {
   provider: string;
   modelName: string;
-  protocol: "chat-completions" | "responses" | "ollama";
+  protocol: "chat-completions" | "responses" | "ollama" | "acp" | "vertex-express";
   useResponsesApi: boolean;
   reasoningEffort?: "low";
   omitSamplingParameters: boolean;
@@ -33,14 +39,16 @@ const DEFAULT_OPENAI_MODEL = "gpt-4o";
 const DEFAULT_OLLAMA_MODEL = "llama3";
 const DEFAULT_OLLAMA_BASE_URL = "http://localhost:11434";
 const SUPPORTED_PROVIDERS = new Set([
-  "legacy",
-  "enjoyai",
   "openai",
+  "azure-openai",
   "gemini",
   "deepseek",
   "openrouter",
   "ollama",
   "lmstudio",
+  "codex-acp",
+  "claude-acp",
+  "vertex-express",
 ]);
 
 const trimToUndefined = (value?: string) => {
@@ -78,52 +86,103 @@ export const isOfficialOpenAIEndpoint = (baseUrl?: string) => {
   }
 };
 
-const inferLegacyProvider = (baseUrl?: string) => {
-  if (!baseUrl?.trim()) return "legacy";
+const AZURE_OPENAI_HOSTS = [
+  ".openai.azure.com",
+  ".services.ai.azure.com",
+] as const;
 
-  try {
-    const url = new URL(baseUrl.trim());
-    if (
-      (url.hostname === "localhost" || url.hostname === "127.0.0.1") &&
-      (url.port === "11434" || url.port === "")
-    ) {
-      return "ollama";
-    }
-  } catch {
-    // Let ChatOpenAI report malformed custom endpoints at request time.
+/**
+ * Azure OpenAI v1 uses an OpenAI-compatible base URL and the deployment name
+ * in the request model field. Resource endpoint roots copied from Azure are
+ * completed with /openai/v1; explicit custom gateway paths are preserved.
+ */
+export const resolveAzureOpenAiBaseUrl = (baseUrl?: string): string => {
+  const value = trimToUndefined(baseUrl);
+  if (!value) {
+    throw new Error(
+      "Chưa cấu hình Azure OpenAI Base URL. Dùng endpoint kết thúc bằng /openai/v1."
+    );
   }
 
-  return "legacy";
+  let url: URL;
+  try {
+    url = new URL(value);
+  } catch {
+    throw new Error("Azure OpenAI Base URL không hợp lệ.");
+  }
+  if (
+    url.protocol !== "https:" ||
+    url.username ||
+    url.password ||
+    url.search ||
+    url.hash
+  ) {
+    throw new Error("Azure OpenAI Base URL phải là HTTPS và không chứa credential hoặc query.");
+  }
+
+  const azureResourceHost = AZURE_OPENAI_HOSTS.some((suffix) =>
+    url.hostname.toLowerCase().endsWith(suffix)
+  );
+  if (azureResourceHost && (url.pathname === "" || url.pathname === "/")) {
+    url.pathname = "/openai/v1";
+  }
+  return url.toString().replace(/\/+$/u, "");
 };
 
 export const getChatModelRequestPolicy = (
   options: ChatModelOptions = {}
 ): ChatModelRequestPolicy => {
   const explicitProvider = trimToUndefined(options.provider)?.toLowerCase();
-  const provider = explicitProvider || inferLegacyProvider(options.baseUrl);
+  const provider = explicitProvider;
+  if (!provider || provider === "enjoyai" || provider === "needs-selection") {
+    throw new Error("Chưa chọn provider AI. Mở Cài đặt > Dịch vụ AI để chọn provider và model.");
+  }
+  if (options.baseUrl) assertAllowedNetworkUrl(options.baseUrl, { transport: "chat-sdk", operation: "configure" });
   if (!SUPPORTED_PROVIDERS.has(provider)) {
     throw new Error(`Unsupported AI provider: ${provider}`);
   }
   if (
-    (explicitProvider === "ollama" || explicitProvider === "lmstudio") &&
+    provider !== "codex-acp" && provider !== "claude-acp" &&
     !trimToUndefined(options.modelName)
   ) {
-    throw new Error(`${explicitProvider} model is required`);
+    throw new Error(`Chưa chọn model cho ${provider}.`);
   }
-  const modelName = trimToUndefined(options.modelName) ||
-    (provider === "ollama" ? DEFAULT_OLLAMA_MODEL : DEFAULT_OPENAI_MODEL);
+  if (provider === "azure-openai") {
+    const azureBaseUrl = resolveAzureOpenAiBaseUrl(options.baseUrl);
+    assertAllowedNetworkUrl(azureBaseUrl, {
+      transport: "chat-sdk",
+      operation: "configure",
+    });
+  }
+  const modelName =
+    trimToUndefined(options.modelName) ||
+    (provider === "codex-acp" || provider === "claude-acp"
+      ? ""
+      : provider === "ollama"
+        ? DEFAULT_OLLAMA_MODEL
+        : DEFAULT_OPENAI_MODEL);
   const officialOpenAI = provider === "openai" && isOfficialOpenAIEndpoint(options.baseUrl);
   const useResponsesApi = officialOpenAI && isNewOpenAIModel(modelName);
   const isClaudeWithoutSampling =
     provider === "openrouter" && isOpenRouterClaudeSonnet5(modelName);
   const omitSamplingParameters =
     (provider === "openai" && isNewOpenAIModel(modelName)) ||
+    provider === "azure-openai" ||
     isClaudeWithoutSampling;
 
   return {
     provider,
     modelName,
-    protocol: provider === "ollama" ? "ollama" : useResponsesApi ? "responses" : "chat-completions",
+    protocol:
+      provider === "vertex-express"
+        ? "vertex-express"
+        : provider === "codex-acp" || provider === "claude-acp"
+        ? "acp"
+        : provider === "ollama"
+          ? "ollama"
+          : useResponsesApi
+            ? "responses"
+            : "chat-completions",
     useResponsesApi,
     ...(useResponsesApi || provider === "gemini" && isGeminiReasoningModel(modelName)
       ? { reasoningEffort: "low" as const }
@@ -167,6 +226,18 @@ const isUnsuccessfulFinishReason = (value: unknown) => {
     "canceled",
     "refusal",
     "error",
+    "empty",
+    "safety",
+    "recitation",
+    "other",
+    "blocklist",
+    "prohibited_content",
+    "spii",
+    "malformed_function_call",
+    "image_safety",
+    "unexpected_tool_call",
+    "no_image",
+    "image_prohibited_content",
   ].includes(value.toLowerCase());
 };
 
@@ -237,24 +308,37 @@ export const assertChatModelResponseComplete = (response: unknown) => {
   }
 };
 
-const buildOpenAIConfiguration = (baseUrl?: string, key?: string) => {
+const buildOpenAIConfiguration = (
+  baseUrl?: string,
+  key?: string,
+  provider?: string
+) => {
   const configuration: Record<string, unknown> = {};
   const normalizedBaseUrl = trimToUndefined(baseUrl);
   const normalizedKey = trimToUndefined(key);
 
-  if (normalizedBaseUrl) configuration.baseURL = normalizedBaseUrl;
+  if (provider === "azure-openai") {
+    configuration.baseURL = resolveAzureOpenAiBaseUrl(normalizedBaseUrl);
+  } else if (normalizedBaseUrl) {
+    configuration.baseURL = normalizedBaseUrl;
+  }
 
   // Keep the adapter on the host runtime's fetch implementation. Electron's
   // renderer and the mock transport use the same Web Fetch boundary, while
   // the OpenAI SDK's Node shim otherwise captures node-fetch at import time.
   if (typeof globalThis.fetch === "function") {
-    configuration.fetch = globalThis.fetch;
+    configuration.fetch = createGuardedFetch(globalThis.fetch.bind(globalThis), { transport: "chat-sdk", operation: "request" });
   }
 
   // OpenAI's client otherwise reads OPENAI_API_KEY from the environment and
   // emits an Authorization header even for local OpenAI-compatible servers.
   // An explicit null default header removes that header when no key was set.
-  if (!normalizedKey) {
+  if (provider === "azure-openai" && normalizedKey) {
+    configuration.defaultHeaders = {
+      "api-key": normalizedKey,
+      Authorization: null,
+    };
+  } else if (!normalizedKey) {
     configuration.defaultHeaders = { Authorization: null };
   }
 
@@ -263,11 +347,38 @@ const buildOpenAIConfiguration = (baseUrl?: string, key?: string) => {
 
 export function createChatModel(
   options: ChatModelOptions = {}
-): ChatOpenAI | ChatOllama {
+): ChatOpenAI | ChatOllama | AcpChatModel | VertexExpressChatModel {
   const policy = getChatModelRequestPolicy(options);
+  if (["openai", "azure-openai", "gemini", "deepseek", "openrouter"].includes(policy.provider) && !trimToUndefined(options.key)) {
+    throw new Error(`Chưa cấu hình API key cho ${policy.provider}.`);
+  }
 
-  if (policy.provider === "enjoyai" && !trimToUndefined(options.baseUrl)) {
-    throw new Error("EnjoyAI endpoint is required");
+  if (policy.protocol === "vertex-express") {
+    return new VertexExpressChatModel({
+      apiKey: trimToUndefined(options.key) || "",
+      model: policy.modelName,
+      baseUrl: options.baseUrl,
+      temperature: finiteNumber(options.temperature),
+      maxTokens: finiteNumber(options.maxTokens),
+      frequencyPenalty: finiteNumber(options.frequencyPenalty),
+      presencePenalty: finiteNumber(options.presencePenalty),
+    });
+  }
+
+  if (policy.protocol === "acp") {
+    const bridge =
+      options.acpBridge ||
+      (globalThis as typeof globalThis & {
+        window?: { __ENJOY_APP__?: { acp?: AcpBridge } };
+      }).window?.__ENJOY_APP__?.acp;
+    if (!bridge) {
+      throw new Error("ACP runtime is unavailable");
+    }
+    return new AcpChatModel({
+      provider: policy.provider === "codex-acp" ? "codex" : "claude",
+      model: trimToUndefined(options.modelName),
+      bridge,
+    });
   }
 
   if (policy.protocol === "ollama") {
@@ -296,7 +407,11 @@ export function createChatModel(
   const chatOptions: ConstructorParameters<typeof ChatOpenAI>[0] = {
     modelName: policy.modelName,
     openAIApiKey: trimToUndefined(options.key) || "",
-    configuration: buildOpenAIConfiguration(options.baseUrl, options.key),
+    configuration: buildOpenAIConfiguration(
+      options.baseUrl,
+      options.key,
+      policy.provider
+    ),
     cache: false,
     verbose: false,
     streamUsage: false,
@@ -313,7 +428,11 @@ export function createChatModel(
   }
 
   const maxTokens = finiteNumber(options.maxTokens);
-  if (maxTokens !== undefined && maxTokens >= -1) {
+  if (
+    policy.provider !== "azure-openai" &&
+    maxTokens !== undefined &&
+    maxTokens >= -1
+  ) {
     chatOptions.maxTokens = maxTokens;
   }
 
@@ -322,6 +441,13 @@ export function createChatModel(
     // default n=1 turn a historical numberOfChoices value into fan-out.
     n: undefined,
   };
+  if (
+    policy.provider === "azure-openai" &&
+    maxTokens !== undefined &&
+    maxTokens >= 0
+  ) {
+    modelKwargs.max_completion_tokens = maxTokens;
+  }
 
   if (policy.useResponsesApi) {
     chatOptions.useResponsesApi = true;

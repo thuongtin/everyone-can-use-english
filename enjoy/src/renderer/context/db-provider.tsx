@@ -10,6 +10,7 @@ import log from "electron-log/renderer";
 import {
   createDbLifecycle,
   type DbLifecycle,
+  type DbConnectionState,
   type DbLifecycleConnectResult,
   type DbLifecycleProbeResult,
 } from "@renderer/lib/db-lifecycle";
@@ -24,6 +25,7 @@ type DbStateEnum =
   | "reconnecting";
 type DbProviderState = {
   state: DbStateEnum;
+  connection?: DbConnectionState;
   path?: string;
   error?: string;
   connect?: () => Promise<DbLifecycleConnectResult>;
@@ -46,6 +48,7 @@ export const DbProviderContext = createContext<DbProviderState>(initialState);
 
 export const DbProvider = ({ children }: { children: React.ReactNode }) => {
   const [state, setState] = useState<DbStateEnum>("disconnected");
+  const [connection, setConnection] = useState<DbConnectionState | undefined>(undefined);
   const [path, setPath] = useState<string | undefined>(undefined);
   const [error, setError] = useState<string | undefined>(undefined);
   const EnjoyApp = window.__ENJOY_APP__;
@@ -55,6 +58,7 @@ export const DbProvider = ({ children }: { children: React.ReactNode }) => {
   const autoReconnectRef = useRef(false);
   const probeDisconnectedRef = useRef(true);
   const connectedUserIdRef = useRef<string | undefined>(undefined);
+  const connectionRef = useRef<DbConnectionState | undefined>(undefined);
   const connectPromiseRef = useRef<
     Promise<DbLifecycleConnectResult> | null
   >(null);
@@ -87,10 +91,14 @@ export const DbProvider = ({ children }: { children: React.ReactNode }) => {
   }, []);
 
   const connect = useCallback(async (): Promise<DbLifecycleConnectResult> => {
-    if (stateRef.current === "connected" && connectedUserIdRef.current) {
+    if (
+      stateRef.current === "connected"
+      && connectedUserIdRef.current
+      && connectionRef.current
+    ) {
       return {
         kind: "connected",
-        connection: { state: "connected" },
+        connection: connectionRef.current,
         userId: connectedUserIdRef.current,
       };
     }
@@ -114,12 +122,16 @@ export const DbProvider = ({ children }: { children: React.ReactNode }) => {
       switch (result.kind) {
         case "connected":
           connectedUserIdRef.current = result.userId;
+          connectionRef.current = result.connection;
+          setConnection(result.connection);
           updateState(result.connection.state);
           setPath(result.connection.path);
           setError(result.connection.error || undefined);
           return result;
         case "unauthenticated":
           connectedUserIdRef.current = undefined;
+          connectionRef.current = undefined;
+          setConnection(undefined);
           autoReconnectRef.current = false;
           probeDisconnectedRef.current = false;
           updateState("disconnected");
@@ -128,6 +140,8 @@ export const DbProvider = ({ children }: { children: React.ReactNode }) => {
           return result;
         case "not-ready":
           connectedUserIdRef.current = undefined;
+          connectionRef.current = undefined;
+          setConnection(undefined);
           autoReconnectRef.current = true;
           probeDisconnectedRef.current = false;
           updateState("reconnecting");
@@ -135,6 +149,8 @@ export const DbProvider = ({ children }: { children: React.ReactNode }) => {
           return result;
         case "retry":
           connectedUserIdRef.current = undefined;
+          connectionRef.current = undefined;
+          setConnection(undefined);
           autoReconnectRef.current = true;
           probeDisconnectedRef.current = false;
           updateState("reconnecting");
@@ -144,6 +160,8 @@ export const DbProvider = ({ children }: { children: React.ReactNode }) => {
           return result;
         case "session-changed":
           connectedUserIdRef.current = undefined;
+          connectionRef.current = undefined;
+          setConnection(undefined);
           autoReconnectRef.current = false;
           probeDisconnectedRef.current = false;
           updateState("disconnected");
@@ -155,6 +173,8 @@ export const DbProvider = ({ children }: { children: React.ReactNode }) => {
         case "probe-error":
         case "connection-error":
           connectedUserIdRef.current = undefined;
+          connectionRef.current = undefined;
+          setConnection(undefined);
           autoReconnectRef.current = true;
           probeDisconnectedRef.current = false;
           updateState("error");
@@ -187,6 +207,9 @@ export const DbProvider = ({ children }: { children: React.ReactNode }) => {
         case "unauthenticated":
           autoReconnectRef.current = false;
           probeDisconnectedRef.current = false;
+          connectedUserIdRef.current = undefined;
+          connectionRef.current = undefined;
+          setConnection(undefined);
           if (stateRef.current !== "disconnected") {
             updateState("disconnected");
           }
@@ -196,12 +219,18 @@ export const DbProvider = ({ children }: { children: React.ReactNode }) => {
         case "not-ready":
           autoReconnectRef.current = true;
           probeDisconnectedRef.current = false;
+          connectedUserIdRef.current = undefined;
+          connectionRef.current = undefined;
+          setConnection(undefined);
           updateState("reconnecting");
           scheduleReconnect(1000);
           return;
         case "probe-error":
           autoReconnectRef.current = true;
           probeDisconnectedRef.current = false;
+          connectedUserIdRef.current = undefined;
+          connectionRef.current = undefined;
+          setConnection(undefined);
           updateState("error");
           setError(getErrorMessage(result.error));
           scheduleReconnect(5000);
@@ -238,6 +267,8 @@ export const DbProvider = ({ children }: { children: React.ReactNode }) => {
 
     console.info("--- disconnecting db ---");
     connectedUserIdRef.current = undefined;
+    connectionRef.current = undefined;
+    setConnection(undefined);
     updateState("disconnected");
     await lifecycle.disconnect();
 
@@ -307,6 +338,7 @@ export const DbProvider = ({ children }: { children: React.ReactNode }) => {
     <DbProviderContext.Provider
       value={{
         state,
+        connection,
         path,
         error,
         connect,

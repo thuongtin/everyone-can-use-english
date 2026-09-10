@@ -2,9 +2,16 @@ import { ipcMain, IpcMainEvent } from "electron";
 import { UserSetting } from "@main/db/models";
 import db from "@main/db";
 import { UserSettingKeyEnum } from "@/types/enums";
+import { getCloudflareTranscribeConfig } from "@main/cloudflare-transcribe/config";
+
+const isProtectedSetting = (key: UserSettingKeyEnum): boolean =>
+  key === UserSettingKeyEnum.CLOUDFLARE_TRANSCRIBE;
 
 class UserSettingsHandler {
   private async get(_event: IpcMainEvent, key: UserSettingKeyEnum) {
+    if (isProtectedSetting(key)) {
+      return getCloudflareTranscribeConfig();
+    }
     return await UserSetting.get(key);
   }
 
@@ -13,6 +20,9 @@ class UserSettingsHandler {
     key: UserSettingKeyEnum,
     value: string | object
   ) {
+    if (isProtectedSetting(key)) {
+      throw new Error("protected_user_setting");
+    }
     await UserSetting.set(key, value);
   }
 

@@ -11,6 +11,7 @@ import {
   toast,
 } from "@renderer/components/ui";
 import { t } from "i18next";
+import { displayableResourceUrl } from "@renderer/lib/retired-resource";
 import { ChatMemberForm, ChatForm, ChatAgentForm } from "@renderer/components";
 import { PlusIcon } from "lucide-react";
 import { useContext, useEffect, useState } from "react";
@@ -53,7 +54,7 @@ export const ChatSettings = (props: { onFinish?: () => void }) => {
             onFinish={onFinish}
           />
         ) : (
-          <div className="text-muted-foreground py-4 text-center">
+          <div className="py-4 text-center text-xs text-ej-muted">
             {t("noData")}
           </div>
         )}
@@ -157,9 +158,7 @@ const ChatMemberSetting = (props: {
           </div>
           {chatAgents.length === 0 && (
             <div className="text-center my-4">
-              <span className="text-sm text-muted-foreground">
-                {t("noData")}
-              </span>
+              <span className="text-xs text-ej-muted">{t("noData")}</span>
             </div>
           )}
           <div className="grid gap-2">
@@ -171,19 +170,24 @@ const ChatMemberSetting = (props: {
               >
                 <div className="flex items-center space-x-2">
                   <Avatar className="w-8 h-8">
-                    <img src={chatAgent.avatarUrl} alt={chatAgent.name} />
+                    {displayableResourceUrl(chatAgent.avatarUrl) && (
+                      <img
+                        src={displayableResourceUrl(chatAgent.avatarUrl)}
+                        alt={chatAgent.name}
+                      />
+                    )}
                     <AvatarFallback>{chatAgent.name[0]}</AvatarFallback>
                   </Avatar>
                   <div className="flex-1">
                     <div className="flex items-center space-x-2 line-clamp-1 w-full">
-                      <div className="text-sm line-clamp-1">
+                      <div className="line-clamp-1 text-xs font-semibold text-ej-ink">
                         {chatAgent.name}
                       </div>
                       <Badge className="text-xs px-1" variant="secondary">
                         {chatAgent.type}
                       </Badge>
                     </div>
-                    <div className="text-xs text-muted-foreground line-clamp-1">
+                    <div className="line-clamp-1 text-xxs text-ej-muted">
                       {chatAgent.description}
                     </div>
                   </div>

@@ -1,186 +1,118 @@
 import { t } from "i18next";
-import React, {
-  useState,
-  useContext,
-  useEffect,
-  useMemo,
-  useRef,
-  useImperativeHandle,
-} from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
+import { LoaderIcon, RefreshCwIcon } from "lucide-react";
 import { AppSettingsProviderContext } from "@renderer/context";
-import { LoaderIcon } from "lucide-react";
-import { STORAGE_WORKER_ENDPOINT } from "@/constants";
-import { Button } from "@/renderer/components/ui";
+import { cn } from "@renderer/lib/utils";
+import { SettingButton } from "./settings-primitives";
+
+type ProbeResult = { text: string; tone?: "ok" | "warn" | "bad" };
+type ProbeState = Record<string, ProbeResult | "error" | undefined>;
+
+const DOT_CLASS = {
+  ok: "bg-ej-ok",
+  warn: "bg-ej-warn",
+  bad: "bg-ej-bad",
+  idle: "bg-ej-line2",
+};
+
+const formatTime = (date: Date) =>
+  `${String(date.getHours()).padStart(2, "0")}:${String(
+    date.getMinutes()
+  ).padStart(2, "0")}`;
 
 export const NetworkState = () => {
-  const { apiUrl, EnjoyApp, proxy } = useContext(AppSettingsProviderContext);
-  const [refreshing, setRefreshing] = useState(false);
-  const apiStateRef = useRef(null);
-  const storeageStateRef = useRef(null);
-  const ipStateRef = useRef(null);
+  const { EnjoyApp, proxy } = useContext(AppSettingsProviderContext);
+  const [states, setStates] = useState<ProbeState>({});
+  const [refreshing, setRefreshing] = useState<boolean>(false);
+  const [checkedAt, setCheckedAt] = useState<Date>();
 
-  const items = useMemo(() => {
-    return [
+  const probes = useMemo(
+    () => [
       {
-        title: t("apiConnectTime", { apiUrl }),
-        ref: apiStateRef,
-        refresh: true,
-        action: () => getConnectDelayTime(apiUrl + "/up"),
+        key: "connection",
+        label: "Kết nối thiết bị",
+        run: async (): Promise<ProbeResult> => ({
+          text: navigator.onLine ? "Có kết nối" : "Offline",
+          tone: navigator.onLine ? "ok" : "warn",
+        }),
       },
       {
-        title: t("storageConnectTime"),
-        refresh: true,
-        ref: storeageStateRef,
-        action: () => getConnectDelayTime(STORAGE_WORKER_ENDPOINT),
+        key: "platform",
+        label: t("settings.platform"),
+        run: async (): Promise<ProbeResult> => {
+          const info = await EnjoyApp.app.getPlatformInfo();
+          return { text: `${info.platform} ${info.version} · ${info.arch}` };
+        },
       },
-      {
-        title: t("ipInfo"),
-        ref: ipStateRef,
-        refresh: true,
-        action: async () =>
-          await fetch("https://ipapi.co/json")
-            .then((resp) => resp.json())
-            .then((info) => ({
-              text: `${info.ip} (${info.city}, ${info.country_name})`,
-            })),
-      },
-      {
-        title: t("platformInfo"),
-        refresh: false,
-        action: async () =>
-          await EnjoyApp.app.getPlatformInfo().then((info) => ({
-            text: `${info.platform} ${info.arch} ${info.version}`,
-          })),
-      },
-    ];
-  }, [apiUrl]);
+    ],
+    [EnjoyApp]
+  );
 
-  async function handleRefresh() {
-    if (refreshing) return;
+  const refresh = async () => {
     setRefreshing(true);
 
-    await Promise.all([
-      apiStateRef?.current.getConnectState({ force: true }),
-      storeageStateRef?.current.getConnectState({ force: true }),
-      ipStateRef?.current.getConnectState({ force: true }),
-    ]);
+    await Promise.all(
+      probes.map(async (probe) => {
+        try {
+          const result = await probe.run();
+          setStates((prev) => ({ ...prev, [probe.key]: result }));
+        } catch {
+          setStates((prev) => ({ ...prev, [probe.key]: "error" }));
+        }
+      })
+    );
 
+    setCheckedAt(new Date());
     setRefreshing(false);
-  }
-
-  async function getConnectDelayTime(url: string) {
-    const startTime = new Date().getTime();
-    await fetch(url);
-    const duration = new Date().getTime() - startTime;
-
-    return {
-      color:
-        duration < 200
-          ? "text-green-500"
-          : duration < 800
-          ? "text-yellow-500"
-          : "text-red-500",
-      text: `${duration}ms`,
-    };
-  }
+  };
 
   useEffect(() => {
-    handleRefresh();
+    void refresh();
   }, [proxy]);
 
   return (
-    <div className="py-4">
-      <div className="flex items-start justify-between">
-        <div className="mb-2">{t("networkState")}</div>
-        <Button variant="secondary" size="sm" onClick={handleRefresh}>
-          {t("refresh")}
-        </Button>
+    <div className="mt-2 rounded-ej border border-ej-line bg-ej-surface2/40 px-3.5 py-3">
+      <div className="grid grid-cols-2 gap-x-4 gap-y-2.5">
+        {probes.map((probe) => {
+          const state = states[probe.key];
+          const tone =
+            state === "error"
+              ? "bad"
+              : typeof state === "object"
+                ? state.tone || "idle"
+                : "idle";
+
+          return (
+            <div key={probe.key} className="flex items-center gap-2">
+              <span
+                className={cn("size-2 shrink-0 rounded-full", DOT_CLASS[tone])}
+              />
+              <span className="shrink-0 text-[11px] text-ej-muted">
+                {probe.label}
+              </span>
+              <span className="ml-auto min-w-0 truncate text-[12.5px] font-semibold text-ej-ink ej-tabular">
+                {state === undefined ? (
+                  <LoaderIcon className="size-3.5 animate-spin text-ej-muted" />
+                ) : state === "error" ? (
+                  <span className="text-ej-bad">{t("connectError")}</span>
+                ) : (
+                  state.text
+                )}
+              </span>
+            </div>
+          );
+        })}
       </div>
 
-      <div>
-        {items.map((item, index) => (
-          <NetworkStateItem key={index} {...item} />
-        ))}
+      <div className="mt-3 flex items-center justify-between gap-3 border-t border-ej-line pt-2.5">
+        <span className="text-[11px] text-ej-muted">
+          {checkedAt ? t("settings.checkedAt", { time: formatTime(checkedAt) }) : ""}
+        </span>
+        <SettingButton disabled={refreshing} onClick={refresh}>
+          <RefreshCwIcon className={cn("size-3", refreshing && "animate-spin")} />
+          {t("settings.recheck")}
+        </SettingButton>
       </div>
     </div>
   );
 };
-
-const NetworkStateItem = React.forwardRef(function (
-  {
-    title,
-    action,
-    refresh,
-  }: {
-    title: string;
-    refresh: boolean;
-    action: () => Promise<{ color?: string; text: string }>;
-  },
-  ref
-) {
-  useImperativeHandle(ref, () => {
-    return { getConnectState };
-  });
-
-  let timeoutId: ReturnType<typeof setTimeout | null> = null;
-
-  const [connected, setConnected] = useState(false);
-  const [connecting, setConnecting] = useState(false);
-  const [connectError, setConnectError] = useState(false);
-  const [color, setColor] = useState("");
-  const [text, setText] = useState("");
-
-  useEffect(() => {
-    startPolling();
-
-    return () => {
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
-    };
-  }, []);
-
-  async function startPolling() {
-    await getConnectState();
-
-    if (refresh) {
-      timeoutId = setTimeout(() => startPolling(), 10000);
-    }
-  }
-
-  async function getConnectState(
-    { force }: { force?: boolean } = { force: false }
-  ) {
-    if (force) setConnected(false);
-
-    setConnecting(true);
-    try {
-      const { color, text } = await action();
-
-      setColor(color);
-      setText(text);
-      setConnected(true);
-      setConnectError(false);
-    } catch (error) {
-      setConnectError(true);
-      setConnected(false);
-    } finally {
-      setConnecting(false);
-    }
-  }
-
-  return (
-    <div className="text-sm text-muted-foreground flex justify-between my-2">
-      <div className="">{title}</div>
-      <div className="">
-        {!connected && connecting ? (
-          <LoaderIcon className="w-4 h-4 animate-spin" />
-        ) : connectError ? (
-          <span className="text-red-500">{t("connectError")}</span>
-        ) : (
-          <span className={color}>{text}</span>
-        )}
-      </div>
-    </div>
-  );
-});

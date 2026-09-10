@@ -1,11 +1,10 @@
-import { ipcMain, app, BrowserWindow } from "electron";
+import { ipcMain, BrowserWindow } from "electron";
 import path from "path";
 import fs from "fs";
 import mainWin from "@main/window";
-import log from "@main/logger";
 import settings from "@main/settings";
+import { assertAllowedNetworkUrl } from "@/lib/network-policy";
 
-const logger = log.scope("downloader");
 class Downloader {
   public tasks: Electron.DownloadItem[];
 
@@ -21,12 +20,17 @@ class Downloader {
     }
   ): Promise<string | undefined> {
     const { webContents = mainWin.win.webContents, savePath } = options || {};
+    assertAllowedNetworkUrl(url, {
+      transport: "electron-download",
+      operation: "download",
+    });
 
-    return new Promise((resolve, _reject) => {
+    return new Promise((resolve) => {
       webContents.downloadURL(url);
 
       const cachePath = settings.cachePath();
-      webContents.session.on("will-download", (_event, item, _webContents) => {
+      webContents.session.on("will-download", (event, item) => {
+        void event;
         if (savePath) {
           try {
             if (fs.statSync(savePath).isDirectory()) {

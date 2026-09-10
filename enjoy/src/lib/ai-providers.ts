@@ -1,12 +1,18 @@
 export const SUPPORTED_LLM_PROVIDER_IDS = [
-  "enjoyai",
   "openai",
+  "azure-openai",
   "gemini",
+  "vertex-express",
   "deepseek",
   "openrouter",
   "ollama",
   "lmstudio",
+  "codex-acp",
+  "claude-acp",
 ] as const;
+
+export const LEGACY_LLM_PROVIDER_IDS = ["enjoyai"] as const;
+export const PROVIDER_SELECTION_REQUIRED = "needs-selection" as const;
 
 export type AiProviderId = (typeof SUPPORTED_LLM_PROVIDER_IDS)[number];
 
@@ -43,6 +49,7 @@ export type ProviderConfig = {
   baseUrl?: string;
   models: string;
   transcriptionModel?: string;
+  credentialError?: "azure_key_unavailable";
 };
 
 export type GptProvider = {
@@ -76,9 +83,9 @@ export type GptEngineSelection = {
   };
 };
 
-const ENJOYAI_MODELS = ["gpt-4o-mini", "gpt-4o"] as const;
-
 const ENJOYAI_LEGACY_MODELS = [
+  "gpt-4o-mini",
+  "gpt-4o",
   "chatgpt-4o-latest",
   "gpt-4-turbo",
   "gpt-4",
@@ -118,12 +125,39 @@ const COMMON_OPENAI_OPTIONS: readonly ProviderOption[] = [
   "tts",
 ];
 
+// Deployment names do not reveal whether the underlying Azure model accepts
+// sampling or token-limit fields. Keeping those fields out of shared settings
+// lets chat and reasoning deployments use the same provider safely.
+const AZURE_OPENAI_OPTIONS: readonly ProviderOption[] = [
+  "model",
+  "baseUrl",
+  "roleDefinition",
+  "maxTokens",
+  "historyBufferSize",
+  "tts",
+];
+
+const VERTEX_EXPRESS_OPTIONS: readonly ProviderOption[] = [
+  "model",
+  "roleDefinition",
+  "temperature",
+  "maxTokens",
+  "historyBufferSize",
+];
+
 const COMMON_LOCAL_OPTIONS: readonly ProviderOption[] = [
   "model",
   "baseUrl",
   "roleDefinition",
   "temperature",
   "maxTokens",
+  "historyBufferSize",
+  "tts",
+];
+
+const ACP_OPTIONS: readonly ProviderOption[] = [
+  "model",
+  "roleDefinition",
   "historyBufferSize",
   "tts",
 ];
@@ -180,25 +214,6 @@ const OPENROUTER_CAPABILITIES = {
 export const AI_PROVIDER_CATALOG: Readonly<
   Record<AiProviderId, ProviderDefinition>
 > = {
-  enjoyai: {
-    id: "enjoyai",
-    name: "EnjoyAI",
-    descriptionKey: "aiProviders.enjoyai.description",
-    models: ENJOYAI_MODELS,
-    legacyModels: ENJOYAI_LEGACY_MODELS,
-    acceptsApiKey: false,
-    configurable: [
-      "model",
-      "roleDefinition",
-      "temperature",
-      "numberOfChoices",
-      "maxTokens",
-      "frequencyPenalty",
-      "presencePenalty",
-      "historyBufferSize",
-      "tts",
-    ],
-  },
   openai: {
     id: "openai",
     name: "OpenAI",
@@ -207,6 +222,17 @@ export const AI_PROVIDER_CATALOG: Readonly<
     acceptsApiKey: true,
     configurable: COMMON_OPENAI_OPTIONS,
     modelCapabilities: OPENAI_REASONING_CAPABILITIES,
+  },
+  "azure-openai": {
+    id: "azure-openai",
+    name: "Azure OpenAI",
+    descriptionKey: "aiProviders.azureOpenai.description",
+    // Azure v1 requests use deployment names in the model field. Deployments
+    // are resource-specific, so a static model catalog would create invalid
+    // choices for some accounts.
+    models: [],
+    acceptsApiKey: true,
+    configurable: AZURE_OPENAI_OPTIONS,
   },
   gemini: {
     id: "gemini",
@@ -217,6 +243,17 @@ export const AI_PROVIDER_CATALOG: Readonly<
     acceptsApiKey: true,
     configurable: COMMON_OPENAI_OPTIONS,
     modelCapabilities: GEMINI_CAPABILITIES,
+  },
+  "vertex-express": {
+    id: "vertex-express",
+    name: "Vertex AI Express",
+    descriptionKey: "aiProviders.vertexExpress.description",
+    // Express Mode model availability depends on the account and service state.
+    // Require an explicit model instead of advertising an unverified default.
+    models: [],
+    defaultBaseUrl: "https://aiplatform.googleapis.com/v1",
+    acceptsApiKey: true,
+    configurable: VERTEX_EXPRESS_OPTIONS,
   },
   deepseek: {
     id: "deepseek",
@@ -255,9 +292,23 @@ export const AI_PROVIDER_CATALOG: Readonly<
     acceptsApiKey: true,
     configurable: COMMON_LOCAL_OPTIONS,
   },
+  "codex-acp": {
+    id: "codex-acp",
+    name: "Codex (ACP)",
+    descriptionKey: "providerNoApiKeyRequired",
+    models: [],
+    acceptsApiKey: false,
+    configurable: ACP_OPTIONS,
+  },
+  "claude-acp": {
+    id: "claude-acp",
+    name: "Claude Code (ACP)",
+    descriptionKey: "providerNoApiKeyRequired",
+    models: [],
+    acceptsApiKey: false,
+    configurable: ACP_OPTIONS,
+  },
 };
-
-const SAFE_REMOTE_FIELDS = new Set(["models", "configurable"]);
 
 const isRecord = (value: unknown): value is Record<string, unknown> =>
   typeof value === "object" && value !== null && !Array.isArray(value);
@@ -289,8 +340,9 @@ export function normalizeModelList(input: unknown): string[] {
 
 export function resolveGptEngineBootstrap(
   storedGptEngine: unknown,
-  storedOpenaiConfig: unknown
+  _storedOpenaiConfig: unknown
 ): { engine: GptEngineSelection; shouldPersist: boolean } {
+  void _storedOpenaiConfig;
   if (isRecord(storedGptEngine)) {
     const rawModels = isRecord(storedGptEngine.models)
       ? storedGptEngine.models
@@ -299,7 +351,7 @@ export function resolveGptEngineBootstrap(
       default:
         typeof rawModels.default === "string" && rawModels.default.trim()
           ? rawModels.default
-          : "gpt-4o",
+          : "",
     };
     for (const key of [
       "lookup",
@@ -311,35 +363,34 @@ export function resolveGptEngineBootstrap(
         models[key] = rawModels[key];
       }
     }
+    const providerName =
+      typeof storedGptEngine.name === "string"
+        ? storedGptEngine.name.trim()
+        : "";
+    if (!isSupportedProvider(providerName)) {
+      return {
+        engine: {
+          name: PROVIDER_SELECTION_REQUIRED,
+          models: { default: "" },
+        },
+        shouldPersist: false,
+      };
+    }
     return {
       engine: {
-        name:
-          typeof storedGptEngine.name === "string" &&
-          storedGptEngine.name.trim()
-            ? storedGptEngine.name
-            : "enjoyai",
+        name: providerName,
         models,
       },
       shouldPersist: false,
     };
   }
 
-  const openai = isRecord(storedOpenaiConfig) ? storedOpenaiConfig : {};
-  const key = typeof openai.key === "string" ? openai.key.trim() : "";
-  if (!key) {
-    return {
-      engine: { name: "enjoyai", models: { default: "gpt-4o" } },
-      shouldPersist: false,
-    };
-  }
-
-  const savedModels = normalizeModelList([openai.models, openai.model]);
   return {
     engine: {
-      name: "openai",
-      models: { default: savedModels[0] || "gpt-4o" },
+      name: PROVIDER_SELECTION_REQUIRED,
+      models: { default: "" },
     },
-    shouldPersist: true,
+    shouldPersist: false,
   };
 }
 
@@ -410,8 +461,8 @@ export function normalizeProviderConfig(
     "baseUrl"
   );
   const baseUrl =
-    id === "enjoyai"
-      ? undefined
+    !definition.configurable.includes("baseUrl")
+      ? definition.defaultBaseUrl
       : hasSavedBaseUrl && typeof record.baseUrl === "string"
         ? record.baseUrl.trim() || definition.defaultBaseUrl
         : typeof fallbackRecord.baseUrl === "string"
@@ -434,43 +485,10 @@ export function normalizeProviderConfig(
   if (typeof record.transcriptionModel === "string") {
     config.transcriptionModel = record.transcriptionModel;
   }
+  if (id === "azure-openai" && !config.key && record.credentialError === "azure_key_unavailable") {
+    config.credentialError = "azure_key_unavailable";
+  }
   return config;
-}
-
-export function getEnjoyAiRemoteConfig(remote: unknown): {
-  models?: string[];
-  configurable?: ProviderOption[];
-} {
-  if (!isRecord(remote)) return {};
-
-  const nested = isRecord(remote.enjoyai)
-    ? remote.enjoyai
-    : Object.keys(remote).every((key) => SAFE_REMOTE_FIELDS.has(key))
-      ? remote
-      : undefined;
-  if (!nested) return {};
-
-  const result: {
-    models?: string[];
-    configurable?: ProviderOption[];
-  } = {};
-  if (Object.prototype.hasOwnProperty.call(nested, "models")) {
-    const models = normalizeModelList(nested.models);
-    if (Array.isArray(nested.models) || typeof nested.models === "string") {
-      result.models = models;
-    }
-  }
-  if (Array.isArray(nested.configurable)) {
-    const configurable = nested.configurable.filter(
-      (option): option is ProviderOption =>
-        typeof option === "string" &&
-        AI_PROVIDER_CATALOG.enjoyai.configurable.includes(
-          option as ProviderOption
-        )
-    );
-    result.configurable = configurable;
-  }
-  return result;
 }
 
 export function createGptProviders(
@@ -478,26 +496,25 @@ export function createGptProviders(
   remote?: unknown,
   discoveredModels: Partial<Record<AiProviderId, unknown>> = {}
 ): GptProviderCatalog {
-  const remoteEnjoyAi = getEnjoyAiRemoteConfig(remote);
+  void remote;
   return Object.fromEntries(
     SUPPORTED_LLM_PROVIDER_IDS.map((id) => {
       const definition = AI_PROVIDER_CATALOG[id];
       const saved = providerConfigs[id];
-      const catalogModels =
-        id === "enjoyai"
-          ? mergeModelLists(definition.models, remoteEnjoyAi.models)
-          : definition.models;
-      const models = mergeModelLists(
-        catalogModels,
-        saved?.models,
-        saved?.model,
-        discoveredModels[id]
-      );
-      const configurable =
-        id === "enjoyai" && remoteEnjoyAi.configurable !== undefined
-          ? remoteEnjoyAi.configurable
-          : [...definition.configurable];
-      const baseUrl = saved?.baseUrl ?? definition.defaultBaseUrl;
+      const catalogModels = definition.models;
+      const models =
+        id === "codex-acp" || id === "claude-acp"
+          ? mergeModelLists(discoveredModels[id])
+          : mergeModelLists(
+              catalogModels,
+              saved?.models,
+              saved?.model,
+              discoveredModels[id]
+            );
+      const configurable = [...definition.configurable];
+      const baseUrl = definition.configurable.includes("baseUrl")
+        ? saved?.baseUrl ?? definition.defaultBaseUrl
+        : definition.defaultBaseUrl;
       return [
         id,
         {
@@ -534,6 +551,7 @@ export function providerSupportsOption(
 }
 
 export function isLegacyProviderModel(provider: string, model: string): boolean {
+  if (provider === "enjoyai") return ENJOYAI_LEGACY_MODELS.includes(model as never);
   return isSupportedProvider(provider)
     ? AI_PROVIDER_CATALOG[provider].legacyModels?.includes(model) === true
     : false;

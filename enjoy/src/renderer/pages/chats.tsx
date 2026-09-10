@@ -1,11 +1,6 @@
 import { ChatSession, ChatAgents, ChatList } from "@renderer/components";
-import {
-  ResizableHandle,
-  ResizablePanel,
-  ResizablePanelGroup,
-} from "@renderer/components/ui";
 import { useState, useContext, useEffect } from "react";
-import { CopilotProviderContext } from "@renderer/context";
+import { CopilotProviderContext, useLayout } from "@renderer/context";
 import { useChat, useChatAgent } from "@renderer/hooks";
 
 export default function Chats() {
@@ -16,6 +11,7 @@ export default function Chats() {
     CopilotProviderContext
   );
   const [sidePanelCollapsed, setSidePanelCollapsed] = useState(false);
+  const { fluid } = useLayout();
 
   const { chats } = useChat(currentChatAgent?.id);
   const { chatAgents, fetchChatAgents } = useChatAgent();
@@ -37,50 +33,55 @@ export default function Chats() {
     };
   }, [currentChat]);
 
+  const asideColumn = fluid && currentChat ? " 300px" : "";
+  const gridTemplateColumns = sidePanelCollapsed
+    ? `minmax(0, 1fr)${asideColumn}`
+    : fluid
+      ? `260px 260px minmax(0, 1fr)${asideColumn}`
+      : `280px minmax(0, 1fr)`;
+
+  const agents = (
+    <ChatAgents
+      chatAgents={chatAgents}
+      fetchChatAgents={fetchChatAgents}
+      currentChatAgent={currentChatAgent}
+      setCurrentChatAgent={setCurrentChatAgent}
+    />
+  );
+
+  const list = (
+    <ChatList
+      chats={chats}
+      chatAgent={currentChatAgent}
+      currentChat={currentChat}
+      setCurrentChat={handleSelectChat}
+    />
+  );
+
   return (
-    <ResizablePanelGroup direction="horizontal" className="h-content">
-      {!sidePanelCollapsed && (
-        <>
-          <ResizablePanel
-            order={1}
-            id="chat-side-panel"
-            className="bg-muted/30"
-            collapsible={true}
-            defaultSize={20}
-            minSize={15}
-            maxSize={50}
-            onCollapse={() => setSidePanelCollapsed(true)}
-          >
-            <ResizablePanelGroup direction="vertical">
-              <ResizablePanel defaultSize={50} minSize={30}>
-                <ChatAgents
-                  chatAgents={chatAgents}
-                  fetchChatAgents={fetchChatAgents}
-                  currentChatAgent={currentChatAgent}
-                  setCurrentChatAgent={setCurrentChatAgent}
-                />
-              </ResizablePanel>
-              <ResizableHandle />
-              <ResizablePanel minSize={30}>
-                <ChatList
-                  chats={chats}
-                  chatAgent={currentChatAgent}
-                  currentChat={currentChat}
-                  setCurrentChat={handleSelectChat}
-                />
-              </ResizablePanel>
-            </ResizablePanelGroup>
-          </ResizablePanel>
-          <ResizableHandle />
-        </>
-      )}
-      <ResizablePanel id="chat-session-panel" order={2} minSize={50}>
-        <ChatSession
-          chatId={currentChat?.id}
-          sidePanelCollapsed={sidePanelCollapsed}
-          toggleSidePanel={() => setSidePanelCollapsed(!sidePanelCollapsed)}
-        />
-      </ResizablePanel>
-    </ResizablePanelGroup>
+    <div className="h-content grid" style={{ gridTemplateColumns }}>
+      {!sidePanelCollapsed &&
+        (fluid ? (
+          <>
+            <div className="min-h-0 border-r border-ej-line bg-ej-side">
+              {agents}
+            </div>
+            <div className="min-h-0 border-r border-ej-line bg-ej-side">
+              {list}
+            </div>
+          </>
+        ) : (
+          <div className="min-h-0 grid grid-rows-[minmax(0,42%)_minmax(0,58%)] border-r border-ej-line bg-ej-side">
+            <div className="min-h-0 border-b border-ej-line">{agents}</div>
+            <div className="min-h-0">{list}</div>
+          </div>
+        ))}
+
+      <ChatSession
+        chatId={currentChat?.id}
+        sidePanelCollapsed={sidePanelCollapsed}
+        toggleSidePanel={() => setSidePanelCollapsed(!sidePanelCollapsed)}
+      />
+    </div>
   );
 }

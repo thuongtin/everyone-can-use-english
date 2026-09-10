@@ -1,0 +1,1925 @@
+[
+  {
+    "model": "microsoft/mai-transcribe-2",
+    "fixture": "roundtrip-deepgram__flux-tts_free-en-microsoft__mai-transcribe-2.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 4.875,
+    "generationId": "gen-stt-1788850490-frbFpAW47kagqFwK5bTs",
+    "response": {
+      "text": "The train leaves at 7:30. Please bring your blue notebook.",
+      "usage": {
+        "seconds": 4,
+        "cost": 0.00011111111111111112
+      },
+      "language": "en",
+      "duration": 3.58,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 3.576,
+          "text": "The train leaves at 7:30. Please bring your blue notebook."
+        }
+      ],
+      "words": [
+        {
+          "word": "The",
+          "start": 0.16,
+          "end": 0.26
+        },
+        {
+          "word": "train",
+          "start": 0.32,
+          "end": 0.54
+        },
+        {
+          "word": "leaves",
+          "start": 0.6,
+          "end": 0.86
+        },
+        {
+          "word": "at",
+          "start": 0.92,
+          "end": 0.979
+        },
+        {
+          "word": "7:30.",
+          "start": 1.08,
+          "end": 1.64
+        },
+        {
+          "word": "Please",
+          "start": 2.04,
+          "end": 2.22
+        },
+        {
+          "word": "bring",
+          "start": 2.32,
+          "end": 2.42
+        },
+        {
+          "word": "your",
+          "start": 2.44,
+          "end": 2.56
+        },
+        {
+          "word": "blue",
+          "start": 2.6,
+          "end": 2.78
+        },
+        {
+          "word": "notebook.",
+          "start": 2.84,
+          "end": 3.32
+        }
+      ]
+    },
+    "ttsModel": "deepgram/flux-tts:free",
+    "language": "en",
+    "reference": "The train leaves at seven thirty. Please bring your blue notebook.",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/deepgram__flux-tts_free/en.mp3",
+    "wer": 0.18181818181818182
+  },
+  {
+    "model": "microsoft/mai-transcribe-2",
+    "fixture": "roundtrip-fish-audio__s1-en-microsoft__mai-transcribe-2.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 1.741,
+    "generationId": "gen-stt-1788850490-5MIuDrlwwVNXnhzUb88r",
+    "response": {
+      "text": "The train leaves at 7:30. Please bring your blue notebook.",
+      "usage": {
+        "seconds": 4,
+        "cost": 0.00011111111111111112
+      },
+      "language": "en",
+      "duration": 3.74,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 3.735,
+          "text": "The train leaves at 7:30. Please bring your blue notebook."
+        }
+      ],
+      "words": [
+        {
+          "word": "The",
+          "start": 0.28,
+          "end": 0.4
+        },
+        {
+          "word": "train",
+          "start": 0.52,
+          "end": 0.719
+        },
+        {
+          "word": "leaves",
+          "start": 0.8,
+          "end": 1.019
+        },
+        {
+          "word": "at",
+          "start": 1.04,
+          "end": 1.14
+        },
+        {
+          "word": "7:30.",
+          "start": 1.24,
+          "end": 1.88
+        },
+        {
+          "word": "Please",
+          "start": 2.24,
+          "end": 2.419
+        },
+        {
+          "word": "bring",
+          "start": 2.52,
+          "end": 2.68
+        },
+        {
+          "word": "your",
+          "start": 2.72,
+          "end": 2.839
+        },
+        {
+          "word": "blue",
+          "start": 2.88,
+          "end": 3.06
+        },
+        {
+          "word": "notebook.",
+          "start": 3.12,
+          "end": 3.6
+        }
+      ]
+    },
+    "ttsModel": "fish-audio/s1",
+    "language": "en",
+    "reference": "The train leaves at seven thirty. Please bring your blue notebook.",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/fish-audio__s1/en.mp3",
+    "wer": 0.18181818181818182
+  },
+  {
+    "model": "microsoft/mai-transcribe-2",
+    "fixture": "roundtrip-fish-audio__s2-pro-en-microsoft__mai-transcribe-2.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 2.672,
+    "generationId": "gen-stt-1788850491-szSqTnkhCeM2RvmteBdC",
+    "response": {
+      "text": "The train leaves at 7:30. Please bring your blue notebook.",
+      "usage": {
+        "seconds": 5,
+        "cost": 0.0001388888888888889
+      },
+      "language": "en",
+      "duration": 4.05,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 4.049,
+          "text": "The train leaves at 7:30. Please bring your blue notebook."
+        }
+      ],
+      "words": [
+        {
+          "word": "The",
+          "start": 0.12,
+          "end": 0.2
+        },
+        {
+          "word": "train",
+          "start": 0.28,
+          "end": 0.499
+        },
+        {
+          "word": "leaves",
+          "start": 0.6,
+          "end": 0.92
+        },
+        {
+          "word": "at",
+          "start": 1,
+          "end": 1.1
+        },
+        {
+          "word": "7:30.",
+          "start": 1.28,
+          "end": 2
+        },
+        {
+          "word": "Please",
+          "start": 2.4,
+          "end": 2.58
+        },
+        {
+          "word": "bring",
+          "start": 2.72,
+          "end": 2.879
+        },
+        {
+          "word": "your",
+          "start": 2.92,
+          "end": 3.04
+        },
+        {
+          "word": "blue",
+          "start": 3.12,
+          "end": 3.3
+        },
+        {
+          "word": "notebook.",
+          "start": 3.4,
+          "end": 3.96
+        }
+      ]
+    },
+    "ttsModel": "fish-audio/s2-pro",
+    "language": "en",
+    "reference": "The train leaves at seven thirty. Please bring your blue notebook.",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/fish-audio__s2-pro/en.mp3",
+    "wer": 0.18181818181818182
+  },
+  {
+    "model": "microsoft/mai-transcribe-2",
+    "fixture": "roundtrip-fish-audio__s2.1-pro-free_free-en-microsoft__mai-transcribe-2.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 2.913,
+    "generationId": "gen-stt-1788850494-b39HfWqcpnDZv8Kb3wmW",
+    "response": {
+      "text": "The train leaves at 7:30. Please bring your blue notebook.",
+      "usage": {
+        "seconds": 5,
+        "cost": 0.0001388888888888889
+      },
+      "language": "en",
+      "duration": 4.809,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 4.806,
+          "text": "The train leaves at 7:30. Please bring your blue notebook."
+        }
+      ],
+      "words": [
+        {
+          "word": "The",
+          "start": 0.16,
+          "end": 0.26
+        },
+        {
+          "word": "train",
+          "start": 0.4,
+          "end": 0.64
+        },
+        {
+          "word": "leaves",
+          "start": 0.84,
+          "end": 1.2
+        },
+        {
+          "word": "at",
+          "start": 1.28,
+          "end": 1.4
+        },
+        {
+          "word": "7:30.",
+          "start": 1.6,
+          "end": 2.399
+        },
+        {
+          "word": "Please",
+          "start": 2.8,
+          "end": 3.019
+        },
+        {
+          "word": "bring",
+          "start": 3.2,
+          "end": 3.379
+        },
+        {
+          "word": "your",
+          "start": 3.48,
+          "end": 3.62
+        },
+        {
+          "word": "blue",
+          "start": 3.72,
+          "end": 3.919
+        },
+        {
+          "word": "notebook.",
+          "start": 4.08,
+          "end": 4.639
+        }
+      ]
+    },
+    "ttsModel": "fish-audio/s2.1-pro-free:free",
+    "language": "en",
+    "reference": "The train leaves at seven thirty. Please bring your blue notebook.",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/fish-audio__s2.1-pro-free_free/en.mp3",
+    "wer": 0.18181818181818182
+  },
+  {
+    "model": "microsoft/mai-transcribe-2",
+    "fixture": "roundtrip-fish-audio__s2.1-pro-en-microsoft__mai-transcribe-2.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 1.084,
+    "generationId": "gen-stt-1788850494-p8UmXRqgV3mqRc464sXV",
+    "response": {
+      "text": "The train leaves at 7:30. Please bring your blue notebook.",
+      "usage": {
+        "seconds": 5,
+        "cost": 0.0001388888888888889
+      },
+      "language": "en",
+      "duration": 4.57,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 4.571,
+          "text": "The train leaves at 7:30. Please bring your blue notebook."
+        }
+      ],
+      "words": [
+        {
+          "word": "The",
+          "start": 0.16,
+          "end": 0.26
+        },
+        {
+          "word": "train",
+          "start": 0.4,
+          "end": 0.599
+        },
+        {
+          "word": "leaves",
+          "start": 0.72,
+          "end": 1
+        },
+        {
+          "word": "at",
+          "start": 1.08,
+          "end": 1.199
+        },
+        {
+          "word": "7:30.",
+          "start": 1.36,
+          "end": 2.039
+        },
+        {
+          "word": "Please",
+          "start": 2.72,
+          "end": 2.939
+        },
+        {
+          "word": "bring",
+          "start": 3.08,
+          "end": 3.26
+        },
+        {
+          "word": "your",
+          "start": 3.32,
+          "end": 3.459
+        },
+        {
+          "word": "blue",
+          "start": 3.56,
+          "end": 3.74
+        },
+        {
+          "word": "notebook.",
+          "start": 3.84,
+          "end": 4.4
+        }
+      ]
+    },
+    "ttsModel": "fish-audio/s2.1-pro",
+    "language": "en",
+    "reference": "The train leaves at seven thirty. Please bring your blue notebook.",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/fish-audio__s2.1-pro/en.mp3",
+    "wer": 0.18181818181818182
+  },
+  {
+    "model": "microsoft/mai-transcribe-2",
+    "fixture": "roundtrip-microsoft__mai-voice-2-flash-en-microsoft__mai-transcribe-2.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 1.377,
+    "generationId": "gen-stt-1788850496-QwJjrUM2shmQ48iyehVO",
+    "response": {
+      "text": "The train leaves at 7:30. Please bring your blue notebook.",
+      "usage": {
+        "seconds": 5,
+        "cost": 0.0001388888888888889
+      },
+      "language": "en",
+      "duration": 4.03,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 4.032,
+          "text": "The train leaves at 7:30. Please bring your blue notebook."
+        }
+      ],
+      "words": [
+        {
+          "word": "The",
+          "start": 0.12,
+          "end": 0.2
+        },
+        {
+          "word": "train",
+          "start": 0.28,
+          "end": 0.46
+        },
+        {
+          "word": "leaves",
+          "start": 0.56,
+          "end": 0.759
+        },
+        {
+          "word": "at",
+          "start": 0.8,
+          "end": 0.92
+        },
+        {
+          "word": "7:30.",
+          "start": 1.08,
+          "end": 1.759
+        },
+        {
+          "word": "Please",
+          "start": 2.2,
+          "end": 2.379
+        },
+        {
+          "word": "bring",
+          "start": 2.48,
+          "end": 2.64
+        },
+        {
+          "word": "your",
+          "start": 2.68,
+          "end": 2.8
+        },
+        {
+          "word": "blue",
+          "start": 2.88,
+          "end": 3.08
+        },
+        {
+          "word": "notebook.",
+          "start": 3.16,
+          "end": 3.72
+        }
+      ]
+    },
+    "ttsModel": "microsoft/mai-voice-2-flash",
+    "language": "en",
+    "reference": "The train leaves at seven thirty. Please bring your blue notebook.",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/microsoft__mai-voice-2-flash/en.mp3",
+    "wer": 0.18181818181818182
+  },
+  {
+    "model": "microsoft/mai-transcribe-2",
+    "fixture": "roundtrip-qwen__qwen-audio-3.0-tts-flash-en-microsoft__mai-transcribe-2.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 1.153,
+    "generationId": "gen-stt-1788850497-YUYdMzlqRT5VUgzwZSmz",
+    "response": {
+      "text": "The train leaves at 7:30. Please bring your blue notebook.",
+      "usage": {
+        "seconds": 5,
+        "cost": 0.0001388888888888889
+      },
+      "language": "en",
+      "duration": 4.61,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 4.608,
+          "text": "The train leaves at 7:30. Please bring your blue notebook."
+        }
+      ],
+      "words": [
+        {
+          "word": "The",
+          "start": 0.36,
+          "end": 0.46
+        },
+        {
+          "word": "train",
+          "start": 0.6,
+          "end": 0.8
+        },
+        {
+          "word": "leaves",
+          "start": 0.92,
+          "end": 1.219
+        },
+        {
+          "word": "at",
+          "start": 1.32,
+          "end": 1.439
+        },
+        {
+          "word": "7:30.",
+          "start": 1.6,
+          "end": 2.28
+        },
+        {
+          "word": "Please",
+          "start": 2.76,
+          "end": 2.979
+        },
+        {
+          "word": "bring",
+          "start": 3.12,
+          "end": 3.3
+        },
+        {
+          "word": "your",
+          "start": 3.36,
+          "end": 3.48
+        },
+        {
+          "word": "blue",
+          "start": 3.56,
+          "end": 3.72
+        },
+        {
+          "word": "notebook.",
+          "start": 3.8,
+          "end": 4.32
+        }
+      ]
+    },
+    "ttsModel": "qwen/qwen-audio-3.0-tts-flash",
+    "language": "en",
+    "reference": "The train leaves at seven thirty. Please bring your blue notebook.",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/qwen__qwen-audio-3.0-tts-flash/en.mp3",
+    "wer": 0.18181818181818182
+  },
+  {
+    "model": "microsoft/mai-transcribe-2",
+    "fixture": "roundtrip-qwen__qwen-audio-3.0-tts-plus-en-microsoft__mai-transcribe-2.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 2.618,
+    "generationId": "gen-stt-1788850497-8ygQlKj4I0UW5pz26Axg",
+    "response": {
+      "text": "The train leaves at 7:30. Please bring your blue notebook.",
+      "usage": {
+        "seconds": 4,
+        "cost": 0.00011111111111111112
+      },
+      "language": "en",
+      "duration": 3.89,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 3.888,
+          "text": "The train leaves at 7:30. Please bring your blue notebook."
+        }
+      ],
+      "words": [
+        {
+          "word": "The",
+          "start": 0.16,
+          "end": 0.26
+        },
+        {
+          "word": "train",
+          "start": 0.4,
+          "end": 0.599
+        },
+        {
+          "word": "leaves",
+          "start": 0.68,
+          "end": 0.899
+        },
+        {
+          "word": "at",
+          "start": 0.96,
+          "end": 1.02
+        },
+        {
+          "word": "7:30.",
+          "start": 1.12,
+          "end": 1.759
+        },
+        {
+          "word": "Please",
+          "start": 2.2,
+          "end": 2.419
+        },
+        {
+          "word": "bring",
+          "start": 2.56,
+          "end": 2.72
+        },
+        {
+          "word": "your",
+          "start": 2.76,
+          "end": 2.879
+        },
+        {
+          "word": "blue",
+          "start": 3,
+          "end": 3.18
+        },
+        {
+          "word": "notebook.",
+          "start": 3.32,
+          "end": 3.8
+        }
+      ]
+    },
+    "ttsModel": "qwen/qwen-audio-3.0-tts-plus",
+    "language": "en",
+    "reference": "The train leaves at seven thirty. Please bring your blue notebook.",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/qwen__qwen-audio-3.0-tts-plus/en.mp3",
+    "wer": 0.18181818181818182
+  },
+  {
+    "model": "microsoft/mai-transcribe-2",
+    "fixture": "roundtrip-deepgram__aura-2-en-microsoft__mai-transcribe-2.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 1.057,
+    "generationId": "gen-stt-1788850498-CX1c21UC1ebdB3pXv0Xs",
+    "response": {
+      "text": "The train leaves at 7:30. Please bring your blue notebook.",
+      "usage": {
+        "seconds": 4,
+        "cost": 0.00011111111111111112
+      },
+      "language": "en",
+      "duration": 3.53,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 3.528,
+          "text": "The train leaves at 7:30. Please bring your blue notebook."
+        }
+      ],
+      "words": [
+        {
+          "word": "The",
+          "start": 0.16,
+          "end": 0.26
+        },
+        {
+          "word": "train",
+          "start": 0.36,
+          "end": 0.56
+        },
+        {
+          "word": "leaves",
+          "start": 0.68,
+          "end": 0.859
+        },
+        {
+          "word": "at",
+          "start": 0.92,
+          "end": 0.999
+        },
+        {
+          "word": "7:30.",
+          "start": 1.12,
+          "end": 1.719
+        },
+        {
+          "word": "Please",
+          "start": 2.16,
+          "end": 2.339
+        },
+        {
+          "word": "bring",
+          "start": 2.4,
+          "end": 2.56
+        },
+        {
+          "word": "your",
+          "start": 2.6,
+          "end": 2.72
+        },
+        {
+          "word": "blue",
+          "start": 2.76,
+          "end": 2.939
+        },
+        {
+          "word": "notebook.",
+          "start": 3.04,
+          "end": 3.52
+        }
+      ]
+    },
+    "ttsModel": "deepgram/aura-2",
+    "language": "en",
+    "reference": "The train leaves at seven thirty. Please bring your blue notebook.",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/deepgram__aura-2/en.mp3",
+    "wer": 0.18181818181818182
+  },
+  {
+    "model": "microsoft/mai-transcribe-2",
+    "fixture": "roundtrip-minimax__speech-2.8-hd-en-microsoft__mai-transcribe-2.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 1.36,
+    "generationId": "gen-stt-1788850499-UAEiCmGK8zgnBGpzv43L",
+    "response": {
+      "text": "The train leaves at 7:30. Please bring your blue notebook.",
+      "usage": {
+        "seconds": 4,
+        "cost": 0.00011111111111111112
+      },
+      "language": "en",
+      "duration": 3.8,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 3.799,
+          "text": "The train leaves at 7:30. Please bring your blue notebook."
+        }
+      ],
+      "words": [
+        {
+          "word": "The",
+          "start": 0.2,
+          "end": 0.28
+        },
+        {
+          "word": "train",
+          "start": 0.36,
+          "end": 0.56
+        },
+        {
+          "word": "leaves",
+          "start": 0.68,
+          "end": 0.879
+        },
+        {
+          "word": "at",
+          "start": 0.92,
+          "end": 0.999
+        },
+        {
+          "word": "7:30.",
+          "start": 1.12,
+          "end": 1.759
+        },
+        {
+          "word": "Please",
+          "start": 2.2,
+          "end": 2.379
+        },
+        {
+          "word": "bring",
+          "start": 2.48,
+          "end": 2.64
+        },
+        {
+          "word": "your",
+          "start": 2.68,
+          "end": 2.819
+        },
+        {
+          "word": "blue",
+          "start": 2.92,
+          "end": 3.08
+        },
+        {
+          "word": "notebook.",
+          "start": 3.16,
+          "end": 3.599
+        }
+      ]
+    },
+    "ttsModel": "minimax/speech-2.8-hd",
+    "language": "en",
+    "reference": "The train leaves at seven thirty. Please bring your blue notebook.",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/minimax__speech-2.8-hd/en.mp3",
+    "wer": 0.18181818181818182
+  },
+  {
+    "model": "microsoft/mai-transcribe-2",
+    "fixture": "roundtrip-minimax__speech-2.8-turbo-en-microsoft__mai-transcribe-2.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 1.396,
+    "generationId": "gen-stt-1788850500-TpSHW9aNThZODN5MYy02",
+    "response": {
+      "text": "The train leaves at 7:30. Please bring your blue notebook.",
+      "usage": {
+        "seconds": 5,
+        "cost": 0.0001388888888888889
+      },
+      "language": "en",
+      "duration": 4.59,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 4.591,
+          "text": "The train leaves at 7:30. Please bring your blue notebook."
+        }
+      ],
+      "words": [
+        {
+          "word": "The",
+          "start": 0.2,
+          "end": 0.299
+        },
+        {
+          "word": "train",
+          "start": 0.36,
+          "end": 0.56
+        },
+        {
+          "word": "leaves",
+          "start": 0.64,
+          "end": 0.859
+        },
+        {
+          "word": "at",
+          "start": 0.92,
+          "end": 0.979
+        },
+        {
+          "word": "7:30.",
+          "start": 1.08,
+          "end": 1.84
+        },
+        {
+          "word": "Please",
+          "start": 2.8,
+          "end": 2.979
+        },
+        {
+          "word": "bring",
+          "start": 3.08,
+          "end": 3.24
+        },
+        {
+          "word": "your",
+          "start": 3.32,
+          "end": 3.459
+        },
+        {
+          "word": "blue",
+          "start": 3.56,
+          "end": 3.76
+        },
+        {
+          "word": "notebook.",
+          "start": 3.88,
+          "end": 4.4
+        }
+      ]
+    },
+    "ttsModel": "minimax/speech-2.8-turbo",
+    "language": "en",
+    "reference": "The train leaves at seven thirty. Please bring your blue notebook.",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/minimax__speech-2.8-turbo/en.mp3",
+    "wer": 0.18181818181818182
+  },
+  {
+    "model": "microsoft/mai-transcribe-2",
+    "fixture": "roundtrip-microsoft__mai-voice-2-en-microsoft__mai-transcribe-2.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 2.679,
+    "generationId": "gen-stt-1788850501-7SRF7PwaMGVvf6PM2cJh",
+    "response": {
+      "text": "The train leaves at 7:30. Please bring your blue notebook.",
+      "usage": {
+        "seconds": 5,
+        "cost": 0.0001388888888888889
+      },
+      "language": "en",
+      "duration": 4.2,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 4.2,
+          "text": "The train leaves at 7:30. Please bring your blue notebook."
+        }
+      ],
+      "words": [
+        {
+          "word": "The",
+          "start": 0.12,
+          "end": 0.2
+        },
+        {
+          "word": "train",
+          "start": 0.32,
+          "end": 0.5
+        },
+        {
+          "word": "leaves",
+          "start": 0.6,
+          "end": 0.82
+        },
+        {
+          "word": "at",
+          "start": 0.88,
+          "end": 0.979
+        },
+        {
+          "word": "7:30.",
+          "start": 1.12,
+          "end": 1.799
+        },
+        {
+          "word": "Please",
+          "start": 2.44,
+          "end": 2.64
+        },
+        {
+          "word": "bring",
+          "start": 2.72,
+          "end": 2.879
+        },
+        {
+          "word": "your",
+          "start": 2.92,
+          "end": 3.04
+        },
+        {
+          "word": "blue",
+          "start": 3.12,
+          "end": 3.3
+        },
+        {
+          "word": "notebook.",
+          "start": 3.4,
+          "end": 3.92
+        }
+      ]
+    },
+    "ttsModel": "microsoft/mai-voice-2",
+    "language": "en",
+    "reference": "The train leaves at seven thirty. Please bring your blue notebook.",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/microsoft__mai-voice-2/en.mp3",
+    "wer": 0.18181818181818182
+  },
+  {
+    "model": "microsoft/mai-transcribe-2",
+    "fixture": "roundtrip-x-ai__grok-voice-tts-1.0-en-microsoft__mai-transcribe-2.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 1.351,
+    "generationId": "gen-stt-1788850501-dccSgcyo5bOBIEW9HzCG",
+    "response": {
+      "text": "The train leaves at 7:30. Please bring your blue notebook.",
+      "usage": {
+        "seconds": 5,
+        "cost": 0.0001388888888888889
+      },
+      "language": "en",
+      "duration": 4.3,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 4.296,
+          "text": "The train leaves at 7:30. Please bring your blue notebook."
+        }
+      ],
+      "words": [
+        {
+          "word": "The",
+          "start": 0.16,
+          "end": 0.28
+        },
+        {
+          "word": "train",
+          "start": 0.4,
+          "end": 0.599
+        },
+        {
+          "word": "leaves",
+          "start": 0.72,
+          "end": 0.98
+        },
+        {
+          "word": "at",
+          "start": 1.04,
+          "end": 1.14
+        },
+        {
+          "word": "7:30.",
+          "start": 1.28,
+          "end": 2.04
+        },
+        {
+          "word": "Please",
+          "start": 2.52,
+          "end": 2.72
+        },
+        {
+          "word": "bring",
+          "start": 2.84,
+          "end": 2.98
+        },
+        {
+          "word": "your",
+          "start": 3.04,
+          "end": 3.16
+        },
+        {
+          "word": "blue",
+          "start": 3.24,
+          "end": 3.439
+        },
+        {
+          "word": "notebook.",
+          "start": 3.56,
+          "end": 4.08
+        }
+      ]
+    },
+    "ttsModel": "x-ai/grok-voice-tts-1.0",
+    "language": "en",
+    "reference": "The train leaves at seven thirty. Please bring your blue notebook.",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/x-ai__grok-voice-tts-1.0/en.mp3",
+    "wer": 0.18181818181818182
+  },
+  {
+    "model": "microsoft/mai-transcribe-2",
+    "fixture": "roundtrip-google__gemini-3.1-flash-tts-preview-en-microsoft__mai-transcribe-2.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 2.726,
+    "generationId": "gen-stt-1788850503-yybGc7cZzObFFxXzfV4Z",
+    "response": {
+      "text": "The train leaves at 7:30. Please bring your blue notebook.",
+      "usage": {
+        "seconds": 5,
+        "cost": 0.0001388888888888889
+      },
+      "language": "en",
+      "duration": 4.68,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 4.68,
+          "text": "The train leaves at 7:30. Please bring your blue notebook."
+        }
+      ],
+      "words": [
+        {
+          "word": "The",
+          "start": 0.36,
+          "end": 0.46
+        },
+        {
+          "word": "train",
+          "start": 0.6,
+          "end": 0.8
+        },
+        {
+          "word": "leaves",
+          "start": 0.96,
+          "end": 1.22
+        },
+        {
+          "word": "at",
+          "start": 1.32,
+          "end": 1.4
+        },
+        {
+          "word": "7:30.",
+          "start": 1.6,
+          "end": 2.24
+        },
+        {
+          "word": "Please",
+          "start": 2.76,
+          "end": 2.979
+        },
+        {
+          "word": "bring",
+          "start": 3.08,
+          "end": 3.26
+        },
+        {
+          "word": "your",
+          "start": 3.32,
+          "end": 3.439
+        },
+        {
+          "word": "blue",
+          "start": 3.56,
+          "end": 3.74
+        },
+        {
+          "word": "notebook.",
+          "start": 3.84,
+          "end": 4.36
+        }
+      ]
+    },
+    "ttsModel": "google/gemini-3.1-flash-tts-preview",
+    "language": "en",
+    "reference": "The train leaves at seven thirty. Please bring your blue notebook.",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/google__gemini-3.1-flash-tts-preview/en-pcm-transcoded.mp3",
+    "wer": 0.18181818181818182
+  },
+  {
+    "model": "microsoft/mai-transcribe-2",
+    "fixture": "roundtrip-canopylabs__orpheus-3b-0.1-ft-en-microsoft__mai-transcribe-2.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 1.101,
+    "generationId": "gen-stt-1788850503-uP8RBJFcqiuZlGqhOE4C",
+    "response": {
+      "text": "The train leaves at 7:30. Please bring your blue notebook.",
+      "usage": {
+        "seconds": 5,
+        "cost": 0.0001388888888888889
+      },
+      "language": "en",
+      "duration": 4.269,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 4.266,
+          "text": "The train leaves at 7:30. Please bring your blue notebook."
+        }
+      ],
+      "words": [
+        {
+          "word": "The",
+          "start": 0.36,
+          "end": 0.48
+        },
+        {
+          "word": "train",
+          "start": 0.6,
+          "end": 0.8
+        },
+        {
+          "word": "leaves",
+          "start": 0.92,
+          "end": 1.12
+        },
+        {
+          "word": "at",
+          "start": 1.16,
+          "end": 1.24
+        },
+        {
+          "word": "7:30.",
+          "start": 1.36,
+          "end": 1.999
+        },
+        {
+          "word": "Please",
+          "start": 2.8,
+          "end": 3.019
+        },
+        {
+          "word": "bring",
+          "start": 3.12,
+          "end": 3.24
+        },
+        {
+          "word": "your",
+          "start": 3.28,
+          "end": 3.399
+        },
+        {
+          "word": "blue",
+          "start": 3.44,
+          "end": 3.6
+        },
+        {
+          "word": "notebook.",
+          "start": 3.68,
+          "end": 4.2
+        }
+      ]
+    },
+    "ttsModel": "canopylabs/orpheus-3b-0.1-ft",
+    "language": "en",
+    "reference": "The train leaves at seven thirty. Please bring your blue notebook.",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/canopylabs__orpheus-3b-0.1-ft/en.mp3",
+    "wer": 0.18181818181818182
+  },
+  {
+    "model": "microsoft/mai-transcribe-2",
+    "fixture": "roundtrip-sesame__csm-1b-en-microsoft__mai-transcribe-2.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 2.573,
+    "generationId": "gen-stt-1788850505-0XLGINCXwB12JFocIyOP",
+    "response": {
+      "text": "The train leaves at 7:30. Please bring your blue notebook.",
+      "usage": {
+        "seconds": 3,
+        "cost": 8.333333333333333e-05
+      },
+      "language": "en",
+      "duration": 2.87,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 2.87,
+          "text": "The train leaves at 7:30. Please bring your blue notebook."
+        }
+      ],
+      "words": [
+        {
+          "word": "The",
+          "start": 0.12,
+          "end": 0.22
+        },
+        {
+          "word": "train",
+          "start": 0.28,
+          "end": 0.46
+        },
+        {
+          "word": "leaves",
+          "start": 0.52,
+          "end": 0.719
+        },
+        {
+          "word": "at",
+          "start": 0.76,
+          "end": 0.82
+        },
+        {
+          "word": "7:30.",
+          "start": 0.92,
+          "end": 1.62
+        },
+        {
+          "word": "Please",
+          "start": 1.8,
+          "end": 1.999
+        },
+        {
+          "word": "bring",
+          "start": 2.08,
+          "end": 2.22
+        },
+        {
+          "word": "your",
+          "start": 2.24,
+          "end": 2.339
+        },
+        {
+          "word": "blue",
+          "start": 2.4,
+          "end": 2.52
+        },
+        {
+          "word": "notebook.",
+          "start": 2.56,
+          "end": 2.879
+        }
+      ]
+    },
+    "ttsModel": "sesame/csm-1b",
+    "language": "en",
+    "reference": "The train leaves at seven thirty. Please bring your blue notebook.",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/sesame__csm-1b/en.mp3",
+    "wer": 0.18181818181818182
+  },
+  {
+    "model": "microsoft/mai-transcribe-2",
+    "fixture": "roundtrip-hexgrad__kokoro-82m-en-microsoft__mai-transcribe-2.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 1.416,
+    "generationId": "gen-stt-1788850505-eRLzUf3LKvgupuMCyMA8",
+    "response": {
+      "text": "The train leaves at 7:30. Please bring your blue notebook.",
+      "usage": {
+        "seconds": 6,
+        "cost": 0.00016666666666666666
+      },
+      "language": "en",
+      "duration": 5.28,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 5.282,
+          "text": "The train leaves at 7:30. Please bring your blue notebook."
+        }
+      ],
+      "words": [
+        {
+          "word": "The",
+          "start": 0.28,
+          "end": 0.379
+        },
+        {
+          "word": "train",
+          "start": 0.52,
+          "end": 0.739
+        },
+        {
+          "word": "leaves",
+          "start": 0.96,
+          "end": 1.2
+        },
+        {
+          "word": "at",
+          "start": 1.24,
+          "end": 1.34
+        },
+        {
+          "word": "7:30.",
+          "start": 1.48,
+          "end": 2.24
+        },
+        {
+          "word": "Please",
+          "start": 3.12,
+          "end": 3.439
+        },
+        {
+          "word": "bring",
+          "start": 3.6,
+          "end": 3.76
+        },
+        {
+          "word": "your",
+          "start": 3.8,
+          "end": 3.939
+        },
+        {
+          "word": "blue",
+          "start": 4.04,
+          "end": 4.219
+        },
+        {
+          "word": "notebook.",
+          "start": 4.32,
+          "end": 4.879
+        }
+      ]
+    },
+    "ttsModel": "hexgrad/kokoro-82m",
+    "language": "en",
+    "reference": "The train leaves at seven thirty. Please bring your blue notebook.",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/hexgrad__kokoro-82m/en.mp3",
+    "wer": 0.18181818181818182
+  },
+  {
+    "model": "microsoft/mai-transcribe-2",
+    "fixture": "roundtrip-mistralai__voxtral-mini-tts-2603-en-microsoft__mai-transcribe-2.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 1.09,
+    "generationId": "gen-stt-1788850507-lJxEJLDy4dLSIwlsPQAs",
+    "response": {
+      "text": "The train leaves at 7:30. Please bring your blue notebook.",
+      "usage": {
+        "seconds": 5,
+        "cost": 0.0001388888888888889
+      },
+      "language": "en",
+      "duration": 4.55,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 4.545,
+          "text": "The train leaves at 7:30. Please bring your blue notebook."
+        }
+      ],
+      "words": [
+        {
+          "word": "The",
+          "start": 0.12,
+          "end": 0.22
+        },
+        {
+          "word": "train",
+          "start": 0.28,
+          "end": 0.479
+        },
+        {
+          "word": "leaves",
+          "start": 0.56,
+          "end": 0.82
+        },
+        {
+          "word": "at",
+          "start": 1.04,
+          "end": 1.159
+        },
+        {
+          "word": "7:30.",
+          "start": 1.44,
+          "end": 2.16
+        },
+        {
+          "word": "Please",
+          "start": 2.6,
+          "end": 2.78
+        },
+        {
+          "word": "bring",
+          "start": 2.92,
+          "end": 3.14
+        },
+        {
+          "word": "your",
+          "start": 3.24,
+          "end": 3.379
+        },
+        {
+          "word": "blue",
+          "start": 3.56,
+          "end": 3.76
+        },
+        {
+          "word": "notebook.",
+          "start": 3.92,
+          "end": 4.44
+        }
+      ]
+    },
+    "ttsModel": "mistralai/voxtral-mini-tts-2603",
+    "language": "en",
+    "reference": "The train leaves at seven thirty. Please bring your blue notebook.",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/mistralai__voxtral-mini-tts-2603/en.mp3",
+    "wer": 0.18181818181818182
+  },
+  {
+    "model": "microsoft/mai-transcribe-2",
+    "fixture": "roundtrip-mistralai__voxtral-mini-tts-2603-vi-microsoft__mai-transcribe-2.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 1.298,
+    "generationId": "gen-stt-1788850507-yubRc0oqWCWa8lD7BBB0",
+    "response": {
+      "text": "Hôm nay tôi học sinh시아 trong 10 minute.",
+      "usage": {
+        "seconds": 4,
+        "cost": 0.00011111111111111112
+      },
+      "language": "vi",
+      "duration": 4,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 3.996,
+          "text": "Hôm nay tôi học sinh시아 trong 10 minute."
+        }
+      ],
+      "words": [
+        {
+          "word": "Hôm",
+          "start": 0.08,
+          "end": 0.32
+        },
+        {
+          "word": "nay",
+          "start": 0.4,
+          "end": 0.54
+        },
+        {
+          "word": "tôi",
+          "start": 0.56,
+          "end": 0.8
+        },
+        {
+          "word": "học",
+          "start": 0.88,
+          "end": 1.12
+        },
+        {
+          "word": "sinh시아",
+          "start": 1.24,
+          "end": 1.679
+        },
+        {
+          "word": "trong",
+          "start": 2.64,
+          "end": 2.999
+        },
+        {
+          "word": "10",
+          "start": 3.12,
+          "end": 3.399
+        },
+        {
+          "word": "minute.",
+          "start": 3.6,
+          "end": 3.959
+        }
+      ]
+    },
+    "ttsModel": "mistralai__voxtral-mini-tts-2603",
+    "language": "vi",
+    "reference": "Hôm nay tôi học tiếng Anh trong mười phút.",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/mistralai__voxtral-mini-tts-2603/vi.mp3",
+    "wer": 0.4444444444444444
+  },
+  {
+    "model": "x-ai/grok-stt-1.0",
+    "fixture": "roundtrip-mistralai__voxtral-mini-tts-2603-vi-x-ai__grok-stt-1.0.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 1.117,
+    "generationId": "gen-stt-1788850508-D0P8prGymw9mOb2OJJPR",
+    "response": {
+      "text": "Home netto home sync ja, toch moeite minuut.",
+      "usage": {
+        "seconds": 3.997,
+        "cost": 0.00011102777777777778
+      },
+      "language": "nl",
+      "duration": 3.997,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 3.997,
+          "text": "Home netto home sync ja, toch moeite minuut."
+        }
+      ],
+      "words": [
+        {
+          "word": "Home",
+          "start": 0.04,
+          "end": 0.382
+        },
+        {
+          "word": "netto",
+          "start": 0.382,
+          "end": 0.663
+        },
+        {
+          "word": "home",
+          "start": 0.864,
+          "end": 1.165
+        },
+        {
+          "word": "sync",
+          "start": 1.225,
+          "end": 1.466
+        },
+        {
+          "word": "ja,",
+          "start": 1.506,
+          "end": 1.627
+        },
+        {
+          "word": "toch",
+          "start": 2.671,
+          "end": 2.972
+        },
+        {
+          "word": "moeite",
+          "start": 3.133,
+          "end": 3.434
+        },
+        {
+          "word": "minuut.",
+          "start": 3.535,
+          "end": 3.816
+        }
+      ]
+    },
+    "ttsModel": "mistralai__voxtral-mini-tts-2603",
+    "language": "vi",
+    "reference": "Hôm nay tôi học tiếng Anh trong mười phút.",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/mistralai__voxtral-mini-tts-2603/vi.mp3",
+    "wer": 1.0
+  },
+  {
+    "model": "microsoft/mai-transcribe-2",
+    "fixture": "roundtrip-x-ai__grok-voice-tts-1.0-vi-microsoft__mai-transcribe-2.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 2.292,
+    "generationId": "gen-stt-1788850508-3wOfxMfoy3eNtolgWduw",
+    "response": {
+      "text": "Hôm nay tôi học tiếng Anh trong 10 phút.",
+      "usage": {
+        "seconds": 3,
+        "cost": 8.333333333333333e-05
+      },
+      "language": "vi",
+      "duration": 2.21,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 2.208,
+          "text": "Hôm nay tôi học tiếng Anh trong 10 phút."
+        }
+      ],
+      "words": [
+        {
+          "word": "Hôm",
+          "start": 0.12,
+          "end": 0.26
+        },
+        {
+          "word": "nay",
+          "start": 0.32,
+          "end": 0.46
+        },
+        {
+          "word": "tôi",
+          "start": 0.52,
+          "end": 0.64
+        },
+        {
+          "word": "học",
+          "start": 0.72,
+          "end": 0.86
+        },
+        {
+          "word": "tiếng",
+          "start": 0.92,
+          "end": 1.08
+        },
+        {
+          "word": "Anh",
+          "start": 1.12,
+          "end": 1.299
+        },
+        {
+          "word": "trong",
+          "start": 1.36,
+          "end": 1.499
+        },
+        {
+          "word": "10",
+          "start": 1.56,
+          "end": 1.679
+        },
+        {
+          "word": "phút.",
+          "start": 1.8,
+          "end": 2.04
+        }
+      ]
+    },
+    "ttsModel": "x-ai__grok-voice-tts-1.0",
+    "language": "vi",
+    "reference": "Hôm nay tôi học tiếng Anh trong mười phút.",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/x-ai__grok-voice-tts-1.0/vi.mp3",
+    "wer": 0.1111111111111111
+  },
+  {
+    "model": "x-ai/grok-stt-1.0",
+    "fixture": "roundtrip-x-ai__grok-voice-tts-1.0-vi-x-ai__grok-stt-1.0.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 0.793,
+    "generationId": "gen-stt-1788850509-xzhYvfMlJMcG4HP1PyNK",
+    "response": {
+      "text": "Hôm nay tôi học tiếng Anh trong mười phút.",
+      "usage": {
+        "seconds": 2.208,
+        "cost": 6.133333333333334e-05
+      },
+      "language": "vi",
+      "duration": 2.208,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 2.208,
+          "text": "Hôm nay tôi học tiếng Anh trong mười phút."
+        }
+      ],
+      "words": [
+        {
+          "word": "Hôm",
+          "start": 0.08,
+          "end": 0.241
+        },
+        {
+          "word": "nay",
+          "start": 0.301,
+          "end": 0.442
+        },
+        {
+          "word": "tôi",
+          "start": 0.502,
+          "end": 0.642
+        },
+        {
+          "word": "học",
+          "start": 0.682,
+          "end": 0.823
+        },
+        {
+          "word": "tiếng",
+          "start": 0.883,
+          "end": 1.064
+        },
+        {
+          "word": "Anh",
+          "start": 1.144,
+          "end": 1.285
+        },
+        {
+          "word": "trong",
+          "start": 1.345,
+          "end": 1.526
+        },
+        {
+          "word": "mười",
+          "start": 1.566,
+          "end": 1.706
+        },
+        {
+          "word": "phút.",
+          "start": 1.766,
+          "end": 1.967
+        }
+      ]
+    },
+    "ttsModel": "x-ai__grok-voice-tts-1.0",
+    "language": "vi",
+    "reference": "Hôm nay tôi học tiếng Anh trong mười phút.",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/x-ai__grok-voice-tts-1.0/vi.mp3",
+    "wer": 0.0
+  },
+  {
+    "model": "microsoft/mai-transcribe-2",
+    "fixture": "roundtrip-fish-audio__s2.1-pro-vi-microsoft__mai-transcribe-2.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 2.703,
+    "generationId": "gen-stt-1788850510-OiMSs1rvBH2FsPsm3d8T",
+    "response": {
+      "text": "Amen. Tôi hấp tiền ăn trong 10 phút.",
+      "usage": {
+        "seconds": 4,
+        "cost": 0.00011111111111111112
+      },
+      "language": "vi",
+      "duration": 3.37,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 3.369,
+          "text": "Amen. Tôi hấp tiền ăn trong 10 phút."
+        }
+      ],
+      "words": [
+        {
+          "word": "Amen.",
+          "start": 0.12,
+          "end": 0.92
+        },
+        {
+          "word": "Tôi",
+          "start": 1.16,
+          "end": 1.34
+        },
+        {
+          "word": "hấp",
+          "start": 1.4,
+          "end": 1.599
+        },
+        {
+          "word": "tiền",
+          "start": 1.68,
+          "end": 1.92
+        },
+        {
+          "word": "ăn",
+          "start": 2,
+          "end": 2.28
+        },
+        {
+          "word": "trong",
+          "start": 2.4,
+          "end": 2.6
+        },
+        {
+          "word": "10",
+          "start": 2.64,
+          "end": 2.76
+        },
+        {
+          "word": "phút.",
+          "start": 2.96,
+          "end": 3.28
+        }
+      ]
+    },
+    "ttsModel": "fish-audio__s2.1-pro",
+    "language": "vi",
+    "reference": "Hôm nay tôi học tiếng Anh trong mười phút.",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/fish-audio__s2.1-pro/vi.mp3",
+    "wer": 0.6666666666666666
+  },
+  {
+    "model": "x-ai/grok-stt-1.0",
+    "fixture": "roundtrip-fish-audio__s2.1-pro-vi-x-ai__grok-stt-1.0.wav",
+    "responseFormat": "verbose_json",
+    "status": 200,
+    "elapsedSeconds": 1.07,
+    "generationId": "gen-stt-1788850511-mL3IWEVc0eB8FZiwiFgp",
+    "response": {
+      "text": "à mẹ, tôi hợp tình anh trang mặt phật",
+      "usage": {
+        "seconds": 3.37,
+        "cost": 9.361111111111111e-05
+      },
+      "language": "vi",
+      "duration": 3.37,
+      "segments": [
+        {
+          "id": 0,
+          "start": 0,
+          "end": 3.37,
+          "text": "à mẹ, tôi hợp tình anh trang mặt phật"
+        }
+      ],
+      "words": [
+        {
+          "word": "à",
+          "start": 0.14,
+          "end": 0.16
+        },
+        {
+          "word": "mẹ,",
+          "start": 0.321,
+          "end": 0.602
+        },
+        {
+          "word": "tôi",
+          "start": 1.143,
+          "end": 1.344
+        },
+        {
+          "word": "hợp",
+          "start": 1.404,
+          "end": 1.585
+        },
+        {
+          "word": "tình",
+          "start": 1.665,
+          "end": 1.926
+        },
+        {
+          "word": "anh",
+          "start": 2.086,
+          "end": 2.287
+        },
+        {
+          "word": "trang",
+          "start": 2.387,
+          "end": 2.608
+        },
+        {
+          "word": "mặt",
+          "start": 2.648,
+          "end": 2.828
+        },
+        {
+          "word": "phật",
+          "start": 2.908,
+          "end": 3.209
+        }
+      ]
+    },
+    "ttsModel": "fish-audio__s2.1-pro",
+    "language": "vi",
+    "reference": "Hôm nay tôi học tiếng Anh trong mười phút.",
+    "audioPath": "/Users/ethan/VibeCoding/everyone-can-use-english/enjoy/tmp/openrouter-acceptance/2026-09-08/tts-live/fish-audio__s2.1-pro/vi.mp3",
+    "wer": 0.7777777777777778
+  }
+]

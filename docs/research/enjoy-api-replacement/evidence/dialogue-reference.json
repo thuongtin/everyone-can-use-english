@@ -1,0 +1,31 @@
+{
+  "synthetic": true,
+  "turns": [
+    {
+      "speaker": "Samantha",
+      "text": "Well, um, I booked the blue room for Thursday. The code is seven four two.",
+      "start": 0,
+      "end": 4.541875
+    },
+    {
+      "speaker": "Daniel",
+      "text": "Did you say Thursday? I thought our meeting was on Friday at half past nine.",
+      "start": 5.041875,
+      "end": 9.653500000000001
+    },
+    {
+      "speaker": "Samantha",
+      "text": "No, Thursday at ten fifteen. Please bring two notebooks and a green pen.",
+      "start": 10.153500000000001,
+      "end": 14.677000000000001
+    },
+    {
+      "speaker": "Daniel",
+      "text": "All right, I will arrive fifteen minutes early. See you there.",
+      "start": 15.177000000000001,
+      "end": 18.9649375
+    }
+  ],
+  "duration": 19.4649375,
+  "text": "Well, um, I booked the blue room for Thursday. The code is seven four two. Did you say Thursday? I thought our meeting was on Friday at half past nine. No, Thursday at ten fifteen. Please bring two notebooks and a green pen. All right, I will arrive fifteen minutes early. See you there."
+}

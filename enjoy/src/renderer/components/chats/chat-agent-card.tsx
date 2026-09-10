@@ -1,8 +1,4 @@
 import {
-  Avatar,
-  AvatarFallback,
-  Badge,
-  Button,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -10,6 +6,13 @@ import {
 } from "@renderer/components/ui";
 import { t } from "i18next";
 import { EllipsisIcon } from "lucide-react";
+import { cn } from "@renderer/lib/utils";
+import { displayableResourceUrl } from "@renderer/lib/retired-resource";
+import {
+  EjIconButton,
+  GradientAvatar,
+  Pill,
+} from "@renderer/components/enjoy";
 
 export const ChatAgentCard = (props: {
   chatAgent: ChatAgentType;
@@ -22,36 +25,57 @@ export const ChatAgentCard = (props: {
 
   return (
     <div
-      className={`flex items-center space-x-2 px-2 py-1 rounded-lg cursor-pointer hover:bg-muted ${
-        selected ? "bg-muted" : ""
-      }`}
+      className={cn(
+        "group flex items-center gap-2.5 px-2.5 py-2 rounded-ej cursor-pointer",
+        "border transition-colors duration-ej",
+        selected
+          ? "bg-ej-surface border-ej-line shadow-ej"
+          : "bg-transparent border-transparent hover:bg-ej-surface/70"
+      )}
       onClick={() => onSelect(chatAgent)}
     >
-      <Avatar className="w-8 h-8">
-        <img src={chatAgent.avatarUrl} alt={chatAgent.name} />
-        <AvatarFallback>{chatAgent.name[0]}</AvatarFallback>
-      </Avatar>
-      <div className="flex-1">
-        <div className="flex items-center justify-between space-x-1 line-clamp-1 w-full">
-          <div className="text-sm flex-1 line-clamp-1">{chatAgent.name}</div>
-          <Badge className="text-xs px-1" variant="secondary">
+      {displayableResourceUrl(chatAgent.avatarUrl) ? (
+        <img
+          src={displayableResourceUrl(chatAgent.avatarUrl)}
+          alt={chatAgent.name}
+          className="size-[34px] shrink-0 rounded-full object-cover"
+        />
+      ) : (
+        <GradientAvatar name={chatAgent.name} id={chatAgent.id} size={34} />
+      )}
+
+      <div className="flex-1 min-w-0">
+        <div className="flex items-center gap-1.5">
+          <div className="flex-1 min-w-0 text-xs font-semibold text-ej-ink truncate">
+            {chatAgent.name}
+          </div>
+          <Pill
+            tone="muted"
+            className="h-[17px] px-1.5 text-xxxs uppercase tracking-wide"
+          >
             {chatAgent.type}
-          </Badge>
+          </Pill>
         </div>
-        <div className="text-xs text-muted-foreground line-clamp-1">
+        <div className="text-xxs text-ej-muted truncate">
           {chatAgent.description}
         </div>
       </div>
+
       {(onEdit || onDelete) && (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" size="icon">
-              <EllipsisIcon className="w-4 h-4" />
-            </Button>
+            <EjIconButton
+              size={24}
+              className="opacity-0 group-hover:opacity-100 data-[state=open]:opacity-100"
+              onClick={(event) => event.stopPropagation()}
+            >
+              <EllipsisIcon className="size-3.5" />
+            </EjIconButton>
           </DropdownMenuTrigger>
-          <DropdownMenuContent>
+          <DropdownMenuContent align="end">
             {onEdit && (
               <DropdownMenuItem
+                className="cursor-pointer text-xs"
                 onClick={(event) => {
                   event.stopPropagation();
                   onEdit(chatAgent);
@@ -62,12 +86,13 @@ export const ChatAgentCard = (props: {
             )}
             {onDelete && (
               <DropdownMenuItem
+                className="cursor-pointer text-xs"
                 onClick={(event) => {
                   event.stopPropagation();
                   onDelete(chatAgent);
                 }}
               >
-                <span className="text-destructive">{t("delete")}</span>
+                <span className="text-ej-bad">{t("delete")}</span>
               </DropdownMenuItem>
             )}
           </DropdownMenuContent>

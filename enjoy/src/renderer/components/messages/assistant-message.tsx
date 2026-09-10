@@ -36,6 +36,7 @@ import { useCopyToClipboard } from "@uidotdev/usehooks";
 import { t } from "i18next";
 import { AppSettingsProviderContext } from "@renderer/context";
 import { useSpeech, useAiCommand } from "@renderer/hooks";
+import { EjIconButton } from "@renderer/components/enjoy";
 import { formatDateTime } from "@renderer/lib/utils";
 
 export const AssistantMessageComponent = (props: {
@@ -155,27 +156,27 @@ export const AssistantMessageComponent = (props: {
 
   return (
     <div id={`message-${message.id}`} className="ai-message">
-      <div className="flex items-center space-x-2 mb-2">
-        <Avatar className="w-8 h-8 bg-muted avatar">
+      <div className="mb-2 flex items-center gap-2">
+        <Avatar className="avatar size-8">
           <AvatarImage></AvatarImage>
-          <AvatarFallback className="bg-muted capitalize">
+          <AvatarFallback className="bg-ej-surface2 capitalize text-ej-ink2">
             {configuration?.model?.[0] || "AI"}
           </AvatarFallback>
         </Avatar>
-        <div className="text-sm text-muted-foreground">
+        <div className="text-xxs font-semibold text-ej-muted">
           {configuration?.model}
         </div>
       </div>
-      <div className="flex flex-col gap-2 px-4 py-2 bg-background border rounded-lg shadow-sm w-full mb-2">
+      <div className="mb-2 flex w-full flex-col gap-2 rounded-[16px_16px_16px_4px] border border-ej-line bg-ej-surface px-3.5 py-2.5">
         {configuration.type === "tts" &&
           (speeching ? (
-            <div className="text-muted-foreground text-sm py-2">
+            <div className="py-2 text-xs text-ej-muted">
               <span>{t("creatingSpeech")}</span>
             </div>
           ) : (
             !speech && (
-              <div className="text-muted-foreground text-sm py-2 flex items-center">
-                <AlertCircleIcon className="w-4 h-4 mr-2 text-yellow-600" />
+              <div className="flex items-center py-2 text-xs text-ej-muted">
+                <AlertCircleIcon className="mr-2 size-3.5 text-ej-warn" />
                 <span>{t("speechNotCreatedYet")}</span>
               </div>
             )
@@ -183,7 +184,7 @@ export const AssistantMessageComponent = (props: {
 
         {configuration.type === "gpt" && (
           <MarkdownWrapper
-            className="message-content select-text prose dark:prose-invert max-w-full"
+            className="message-content prose max-w-full select-text text-ej-ink dark:prose-invert"
             data-source-type="Message"
             data-source-id={message.id}
           >
@@ -194,13 +195,13 @@ export const AssistantMessageComponent = (props: {
         {Boolean(speech) && <SpeechPlayer speech={speech} />}
 
         <DropdownMenu>
-          <div className="flex items-center justify-start space-x-4">
+          <div className="flex items-center justify-start gap-3 text-ej-muted">
             {!speech &&
               (speeching ? (
                 <LoaderIcon
                   data-tooltip-id="global-tooltip"
                   data-tooltip-content={t("creatingSpeech")}
-                  className="w-4 h-4 animate-spin"
+                  className="size-3.5 animate-spin"
                 />
               ) : (
                 <SpeechIcon
@@ -208,19 +209,19 @@ export const AssistantMessageComponent = (props: {
                   data-tooltip-content={t("textToSpeech")}
                   data-testid="message-create-speech"
                   onClick={createSpeech}
-                  className="w-4 h-4 cursor-pointer"
+                  className="size-3.5 cursor-pointer transition-colors duration-ej hover:text-ej-ink"
                 />
               ))}
 
             {configuration.type === "gpt" && (
               <>
                 {copied ? (
-                  <CheckIcon className="w-4 h-4 text-green-500" />
+                  <CheckIcon className="size-3.5 text-ej-ok" />
                 ) : (
                   <CopyIcon
                     data-tooltip-id="global-tooltip"
                     data-tooltip-content={t("copyText")}
-                    className="w-4 h-4 cursor-pointer"
+                    className="size-3.5 cursor-pointer transition-colors duration-ej hover:text-ej-ink"
                     onClick={() => {
                       copyToClipboard(message.content);
                       setCopied(true);
@@ -237,7 +238,7 @@ export const AssistantMessageComponent = (props: {
                     <ForwardIcon
                       data-tooltip-id="global-tooltip"
                       data-tooltip-content={t("forward")}
-                      className="w-4 h-4 cursor-pointer"
+                      className="size-3.5 cursor-pointer transition-colors duration-ej hover:text-ej-ink"
                     />
                   }
                 />
@@ -249,7 +250,7 @@ export const AssistantMessageComponent = (props: {
                 <LoaderIcon
                   data-tooltip-id="global-tooltip"
                   data-tooltip-content={t("addingResource")}
-                  className="w-4 h-4 animate-spin"
+                  className="size-3.5 animate-spin"
                 />
               ) : (
                 <MicIcon
@@ -257,7 +258,7 @@ export const AssistantMessageComponent = (props: {
                   data-tooltip-content={t("shadowingExercise")}
                   data-testid="message-start-shadow"
                   onClick={startShadow}
-                  className="w-4 h-4 cursor-pointer"
+                  className="size-3.5 cursor-pointer transition-colors duration-ej hover:text-ej-ink"
                 />
               ))}
             {Boolean(speech) && (
@@ -266,18 +267,20 @@ export const AssistantMessageComponent = (props: {
                 data-tooltip-content={t("download")}
                 data-testid="message-download-speech"
                 onClick={handleDownload}
-                className="w-4 h-4 cursor-pointer"
+                className="size-3.5 cursor-pointer transition-colors duration-ej hover:text-ej-ink"
               />
             )}
 
-            <DropdownMenuTrigger>
-              <MoreVerticalIcon className="w-4 h-4" />
+            <DropdownMenuTrigger asChild>
+              <EjIconButton size={22} aria-label={t("more")}>
+                <MoreVerticalIcon className="size-3.5" />
+              </EjIconButton>
             </DropdownMenuTrigger>
           </div>
 
-          <DropdownMenuContent>
+          <DropdownMenuContent align="start">
             <DropdownMenuItem className="cursor-pointer" onClick={onRemove}>
-              <span className="mr-auto text-destructive capitalize">
+              <span className="mr-auto capitalize text-ej-bad">
                 {t("delete")}
               </span>
             </DropdownMenuItem>
@@ -285,7 +288,7 @@ export const AssistantMessageComponent = (props: {
         </DropdownMenu>
       </div>
 
-      <div className="flex justify-start text-xs text-muted-foreground timestamp">
+      <div className="timestamp flex justify-start text-xxs text-ej-muted">
         {formatDateTime(message.createdAt)}
       </div>
 
@@ -298,15 +301,17 @@ export const AssistantMessageComponent = (props: {
           container="main-panel-content"
           aria-describedby={undefined}
           side="bottom"
-          className="h-content p-0 flex flex-col gap-0"
+          className="flex h-content flex-col gap-0 border-ej-line bg-ej-bg p-0"
           displayClose={false}
           onPointerDownOutside={(event) => event.preventDefault()}
           onInteractOutside={(event) => event.preventDefault()}
         >
           <SheetHeader className="flex items-center justify-center space-y-0 py-1">
             <SheetTitle className="sr-only">{t("shadow")}</SheetTitle>
-            <SheetClose>
-              <ChevronDownIcon />
+            <SheetClose asChild>
+              <EjIconButton aria-label={t("close")}>
+                <ChevronDownIcon className="size-4" />
+              </EjIconButton>
             </SheetClose>
           </SheetHeader>
 
