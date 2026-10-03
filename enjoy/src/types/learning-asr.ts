@@ -33,9 +33,11 @@ export type LearningAsrValidation = {
   sourceCoverage: "complete";
   textCoverage: "matched";
   timestampChecks: "passed";
-  speechGapCheck: "passed";
+  speechGapCheck: "passed" | "review-required";
+  speechGaps?: { startTime: number; endTime: number }[];
   recognitionAccuracy: "not-measured";
   instrumentalMusic?: InstrumentalMusicEvidence[];
+  providerTimingAdjustments?: { count: number; maxSeconds: number };
 };
 
 export type LearningAsrResult = {

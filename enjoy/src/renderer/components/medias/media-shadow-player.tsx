@@ -9,12 +9,14 @@ import {
 } from "@renderer/components";
 import { t } from "i18next";
 import { useContext, useState } from "react";
+import { MediaTranscriptionReviewNotice } from "./media-transcription-review-notice";
 
 export const MediaShadowPlayer = () => {
   return (
     <>
       <div className="h-full flex flex-col min-h-0 bg-ej-bg">
         <MediaHeader />
+        <MediaTranscriptionReviewNotice />
 
         <div className="flex-1 min-h-0">
           <TopPanel />

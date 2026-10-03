@@ -82,6 +82,63 @@ try {
   });
   const subject = await import(`${pathToFileURL(output).href}?test=${Date.now()}`);
 
+  const native = subject.convertProviderWords([
+    { text: "can", start: 0.1, end: 0.2 }, { text: "'t", start: 0.2, end: 0.3 },
+    { text: "re-enter", start: 0.4, end: 0.8 },
+  ], "Can't re-enter!", 1, 4);
+  assert.deepEqual(native.words.map(word => [word.text, word.startTime, word.endTime]), [
+    ["Can't", 4.1, 4.3], ["re-enter!", 4.4, 4.8],
+  ]);
+  for (const words of [
+    [{ text: "right", start: 0.2, end: 0.2 }],
+    [{ text: "right", start: 0.2, end: 1.1 }],
+    [{ text: "wrong", start: 0.2, end: 0.4 }],
+    [{ text: "right", start: NaN, end: 0.4 }],
+  ]) assert.throws(() => subject.convertProviderWords(words, "right", 1), error => error.code === "asr_review_required");
+  assert.throws(() => subject.convertProviderWords([
+    { text: "one", start: 0.1, end: 0.5 }, { text: "two", start: 0.4, end: 0.8 },
+  ], "one two", 1), error => error.code === "asr_review_required");
+
+  const tinyOverlapSource = [
+    {text: "I", start: 474.23, end: 474.24},
+    {text: "think", start: 474.23, end: 474.43},
+  ];
+  const normalizedNative = subject.convertProviderWords(tinyOverlapSource, "I think", 500);
+  assert.deepEqual(normalizedNative.words.map(word => [word.startTime, word.endTime]), [[474.23, 474.24], [474.24, 474.43]]);
+  assert.equal(normalizedNative.providerTimingAdjustments.count, 1);
+  assert.ok(Math.abs(normalizedNative.providerTimingAdjustments.maxSeconds - 0.01) < 1e-9);
+  assert.equal(tinyOverlapSource[1].start, 474.23, 'Raw provider timestamps must remain unchanged');
+  subject.validateStudyWords(normalizedNative.words, "I think", 500);
+  assert.deepEqual(native.providerTimingAdjustments, {count: 0, maxSeconds: 0});
+  for (const words of [
+    [{text: "one", start: 0.1, end: 0.3}, {text: "two", start: 0.279, end: 0.5}],
+    [{text: "one", start: 0.1, end: 0.3}, {text: "two", start: 0.29, end: 0.3}],
+    [{text: "one", start: 0.1, end: 0.3}, {text: "two", start: 0.09, end: 0.5}],
+    [{text: "one", start: 0.1, end: 0.3}, {text: "two", start: 0.29, end: 0.28}],
+    [{text: "one", start: 0.1, end: 0.3}, {text: "two", start: 0.29, end: Infinity}],
+  ]) assert.throws(() => subject.convertProviderWords(words, "one two", 1), error => error.code === "asr_review_required");
+  const maximumOverlap = subject.convertProviderWords([
+    {text: "one", start: 0.1, end: 0.3}, {text: "two", start: 0.28, end: 0.5},
+  ], "one two", 1);
+  assert.equal(maximumOverlap.words[1].startTime, 0.3);
+  assert.equal(maximumOverlap.providerTimingAdjustments.count, 1);
+  assert.throws(() => subject.validateStudyWords([
+    word("I", 474.23, 474.24), word("think", 474.23, 474.43),
+  ], "I think", 500), error => error.code === "asr_review_required", 'The common timestamp gate must still reject overlap');
+
+  const elision = subject.convertProviderWords([
+    { text: "tempting", start: 0.1, end: 0.3 },
+    { text: "'cause", start: 0.3, end: 0.5 },
+    { text: "it", start: 0.5, end: 0.6 },
+    { text: "would've", start: 0.6, end: 0.9 },
+  ], "tempting 'cause it would've", 1);
+  subject.validateStudyWords(elision.words, "tempting 'cause it would've", 1);
+  assert.equal(subject.buildStudyTimeline(elision.words, "tempting 'cause it would've", "en", 1).map(sentence => sentence.text).join(""), "tempting 'cause it would've");
+  for (const prefix of ["'", "’", "‘", "`"]) {
+    const quoted = subject.convertProviderWords([{text: prefix + "cause", start: 0.1, end: 0.3}], prefix + "cause", 1);
+    assert.equal(quoted.words[0].text, prefix + "cause");
+  }
+
   const invalidPhone = { type: "phone", text: "h", startTime: 0, endTime: 0, timeline: [] };
   const validPhone = { type: "phone", text: "i", startTime: 0.1, endTime: 0.2, timeline: [] };
   const fake = setFake([result([

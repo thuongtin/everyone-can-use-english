@@ -14,7 +14,7 @@ import { isLearningAsrEngine } from "../../lib/learning-asr-models";
 import { normalizeOpenAiTranscriptionModel } from "../../lib/speech-models";
 import { createLearningAsrService } from "./service";
 import { createLearningAsrProvider } from "./providers";
-import { alignStudyWindow, buildStudyTimeline, validateStudyWords } from "./alignment";
+import { alignStudyWindow, buildStudyTimeline, validateStudyWords, convertProviderWords } from "./alignment";
 import { hasDetectedSpeech } from "./speech-coverage";
 import { createMusicAwareSpeechCoverage } from "./instrumental-coverage";
 import { classifyInstrumentalGaps } from "./music-classifier";
@@ -112,7 +112,7 @@ async function start(
       const wav = await trustedAudio(request.audioUrl);
       const userRoot = path.dirname(expectedContext.assetRoot);
       const coverage = createMusicAwareSpeechCoverage(classifyInstrumentalGaps);
-      const service = createLearningAsrService({ checkpointRoot: path.join(userRoot, "learning-asr-work"), align: alignStudyWindow, buildTimeline: buildStudyTimeline, validateWords: validateStudyWords, findSpeechGaps: coverage.findSpeechGaps, hasSpeech: hasDetectedSpeech });
+      const service = createLearningAsrService({ checkpointRoot: path.join(userRoot, "learning-asr-work"), align: alignStudyWindow, convertProviderWords, buildTimeline: buildStudyTimeline, validateWords: validateStudyWords, findSpeechGaps: coverage.findSpeechGaps, hasSpeech: hasDetectedSpeech });
       const result = await service.transcribe({
         ...request, wav, provider, signal: controller.signal,
         prepareWhole: () => prepareCloudflareAudio(request.audioUrl, { cacheRoot: settings.cachePath(), resolveAudioUrl: enjoyUrlToPath, signal: controller.signal }),

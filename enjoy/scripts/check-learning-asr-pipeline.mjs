@@ -8,8 +8,8 @@ const temporary = await mkdtemp(path.join(os.tmpdir(), 'learning-asr-pipeline-')
 try {
   const entry = path.resolve('src/main/learning-asr');
   const out = path.join(temporary, 'pipeline.mjs');
-  await build({ stdin: { contents: ['service','errors','audio-windows','checkpoints'].map(name => `export * from ${JSON.stringify(entry+'/'+name+'.ts')};`).join('\n'), resolveDir: process.cwd(), loader: 'ts' }, outfile: out, bundle: true, platform: 'node', format: 'esm', logLevel: 'silent' });
-  const { createLearningAsrService, LearningAsrError, encodePcmWindow, parsePcmWav, createCheckpointStore, planTranscriptAlignment, planSeamGeometry } = await import(pathToFileURL(out));
+  await build({ stdin: { contents: ['service','errors','audio-windows','checkpoints','alignment'].map(name => `export * from ${JSON.stringify(entry+'/'+name+'.ts')};`).join('\n') + `\nexport * from ${JSON.stringify(path.resolve('src/lib/transcription-speech-review.ts'))};`, resolveDir: process.cwd(), loader: 'ts' }, outfile: out, bundle: true, platform: 'node', format: 'esm', logLevel: 'silent', plugins: [{ name: 'unused-local-aligner', setup(builder) { builder.onResolve({filter: /^\.\.\/echogarden$/}, () => ({path: 'eg', namespace: 'stub'})); builder.onLoad({filter: /.*/, namespace: 'stub'}, () => ({contents: 'export default {};', loader: 'js'})); } }] });
+  const { createLearningAsrService, LearningAsrError, encodePcmWindow, parsePcmWav, createCheckpointStore, planTranscriptAlignment, planSeamGeometry, convertProviderWords, transcriptionSpeechReview, transcriptionQualityMetadata } = await import(pathToFileURL(out));
   const sampleRate = 100, frameCount = 10000, bytes = Buffer.alloc(frameCount * 2);
   for (let frame = 0; frame < frameCount; frame++) bytes.writeInt16LE(1000 + frame, frame * 2);
   const pcm = { sampleRate, channels: 1, frameCount, blockAlign: 2, pcm: bytes };
@@ -84,7 +84,7 @@ try {
       return { transcript: words.map(w => w.text).join(' '), segments: [] };
     },
   });
-  const run = (id, engine, extra = {}, findSpeechGaps = async () => [], aligner = align, hasSpeech = async () => true) => createLearningAsrService({ checkpointRoot: path.join(temporary, id), align: aligner, validateWords, findSpeechGaps, hasSpeech,
+  const run = (id, engine, extra = {}, findSpeechGaps = async () => [], aligner = align, hasSpeech = async () => true) => createLearningAsrService({ checkpointRoot: path.join(temporary, id), align: aligner, convertProviderWords, validateWords, findSpeechGaps, hasSpeech,
     buildTimeline(words, text, _lang, duration) { validateWords(words, text, duration); return [{ type: 'sentence', text, startTime: words[0].startTime, endTime: words.at(-1).endTime, timeline: words }]; }, wait: async (_ms, signal) => { if (signal?.aborted) throw new LearningAsrError('asr_cancelled', 'cancel'); }
   }).transcribe({ jobId: 'pipeline-check', wav, language: 'en', provider: engine, ...extra });
   const good = await run('complete', provider('good'));
@@ -136,6 +136,47 @@ try {
   const prepared = async () => ({audio: Buffer.from('whole-test-input'), duration: 100, format: 'mp3'});
   const whole = await run('whole', wholeProvider, {prepareWhole: prepared});
   assert.equal(whole.validation.transport, 'whole'); assert.equal(whole.transcript, good.transcript);
+  const nativeProvider = { ...wholeProvider, identity: 'native-whole' };
+  nativeProvider.transcribe = async () => ({
+    transcript: good.transcript, segments: [],
+    words: Array.from({length: 200}, (_, index) => { const w = word(index); return {text: w.text, start: w.startTime, end: w.endTime}; }),
+  });
+  let coverageChecks = 0;
+  const nativeWhole = await run('native-whole', nativeProvider, {prepareWhole: prepared}, async () => { coverageChecks++; return []; }, async () => { throw Error('Native timestamps must avoid local alignment'); });
+  assert.equal(nativeWhole.transcript, good.transcript);
+  assert.equal(nativeWhole.validation.transport, 'whole');
+  assert.equal(coverageChecks, 1, 'Native timestamps must still undergo source speech coverage');
+  const invalidNativeProvider = { ...wholeProvider, identity: 'invalid-native-whole' };
+  invalidNativeProvider.transcribe = async (audio, opts) => ({ ...(await wholeProvider.transcribe(audio, opts)), words: [{text: 'wrong', start: 0, end: 0}] });
+  let fallbackAlignments = 0;
+  const fallbackNative = await run('invalid-native-whole', invalidNativeProvider, {prepareWhole: prepared}, async () => [], (...args) => { fallbackAlignments++; return align(...args); });
+  assert.equal(fallbackNative.transcript, good.transcript);
+  assert.ok(fallbackAlignments > 0, 'Invalid native timestamps must use local alignment');
+  const partiallyInvalidNative = { ...wholeProvider, identity: 'partial-native-whole' };
+  partiallyInvalidNative.transcribe = async (audio, opts) => ({
+    ...(await wholeProvider.transcribe(audio, opts)),
+    words: Array.from({length: 200}, (_, index) => { const w = word(index); return {text: w.text, start: w.startTime, end: index === 90 ? w.startTime : w.endTime}; }),
+  });
+  const locallyRealigned = [];
+  const partialNative = await run('partial-native-whole', partiallyInvalidNative, {prepareWhole: prepared}, async () => [], (...args) => {
+    locallyRealigned.push(args[1]); return align(...args);
+  });
+  assert.equal(partialNative.transcript, good.transcript);
+  assert.equal(locallyRealigned.length, 1, 'A malformed native word must realign only its source block');
+  assert.ok(locallyRealigned[0].split(' ').includes('w90'));
+  const nativeWindowProvider = provider('native-windows');
+  const sourceWindow = nativeWindowProvider.transcribe;
+  nativeWindowProvider.transcribe = async (audio, opts) => {
+    const response = await sourceWindow(audio, opts);
+    const start = calls.at(-1);
+    return { ...response, words: response.transcript.split(' ').map(text => {
+      const w = word(Number(text.slice(1))); return {text, start: w.startTime - start, end: w.endTime - start};
+    }) };
+  };
+  const nativeWindows = await run('native-windows', nativeWindowProvider, {}, async () => [], async () => { throw Error('Native windows must avoid local alignment'); });
+  assert.equal(nativeWindows.transcript, good.transcript);
+  assert.equal(nativeWindows.validation.transport, 'windows');
+
   const limitedProvider = provider('whole-size-limited');
   const limitedWindow = limitedProvider.transcribe;
   limitedProvider.preferWhole = true;
@@ -250,7 +291,31 @@ try {
   assert.equal(fixedGap.validation.repairedSpeechGaps,1); assert.equal(fixedGap.transcript,good.transcript);
   missingProvider.identity='persistent-missing';
   missingProvider.transcribe = async (audio, opts) => { const result = await missingOriginal(audio,opts); result.transcript=result.transcript.replace('w120 w121 ', ''); return result; };
-  await assert.rejects(run('persistent-missing',missingProvider,{},detectMissingPhrase),error=>error.code==='asr_review_required'&&error.range.startTime===60);
+  const reviewRequired = await run('persistent-missing',missingProvider,{},detectMissingPhrase);
+  assert.equal(reviewRequired.validation.speechGapCheck, 'review-required');
+  assert.deepEqual(reviewRequired.validation.speechGaps, [{startTime:60,endTime:61}]);
+  assert.equal(reviewRequired.validation.textCoverage, 'matched');
+  assert.equal(reviewRequired.validation.timestampChecks, 'passed');
+  assert.equal(reviewRequired.validation.recognitionAccuracy, 'not-measured');
+  assert.ok(!reviewRequired.transcript.split(' ').includes('w120'), 'Missing provider content must not be invented');
+  assert.equal(good.validation.speechGapCheck, 'passed');
+  assert.equal(good.validation.speechGaps, undefined);
+  const editedMetadata = transcriptionQualityMetadata(undefined, reviewRequired);
+  assert.equal(editedMetadata.validation, undefined, 'An edit must not inherit old text or timestamp validation');
+  assert.deepEqual(transcriptionSpeechReview(editedMetadata).speechGaps, reviewRequired.validation.speechGaps);
+  const editedAgain = transcriptionQualityMetadata(undefined, JSON.parse(JSON.stringify(editedMetadata)));
+  assert.deepEqual(editedAgain, editedMetadata, 'Review evidence must survive repeated edits and persisted readback');
+  assert.equal(transcriptionSpeechReview(transcriptionQualityMetadata(good.validation, editedAgain)), undefined,
+    'A fresh successful coverage check can clear old review ranges');
+  assert.deepEqual(transcriptionQualityMetadata(undefined, undefined), {}, 'Another media must not inherit source review evidence');
+  const multipleGaps = [{startTime:60,endTime:61}, {startTime:80,endTime:81}];
+  const multipleReview = await run('multiple-review',provider('multiple-review'),{},async()=>multipleGaps);
+  assert.deepEqual(multipleReview.validation.speechGaps, multipleGaps, 'Preserve every unresolved range, not only the attempted gap');
+  for (const reason of ['detector unavailable', 'invalid word geometry', 'unsupported source speech']) {
+    await assert.rejects(run(`fatal-coverage-${reason}`,provider(`fatal-coverage-${reason}`),{},async()=>{
+      throw new LearningAsrError('asr_review_required',reason);
+    }), error=>error.code==='asr_review_required'&&error.message===reason);
+  }
   const needsContext = async (audio,text,options) => {
     if(options.offsetSeconds === 43) throw new LearningAsrError('asr_review_required','clipped word');
     return align(audio,text,options);
