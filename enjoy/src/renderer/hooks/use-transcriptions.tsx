@@ -12,6 +12,7 @@ import { SttEngineOptionEnum } from "@/types/enums";
 import { t } from "i18next";
 import { isLearningAsrEngine } from "@/lib/learning-asr-models";
 import { resolveTranscriptionProviderSelection } from "@/lib/provider-selection-migration";
+import { transcriptionQualityMetadata } from "@/lib/transcription-speech-review";
 
 export const useTranscriptions = (media: AudioType | VideoType) => {
   const { sttEngine } = useContext(AISettingsProviderContext);
@@ -32,6 +33,7 @@ export const useTranscriptions = (media: AudioType | VideoType) => {
   const [committing, setCommitting] = useState<boolean>(false);
   const [creating, setCreating] = useState<boolean>(false);
   const [transcribingOutput, setTranscribingOutput] = useState<string>("");
+  const [transcriptionError, setTranscriptionError] = useState<string | null>(null);
   const [service, setService] = useState<
     SttEngineOptionEnum | "upload" | null
   >(
@@ -96,6 +98,7 @@ export const useTranscriptions = (media: AudioType | VideoType) => {
     isolate?: boolean;
   }) => {
     if (committingRef.current) return;
+    setTranscriptionError(null);
     const generation = generationRef.current + 1;
     generationRef.current = generation;
     committingRef.current = false;
@@ -194,7 +197,9 @@ export const useTranscriptions = (media: AudioType | VideoType) => {
           transcript,
           originalText,
           tokenId,
-          ...(validation ? { validation } : {}),
+          ...transcriptionQualityMetadata(validation,
+            service === "upload" && transcriptionForCommit.targetId === media.id
+              ? transcriptionForCommit.result : undefined),
         },
         engine,
         model,
@@ -202,7 +207,9 @@ export const useTranscriptions = (media: AudioType | VideoType) => {
       });
     } catch (err) {
       if (generation === generationRef.current) {
-        toast.error(err.message);
+        const message = err instanceof Error ? err.message : t("learningAsrFailed");
+        setTranscriptionError(message);
+        toast.error(message);
       }
     } finally {
       if (generation === generationRef.current) {
@@ -331,10 +338,11 @@ export const useTranscriptions = (media: AudioType | VideoType) => {
   }, [progress, transcribing]);
 
   useEffect(() => {
+    setTranscriptionError(null);
     return () => {
       generationRef.current += 1;
     };
-  }, [connection?.connectionId, connection?.profileId]);
+  }, [connection?.connectionId, connection?.profileId, media?.id]);
 
   const abortGenerateTranscription = () => {
     if (committingRef.current) return;
@@ -348,6 +356,7 @@ export const useTranscriptions = (media: AudioType | VideoType) => {
     transcribingProgress,
     transcribing,
     committing,
+    transcriptionError,
     transcribingOutput: output || transcribingOutput,
     generateTranscription,
     abortGenerateTranscription,

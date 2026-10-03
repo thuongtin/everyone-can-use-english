@@ -22,12 +22,12 @@ export const MediaLoadingModal = () => {
   const { decoded, transcription } = useContext(MediaShadowProviderContext);
 
   return (
-    <AlertDialog open={!decoded || !Boolean(transcription?.result?.timeline)}>
+    <AlertDialog open={!decoded || !transcription?.result?.timeline}>
       <AlertDialogContent className="max-h-[70%] overflow-y-auto">
         <AlertDialogHeader>
-          <AlertDialogTitle>{t("preparingAudio")}</AlertDialogTitle>
+          <AlertDialogTitle>{t(decoded ? "transcribe" : "preparingAudio")}</AlertDialogTitle>
           <AlertDialogDescription>
-            {t("itMayTakeAWhileToPrepareForTheFirstLoad")}
+            {t(decoded ? "transcriptionRequiredDescription" : "itMayTakeAWhileToPrepareForTheFirstLoad")}
           </AlertDialogDescription>
         </AlertDialogHeader>
         <LoadingContent />
@@ -46,6 +46,7 @@ const LoadingContent = () => {
     committing,
     transcribingProgress,
     transcribingOutput,
+    transcriptionError,
     generateTranscription,
     abortGenerateTranscription,
     onCancel,
@@ -62,6 +63,11 @@ const LoadingContent = () => {
             </TabsTrigger>
           </TabsList>
           <TabsContent value="transcribe">
+            {transcriptionError && (
+              <div role="alert" className="mb-4 rounded-md border border-destructive/30 p-3 text-sm text-destructive select-text">
+                {transcriptionError}
+              </div>
+            )}
             <TranscriptionCreateForm
               originalText={transcription?.result?.originalText}
               onSubmit={(data) => {

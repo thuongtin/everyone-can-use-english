@@ -13,6 +13,7 @@ import { assertActive, LearningAsrError } from "./errors";
 export type ProviderTranscript = {
   transcript: string;
   segments: Array<{ text: string; start: number; end: number }>;
+  words?: Array<{ text: string; start: number; end: number }>;
 };
 
 export type LearningAsrProvider = {
@@ -499,6 +500,26 @@ function maiProvider(
   };
 }
 
+function azureWordTimings(phrases: unknown[], duration: number): ProviderTranscript["words"] {
+  const words: NonNullable<ProviderTranscript["words"]> = [];
+  for (const raw of phrases) {
+    const phrase = asRecord(raw);
+    if (!Array.isArray(phrase?.words) || phrase.words.length === 0
+      || words.length + phrase.words.length > 100_000) return undefined;
+    for (const rawWord of phrase.words) {
+      const word = asRecord(rawWord);
+      const text = cleanString(word?.text);
+      const offset = word?.offsetMilliseconds;
+      const length = word?.durationMilliseconds;
+      if (!text || typeof offset !== "number" || !Number.isSafeInteger(offset) || offset < 0
+        || typeof length !== "number" || !Number.isSafeInteger(length) || length <= 0
+        || offset + length > duration * 1_000 + 0.001) return undefined;
+      words.push({ text, start: offset / 1_000, end: (offset + length) / 1_000 });
+    }
+  }
+  return words.length ? words : undefined;
+}
+
 function azureTranscript(value: unknown, duration: number): ProviderTranscript {
   const response = asRecord(value);
   if (
@@ -545,10 +566,14 @@ function azureTranscript(value: unknown, duration: number): ProviderTranscript {
     });
   }
 
-  return validateProviderTranscript({
+  const result = validateProviderTranscript({
     transcript: combinedText.join(" "),
     segments,
   }, duration);
+  // Keep the provider's measured word timestamps. The learning pipeline still
+  // verifies lexical coverage, ordering and speech coverage before accepting them.
+  const words = azureWordTimings(response.phrases, duration);
+  return words ? { ...result, words } : result;
 }
 
 function azureProvider(
@@ -573,6 +598,7 @@ function azureProvider(
       endpoint,
       apiVersion: "2025-10-15",
       timing: engine === "azure_mai" ? "word" : "default",
+      wordTimings: "azure-native-v1",
     }),
     preferWhole: true,
     maxWholeRequestBytes: MAX_AZURE_AUDIO_BYTES,

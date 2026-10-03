@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { mkdtemp, rm } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
@@ -113,6 +114,11 @@ try {
   assert.equal(speech.engine, "azure_speech");
   assert.equal(speech.model, "azure-speech-fast");
   assert.equal(speech.identity.includes("azure-speech-secret"), false);
+  const legacyIdentity = "learning-asr:" + createHash("sha256").update(JSON.stringify({
+    engine: "azure_speech", model: "azure-speech-fast",
+    endpoint: "https://enjoy-speech.cognitiveservices.azure.com", apiVersion: "2025-10-15", timing: "default",
+  })).digest("hex").slice(0, 32);
+  assert.notEqual(speech.identity, legacyIdentity, "Azure must not reuse checkpoints that discarded native word timings");
   await speech.transcribe(audio, { format: "mp3", language: "en-US", duration: 2 });
   const englishSpeechForm = calls[1].init.body;
   assert.deepEqual(JSON.parse(englishSpeechForm.get("definition")), { locales: ["en-US"] });
@@ -129,6 +135,40 @@ try {
   assert.deepEqual(JSON.parse(calls[4].init.body.get("definition")), { locales: ["vi-VN"] });
   await speech.transcribe(audio, { format: "wav", language: "en-GB", duration: 2 });
   assert.deepEqual(JSON.parse(calls[5].init.body.get("definition")), { locales: ["en-GB"] });
+
+  const timedResponse = {
+    combinedPhrases: [{ text: "Hello world." }],
+    phrases: [{ text: "Hello world.", offsetMilliseconds: 40, durationMilliseconds: 960, words: [
+      { text: "Hello", offsetMilliseconds: 40, durationMilliseconds: 320 },
+      { text: "world.", offsetMilliseconds: 400, durationMilliseconds: 600 },
+    ] }],
+  };
+  const timedProvider = (value, engine = "azure_speech") => subject.createLearningAsrProvider(engine, {
+    azure: { key: "fixture-key", endpoint: "https://demo.cognitiveservices.azure.com" },
+  }, async () => new Response(JSON.stringify(value), { status: 200 }));
+  for (const engine of ["azure_speech", "azure_mai"]) {
+    const recognized = await timedProvider(timedResponse, engine).transcribe(audio, { format: "wav", language: "en-US", duration: 2 });
+    assert.equal(recognized.transcript, "Hello world.");
+    assert.deepEqual(recognized.words, [
+      { text: "Hello", start: .04, end: .36 }, { text: "world.", start: .4, end: 1 },
+    ], "Native word punctuation and measured timestamps must survive provider normalization");
+  }
+  for (const invalidWord of [
+    { text: "Hello", offsetMilliseconds: -1, durationMilliseconds: 320 },
+    { text: "Hello", offsetMilliseconds: 40, durationMilliseconds: 0 },
+    { text: "Hello", offsetMilliseconds: "40", durationMilliseconds: 320 },
+    { text: "Hello", offsetMilliseconds: 40, durationMilliseconds: 4_000 },
+    { text: "", offsetMilliseconds: 40, durationMilliseconds: 320 },
+  ]) {
+    const response = structuredClone(timedResponse);
+    response.phrases[0].words[0] = invalidWord;
+    const recognized = await timedProvider(response).transcribe(audio, { format: "wav", language: "en-US", duration: 2 });
+    assert.equal(recognized.transcript, "Hello world.", "Invalid optional timings must leave the transcript available for local alignment");
+    assert.equal(recognized.words, undefined, "Partial native word timings must never be accepted");
+  }
+  const missingWords = structuredClone(timedResponse);
+  delete missingWords.phrases[0].words;
+  assert.equal((await timedProvider(missingWords).transcribe(audio, { format: "wav", language: "en-US", duration: 2 })).words, undefined);
 
   for (const endpoint of [
     "http://demo.cognitiveservices.azure.com",

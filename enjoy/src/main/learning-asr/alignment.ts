@@ -274,6 +274,70 @@ function convertWords(
   return { words, omittedPhoneTimings };
 }
 
+export type ProviderWordAlignmentResult = StudyAlignmentResult & {
+  providerTimingAdjustments: { count: number; maxSeconds: number };
+};
+
+export function convertProviderWords(
+  words: readonly { text: string; start: number; end: number }[],
+  transcript: string,
+  duration: number,
+  offsetSeconds = 0,
+): ProviderWordAlignmentResult {
+  if (!Number.isFinite(offsetSeconds) || offsetSeconds < 0) throw reviewRequired("Provider word offset is invalid.");
+  const rawWords: TimelineEntry[] = words.map((word): TimelineEntry => ({
+    type: "word", text: word.text, startTime: word.start, endTime: word.end, timeline: [],
+  }));
+  const providerTimingAdjustments = { count: 0, maxSeconds: 0 };
+  const maximumOverlapSeconds = 0.02;
+  let previousEnd = 0;
+  let previousStart = 0;
+  for (const word of rawWords) {
+    if (!isFiniteRange(word, 0, duration) || word.startTime + TIME_EPSILON < previousStart) {
+      throw reviewRequired("Provider words returned invalid source geometry.");
+    }
+    previousStart = word.startTime;
+    const overlap = previousEnd - word.startTime;
+    if (overlap > TIME_EPSILON) {
+      // Provider timestamps may overlap by one quantization step. Record any
+      // bounded adjustment without changing text or inferring phone timings.
+      if (overlap > maximumOverlapSeconds + TIME_EPSILON
+        || word.endTime - previousEnd <= TIME_EPSILON) {
+        throw reviewRequired("Provider word overlap exceeds bounded normalization.");
+      }
+      word.startTime = previousEnd;
+      providerTimingAdjustments.count += 1;
+      providerTimingAdjustments.maxSeconds = Math.max(providerTimingAdjustments.maxSeconds, overlap);
+    }
+    previousEnd = word.endTime;
+  }
+  const spans = textSpans(transcript);
+  let rawIndex = 0;
+  for (const span of spans) {
+    let groupedKey = "";
+    while (rawIndex < rawWords.length && groupedKey !== span.key) {
+      const word = rawWords[rawIndex];
+      let key = lexicalKey(word.text);
+      // Leading elision marks belong to display punctuation, unlike an
+      // apostrophe inside a contraction or its split trailing fragment.
+      if (!groupedKey && key.startsWith("'") && key.replace(/^'+/u, "") === span.key) {
+        word.text = word.text.replace(/^['’‘`]+/u, "");
+        key = lexicalKey(word.text);
+      }
+      groupedKey += key;
+      rawIndex += 1;
+      if (!span.key.startsWith(groupedKey)) throw reviewRequired("Provider words changed the requested lexical text.");
+    }
+    if (groupedKey !== span.key) throw reviewRequired("Provider words did not cover the requested lexical text.");
+  }
+  if (rawIndex !== rawWords.length) throw reviewRequired("Provider words returned extra lexical text.");
+  const normalized = normalizeNumericPunctuation(rawWords, transcript, duration);
+  const converted = convertWords(normalized, transcript, duration);
+  const shifted = converted.words.map(word => offsetEntry(word, offsetSeconds));
+  validateWordRanges(shifted, transcript, offsetSeconds, offsetSeconds + duration);
+  return { ...converted, words: shifted, repairedWordTimings: 0, providerTimingAdjustments };
+}
+
 function mapRawWords(rawWords: readonly TimelineEntry[], transcript: string): RawWordGroup[] {
   const spans = textSpans(transcript);
   const groups: RawWordGroup[] = [];

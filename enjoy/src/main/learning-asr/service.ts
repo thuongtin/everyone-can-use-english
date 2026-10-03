@@ -6,11 +6,12 @@ import { equalText, joinWordText, lexicalUnits } from "./text";
 import { mergeAlignedWindows, type SeamBounds } from "./seams";
 import type { LearningAsrProvider, ProviderTranscript } from "./providers";
 import type { findUncoveredSpeech, hasDetectedSpeech } from "./speech-coverage";
-import type { alignStudyWindow, buildStudyTimeline, validateStudyWords } from "./alignment";
+import type { alignStudyWindow, buildStudyTimeline, validateStudyWords, convertProviderWords } from "./alignment";
 
 type Dependencies = {
   checkpointRoot: string;
   align: typeof alignStudyWindow;
+  convertProviderWords?: typeof convertProviderWords;
   buildTimeline: typeof buildStudyTimeline;
   validateWords: typeof validateStudyWords;
   findSpeechGaps: typeof findUncoveredSpeech;
@@ -120,6 +121,7 @@ export function createLearningAsrService(deps: Dependencies) {
       const sourceSha256 = sha256(input.wav);
       const store = createCheckpointStore(deps.checkpointRoot, `${sourceSha256}:${provider.identity}:${recognitionLanguage}`);
       const metrics = { requestWindows: 0, resumedWindows: 0, retries: 0, repairedSeams: 0, repairedSpeechGaps: 0, repairedAlignmentWindows: 0, omittedPhoneTimings: 0 };
+      const providerTimingAdjustments = { count: 0, maxSeconds: 0 };
       let lastRequestAt = 0;
       let maximumProgress = 0;
       const progress = (stage: LearningAsrProgress["stage"], completed: number, total: number, percent: number) => {
@@ -178,6 +180,22 @@ export function createLearningAsrService(deps: Dependencies) {
         await store.write(key, result);
         return result;
       };
+      const nativeWords = (response: ProviderTranscript, range: Range): Aligned | undefined => {
+        if (!response.words?.length || !deps.convertProviderWords) return undefined;
+        try {
+          const result = deps.convertProviderWords(
+            response.words, response.transcript,
+            (range.endSample - range.startSample) / pcm.sampleRate,
+            range.startSample / pcm.sampleRate,
+          );
+          deps.validateWords(result.words, response.transcript, duration);
+          providerTimingAdjustments.count += result.providerTimingAdjustments.count;
+          providerTimingAdjustments.maxSeconds = Math.max(providerTimingAdjustments.maxSeconds, result.providerTimingAdjustments.maxSeconds);
+          return result;
+        } catch {
+          return undefined;
+        }
+      };
       const recognizeRange = async (range: Range, onRecognized?: () => void, partitionDepth = 0): Promise<Aligned> => {
         if (digitallySilent(pcm, range)) return { words: [], omittedPhoneTimings: 0 };
         const attempt = async (sourceRange: Range) => {
@@ -194,7 +212,7 @@ export function createLearningAsrService(deps: Dependencies) {
             });
           }
           onRecognized?.();
-          return align(sourceRange, response.transcript);
+          return nativeWords(response, sourceRange) ?? align(sourceRange, response.transcript);
         };
         let failure: LearningAsrError;
         try { return await attempt(range); }
@@ -274,23 +292,39 @@ export function createLearningAsrService(deps: Dependencies) {
             throw new LearningAsrError("asr_invalid_response", "Prepared whole audio exceeds the provider upload size limit.");
           }
           const response = await recognize("whole", audio.audio, "mp3", audio.duration);
-          const blocks = planTranscriptAlignment(response, pcm);
-          if (!blocks) throw new LearningAsrError("asr_invalid_response", "Whole transcript cannot be safely aligned in bounded blocks.");
-          const aligned: StudyTimelineEntry[] = [];
-          let omitted = 0;
-          for (let i = 0; i < blocks.length; i++) {
-            progress("aligning", i, blocks.length, 35 + 55 * i / blocks.length);
-            const block = await align(blocks[i], blocks[i].text);
-            aligned.push(...block.words);
-            omitted += block.omittedPhoneTimings;
-            deps.validateWords(aligned, joinWordText(aligned), duration);
-            fallbackPrefix = { words: [...aligned], endSample: blocks[i].endSample, omittedPhoneTimings: omitted };
+          const native = nativeWords(response, { startSample: 0, endSample: pcm.frameCount });
+          if (native) {
+            words = native.words;
+            transcript = response.transcript;
+            metrics.omittedPhoneTimings = native.omittedPhoneTimings;
+            transport = "whole";
+          } else {
+            const blocks = planTranscriptAlignment(response, pcm);
+            if (!blocks) throw new LearningAsrError("asr_invalid_response", "Whole transcript cannot be safely aligned in bounded blocks.");
+            const aligned: StudyTimelineEntry[] = [];
+            let omitted = 0;
+            for (let i = 0; i < blocks.length; i++) {
+              progress("aligning", i, blocks.length, 35 + 55 * i / blocks.length);
+              const range = blocks[i];
+              const start = range.startSample / pcm.sampleRate;
+              const end = range.endSample / pcm.sampleRate;
+              // A malformed native timestamp in one block must not discard
+              // measured timestamps for the rest of a long recording.
+              const blockWords = response.words?.filter(word => word.start >= start && word.end <= end)
+                .map(word => ({ ...word, start: word.start - start, end: word.end - start }));
+              const block = nativeWords({ transcript: range.text, segments: [], words: blockWords }, range)
+                ?? await align(range, range.text);
+              aligned.push(...block.words);
+              omitted += block.omittedPhoneTimings;
+              deps.validateWords(aligned, joinWordText(aligned), duration);
+              fallbackPrefix = { words: [...aligned], endSample: blocks[i].endSample, omittedPhoneTimings: omitted };
+            }
+            deps.validateWords(aligned, response.transcript, duration);
+            words = aligned;
+            transcript = response.transcript;
+            metrics.omittedPhoneTimings = omitted;
+            transport = "whole";
           }
-          deps.validateWords(aligned, response.transcript, duration);
-          words = aligned;
-          transcript = response.transcript;
-          metrics.omittedPhoneTimings = omitted;
-          transport = "whole";
         } catch (error) {
           assertActive(signal);
           if (!(error instanceof LearningAsrError) || !recoverableWhole.has(error.code)) throw error;
@@ -403,17 +437,23 @@ export function createLearningAsrService(deps: Dependencies) {
           metrics.repairedSpeechGaps++;
           break;
         }
-        if (!repaired) throw new LearningAsrError("asr_review_required", "Speech remains uncovered after context repair.", gap);
+        // A successful coverage check may flag omitted fillers or speech that
+        // bounded repair cannot recover. Preserve the valid transcript together
+        // with every unresolved source range for visible review in the player.
+        if (!repaired) break;
         words = repaired;
         transcript = joinWordText(words);
       }
-      if (gaps.length) throw new LearningAsrError("asr_review_required", "Additional speech coverage requires review.", gaps[0]);
+      // Detector failures, invalid timestamps and unsupported source speech
+      // still throw above; only actual, successfully detected gaps reach here.
+      deps.validateWords(words, transcript, duration);
       const timeline = deps.buildTimeline(words, transcript, language, duration);
       assertActive(signal);
       return {
         engine: provider.engine, model: provider.model, transcript, language, duration, timeline,
-        validation: { version: 1, sourceSha256, sourceSamples: pcm.frameCount, sampleRate: pcm.sampleRate, transport, ...metrics,
-          sourceCoverage: "complete", textCoverage: "matched", timestampChecks: "passed", speechGapCheck: "passed", recognitionAccuracy: "not-measured" },
+        validation: { version: 1, sourceSha256, sourceSamples: pcm.frameCount, sampleRate: pcm.sampleRate, transport, ...metrics, providerTimingAdjustments,
+          sourceCoverage: "complete", textCoverage: "matched", timestampChecks: "passed", speechGapCheck: gaps.length ? "review-required" : "passed",
+          ...(gaps.length ? { speechGaps: gaps.map(gap => ({ ...gap })) } : {}), recognitionAccuracy: "not-measured" },
       };
     },
   };

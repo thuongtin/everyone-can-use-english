@@ -91,6 +91,7 @@ type MediaShadowContextType = {
   committing: boolean;
   transcribingProgress: number;
   transcribingOutput: string;
+  transcriptionError: string | null;
   abortGenerateTranscription: () => void;
   transcriptionDraft: TranscriptionType["result"];
   setTranscriptionDraft: (result: TranscriptionType["result"]) => void;
@@ -272,6 +273,7 @@ export const MediaShadowProvider = ({
     committing,
     transcribingProgress,
     transcribingOutput,
+    transcriptionError,
     abortGenerateTranscription,
   } = useTranscriptions(media);
 
@@ -933,6 +935,7 @@ export const MediaShadowProvider = ({
           committing,
           transcribingProgress,
           transcribingOutput,
+          transcriptionError,
           abortGenerateTranscription,
           transcriptionDraft,
           setTranscriptionDraft,
